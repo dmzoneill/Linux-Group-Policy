@@ -1,0 +1,218 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_300 = [
+   [43,9,43,72,'dccv']
+, [44,9,44,10,'dccv']
+, [46,13,46,14,'dccv']
+, [47,17,47,44,'dccv']
+, [48,17,48,31,'dccv']
+, [49,17,49,44,'dccv']
+, [50,17,50,46,'dccv']
+, [51,17,51,32,'dccv']
+, [52,13,52,14,'dccv']
+, [57,9,57,10,'dccv']
+, [61,9,61,10,'dccv']
+, [63,13,63,14,'dccv']
+, [64,17,64,71,'dccv']
+, [65,17,65,62,'dccv']
+, [66,13,66,14,'dccv']
+, [71,9,71,10,'dccv']
+, [75,9,75,10,'dccv']
+, [77,13,77,14,'dccv']
+, [78,17,78,57,'dccv']
+, [79,17,79,18,'dccv']
+, [80,21,80,65,'dccv']
+, [81,21,81,53,'dccv']
+, [82,17,82,18,'dccv']
+, [83,13,83,14,'dccv']
+, [88,9,88,10,'dccv']
+, [92,9,92,10,'dccv']
+, [94,13,94,14,'dccv']
+, [95,17,95,49,'dccv']
+, [96,13,96,14,'dccv']
+, [101,9,101,10,'dccv']
+, [105,9,105,10,'dccv']
+, [107,13,107,14,'dccv']
+, [108,17,108,91,'dccv']
+, [109,13,109,14,'dccv']
+, [114,9,114,10,'dccv']
+, [118,9,118,10,'dccv']
+, [120,13,120,14,'dccv']
+, [121,17,121,98,'dccv']
+, [122,17,122,80,'dccv']
+, [123,13,123,14,'dccv']
+, [128,9,128,10,'dccv']
+, [27,9,27,26,'dcuc']
+, [28,9,28,10,'dcuc']
+, [30,13,30,14,'dcuc']
+, [31,17,31,44,'dcuc']
+, [32,13,32,14,'dcuc']
+, [33,13,33,37,'dcuc']
+, [34,13,34,14,'dcuc']
+, [35,17,35,53,'dcuc']
+, [36,13,36,14,'dcuc']
+, [37,9,37,10,'dcuc']
+, [53,13,53,37,'dcuc']
+, [54,13,54,14,'dcuc']
+, [55,17,55,53,'dcuc']
+, [56,13,56,14,'dcuc']
+, [67,13,67,37,'dcuc']
+, [68,13,68,14,'dcuc']
+, [69,17,69,53,'dcuc']
+, [70,13,70,14,'dcuc']
+, [84,13,84,37,'dcuc']
+, [85,13,85,14,'dcuc']
+, [86,17,86,53,'dcuc']
+, [87,13,87,14,'dcuc']
+, [97,13,97,37,'dcuc']
+, [98,13,98,14,'dcuc']
+, [99,17,99,53,'dcuc']
+, [100,13,100,14,'dcuc']
+, [110,13,110,37,'dcuc']
+, [111,13,111,14,'dcuc']
+, [112,17,112,53,'dcuc']
+, [113,13,113,14,'dcuc']
+, [124,13,124,37,'dcuc']
+, [125,13,125,14,'dcuc']
+, [126,17,126,53,'dcuc']
+, [127,13,127,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src300" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows;
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Database;
+using LGP.Components.Factory.Interfaces.Infrastructure;
+
+#endregion
+
+namespace LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for RenameOu.xaml
+    /// &lt;/summary&gt;
+    public partial class RenameOu
+    {
+        private readonly IOu _ou;
+        private readonly UserControl _parentControl;
+        private readonly IDialog _popupWindow;
+
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        public RenameOu()
+        {
+            try
+            {
+                this.InitializeComponent();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        public RenameOu( UserControl parent , IOu ou , IDialog window )
+        {
+            try
+            {
+                this.InitializeComponent();
+                this._ou = ou;
+                this._popupWindow = window;
+                this._parentControl = parent;
+                this.Prepare();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        private void Prepare()
+        {
+            try
+            {
+                this.image1.Source = this._ou.GetOuImage( 32 ).Source;
+                this.OuNameTextBox.Text = this._ou.GetName();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        private void RenameButtonClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                if( this.OuNameTextBox.Text.Length &gt; 0 )
+                {
+                    this._ou.SetName( this.OuNameTextBox.Text );
+                    this._popupWindow.CloseDialog();
+                }
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        private void CancelButtonClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                this._popupWindow.CloseDialog();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        private void UserControlLoaded( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                this._popupWindow.ResizePopup( ( int ) this.Width , ( int ) this.Height );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        private void OuNameTextBoxTextChanged( object sender , TextChangedEventArgs e )
+        {
+            try
+            {
+                this.OuNameTextBox.Text = Framework.Utils.CleanString( this.OuNameTextBox.Text );
+                this.OuNameTextBox.CaretIndex = this.OuNameTextBox.Text.Length;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src300', RANGES_300)
+		</script>
+	</body>
+</html>

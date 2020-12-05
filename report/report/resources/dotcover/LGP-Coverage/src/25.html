@@ -1,0 +1,458 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_25 = [
+   [45,9,45,37,'dccv']
+, [63,9,63,126,'dccv']
+, [64,9,64,10,'dccv']
+, [65,13,65,43,'dccv']
+, [66,13,66,50,'dccv']
+, [67,13,67,32,'dccv']
+, [69,13,69,33,'dccv']
+, [70,13,70,14,'dccv']
+, [71,17,74,19,'dccv']
+, [76,17,79,19,'dccv']
+, [81,17,81,67,'dccv']
+, [82,17,82,68,'dccv']
+, [84,17,84,32,'dccv']
+, [85,17,85,32,'dccv']
+, [86,13,86,14,'dccv']
+, [91,9,91,10,'dccv']
+, [99,13,99,14,'dccv']
+, [100,17,100,26,'dccv']
+, [101,13,101,14,'dccv']
+, [114,13,114,14,'dccv']
+, [115,17,115,57,'dccv']
+, [116,17,116,39,'dccv']
+, [117,13,117,14,'dccv']
+, [130,13,130,14,'dccv']
+, [131,17,131,56,'dccv']
+, [133,17,133,39,'dccv']
+, [134,13,134,14,'dccv']
+, [152,13,152,14,'dccv']
+, [153,17,153,33,'dccv']
+, [154,13,154,14,'dccv']
+, [156,13,156,14,'dccv']
+, [157,17,157,34,'dccv']
+, [158,13,158,14,'dccv']
+, [167,13,167,14,'dccv']
+, [168,17,168,42,'dccv']
+, [169,13,169,14,'dccv']
+, [171,13,171,14,'dccv']
+, [172,17,172,43,'dccv']
+, [173,13,173,14,'dccv']
+, [182,13,182,14,'dccv']
+, [183,17,183,36,'dccv']
+, [184,13,184,14,'dccv']
+, [197,13,197,14,'dccv']
+, [198,17,198,31,'dccv']
+, [199,13,199,14,'dccv']
+, [201,13,201,14,'dccv']
+, [202,17,202,32,'dccv']
+, [203,13,203,14,'dccv']
+, [212,13,212,14,'dccv']
+, [213,17,213,36,'dccv']
+, [214,13,214,14,'dccv']
+, [216,13,216,14,'dccv']
+, [217,17,217,37,'dccv']
+, [218,13,218,14,'dccv']
+, [273,9,273,10,'dccv']
+, [274,13,274,54,'dccv']
+, [277,13,277,74,'dccv']
+, [279,13,279,97,'dccv']
+, [280,13,280,27,'dccv']
+, [281,9,281,10,'dccv']
+, [284,9,284,10,'dccv']
+, [285,13,285,56,'dccv']
+, [286,13,286,34,'dccv']
+, [287,13,287,14,'dccv']
+, [288,17,288,55,'dccv']
+, [289,13,289,14,'dccv']
+, [290,9,290,10,'dccv']
+, [301,9,301,10,'dccv']
+, [302,13,302,31,'dccv']
+, [303,9,303,10,'dccv']
+, [314,9,314,10,'dccv']
+, [315,13,315,45,'dccv']
+, [316,13,316,43,'dccv']
+, [317,9,317,10,'dccv']
+, [328,9,328,10,'dccv']
+, [329,13,329,70,'dccv']
+, [330,13,330,30,'dccv']
+, [331,9,331,10,'dccv']
+, [45,9,45,37,'dcuc']
+, [52,9,52,62,'dcuc']
+, [53,9,53,10,'dcuc']
+, [54,9,54,10,'dcuc']
+, [88,13,88,14,'dcuc']
+, [89,17,89,43,'dcuc']
+, [90,13,90,14,'dcuc']
+, [110,13,110,14,'dcuc']
+, [111,17,111,41,'dcuc']
+, [112,13,112,14,'dcuc']
+, [126,13,126,14,'dcuc']
+, [127,17,127,40,'dcuc']
+, [128,13,128,14,'dcuc']
+, [186,13,186,14,'dcuc']
+, [187,17,187,37,'dcuc']
+, [188,13,188,14,'dcuc']
+, [227,13,227,14,'dcuc']
+, [228,17,228,36,'dcuc']
+, [229,13,229,14,'dcuc']
+, [231,13,231,14,'dcuc']
+, [232,17,232,37,'dcuc']
+, [233,13,233,14,'dcuc']
+, [242,13,242,14,'dcuc']
+, [243,17,243,37,'dcuc']
+, [244,13,244,14,'dcuc']
+, [246,13,246,14,'dcuc']
+, [247,17,247,38,'dcuc']
+, [248,13,248,14,'dcuc']
+, [257,13,257,14,'dcuc']
+, [258,17,258,37,'dcuc']
+, [259,13,259,14,'dcuc']
+, [261,13,261,14,'dcuc']
+, [262,17,262,38,'dcuc']
+, [263,13,263,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src25" class="dotCoverSource"><pre>#region
+
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Documents;
+using System.Windows.Media;
+using System.Windows.Shapes;
+
+#endregion
+
+namespace LGP.Components.Factory.Internal
+{
+    /// &lt;summary&gt;
+    /// 
+    /// &lt;/summary&gt;
+    internal class DragAdorner : Adorner
+    {
+        private static DragAdorner _adorner;
+        private static bool _dragHasLeftScope;
+        private static AdornerLayer _layer;
+        private static Point _startPoint;
+        private static bool _isDragging;
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        protected UIElement Child;
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        protected UIElement Owner;
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        protected double XCenter;
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        protected double YCenter;
+
+        private double _leftOffset;
+        private double _scale = 1.0;
+        private double _topOffset;
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;owner&quot;&gt;&lt;/param&gt;
+        public DragAdorner( UIElement owner ) : base( owner )
+        {
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;owner&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;adornElement&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;useVisualBrush&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;opacity&quot;&gt;&lt;/param&gt;
+        public DragAdorner( UIElement owner , UIElement adornElement , bool useVisualBrush , double opacity ) : base( owner )
+        {
+            Debug.Assert( owner != null );
+            Debug.Assert( adornElement != null );
+            this.Owner = owner;
+
+            if( useVisualBrush )
+            {
+                var brush = new VisualBrush( adornElement )
+                {
+                    Opacity = opacity
+                };
+
+                var r = new Rectangle
+                {
+                    RadiusX = 3 , RadiusY = 3 , Width = adornElement.DesiredSize.Width , Height = adornElement.DesiredSize.Height
+                };
+
+                this.XCenter = adornElement.DesiredSize.Width / 2;
+                this.YCenter = adornElement.DesiredSize.Height / 2;
+
+                r.Fill = brush;
+                this.Child = r;
+            }
+            else
+            {
+                this.Child = adornElement;
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        protected override int VisualChildrenCount
+        {
+            get
+            {
+                return 1;
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public double LeftOffset
+        {
+            get
+            {
+                return this._leftOffset;
+            }
+            set
+            {
+                this._leftOffset = value - this.XCenter;
+                this.UpdatePosition();
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public double TopOffset
+        {
+            get
+            {
+                return this._topOffset;
+            }
+            set
+            {
+                this._topOffset = value - this.YCenter;
+
+                this.UpdatePosition();
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public static FrameworkElement DragScope
+        {
+            get;
+            set;
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public static DragAdorner Adorner
+        {
+            get
+            {
+                return _adorner;
+            }
+            set
+            {
+                _adorner = value;
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public static bool DragHasLeftScope
+        {
+            get
+            {
+                return _dragHasLeftScope;
+            }
+            set
+            {
+                _dragHasLeftScope = value;
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public static Point StartPoint
+        {
+            get
+            {
+                return _startPoint;
+            }
+            set
+            {
+                _startPoint = value;
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public static AdornerLayer Layer
+        {
+            get
+            {
+                return _layer;
+            }
+            set
+            {
+                _layer = value;
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public static bool IsDragging
+        {
+            get
+            {
+                return _isDragging;
+            }
+            set
+            {
+                _isDragging = value;
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public double Scale
+        {
+            get
+            {
+                return this._scale;
+            }
+            set
+            {
+                this._scale = value;
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public double XAxisCenter
+        {
+            get
+            {
+                return this.XCenter;
+            }
+            set
+            {
+                this.XCenter = value;
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public double YAxisCenter
+        {
+            get
+            {
+                return this.YCenter;
+            }
+            set
+            {
+                this.YCenter = value;
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;transform&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public override GeneralTransform GetDesiredTransform( GeneralTransform transform )
+        {
+            var result = new GeneralTransformGroup();
+
+            // ReSharper disable AssignNullToNotNullAttribute
+            result.Children.Add( base.GetDesiredTransform( transform ) );
+            // ReSharper restore AssignNullToNotNullAttribute
+            result.Children.Add( new TranslateTransform( this._leftOffset , this._topOffset ) );
+            return result;
+        }
+
+        private void UpdatePosition()
+        {
+            var adorner = ( AdornerLayer ) this.Parent;
+            if( adorner != null )
+            {
+                adorner.Update( this.AdornedElement );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        /// Overrides &lt;see cref=&quot;M:System.Windows.Media.Visual.GetVisualChild(System.Int32)&quot;/&gt;, and returns a child at the specified index from a collection of child elements. 
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;
+        /// The requested child element. This should not return null; if the provided index is out of range, an exception is thrown.
+        /// &lt;/returns&gt;
+        /// &lt;param name=&quot;index&quot;&gt;The zero-based index of the requested child element in the collection.&lt;/param&gt;
+        protected override Visual GetVisualChild( int index )
+        {
+            return this.Child;
+        }
+
+
+        /// &lt;summary&gt;
+        /// Implements any custom measuring behavior for the adorner.
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;
+        /// A &lt;see cref=&quot;T:System.Windows.Size&quot;/&gt; object representing the amount of layout space needed by the adorner.
+        /// &lt;/returns&gt;
+        /// &lt;param name=&quot;finalSize&quot;&gt;A size to constrain the adorner to.&lt;/param&gt;
+        protected override Size MeasureOverride( Size finalSize )
+        {
+            this.Child.Measure( finalSize );
+            return this.Child.DesiredSize;
+        }
+
+
+        /// &lt;summary&gt;
+        /// When overridden in a derived class, positions child elements and determines a size for a &lt;see cref=&quot;T:System.Windows.FrameworkElement&quot;/&gt; derived class. 
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;
+        /// The actual size used.
+        /// &lt;/returns&gt;
+        /// &lt;param name=&quot;finalSize&quot;&gt;The final area within the parent that this element should use to arrange itself and its children.&lt;/param&gt;
+        protected override Size ArrangeOverride( Size finalSize )
+        {
+            this.Child.Arrange( new Rect( this.Child.DesiredSize ) );
+            return finalSize;
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src25', RANGES_25)
+		</script>
+	</body>
+</html>

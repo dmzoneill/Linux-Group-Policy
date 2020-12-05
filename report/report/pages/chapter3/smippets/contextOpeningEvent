@@ -1,0 +1,17 @@
+// for simplicity purposes 
+// the concrete type of 
+// IContextMenus is left out 
+// and referred to as IContextMenus
+
+private void MenuContextMenuOpening( object sender , ContextMenuEventArgs e )	
+{
+	var menu = this;
+	IContextMenus.AttachMenuItemRegistrations( ref menu , typeof( ITargetType ) , this.MenuItemClick );
+}
+
+
+private void MenuItemClick( object sender , RoutedEventArgs e )
+{
+	var menuitem = sender as MenuItem;
+	IContextMenus.CallBack( menuitem , TargetType );
+}

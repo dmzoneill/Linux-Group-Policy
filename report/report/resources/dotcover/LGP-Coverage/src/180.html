@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_180 = [
+   [31,9,31,10,'dcuc']
+, [32,13,35,15,'dcuc']
+, [37,13,37,14,'dcuc']
+, [38,17,38,41,'dcuc']
+, [39,17,39,29,'dcuc']
+, [41,13,41,37,'dcuc']
+, [42,13,42,14,'dcuc']
+, [43,17,43,53,'dcuc']
+, [44,17,44,30,'dcuc']
+, [46,9,46,10,'dcuc']
+, [54,9,54,10,'dcuc']
+, [55,13,55,25,'dcuc']
+, [56,9,56,10,'dcuc']
+, [65,9,65,10,'dcuc']
+, [66,13,66,25,'dcuc']
+, [67,9,67,10,'dcuc']
+, [76,9,76,10,'dcuc']
+, [77,13,77,23,'dcuc']
+, [78,9,78,10,'dcuc']
+, [86,9,86,10,'dcuc']
+, [87,13,87,26,'dcuc']
+, [88,9,88,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src180" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Database;
+
+#endregion
+
+namespace LGP.Components.Database.Mssql
+{
+    /// &lt;summary&gt;
+    ///   Mssql Wrapper
+    /// &lt;/summary&gt;
+    public class MssqlDb : IDatabaseModule
+    {
+        private SqlConnection _connection;
+
+        #region IDatabaseModule Members
+
+        /// &lt;summary&gt;
+        ///   Connect method for database interface
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;user&quot;&gt;Username to use in connection&lt;/param&gt;
+        /// &lt;param name = &quot;pass&quot;&gt;Password to use in connection&lt;/param&gt;
+        /// &lt;param name = &quot;host&quot;&gt;Hostname to use in connection&lt;/param&gt;
+        /// &lt;param name = &quot;dbname&quot;&gt;Datbase to use in connection&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public bool Connect( string user , string pass , string host , string dbname )
+        {
+            this._connection = new SqlConnection
+            {
+                ConnectionString = string.Format( &quot;user id={0};password={1};server={2};database={3}&quot; , host , user , pass , dbname )
+            };
+            try
+            {
+                this._connection.Open();
+                return true;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+                return false;
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Disconnect method for the interface realizer
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;bool disconnected&lt;/returns&gt;
+        public bool Disconnect()
+        {
+            return true;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Executes a query provided by the appropriate gateway
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sql&quot;&gt;sql query&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public DataSet ExecuteQuery( string sql )
+        {
+            return null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Executes a query provided by the appropriate gateway
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sql&quot;&gt;sql query&lt;/param&gt;
+        /// &lt;returns&gt;int num rows affected&lt;/returns&gt;
+        public int ExecuteNonQuery( string sql )
+        {
+            return -1;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Check to see if the database is connected
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;bool&lt;/returns&gt;
+        public bool IsConnected()
+        {
+            return false;
+        }
+
+        #endregion
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src180', RANGES_180)
+		</script>
+	</body>
+</html>

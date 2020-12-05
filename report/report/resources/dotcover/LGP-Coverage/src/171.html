@@ -1,0 +1,298 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_171 = [
+   [58,9,58,10,'dccv']
+, [60,13,60,14,'dccv']
+, [61,17,61,39,'dccv']
+, [66,17,66,54,'dccv']
+, [68,22,68,32,'dccv']
+, [69,17,69,18,'dccv']
+, [70,21,70,58,'dccv']
+, [71,21,71,22,'dccv']
+, [72,25,72,55,'dccv']
+, [73,21,73,22,'dccv']
+, [74,17,74,18,'dccv']
+, [68,53,68,56,'dccv']
+, [68,33,68,51,'dccv']
+, [76,17,76,33,'dccv']
+, [83,9,83,10,'dccv']
+, [89,9,89,10,'dccv']
+, [90,13,90,34,'dccv']
+, [91,9,91,10,'dccv']
+, [96,9,96,10,'dccv']
+, [97,13,97,32,'dccv']
+, [98,13,98,35,'dccv']
+, [99,13,99,14,'dccv']
+, [100,17,100,50,'dccv']
+, [101,17,101,33,'dccv']
+, [102,13,102,14,'dccv']
+, [105,13,105,14,'dccv']
+, [106,17,106,68,'dccv']
+, [108,17,108,64,'dccv']
+, [113,17,113,65,'dccv']
+, [115,17,115,50,'dccv']
+, [117,17,117,50,'dccv']
+, [122,17,122,24,'dccv']
+, [122,41,122,57,'dccv']
+, [122,26,122,37,'dccv']
+, [123,17,123,18,'dccv']
+, [124,21,124,53,'dccv']
+, [125,21,125,56,'dccv']
+, [126,21,126,59,'dccv']
+, [127,21,127,59,'dccv']
+, [128,21,128,55,'dccv']
+, [129,21,129,59,'dccv']
+, [130,21,130,63,'dccv']
+, [131,21,131,71,'dccv']
+, [132,21,132,69,'dccv']
+, [133,21,133,83,'dccv']
+, [134,21,134,67,'dccv']
+, [135,21,135,63,'dccv']
+, [136,21,136,77,'dccv']
+, [137,21,137,62,'dccv']
+, [138,21,138,59,'dccv']
+, [140,21,140,179,'dccv']
+, [142,21,142,34,'dccv']
+, [143,21,143,22,'dccv']
+, [144,25,144,58,'dccv']
+, [148,21,148,22,'dccv']
+, [150,21,150,22,'dccv']
+, [151,25,151,48,'dccv']
+, [152,21,152,22,'dccv']
+, [153,17,153,18,'dccv']
+, [122,38,122,40,'dccv']
+, [154,13,154,14,'dccv']
+, [159,9,159,10,'dccv']
+, [162,9,162,10,'dccv']
+, [163,13,163,20,'dccv']
+, [163,36,163,44,'dccv']
+, [163,22,163,32,'dccv']
+, [164,13,164,14,'dccv']
+, [165,17,165,52,'dccv']
+, [166,17,166,18,'dccv']
+, [167,21,167,33,'dccv']
+, [169,13,169,14,'dccv']
+, [163,33,163,35,'dccv']
+, [171,9,171,10,'dccv']
+, [26,9,26,10,'dcuc']
+, [28,13,28,14,'dcuc']
+, [29,17,29,39,'dcuc']
+, [30,17,30,18,'dcuc']
+, [31,21,31,42,'dcuc']
+, [32,17,32,18,'dcuc']
+, [34,22,34,32,'dcuc']
+, [35,17,35,18,'dcuc']
+, [36,21,36,54,'dcuc']
+, [37,21,37,22,'dcuc']
+, [38,25,38,46,'dcuc']
+, [40,17,40,18,'dcuc']
+, [34,53,34,56,'dcuc']
+, [34,33,34,51,'dcuc']
+, [42,17,42,29,'dcuc']
+, [44,13,44,37,'dcuc']
+, [45,13,45,14,'dcuc']
+, [46,17,46,53,'dcuc']
+, [47,17,47,29,'dcuc']
+, [49,9,49,10,'dcuc']
+, [62,17,62,18,'dcuc']
+, [63,21,63,42,'dcuc']
+, [64,17,64,18,'dcuc']
+, [78,13,78,37,'dcuc']
+, [79,13,79,14,'dcuc']
+, [80,17,80,53,'dcuc']
+, [81,17,81,29,'dcuc']
+, [109,17,109,18,'dcuc']
+, [110,21,110,28,'dcuc']
+, [118,17,118,18,'dcuc']
+, [119,21,119,28,'dcuc']
+, [145,25,145,26,'dcuc']
+, [146,29,146,52,'dcuc']
+, [147,25,147,26,'dcuc']
+, [155,13,155,37,'dcuc']
+, [156,13,156,14,'dcuc']
+, [157,17,157,53,'dcuc']
+, [158,13,158,14,'dcuc']
+, [170,13,170,26,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src171" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Collections.Generic;
+using System.Data;
+using LGP.Components.Database.Entities;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Database;
+
+#endregion
+
+namespace LGP.Components.Database.Gateways
+{
+    internal class ClientGateway : IClientGateway
+    {
+        private static List&lt; IClient &gt; _clients;
+
+        #region IClientGateway Members
+
+        /// &lt;summary&gt;
+        ///   Gets a client by id
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;id&quot;&gt;client id&lt;/param&gt;
+        /// &lt;returns&gt;IClient&lt;/returns&gt;
+        public IClient GetClientById( int id )
+        {
+            try
+            {
+                if( _clients == null )
+                {
+                    BuildClientListing();
+                }
+
+                for( var y = 0; y &lt; _clients.Count; y++ )
+                {
+                    if( _clients[ y ].GetId() == id )
+                    {
+                        return _clients[ y ];
+                    }
+                }
+
+                return null;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+                return null;
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Get clients from a given ou
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;ouid&quot;&gt;id of the ou&lt;/param&gt;
+        /// &lt;returns&gt;List of clients&lt;/returns&gt;
+        public List&lt; IClient &gt; GetOuClients( int ouid )
+        {
+            try
+            {
+                if( _clients == null )
+                {
+                    BuildClientListing();
+                }
+
+                var children = new List&lt; IClient &gt;();
+
+                for( var y = 0; y &lt; _clients.Count; y++ )
+                {
+                    if( _clients[ y ].GetouId() == ouid )
+                    {
+                        children.Add( _clients[ y ] );
+                    }
+                }
+
+                return children;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+                return null;
+            }
+        }
+
+        /// &lt;summary&gt;
+        ///   Refresh the client listing
+        /// &lt;/summary&gt;
+        public void Refresh()
+        {
+            BuildClientListing();
+        }
+
+        #endregion
+
+        private static void BuildClientListing()
+        {
+            var refresh = true;
+            if( _clients == null )
+            {
+                _clients = new List&lt; IClient &gt;();
+                refresh = false;
+            }
+
+            try
+            {
+                var sql = string.Format( &quot;select * from clients&quot; );
+
+                if( Framework.Database.IsConnected() == false )
+                {
+                    return;
+                }
+
+                var ds = Framework.Database.ExecuteQuery( sql );
+
+                var clientTable = ds.Tables[ 0 ];
+
+                if( clientTable.Rows.Count == 0 )
+                {
+                    return;
+                }
+
+                foreach( DataRow row in clientTable.Rows )
+                {
+                    var cid = ( int ) row[ &quot;c_id&quot; ];
+                    var cou = ( int ) row[ &quot;c_ou_id&quot; ];
+                    var guid = ( string ) row[ &quot;c_guid&quot; ];
+                    var name = ( string ) row[ &quot;c_name&quot; ];
+                    var os = ( string ) row[ &quot;c_os&quot; ];
+                    var arch = ( string ) row[ &quot;c_arch&quot; ];
+                    var kernel = ( string ) row[ &quot;c_kernel&quot; ];
+                    var pseudoName = ( string ) row[ &quot;c_psuedoname&quot; ];
+                    var distro = ( string ) row[ &quot;c_distribution&quot; ];
+                    var distroVersion = ( string ) row[ &quot;c_distributionVersion&quot; ];
+                    var lastseen = ( string ) row[ &quot;c_lastseen&quot; ];
+                    var binded = ( string ) row[ &quot;c_binded&quot; ];
+                    var clientVersion = ( string ) row[ &quot;c_clientversion&quot; ];
+                    var ip = ( string ) row[ &quot;c_ipaddress&quot; ];
+                    var port = ( string ) row[ &quot;c_port&quot; ];
+
+                    var client = new Client( cid , cou , guid , name , os , arch , kernel , pseudoName , distro , distroVersion , lastseen , binded , clientVersion , ip , port );
+
+                    if( refresh )
+                    {
+                        if( Contains( client ) == false )
+                        {
+                            _clients.Add( client );
+                        }
+                    }
+                    else
+                    {
+                        _clients.Add( client );
+                    }
+                }
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private static bool Contains( IClient client )
+        {
+            foreach( Client cli in _clients )
+            {
+                if( cli.GetId() == client.GetId() )
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src171', RANGES_171)
+		</script>
+	</body>
+</html>

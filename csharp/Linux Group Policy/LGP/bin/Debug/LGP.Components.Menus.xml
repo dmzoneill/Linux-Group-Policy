@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGP.Components.Menus</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.Components.Menus.MenuHandler">
+            <summary>
+              Edit menu
+            </summary>
+            <summary>
+              File menu
+            </summary>
+            <summary>
+              Help menu
+            </summary>
+            <summary>
+              Concreate Implementation of the IMenu
+            </summary>
+            <summary>
+              View menu
+            </summary>
+            <summary>
+              Window menu
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.CreateEditMenu">
+            <summary>
+              Creates the edit menu
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.MenuItemPasteClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Takes the paste menu item click events and publishes it to subscribers
+            </summary>
+            <param name = "sender">The object that raised the event</param>
+            <param name = "e">The event arguments</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.MenuItemCopyClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Takes the copy menu item click events and publishes it to subscribers
+            </summary>
+            <param name = "sender">The object that raised the event</param>
+            <param name = "e">The event arguments</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.MenuItemCutClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Takes the cut menu item click events and publishes it to subscribers
+            </summary>
+            <param name = "sender">The object that raised the event</param>
+            <param name = "e">The event arguments</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.MenuItemPreferencesClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Takes the cut menu item click events and publishes it to subscribers
+            </summary>
+            <param name = "sender">The object that raised the event</param>
+            <param name = "e">The event arguments</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.CreateFileMenu">
+            <summary>
+              Creates the file menu
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.MenuItemExitClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Takes the exit menu item click events and publishes it to subscribers
+            </summary>
+            <param name = "sender">The object that raised the event</param>
+            <param name = "e">The event arguments</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.MenuItemSaveAsClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Takes the saveas menu item click events and publishes it to subscribers
+            </summary>
+            <param name = "sender">The object that raised the event</param>
+            <param name = "e">The event arguments</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.MenuItemSaveClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Takes the save menu item click events and publishes it to subscribers
+            </summary>
+            <param name = "sender">The object that raised the event</param>
+            <param name = "e">The event arguments</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.MenuItemOpenClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Takes the open menu item click events and publishes it to subscribers
+            </summary>
+            <param name = "sender">The object that raised the event</param>
+            <param name = "e">The event arguments</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.MenuItemNewClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Takes the new menu item click events and publishes it to subscribers
+            </summary>
+            <param name = "sender">The object that raised the event</param>
+            <param name = "e">The event arguments</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.CreateHelpMenu">
+            <summary>
+              Creates the help menu
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.GetName">
+            <summary>
+              Gets the components name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.GetIcon">
+            <summary>
+              Gets the icon associated with this component
+            </summary>
+            <returns>Image</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.RegisterMenuEntries(LGP.Components.Factory.Interfaces.Component.IMenu)">
+            <summary>
+              Registers this components menu handlers
+            </summary>
+            <param name = "menu">The program main menu</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.InitializeMenu(System.Windows.Controls.Menu)">
+            <summary>
+              Creates an instance of the menu controller and passes the appication menu reference to it
+            </summary>
+            <param name = "menu">The application menu</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.CreateMenuItem(System.String)">
+            <summary>
+              Creates a menu item
+            </summary>
+            <param name = "header">Name of the menu item</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.CreateMenuItem(System.String,System.Windows.Controls.Image)">
+            <summary>
+              Creates a menu item with an image
+            </summary>
+            <param name = "header">Name of the menu item</param>
+            <param name = "image">Image assocaited with the menu item</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.AddMainItem(System.Windows.Controls.MenuItem)">
+            <summary>
+              Adds a item to the main menu
+            </summary>
+            <param name = "item">The item to be added</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.RemoveMainMenuItem(System.Int32)">
+            <summary>
+              Remove an item from the menu at given index
+            </summary>
+            <param name = "indexItem">The index item to remove</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.AddSubMenuItem(System.Int32,System.Windows.Controls.MenuItem)">
+            <summary>
+              Add an item under a given item specified by index
+            </summary>
+            <param name = "indexItem"></param>
+            <param name = "subitem"></param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.RemoveSubMenuItem(System.Int32,System.Int32)">
+            <summary>
+              Remove an index given two indexes Item / subitem
+            </summary>
+            <param name = "indexItem">The main item index</param>
+            <param name = "subitem">The sub item index</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.AddSubSubMenuItem(System.Int32,System.Int32,System.Windows.Controls.MenuItem)">
+            <summary>
+              Add a subitem to a subitem item, item / subitem specified by indexes
+            </summary>
+            <param name = "indexItem">The item index</param>
+            <param name = "indexSubItem">The sub item index</param>
+            <param name = "subsubitem">The new item to add to the sub item</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.RemoveSubMenuItem(System.Int32,System.Int32,System.Int32)">
+            <summary>
+              Remove a indexed subitem , given an item index and its sub item index
+            </summary>
+            <param name = "indexItem">The item index</param>
+            <param name = "indexSubItem">The sub item index</param>
+            <param name = "indexSubSubItem">The item index to remove</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.GetError">
+            <summary>
+              Used as an accessor to check if there was an operation error
+            </summary>
+            <returns>True or false if an error occured</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.GetStrError">
+            <summary>
+              Gets the error from the last operation that caused it
+            </summary>
+            <returns>The error describing the error</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.CreateViewMenu">
+            <summary>
+              Creates the view menu
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.MenuItemOutputClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Takes the new menu item click events and publishes it to subscribers
+            </summary>
+            <param name = "sender">The object that raised the event</param>
+            <param name = "e">The event arguments</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.MenuItemErrorListClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Takes the new menu item click events and publishes it to subscribers
+            </summary>
+            <param name = "sender">The object that raised the event</param>
+            <param name = "e">The event arguments</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.MenuItemStatusClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Takes the new menu item click events and publishes it to subscribers
+            </summary>
+            <param name = "sender">The object that raised the event</param>
+            <param name = "e">The event arguments</param>
+        </member>
+        <member name="M:LGP.Components.Menus.MenuHandler.CreateWindowMenu">
+            <summary>
+              Creates the window menu
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Menus.ContextMenusHandler">
+            <summary>
+            Conext menus handler
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Menus.ContextMenusHandler.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Menus.ContextMenusHandler.AttachMenuItemRegistrations(System.Windows.Controls.ContextMenu@,System.Type,System.Action{System.Object,System.Windows.RoutedEventArgs})">
+            <summary>
+              Asks the Context menu handler to append menu entries for a given context menu
+            </summary>
+            <param name = "menuparent">Conext menu to add entries to</param>
+            <param name = "type">Type of item that the conext is being appended to</param>
+            <param name = "action">callback</param>
+        </member>
+        <member name="M:LGP.Components.Menus.ContextMenusHandler.AttachMenuItemRegistrations(System.Windows.Controls.Menu@,System.Type,System.Action{System.Object,System.Windows.RoutedEventArgs})">
+            <summary>
+              Asks the Context menu handler to append menu entries for a given context menu
+            </summary>
+            <param name = "menuparent">Conext menu to add entries to</param>
+            <param name = "type">Type of item that the conext is being appended to</param>
+            <param name = "action">callback</param>
+        </member>
+        <member name="M:LGP.Components.Menus.ContextMenusHandler.CallBack(System.Windows.Controls.MenuItem,System.Object)">
+            <summary>
+            The call back mechanism
+            </summary>
+            <param name="sender">the meuu item clicked</param>
+            <param name="theobject"></param>
+        </member>
+        <member name="M:LGP.Components.Menus.ContextMenusHandler.RegisterContextMenuItem(System.Type,System.Windows.Controls.MenuItem,System.Action{System.Object})">
+            <summary>
+              Plugin registers for context menus that are on type
+            </summary>
+            <param name = "type">type</param>
+            <param name="item"></param>
+            <param name = "action">The call back mechanism</param>
+        </member>
+        <member name="M:LGP.Components.Menus.ContextMenusHandler.AttachMenuItemRegistrations(System.Windows.Controls.MenuItem@,System.Type,System.Action{System.Object,System.Windows.RoutedEventArgs})">
+            <summary>
+              Asks the Context menu handler to append menu entries for a given context menu
+            </summary>
+            <param name = "menuparent">Conext menu to add entries to</param>
+            <param name = "type">Type of item that the conext is being appended to</param>
+            <param name = "action">callback</param>
+        </member>
+        <member name="T:LGP.Components.Menus.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Copy">
+            <summary>
+              Looks up a localized string similar to Copy.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Cut">
+            <summary>
+              Looks up a localized string similar to Cut.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Edit">
+            <summary>
+              Looks up a localized string similar to Edit.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.ErrorConsole">
+            <summary>
+              Looks up a localized string similar to Error console.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Exit">
+            <summary>
+              Looks up a localized string similar to Exit.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.File">
+            <summary>
+              Looks up a localized string similar to File.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Help">
+            <summary>
+              Looks up a localized string similar to Help.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Menu">
+            <summary>
+              Looks up a localized string similar to Menu.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.New">
+            <summary>
+              Looks up a localized string similar to New.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Open">
+            <summary>
+              Looks up a localized string similar to Open.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Output">
+            <summary>
+              Looks up a localized string similar to Output.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Paste">
+            <summary>
+              Looks up a localized string similar to Paste.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Preferences">
+            <summary>
+              Looks up a localized string similar to Preferences.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Save">
+            <summary>
+              Looks up a localized string similar to Save.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Saveas">
+            <summary>
+              Looks up a localized string similar to Save as.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Statusbar">
+            <summary>
+              Looks up a localized string similar to Statusbar.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Toolbars">
+            <summary>
+              Looks up a localized string similar to Toolbars.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.View">
+            <summary>
+              Looks up a localized string similar to View.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Menus.Properties.Resources.Window">
+            <summary>
+              Looks up a localized string similar to Window.
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Menus.Plugin">
+            <summary>
+              Plugin
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Menus.Plugin.GetName">
+            <summary>
+              Gets the name of the main component
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.Plugin.GetIcon">
+            <summary>
+              Gets the image that represents the module
+            </summary>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.Plugin.RegisterMenuEntries(LGP.Components.Factory.Interfaces.Component.IMenu)">
+            <summary>
+              Asks the component to register is menu components
+            </summary>
+            <param name = "menu">The program main menu</param>
+        </member>
+        <member name="M:LGP.Components.Menus.Plugin.GetMainControl">
+            <summary>
+              Gets the main component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.Plugin.GetSidebarControl">
+            <summary>
+              Gets the sidebar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.Plugin.GetBottombarControl">
+            <summary>
+              Gets the bottombar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.Plugin.GetToolbarControl">
+            <summary>
+              Gets the toolbar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.Plugin.GetPreferencesControl">
+            <summary>
+              Gets the preferences component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="T:LGP.Components.Menus.Preferences">
+            <summary>
+              Interaction logic for Preferences.xaml
+            </summary>
+            <summary>
+            Preferences
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Menus.Preferences.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Menus.Preferences.GetName">
+            <summary>
+              Gets the name of the preferences Pane
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.Preferences.GetControl">
+            <summary>
+              Gets the preferences window
+            </summary>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.Preferences.Save">
+            <summary>
+              Aks the preferences panel to save its entries
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Menus.Preferences.Load(LGP.Components.Factory.Interfaces.Component.ISettings)">
+            <summary>
+              Asks the preferences to load its settings
+            </summary>
+            <param name="settingsParent"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.Preferences.GetControlType">
+            <summary>
+            Gets the type it Controls
+            </summary>
+            <returns>Type</returns>
+        </member>
+        <member name="M:LGP.Components.Menus.Preferences.GetIcon">
+            <summary>
+            Gets the preferences icon
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Menus.Preferences.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

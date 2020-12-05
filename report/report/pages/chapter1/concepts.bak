@@ -1,0 +1,121 @@
+\section{Concepts and Terminology}
+	
+	Throughout this over view I will ease the reader into the domain concepts by providing the relationships with the Windows world.
+	However as the overview progresses less comparisons will be made.  
+	\newline
+	\newline
+	Group policy in the windows world provides administrators with an easy interface to control aspects of computer policies in an 
+	easy defined manner.  Any computer joined to the domain is subject to these policies.  Administrators can, with the aid of visual
+	snap-ins for Active directory, modify key-value pairs, which represent all the different aspects of a windows computer.  
+	Furthermore with the interoperability or backwards compatibility built in, each successive release of windows conforms to 
+	the standards or provides a translation pair relevant that that specific version of windows. 
+	\index{Active Directory} 
+	\index{Group policy}
+	\index{Policies} 
+	\index{Domain} 
+	\index{key-value pairs} 
+	\index{Interoperability} 
+	\newline
+	\newline
+	Before the advent of the Windows Registry configurations for programs where kept in INI files, broken up into sections and properties.
+	\index{Registry} 
+	\index{INI files}
+	\newline
+	\newline
+	[section]
+	\newline
+	property=value
+	\newline
+	\newline
+	As the complexity of vendor applications and the operating system as a whole grew, so did the size of these INI files.  
+	Furthermore for interoperability and the sharing of dynamic link libraries, which depended on these INI configurations, 
+	it was quickly realized that this was an inefficient manner of storing configurations.  The Windows Registry solved this issue 
+	by centralizing configurations settings into a hierarchical database containing settings for low-level operating system settings 
+	as well as settings for applications running on the platform.  
+	\index{Interoperability} 
+	\index{INI files} 
+	\index{Registry} 
+	\index{Dynamic link libraries}
+	The advent of this technology and a central place for configuration provided an easy interface for a server 
+	(domain controller) to apply settings.  The application of settings through this mannor to groups of machines is known
+	as group policy. 
+	\index{Group Policy} 
+	\index{Domain controller} 
+	\newline
+	\newline
+	Given this brief overview of group policy, lets take a look at the "Gnu’s not Unix" (GNU) systems. 
+	Since the conception of Linux in 1992 and the accompanied "Gnu’s not Unix" (GNU) applications, files still
+	remain the de facto way of configuring these systems and their application preferences.   
+	The style of these configuration files is somewhat similar to that of INI files, in that there is key/value pairs.
+	\index{Group Policy} 
+	\index{INI files}
+	\newline
+	\newline
+	At this point I think it's important to look at the word "domain" as it will be used in contextually and comparatively, 
+	extensively throughout this document.
+	\newline
+	\newline
+	"The Domain Name System (DNS) is a hierarchical, distributed database that contains mappings of DNS domain names to various types 
+	of data, such as Internet Protocol (IP) addresses. DNS allows you to use friendly names, such as www.microsoft.com, to easily 
+	locate computers and other resources on a TCP/IP-based network. DNS is an Internet Engineering Task Force (IETF) standard."
+	- \citet{MicrosoftGlossary} 
+	\newline
+	\newline
+	"A Windows is a collection of computers in a networked environment that share a common database, directory database, or tree. 
+	A domain is administered as a unit with common rules and procedures, which can include security policies, and each domain has 
+	a unique name."
+	- \citet{MicrosoftGlossary} 
+	\newline
+	\newline
+	"A NIS ( Linux ) domain is similar to the Windows NT® domain system; although the internal implementation of the two are not 
+	at all similar, the basic functionality can be compared."
+	- \citet{FREEBSD}  
+	\newline
+	\newline
+	"A domain as a field of scope or activity comprised of a specific knowledge set." 
+	\newline
+	\newline
+	With reference to the definition of a windows domain it is important as a constitute part of this report to acknowledge the 
+	concept of a domain as a group of computers.  Although this may create ambiguity and defer from the scope of the application, 
+	it is however prominent to the concept and to that of the business terminology.  The term DNS domain or domain name will be 
+	used as a reference to the identification label that defines an address, more commonly associated with the web in the form of 
+	uniform resource locator (URL). And of course the term domain, by itself a reference a set of specific knowledge.
+	\newline
+	\newline
+	Moving on from these definitions lets take a look at the problem domain.  Each individual major version of Linux distribution 
+	provides utilities specific to controlling that machine and the settings therein.  These utilities in some cases modify file 
+	configurations as previously discussed, For example, software provisioning is provided via "yum" on Redhat systems and "apt" 
+	on Debian systems. Furthermore Redhat provides the tools "chkconfig" and "service" in controlling boot up configuration and 
+	instant control respectively, while Debian provides similar tools.  As we start to compare the major distributions we start 
+	to see the contrasting yet similar disparate natures of the utilities provided by the vendors.  
+	\newline
+	\newline
+	Even though the underlying well-worn technologies that provide the backend implementation are primarily the same.  
+	The tools provided to control and implement changes on these disjoint systems although comparatively different from a usage 
+	perspective provide the same functionality.  This brings about the need for extremely skilled well-versed technicians and of 
+	course creates more work from an administrative point of view.
+	\newline
+	\newline
+	Given the success of group policy in the windows domain this seems like a logical candidate in tackling these systems as a whole.  
+	By providing a framework to manage these contrasting systems through the use of a domain specific language.  
+	\newline
+	\newline
+	An abstraction layer over the contrasting differences could theoretically be designed to remove the requirement in understanding 
+	all these systems and thereby reducing the need for administrators to be learned in a plethora of distribution specific commands.  
+	Martin Fowler makes this argument from a contrasting point of view in terms of Language Oriented programming, by replacing a few 
+	general purpose programming languages with many domain specific languages, he hypothesis that the requirement to learn numerous 
+	application programmers interfaces can be more of a burden than learning a domain specific language catered for an individual task.
+	\newline
+	\newline
+	Given this proposition for an abstraction layer to provide domain specific commands to a heterogeneous Linux environment and the 
+	need for controlling these systems from a group policy perspective, a domain specific language seems an obvious candidate in 
+	delivering a solution.  We will look further at this concept in the following sub sections of chapter one where we define the scope, 
+	the objectives and terminology associated with this motive.
+	\newline
+	\newline
+	Now that we have an overview of what the problem domain is and a vague idea of how it can be tackled, lets contrive the other 
+	components.  Firstly the Client Server Model envisioned by the idea of a central authority, The domain specific language as the 
+	intermediate language to provide instructions to the client, the schema for the specification of the database; where polices will 
+	be created and stored and finally the administrative server front end which will be an over view of the application and how it 
+	should enable administrators to create an modify policies for the underlying components.
+	

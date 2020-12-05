@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_316 = [
+   [34,9,34,10,'dccv']
+, [35,13,35,27,'dccv']
+, [36,13,36,14,'dccv']
+, [37,17,37,53,'dccv']
+, [41,13,41,14,'dccv']
+, [42,17,42,52,'dccv']
+, [43,17,43,36,'dccv']
+, [48,17,48,49,'dccv']
+, [50,17,50,63,'dccv']
+, [51,17,51,18,'dccv']
+, [52,21,52,67,'dccv']
+, [53,21,53,38,'dccv']
+, [58,21,58,50,'dccv']
+, [59,21,59,22,'dccv']
+, [60,25,60,98,'dccv']
+, [62,17,62,18,'dccv']
+, [64,17,64,53,'dccv']
+, [70,9,70,10,'dccv']
+, [44,17,44,18,'dcuc']
+, [45,21,45,57,'dcuc']
+, [54,21,54,22,'dcuc']
+, [55,25,55,61,'dcuc']
+, [66,13,66,31,'dcuc']
+, [67,13,67,14,'dcuc']
+, [68,17,68,53,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src316" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Globalization;
+using System.Windows.Controls;
+using System.Windows.Data;
+
+#endregion
+
+namespace LGP.Modules.PolicyEditor.Internal
+{
+    /// &lt;summary&gt;
+    /// 
+    /// &lt;/summary&gt;
+    public class RowValidationRule : ValidationRule
+    {
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public static bool Override
+        {
+            get;
+            set;
+        }
+
+        /// &lt;summary&gt;
+        /// When overridden in a derived class, performs validation checks on a value.
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;
+        /// A &lt;see cref=&quot;T:System.Windows.Controls.ValidationResult&quot;/&gt; object.
+        /// &lt;/returns&gt;
+        /// &lt;param name=&quot;value&quot;&gt;The value from the binding target to check.&lt;/param&gt;&lt;param name=&quot;cultureInfo&quot;&gt;The culture to use in this rule.&lt;/param&gt;
+        public override ValidationResult Validate( object value , CultureInfo cultureInfo )
+        {
+            if( Override )
+            {
+                return ValidationResult.ValidResult;
+            }
+
+            try
+            {
+                var group = ( BindingGroup ) value;
+                if( group == null )
+                {
+                    return ValidationResult.ValidResult;
+                }
+
+                var obj = value as BindingGroup;
+
+                if( obj.Items != null &amp;&amp; obj.Items.Count &gt; 0 )
+                {
+                    var vpe = obj.Items[ 0 ] as VisualPolicyEntry;
+                    if( vpe == null )
+                    {
+                        return ValidationResult.ValidResult;
+                    }
+
+                    if( vpe.Validate() == false )
+                    {
+                        return new ValidationResult( false , Properties.Resources.Invalidation );
+                    }
+                }
+
+                return ValidationResult.ValidResult;
+            }
+            catch( Exception )
+            {
+                return ValidationResult.ValidResult;
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src316', RANGES_316)
+		</script>
+	</body>
+</html>

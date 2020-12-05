@@ -1,0 +1,180 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_263 = [
+   [25,9,25,29,'dccv']
+, [26,9,26,10,'dccv']
+, [28,13,28,14,'dccv']
+, [29,17,29,44,'dccv']
+, [30,17,30,50,'dccv']
+, [31,17,31,95,'dccv']
+, [32,13,32,14,'dccv']
+, [37,9,37,10,'dccv']
+, [46,9,46,10,'dccv']
+, [47,13,47,54,'dccv']
+, [48,9,48,10,'dccv']
+, [65,9,65,10,'dccv']
+, [66,13,66,33,'dccv']
+, [67,9,67,10,'dccv']
+, [76,9,76,10,'dccv']
+, [77,13,77,43,'dccv']
+, [78,9,78,10,'dccv']
+, [85,9,85,10,'dccv']
+, [86,13,86,38,'dccv']
+, [87,9,87,10,'dccv']
+, [94,9,94,10,'dccv']
+, [95,13,95,73,'dccv']
+, [96,9,96,10,'dccv']
+, [101,9,101,10,'dccv']
+, [103,13,103,14,'dccv']
+, [104,17,107,19,'dccv']
+, [109,17,109,56,'dccv']
+, [110,17,110,48,'dccv']
+, [111,17,111,18,'dccv']
+, [112,21,112,98,'dccv']
+, [113,21,113,88,'dccv']
+, [114,17,114,18,'dccv']
+, [115,13,115,14,'dccv']
+, [120,9,120,10,'dccv']
+, [33,13,33,37,'dcuc']
+, [34,13,34,14,'dcuc']
+, [35,17,35,53,'dcuc']
+, [36,13,36,14,'dcuc']
+, [56,9,56,10,'dcuc']
+, [57,13,57,25,'dcuc']
+, [58,9,58,10,'dcuc']
+, [116,13,116,37,'dcuc']
+, [117,13,117,14,'dcuc']
+, [118,17,118,53,'dcuc']
+, [119,13,119,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src263" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Forms;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Component;
+using LGP.Components.Factory.Interfaces.Module;
+using UserControl = System.Windows.Controls.UserControl;
+
+#endregion
+
+namespace LGP.Modules.ModuleEditor
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for Preferences.xaml
+    /// &lt;/summary&gt;
+    public partial class Preferences : IPreferences
+    {
+        private ISettings _parent;
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        public Preferences()
+        {
+            try
+            {
+                this.InitializeComponent();
+                var regedit = Framework.Registry;
+                this.ModulesFolderLocationTextBox.Text = regedit.ReadKey( &quot;moduleslocation&quot; );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        #region IPreferences Members
+
+        /// &lt;summary&gt;
+        ///   Gets the name of the preferences Pane
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public string GetName()
+        {
+            return Properties.Resources.ModuleEditor;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the preferences window
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;UserControl&lt;/returns&gt;
+        public UserControl GetControl()
+        {
+            return this;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Aks the preferences panel to save its entries
+        /// &lt;/summary&gt;
+        public void Save()
+        {
+            this._parent = null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Asks the preferences to load its settings
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;settingsParent&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public void Load( ISettings settingsParent )
+        {
+            this._parent = settingsParent;
+        }
+
+        /// &lt;summary&gt;
+        /// Gets the type it Controls
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Type&lt;/returns&gt;
+        public Type GetControlType()
+        {
+            return typeof( IModule );
+        }
+
+        /// &lt;summary&gt;
+        /// Gets the preferences icon
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public Image GetIcon()
+        {
+            return Framework.Images.GetImage( &quot;pencil&quot; , &quot;16X16&quot; , 14 );
+        }
+
+        #endregion
+
+        private void SelectFolderButtonClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                var folderDialog = new FolderBrowserDialog
+                {
+                    SelectedPath = @&quot;C:\\&quot;
+                };
+
+                var result = folderDialog.ShowDialog();
+                if( result.ToString() == &quot;OK&quot; )
+                {
+                    Framework.Registry.WriteKey( &quot;moduleslocation&quot; , folderDialog.SelectedPath );
+                    this.ModulesFolderLocationTextBox.Text = folderDialog.SelectedPath;
+                }
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src263', RANGES_263)
+		</script>
+	</body>
+</html>

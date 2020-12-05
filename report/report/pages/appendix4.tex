@@ -1,0 +1,674 @@
+\chapter{Appendix - Chapter 4}
+	\section{Extended Metrics}
+	\label{sec:ExtendedMetrics}
+	
+		\subsection{Sub Classes \& Inheritance}
+		\label{sec:SubclassesInheritance}
+	
+			\begin{table}[h!t]
+				\footnotesize{\begin{tabular}{ | p{65mm} | p{28mm} | p{12mm} | p{12mm} | p{12mm}  | }	
+																								\hline
+				Namespace & Type  & Instance Methods & Sub classes & Depth of inheritance  \\ \hline
+				LGP   & LGPWindow & 16    & 0     & 9  \\ \hline
+				LGP   & App   & 2     & 0     & 3  \\ \hline
+				LGP.Components.Database & Preferences & 14    & 0     & 9  \\ \hline
+				LGP.Components.Database & Plugin & 9     & 0     & 1  \\ \hline
+				LGP.Components.Database & DatabaseHandler & 15    & 0     & 1  \\ \hline
+				LGP.Components.Database.Entities & Grammer & 15    & 0     & 1  \\ \hline
+				LGP.Components.Database.Entities & Module & \cellcolor{ored}20    & 0     & 1  \\ \hline
+				LGP.Components.Database.Entities & Client & \cellcolor{ored}40    & 0     & 1  \\ \hline
+				LGP.Components.Database.Entities & Ou    & \cellcolor{ored}16    & 0     & 1  \\ \hline
+				LGP.Components.Database.Entities & Policy & \cellcolor{ored}20    & 0     & 1  \\ \hline
+				LGP.Components.Database.Gateways & GrammerGateway & 9     & 0     & 1  \\ \hline
+				LGP.Components.Database.Gateways & ClientGateway & 4     & 0     & 1  \\ \hline
+				LGP.Components.Database.Gateways & ModuleGateway & 6     & 0     & 1  \\ \hline
+				LGP.Components.Database.Gateways & OuGateway & 9     & 0     & 1  \\ \hline
+				LGP.Components.Database.Gateways & PolicyGateway & 14    & 0     & 1  \\ \hline
+				LGP.Components.Database.Mssql & Preferences & 10    & 0     & 9  \\ \hline
+				LGP.Components.Database.Mssql & Plugin & 9     & 0     & 1  \\ \hline
+				LGP.Components.Database.Mssql & MssqlDb & 6     & 0     & 1  \\ \hline
+				LGP.Components.Database.Mssql.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Components.Database.Mysql & Preferences & 10    & 0     & 9  \\ \hline
+				LGP.Components.Database.Mysql & MysqlDb & 6     & 0     & 1  \\ \hline
+				LGP.Components.Database.Mysql & Plugin & 9     & 0     & 1  \\ \hline
+				LGP.Components.Database.Mysql.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Components.Database.Oracle & Preferences & 10    & 0     & 9  \\ \hline
+				LGP.Components.Database.Oracle & OracleDb & 6     & 0     & 1  \\ \hline
+				LGP.Components.Database.Oracle & Plugin & 9     & 0     & 1  \\ \hline
+				LGP.Components.Database.Oracle.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Components.Database.Postgresql & Preferences & 10    & 0     & 9  \\ \hline
+				LGP.Components.Database.Postgresql & PostgreDb & 6     & 0     & 1  \\ \hline
+				LGP.Components.Database.Postgresql & Plugin & 9     & 0     & 1  \\ \hline	
+				LGP.Components.Database.Postgresql.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Components.Database.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Components.Dialog & Preferences & 9     & 0     & 9  \\ \hline		
+				LGP.Components.Dialog & Plugin & 9     & 0     & 1  \\ \hline
+				LGP.Components.Dialog & WindowDialog & 9     & 0     & 9  \\ \hline
+				LGP.Components.Dialog.Properties & Resources & 1     & 0     & 1  \\ \hline	
+				LGP.Components.Factory & Framework & 0     & 0     & 1  \\ \hline
+				LGP.Components.Factory.Interfaces.Component & IComponent & 3     & -     & -  \\ \hline
+				\end{tabular}}
+				
+				\caption{Sub classes \& Inheritance 1}			
+				\label{tab:SubclassesInheritance1}
+				
+			\end{table}
+			
+		\newpage
+			
+			\begin{table}[h!t]
+				\footnotesize{\begin{tabular}{ | p{65mm} | p{33mm} | p{10mm} | p{10mm} | p{10mm}  | }	
+																								\hline
+				Namespace & Type  & Instance Methods & Sub classes & Depth of inheritance  \\ \hline				
+				LGP.Components.Factory.Interfaces.Component & IMenu & 9     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Component & ISettings & 1     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Component & IPanel & 7     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IGrammer & 7     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IOu   & 9     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IModule & 13    & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IClient & \cellcolor{ored}33    & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IDatabase & 13    & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IPolicy & 13    & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IGrammerObserver & 5     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IOuObserver & 5     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IModuleObserver & 5     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IDatabaseModule & 5     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IClientObserver & 5     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IPolicyObserver & 5     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IOuGateway & 8     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IGrammerGateway & 8     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IClientGateway & 3     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IModuleGateway & 5     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IPolicyGateway & 13    & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IEventSystem & 6     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IImageHandler & 6     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IUtilities & 6     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IDialog & 5     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IRegistryHandler & 4     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IContextMenus & 5     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & INotification & 1     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IClassLibraryHandler & \cellcolor{ored}19    & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IDragDrop & 1     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & ILanguage & 0     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Module & IModule & 5     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Module & IPreferences & 6     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Module & IUserControl & 4     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Network & IServerInfo & 15    & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Network & IServerController & 14    & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Network & INetwork & 6     & -     & -  \\ \hline
+				LGP.Components.Factory.Interfaces.Network & IBroadcastListener & 3     & -     & -  \\ \hline
+				LGP.Components.Factory.Internal & Utilities & 7     & 0     & 1  \\ \hline
+				LGP.Components.Factory.Internal & RegistryHandler & 5     & 0     & 1  \\ \hline
+				LGP.Components.Factory.Internal & DragDropAdorner & 5     & 0     & 1  \\ \hline
+				LGP.Components.Factory.Internal & LibraryHandler & \cellcolor{ored}20    & 0     & 1  \\ \hline
+				LGP.Components.Factory.Internal & EventSystem & 8     & 0     & 1  \\ \hline
+				LGP.Components.Factory.Internal & ImageHandler & 7     & 0     & 1  \\ \hline
+				LGP.Components.Factory.Internal & DragAdorner & \cellcolor{ored}18    & 0     & 7  \\ \hline
+				\end{tabular}}
+				
+				\caption{Sub classes \& Inheritance 2}			
+				\label{tab:SubclassesInheritance2}
+				
+			\end{table}
+			
+		\newpage
+			
+			\begin{table}[h!t]
+				\footnotesize{\begin{tabular}{ | p{70mm} | p{33mm} | p{10mm} | p{10mm} | p{10mm}  | }	
+																								\hline
+				Namespace & Type  & Instance Methods & Sub classes & Depth of inheritance  \\ \hline				
+				LGP.Components.Factory.Internal.ServerControl & DataReceived & 4     & 0     & 3  \\ \hline
+				LGP.Components.Factory.Internal.ServerControl & ServerInfo & \cellcolor{ored}16    & 0     & 1  \\ \hline
+				LGP.Components.Factory.Internal.ServerControl & NetworkController & 7     & 0     & 1  \\ \hline
+				LGP.Components.Factory.Internal.ServerControl & BroadcastListener & 6     & 0     & 1  \\ \hline
+				LGP.Components.Factory.Internal.ServerControl & ServerController & 15    & 0     & 1  \\ \hline
+				LGP.Components.Factory.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Components.Factory.Publishers.Events & Event & 3     & \cellcolor{ored} 3     & 1  \\ \hline
+				LGP.Components.Factory.Publishers.Events & MenuEvent & 3     & 0     & 2  \\ \hline
+				LGP.Components.Factory.Publishers.Events & PreferencesEvent & 3     & 0     & 2  \\ \hline
+				LGP.Components.Factory.Publishers.Events & PanelEvent & 1     & 0     & 2  \\ \hline
+				LGP.Components.Menus & Preferences & 9     & 0     & 9  \\ \hline
+				LGP.Components.Menus & MenuHandler & \cellcolor{ored}32    & 0     & 1  \\ \hline
+				LGP.Components.Menus & Plugin & 9     & 0     & 1  \\ \hline
+				LGP.Components.Menus & ContextMenusHandler & 9     & 0     & 1  \\ \hline
+				LGP.Components.Menus.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Components.Notifications & Notifications & 8     & 0     & 9  \\ \hline
+				LGP.Components.Notifications & Preferences & 9     & 0     & 9  \\ \hline
+				LGP.Components.Notifications & Plugin & 9     & 0     & 1  \\ \hline
+				LGP.Components.Notifications.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Components.Panels & Preferences & 10    & 0     & 9  \\ \hline
+				LGP.Components.Panels & Plugin & 9     & 0     & 1  \\ \hline
+				LGP.Components.Panels & Panels & \cellcolor{ored}21    & 0     & 9  \\ \hline
+				LGP.Components.Panels.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Controls & Splash & 9     & 0     & 9  \\ \hline
+				LGP.Controls & Settings & 15    & 0     & 9  \\ \hline
+				LGP.Controls & Background & 4     & 0     & 9  \\ \hline
+				LGP.ImageLibrary & IconSet & 1     & 0     & 1  \\ \hline
+				LGP.ImageLibrary.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.ImageWindowsShellIcons & ShellIcon & 1     & 0     & 1  \\ \hline
+				LGP.ImageWindowsShellIcons.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Modules.ModuleEditor & ModuleList & 10    & 0     & 9  \\ \hline
+				LGP.Modules.ModuleEditor & Preferences & 10    & 0     & 9  \\ \hline
+				LGP.Modules.ModuleEditor & ModuleEditor & \cellcolor{ored}26    & 0     & 9  \\ \hline
+				LGP.Modules.ModuleEditor & Plugin & 12    & 0     & 1  \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleHandler & 1     & 0     & 1  \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleFileGrammerState & \cellcolor{ored}17    & 0     & 1  \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleFileGrammer\newline
+													StateHandler & 10    & 0     & 1  \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleDocument & \cellcolor{ored}38    & 0     & 1  \\ \hline	
+				LGP.Modules.ModuleEditor.Internal & ModuleFileState & \cellcolor{ored}28    & 0     & 1  \\ \hline
+				LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers & BraceFoldingStrategy & 7     & 0     & 2  \\ \hline
+				LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers & HighlightCurrentLine\newline
+																	  BackgroundRenderer & 3     & 0     & 1  \\ \hline
+				LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers & CompletionData & 10    & 0     & 1  \\ \hline				
+				\end{tabular}}
+				
+				\caption{Sub classes \& Inheritance 3}			
+				\label{tab:SubclassesInheritance3}
+				
+			\end{table}
+			
+		\newpage
+			
+			\begin{table}[h!t]
+				\footnotesize{\begin{tabular}{ | p{82mm} | p{33mm} | p{10mm} | p{10mm} | p{10mm}  | }	
+																								\hline
+				Namespace & Type  & Instance Methods & Sub classes & Depth of inheritance  \\ \hline		
+				
+				LGP.Modules.ModuleEditor.Internal.CustomControls & StackPanelModuleElement & 12    & 0     & 9  \\ \hline
+				LGP.Modules.ModuleEditor.Internal.Modals.Controls & AddModule & 8     & 0     & 9  \\ \hline
+				LGP.Modules.ModuleEditor.Internal.Modals.Controls & DeleteModule & 7     & 0     & 9  \\ \hline
+				LGP.Modules.ModuleEditor.Internal.NodeViews & ModulePane & 10    & 0     & 9  \\ \hline
+				LGP.Modules.ModuleEditor.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer & OuViewer & \cellcolor{ored}35    & 0     & 9  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer & OuTreeView & 9     & 0     & 9  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer & Preferences & 9     & 0     & 9  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer & Plugin & 12    & 0     & 1  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal & OuHelper & 1     & 0     & 1  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls & TreeViewOuElement & \cellcolor{ored}27    & 0     & \cellcolor{ored} 10 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls & WrapPanelClientElement & \cellcolor{ored}21    & 0     & 9  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls & WrapPanelOuElement & \cellcolor{ored}25    & 0     & 9  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls & CreateOu & 9     & 0     & 9  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls & MoveOu & 9     & 0     & 9  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls & DeleteOu & 8     & 0     & 9  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls & RenameOu & 9     & 0     & 9  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews & ClientPane & 11    & 0     & 9  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews & OuPane & 11    & 0     & 9  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Modules.PolicyEditor & PolicyEditor & \cellcolor{ored}20    & 0     & 9  \\ \hline
+				LGP.Modules.PolicyEditor & Preferences & 9     & 0     & 9  \\ \hline
+				LGP.Modules.PolicyEditor & Plugin & 12    & 0     & 1  \\ \hline
+				LGP.Modules.PolicyEditor.Internal & VisualPolicyEntry & \cellcolor{ored}33    & 0     & 1  \\ \hline
+				LGP.Modules.PolicyEditor.Internal & PolicyHandler & \cellcolor{ored}33    & 0     & 1  \\ \hline
+				LGP.Modules.PolicyEditor.Internal & CompletionData & 10    & 0     & 1  \\ \hline
+				LGP.Modules.PolicyEditor.Internal & HighlightCurrentLine\newline
+													BackgroundRenderer & 3     & 0     & 1  \\ \hline
+				LGP.Modules.PolicyEditor.Internal & RowValidationRule & 2     & 0     & 2  \\ \hline
+				LGP.Modules.PolicyEditor.Internal.CustomControls & VisualPolicyEditor & \cellcolor{ored}26    & 0     & 9  \\ \hline
+				LGP.Modules.PolicyEditor.Internal.CustomControls & OuPolicyPane & 11    & 0     & 9  \\ \hline
+				LGP.Modules.PolicyEditor.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Modules.ServerControl & ConnectionViewer & 12    & 0     & 9  \\ \hline
+				LGP.Modules.ServerControl & ConnectionController & 13    & 0     & 9  \\ \hline
+				LGP.Modules.ServerControl & Preferences & 9     & 0     & 9  \\ \hline
+				LGP.Modules.ServerControl & Plugin & 10    & 0     & 1  \\ \hline
+				LGP.Modules.ServerControl.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Modules.Statistics & Viewer & 15    & 0     & 9  \\ \hline
+				LGP.Modules.Statistics & Preferences & 9     & 0     & 9  \\ \hline
+				LGP.Modules.Statistics & Plugin & 12    & 0     & 1  \\ \hline
+				LGP.Modules.Statistics.Properties & Resources & 1     & 0     & 1  \\ \hline
+				LGP.Properties & Images & 1     & 0     & 1  \\ \hline
+				LGP.Properties & Resources & 1     & 0     & 1  \\ \hline
+				\end{tabular}}
+				
+				\caption{Sub classes \& Inheritance 4}			
+				\label{tab:SubclassesInheritance4}
+				
+			\end{table}
+	
+		\newpage	
+			
+		\subsection{Association \& Cohesiveness}	
+		\label{sec:AssociationCohesiveness}
+			
+			\begin{table}[h!t]
+				\footnotesize{\begin{tabular}{ | p{85mm} | p{35mm} | p{13mm} | p{14mm}  | }	
+																						\hline
+				Namespace & Type  & Method cohesiveness & Association between classes  \\ \hline
+				LGP   & LGPWindow & \cellcolor{ored}0.91  & \cellcolor{ored}77  \\ \hline
+				LGP   & App   & 0     & 5  \\ \hline
+				LGP.Components.Database & Preferences & 0.83  & \cellcolor{ored}59  \\ \hline
+				LGP.Components.Database & Plugin & 0     & 5  \\ \hline
+				LGP.Components.Database & DatabaseHandler & 0.62  & 19  \\ \hline
+				LGP.Components.Database.Entities & Grammer & 0.73  & 15  \\ \hline
+				LGP.Components.Database.Entities & Module & 0.71  & 23  \\ \hline
+				LGP.Components.Database.Entities & Client & \cellcolor{ored}0.92  & 14  \\ \hline
+				LGP.Components.Database.Entities & Ou    & 0.74  & 19  \\ \hline
+				LGP.Components.Database.Entities & Policy & 0.8   & 19  \\ \hline
+				LGP.Components.Database.Gateways & GrammerGateway & 0     & 31  \\ \hline
+				LGP.Components.Database.Gateways & ClientGateway & 0     & 27  \\ \hline
+				LGP.Components.Database.Gateways & ModuleGateway & 0     & 29  \\ \hline
+				LGP.Components.Database.Gateways & OuGateway & 0     & 33  \\ \hline
+				LGP.Components.Database.Gateways & PolicyGateway & 0     & \cellcolor{ored}41  \\ \hline
+				LGP.Components.Database.Mssql & Preferences & 0.8   & 16  \\ \hline
+				LGP.Components.Database.Mssql & Plugin & 0     & 5  \\ \hline
+				LGP.Components.Database.Mssql & MssqlDb & \cellcolor{ored}0.83  & 7  \\ \hline
+				LGP.Components.Database.Mssql.Properties & Resources & 0     & 6  \\ \hline
+				LGP.Components.Database.Mysql & Preferences & 0.82  & 16  \\ \hline
+				LGP.Components.Database.Mysql & MysqlDb & 0.17  & 13  \\ \hline
+				LGP.Components.Database.Mysql & Plugin & 0     & 5  \\ \hline
+				LGP.Components.Database.Mysql.Properties & Resources & 0     & 6  \\ \hline
+				LGP.Components.Database.Oracle & Preferences & 0.82  & 16  \\ \hline
+				LGP.Components.Database.Oracle & OracleDb & 0     & 1  \\ \hline
+				LGP.Components.Database.Oracle & Plugin & 0     & 5  \\ \hline
+				LGP.Components.Database.Oracle.Properties & Resources & 0     & 6  \\ \hline
+				LGP.Components.Database.Postgresql & Preferences & 0.82  & 16  \\ \hline
+				LGP.Components.Database.Postgresql & PostgreDb & 0     & 1  \\ \hline
+				LGP.Components.Database.Postgresql & Plugin & 0     & 5  \\ \hline
+				LGP.Components.Database.Postgresql.Properties & Resources & 0     & 6  \\ \hline
+				LGP.Components.Database.Properties & Resources & 0     & 6  \\ \hline
+				LGP.Components.Dialog & Preferences & 0.78  & 8  \\ \hline
+				LGP.Components.Dialog & Plugin & 0     & 5  \\ \hline
+				LGP.Components.Dialog & WindowDialog & 0.78  & \cellcolor{ored}48  \\ \hline
+				LGP.Components.Dialog.Properties & Resources & 0     & 6  \\ \hline
+				LGP.Components.Factory & Framework & 0     & 26  \\ \hline
+				LGP.Components.Factory.Interfaces.Component & IComponent & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Component & IMenu & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Component & ISettings & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Component & IPanel & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IGrammer & -     & 0  \\ \hline
+				\end{tabular}}
+				
+				\caption{Association \& Cohesiveness 1}			
+				\label{tab:AssociationCohesiveness1}
+				
+			\end{table}
+			
+		\newpage
+			
+			\begin{table}[h!t]
+				\footnotesize{\begin{tabular}{ | p{85mm} | p{35mm} | p{13mm} | p{14mm}  | }	
+																						\hline
+				Namespace & Type  & Method cohesiveness & Association between classes  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IOu   & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IModule & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IClient & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IDatabase & -     & 0  \\ \hline			
+				LGP.Components.Factory.Interfaces.Database & IPolicy & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IGrammerObserver & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IOuObserver & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IModuleObserver & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IDatabaseModule & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IClientObserver & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IPolicyObserver & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IOuGateway & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IGrammerGateway & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IClientGateway & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IModuleGateway & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IPolicyGateway & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IEventSystem & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IImageHandler & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IUtilities & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IDialog & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IRegistryHandler & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IContextMenus & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & INotification & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IClassLibraryHandler & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IDragDrop & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & ILanguage & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Module & IModule & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Module & IPreferences & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Module & IUserControl & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Network & IServerInfo & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Network & IServerController & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Network & INetwork & -     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Network & IBroadcastListener & -     & 0  \\ \hline
+				LGP.Components.Factory.Internal & Utilities & 0     & 27  \\ \hline
+				LGP.Components.Factory.Internal & RegistryHandler & 0.17  & 8  \\ \hline
+				LGP.Components.Factory.Internal & DragDropAdorner & 0     & 51  \\ \hline
+				LGP.Components.Factory.Internal & LibraryHandler & \cellcolor{ored}0.89  & 24  \\ \hline
+				LGP.Components.Factory.Internal & EventSystem & 0     & 12  \\ \hline
+				LGP.Components.Factory.Internal & ImageHandler & 0     & 6  \\ \hline
+				LGP.Components.Factory.Internal & DragAdorner & \cellcolor{ored}0.89  & 23  \\ \hline
+				LGP.Components.Factory.Internal.ServerControl & DataReceived & -     & 0  \\ \hline
+				LGP.Components.Factory.Internal.ServerControl & ServerInfo & 0.81  & 5 \\ \hline
+				\end{tabular}}
+				
+				\caption{Association \& Cohesiveness 2}			
+				\label{tab:AssociationCohesiveness2}
+				
+			\end{table}
+			
+		\newpage
+			
+			\begin{table}[h!t]
+				\footnotesize{\begin{tabular}{ | p{85mm} | p{35mm} | p{13mm} | p{14mm}  | }	
+																						\hline
+				Namespace & Type  & Method cohesiveness & Association between classes  \\ \hline				
+				LGP.Components.Factory.Internal.ServerControl & NetworkController & 0.75  & 7 \\ \hline
+				LGP.Components.Factory.Internal.ServerControl & BroadcastListener & 0.76  & \cellcolor{ored}52 \\ \hline
+				LGP.Components.Factory.Internal.ServerControl & ServerController & 0.71  & 38 \\ \hline
+				LGP.Components.Factory.Properties & Resources & 0     & 5 \\ \hline
+				LGP.Components.Factory.Publishers.Events & Event & 0     & 1 \\ \hline
+				LGP.Components.Factory.Publishers.Events & MenuEvent & 0     & 1 \\ \hline
+				LGP.Components.Factory.Publishers.Events & PreferencesEvent & 0     & 1 \\ \hline
+				LGP.Components.Factory.Publishers.Events & PanelEvent & 0     & 1 \\ \hline
+				LGP.Components.Menus & Preferences & 0.78  & 8 \\ \hline
+				LGP.Components.Menus & MenuHandler & 0.73  & 30 \\ \hline
+				LGP.Components.Menus & Plugin & 0     & 5 \\ \hline
+				LGP.Components.Menus & ContextMenusHandler & 0.33  & 29 \\ \hline
+				LGP.Components.Menus.Properties & Resources & 0     & 6 \\ \hline
+				LGP.Components.Notifications & Notifications & 0.75  & \cellcolor{ored}64 \\ \hline
+				LGP.Components.Notifications & Preferences & 0.78  & 8 \\ \hline
+				LGP.Components.Notifications & Plugin & 0     & 5 \\ \hline
+				LGP.Components.Notifications.Properties & Resources & 0     & 6 \\ \hline
+				LGP.Components.Panels & Preferences & 0.8   & 25 \\ \hline							
+				LGP.Components.Panels & Plugin & 0     & 5 \\ \hline
+				LGP.Components.Panels & Panels & \cellcolor{ored}0.84  & \cellcolor{ored}84 \\ \hline
+				LGP.Components.Panels.Properties & Resources & 0     & 6 \\ \hline
+				LGP.Controls & Splash & 0.82  & \cellcolor{ored}60 \\ \hline
+				LGP.Controls & Settings & 0.8   & \cellcolor{ored}84 \\ \hline
+				LGP.Controls & Background & 0.62  & 12 \\ \hline
+				LGP.ImageLibrary & IconSet & 0     & 25 \\ \hline		
+				LGP.ImageLibrary.Properties & Resources & 0     & 5 \\ \hline
+				LGP.ImageWindowsShellIcons & ShellIcon & 0     & 7 \\ \hline
+				LGP.ImageWindowsShellIcons.Properties & Resources & 0     & 5 \\ \hline
+				LGP.Modules.ModuleEditor & ModuleList & \cellcolor{ored}0.86  & 38 \\ \hline
+				LGP.Modules.ModuleEditor & Preferences & 0.82  & 23 \\ \hline
+				LGP.Modules.ModuleEditor & ModuleEditor & \cellcolor{ored}0.91  & \cellcolor{ored}92 \\ \hline
+				LGP.Modules.ModuleEditor & Plugin & 0     & 19 \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleHandler & 0     & \cellcolor{ored}58 \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleFileGrammerState & 0.79  & 15 \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleFileGrammer\newline
+													StateHandler & 0.52  & 38 \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleDocument & \cellcolor{ored}0.89  & \cellcolor{ored}142 \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleFileState & 0.83  & \cellcolor{ored}49 \\ \hline
+				LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers & BraceFoldingStrategy & 0     & 15 \\ \hline
+				LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers & HighlightCurrentLine\newline
+																	  BackgroundRenderer & 0.33  & 21 \\ \hline
+				\end{tabular}}
+				
+				\caption{Association \& Cohesiveness 3}			
+				\label{tab:AssociationCohesiveness3}
+				
+			\end{table}
+			
+		\newpage
+			
+			\begin{table}[h!t]
+				\footnotesize{\begin{tabular}{ | p{85mm} | p{35mm} | p{13mm} | p{14mm}  | }	
+																						\hline
+				Namespace & Type & Method cohesiveness & Association between classes  \\ \hline				
+				LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers & CompletionData & 0.82  & 9 \\ \hline
+				LGP.Modules.ModuleEditor.Internal.CustomControls & StackPanelModuleElement & 0.79  & 29 \\ \hline
+				LGP.Modules.ModuleEditor.Internal.Modals.Controls & AddModule & 0.76  & 28 \\ \hline
+				LGP.Modules.ModuleEditor.Internal.Modals.Controls & DeleteModule & 0.75  & 20 \\ \hline
+				LGP.Modules.ModuleEditor.Internal.NodeViews & ModulePane & 0.8   & 39 \\ \hline
+				LGP.Modules.ModuleEditor.Properties & Resources & 0     & 6 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer & OuViewer & \cellcolor{ored}0.93  & \cellcolor{ored}116 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer & OuTreeView & 0.82  & 33 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer & Preferences & 0.78  & 10 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer & Plugin & 0     & 21 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal & OuHelper & 0     & 17 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls & TreeViewOuElement & 0.76  & \cellcolor{ored}89 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls & WrapPanelClientElement & \cellcolor{ored}0.85  & \cellcolor{ored}42 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls & WrapPanelOuElement & 0.83  & \cellcolor{ored}69 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls & CreateOu & 0.8   & 31 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls & MoveOu & 0.8   & 24 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls & DeleteOu & 0.75  & 28 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls & RenameOu & 0.78  & 26 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews & ClientPane & 0.82  & 34 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews & OuPane & 0.8   & 16 \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Properties & Resources & 0     & 6 \\ \hline
+				LGP.Modules.PolicyEditor & PolicyEditor & \cellcolor{ored}0.91  & \cellcolor{ored}46 \\ \hline
+				LGP.Modules.PolicyEditor & Preferences & 0.78  & 10 \\ \hline				
+				LGP.Modules.PolicyEditor & Plugin & 0     & 21 \\ \hline
+				LGP.Modules.PolicyEditor.Internal & VisualPolicyEntry & \cellcolor{ored}0.92  & 32 \\ \hline
+				LGP.Modules.PolicyEditor.Internal & PolicyHandler & \cellcolor{ored}0.88  & \cellcolor{ored}114 \\ \hline
+				LGP.Modules.PolicyEditor.Internal & CompletionData & 0.82  & 9 \\ \hline	
+				LGP.Modules.PolicyEditor.Internal & HighlightCurrentLine\newline
+													BackgroundRenderer & 0.33  & 21 \\ \hline
+				LGP.Modules.PolicyEditor.Internal & RowValidationRule & 0     & 7 \\ \hline
+				LGP.Modules.PolicyEditor.Internal.CustomControls & VisualPolicyEditor & \cellcolor{ored}0.91  & \cellcolor{ored}163 \\ \hline
+				LGP.Modules.PolicyEditor.Internal.CustomControls & OuPolicyPane & \cellcolor{ored}0.84  & 33 \\ \hline
+				LGP.Modules.PolicyEditor.Properties & Resources & 0     & 6 \\ \hline
+				LGP.Modules.ServerControl & ConnectionViewer & \cellcolor{ored}0.83  & \cellcolor{ored}44 \\ \hline
+				LGP.Modules.ServerControl & ConnectionController & \cellcolor{ored}0.88  & \cellcolor{ored}53 \\ \hline
+				LGP.Modules.ServerControl & Preferences & 0.78  & 8 \\ \hline
+				LGP.Modules.ServerControl & Plugin & 0     & 17 \\ \hline
+				LGP.Modules.ServerControl.Properties & Resources & 0     & 6 \\ \hline
+				LGP.Modules.Statistics & Viewer & 0.82  & \cellcolor{ored}40 \\ \hline
+				LGP.Modules.Statistics & Preferences & 0.78  & 8 \\ \hline
+				LGP.Modules.Statistics & Plugin & 0     & 17 \\ \hline
+				LGP.Modules.Statistics.Properties & Resources & 0     & 6 \\ \hline
+				LGP.Properties & Images & 0     & 6 \\ \hline
+				LGP.Properties & Resources & 0     & 6 \\ \hline
+				\end{tabular}}
+				
+				\caption{Association \& Cohesiveness 4}			
+				\label{tab:AssociationCohesiveness4}
+				
+			\end{table}
+		
+		\newpage	
+			
+		\subsection{Complexity \& Coupling}	
+		\label{sec:ComplexityCoupling}
+			
+			\begin{table}[h!t]
+				\footnotesize{\begin{tabular}{ | p{82mm} | p{32mm} | p{10mm} | p{10mm} | p{10mm} | }	
+																						\hline
+				Namespace & Type  & Cyclomatic Complexity & Afferent Coupling & Efferent Coupling  \\ \hline
+				LGP   & LGPWindow & 35    & 0     & \cellcolor{ored}73  \\ \hline
+				LGP   & App   & 0     & 0     & 11  \\ \hline
+				LGP.Components.Database & Preferences & 27    & 2     & \cellcolor{ored}66  \\ \hline
+				LGP.Components.Database & Plugin & 8     & 0     & 13  \\ \hline
+				LGP.Components.Database & DatabaseHandler & 20    & 0     & 28  \\ \hline
+				LGP.Components.Database.Entities & Grammer & 29    & 1     & 12  \\ \hline
+				LGP.Components.Database.Entities & Module & 33    & 1     & 16  \\ \hline
+				LGP.Components.Database.Entities & Client & \cellcolor{ored}54    & 1     & 13  \\ \hline
+				LGP.Components.Database.Entities & Ou    & 37    & 1     & 15  \\ \hline
+				LGP.Components.Database.Entities & Policy & 40    & 1     & 14  \\ \hline
+				LGP.Components.Database.Gateways & GrammerGateway & \cellcolor{ored}55    & 2     & 22  \\ \hline
+				LGP.Components.Database.Gateways & ClientGateway & 22    & 1     & 23  \\ \hline
+				LGP.Components.Database.Gateways & ModuleGateway & 34    & 1     & 23  \\ \hline
+				LGP.Components.Database.Gateways & OuGateway & \cellcolor{ored}49    & 1     & 24  \\ \hline
+				LGP.Components.Database.Gateways & PolicyGateway & \cellcolor{ored}80    & 1     & 27  \\ \hline
+				LGP.Components.Database.Mssql & Preferences & 10    & 1     & 38  \\ \hline
+				LGP.Components.Database.Mssql & Plugin & 8     & 0     & 13  \\ \hline
+				LGP.Components.Database.Mssql & MssqlDb & 6     & 0     & 13  \\ \hline
+				LGP.Components.Database.Mssql.Properties & Resources & 8     & 2     & 13  \\ \hline
+				LGP.Components.Database.Mysql & Preferences & 10    & 1     & 38  \\ \hline
+				LGP.Components.Database.Mysql & MysqlDb & 10    & 0     & 17  \\ \hline
+				LGP.Components.Database.Mysql & Plugin & 8     & 0     & 13  \\ \hline
+				LGP.Components.Database.Mysql.Properties & Resources & 8     & 2     & 13  \\ \hline
+				LGP.Components.Database.Oracle & Preferences & 10    & 1     & 38  \\ \hline
+				LGP.Components.Database.Oracle & OracleDb & 5     & 0     & 7  \\ \hline
+				LGP.Components.Database.Oracle & Plugin & 8     & 0     & 13  \\ \hline
+				LGP.Components.Database.Oracle.Properties & Resources & 8     & 2     & 13  \\ \hline
+				LGP.Components.Database.Postgresql & Preferences & 10    & 1     & 38  \\ \hline
+				LGP.Components.Database.Postgresql & PostgreDb & 5     & 0     & 7  \\ \hline
+				LGP.Components.Database.Postgresql & Plugin & 8     & 0     & 13  \\ \hline
+				LGP.Components.Database.Postgresql.Properties & Resources & 8     & 2     & 13  \\ \hline
+				LGP.Components.Database.Properties & Resources & 15    & 2     & 13  \\ \hline
+				LGP.Components.Dialog & Preferences & 7     & 1     & 30  \\ \hline
+				LGP.Components.Dialog & Plugin & 8     & 0     & 13  \\ \hline
+				LGP.Components.Dialog & WindowDialog & 10    & 0     & \cellcolor{ored}45  \\ \hline
+				LGP.Components.Dialog.Properties & Resources & 6     & 2     & 13  \\ \hline
+				LGP.Components.Factory & Framework & 28    & \cellcolor{ored}92    & 36  \\ \hline
+				LGP.Components.Factory.Interfaces.Component & IComponent & -     & \cellcolor{ored}21    & 4  \\ \hline
+				LGP.Components.Factory.Interfaces.Component & IMenu & -     & \cellcolor{ored}21    & 7  \\ \hline
+				LGP.Components.Factory.Interfaces.Component & ISettings & -     & \cellcolor{ored}17    & 1  \\ \hline
+				LGP.Components.Factory.Interfaces.Component & IPanel & -     & \cellcolor{ored}17    & 5  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IGrammer & -     & \cellcolor{ored}14    & 4  \\ \hline
+				\end{tabular}}
+				
+				\caption{Complexity \& Coupling 1}			
+				\label{tab:ComplexityCoupling1}
+				
+			\end{table}
+			
+		\newpage
+			
+			\begin{table}[h!t]
+				\footnotesize{\begin{tabular}{ | p{82mm} | p{32mm} | p{10mm} | p{10mm} | p{10mm} | }
+																						\hline
+				Namespace & Type  & Cyclomatic Complexity & Afferent Coupling & Efferent Coupling  \\ \hline				
+				LGP.Components.Factory.Interfaces.Database & IOu   & -     & \cellcolor{ored}19    & 5  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IModule & -     & \cellcolor{ored}13    & 6  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IClient & -     & \cellcolor{ored}9     & 5  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IDatabase & -     & \cellcolor{ored}24    & 12  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IPolicy & -     & 7     & 5  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IGrammerObserver & -     & 3     & 2  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IOuObserver & -     & \cellcolor{ored}11    & 2  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IModuleObserver & -     & \cellcolor{ored}9     & 2  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IDatabaseModule & -     & \cellcolor{ored}10    & 4  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IClientObserver & -     & 5     & 2  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IPolicyObserver & -     & 5     & 2  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IOuGateway & -     & \cellcolor{ored}9     & 5  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IGrammerGateway & -     & \cellcolor{ored}8     & 5  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IClientGateway & -     & 5     & 4  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IModuleGateway & -     & 5     & 4  \\ \hline
+				LGP.Components.Factory.Interfaces.Database & IPolicyGateway & -     & 4     & 6  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IEventSystem & -     & \cellcolor{ored}76    & 7  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IImageHandler & -     & \cellcolor{ored}56    & 5  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IUtilities & -     & \cellcolor{ored}26    & 5  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IDialog & -     & \cellcolor{ored}15    & 3  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IRegistryHandler & -     & \cellcolor{ored}9     & 3  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IContextMenus & -     & \cellcolor{ored}8     & 9  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & INotification & -     & \cellcolor{ored}9     & 3  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IClassLibraryHandler & -     & 5     & 12  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & IDragDrop & -     & 6     & 3  \\ \hline
+				LGP.Components.Factory.Interfaces.Infrastructure & ILanguage & -     & 0     & 0  \\ \hline
+				LGP.Components.Factory.Interfaces.Module & IModule & -     & \cellcolor{ored}24    & 2  \\ \hline
+				LGP.Components.Factory.Interfaces.Module & IPreferences & -     & \cellcolor{ored}17    & 6  \\ \hline
+				LGP.Components.Factory.Interfaces.Module & IUserControl & -     & \cellcolor{ored}8     & 1  \\ \hline
+				LGP.Components.Factory.Interfaces.Network & IServerInfo & -     & \cellcolor{ored}10    & 5  \\ \hline
+				LGP.Components.Factory.Interfaces.Network & IServerController & -     & 7     & 6  \\ \hline
+				LGP.Components.Factory.Interfaces.Network & INetwork & -     & \cellcolor{ored}8     & 5  \\ \hline
+				LGP.Components.Factory.Interfaces.Network & IBroadcastListener & -     & 2     & 3  \\ \hline
+				LGP.Components.Factory.Internal & Utilities & 18    & 1     & 26  \\ \hline
+				LGP.Components.Factory.Internal & RegistryHandler & 7     & 1     & 8  \\ \hline
+				LGP.Components.Factory.Internal & DragDropAdorner & 19    & 1     & 36  \\ \hline
+				LGP.Components.Factory.Internal & LibraryHandler & 43    & 1     & 32  \\ \hline
+				LGP.Components.Factory.Internal & EventSystem & 10    & 1     & 16  \\ \hline
+				LGP.Components.Factory.Internal & ImageHandler & 9     & 1     & 9  \\ \hline
+				LGP.Components.Factory.Internal & DragAdorner & 30    & 1     & 26  \\ \hline
+				LGP.Components.Factory.Internal.ServerControl & DataReceived & -     & 3     & 8  \\ \hline
+				LGP.Components.Factory.Internal.ServerControl & ServerInfo & 17    & 3     & 9  \\ \hline
+				\end{tabular}}
+				
+				\caption{Complexity \& Coupling 2}			
+				\label{tab:ComplexityCoupling2}
+				
+			\end{table}
+			
+		\newpage
+			
+			\begin{table}[h!t]
+				\footnotesize{\begin{tabular}{ | p{82mm} | p{32mm} | p{10mm} | p{10mm} | p{10mm} | }
+																						\hline
+				Namespace & Type  & Cyclomatic Complexity & Afferent Coupling & Efferent Coupling  \\ \hline					
+				LGP.Components.Factory.Internal.ServerControl & NetworkController & 10    & 1     & 12  \\ \hline
+				LGP.Components.Factory.Internal.ServerControl & BroadcastListener & 19    & 1     & 30  \\ \hline
+				LGP.Components.Factory.Internal.ServerControl & ServerController & 28    & 1     & 26  \\ \hline
+				LGP.Components.Factory.Properties & Resources & 5     & 0     & 13  \\ \hline
+				LGP.Components.Factory.Publishers.Events & Event & 1     & 3     & 3  \\ \hline
+				LGP.Components.Factory.Publishers.Events & MenuEvent & 1     & 5     & 5  \\ \hline
+				LGP.Components.Factory.Publishers.Events & PreferencesEvent & 1     & 4     & 5  \\ \hline
+				LGP.Components.Factory.Publishers.Events & PanelEvent & 1     & 2     & 3  \\ \hline
+				LGP.Components.Menus & Preferences & 7     & 1     & 30  \\ \hline
+				LGP.Components.Menus & MenuHandler & \cellcolor{ored}85    & 0     & 30  \\ \hline
+				LGP.Components.Menus & Plugin & 8     & 0     & 13  \\ \hline
+				LGP.Components.Menus & ContextMenusHandler & 31    & 0     & 29  \\ \hline
+				LGP.Components.Menus.Properties & Resources & 24    & 3     & 13  \\ \hline
+				LGP.Components.Notifications & Notifications & 17    & 2     & \cellcolor{ored}59  \\ \hline
+				LGP.Components.Notifications & Preferences & 7     & 1     & 30  \\ \hline
+				LGP.Components.Notifications & Plugin & 8     & 0     & 13  \\ \hline
+				LGP.Components.Notifications.Properties & Resources & 6     & 2     & 13  \\ \hline
+				LGP.Components.Panels & Preferences & 17    & 1     & \cellcolor{ored}44  \\ \hline
+				LGP.Components.Panels & Plugin & 8     & 0     & 13  \\ \hline
+				LGP.Components.Panels & Panels & \cellcolor{ored}62    & 0     & \cellcolor{ored}73  \\ \hline
+				LGP.Components.Panels.Properties & Resources & 18    & 3     & 13  \\ \hline
+				LGP.Controls & Splash & 19    & 3     & \cellcolor{ored}57  \\ \hline
+				LGP.Controls & Settings & \cellcolor{ored}49    & 1     & \cellcolor{ored}72  \\ \hline
+				LGP.Controls & Background & 4     & 0     & 32  \\ \hline
+				LGP.ImageLibrary & IconSet & 11    & 1     & 28  \\ \hline
+				LGP.ImageLibrary.Properties & Resources & 5     & 0     & 13  \\ \hline
+				LGP.ImageWindowsShellIcons & ShellIcon & 2     & 1     & 10  \\ \hline
+				LGP.ImageWindowsShellIcons.Properties & Resources & 5     & 0     & 13  \\ \hline
+				LGP.Modules.ModuleEditor & ModuleList & 24    & 2     & \cellcolor{ored}51  \\ \hline
+				LGP.Modules.ModuleEditor & Preferences & 11    & 1     & 43  \\ \hline
+				LGP.Modules.ModuleEditor & ModuleEditor & \cellcolor{ored}58    & 2     & \cellcolor{ored}78  \\ \hline
+				LGP.Modules.ModuleEditor & Plugin & 14    & 0     & 25  \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleHandler & 28    & 3     & 41  \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleFileGrammerState & 29    & 2     & 12  \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleFileGrammer\newline
+													StateHandler & \cellcolor{ored}45    & 1     & 23  \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleDocument & \cellcolor{ored}87    & 2     & \cellcolor{ored}81  \\ \hline
+				LGP.Modules.ModuleEditor.Internal & ModuleFileState & \cellcolor{ored}53    & 1     & 28  \\ \hline
+				LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers & BraceFoldingStrategy & 12    & 1     & 18  \\ \hline
+				LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers & HighlightCurrentLine\newline
+																	  BackgroundRenderer & 8     & 1     & 30  \\ \hline
+				LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers & CompletionData & 11    & 1     & 18  \\ \hline
+				LGP.Modules.ModuleEditor.Internal.CustomControls & StackPanelModuleElement & 22    & 1     & \cellcolor{ored}48  \\ \hline
+				\end{tabular}}
+				
+				\caption{Complexity \& Coupling 3}			
+				\label{tab:ComplexityCoupling3}
+				
+			\end{table}
+			
+		\newpage
+			
+			\begin{table}[h!t]
+				\footnotesize{\begin{tabular}{ | p{82mm} | p{32mm} | p{10mm} | p{10mm} | p{10mm} | }	
+																						\hline
+				Namespace & Type  & Cyclomatic Complexity & Afferent Coupling & Efferent Coupling  \\ \hline				
+				LGP.Modules.ModuleEditor.Internal.Modals.Controls & AddModule & 13    & 1     & 43  \\ \hline
+				LGP.Modules.ModuleEditor.Internal.Modals.Controls & DeleteModule & 10    & 1     & 37  \\ \hline
+				LGP.Modules.ModuleEditor.Internal.NodeViews & ModulePane & 18    & 1     & \cellcolor{ored}49  \\ \hline
+				LGP.Modules.ModuleEditor.Properties & Resources & 37    & 4     & 13  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer & OuViewer & \cellcolor{ored}96    & 4     & \cellcolor{ored}93  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer & OuTreeView & 18    & 2     & \cellcolor{ored}50  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer & Preferences & 8     & 1     & 32  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer & Plugin & 14    & 0     & 26  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal & OuHelper & 12    & 5     & 17  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls & TreeViewOuElement & \cellcolor{ored}100   & 5     & \cellcolor{ored}69  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls & WrapPanelClientElement & \cellcolor{ored}48    & 3     & \cellcolor{ored}55  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls & WrapPanelOuElement & \cellcolor{ored}66    & 2     & \cellcolor{ored}70  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls & CreateOu & 15    & 3     & \cellcolor{ored}44  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls & MoveOu & 14    & 3     & 39  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls & DeleteOu & 13    & 3     & 41  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls & RenameOu & 15    & 2     & 40  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews & ClientPane & 20    & 2     & 37  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews & OuPane & 18    & 2     & 33  \\ \hline
+				LGP.Modules.OrganizationUnitExplorer.Properties & Resources & 31    & 5     & 13  \\ \hline
+				LGP.Modules.PolicyEditor & PolicyEditor & 34    & 3     & \cellcolor{ored}62  \\ \hline
+				LGP.Modules.PolicyEditor & Preferences & 8     & 1     & 32  \\ \hline
+				LGP.Modules.PolicyEditor & Plugin & 14    & 0     & 27  \\ \hline
+				LGP.Modules.PolicyEditor.Internal & VisualPolicyEntry & \cellcolor{ored}54    & 2     & 25  \\ \hline
+				LGP.Modules.PolicyEditor.Internal & PolicyHandler & \cellcolor{ored}62    & 2     & \cellcolor{ored}73  \\ \hline
+				LGP.Modules.PolicyEditor.Internal & CompletionData & 11    & 1     & 18  \\ \hline
+				LGP.Modules.PolicyEditor.Internal & HighlightCurrentLine\newline
+													BackgroundRenderer & 8     & 1     & 30  \\ \hline
+				LGP.Modules.PolicyEditor.Internal & RowValidationRule & 8     & 1     & 15  \\ \hline
+				LGP.Modules.PolicyEditor.Internal.CustomControls & VisualPolicyEditor & \cellcolor{ored}121   & 1     & \cellcolor{ored}98  \\ \hline
+				LGP.Modules.PolicyEditor.Internal.CustomControls & OuPolicyPane & 22    & 1     & \cellcolor{ored}47  \\ \hline
+				LGP.Modules.PolicyEditor.Properties & Resources & 35    & 5     & 13  \\ \hline
+				LGP.Modules.ServerControl & ConnectionViewer & 21    & 2     & \cellcolor{ored}50  \\ \hline
+				LGP.Modules.ServerControl & ConnectionController & 32    & 2     & \cellcolor{ored}63  \\ \hline
+				LGP.Modules.ServerControl & Preferences & 7     & 1     & 30  \\ \hline
+				LGP.Modules.ServerControl & Plugin & 12    & 0     & 24  \\ \hline
+				LGP.Modules.ServerControl.Properties & Resources & 25    & 5     & 13  \\ \hline
+				LGP.Modules.Statistics & Viewer & 32    & 1     & \cellcolor{ored}52  \\ \hline
+				LGP.Modules.Statistics & Preferences & 7     & 1     & 30  \\ \hline
+				LGP.Modules.Statistics & Plugin & 14    & 0     & 24  \\ \hline
+				LGP.Modules.Statistics.Properties & Resources & 12    & 3     & 13  \\ \hline
+				LGP.Properties & Images & 7     & 3     & 15  \\ \hline
+				LGP.Properties & Resources & 17    & 1     & 13  \\ \hline
+				\end{tabular}}
+				
+				\caption{Complexity \& Coupling 4}			
+				\label{tab:ComplexityCoupling4}
+				
+			\end{table}

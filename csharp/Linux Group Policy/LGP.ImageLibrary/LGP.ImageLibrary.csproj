@@ -1,0 +1,1836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A4595AB-F57D-46CB-B3E3-8149A35289F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LGP.ImageLibrary</RootNamespace>
+    <AssemblyName>LGP.ImageLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\LGP\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\LGP\bin\Debug\LGP.ImageLibrary.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IconSet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\address.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\administrative-docs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\advertisment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\archives.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\attibutes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\basket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\bestseller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\billing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\brainstorming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\brand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\business-contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\busy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\category-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\collaboration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\communication.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\consulting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\cost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\credit-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\credit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\current-work.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\customers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\cv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\delicious.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\document-library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\donate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\drawings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\featured.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\feed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\finished-work.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\free-for-job.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\freelance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\full-time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\future-projects.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\graphic-design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\hire-me.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\illustration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\invoice-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\issue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\lightbulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\limited-edition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\milestone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\my-account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\networking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\old-version.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\order-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\payment-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\paypal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\photography.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\premium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\process.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\product-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\product-design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\publish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\shipping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\showreel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\sign-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\sign-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\sign-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\sitemap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\special-offer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\suppliers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\upcoming-work.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\32x32\address.png" />
+    <Resource Include="Images\32x32\administrative-docs.png" />
+    <Resource Include="Images\32x32\advertising.png" />
+    <Resource Include="Images\32x32\archives.png" />
+    <Resource Include="Images\32x32\attibutes.png" />
+    <Resource Include="Images\32x32\bank.png" />
+    <Resource Include="Images\32x32\basket.png" />
+    <Resource Include="Images\32x32\bestseller.png" />
+    <Resource Include="Images\32x32\billing.png" />
+    <Resource Include="Images\32x32\bookmark.png" />
+    <Resource Include="Images\32x32\brainstorming.png" />
+    <Resource Include="Images\32x32\brand.png" />
+    <Resource Include="Images\32x32\business-contact.png" />
+    <Resource Include="Images\32x32\busy.png" />
+    <Resource Include="Images\32x32\calendar.png" />
+    <Resource Include="Images\32x32\category-2.png" />
+    <Resource Include="Images\32x32\collaboration.png" />
+    <Resource Include="Images\32x32\comment.png" />
+    <Resource Include="Images\32x32\communication.png" />
+    <Resource Include="Images\32x32\config.png" />
+    <Resource Include="Images\32x32\consulting.png" />
+    <Resource Include="Images\32x32\contact.png" />
+    <Resource Include="Images\32x32\cost.png" />
+    <Resource Include="Images\32x32\credit-card.png" />
+    <Resource Include="Images\32x32\credit.png" />
+    <Resource Include="Images\32x32\current-work.png" />
+    <Resource Include="Images\32x32\customers.png" />
+    <Resource Include="Images\32x32\cv.png" />
+    <Resource Include="Images\32x32\database.png" />
+    <Resource Include="Images\32x32\date.png" />
+    <Resource Include="Images\32x32\delicious.png" />
+    <Resource Include="Images\32x32\document-library.png" />
+    <Resource Include="Images\32x32\donate.png" />
+    <Resource Include="Images\32x32\drawings.png" />
+    <Resource Include="Images\32x32\edit.png" />
+    <Resource Include="Images\32x32\email.png" />
+    <Resource Include="Images\32x32\featured.png" />
+    <Resource Include="Images\32x32\feed.png" />
+    <Resource Include="Images\32x32\finished-work.png" />
+    <Resource Include="Images\32x32\flag.png" />
+    <Resource Include="Images\32x32\folder.png" />
+    <Resource Include="Images\32x32\free-for-job.png" />
+    <Resource Include="Images\32x32\freelance.png" />
+    <Resource Include="Images\32x32\full-time.png" />
+    <Resource Include="Images\32x32\future-projects.png" />
+    <Resource Include="Images\32x32\graphic-design.png" />
+    <Resource Include="Images\32x32\heart.png" />
+    <Resource Include="Images\32x32\hire-me.png" />
+    <Resource Include="Images\32x32\home.png" />
+    <Resource Include="Images\32x32\illustration.png" />
+    <Resource Include="Images\32x32\invoice-2.png" />
+    <Resource Include="Images\32x32\invoice.png" />
+    <Resource Include="Images\32x32\issue.png" />
+    <Resource Include="Images\32x32\library.png" />
+    <Resource Include="Images\32x32\lightbulb.png" />
+    <Resource Include="Images\32x32\limited-edition.png" />
+    <Resource Include="Images\32x32\link.png" />
+    <Resource Include="Images\32x32\lock.png" />
+    <Resource Include="Images\32x32\login.png" />
+    <Resource Include="Images\32x32\logout.png" />
+    <Resource Include="Images\32x32\milestone.png" />
+    <Resource Include="Images\32x32\my-account.png" />
+    <Resource Include="Images\32x32\networking.png" />
+    <Resource Include="Images\32x32\old-versions.png" />
+    <Resource Include="Images\32x32\order-2.png" />
+    <Resource Include="Images\32x32\order.png" />
+    <Resource Include="Images\32x32\payment-card.png" />
+    <Resource Include="Images\32x32\paypal.png" />
+    <Resource Include="Images\32x32\pen.png" />
+    <Resource Include="Images\32x32\pencil.png" />
+    <Resource Include="Images\32x32\phone.png" />
+    <Resource Include="Images\32x32\photography.png" />
+    <Resource Include="Images\32x32\premium.png" />
+    <Resource Include="Images\32x32\print.png" />
+    <Resource Include="Images\32x32\process.png" />
+    <Resource Include="Images\32x32\product-2.png" />
+    <Resource Include="Images\32x32\product-design.png" />
+    <Resource Include="Images\32x32\product.png" />
+    <Resource Include="Images\32x32\project.png" />
+    <Resource Include="Images\32x32\publish.png" />
+    <Resource Include="Images\32x32\refresh.png" />
+    <Resource Include="Images\32x32\search.png" />
+    <Resource Include="Images\32x32\settings.png" />
+    <Resource Include="Images\32x32\shipping.png" />
+    <Resource Include="Images\32x32\showreel.png" />
+    <Resource Include="Images\32x32\sign-in.png" />
+    <Resource Include="Images\32x32\sign-out.png" />
+    <Resource Include="Images\32x32\sign-up.png" />
+    <Resource Include="Images\32x32\sitemap.png" />
+    <Resource Include="Images\32x32\special-offer.png" />
+    <Resource Include="Images\32x32\star.png" />
+    <Resource Include="Images\32x32\statistics.png" />
+    <Resource Include="Images\32x32\suppliers.png" />
+    <Resource Include="Images\32x32\tag.png" />
+    <Resource Include="Images\32x32\ticket.png" />
+    <Resource Include="Images\32x32\twitter.png" />
+    <Resource Include="Images\32x32\upcoming-work.png" />
+    <Resource Include="Images\32x32\user.png" />
+    <Resource Include="Images\32x32\world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\VS2010ImageLibrary\Networkgroup.png" />
+    <Resource Include="Images\VS2010ImageLibrary\delete32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Open.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Redo.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Save.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Undo.png" />
+    <Resource Include="Images\VS2010ImageLibrary\WordWrap.png" />
+    <Resource Include="Images\VS2010ImageLibrary\zoomin.png" />
+    <Resource Include="Images\VS2010ImageLibrary\zoomout.png" />
+    <Resource Include="Images\distros\128\apple.png" />
+    <Resource Include="Images\distros\128\centos.png" />
+    <Resource Include="Images\distros\128\debian.png" />
+    <Resource Include="Images\distros\128\fedora.png" />
+    <Resource Include="Images\distros\128\freebsd.png" />
+    <Resource Include="Images\distros\128\gentoo.png" />
+    <Resource Include="Images\distros\128\linux.png" />
+    <Resource Include="Images\distros\128\mandrivia.png" />
+    <Resource Include="Images\distros\128\mint.png" />
+    <Resource Include="Images\distros\128\netbsd.png" />
+    <Resource Include="Images\distros\128\opensuse.png" />
+    <Resource Include="Images\distros\128\redhat.png" />
+    <Resource Include="Images\distros\128\slackware.png" />
+    <Resource Include="Images\distros\128\suse.png" />
+    <Resource Include="Images\distros\128\ubuntu.png" />
+    <Resource Include="Images\distros\32\apple.png" />
+    <Resource Include="Images\distros\32\centos.png" />
+    <Resource Include="Images\distros\32\debian.png" />
+    <Resource Include="Images\distros\32\fedora.png" />
+    <Resource Include="Images\distros\32\freebsd.png" />
+    <Resource Include="Images\distros\32\gentoo.png" />
+    <Resource Include="Images\distros\32\linux.png" />
+    <Resource Include="Images\distros\32\mandrivia.png" />
+    <Resource Include="Images\distros\32\mint.png" />
+    <Resource Include="Images\distros\32\netbsd.png" />
+    <Resource Include="Images\distros\32\opensuse.png" />
+    <Resource Include="Images\distros\32\redhat.png" />
+    <Resource Include="Images\distros\32\slackware.png" />
+    <Resource Include="Images\distros\32\suse.png" />
+    <Resource Include="Images\distros\32\ubuntu.png" />
+    <Resource Include="Images\distros\48\apple.png" />
+    <Resource Include="Images\distros\48\centos.png" />
+    <Resource Include="Images\distros\48\debian.png" />
+    <Resource Include="Images\distros\48\fedora.png" />
+    <Resource Include="Images\distros\48\freebsd.png" />
+    <Resource Include="Images\distros\48\gentoo.png" />
+    <Resource Include="Images\distros\48\linux.png" />
+    <Resource Include="Images\distros\48\mandrivia.png" />
+    <Resource Include="Images\distros\48\mint.png" />
+    <Resource Include="Images\distros\48\netbsd.png" />
+    <Resource Include="Images\distros\48\opensuse.png" />
+    <Resource Include="Images\distros\48\redhat.png" />
+    <Resource Include="Images\distros\48\slackware.png" />
+    <Resource Include="Images\distros\48\suse.png" />
+    <Resource Include="Images\distros\48\ubuntu.png" />
+    <Resource Include="Images\distros\64\apple.png" />
+    <Resource Include="Images\distros\64\centos.png" />
+    <Resource Include="Images\distros\64\debian.png" />
+    <Resource Include="Images\distros\64\fedora.png" />
+    <Resource Include="Images\distros\64\freebsd.png" />
+    <Resource Include="Images\distros\64\gentoo.png" />
+    <Resource Include="Images\distros\64\linux.png" />
+    <Resource Include="Images\distros\64\mandrivia.png" />
+    <Resource Include="Images\distros\64\mint.png" />
+    <Resource Include="Images\distros\64\netbsd.png" />
+    <Resource Include="Images\distros\64\opensuse.png" />
+    <Resource Include="Images\distros\64\redhat.png" />
+    <Resource Include="Images\distros\64\slackware.png" />
+    <Resource Include="Images\distros\64\suse.png" />
+    <Resource Include="Images\distros\64\ubuntu.png" />
+    <Resource Include="Images\distros\128\workgroup.png" />
+    <Resource Include="Images\distros\32\workgroup.png" />
+    <Resource Include="Images\distros\48\workgroup.png" />
+    <Resource Include="Images\distros\64\workgroup.png" />
+    <Resource Include="Images\16x16\method.png" />
+    <Resource Include="Images\16x16\property.png" />
+    <Content Include="Images\distros\src\Apple.png" />
+    <Content Include="Images\distros\src\centos.png" />
+    <Content Include="Images\distros\src\Debian.png" />
+    <Content Include="Images\distros\src\Fedora.png" />
+    <Content Include="Images\distros\src\Freebsd.png" />
+    <Content Include="Images\distros\src\Gentoo.png" />
+    <Content Include="Images\distros\src\Mandrivia.png" />
+    <Content Include="Images\distros\src\Mint.png" />
+    <Content Include="Images\distros\src\Netbsd.png" />
+    <Content Include="Images\distros\src\Opensuse.png" />
+    <Content Include="Images\distros\src\redhat.png" />
+    <Content Include="Images\distros\src\Slackware.png" />
+    <Content Include="Images\distros\src\Suse.jpg" />
+    <Content Include="Images\distros\src\Suse.png" />
+    <Content Include="Images\distros\src\Tux.png" />
+    <Content Include="Images\distros\src\Ubuntu.png" />
+    <Resource Include="Images\VS2010ImageLibrary\database2.png" />
+    <Resource Include="Images\VS2010ImageLibrary\postgresql.png" />
+    <Resource Include="Images\VS2010ImageLibrary\oracle.png" />
+    <Resource Include="Images\VS2010ImageLibrary\mysql.png" />
+    <Resource Include="Images\VS2010ImageLibrary\mssql.png" />
+    <Resource Include="Images\VS2010ImageLibrary\panel.png" />
+    <Resource Include="Images\32x32\lgpico.png" />
+    <Resource Include="Images\VS2010ImageLibrary\005_Task_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\005_Task_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\005_Task_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\005_Task_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\005_Task_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\007_PrintView_128x128_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\007_PrintView_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\007_PrintView_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\007_PrintView_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\007_PrintView_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\007_PrintView_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\008_Reminder_128x128_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\008_Reminder_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\008_Reminder_24x24.png" />
+    <Resource Include="Images\VS2010ImageLibrary\008_Reminder_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\008_Reminder_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\008_Reminder_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\009_HighPriority_128x128_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\009_HighPriority_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\009_HighPriority_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\009_HighPriority_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\009_HighPriority_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\009_HighPriority_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\010_LowPriority_128x128_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\010_LowPriority_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\010_LowPriority_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\010_LowPriority_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\010_LowPriority_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\010_LowPriority_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\0192_BlankTemplate_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\0202_InsertShape_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\0203_Textbox_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\0205_WebInsertHyperlink_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\023_Tip_128x128_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\023_Tip_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\023_Tip_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\023_Tip_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\023_Tip_32x34_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\023_Tip_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\023_Tip_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\0356_NewComment_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\037_Colorize_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\037_Colorize_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\037_Colorize_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\037_Colorize_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\037_Colorize_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\037_Colorize_64x64_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\041_Sort_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\041_Sort_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\041_Sort_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\041_Sort_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\041_Sort_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\042b_AddCategory_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\042b_AddCategory_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\042b_AddCategory_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\042b_AddCategory_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\042b_AddCategory_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\042b_AddCategory_64x64_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\075b_UpFolder_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\075b_UpFolder_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\075b_UpFolder_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\075b_UpFolder_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\075b_UpFolder_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\075b_UpFolder_64x64_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\077_AddFile_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\077_AddFile_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\077_AddFile_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\077_AddFile_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\077_AddFile_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\107259_NewContentPage_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\107597_HighPriorityNote_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\107619_LowPriorityNote_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Complete_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Complete_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Complete_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Complete_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Complete_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Default_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Default_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Default_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Default_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Default_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_donotenter.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Error_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Error_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Error_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Error_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Error_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Error_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Error_64x64_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Help_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Help_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Help_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Help_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Help_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Help_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Info_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Info_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Info_256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Info_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Info_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Info_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_RedWarning_256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Warning_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Warning_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Warning_256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Warning_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Warning_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\109_AllAnnotations_Warning_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowCurve_Blue_Left_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowCurve_Blue_Left_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowCurve_Blue_Left_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowCurve_Blue_Left_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowCurve_Blue_Left_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowCurve_Blue_Right_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowCurve_Blue_Right_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowCurve_Blue_Right_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowCurve_Blue_Right_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowCurve_Blue_Right_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowReturnLeft_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowReturnLeft_Blue_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowReturnLeft_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowReturnLeft_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowReturnLeft_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowReturnRight_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowReturnRight_Blue_24x24_72 %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowReturnRight_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowReturnRight_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_ArrowReturnRight_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Blue_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Green_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Green_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Green_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Green_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Green_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Grey_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Grey_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Grey_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Grey_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Grey_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Orange_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Orange_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Orange_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Orange_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Orange_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowLong_Orange_64x64_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Blue_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Green_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Green_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Green_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Green_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Green_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Grey_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Grey_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Grey_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Grey_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Grey_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Orange_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Orange_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Orange_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Orange_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_DownArrowShort_Orange_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Blue_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Green_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Green_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Green_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Green_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Grey_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Grey_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Grey_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Grey_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Grey_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Orange_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Orange_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Orange_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Orange_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowLong_Orange_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Blue_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Green_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Green_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Green_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Green_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Green_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Grey_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Grey_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Grey_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Grey_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Grey_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Orange_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Orange_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Orange_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Orange_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_LeftArrowShort_Orange_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Blue_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Green_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Green_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Green_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Green_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Green_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Grey_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Grey_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Grey_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Grey_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Grey_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Orange_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Orange_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Orange_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Orange_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Minus_Orange_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Blue_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Green_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Green_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Green_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Green_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Green_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Grey_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Grey_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Grey_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Grey_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Grey_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Orange_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Orange_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Orange_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Orange_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Plus_Orange_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RefreshArrow_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RefreshArrow_Blue_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RefreshArrow_Blue_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RefreshArrow_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RefreshArrow_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RefreshArrow_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RefreshArrow_Green_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RefreshArrow_Green_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RefreshArrow_Green_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RefreshArrow_Green_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RefreshArrow_Green_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Blue_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Green_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Green_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Green_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Green_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Green_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Grey_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Grey_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Grey_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Grey_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Grey_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Orange_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Orange_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Orange_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Orange_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowLong_Orange_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Blue_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Green_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Green_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Green_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Green_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Green_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Grey_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Grey_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Grey_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Grey_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Grey_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Orange_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Orange_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Orange_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Orange_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_RightArrowShort_Orange_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Tick_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Tick_Green_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Tick_Green_64x64_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Tick_Grey_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_Tick_Orange_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Blue_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Green_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Green_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Green_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Green_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Green_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Grey_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Grey_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Grey_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Grey_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Grey_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Orange_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Orange_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Orange_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Orange_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowLong_Orange_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Blue_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Blue_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Blue_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Blue_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Blue_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Green_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Green_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Green_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Green_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Green_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Grey_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Grey_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Grey_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Grey_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Grey_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Orange_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Orange_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Orange_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Orange_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\112_UpArrowShort_Orange_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\125_FullView_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\125_FullView_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\125_FullView_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\125_FullView_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\125_FullView_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\126_Edit_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\126_Edit_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\126_Edit_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\126_Edit_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\126_Edit_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1385_Disable_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1385_Disable_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\138_PushPin_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\138_PushPin_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\138_PushPin_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\138_PushPin_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\138_PushPin_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1403_Globe.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1409_Monitor_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1409_Monitor_24x24.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1409_Monitor_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1409_Monitor_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1415_Paintbrush_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1435_ClipBoard.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1446_envelope_stamp_clsd_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1446_envelope_stamp_clsd_48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1447_eraser_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1447_eraser_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1460_PaintPalette_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1460_PaintPalette_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1462_Pencil_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1462_Pencil_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1474_Tape_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1474_Tape_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1475_Text Balloon_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1475_Text Balloon_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1496_wall_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1496_wall_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1507_ParallelPort_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1508_QuestionMarkRed.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1522_stop_watch_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1532_Flag_system_Blue.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1532_Flag_system_Green.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1532_Flag_system_Purple.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1532_Flag_system_red.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1532_Flag_system_yellow.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1547_ballpointpen.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1549_Paper_clip_blue.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1549_Paper_clip_gray.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1549_Paper_clip_gray_128x128.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1565_QuestionMarkBlue.png" />
+    <Resource Include="Images\VS2010ImageLibrary\157_GetPermission_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\157_GetPermission_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\157_GetPermission_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\157_GetPermission_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\157_GetPermission_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1683_Lightbulb_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1683_Lightbulb_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1683_Lightbulb_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\1683_Lightbulb_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\2391_ZoomOut.png" />
+    <Resource Include="Images\VS2010ImageLibrary\2392_ZoomIn_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\2392_ZoomIn_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\2608_GoldLock_10x10.png" />
+    <Resource Include="Images\VS2010ImageLibrary\2608_GoldLock_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\2608_GoldLock_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\3.5_Disk_Drive.png" />
+    <Resource Include="Images\VS2010ImageLibrary\305_Close_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\305_Close_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\305_Close_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\305_Close_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\305_Close_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\327_Options_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\327_Options_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\327_Options_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\327_Options_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\327_Options_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\525_DiskDrive.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ActiveX.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ActivityReports.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ActualSizeHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Add.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AddTableHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AddToFavoritesHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Alerts.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AlignObjectsBottomHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AlignObjectsCenteredHorizontalHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AlignObjectsCenteredVerticalHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AlignObjectsLeftHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AlignObjectsRightHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AlignObjectsTopHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AlignTableCellMiddleCenterHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AlignTableCellMiddleLeftJustHS.PNG" />
+    <Resource Include="Images\VS2010ImageLibrary\AlignTableCellMiddleRightHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AlignToGridHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Animate.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\Csearch.avi" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\Csearch_00.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\download_FTP.avi" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\download_FTP_00.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\FINDCOMP.AVI" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\findFILE.avi" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\fSEARCH.avi" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\fSEARCH_00.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\globeGIFanime.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\homeNETWORK.avi" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\homeNETWORK2.avi" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\homeNETWORK2_00.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\homeNETWORK_00.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\idle_BLK.avi" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\idle_BLK_00.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\scanner_TRANSFER_00.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\status_anim.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\toCOMP.avi" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\toCOMP_00.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\to_FAX.avi" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\to_FAX_00.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\update.avi" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\update2.avi" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\update2_00.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\update_00.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\UPload.avi" />
+    <Resource Include="Images\VS2010ImageLibrary\Animations\UPload_00.gif" />
+    <Resource Include="Images\VS2010ImageLibrary\Annotation_New.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ApplicationWindows_AllLanguages.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ApproveReject_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ApproveReject_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AppWindow.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ArrangeSideBySideHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ArrangeWindowsHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Arrow.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Assembly.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AttachFileHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AttachmentHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\attach_file.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AudioCD.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AudioCDPlus.png" />
+    <Resource Include="Images\VS2010ImageLibrary\audiodvd.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AudioFile.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AudioHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AutoList.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Autoplay.png" />
+    <Resource Include="Images\VS2010ImageLibrary\AutoRun.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Back.png" />
+    <Resource Include="Images\VS2010ImageLibrary\BackgroundSoundHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Back_Forward.png" />
+    <Resource Include="Images\VS2010ImageLibrary\BarCodeHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_asterick_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_bars.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_binoculars_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_bubble.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_business_contacts.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_calendar_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_charts.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_checkboxes.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_checkmark_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_cog_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_cursor.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_cylinder_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_envelope_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_exclamationmark_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_floppydisk_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_gauge.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_globe_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_key_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_lock_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_map.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_movie_reel_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_paperclip_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_picture_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_plus_sign_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_rss.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_ruler.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_screen.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_scroll_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_server.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_speaker_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_star_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_text.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_tray.png" />
+    <Resource Include="Images\VS2010ImageLibrary\base_triangle.png" />
+    <Resource Include="Images\VS2010ImageLibrary\batfile.png" />
+    <Resource Include="Images\VS2010ImageLibrary\BehindTextHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Binoculars.png" />
+    <Resource Include="Images\VS2010ImageLibrary\BitmapFile.png" />
+    <Resource Include="Images\VS2010ImageLibrary\blank_cd.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Blocked.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Blu-RayMovieDisk.png" />
+    <Resource Include="Images\VS2010ImageLibrary\boldhs.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Books.png" />
+    <Resource Include="Images\VS2010ImageLibrary\book_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\book_addressHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Book_angleHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Book_Green_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Book_Green_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Book_Journal_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Book_Journal_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\book_notebook.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Book_openHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\book_reportHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Book_StackOfReportsHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\book_Thesaurus_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Book_VSHelp.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Box.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Break.png" />
+    <Resource Include="Images\VS2010ImageLibrary\BreakpointHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Breakpoints.png" />
+    <Resource Include="Images\VS2010ImageLibrary\BringForwardHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\BringToFrontHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\browse.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Browse_Search.png" />
+    <Resource Include="Images\VS2010ImageLibrary\bulleted_list_options.png" />
+    <Resource Include="Images\VS2010ImageLibrary\BurnCD.png" />
+    <Resource Include="Images\VS2010ImageLibrary\BurnCD_error.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Cab.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Calculator %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Calculator.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CalculatorHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Calendar-BusinessMonthView_16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Calendar-BusinessMonthView_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Calendar_scheduleHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Camera.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Cancel.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CancelApproval_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CanvasScaleHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CascadeWindowsHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CassetteTape.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CD.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CD_Drive.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CD_R.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CD_ROM.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CD_RW.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CD_SV.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CD_V.png" />
+    <Resource Include="Images\VS2010ImageLibrary\cellphone.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CenterAcrossHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Certificate.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Checkbox.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CheckBoxHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CheckGrammarHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Checkmark.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CheckSpellingHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ChooseColor.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Class.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Clear.png" />
+    <Resource Include="Images\VS2010ImageLibrary\clipboard %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Clipboard.png" />
+    <Resource Include="Images\VS2010ImageLibrary\clock %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Clock.png" />
+    <Resource Include="Images\VS2010ImageLibrary\cmd.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CodeWindow.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ColorHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Color_background_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Color_eyedropper.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Color_fontHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Color_linecolor.png" />
+    <Resource Include="Images\VS2010ImageLibrary\COM+.png" />
+    <Resource Include="Images\VS2010ImageLibrary\COM.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CommandButtons.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CommandButton_XP.png" />
+    <Resource Include="Images\VS2010ImageLibrary\command_link_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\command_link_default.png" />
+    <Resource Include="Images\VS2010ImageLibrary\command_link_disabled.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Comment.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CommentHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\compactFlash.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Compare.png" />
+    <Resource Include="Images\VS2010ImageLibrary\compareversionsHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Complete_OK.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Component.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Computer %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Computer.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ConflictHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Connect.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Connection_Manager.png" />
+    <Resource Include="Images\VS2010ImageLibrary\copy %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Copy.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CopyFolderHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CopyHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CPU.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Create.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CriticalError.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Currency.png" />
+    <Resource Include="Images\VS2010ImageLibrary\cut %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Cut.png" />
+    <Resource Include="Images\VS2010ImageLibrary\CutHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Database.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DataContainer_MoveFirstHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DataContainer_MoveLastHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DataContainer_MoveNextHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DataContainer_MovePreviousHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DataContainer_NewRecordHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DataTables.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Default_Fax.png" />
+    <Resource Include="Images\VS2010ImageLibrary\delete %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Delete-PermissionHH.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Delete.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DeleteFolderHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DeleteHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\delete_12x12.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Delete_black_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Device.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DialHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Dialogs_XP.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Dialup.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DiscardChanges.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Disconnect.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DisconnectedDrive.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DisplayInColorHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DocumentHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Document_Blank.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Document_Fragment.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Document_Text.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DoubleLeftArrowHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DoubleRightArrowHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Download.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DVD-RAM.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DVD-RW.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DVD.png" />
+    <Resource Include="Images\VS2010ImageLibrary\dvddrive.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DVDplusR.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DVD_R.png" />
+    <Resource Include="Images\VS2010ImageLibrary\DVD_ROM.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Edit-Permission.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Edit.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EditBrightContrastHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EditCodeHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EditDocument.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EditHTMLSource.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EditInformationHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EditTableHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EditTask.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EditTask_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Edit_RedoHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Edit_UndoHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\emd.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EmptyCD.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EmptyDrive.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Encrypt.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EnhancedAudioCD.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EnhancedDVD.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_ADODotNetDataService.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_association_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_association_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_ComplexTypeProperty_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_complex_type_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_entity_container_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_entity_set_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_entity_type_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_navigation_property_16x15.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_navigation_property_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_NewEntityModelService.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_OtherModelService.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_property_with_key_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_property_with_key_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EntityDataModel_table_Mapping_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Envelope.png" />
+    <Resource Include="Images\VS2010ImageLibrary\EnvelopeHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\eps_closedHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\eps_openHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\eps_open_largeHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Erase.png" />
+    <Resource Include="Images\VS2010ImageLibrary\error.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Event.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ExpandSpaceHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ExpirationHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Export.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Favorites.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FavoriteStar_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FavoriteStar_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FavoriteStar_FrontFacing_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FavoriteStar_FrontFacing_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FavoriteStar_FrontFacing_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FavoriteStar_FrontFacing_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FavoriteStar_FrontFacing_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Fax.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FaxHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\filecabinet.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FilesDownload_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\File_Printer.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FilingCabinet.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FillDownHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FillLeftHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FillRightHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FillUpHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Filter %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Filter %283%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Filter.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Filter2HS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Find.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FindHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FindNextHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FindNext_VS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FindPrevious_VS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Find_VS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Flag.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Flag_blueHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Flag_greenHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Flag_redHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FlipHorizontalHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FlipVerticalHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FloppyDisk.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Folder.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FolderOpen_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FolderOpen_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FolderOpen_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FolderOpen_32x42_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FolderOpen_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Folder_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Folder_256x256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Folder_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Folder_48x48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Folder_Closed %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Folder_Closed.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Folder_Disabled.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Folder_Open %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Folder_Open.png" />
+    <Resource Include="Images\VS2010ImageLibrary\font %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Font.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FontDialogHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FontHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Forecolor.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FormRunHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FormulaEvaluatorHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Form_Win32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\forward.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FullScreenHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Function.png" />
+    <Resource Include="Images\VS2010ImageLibrary\FunctionHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Function_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Function_small.png" />
+    <Resource Include="Images\VS2010ImageLibrary\gamecontroller.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Gear.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Gears_Cogs_Services.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GenericMovieClip.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Generic_Application.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Generic_Device.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Generic_Document.png" />
+    <Resource Include="Images\VS2010ImageLibrary\generic_picture.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GenVideoDoc_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GenVideoDoc_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GetLatestVersion.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Go.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GoLtrHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GoRtlHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GoToNextHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GoToNextRecord.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GoToParentFolderHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GoToPrevious.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GoToPreviousMessage.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GoToPreviousRecord.png" />
+    <Resource Include="Images\VS2010ImageLibrary\GotoShortcutsHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\graphhs.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Graph_Bar.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Grid.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Hand.png" />
+    <Resource Include="Images\VS2010ImageLibrary\HardDrive.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Hard_Drive.png" />
+    <Resource Include="Images\VS2010ImageLibrary\hddvdmovie.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Help %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\help %283%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Help.png" />
+    <Resource Include="Images\VS2010ImageLibrary\HighlightHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\history %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\History.png" />
+    <Resource Include="Images\VS2010ImageLibrary\HomeHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\HtmlBalanceBracesHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\HTMLPage.png" />
+    <Resource Include="Images\VS2010ImageLibrary\HTMLPasswordHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\HTMLSubmitHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\HTML_Webpage.png" />
+    <Resource Include="Images\VS2010ImageLibrary\hyperlink %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Hyperlink.png" />
+    <Resource Include="Images\VS2010ImageLibrary\IgnoreIssue_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\image %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Image.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Image_File.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Import %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Import %283%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Import.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ImportXMLHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\IndentHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\info.png" />
+    <Resource Include="Images\VS2010ImageLibrary\InfoBarClose.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Information.png" />
+    <Resource Include="Images\VS2010ImageLibrary\InsertHyperlinkHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\InsertPicture.png" />
+    <Resource Include="Images\VS2010ImageLibrary\InsertPictureHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\InsertTabControlHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\IssueTracking_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ItalicHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Journal.png" />
+    <Resource Include="Images\VS2010ImageLibrary\KeepWindowVisible.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Key.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Keyboard.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Keys.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Key_Assymetric.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Key_EventLog_Audit_Success.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Key_Foreign.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Key_Left.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Key_Protected.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Key_Right.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Key_Symmetric.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Key_Unique.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Label.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Language_Initials%28VB_CS_CPP_FS_PY%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Laptop.png" />
+    <Resource Include="Images\VS2010ImageLibrary\LayoutSelectColumn.png" />
+    <Resource Include="Images\VS2010ImageLibrary\LayoutSelectRow.png" />
+    <Resource Include="Images\VS2010ImageLibrary\LegendHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Library.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Likely_unavail %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Likely_unavail.png" />
+    <Resource Include="Images\VS2010ImageLibrary\LineColorHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Link %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Link.png" />
+    <Resource Include="Images\VS2010ImageLibrary\list.txt" />
+    <Resource Include="Images\VS2010ImageLibrary\List_BulletsHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\List_NumberedHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\List_NumberedRTLHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\List_NumberedTBHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\List_NumberedVertTHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Lock_Private.png" />
+    <Resource Include="Images\VS2010ImageLibrary\MagnifyingGlass.png" />
+    <Resource Include="Images\VS2010ImageLibrary\MasterPage.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Message.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Method_Overloaded.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Microphone %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Microphone.png" />
+    <Resource Include="Images\VS2010ImageLibrary\MixedMediaFile.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Monitor.png" />
+    <Resource Include="Images\VS2010ImageLibrary\MonthlyViewHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\MotionLines.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Mouse.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Move %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Move.png" />
+    <Resource Include="Images\VS2010ImageLibrary\MoveFolderHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\MoveToFolderHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Move_Back-Next.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Move_First-Last.png" />
+    <Resource Include="Images\VS2010ImageLibrary\MultiplePagesHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Multiple_Selection.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Music_Note_Double_16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Music_Note_Double_24.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Music_Note_Double_48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Music_Note_Double_75x74 png for sidebar app.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Music_Note_Single_16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Music_Note_Single_24.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Music_Note_Single_48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\mynet.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NavBack.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NavForward.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Network %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Network.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Network_Center.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Network_ConnectTo.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Network_Drive.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Network_Fax.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Network_Fax_Default.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Network_Folder.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Network_Internet.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Network_Map.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Network_Printer.png" />
+    <Resource Include="Images\VS2010ImageLibrary\New-Permission.png" />
+    <Resource Include="Images\VS2010ImageLibrary\New.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NewCardHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NewDocumentHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NewDocuments_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NewDocument_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NewFolderHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NewMessageHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NewNoteWhite_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NewReportHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NewWebsite.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NewWindow.png" />
+    <Resource Include="Images\VS2010ImageLibrary\New_Folder_Command.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NextPageHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Notebook.png" />
+    <Resource Include="Images\VS2010ImageLibrary\NoteHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Notepad.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Notepad_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Notify_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Objects.png" />
+    <Resource Include="Images\VS2010ImageLibrary\OpenFile.png" />
+    <Resource Include="Images\VS2010ImageLibrary\openfolderHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\openHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\OpenInBrowser.png" />
+    <Resource Include="Images\VS2010ImageLibrary\OpenSelectedItemHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\OptionsHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\OrganizerHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\OrgChartHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\OutdentHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Overlay_Audio.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Overlay_Share_16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Overlay_Share_256.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Overlay_Share_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Overlay_Share_48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Package.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Page.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PageNumber.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PageUpHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PageWidthHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Paintbrush.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Paste %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\paste %283%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Paste.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PasteHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\paste_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Pause %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Pause.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PauseHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PauseRecorderHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\pencil_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Pencil_Edit_Comment.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PendingRequest_12x10_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PendingRequest_22x22_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PendingRequest_24x24_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PendingRequest_28x28_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PendingRequest_32x32_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PendingRequest_48x48_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PendingRequest_64x64_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\pending_request_16x16_72.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Performance.png" />
+    <Resource Include="Images\VS2010ImageLibrary\personalization.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Phone.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PieChart3DHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PieChartHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PlayHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PointerHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Portable_Media_Devices.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PortraitHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PortraitLandscapeHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\preferences.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PreviousPageHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PrimaryKeyHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PrintArea.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PrintEntireDocument.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Printer.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PrintHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PrintPreviewHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PrintSetupHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ProofingTools_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Properties %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Properties.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PropertySheet.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Protected.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ProtectFormHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ProtectSubdocumentHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Publish.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PublishMajorVersion.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PublishPlanHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PublishToWebHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\pushpin.png" />
+    <Resource Include="Images\VS2010ImageLibrary\PushpinHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\QuestionMark.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RadialChartHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ram.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RecolorPictureHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Record.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RecordHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ReduceSize.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Refresh.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RefreshDocViewHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RelationshipsHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Remove.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Removehyperlink.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Rename.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RenameFolderHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Repair.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RepeatHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Replace.png" />
+    <Resource Include="Images\VS2010ImageLibrary\replace_folder.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ReportBlank_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ResizeHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Restart.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RestartHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Retry.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Revert %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Revert.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RightArrow2HS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RightArrowHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RightsRestrictedHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RightToLeftDoucmentHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RoutingSlipHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RSS_Default_16x16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RSS_Default_24.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RSS_Default_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\RulerHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Run.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SaveAllHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SaveAsWebPageHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SaveFormDesignHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\saveHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Save_FloppyDisk.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Script.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Scroll_NoText.png" />
+    <Resource Include="Images\VS2010ImageLibrary\search.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SearchFolderHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SearchWebHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\search_glyph.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SecurityLock.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Send-to-mobileHH.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SendBackwardHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SendInstantMessage_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SendLinkByEmail_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SendToBackHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SeriousWarning.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Server.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Settings %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Settings.png" />
+    <Resource Include="Images\VS2010ImageLibrary\settings_16.png" />
+    <Resource Include="Images\VS2010ImageLibrary\settings_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\settings_48.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Setup.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Setup_Install.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Share.png" />
+    <Resource Include="Images\VS2010ImageLibrary\share_overlay.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Shortcut %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Shortcut.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ShowAllCommentsHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ShowAllGridlines.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ShowGridlines2HS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ShowGridlinesHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ShowPageMargins_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ShowRulelinesHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ShowRulerHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\smartmedia.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Snippet.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SortHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SortUpHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SpeechMicHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SplitSubdocumentHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SQL_Letters.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Stapler.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Star.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Start.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Statistics.png" />
+    <Resource Include="Images\VS2010ImageLibrary\StatusAnnotation_Run.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Stop %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Stop.png" />
+    <Resource Include="Images\VS2010ImageLibrary\StopHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\StoredProcedure.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Stuffed_Folder.png" />
+    <Resource Include="Images\VS2010ImageLibrary\StyleSheet.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SubmitForApproval_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SychronizeListHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\SymbolHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\TableHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\TableProperties_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Table_32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\tag.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Task-Inspector-Suggestion.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Task-Inspector-Warning.png" />
+    <Resource Include="Images\VS2010ImageLibrary\TaskHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Team.png" />
+    <Resource Include="Images\VS2010ImageLibrary\TextboxHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ThumbnailLoadingHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ThumbnailView.png" />
+    <Resource Include="Images\VS2010ImageLibrary\TileWindowsHorizontallyHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Tools.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Tools_Hammer.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Tools_Wrench.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Undo_Redo.png" />
+    <Resource Include="Images\VS2010ImageLibrary\UnknownDrive.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Users %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Users.png" />
+    <Resource Include="Images\VS2010ImageLibrary\User_Single.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Validate.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Verify.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Video.png" />
+    <Resource Include="Images\VS2010ImageLibrary\VideoCamera.png" />
+    <Resource Include="Images\VS2010ImageLibrary\View.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ViewAllPages_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ViewThumbnailsHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\VPN.png" />
+    <Resource Include="Images\VS2010ImageLibrary\VSTS_Test_cube.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Warning %282%29.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Warning.png" />
+    <Resource Include="Images\VS2010ImageLibrary\WarningHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Web.png" />
+    <Resource Include="Images\VS2010ImageLibrary\WebForm.png" />
+    <Resource Include="Images\VS2010ImageLibrary\WebInsertHyperlinkHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Web_Globe.png" />
+    <Resource Include="Images\VS2010ImageLibrary\WindowsHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Wizard_Sparkle.png" />
+    <Resource Include="Images\VS2010ImageLibrary\X%27s.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XAML_file.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XMLFileHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XML_Schema.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_AllIcon.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_AttributeIcon.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_ChoiceIcon.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_ClearWorkspaceCmd.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_ContentModelView.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_ElementIcon.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_GoToContentModelViewCmd.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_GoToGraphViewCmd2.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_GoToStartViewCmd.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_GraphBtmToTop.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_GraphLeftToRight.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_GraphRightToLeft.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_GraphTopToBtm.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_ImportIcon.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_NameSpaceIcon.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_RemoveAllButSelectionFromWorkspaceCmd.png" />
+    <Resource Include="Images\VS2010ImageLibrary\XSDSchema_SequenceIcon.png" />
+    <Resource Include="Images\VS2010ImageLibrary\zippedFile.png" />
+    <Resource Include="Images\VS2010ImageLibrary\ZoomHS.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Zoom_32x32.png" />
+    <Resource Include="Images\VS2010ImageLibrary\Zoom_In_Out.png" />
+    <Resource Include="Images\512x512\lgp.png" />
+    <Resource Include="Images\256x256\lgp.png" />
+    <Resource Include="Images\128x128\lgp.png" />
+    <Resource Include="Icons\lgpico.ico" />
+    <Content Include="Images\32x32\category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LGP.ImageWindowsShellIcons\LGP.ImageWindowsShellIcons.csproj">
+      <Project>{302E775E-DD9F-49F8-924A-0A7E26409729}</Project>
+      <Name>LGP.ImageWindowsShellIcons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.af.resx" />
+    <EmbeddedResource Include="Properties\Resources.ar.resx" />
+    <EmbeddedResource Include="Properties\Resources.be.resx" />
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.ca.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.cy.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.et.resx" />
+    <EmbeddedResource Include="Properties\Resources.fa.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.ga.resx" />
+    <EmbeddedResource Include="Properties\Resources.gl.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.hr.resx" />
+    <EmbeddedResource Include="Properties\Resources.ht.resx" />
+    <EmbeddedResource Include="Properties\Resources.hu.resx" />
+    <EmbeddedResource Include="Properties\Resources.id.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.iw.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.lt.resx" />
+    <EmbeddedResource Include="Properties\Resources.lv.resx" />
+    <EmbeddedResource Include="Properties\Resources.mk.resx" />
+    <EmbeddedResource Include="Properties\Resources.ms.resx" />
+    <EmbeddedResource Include="Properties\Resources.mt.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.no.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ro.resx" />
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sk.resx" />
+    <EmbeddedResource Include="Properties\Resources.sl.resx" />
+    <EmbeddedResource Include="Properties\Resources.sq.resx" />
+    <EmbeddedResource Include="Properties\Resources.sr.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.sw.resx" />
+    <EmbeddedResource Include="Properties\Resources.th.resx" />
+    <EmbeddedResource Include="Properties\Resources.tl.resx" />
+    <EmbeddedResource Include="Properties\Resources.tr.resx" />
+    <EmbeddedResource Include="Properties\Resources.uk.resx" />
+    <EmbeddedResource Include="Properties\Resources.vi.resx" />
+    <EmbeddedResource Include="Properties\Resources.yi.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-TW.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2011/11/14" BuildVersion_IncrementBeforeBuild="False" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

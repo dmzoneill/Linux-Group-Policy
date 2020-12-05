@@ -1,0 +1,1 @@
+﻿<MenuItem xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Header="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=ServerControl}" Tag="ServerControl"/>

@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_15 = [
+   [19,9,19,28,'dccv']
+, [20,9,20,10,'dccv']
+, [22,13,22,14,'dccv']
+, [23,17,23,44,'dccv']
+, [24,13,24,14,'dccv']
+, [29,9,29,10,'dccv']
+, [37,9,37,10,'dccv']
+, [39,13,39,14,'dccv']
+, [40,17,40,103,'dccv']
+, [41,13,41,14,'dccv']
+, [46,9,46,10,'dccv']
+, [25,13,25,37,'dcuc']
+, [26,13,26,14,'dcuc']
+, [27,17,27,53,'dcuc']
+, [28,13,28,14,'dcuc']
+, [42,13,42,37,'dcuc']
+, [43,13,43,14,'dcuc']
+, [44,17,44,53,'dcuc']
+, [45,13,45,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src15" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows;
+using LGP.Components.Factory;
+
+#endregion
+
+namespace LGP.Controls
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for Background.xaml
+    /// &lt;/summary&gt;
+    public partial class Background
+    {
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        public Background()
+        {
+            try
+            {
+                this.InitializeComponent();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        /// &lt;summary&gt;
+        ///   Window loaded Event
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sender&quot;&gt;object&lt;/param&gt;
+        /// &lt;param name = &quot;e&quot;&gt;args&lt;/param&gt;
+        private void UserControlLoaded( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                this.presentationImage.Source = Framework.Images.GetImage( &quot;lgp&quot; , &quot;128x128&quot; ).Source;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src15', RANGES_15)
+		</script>
+	</body>
+</html>

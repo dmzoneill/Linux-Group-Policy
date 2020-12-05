@@ -1,0 +1,8 @@
+﻿<MenuItem Header="{Resx ResxName=LGP.Components.Menus.Properties.Resources, Key=File}" x:Name="FileMenu" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <MenuItem Header="{Resx ResxName=LGP.Components.Menus.Properties.Resources, Key=New}" x:Name="New" />
+    <MenuItem Header="{Resx ResxName=LGP.Components.Menus.Properties.Resources, Key=Open}" x:Name="Open" />
+    <MenuItem Header="{Resx ResxName=LGP.Components.Menus.Properties.Resources, Key=Save}" x:Name="Save" />
+    <MenuItem Header="{Resx ResxName=LGP.Components.Menus.Properties.Resources, Key=Saveas}" x:Name="Savesas" />
+    <MenuItem Header="{Resx ResxName=LGP.Components.Menus.Properties.Resources, Key=Exit}" x:Name="Exit" />
+</MenuItem>
+    

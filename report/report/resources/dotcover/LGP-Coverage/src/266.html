@@ -1,0 +1,326 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_266 = [
+   [22,9,22,57,'dccv']
+, [23,9,23,10,'dccv']
+, [25,13,25,14,'dccv']
+, [26,17,26,44,'dccv']
+, [27,17,27,39,'dccv']
+, [28,17,28,45,'dccv']
+, [29,17,29,32,'dccv']
+, [30,13,30,14,'dccv']
+, [35,9,35,10,'dccv']
+, [40,9,40,65,'dccv']
+, [41,9,41,10,'dccv']
+, [43,13,43,14,'dccv']
+, [44,17,44,44,'dccv']
+, [45,17,45,39,'dccv']
+, [46,17,46,45,'dccv']
+, [47,17,47,32,'dccv']
+, [48,17,48,104,'dccv']
+, [49,13,49,14,'dccv']
+, [54,9,54,10,'dccv']
+, [58,9,58,10,'dccv']
+, [60,13,60,14,'dccv']
+, [61,17,61,76,'dccv']
+, [62,17,62,79,'dccv']
+, [63,17,63,81,'dccv']
+, [64,17,64,105,'dccv']
+, [65,17,65,82,'dccv']
+, [66,13,66,14,'dccv']
+, [71,9,71,10,'dccv']
+, [75,9,75,10,'dccv']
+, [77,13,77,14,'dccv']
+, [78,17,78,40,'dccv']
+, [79,17,79,18,'dccv']
+, [80,21,80,126,'dccv']
+, [81,17,81,18,'dccv']
+, [82,13,82,14,'dccv']
+, [87,9,87,10,'dccv']
+, [112,9,112,10,'dccv']
+, [114,13,114,14,'dccv']
+, [115,17,115,37,'dccv']
+, [120,17,120,39,'dccv']
+, [121,17,121,82,'dccv']
+, [122,17,122,79,'dccv']
+, [123,17,123,81,'dccv']
+, [124,17,124,105,'dccv']
+, [125,13,125,14,'dccv']
+, [130,9,130,10,'dccv']
+, [185,9,185,10,'dccv']
+, [187,13,187,14,'dccv']
+, [188,17,188,45,'dccv']
+, [189,17,189,37,'dccv']
+, [191,17,191,57,'dccv']
+, [192,17,192,48,'dccv']
+, [193,13,193,14,'dccv']
+, [197,9,197,10,'dccv']
+, [31,13,31,37,'dcuc']
+, [32,13,32,14,'dcuc']
+, [33,17,33,53,'dcuc']
+, [34,13,34,14,'dcuc']
+, [50,13,50,37,'dcuc']
+, [51,13,51,14,'dcuc']
+, [52,17,52,53,'dcuc']
+, [53,13,53,14,'dcuc']
+, [67,13,67,37,'dcuc']
+, [68,13,68,14,'dcuc']
+, [69,17,69,53,'dcuc']
+, [70,13,70,14,'dcuc']
+, [83,13,83,37,'dcuc']
+, [84,13,84,14,'dcuc']
+, [85,17,85,53,'dcuc']
+, [86,13,86,14,'dcuc']
+, [93,9,93,10,'dcuc']
+, [95,13,95,14,'dcuc']
+, [96,17,96,122,'dcuc']
+, [97,13,97,14,'dcuc']
+, [98,13,98,37,'dcuc']
+, [99,13,99,14,'dcuc']
+, [100,17,100,53,'dcuc']
+, [101,13,101,14,'dcuc']
+, [102,9,102,10,'dcuc']
+, [116,17,116,18,'dcuc']
+, [117,21,117,28,'dcuc']
+, [126,13,126,37,'dcuc']
+, [127,13,127,14,'dcuc']
+, [128,17,128,53,'dcuc']
+, [129,13,129,14,'dcuc']
+, [138,9,138,10,'dcuc']
+, [140,13,140,14,'dcuc']
+, [141,13,141,14,'dcuc']
+, [142,13,142,37,'dcuc']
+, [143,13,143,14,'dcuc']
+, [144,17,144,53,'dcuc']
+, [145,13,145,14,'dcuc']
+, [146,9,146,10,'dcuc']
+, [154,9,154,10,'dcuc']
+, [156,13,156,14,'dcuc']
+, [157,13,157,14,'dcuc']
+, [158,13,158,37,'dcuc']
+, [159,13,159,14,'dcuc']
+, [160,17,160,53,'dcuc']
+, [161,13,161,14,'dcuc']
+, [162,9,162,10,'dcuc']
+, [169,9,169,10,'dcuc']
+, [171,13,171,14,'dcuc']
+, [172,13,172,14,'dcuc']
+, [173,13,173,37,'dcuc']
+, [174,13,174,14,'dcuc']
+, [175,17,175,53,'dcuc']
+, [176,13,176,14,'dcuc']
+, [177,9,177,10,'dcuc']
+, [194,13,194,31,'dcuc']
+, [195,13,195,14,'dcuc']
+, [196,13,196,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src266" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows.Controls;
+using System.Windows.Input;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Database;
+
+#endregion
+
+namespace LGP.Modules.ModuleEditor.Internal.CustomControls
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for StackPanelModuleElement.xaml
+    /// &lt;/summary&gt;
+    public partial class StackPanelModuleElement : IModuleObserver
+    {
+        private IModule _module;
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        public StackPanelModuleElement( IModule module )
+        {
+            try
+            {
+                this.InitializeComponent();
+                this._module = module;
+                this._module.Attach( this );
+                this.Prepare();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        public StackPanelModuleElement( IModule module , int h )
+        {
+            try
+            {
+                this.InitializeComponent();
+                this._module = module;
+                this._module.Attach( this );
+                this.Prepare();
+                this.LoadedDoubleAnimation.BeginTime = new TimeSpan( 0 , 0 , 0 , 0 , ( h + 1 ) * 100 );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        private void Prepare()
+        {
+            try
+            {
+                this.rectangle1.ToolTip = this._module.GetModuleLocation();
+                var location = this._module.GetModuleLocation().Split( &#39;\\&#39; );
+                this.PanelItemDetails.Content = location[ location.Length - 1 ];
+                this.PanelItemImage.Source = Framework.Images.GetImage( &quot;lgp&quot; , &quot;128x128&quot; , 28 ).Source;
+                this.PanelItemModuleLabel.Content = this._module.GetModuleName();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        private void OnDoubleClick( object sender , MouseButtonEventArgs e )
+        {
+            try
+            {
+                if( e.ClickCount == 2 )
+                {
+                    Framework.Panels.AddMainComponent( new ModuleEditor( this._module ) , this._module.GetModuleLocation() );
+                }
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        public void Activate()
+        {
+            try
+            {
+                Framework.Panels.AddMainComponent( new ModuleEditor( this._module ) , this._module.GetModuleLocation() );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        #region Implementation of IModuleObserver
+
+        /// &lt;summary&gt;
+        ///   Update this observer with a refernece to the module
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;module&quot;&gt;IModule&lt;/param&gt;
+        /// &lt;param name = &quot;source&quot;&gt;IModuleObserver&lt;/param&gt;
+        public void Update( IModule module , IModuleObserver source )
+        {
+            try
+            {
+                if( source == this )
+                {
+                    return;
+                }
+
+                this._module = module;
+                this.PanelItemModuleLabel.Content = this._module.GetModuleName();
+                var location = this._module.GetModuleLocation().Split( &#39;\\&#39; );
+                this.PanelItemDetails.Content = location[ location.Length - 1 ];
+                this.PanelItemImage.Source = Framework.Images.GetImage( &quot;lgp&quot; , &quot;128x128&quot; , 28 ).Source;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Attach objewcts that observer this module
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;obj&quot;&gt;IModuleObserver&lt;/param&gt;
+        public void Attach( IModuleObserver obj )
+        {
+            try
+            {
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Detach objewcts that observer this module
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;obj&quot;&gt;IModuleObserver&lt;/param&gt;
+        public void Detach( IModuleObserver obj )
+        {
+            try
+            {
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Notify observers of this module
+        /// &lt;/summary&gt;
+        public void Notify()
+        {
+            try
+            {
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Dispose this object and all the observers
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;obj&quot;&gt;IModuleObserver&lt;/param&gt;
+        public void Dispose( IModuleObserver obj )
+        {
+            try
+            {
+                this._module.Detach( this );
+                this._module = null;
+
+                var parent = ( StackPanel ) this.Parent;
+                parent.Children.Remove( this );
+            }
+            catch( Exception )
+            {
+            }
+        }
+
+        #endregion
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src266', RANGES_266)
+		</script>
+	</body>
+</html>

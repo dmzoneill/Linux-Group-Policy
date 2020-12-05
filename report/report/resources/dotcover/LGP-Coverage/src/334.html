@@ -1,0 +1,302 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_334 = [
+   [25,9,25,34,'dccv']
+, [26,9,26,10,'dccv']
+, [27,13,27,40,'dccv']
+, [29,13,29,108,'dccv']
+, [30,13,30,72,'dccv']
+, [31,9,31,10,'dccv']
+, [34,9,34,10,'dccv']
+, [36,13,36,14,'dccv']
+, [37,17,37,65,'dccv']
+, [39,17,39,40,'dccv']
+, [40,17,40,18,'dccv']
+, [41,21,41,44,'dccv']
+, [42,17,42,18,'dccv']
+, [44,17,44,97,'dccv']
+, [45,17,45,47,'dccv']
+, [46,13,46,14,'dccv']
+, [47,13,47,31,'dccv']
+, [48,13,48,14,'dccv']
+, [49,13,49,14,'dccv']
+, [50,9,50,10,'dccv']
+, [53,9,53,10,'dccv']
+, [55,13,55,14,'dccv']
+, [56,17,56,63,'dccv']
+, [57,17,57,34,'dccv']
+, [58,17,58,44,'dccv']
+, [59,17,59,37,'dccv']
+, [60,13,60,14,'dccv']
+, [65,9,65,10,'dccv']
+, [68,9,68,10,'dccv']
+, [70,13,70,14,'dccv']
+, [71,17,71,63,'dccv']
+, [72,17,72,34,'dccv']
+, [73,17,73,43,'dccv']
+, [74,17,74,37,'dccv']
+, [75,13,75,14,'dccv']
+, [80,9,80,10,'dccv']
+, [83,9,83,10,'dccv']
+, [85,13,85,14,'dccv']
+, [86,17,86,72,'dccv']
+, [87,17,87,51,'dccv']
+, [88,17,88,80,'dccv']
+, [89,17,89,54,'dccv']
+, [90,13,90,14,'dccv']
+, [95,9,95,10,'dccv']
+, [98,9,98,10,'dccv']
+, [100,13,100,14,'dccv']
+, [101,17,101,63,'dccv']
+, [103,22,103,32,'dccv']
+, [104,17,104,18,'dccv']
+, [105,21,105,38,'dccv']
+, [106,21,106,47,'dccv']
+, [107,21,107,41,'dccv']
+, [109,21,110,21,'dccv']
+, [111,106,112,27,'dccv']
+, [114,21,114,49,'dccv']
+, [115,17,115,18,'dccv']
+, [103,55,103,58,'dccv']
+, [103,33,103,53,'dccv']
+, [116,13,116,14,'dccv']
+, [122,13,123,13,'dccv']
+, [125,50,126,19,'dccv']
+, [127,9,127,10,'dccv']
+, [130,9,130,10,'dccv']
+, [132,13,132,14,'dccv']
+, [133,17,133,98,'dccv']
+, [134,17,134,62,'dccv']
+, [135,13,135,14,'dccv']
+, [136,13,136,31,'dccv']
+, [137,13,137,14,'dccv']
+, [138,13,138,14,'dccv']
+, [139,9,139,10,'dccv']
+, [146,9,146,10,'dccv']
+, [147,13,147,55,'dccv']
+, [148,13,148,14,'dccv']
+, [150,17,150,18,'dccv']
+, [151,21,151,58,'dccv']
+, [152,17,152,18,'dccv']
+, [156,13,156,14,'dccv']
+, [157,9,157,10,'dccv']
+, [160,9,160,10,'dccv']
+, [162,13,162,14,'dccv']
+, [163,17,163,63,'dccv']
+, [164,17,164,34,'dccv']
+, [165,17,165,42,'dccv']
+, [166,17,166,37,'dccv']
+, [167,13,167,14,'dccv']
+, [172,9,172,10,'dccv']
+, [123,13,123,14,'dccv']
+, [124,17,124,67,'dccv']
+, [125,17,125,50,'dccv']
+, [110,21,110,22,'dccv']
+, [111,25,111,106,'dccv']
+, [61,13,61,37,'dcuc']
+, [62,13,62,14,'dcuc']
+, [63,17,63,53,'dcuc']
+, [64,13,64,14,'dcuc']
+, [76,13,76,37,'dcuc']
+, [77,13,77,14,'dcuc']
+, [78,17,78,53,'dcuc']
+, [79,13,79,14,'dcuc']
+, [91,13,91,37,'dcuc']
+, [92,13,92,14,'dcuc']
+, [93,17,93,53,'dcuc']
+, [94,13,94,14,'dcuc']
+, [117,13,117,37,'dcuc']
+, [118,13,118,14,'dcuc']
+, [119,17,119,53,'dcuc']
+, [120,13,120,14,'dcuc']
+, [153,17,153,35,'dcuc']
+, [154,17,154,18,'dcuc']
+, [155,17,155,18,'dcuc']
+, [168,13,168,37,'dcuc']
+, [169,13,169,14,'dcuc']
+, [170,17,170,53,'dcuc']
+, [171,13,171,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src334" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Threading;
+using System.Windows;
+using System.Windows.Threading;
+using LGP.Components.Factory;
+
+#endregion
+
+namespace LGP.Modules.ServerControl
+{
+    /// &lt;summary&gt;
+    /// Interaction logic for ConnectionViewer.xaml
+    /// &lt;/summary&gt;
+    public partial class ConnectionViewer
+    {
+        private int _delay;
+        private int _numupdates;
+        private Thread _serverConnectionThread;
+
+        /// &lt;summary&gt;
+        /// Constructor
+        /// &lt;/summary&gt;
+        public ConnectionViewer()
+        {
+            this.InitializeComponent();
+
+            this.image1.Source = Framework.Images.GetImage( &quot;Networkgroup&quot; , &quot;VS2010ImageLibrary&quot; ).Source;
+            this.ipaddr.Content = Framework.Network.GetServerAddress();
+        }
+
+        private void Slider1ValueChanged( object sender , RoutedPropertyChangedEventArgs&lt; double &gt; e )
+        {
+            try
+            {
+                var numupdates = ( ( int ) this.slider1.Value );
+
+                if( numupdates == 500 )
+                {
+                    numupdates = 999999999;
+                }
+
+                this.numUpdates.Content = numupdates + &quot; &quot; + Properties.Resources.ClientUpdates;
+                this._numupdates = numupdates;
+            }
+            catch( Exception )
+            {
+            }
+        }
+
+        private void PushPolicyUpdateClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                var client = Framework.Network.CreateClient();
+                client.Connect();
+                client.SendPolicyUpdated();
+                client.Disconnect();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void PushClientUpdateClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                var client = Framework.Network.CreateClient();
+                client.Connect();
+                client.SendPushPolicies();
+                client.Disconnect();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void StressTestClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                this.StressTest.Content = Properties.Resources.Working;
+                this.StressTest.IsEnabled = false;
+                this._serverConnectionThread = new Thread( this.Stressthread );
+                this._serverConnectionThread.Start();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void Stressthread()
+        {
+            try
+            {
+                var client = Framework.Network.CreateClient();
+
+                for( var h = 0; h &lt; this._numupdates; h++ )
+                {
+                    client.Connect();
+                    client.SendPushPolicies();
+                    client.Disconnect();
+
+                    this.threadStatusLabel.Dispatcher.BeginInvoke( DispatcherPriority.Normal , ( Action ) ( delegate
+                    {
+                        this.threadStatusLabel.Content = ( h + 1 ) + &quot; &quot; + Properties.Resources.Requests;
+                    } ) );
+
+                    Thread.Sleep( this._delay );
+                }
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+
+            this.StressTest.Dispatcher.BeginInvoke( DispatcherPriority.Normal , ( Action ) ( delegate
+            {
+                this.StressTest.Content = Properties.Resources.Go;
+                this.StressTest.IsEnabled = true;
+            } ) );
+        }
+
+        private void Slider2ValueChanged( object sender , RoutedPropertyChangedEventArgs&lt; double &gt; e )
+        {
+            try
+            {
+                this.delay.Content = ( ( int ) this.slider2.Value ) + Properties.Resources.Delay;
+                this._delay = ( ( int ) this.slider2.Value );
+            }
+            catch( Exception )
+            {
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        /// Stops the stress tester if it is running
+        /// &lt;/summary&gt;
+        public void StopStressTester()
+        {
+            if( this._serverConnectionThread != null )
+            {
+                try
+                {
+                    this._serverConnectionThread.Abort();
+                }
+                catch( Exception )
+                {
+                }
+            }
+        }
+
+        private void PushModulesUpdateClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                var client = Framework.Network.CreateClient();
+                client.Connect();
+                client.SendPushModules();
+                client.Disconnect();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src334', RANGES_334)
+		</script>
+	</body>
+</html>

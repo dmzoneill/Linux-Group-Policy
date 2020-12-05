@@ -1,0 +1,750 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGP.Components.Factory</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.Components.Factory.Publishers.PayloadMenuItem">
+            <summary>
+            Derived Payload to which subscribers can listen for
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.Publishers.Payload">
+            <summary>
+            Abstract type for the publish subscribe message
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Publishers.Payload.#ctor(System.Object,System.EventArgs,LGP.Components.Factory.Interfaces.IComponent)">
+            <summary>
+            Base Constructor
+            </summary>
+            <param name="sender">The object that raised the event</param>
+            <param name="args">The event args</param>
+            <param name="publisher">The publisher for the event</param>
+        </member>
+        <member name="P:LGP.Components.Factory.Publishers.Payload.Sender">
+            <summary>
+            Accessor Mutator for the sender property
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Factory.Publishers.Payload.Args">
+            <summary>
+            Accessor Mutator for the args property
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Factory.Publishers.Payload.Publsher">
+            <summary>
+            The publisher that forwarded the menuitem clicked event
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Publishers.PayloadMenuItem.#ctor(System.Object,System.EventArgs,System.String,LGP.Components.Factory.Interfaces.IComponent)">
+            <summary>
+            Constructor for the derived type
+            </summary>
+            <param name="sender">The object that raised the event</param>
+            <param name="args">the args in the event</param>
+            <param name="command">The command that is intended</param>
+            <param name="component">The publisher for the event</param>
+        </member>
+        <member name="P:LGP.Components.Factory.Publishers.PayloadMenuItem.Command">
+            <summary>
+            Accessor Mutator for the command property
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.LGPFactory">
+            <summary>
+            Simplied factory for the loading of Modules and application components
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.LoadIComponent(System.String)">
+            <summary>
+            Loads a dll given a path
+            </summary>
+            <param name="dllPath">The path to the dll</param>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetSideBarControl(System.Int32)">
+            <summary>
+            Gets the side bar control from the control list given an index
+            </summary>
+            <param name="x">The index of the control</param>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetMainControl(System.Int32)">
+            <summary>
+            Gets a control from the control list given an index
+            </summary>
+            <param name="x">The index of the control</param>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetMainControlByName(System.String)">
+            <summary>
+            Gets a control from the control list given a a module name
+            </summary>
+            <param name="name">the name of the module name</param>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetControls">
+            <summary>
+            Gets the listing of controls
+            </summary>
+            <returns>List of controls</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetDllListing">
+            <summary>
+            Gets the dll string listing 
+            </summary>
+            <returns>String array</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetAssemblyName(System.String)">
+            <summary>
+            Gets the name of an dll asembly given its path
+            </summary>
+            <param name="assemblyPath">Dll path</param>
+            <returns>Asembly name</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetAssemblyVersion(System.String)">
+            <summary>
+            Gets the assembly version
+            </summary>
+            <param name="assemblyPath">Dll path</param>
+            <returns>Dll version</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetPanels">
+            <summary>
+            Gets the panels controller
+            </summary>
+            <returns>Avalondock panel</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetPanel">
+            <summary>
+            Creates a temporary panel instance
+            </summary>
+            <returns>Avalondock panel</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetMenu">
+            <summary>
+            Gets the menu 
+            </summary>
+            <returns>The main menu</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.InitializeMenu(System.Windows.Controls.Menu)">
+            <summary>
+            Creates an instance of the menu controller and passes the appication menu reference to it
+            </summary>
+            <param name="menu">The application menu</param>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.InitializeMenuModuleEntries">
+            <summary>
+            Registers each components menu entries
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.HasError">
+            <summary>
+            Check to see if there was an error
+            </summary>
+            <returns>bool error</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetError">
+            <summary>
+            Get the last error occurred
+            </summary>
+            <returns>String error</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetRegistryHandler">
+            <summary>
+            Get the registry handler object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetImageHandler">
+            <summary>
+            Get the image handler object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.AddDatabaseType(System.Type)">
+            <summary>
+            Registers a database type
+            </summary>
+            <param name="strategyType"></param>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetDatabaseTypes">
+            <summary>
+            Gets the registered DB Types
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetDatabaseContextHandler">
+            <summary>
+            Gets a previously created database strategy context object
+            </summary>
+            <returns>IDatabaseInterface type</returns>
+            <exception cref="T:System.Exception">Exception context strategy null</exception>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.ChangeDatabaseContextStrategy(System.Type)">
+            <summary>
+            Changes the database context strategy to a different database type  
+            </summary>
+            <param name="strategyType"></param>
+            <returns>IDatabase</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetMessageBus">
+            <summary>
+            Gets the Event aggregator  
+            </summary>
+            <returns>IEventAggregator</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.GetPreferencesPanes">
+            <summary>
+            Gets the preferences panes associated with the modules
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Factory.LGPFactory.CreateObject(System.Type)">
+            <summary>
+            Create an object of type 
+            </summary>
+            <param name="type">type of object you would like to create</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.LoadDllListing">
+            <summary>
+            Gets a listing of dlls from the application directory
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.LoadIComponent(System.String)">
+            <summary>
+            Loads a dll given a path
+            </summary>
+            <param name="dllPath">The path to the dll</param>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetModules">
+            <summary>
+            Get the types that realised the IModule interface
+            </summary>
+            <returns>List of modules</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetComponents">
+            <summary>
+            Get the types that realised the iComponent interface
+            </summary>
+            <returns>List of IComponents</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.HasError">
+            <summary>
+            Check to see if there was an error
+            </summary>
+            <returns>bool error</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetError">
+            <summary>
+            Get the last error occurred
+            </summary>
+            <returns>String error</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetMenuType">
+            <summary>
+            Get the type that realised the Imenu interface
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetPanelType">
+            <summary>
+            Get the type that realized the IPanle interface
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetDllPaths">
+            <summary>
+            Return dlls in directory path
+            </summary>
+            <returns>String[] dlls</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetAssemblyName(System.String)">
+            <summary>
+            Gets the name of an dll asembly given its path
+            </summary>
+            <param name="assemblyPath">Dll path</param>
+            <returns>Asembly name</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetAssemblyVersion(System.String)">
+            <summary>
+            Gets the assembly version
+            </summary>
+            <param name="assemblyPath">Dll path</param>
+            <returns>Dll version</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.CreateObject(System.Type)">
+            <summary>
+            Create an object of type 
+            </summary>
+            <param name="type">type of object you would like to create</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.CreateObject(System.Type,System.Windows.Controls.Menu)">
+            <summary>
+            Create an object of type 
+            </summary>
+            <param name="type">type of object you would like to create</param>
+            <param name="o">The contructor parameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetPanelsType">
+            <summary>
+            Gets the type IMainMenu object that realizes the interface
+            </summary>
+            <returns>Type of the object</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetMenusType">
+            <summary>
+            Gets the type IPanel object that realizes the interface
+            </summary>
+            <returns>Type of the object</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetDatabaseContextHandler">
+            <summary>
+            Gets a previously created database strategy context object
+            </summary>
+            <returns>IDatabaseInterface type</returns>
+            <exception cref="T:System.Exception">Exception context strategy null</exception>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetDatabaseContextHandler(System.Type)">
+            <summary>
+            Recreated the database gateway given a new strategy type
+            </summary>
+            <returns>IDatabaseInterface type</returns>
+            <exception cref="T:System.Exception">Exception context strategy null</exception>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPDllHandler.GetPreferencesPanes">
+            <summary>
+            Gets the preferences panes associated with the modules
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LGP.Components.Factory.Interfaces.IComponent">
+            <summary>
+            Component Interface
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IComponent.GetComponentName">
+            <summary>
+            Gets the name of the main component
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IComponent.GetIcon">
+            <summary>
+            Gets the image that represents the module
+            </summary>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IComponent.RegisterMenuEntries(LGP.Components.Factory.Interfaces.IMainMenu)">
+            <summary>
+            Asks the component to register is menu components
+            </summary>
+            <param name="menu">The program main menu</param>
+        </member>
+        <member name="T:LGP.Components.Factory.Internal.LGPRegistry">
+            <summary>
+            Simple Registry class
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.Interfaces.IRegistry">
+            <summary>
+            Registry interface
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IRegistry.ReadKey(System.String)">
+            <summary>
+            Read a sub key for the registry application root
+            </summary>
+            <param name="keyname">The keyname to read</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IRegistry.WriteKey(System.String,System.Object)">
+            <summary>
+            Write a sub key for the registry application root
+            </summary>
+            <param name="keyname">The keyname to write</param>
+            <param name="keyvalue">The value for the key</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IRegistry.DeleteKey(System.String)">
+            <summary>
+            Delete a subkey from the application root key
+            </summary>
+            <param name="keyname">The keyname to write</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IRegistry.DeleteSubKeyTree(System.String)">
+            <summary>
+            Delete a subkeytree from the application root key
+            </summary>
+            <param name="keyname">The keyname to write</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPRegistry.GetInstance">
+            <summary>
+            Singlton factory method
+            </summary>
+            <returns>LGPRegistry instance</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPRegistry.ReadKey(System.String)">
+            <summary>
+            Read a sub key for the registry application root
+            </summary>
+            <param name="keyname">The keyname to read</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPRegistry.WriteKey(System.String,System.Object)">
+            <summary>
+            Write a sub key for the registry application root
+            </summary>
+            <param name="keyname">The keyname to write</param>
+            <param name="keyvalue">The value for the key</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPRegistry.DeleteKey(System.String)">
+            <summary>
+            Delete a subkey from the application root key
+            </summary>
+            <param name="keyname">The keyname to write</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPRegistry.DeleteSubKeyTree(System.String)">
+            <summary>
+            Delete a subkeytree from the application root key
+            </summary>
+            <param name="keyname">The keyname to write</param>
+            <returns>string</returns>
+        </member>
+        <member name="T:LGP.Components.Factory.Interfaces.IMainMenu">
+            <summary>
+            The interface to the application menu
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IMainMenu.AddMainItem(System.Windows.Controls.MenuItem)">
+            <summary>
+            Adds a item to the main menu
+            </summary>
+            <param name="item">The item to be added</param>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IMainMenu.RemoveMainMenuItem(System.Int32)">
+            <summary>
+            Remove an item from the menu at given index
+            </summary>
+            <param name="indexItem">The index item to remove</param>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IMainMenu.AddSubMenuItem(System.Int32,System.Windows.Controls.MenuItem)">
+            <summary>
+            Add an item under a given item specified by index
+            </summary>
+            <param name="indexItem"></param>
+            <param name="subitem"></param>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IMainMenu.RemoveSubMenuItem(System.Int32,System.Int32)">
+            <summary>
+            Remove an index given two indexes Item / subitem
+            </summary>
+            <param name="indexItem">The main item index</param>
+            <param name="subitem">The sub item index</param>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IMainMenu.AddSubSubMenuItem(System.Int32,System.Int32,System.Windows.Controls.MenuItem)">
+            <summary>
+            Add a subitem to a subitem item, item / subitem specified by indexes
+            </summary>
+            <param name="indexItem">The item index</param>
+            <param name="indexSubItem">The sub item index</param>
+            <param name="subsubitem">The new item to add to the sub item</param>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IMainMenu.RemoveSubMenuItem(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Remove a indexed subitem , given an item index and its sub item index
+            </summary>
+            <param name="indexItem">The item index</param>
+            <param name="indexSubItem">The sub item index</param>
+            <param name="indexSubSubItem">The item index to remove</param>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IMainMenu.GetError">
+            <summary>
+            Used as an accessor to check if there was an operation error
+            </summary>
+            <returns>True or false if an error occured</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IMainMenu.GetStrError">
+            <summary>
+            Gets the error from the last operation that caused it
+            </summary>
+            <returns>The error describing the error</returns>
+        </member>
+        <member name="T:LGP.Components.Factory.Internal.LGPEventBus">
+            <summary>
+            Event Aggregator, publisher subscribe
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPEventBus.#cctor">
+            <summary>
+            Static constructor creates the EventAggregator
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.Interfaces.IDatabase">
+            <summary>
+            Database interface
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IDatabase.Connect(System.String,System.String,System.String,System.String)">
+            <summary>
+            Connect method for database interface
+            </summary>
+            <param name="user">Username to use in connection</param>
+            <param name="pass">Password to use in connection</param>
+            <param name="host">Hostname to use in connection</param>
+            <param name="dbname">Datbase to use in connection</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IDatabase.Disconnect">
+            <summary>
+            Disconnect method for the interface realizer
+            </summary>
+            <returns>bool disconnected</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IDatabase.AddDatabaseType(System.Type)">
+            <summary>
+            Registers a database type
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IDatabase.GetDatabaseTypes">
+            <summary>
+            Gets the registered DB Types
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.Publishers.TreeNodeItemClickedPublisher">
+            <summary>
+            Menu item clicked publisher
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.Publishers.NewDocumentPublisher">
+            <summary>
+            Menu item clicked publisher
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.Interfaces.IDatabaseInterface">
+            <summary>
+            Database interface
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IDatabaseInterface.Connect(System.String,System.String,System.String,System.String)">
+            <summary>
+            Connect method for database interface
+            </summary>
+            <param name="user">Username to use in connection</param>
+            <param name="pass">Password to use in connection</param>
+            <param name="host">Hostname to use in connection</param>
+            <param name="dbname">Datbase to use in connection</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IDatabaseInterface.Disconnect">
+            <summary>
+            Disconnect method for the interface realizer
+            </summary>
+            <returns>bool disconnected</returns>
+        </member>
+        <member name="T:LGP.Components.Factory.Publishers.PayloadTreeNodeItem">
+            <summary>
+            Derived Payload to which subscribers can listen for
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Publishers.PayloadTreeNodeItem.#ctor(System.Object,System.EventArgs,System.String,LGP.Components.Factory.Interfaces.IComponent)">
+            <summary>
+            Constructor for the derived type
+            </summary>
+            <param name="sender">The object that raised the event</param>
+            <param name="args">the args in the event</param>
+            <param name="command">The command that is intended</param>
+            <param name="component">The publisher for the event</param>
+        </member>
+        <member name="P:LGP.Components.Factory.Publishers.PayloadTreeNodeItem.Command">
+            <summary>
+            Accessor Mutator for the command property
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.Publishers.MenuItemClickedPublisher">
+            <summary>
+            Menu item clicked publisher
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.Publishers.ExceptionPublisher">
+            <summary>
+            Menu item clicked publisher
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.Publishers.NewDocumentRequest">
+            <summary>
+            Derived Payload to which subscribers can listen for
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Publishers.NewDocumentRequest.#ctor(System.Object,System.EventArgs,System.String,LGP.Components.Factory.Interfaces.IComponent)">
+            <summary>
+            Constructor for the derived type
+            </summary>
+            <param name="sender">The object that raised the event</param>
+            <param name="args">the args in the event</param>
+            <param name="command">The command that is intended</param>
+            <param name="component">The publisher for the event</param>
+        </member>
+        <member name="P:LGP.Components.Factory.Publishers.NewDocumentRequest.Command">
+            <summary>
+            Accessor Mutator for the command property
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.Internal.LGPImageFactory">
+            <summary>
+            Image factory indirection, reducing coupling with components
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.Interfaces.IImageFactory">
+            <summary>
+            Interface for image handler
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IImageFactory.GetImage(System.String,System.String)">
+            <summary>
+            Gets an image from the dll resources
+            </summary>
+            <param name="name">The name of the image</param>
+            <param name="folder">The folder in which the resource can be found</param>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IImageFactory.GetImage(System.String,System.String,System.Int32)">
+            <summary>
+            Gets an image from the dll resources
+            </summary>
+            <param name="name">The name of the image</param>
+            <param name="folder">The folder in which the resource can be found</param>
+            <param name="maxwidth">The maxwidth of the returned image</param>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IImageFactory.GetIcon(System.String)">
+            <summary>
+            Gets an icon stored in the dll resources
+            </summary>
+            <param name="name">The name of the icon</param>
+            <returns>An icon (ico)</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IImageFactory.GetExtensionIcon(System.String)">
+            <summary>
+            Gets the icon associated with the shell extension
+            </summary>
+            <param name="filename">Filename</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPImageFactory.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPImageFactory.GetImage(System.String,System.String)">
+            <summary>
+            Gets an image from the dll resources
+            </summary>
+            <param name="name">The name of the image</param>
+            <param name="folder">The folder in which the resource can be found</param>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPImageFactory.GetImage(System.String,System.String,System.Int32)">
+            <summary>
+            Gets an image from the dll resources
+            </summary>
+            <param name="name">The name of the image</param>
+            <param name="folder">The folder in which the resource can be found</param>
+            <param name="maxwidth">The maxwidth of the returned image</param>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPImageFactory.GetIcon(System.String)">
+            <summary>
+            Gets an icon stored in the dll resources
+            </summary>
+            <param name="name">The name of the icon</param>
+            <returns>An icon (ico)</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Internal.LGPImageFactory.GetExtensionIcon(System.String)">
+            <summary>
+            Gets the icon associated with the shell extension
+            </summary>
+            <param name="filename">Filename</param>
+            <returns></returns>
+        </member>
+        <member name="T:LGP.Components.Factory.Interfaces.IModule">
+            <summary>
+            Module Interface
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IModule.GetMainComponent">
+            <summary>
+            Gets the main component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IModule.GetSidebarComponent">
+            <summary>
+            Gets the sidebar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IModule.GetComponentSideBarName">
+            <summary>
+            Gets the name of the sidebar component
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IModule.GetComponentContentName">
+            <summary>
+            Gets the name of the component
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="T:LGP.Components.Factory.Interfaces.IPanel">
+            <summary>
+            Interface to the panel component
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IPanel.AddSideComponent(System.Windows.Controls.UserControl,System.String,System.Windows.Controls.Image)">
+            <summary>
+            Requests the Panel realizer to add a User control to its display
+            </summary>
+            <param name="control">The user control</param>
+            <param name="toolbarName">The title on the toolbar header</param>
+            <param name="image">The image icon assoacited with the control</param>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IPanel.AddMainComponent(System.Windows.Controls.UserControl,System.String)">
+            <summary>
+            Adds a UserControl to the main component container
+            </summary>
+            <param name="control">UserControl element</param>
+            <param name="controlTabTitle">The title to give the tab element</param>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IPanel.AddMainComponentByName(System.String,System.String)">
+            <summary>
+            Request a module identified by its name be added to the main component panel
+            </summary>
+            <param name="control">Module Name</param>
+            <param name="controlTabTitle">The title to give to the tab element</param>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IPanel.LoadSideBarComponents">
+            <summary>
+            Load all side bar components provided by the modules
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Factory.Interfaces.IPreferences">
+            <summary>
+            Preferences User Control Interface
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Factory.Interfaces.IPreferences.GetName">
+            <summary>
+            Gets the name of the preferences Pane
+            </summary>
+            <returns>string</returns>
+        </member>
+    </members>
+</doc>

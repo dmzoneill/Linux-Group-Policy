@@ -1,0 +1,6 @@
+C:\lgp\Linux Group Policy\LGP.ImageLibrary\bin\Release\LGP.ImageLibrary.dll
+C:\lgp\Linux Group Policy\LGP.ImageLibrary\bin\Release\LGP.ImageLibrary.pdb
+C:\lgp\Linux Group Policy\LGP.ImageLibrary\obj\Release\ResolveAssemblyReference.cache
+C:\lgp\Linux Group Policy\LGP.ImageLibrary\obj\Release\LGP.ImageLibrary.g.resources
+C:\lgp\Linux Group Policy\LGP.ImageLibrary\obj\Release\LGP.ImageLibrary.dll
+C:\lgp\Linux Group Policy\LGP.ImageLibrary\obj\Release\LGP.ImageLibrary.pdb

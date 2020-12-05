@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_268 = [
+   [1,13,1,77,'dccv']
+, [49,13,49,121,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src268" class="dotCoverSource"><pre>&lt;UserControl x:Class=&quot;LGP.Modules.ModuleEditor.Internal.CustomControls.StackPanelModuleElement&quot;
+             xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+             xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+             xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot; mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;55&quot; d:DesignWidth=&quot;220&quot;&gt;
+  &lt;UserControl.Triggers&gt;
+    &lt;EventTrigger RoutedEvent=&quot;UserControl.Loaded&quot;&gt;
+      &lt;BeginStoryboard&gt;
+        &lt;Storyboard&gt;
+          &lt;DoubleAnimation x:Name=&quot;LoadedDoubleAnimation&quot; Storyboard.TargetName=&quot;stop1&quot;
+                           Storyboard.TargetProperty=&quot;Offset&quot; From=&quot;0.99&quot; To=&quot;0.65&quot; Duration=&quot;0:0:.3&quot; BeginTime=&quot;0:0:0&quot; AutoReverse=&quot;True&quot; /&gt;
+        &lt;/Storyboard&gt;
+      &lt;/BeginStoryboard&gt;
+    &lt;/EventTrigger&gt;
+  &lt;/UserControl.Triggers&gt;
+  &lt;Grid&gt;
+    &lt;Grid.RowDefinitions&gt;
+      &lt;RowDefinition Height=&quot;54&quot; /&gt;
+      &lt;RowDefinition Height=&quot;1&quot; /&gt;
+    &lt;/Grid.RowDefinitions&gt;
+    &lt;Border BorderBrush=&quot;Transparent&quot; BorderThickness=&quot;0&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;0&quot;
+            Name=&quot;PanelItemBorder&quot; VerticalAlignment=&quot;Stretch&quot; CornerRadius=&quot;1&quot;&gt;
+      &lt;Border.Background&gt;
+        &lt;LinearGradientBrush&gt;
+          &lt;GradientStop x:Name=&quot;stop1&quot; Color=&quot;White&quot; Offset=&quot;0.99&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFAEC7E5&quot; Offset=&quot;1.0&quot; /&gt;
+        &lt;/LinearGradientBrush&gt;
+      &lt;/Border.Background&gt;
+      &lt;Grid Name=&quot;PanelItemGrid&quot; VerticalAlignment=&quot;Stretch&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;2&quot;&gt;
+        &lt;Grid.ColumnDefinitions&gt;
+          &lt;ColumnDefinition Width=&quot;38&quot; /&gt;
+          &lt;ColumnDefinition Width=&quot;150*&quot; /&gt;
+        &lt;/Grid.ColumnDefinitions&gt;
+        &lt;Grid.RowDefinitions&gt;
+          &lt;RowDefinition Height=&quot;26*&quot; /&gt;
+          &lt;RowDefinition Height=&quot;18*&quot; /&gt;
+        &lt;/Grid.RowDefinitions&gt;
+        &lt;Image Grid.RowSpan=&quot;2&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Center&quot; Margin=&quot;2&quot; Name=&quot;PanelItemImage&quot;
+               VerticalAlignment=&quot;Center&quot; Width=&quot;28&quot; Opacity=&quot;0.6&quot; /&gt;
+        &lt;Label Content=&quot;Module Name&quot; Grid.Column=&quot;1&quot; Height=&quot;30&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;2,4,0,0&quot;
+               Name=&quot;PanelItemModuleLabel&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;12&quot; FontWeight=&quot;Bold&quot; Foreground=&quot;#FF689AAA&quot;
+               Background=&quot;Transparent&quot; /&gt;
+        &lt;Label Content=&quot;Version&quot; Grid.Column=&quot;1&quot; Grid.Row=&quot;1&quot; Height=&quot;22&quot; HorizontalAlignment=&quot;Stretch&quot;
+               Margin=&quot;5,-8,5,0&quot; Name=&quot;PanelItemDetails&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;10&quot; FontWeight=&quot;Normal&quot;
+               Background=&quot;Transparent&quot; /&gt;
+      &lt;/Grid&gt;
+    &lt;/Border&gt;
+    &lt;Canvas Height=&quot;55&quot; HorizontalAlignment=&quot;Left&quot; Name=&quot;rectangle1&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;410&quot;
+            Panel.ZIndex=&quot;65&quot; Background=&quot;Transparent&quot; MouseLeftButtonDown=&quot;OnDoubleClick&quot;&gt;
+      &lt;Canvas.Triggers&gt;
+        &lt;EventTrigger RoutedEvent=&quot;Canvas.MouseEnter&quot;&gt;
+          &lt;BeginStoryboard&gt;
+            &lt;Storyboard&gt;
+              &lt;DoubleAnimation Storyboard.TargetName=&quot;stop1&quot; Storyboard.TargetProperty=&quot;Offset&quot; From=&quot;0.99&quot; To=&quot;0.65&quot;
+                               Duration=&quot;0:0:.3&quot; /&gt;
+              &lt;DoubleAnimation Storyboard.TargetName=&quot;PanelItemImage&quot; Storyboard.TargetProperty=&quot;Opacity&quot; From=&quot;0.6&quot;
+                               To=&quot;0.8&quot; Duration=&quot;0:0:.2&quot; /&gt;
+            &lt;/Storyboard&gt;
+          &lt;/BeginStoryboard&gt;
+        &lt;/EventTrigger&gt;
+        &lt;EventTrigger RoutedEvent=&quot;Canvas.MouseLeave&quot;&gt;
+          &lt;BeginStoryboard&gt;
+            &lt;Storyboard&gt;
+              &lt;DoubleAnimation Storyboard.TargetName=&quot;stop1&quot; Storyboard.TargetProperty=&quot;Offset&quot; From=&quot;0.65&quot; To=&quot;0.99&quot;
+                               Duration=&quot;0:0:.3&quot; /&gt;
+              &lt;DoubleAnimation Storyboard.TargetName=&quot;PanelItemImage&quot; Storyboard.TargetProperty=&quot;Opacity&quot; From=&quot;0.8&quot;
+                               To=&quot;0.6&quot; Duration=&quot;0:0:.2&quot; /&gt;
+            &lt;/Storyboard&gt;
+          &lt;/BeginStoryboard&gt;
+        &lt;/EventTrigger&gt;
+      &lt;/Canvas.Triggers&gt;
+    &lt;/Canvas&gt;
+    &lt;Border Grid.Row=&quot;1&quot; BorderBrush=&quot;Transparent&quot; Background=&quot;#FFAAAAAA&quot; BorderThickness=&quot;0&quot; Height=&quot;1&quot;&gt;&lt;/Border&gt;
+  &lt;/Grid&gt;
+&lt;/UserControl&gt;</pre></code><script type="text/javascript">
+			applyranges('src268', RANGES_268)
+		</script>
+	</body>
+</html>

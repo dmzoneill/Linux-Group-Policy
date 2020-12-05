@@ -1,0 +1,17 @@
+C:\lgp\Linux Group Policy\LGP.Panels\obj\Release\ResolveAssemblyReference.cache
+C:\lgp\Linux Group Policy\LGP.Panels\obj\Release\Panels.baml
+C:\lgp\Linux Group Policy\LGP.Panels\obj\Release\Panels.g.cs
+C:\lgp\Linux Group Policy\LGP.Panels\obj\Release\LGP.Panels_MarkupCompile.cache
+C:\lgp\Linux Group Policy\LGP.Panels\obj\Release\LGP.Panels.g.resources
+C:\lgp\Linux Group Policy\LGP.Panels\bin\Release\LGP.Panels.dll
+C:\lgp\Linux Group Policy\LGP.Panels\bin\Release\LGP.Panels.pdb
+C:\lgp\Linux Group Policy\LGP.Panels\bin\Release\AvalonDock.dll
+C:\lgp\Linux Group Policy\LGP.Panels\bin\Release\LGP.Factory.dll
+C:\lgp\Linux Group Policy\LGP.Panels\bin\Release\Microsoft.Practices.Prism.dll
+C:\lgp\Linux Group Policy\LGP.Panels\bin\Release\Microsoft.Practices.ServiceLocation.dll
+C:\lgp\Linux Group Policy\LGP.Panels\bin\Release\LGP.Factory.pdb
+C:\lgp\Linux Group Policy\LGP.Panels\bin\Release\Microsoft.Practices.Prism.pdb
+C:\lgp\Linux Group Policy\LGP.Panels\bin\Release\Microsoft.Practices.Prism.xml
+C:\lgp\Linux Group Policy\LGP.Panels\bin\Release\Microsoft.Practices.ServiceLocation.xml
+C:\lgp\Linux Group Policy\LGP.Panels\obj\Release\LGP.Panels.dll
+C:\lgp\Linux Group Policy\LGP.Panels\obj\Release\LGP.Panels.pdb

@@ -1,0 +1,7 @@
+public static class Framework
+{
+	public static IContextMenus ContextMenus
+	{
+		get { return ClassLibraryHandler.GetConextMenusHandler(); }
+	}
+}

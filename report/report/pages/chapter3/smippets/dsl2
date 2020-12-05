@@ -1,0 +1,8 @@
+#!/usr/bin/perl -w
+use lib "/opt/lgp/client/includes"
+use Interpretor;
+
+#ACTION:
+  SERVICE_CONTROL : httpd off
+  <% print "hello world" %>
+#END:

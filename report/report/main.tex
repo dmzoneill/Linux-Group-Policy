@@ -1,0 +1,335 @@
+\documentclass[10pt,a4paper,notitlepage,svgnames]{report}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor} 
+\usepackage{mdwlist}
+\usepackage[left=34mm,top=1cm,right=23mm,bottom=4cm,nohead,nofoot]{geometry}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage{caption}
+\usepackage{capt-of}
+\usepackage{makeidx}
+\usepackage{minted}
+\usepackage{natbib} 
+\usepackage{helvet}
+\usepackage{tdclock}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{kpfonts}
+\usepackage{titlesec}
+\usepackage{multirow}
+\usepackage[section]{placeins}
+\usepackage{framed}
+\usepackage[titles]{tocloft}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage[none]{hyphenat}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Page settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\columnsep}{5mm}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parsep}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\topsep}{0pt}
+\setlength{\partopsep}{0pt}
+\linespread{1.3}
+\setlength{\footskip}{10mm}
+\setlength{\cftfignumwidth}{3em}
+
+\captionsetup{font={footnotesize}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Heading space and size
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\chapter}[hang]{\huge\bfseries}{\thechapter\quad}{0pt}{}
+\titleformat{\section}[hang]{\LARGE\bfseries}{\thesection\quad}{0pt}{}
+\titleformat{\subsection}[hang]{\Large\bfseries}{\thesubsection\quad}{0pt}{}
+\titleformat{\subsubsection}[hang]{\large\bfseries}{\thesubsubsection\quad}{0pt}{}
+\titleformat{\paragraph}[hang]{\normalsize\bfseries}{\theparagraph\quad}{0pt}{}
+
+\titlespacing{\chapter}{0pt}{-6pt}{6pt}
+\titlespacing{\section}{0pt}{0pt}{6pt}
+\titlespacing{\subsection}{0pt}{0pt}{6pt}
+\titlespacing{\subsubsection}{0pt}{0pt}{6pt}
+\titlespacing{\paragraph}{0pt}{0pt}{-35pt}
+
+
+\renewcommand*\arraystretch{1.1}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Other styles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Floating figure / table in multicol
+\makeatletter
+\newenvironment{tablehere}
+  {\def\@captype{table}}
+  {}
+
+\newenvironment{figurehere}
+  {\def\@captype{figure}}
+  {}
+  
+\renewenvironment{theindex}
+  {\if@twocolumn
+      \@restonecolfalse
+   \else
+      \@restonecoltrue
+   \fi
+   \setlength{\columnseprule}{0pt}
+   \setlength{\columnsep}{35pt}
+   \begin{multicols}{3}[\section*{\indexname}]
+   \markboth{\MakeUppercase\indexname}%
+            {\MakeUppercase\indexname}%
+   \thispagestyle{plain}
+   \setlength{\parindent}{0pt}
+   \setlength{\parskip}{0pt plus 0.3pt}
+   \relax
+   \let\item\@idxitem}%
+  {\end{multicols}\if@restonecol\onecolumn\else\clearpage\fi}
+  
+\makeatother
+
+\bibpunct{(}{)}{;}{a}{,}{,}
+
+\definecolor{ored}{RGB}{178,34,34}
+
+
+\setlength{\cftbeforechapskip}{2ex}
+\setlength{\cftbeforesecskip}{0.5ex}
+
+%\renewcommand{\cftchapfont}{\Large\bfseries}
+%\renewcommand{\cftsecfont}{\large\bfseries}
+%\renewcommand{\cftsubsecfont}{\large}
+
+\renewcommand{\cftchapfont}{%
+  \fontsize{13}{20}\usefont{\encodingdefault}{\familydefault}{bx}{\shapedefault}\selectfont
+}
+
+\renewcommand{\cftsecfont}{%
+  \fontsize{11}{18}\usefont{\encodingdefault}{\familydefault}{bx}{\shapedefault}\selectfont
+}
+
+\renewcommand{\cftsubsecfont}{%
+  \fontsize{10}{15}\usefont{\encodingdefault}{\familydefault}{\seriesdefault}{\shapedefault}\selectfont
+}
+
+\makeatletter
+\renewcommand{\@pnumwidth}{1.75em}
+\renewcommand{\@tocrmarg}{2.75em}
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Renaming figures table, abstract title etc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\contentsname}{Table Of Contents}
+\renewcommand{\figurename}{Fig.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Indexing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeindex
+\makeglossary
+\raggedbottom
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Begin document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\includeonly{pages/head,pages/chapter1,pages/chapter2,pages/chapter3,pages/chapter4,pages/chapter5,pages/appendix1,pages/appendix2,pages/appendix3,pages/appendix4,pages/foot}
+%\includeonly{pages/head,pages/chapter1,pages/chapter3,pages/foot}
+\includeonly{pages/head,pages/chapter1,pages/chapter2,pages/chapter3,pages/chapter4,pages/chapter5,pages/appendix3,pages/appendix4,pages/foot}
+
+\begin{document}
+\sloppy	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Title / Abstract Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+	\pagenumbering{gobble}
+	
+	\vspace*{\fill}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=1.2]{figures/ul.png}
+	\end{figure}	
+	
+	\vspace{15mm}
+	\begin{center}
+	
+		\begin{minipage}[b]{0.57\linewidth}
+		
+			\begin{center}
+			
+				\normalsize
+				{
+					\textbf{\huge{Envisioning Group Policy}}
+					\newline
+					\vspace{2mm}
+					\textbf{\large{for a heterogeneous Linux environment}}
+				}
+				
+			\end{center}
+
+		\end{minipage}		
+		
+	\end{center}
+			
+	\begin{center}
+		
+		\vspace{10mm}
+		
+		\begin{minipage}[b]{0.30\linewidth}
+		
+			\begin{center}
+			
+				\large
+				{
+					David O Neill - 0813001
+					\newline
+					Supervised by J.J Collins
+					\newline 
+					\newline
+					\textbf{\today}
+				}
+				
+			\end{center}
+
+		\end{minipage}	
+				
+	\end{center}
+	
+	\vspace*{\fill}
+	
+	\thispagestyle{empty}
+	\pagestyle{empty}
+
+\newpage
+
+	\vspace*{\fill}
+	
+	\huge\textbf{Abstract\newline}
+	\newline
+	\normalsize
+	{
+		The objective of this Final Year Project was to develop a Configuration Management framework that supported specification of policies for a Linux 
+		heterogeneous environment. The framework had to be extensible, provide a rich user interface, and allow administrators to specify rules using a policy 
+		oriented language in the form of a Domain Specific Language. Extensibility was largely achieved through the development of a composite-based architecture, 
+		extensive specification of interfaces, and the use of reflection. The end result is an administrative platform that fulfils the functional 
+		and non-functional requirements of the project, and an implementation that has been evaluated using stress testing and software quality metrics. 
+		The ensuing critique is favourable but balanced, and the software artefact itself was well received by a knowledgeable audience.
+		\newline
+		\newline
+	}
+	
+	\huge\textbf{Acknowledgements\newline}
+	\newline
+	\normalsize
+	{		
+		Everyone and clich\`es!
+	}
+	
+	\vspace*{\fill}
+	
+	\addcontentsline{toc}{chapter}{\protect\numberline{}Abstract}
+	\addcontentsline{toc}{chapter}{\protect\numberline{}Acknowledgements}
+	
+	\thispagestyle{empty}
+	\pagestyle{empty}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Table of contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\pagenumbering{gobble}
+\tableofcontents
+\cleardoublepage
+
+\newpage
+\pagenumbering{gobble}
+\normalsize{\listoffigures}
+\addcontentsline{toc}{chapter}{\protect\numberline{}List Of Figures}
+\begingroup
+\let\clearpage\relax
+\vspace{5mm}
+\normalsize{\listoftables}
+\pagenumbering{gobble}
+\addcontentsline{toc}{chapter}{\protect\numberline{}List Of Tables}
+\pagenumbering{gobble}
+\endgroup
+\cleardoublepage
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\pagestyle{plain}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Chapters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{pages/chapter1}
+\include{pages/chapter2}
+\include{pages/chapter3}
+\include{pages/chapter4}
+\include{pages/chapter5}
+%\include{pages/pastes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% End document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Bilbiography, figures tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nocite{*}
+{\cleardoublepage
+\normalsize{\bibliography{bibliography/main}}}
+\bibliographystyle{plainnat}
+\addcontentsline{toc}{chapter}{\protect\numberline{}Bibliography}
+
+\include{pages/appendix1}
+\include{pages/appendix2}
+\include{pages/appendix3}
+\include{pages/appendix4}
+
+%\addcontentsline{toc}{chapter}{\protect\numberline{}Index}
+%\vspace{5mm}
+%\normalsize{\printindex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Document Finish
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

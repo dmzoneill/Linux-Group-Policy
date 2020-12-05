@@ -1,0 +1,4 @@
+﻿<ContextMenu xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Tag="Client" StaysOpen="true">
+     <MenuItem Header="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=Move}" Name="MoveClientMenuItem" Foreground="Black"/>
+    <MenuItem Header="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=Delete}" Name="DeleteClientMenuItem" Foreground="Black"/>
+</ContextMenu>

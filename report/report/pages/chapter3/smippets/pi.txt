@@ -1,0 +1,23 @@
+sub processDSLInternal
+{
+	my $_ = shift;
+	my $result = ''; 
+	      
+    my $regex_code = "<%|%>";      
+    my $i = 0;
+    
+    for( split( /$regex_code/ , $_ ) )
+    {
+        if( $i++ % 2 == 0 )
+        {
+            s/[{}]/\\$&/g;
+            $result .= "print q{". $_ ."};";
+        }
+        else
+        {
+            $result .= $_;
+        }
+    }
+	
+	return $result;
+}

@@ -1,0 +1,241 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_33 = [
+   [21,9,21,34,'dccv']
+, [22,9,22,10,'dccv']
+, [23,9,23,10,'dccv']
+, [33,9,33,10,'dccv']
+, [35,13,35,14,'dccv']
+, [36,17,36,90,'dccv']
+, [37,17,37,18,'dccv']
+, [38,21,38,58,'dccv']
+, [40,21,40,225,'dccv']
+, [41,21,41,22,'dccv']
+, [42,25,42,108,'dccv']
+, [44,25,44,60,'dccv']
+, [45,25,45,26,'dccv']
+, [46,29,46,68,'dccv']
+, [48,29,48,86,'dccv']
+, [49,29,49,86,'dccv']
+, [50,29,50,94,'dccv']
+, [52,29,52,59,'dccv']
+, [54,29,54,119,'dccv']
+, [55,29,55,103,'dccv']
+, [56,29,56,74,'dccv']
+, [58,29,58,66,'dccv']
+, [59,29,59,57,'dccv']
+, [60,29,60,57,'dccv']
+, [61,29,61,104,'dccv']
+, [62,29,62,113,'dccv']
+, [63,29,63,56,'dccv']
+, [65,29,65,60,'dccv']
+, [66,29,66,86,'dccv']
+, [67,29,67,94,'dccv']
+, [68,29,68,86,'dccv']
+, [69,25,69,26,'dccv']
+, [70,21,70,22,'dccv']
+, [71,17,71,18,'dccv']
+, [72,13,72,14,'dccv']
+, [77,9,77,10,'dccv']
+, [86,9,86,10,'dccv']
+, [87,13,87,71,'dccv']
+, [88,9,88,10,'dccv']
+, [91,9,91,10,'dccv']
+, [92,13,92,48,'dccv']
+, [93,13,93,14,'dccv']
+, [94,17,94,24,'dccv']
+, [99,9,99,10,'dccv']
+, [103,9,103,10,'dccv']
+, [105,13,105,14,'dccv']
+, [106,17,106,64,'dccv']
+, [107,17,107,18,'dccv']
+, [108,21,108,28,'dccv']
+, [126,9,126,10,'dccv']
+, [130,9,130,10,'dccv']
+, [132,13,132,14,'dccv']
+, [133,17,133,50,'dccv']
+, [138,17,138,94,'dccv']
+, [139,17,139,93,'dccv']
+, [140,13,140,14,'dccv']
+, [145,9,145,10,'dccv']
+, [73,13,73,37,'dcuc']
+, [74,13,74,14,'dcuc']
+, [75,17,75,53,'dcuc']
+, [76,13,76,14,'dcuc']
+, [97,13,97,42,'dcuc']
+, [98,13,98,30,'dcuc']
+, [111,17,111,64,'dcuc']
+, [112,17,112,84,'dcuc']
+, [114,17,114,38,'dcuc']
+, [115,17,115,18,'dcuc']
+, [116,21,116,28,'dcuc']
+, [119,17,119,53,'dcuc']
+, [120,17,120,34,'dcuc']
+, [121,13,121,14,'dcuc']
+, [122,13,122,37,'dcuc']
+, [123,13,123,14,'dcuc']
+, [124,17,124,53,'dcuc']
+, [125,13,125,14,'dcuc']
+, [134,17,134,18,'dcuc']
+, [135,21,135,28,'dcuc']
+, [141,13,141,37,'dcuc']
+, [142,13,142,14,'dcuc']
+, [143,17,143,53,'dcuc']
+, [144,13,144,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src33" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using LGP.Components.Factory.Interfaces.Infrastructure;
+
+#endregion
+
+namespace LGP.Components.Factory.Internal
+{
+    /// &lt;summary&gt;
+    /// 
+    /// &lt;/summary&gt;
+    public class DragDropAdorner : IDragDrop
+    {
+        private static DragDropAdorner _instance;
+
+        private DragDropAdorner()
+        {
+        }
+
+        #region IDragDrop Members
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;dragElement&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;e&quot;&gt;&lt;/param&gt;
+        public void StartDrag( FrameworkElement dragElement , MouseEventArgs e )
+        {
+            try
+            {
+                if( e.LeftButton == MouseButtonState.Pressed &amp;&amp; !DragAdorner.IsDragging )
+                {
+                    var position = e.GetPosition( null );
+
+                    if( Math.Abs( position.X - DragAdorner.StartPoint.X ) &gt; SystemParameters.MinimumHorizontalDragDistance || Math.Abs( position.Y - DragAdorner.StartPoint.Y ) &gt; SystemParameters.MinimumVerticalDragDistance )
+                    {
+                        DragAdorner.DragScope = Application.Current.MainWindow.Content as FrameworkElement;
+
+                        if( DragAdorner.DragScope != null )
+                        {
+                            DragAdorner.DragScope.AllowDrop = true;
+
+                            DragAdorner.DragScope.PreviewDragOver += this.OnDragOver;
+                            DragAdorner.DragScope.DragLeave += this.OnDragScopeLeave;
+                            DragAdorner.DragScope.QueryContinueDrag += this.OnDragScopeQuery;
+
+                            DragAdorner.IsDragging = true;
+
+                            DragAdorner.Adorner = new DragAdorner( DragAdorner.DragScope , dragElement , true , 0.5 );
+                            DragAdorner.Layer = AdornerLayer.GetAdornerLayer( DragAdorner.DragScope );
+                            DragAdorner.Layer.Add( DragAdorner.Adorner );
+
+                            DragAdorner.DragHasLeftScope = false;
+                            var data = new DataObject();
+                            data.SetData( dragElement );
+                            DragDrop.DoDragDrop( DragAdorner.DragScope , data , DragDropEffects.Move );
+                            AdornerLayer.GetAdornerLayer( DragAdorner.DragScope ).Remove( DragAdorner.Adorner );
+                            DragAdorner.Adorner = null;
+
+                            DragAdorner.IsDragging = false;
+                            DragAdorner.DragScope.DragLeave -= this.OnDragScopeLeave;
+                            DragAdorner.DragScope.QueryContinueDrag -= this.OnDragScopeQuery;
+                            DragAdorner.DragScope.PreviewDragOver -= this.OnDragOver;
+                        }
+                    }
+                }
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        #endregion
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static DragDropAdorner GetInstance()
+        {
+            return _instance ?? ( _instance = new DragDropAdorner() );
+        }
+
+        private void OnDragScopeQuery( object sender , QueryContinueDragEventArgs e )
+        {
+            if( !DragAdorner.DragHasLeftScope )
+            {
+                return;
+            }
+
+            e.Action = DragAction.Cancel;
+            e.Handled = true;
+        }
+
+
+        private void OnDragScopeLeave( object sender , DragEventArgs e )
+        {
+            try
+            {
+                if( e.OriginalSource != DragAdorner.DragScope )
+                {
+                    return;
+                }
+
+                var p = e.GetPosition( DragAdorner.DragScope );
+                var r = VisualTreeHelper.GetContentBounds( DragAdorner.DragScope );
+
+                if( r.Contains( p ) )
+                {
+                    return;
+                }
+
+                DragAdorner.DragHasLeftScope = true;
+                e.Handled = true;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        private void OnDragOver( object sender , DragEventArgs args )
+        {
+            try
+            {
+                if( DragAdorner.Adorner == null )
+                {
+                    return;
+                }
+
+                DragAdorner.Adorner.LeftOffset = args.GetPosition( DragAdorner.DragScope ).X;
+                DragAdorner.Adorner.TopOffset = args.GetPosition( DragAdorner.DragScope ).Y;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src33', RANGES_33)
+		</script>
+	</body>
+</html>

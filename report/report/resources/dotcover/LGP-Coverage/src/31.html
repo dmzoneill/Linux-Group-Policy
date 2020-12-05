@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_31 = [
+   [19,9,19,78,'dccv']
+, [20,9,20,10,'dccv']
+, [21,13,21,30,'dccv']
+, [22,9,22,10,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src31" class="dotCoverSource"><pre>#region
+
+using System;
+
+#endregion
+
+namespace LGP.Components.Factory.Publishers.Events
+{
+    /// &lt;summary&gt;
+    ///   Derived Event to which subscribers can listen for
+    /// &lt;/summary&gt;
+    public class PreferencesEvent : Event
+    {
+        /// &lt;summary&gt;
+        ///   Constructor for the derived type
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sender&quot;&gt;The object that raised the event&lt;/param&gt;
+        /// &lt;param name = &quot;type&quot;&gt;The command that is intended&lt;/param&gt;
+        public PreferencesEvent( Object sender , Type type ) : base( sender )
+        {
+            this.Type = type;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Accessor Mutator for the command property
+        /// &lt;/summary&gt;
+        public Type Type
+        {
+            get;
+            set;
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src31', RANGES_31)
+		</script>
+	</body>
+</html>

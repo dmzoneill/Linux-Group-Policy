@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="LGP.Controls.Background" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignHeight="170" d:DesignWidth="450"
+             Background="Transparent" BorderThickness="0" Loaded="UserControlLoaded">
+  <Grid Background="Transparent">
+    <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Panel.ZIndex="1" Width="400" Height="150">
+      <Rectangle.Fill>
+        <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+          <RadialGradientBrush.GradientStops>
+            <GradientStop Color="#DDFFFFFF" Offset="0" />
+            <GradientStop Color="#AAFFFFFF" Offset="0.25" />
+            <GradientStop Color="#88FFFFFF" Offset="0.75" />
+            <GradientStop Color="#00FFFFFF" Offset="1" />
+          </RadialGradientBrush.GradientStops>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+        <TextBlock Padding="2" Margin="5,50,0,0" Name="textBlock1" Text="{Resx ResxName=LGP.Properties.Resources, Key=LinuxGroupPolicyStudio}" FontSize="26" Opacity="0.7" Panel.ZIndex="3" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <Label Content="{Resx ResxName=LGP.Properties.Resources, Key=ManagementStartsHere}" Height="28" Margin="5,80,5,0" HorizontalAlignment="Center" Name="label1"
+           VerticalAlignment="Top" Opacity="0.6" Panel.ZIndex="3" />
+    <Image Height="128" Width="128" Margin="5" Name="presentationImage" Opacity="0.15" HorizontalAlignment="Stretch"
+           VerticalAlignment="Stretch" Panel.ZIndex="2">
+      <Image.Triggers>
+        <EventTrigger RoutedEvent="Image.Loaded">
+          <BeginStoryboard>
+            <Storyboard>
+              <DoubleAnimation Storyboard.TargetName="presentationImage" Storyboard.TargetProperty="Opacity"
+                               From="0.15" To="0.4" Duration="0:0:3" AutoReverse="True" RepeatBehavior="Forever" />
+            </Storyboard>
+          </BeginStoryboard>
+        </EventTrigger>
+      </Image.Triggers>
+    </Image>
+  </Grid>
+</UserControl>

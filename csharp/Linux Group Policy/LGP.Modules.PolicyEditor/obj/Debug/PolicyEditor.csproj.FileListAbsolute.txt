@@ -1,0 +1,14 @@
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\PolicyEditor\bin\Debug\PolicyEditor.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\PolicyEditor\bin\Debug\PolicyEditor.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\PolicyEditor.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\PolicyEditor.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\PolicyEditor\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\PolicyEditor\obj\Debug\PolicyExplorer.baml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\PolicyEditor\obj\Debug\PolicyExplorer.g.cs
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\PolicyEditor\obj\Debug\PolicyEditor_MarkupCompile.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\PolicyEditor\obj\Debug\PolicyEditor.g.resources
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\PolicyEditor\obj\Debug\PolicyEditor.Properties.Resources.resources
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\PolicyEditor\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\PolicyEditor\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\PolicyEditor\obj\Debug\PolicyEditor.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\PolicyEditor\obj\Debug\PolicyEditor.pdb

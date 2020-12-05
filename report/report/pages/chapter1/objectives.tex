@@ -1,0 +1,64 @@
+\section{Objectives}
+
+	\normalsize
+	{
+		The following section depicts some high level artefacts for the framework under development:
+		\newline
+	}
+
+	\large{\bfseries{Client Server Model}}
+	
+	\vspace{2mm}
+	\normalsize
+	{
+		Centralised management being the theme of this report establishes the inception of the concept of a central authority and 
+		therein a client server model.   One of the fundamental requirements of such an implementation is to provide a client server 
+		model that can operate on a multitude of different systems with varying revisions of supporting packages.  
+		\newline
+		\newline
+		For highest availability possible the client server should be implemented in language that runs on the majority 
+		of Linux systems.  The client should be able to support updating as new functionality becomes available. This implies it 
+		must be extensible, and as such a compiled language would be least preferable as there would be hardware architecture (Alpha, ARM, PPC, X86 x86\_64 \& SPARC)
+		concerns in a large environment.   An interpreted language such as Perl supports these two constraints.
+		\newline
+	}
+	
+	\large{\bfseries{Administrator Front End}}	
+	
+	\vspace{2mm}
+	\normalsize
+	{
+		The server or central authority must be controllable in some fashion.  As seen in Windows Active Directory, 
+		a user interface is provided to accomplish this.  As the administrator interface provides the ability of managing the configuration 
+		of this evolving environment, it must be extensible.  Therefore good software architecture concerns must be considered 
+		when designing this interface. 
+		\newline
+		\newline
+		In a large environment it is unlikely that the same policies will be applied to all the machines.  The management of a large 
+		environment must provide a logical grouping of computers, allowing for the application of different polices to different groups.  
+		As an example, a University would have logical distinction between student and staff computers, with different concerns and the 
+		resulting policies.  This grouping of computers is generally referred to as organisational units.
+		\newline
+	}
+		
+	\large{\bfseries{Directory Services Schema}}		
+	
+	\vspace{2mm}
+	\normalsize
+	{
+		The logical environmental representations or data must be stored somewhere for easy retrieval and modification.  
+		A database typically would be used for such a purpose and the schema should be able to represent computer accounts 
+		and be logically divided into organisational units.  Policies which will be applied to these organisational units must 
+		also be stored in some fashion.
+		\newline
+	}
+	
+	\large{\bfseries{Domain Specific Language}}	
+	
+	\vspace{2mm}
+	\normalsize
+	{
+		The domain specific language has to represent an abstraction of distribution specific tools and characteristics.  
+		Therefore as the operating systems change and support new functionality, the domain specific language 
+		must also support change. 
+	}

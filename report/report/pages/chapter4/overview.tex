@@ -1,0 +1,76 @@
+\vspace{-2mm}
+\section{Overview}
+		
+	\normalsize
+	{
+		An example of a high level use case is detailed in table \ref{tab:UseCasesample}.  Use cases
+		were used to contrive test cases in line with the requirements in section \ref{sec:Scope}.
+		By designing tests cases around actors and their actions; scenarios (instances of use cases)
+		provided the best coverage for exploratory testing or black box testing and resulting quality assurement process.
+		\newline
+		\newline
+		Use cases were further broken down into discrete use cases indicated by the description steps and extensions points
+		in the use case sample \ref{tab:UseCasesample}.
+		\newline
+	}
+	
+	\begin{tablehere}
+	
+		\small{\begin{tabular}{ | p{35mm} | p{55mm} | p{50mm} |}
+		\hline
+		\textbf{Use Case}					& \textbf{Edit Organisational Unit Policy} 				&  																\\ \hline
+		Preconditions	 	 	 			& Administrator interface running\newline	
+											  Database connectivity\newline
+											  Organisational unit created\newline					
+											  Edit policy option selected 						    &   															\\ \hline
+		Success End Conditions	 	 	 	& Rule(s) successfully created\newline
+											  Policy Saved											&																\\ \hline
+		Failed End Conditions	 	 	 	& Unable to created rules\newline
+											  Unable to save										&																\\ \hline
+		Primary Actor			 	 	 	& Administrator											&																\\ \hline
+		Trigger			 	 	 	 		& Administrator wants to apply  policy					&																\\ \hline
+		Description					 		& Step													&	Action														\\ \hline
+											& 1														&	Open Administrator Interface									\\ \cline{2-3}
+											& 2														&	Open Organisational Unit Explorer							\\ \cline{2-3}
+											& 3														&	Select Organisational Unit 								\\ \cline{2-3}
+											& 4														&	Initiate right click context menu							\\ \cline{2-3}
+											& 5														&	Select Policy Editor										\\ \cline{2-3}
+											& 6														&	Type or use visual editor to create rule(s)					\\ \cline{2-3}
+											& 7														&	Activate save option										\\ \hline
+		Extensions							& Step													&	Action														\\ \hline
+											& 1a													&	Administrator interface fails to load						\\ \cline{2-3}
+											& 2a													&	O.U. Explorer Unavailable					\\ \cline{2-3}
+											& 3a													&	No Organisational units defined								\\ \cline{2-3}
+											& 4a													&	Unable to initiate menu										\\ \cline{2-3}
+											& 5a													&	Unable to select Policy Editor								\\ \cline{2-3}
+											& 6a													&	Unable to modify/add rule(s)								\\ \cline{2-3}
+											& 7a													&	Save option fails											\\ \hline
+		Performance							& Thousands of rules. Saved in 2 seconds				&																\\ \hline
+		Frequency		 		 	 	 	& 1000's/day											&																\\ \hline
+		Channel				 		 	 	& Policy Database Gateway								&																\\ \hline
+		Open issues			 		 	 	& Policy Data validation								&																\\ \hline
+		\end{tabular}}
+		
+		\vspace{-3mm}
+		\caption{Use Case sample}			
+		\label{tab:UseCasesample}
+				
+	\end{tablehere}
+	
+\newpage
+	
+	\normalsize
+	{
+		As this project was software-centric, testing played a huge role in the completion, successful delivery and resulting quality.
+		One of the software fallacies (Perfect Software: And Other Illusions about Testing) 
+		is the concept of testing for everything, otherwise known as exhaustive testing \citet{WeinbergSoftwareTesting}.   
+		Therefore the application of use case realisation; the identification of collaborating objects in the application
+		domain; offered the perfect means to derive test cases.
+		\newline
+		\newline
+		The JetBrains Resharper utility was used as a white-box testing enhancement tool, which actively interrogated 
+		the software under development.  Resharper looks for common problems such as possible null value exceptions, 
+		code coverage and unreachable code, boundary value assessment etc.  Other utilities such as CodeRush by Devexpress have similar
+		functionality.
+	}
+	

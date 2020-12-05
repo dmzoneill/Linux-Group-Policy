@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root Name="Linux Group Policy" CoveredStatements="7506" TotalStatements="12970" CoveragePercent="58" ReportType="XML" DotCoverVersion="1.2.384.4">
+  <Namespace Name="LGP.ImageWindowsShellIcons" CoveredStatements="0" TotalStatements="14" CoveragePercent="0">
+    <Type Name="ShellIcon" CoveredStatements="0" TotalStatements="14" CoveragePercent="0" />
+  </Namespace>
+  <Namespace Name="LGP.ImageLibrary.Properties" CoveredStatements="0" TotalStatements="17" CoveragePercent="0">
+    <Type Name="Resources" CoveredStatements="0" TotalStatements="17" CoveragePercent="0" />
+  </Namespace>
+  <Namespace Name="LGP.ImageWindowsShellIcons.Properties" CoveredStatements="0" TotalStatements="17" CoveragePercent="0">
+    <Type Name="Resources" CoveredStatements="0" TotalStatements="17" CoveragePercent="0" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Factory.Properties" CoveredStatements="0" TotalStatements="17" CoveragePercent="0">
+    <Type Name="Resources" CoveredStatements="0" TotalStatements="17" CoveragePercent="0" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Menus.Properties" CoveredStatements="11" TotalStatements="74" CoveragePercent="15">
+    <Type Name="Resources" CoveredStatements="11" TotalStatements="74" CoveragePercent="15" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.ModuleEditor.Properties" CoveredStatements="17" TotalStatements="113" CoveragePercent="15">
+    <Type Name="Resources" CoveredStatements="17" TotalStatements="113" CoveragePercent="15" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Panels.Properties" CoveredStatements="11" TotalStatements="56" CoveragePercent="20">
+    <Type Name="Resources" CoveredStatements="11" TotalStatements="56" CoveragePercent="20" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.PolicyEditor.Properties" CoveredStatements="23" TotalStatements="107" CoveragePercent="21">
+    <Type Name="Resources" CoveredStatements="23" TotalStatements="107" CoveragePercent="21" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.OrganizationUnitExplorer.Properties" CoveredStatements="23" TotalStatements="95" CoveragePercent="24">
+    <Type Name="Resources" CoveredStatements="23" TotalStatements="95" CoveragePercent="24" />
+  </Namespace>
+  <Namespace Name="LGP.Properties" CoveredStatements="23" TotalStatements="78" CoveragePercent="29">
+    <Type Name="Resources" CoveredStatements="11" TotalStatements="53" CoveragePercent="21" />
+    <Type Name="Images" CoveredStatements="12" TotalStatements="25" CoveragePercent="48" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.ServerControl.Properties" CoveredStatements="26" TotalStatements="77" CoveragePercent="34">
+    <Type Name="Resources" CoveredStatements="26" TotalStatements="77" CoveragePercent="34" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Database.Properties" CoveredStatements="17" TotalStatements="47" CoveragePercent="36">
+    <Type Name="Resources" CoveredStatements="17" TotalStatements="47" CoveragePercent="36" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.Statistics.Properties" CoveredStatements="14" TotalStatements="38" CoveragePercent="37">
+    <Type Name="Resources" CoveredStatements="14" TotalStatements="38" CoveragePercent="37" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Database.Gateways" CoveredStatements="401" TotalStatements="1073" CoveragePercent="37">
+    <Type Name="PolicyGateway" CoveredStatements="67" TotalStatements="364" CoveragePercent="18" />
+    <Type Name="GrammerGateway" CoveredStatements="67" TotalStatements="231" CoveragePercent="29" />
+    <Type Name="ModuleGateway" CoveredStatements="72" TotalStatements="149" CoveragePercent="48" />
+    <Type Name="OuGateway" CoveredStatements="122" TotalStatements="217" CoveragePercent="56" />
+    <Type Name="ClientGateway" CoveredStatements="73" TotalStatements="112" CoveragePercent="65" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Database.Mssql" CoveredStatements="32" TotalStatements="78" CoveragePercent="41">
+    <Type Name="MssqlDb" CoveredStatements="0" TotalStatements="22" CoveragePercent="0" />
+    <Type Name="Plugin" CoveredStatements="2" TotalStatements="23" CoveragePercent="9" />
+    <Type Name="Preferences" CoveredStatements="30" TotalStatements="33" CoveragePercent="91" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Database.Oracle.Properties" CoveredStatements="11" TotalStatements="26" CoveragePercent="42">
+    <Type Name="Resources" CoveredStatements="11" TotalStatements="26" CoveragePercent="42" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Database.Mysql.Properties" CoveredStatements="11" TotalStatements="26" CoveragePercent="42">
+    <Type Name="Resources" CoveredStatements="11" TotalStatements="26" CoveragePercent="42" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Database.Postgresql.Properties" CoveredStatements="11" TotalStatements="26" CoveragePercent="42">
+    <Type Name="Resources" CoveredStatements="11" TotalStatements="26" CoveragePercent="42" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Database.Mssql.Properties" CoveredStatements="11" TotalStatements="26" CoveragePercent="42">
+    <Type Name="Resources" CoveredStatements="11" TotalStatements="26" CoveragePercent="42" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.ModuleEditor.Internal.NodeViews" CoveredStatements="40" TotalStatements="92" CoveragePercent="43">
+    <Type Name="ModulePane" CoveredStatements="40" TotalStatements="92" CoveragePercent="43" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews" CoveredStatements="83" TotalStatements="192" CoveragePercent="43">
+    <Type Name="OuPane" CoveredStatements="35" TotalStatements="85" CoveragePercent="41" />
+    <Type Name="ClientPane" CoveredStatements="48" TotalStatements="107" CoveragePercent="45" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Database.Postgresql" CoveredStatements="31" TotalStatements="70" CoveragePercent="44">
+    <Type Name="PostgreDb" CoveredStatements="0" TotalStatements="15" CoveragePercent="0" />
+    <Type Name="Plugin" CoveredStatements="2" TotalStatements="23" CoveragePercent="9" />
+    <Type Name="Preferences" CoveredStatements="29" TotalStatements="32" CoveragePercent="91" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Database.Oracle" CoveredStatements="31" TotalStatements="70" CoveragePercent="44">
+    <Type Name="OracleDb" CoveredStatements="0" TotalStatements="15" CoveragePercent="0" />
+    <Type Name="Plugin" CoveredStatements="2" TotalStatements="23" CoveragePercent="9" />
+    <Type Name="Preferences" CoveredStatements="29" TotalStatements="32" CoveragePercent="91" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Database.Entities" CoveredStatements="380" TotalStatements="816" CoveragePercent="47">
+    <Type Name="Policy" CoveredStatements="56" TotalStatements="179" CoveragePercent="31" />
+    <Type Name="Module" CoveredStatements="52" TotalStatements="136" CoveragePercent="38" />
+    <Type Name="Grammer" CoveredStatements="67" TotalStatements="130" CoveragePercent="52" />
+    <Type Name="Client" CoveredStatements="112" TotalStatements="215" CoveragePercent="52" />
+    <Type Name="Ou" CoveredStatements="93" TotalStatements="156" CoveragePercent="60" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.ModuleEditor.Internal.CustomControls" CoveredStatements="56" TotalStatements="114" CoveragePercent="49">
+    <Type Name="StackPanelModuleElement" CoveredStatements="56" TotalStatements="114" CoveragePercent="49" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.ModuleEditor.Internal.Modals.Controls" CoveredStatements="65" TotalStatements="126" CoveragePercent="52">
+    <Type Name="AddModule" CoveredStatements="34" TotalStatements="69" CoveragePercent="49" />
+    <Type Name="DeleteModule" CoveredStatements="31" TotalStatements="57" CoveragePercent="54" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.PolicyEditor" CoveredStatements="132" TotalStatements="255" CoveragePercent="52">
+    <Type Name="Plugin" CoveredStatements="14" TotalStatements="49" CoveragePercent="29" />
+    <Type Name="PolicyEditor" CoveredStatements="92" TotalStatements="171" CoveragePercent="54" />
+    <Type Name="Preferences" CoveredStatements="26" TotalStatements="35" CoveragePercent="74" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Dialog.Properties" CoveredStatements="11" TotalStatements="20" CoveragePercent="55">
+    <Type Name="Resources" CoveredStatements="11" TotalStatements="20" CoveragePercent="55" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Notifications.Properties" CoveredStatements="11" TotalStatements="20" CoveragePercent="55">
+    <Type Name="Resources" CoveredStatements="11" TotalStatements="20" CoveragePercent="55" />
+  </Namespace>
+  <Namespace Name="LGP" CoveredStatements="178" TotalStatements="318" CoveragePercent="56">
+    <Type Name="LGPWindow" CoveredStatements="76" TotalStatements="180" CoveragePercent="42" />
+    <Type Name="Preferences" CoveredStatements="100" TotalStatements="136" CoveragePercent="74">
+      <Type Name="CultureInfoComparer" CoveredStatements="5" TotalStatements="6" CoveragePercent="83" />
+    </Type>
+    <Type Name="App" CoveredStatements="2" TotalStatements="2" CoveragePercent="100" />
+  </Namespace>
+  <Namespace Name="LGP.ImageLibrary" CoveredStatements="48" TotalStatements="84" CoveragePercent="57">
+    <Type Name="IconSet" CoveredStatements="48" TotalStatements="84" CoveragePercent="57" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls" CoveredStatements="175" TotalStatements="302" CoveragePercent="58">
+    <Type Name="MoveOu" CoveredStatements="38" TotalStatements="67" CoveragePercent="57" />
+    <Type Name="RenameOu" CoveredStatements="46" TotalStatements="80" CoveragePercent="58" />
+    <Type Name="DeleteOu" CoveredStatements="43" TotalStatements="73" CoveragePercent="59" />
+    <Type Name="CreateOu" CoveredStatements="48" TotalStatements="82" CoveragePercent="59" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.ModuleEditor" CoveredStatements="303" TotalStatements="523" CoveragePercent="58">
+    <Type Name="Plugin" CoveredStatements="25" TotalStatements="51" CoveragePercent="49" />
+    <Type Name="ModuleList" CoveredStatements="57" TotalStatements="113" CoveragePercent="50" />
+    <Type Name="ModuleEditor" CoveredStatements="185" TotalStatements="312" CoveragePercent="59" />
+    <Type Name="Preferences" CoveredStatements="36" TotalStatements="47" CoveragePercent="77" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Panels" CoveredStatements="243" TotalStatements="409" CoveragePercent="59">
+    <Type Name="Plugin" CoveredStatements="2" TotalStatements="23" CoveragePercent="9" />
+    <Type Name="Panels" CoveredStatements="201" TotalStatements="337" CoveragePercent="60">
+      <Type Name="ExceptionLine" CoveredStatements="0" TotalStatements="0" CoveragePercent="0" />
+    </Type>
+    <Type Name="Preferences" CoveredStatements="40" TotalStatements="49" CoveragePercent="82" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Menus" CoveredStatements="371" TotalStatements="620" CoveragePercent="60">
+    <Type Name="Plugin" CoveredStatements="2" TotalStatements="23" CoveragePercent="9" />
+    <Type Name="MenuHandler" CoveredStatements="257" TotalStatements="435" CoveragePercent="59" />
+    <Type Name="ContextMenusHandler" CoveredStatements="88" TotalStatements="133" CoveragePercent="66" />
+    <Type Name="Preferences" CoveredStatements="24" TotalStatements="29" CoveragePercent="83" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.PolicyEditor.Internal.CustomControls" CoveredStatements="388" TotalStatements="644" CoveragePercent="60">
+    <Type Name="OuPolicyPane" CoveredStatements="39" TotalStatements="97" CoveragePercent="40" />
+    <Type Name="VisualPolicyEditor" CoveredStatements="349" TotalStatements="547" CoveragePercent="64" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.ModuleEditor.Internal" CoveredStatements="737" TotalStatements="1181" CoveragePercent="62">
+    <Type Name="ModuleFileGrammerState" CoveredStatements="57" TotalStatements="127" CoveragePercent="45" />
+    <Type Name="ModuleFileState" CoveredStatements="137" TotalStatements="252" CoveragePercent="54" />
+    <Type Name="ModuleFileGrammerStateHandler" CoveredStatements="117" TotalStatements="214" CoveragePercent="55" />
+    <Type Name="ModuleDocument" CoveredStatements="317" TotalStatements="444" CoveragePercent="71" />
+    <Type Name="ModuleHandler" CoveredStatements="109" TotalStatements="144" CoveragePercent="76" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Database.Mysql" CoveredStatements="63" TotalStatements="100" CoveragePercent="63">
+    <Type Name="Plugin" CoveredStatements="2" TotalStatements="23" CoveragePercent="9" />
+    <Type Name="MysqlDb" CoveredStatements="32" TotalStatements="45" CoveragePercent="71" />
+    <Type Name="Preferences" CoveredStatements="29" TotalStatements="32" CoveragePercent="91" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.OrganizationUnitExplorer" CoveredStatements="437" TotalStatements="669" CoveragePercent="65">
+    <Type Name="Plugin" CoveredStatements="25" TotalStatements="51" CoveragePercent="49" />
+    <Type Name="OuTreeView" CoveredStatements="44" TotalStatements="80" CoveragePercent="55" />
+    <Type Name="OuViewer" CoveredStatements="342" TotalStatements="503" CoveragePercent="68" />
+    <Type Name="Preferences" CoveredStatements="26" TotalStatements="35" CoveragePercent="74" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls" CoveredStatements="634" TotalStatements="974" CoveragePercent="65">
+    <Type Name="WrapPanelClientElement" CoveredStatements="127" TotalStatements="211" CoveragePercent="60" />
+    <Type Name="WrapPanelOuElement" CoveredStatements="202" TotalStatements="319" CoveragePercent="63" />
+    <Type Name="TreeViewOuElement" CoveredStatements="305" TotalStatements="444" CoveragePercent="69" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Dialog" CoveredStatements="84" TotalStatements="125" CoveragePercent="67">
+    <Type Name="Plugin" CoveredStatements="2" TotalStatements="23" CoveragePercent="9" />
+    <Type Name="WindowDialog" CoveredStatements="58" TotalStatements="73" CoveragePercent="79" />
+    <Type Name="Preferences" CoveredStatements="24" TotalStatements="29" CoveragePercent="83" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Notifications" CoveredStatements="120" TotalStatements="177" CoveragePercent="68">
+    <Type Name="Plugin" CoveredStatements="2" TotalStatements="23" CoveragePercent="9" />
+    <Type Name="Notifications" CoveredStatements="94" TotalStatements="125" CoveragePercent="75" />
+    <Type Name="Preferences" CoveredStatements="24" TotalStatements="29" CoveragePercent="83" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Database" CoveredStatements="169" TotalStatements="243" CoveragePercent="70">
+    <Type Name="Plugin" CoveredStatements="2" TotalStatements="23" CoveragePercent="9" />
+    <Type Name="Preferences" CoveredStatements="107" TotalStatements="149" CoveragePercent="72" />
+    <Type Name="DatabaseHandler" CoveredStatements="60" TotalStatements="71" CoveragePercent="85" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.PolicyEditor.Internal" CoveredStatements="436" TotalStatements="624" CoveragePercent="70">
+    <Type Name="PolicyHandler" CoveredStatements="213" TotalStatements="313" CoveragePercent="68" />
+    <Type Name="VisualPolicyEntry" CoveredStatements="148" TotalStatements="211" CoveragePercent="70" />
+    <Type Name="RowValidationRule" CoveredStatements="18" TotalStatements="25" CoveragePercent="72" />
+    <Type Name="CompletionData" CoveredStatements="31" TotalStatements="43" CoveragePercent="72" />
+    <Type Name="HighlightCurrentLineBackgroundRenderer" CoveredStatements="26" TotalStatements="32" CoveragePercent="81" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Factory.Internal.ServerControl" CoveredStatements="280" TotalStatements="396" CoveragePercent="71">
+    <Type Name="ServerController" CoveredStatements="121" TotalStatements="199" CoveragePercent="61" />
+    <Type Name="BroadcastListener" CoveredStatements="75" TotalStatements="105" CoveragePercent="71" />
+    <Type Name="NetworkController" CoveredStatements="23" TotalStatements="31" CoveragePercent="74" />
+    <Type Name="ServerInfo" CoveredStatements="61" TotalStatements="61" CoveragePercent="100" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.OrganizationUnitExplorer.Internal" CoveredStatements="39" TotalStatements="54" CoveragePercent="72">
+    <Type Name="OuHelper" CoveredStatements="39" TotalStatements="54" CoveragePercent="72" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Factory.Internal" CoveredStatements="376" TotalStatements="521" CoveragePercent="72">
+    <Type Name="EventSystem" CoveredStatements="16" TotalStatements="29" CoveragePercent="55" />
+    <Type Name="RegistryHandler" CoveredStatements="13" TotalStatements="19" CoveragePercent="68" />
+    <Type Name="DragDropAdorner" CoveredStatements="57" TotalStatements="81" CoveragePercent="70" />
+    <Type Name="DragAdorner" CoveredStatements="78" TotalStatements="112" CoveragePercent="70" />
+    <Type Name="LibraryHandler" CoveredStatements="124" TotalStatements="174" CoveragePercent="71" />
+    <Type Name="Utilities" CoveredStatements="67" TotalStatements="82" CoveragePercent="82" />
+    <Type Name="ImageHandler" CoveredStatements="21" TotalStatements="24" CoveragePercent="88" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.ServerControl" CoveredStatements="255" TotalStatements="350" CoveragePercent="73">
+    <Type Name="Plugin" CoveredStatements="23" TotalStatements="43" CoveragePercent="53" />
+    <Type Name="ConnectionController" CoveredStatements="111" TotalStatements="158" CoveragePercent="70" />
+    <Type Name="ConnectionViewer" CoveredStatements="97" TotalStatements="120" CoveragePercent="81" />
+    <Type Name="Preferences" CoveredStatements="24" TotalStatements="29" CoveragePercent="83" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.Statistics" CoveredStatements="183" TotalStatements="243" CoveragePercent="75">
+    <Type Name="Plugin" CoveredStatements="23" TotalStatements="49" CoveragePercent="47" />
+    <Type Name="Viewer" CoveredStatements="136" TotalStatements="165" CoveragePercent="82" />
+    <Type Name="Preferences" CoveredStatements="24" TotalStatements="29" CoveragePercent="83" />
+  </Namespace>
+  <Namespace Name="LGP.Controls" CoveredStatements="322" TotalStatements="414" CoveragePercent="78">
+    <Type Name="Background" CoveredStatements="13" TotalStatements="21" CoveragePercent="62" />
+    <Type Name="Splash" CoveredStatements="90" TotalStatements="125" CoveragePercent="72" />
+    <Type Name="Settings" CoveredStatements="219" TotalStatements="268" CoveragePercent="82" />
+  </Namespace>
+  <Namespace Name="LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers" CoveredStatements="97" TotalStatements="121" CoveragePercent="80">
+    <Type Name="CompletionData" CoveredStatements="29" TotalStatements="43" CoveragePercent="67" />
+    <Type Name="HighlightCurrentLineBackgroundRenderer" CoveredStatements="26" TotalStatements="32" CoveragePercent="81" />
+    <Type Name="BraceFoldingStrategy" CoveredStatements="42" TotalStatements="46" CoveragePercent="91" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Factory" CoveredStatements="71" TotalStatements="83" CoveragePercent="86">
+    <Type Name="Framework" CoveredStatements="71" TotalStatements="83" CoveragePercent="86" />
+  </Namespace>
+  <Namespace Name="LGP.Components.Factory.Publishers.Events" CoveredStatements="15" TotalStatements="15" CoveragePercent="100">
+    <Type Name="PanelEvent" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+    <Type Name="PreferencesEvent" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+    <Type Name="Event" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+    <Type Name="MenuEvent" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+  </Namespace>
+</Root>

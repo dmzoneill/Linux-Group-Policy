@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="LGP.Modules.ServerControl.ConnectionViewer" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" d:DesignHeight="596" d:DesignWidth="251">
+  <Grid Margin="20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="80" />
+      <RowDefinition Height="80" />
+      <RowDefinition Height="160" />
+      <RowDefinition Height="240" />
+    </Grid.RowDefinitions>
+    <Image Height="64" HorizontalAlignment="Right" Margin="10" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="64" />
+    <GroupBox Height="70" Margin="0,5,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" BorderThickness="0" Grid.Row="1">
+      <Grid>
+        <Label Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=ServerId}" Margin="0,0,0,0" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" FontWeight="Bold" Foreground="#FF666666" />
+        <Separator Margin="0,15,0,0" Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="#FFD6E2F8" Background="#FFD6E2F8" />
+        <Label Margin="0,25,5,0" Content="Ip address" Name="ipaddr" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" />
+      </Grid>
+    </GroupBox>
+    <GroupBox Height="150" Margin="0,5,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" BorderThickness="0" Grid.Row="2">
+      <Grid>
+        <Label Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=PolicyControl}" Margin="0,0,0,0" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" FontWeight="Bold" Foreground="#FF666666" />
+        <Separator Margin="0,15,0,0" Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="#FFD6E2F8" Background="#FFD6E2F8" />
+        <Button Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=SyncPolicies}" Height="23" HorizontalAlignment="Right" Margin="0,35,5,0" VerticalAlignment="Top" Width="163" Name="PushPolicyUpdate" Click="PushPolicyUpdateClick" />
+        <Button Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=SyncClients}" Height="23" HorizontalAlignment="Right" Margin="0,70,5,0" VerticalAlignment="Top" Width="163" Name="PushClientUpdate" Click="PushClientUpdateClick" />
+        <Button Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=SyncModules}" Height="23" HorizontalAlignment="Right" Margin="0,105,5,0" Name="PushModulesUpdate" VerticalAlignment="Top" Width="163" Click="PushModulesUpdateClick" />
+      </Grid>
+    </GroupBox>
+    <GroupBox Height="230" Margin="0,5,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" BorderThickness="0" Grid.Row="3">
+      <Grid>
+        <Label Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=StressTest}" Margin="0,0,0,0" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" FontWeight="Bold" Foreground="#FF666666" />
+        <Separator Margin="0,15,0,0" Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="#FFD6E2F8" Background="#FFD6E2F8" />
+        <Label Margin="5,25,5,0" Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=Simulate}" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" />
+        <Slider Height="23" HorizontalAlignment="Stretch" Margin="5,55,5,0" Name="slider1" VerticalAlignment="Top" Value="1" IsDirectionReversed="False" SmallChange="1" Maximum="500" Minimum="1" IsSnapToTickEnabled="True" Interval="1" ValueChanged="Slider1ValueChanged" />
+        <Label Margin="5,75,5,0" Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=ClientUpdates}" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" Name="numUpdates" />
+        <Slider Height="23" HorizontalAlignment="Stretch" Margin="5,100,5,0" Name="slider2" VerticalAlignment="Top" Interval="1" Maximum="500" Minimum="5" Value="5" IsSnapToTickEnabled="True" ValueChanged="Slider2ValueChanged" />
+        <Label Margin="5,120,5,0" Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=Delay}" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" Name="delay" />
+        <Button Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=Go}" Height="23" HorizontalAlignment="Right" Margin="5,150,5,0" VerticalAlignment="Top" Width="75" Name="StressTest" Click="StressTestClick" />
+        <Label Content="" Height="28" HorizontalAlignment="Right" Margin="5,180,5,0" Name="threadStatusLabel" VerticalAlignment="Top" />
+       </Grid>
+    </GroupBox>
+  </Grid>
+</UserControl>

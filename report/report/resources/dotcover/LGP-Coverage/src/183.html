@@ -1,0 +1,184 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_183 = [
+   [31,9,31,10,'dccv']
+, [32,13,35,15,'dccv']
+, [37,13,37,14,'dccv']
+, [38,17,38,41,'dccv']
+, [39,17,39,29,'dccv']
+, [46,9,46,10,'dccv']
+, [54,9,54,10,'dccv']
+, [56,13,56,14,'dccv']
+, [57,17,57,42,'dccv']
+, [58,17,58,29,'dccv']
+, [65,9,65,10,'dccv']
+, [74,9,74,10,'dccv']
+, [76,13,76,14,'dccv']
+, [77,17,77,40,'dccv']
+, [78,17,78,80,'dccv']
+, [79,17,79,38,'dccv']
+, [80,17,80,27,'dccv']
+, [87,9,87,10,'dccv']
+, [96,9,96,10,'dccv']
+, [98,13,98,14,'dccv']
+, [99,17,99,74,'dccv']
+, [100,17,100,50,'dccv']
+, [102,13,102,37,'dccv']
+, [103,13,103,14,'dccv']
+, [104,17,104,53,'dccv']
+, [105,17,105,27,'dccv']
+, [107,9,107,10,'dccv']
+, [115,9,115,10,'dccv']
+, [116,13,116,43,'dccv']
+, [117,13,117,14,'dccv']
+, [118,17,118,29,'dccv']
+, [122,9,122,10,'dccv']
+, [41,13,41,37,'dcuc']
+, [42,13,42,14,'dcuc']
+, [43,17,43,53,'dcuc']
+, [44,17,44,30,'dcuc']
+, [60,13,60,37,'dcuc']
+, [61,13,61,14,'dcuc']
+, [62,17,62,53,'dcuc']
+, [63,17,63,30,'dcuc']
+, [82,13,82,37,'dcuc']
+, [83,13,83,14,'dcuc']
+, [84,17,84,53,'dcuc']
+, [85,17,85,29,'dcuc']
+, [121,13,121,26,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src183" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Data;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Database;
+using MySql.Data.MySqlClient;
+
+#endregion
+
+namespace LGP.Components.Database.Mysql
+{
+    /// &lt;summary&gt;
+    ///   Mysql Wrapper
+    /// &lt;/summary&gt;
+    public class MysqlDb : IDatabaseModule
+    {
+        private MySqlConnection _connection;
+
+        #region IDatabaseModule Members
+
+        /// &lt;summary&gt;
+        ///   Connect method for database interface
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;user&quot;&gt;Username to use in connection&lt;/param&gt;
+        /// &lt;param name = &quot;pass&quot;&gt;Password to use in connection&lt;/param&gt;
+        /// &lt;param name = &quot;host&quot;&gt;Hostname to use in connection&lt;/param&gt;
+        /// &lt;param name = &quot;dbname&quot;&gt;Datbase to use in connection&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public bool Connect( string user , string pass , string host , string dbname )
+        {
+            this._connection = new MySqlConnection
+            {
+                ConnectionString = string.Format( &quot;Server={0};Database={3};Uid={1};Pwd={2};&quot; , host , user , pass , dbname )
+            };
+            try
+            {
+                this._connection.Open();
+                return true;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+                return false;
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Disconnect method for the interface realizer
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;bool disconnected&lt;/returns&gt;
+        public bool Disconnect()
+        {
+            try
+            {
+                this._connection.Close();
+                return true;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+                return false;
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Executes a query provided by the appropriate gateway
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sql&quot;&gt;sql query&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public DataSet ExecuteQuery( string sql )
+        {
+            try
+            {
+                var ds = new DataSet();
+                var myAdapter = new MySqlDataAdapter( sql , this._connection );
+                myAdapter.Fill( ds );
+                return ds;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+                return null;
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Executes a query provided by the appropriate gateway
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sql&quot;&gt;sql query&lt;/param&gt;
+        /// &lt;returns&gt;int num rows affected&lt;/returns&gt;
+        public int ExecuteNonQuery( string sql )
+        {
+            try
+            {
+                var command = new MySqlCommand( sql , this._connection );
+                return command.ExecuteNonQuery();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+                return -1;
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Check to see if the database is connected
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;bool&lt;/returns&gt;
+        public bool IsConnected()
+        {
+            if( this._connection != null )
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        #endregion
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src183', RANGES_183)
+		</script>
+	</body>
+</html>

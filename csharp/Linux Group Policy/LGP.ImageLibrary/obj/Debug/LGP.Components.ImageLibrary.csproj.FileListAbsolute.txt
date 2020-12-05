@@ -1,0 +1,11 @@
+C:\lgp\Linux Group Policy\LGP.ImageLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\lgp\Linux Group Policy\LGP.ImageLibrary\obj\Debug\LGP.ImageLibrary.g.resources
+C:\lgp\Linux Group Policy\LGP.ImageLibrary\obj\Debug\LGP.ImageLibrary.dll
+C:\lgp\Linux Group Policy\LGP.ImageLibrary\obj\Debug\LGP.ImageLibrary.pdb
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Components.ImageLibrary.XML
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Components.ImageLibrary.dll
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Components.ImageLibrary.pdb
+C:\lgp\Linux Group Policy\LGP.Components.ImageLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\lgp\Linux Group Policy\LGP.Components.ImageLibrary\obj\Debug\LGP.Components.ImageLibrary.g.resources
+C:\lgp\Linux Group Policy\LGP.Components.ImageLibrary\obj\Debug\LGP.Components.ImageLibrary.dll
+C:\lgp\Linux Group Policy\LGP.Components.ImageLibrary\obj\Debug\LGP.Components.ImageLibrary.pdb

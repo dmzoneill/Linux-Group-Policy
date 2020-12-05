@@ -1,0 +1,330 @@
+﻿<?xml version="1.0"?>
+
+<!--
+uising = 0000FD
+string CE4314
+class 2B91AF
+comment 00958D
+text 340000
+bright red FD0000
+red A31515
+-->
+
+<SyntaxDefinition name="Perl" extensions=".pl,.pm"  xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+	
+	<Color name="Comments" foreground="#004259" />
+	<Color name="String" foreground="#A31515" />
+	<Color name="Digits" foreground="#3333FF" />
+	<Color name="Operators" foreground="#FF3333" />
+	<Color name="Backtick" foreground="lime" />
+	<Color name="Variables" foreground="#CE6536" />
+	<Color name="Keywords1" foreground="#2B91AF" />
+	<Color name="Keywords2" foreground="#0000FD" />
+	<Color name="Reference" foreground="purple" />
+
+ 
+
+	<RuleSet>
+
+		<Span color="Backtick">
+			<Begin>`</Begin>
+			<End>`</End>
+		</Span>
+
+		<Rule color="Comments">
+            \#(.*)$
+        </Rule>
+		
+		<Rule color="Reference">
+            (\\(&amp;|\@|\$)[A-Za-z0-9_]+)
+        </Rule>
+
+        <Rule color="Variables">
+            ((\\|\$)?(\$|\%|\@)(([A-Za-z0-9_]+)|\|))
+        </Rule>
+
+		<Rule color="Digits">
+            \b0[xX][0-9a-fA-F]+  # hex number
+			|    
+            (    \b\d+(\.[0-9]+)?   #number with optional floating point
+            |    \.[0-9]+           #or just starting with floating point
+            )
+            ([eE][+-]?[0-9]+)? # optional exponent
+        </Rule>
+
+		<Rule color="Operators">
+			(\seq\s|\snew\s|\sne\s)
+		</Rule>
+
+		<Rule color="Operators">
+			([-\>])
+		</Rule>
+
+		<Rule color="Operators">
+			([\=]{1,3})
+		</Rule>
+
+		<Rule color="Operators">
+			(&gt;)
+		</Rule>
+
+		<Rule color="Operators">
+			(&lt;)
+		</Rule>
+
+		<Rule color="Operators">
+			(&amp;){1,2}
+		</Rule>
+
+		<Rule color="Operators">
+			(\|){2}
+		</Rule>
+
+
+		<Span color="String">
+			<Begin>"</Begin>
+			<End>"</End>
+		</Span>
+
+		<Span color="String">
+			<Begin>'</Begin>
+			<End>'</End>
+		</Span>
+        
+		<Keywords color="Keywords1">
+			<Word>if</Word>
+			<Word>elsif</Word>
+			<Word>else</Word>
+			<Word>while</Word>
+			<Word>do</Word>
+			<Word>for</Word>
+			<Word>sub</Word>
+			<Word>or</Word>
+		</Keywords>
+
+		<Keywords color="Keywords2">
+            
+			<Word>abs</Word>
+			<Word>accept</Word>
+			<Word>alarm</Word>
+			<Word>atan2</Word>
+			<Word>bind</Word>
+			<Word>binmode</Word>
+			<Word>bless</Word>
+			<Word>break</Word>
+			<Word>caller</Word>
+			<Word>chdir</Word>
+			<Word>chmod</Word>
+			<Word>chomp</Word>
+			<Word>chop</Word>
+			<Word>chown</Word>
+			<Word>chr</Word>
+			<Word>chroot</Word>
+			<Word>close</Word>
+			<Word>closedir</Word>
+			<Word>connect</Word>
+			<Word>continue</Word>
+			<Word>cos</Word>
+			<Word>crypt</Word>
+			<Word>dbmclose</Word>
+			<Word>dbmopen</Word>
+			<Word>default</Word>
+			<Word>defined</Word>
+			<Word>delete</Word>
+			<Word>die</Word>
+			<Word>dump</Word>
+			<Word>each</Word>
+			<Word>endgrent</Word>
+			<Word>endhostent</Word>
+			<Word>endnetent</Word>
+			<Word>endprotoent</Word>
+			<Word>endpwent</Word>
+			<Word>endservent</Word>
+			<Word>eof</Word>
+			<Word>eval</Word>
+			<Word>exec</Word>
+			<Word>exists</Word>
+			<Word>exit</Word>
+			<Word>exp</Word>
+			<Word>fcntl</Word>
+			<Word>fileno</Word>
+			<Word>flock</Word>
+			<Word>fork</Word>
+			<Word>format</Word>
+			<Word>formline</Word>
+			<Word>getc</Word>
+			<Word>getgrent</Word>
+			<Word>getgrgid</Word>
+			<Word>getgrnam</Word>
+			<Word>gethostbyaddr</Word>
+			<Word>gethostbyname</Word>
+			<Word>gethostent</Word>
+			<Word>getlogin</Word>
+			<Word>getnetbyaddr</Word>
+			<Word>getnetbyname</Word>
+			<Word>getnetent</Word>
+			<Word>getpeername</Word>
+			<Word>getpgrp</Word>
+			<Word>getppid</Word>
+			<Word>getpriority</Word>
+			<Word>getprotobyname</Word>
+			<Word>getprotobynumber</Word>
+			<Word>getprotoent</Word>
+			<Word>getpwent</Word>
+			<Word>getpwnam</Word>
+			<Word>getpwuid</Word>
+			<Word>getservbyname</Word>
+			<Word>getservbyport</Word>
+			<Word>getservent</Word>
+			<Word>getsockname</Word>
+			<Word>getsockopt</Word>
+			<Word>given</Word>
+			<Word>glob</Word>
+			<Word>gmtime</Word>
+			<Word>goto</Word>
+			<Word>grep</Word>
+			<Word>hex</Word>
+			<Word>import</Word>
+			<Word>index</Word>
+			<Word>int</Word>
+			<Word>ioctl</Word>
+			<Word>join</Word>
+			<Word>keys</Word>
+			<Word>kill</Word>
+			<Word>last</Word>
+			<Word>lc</Word>
+			<Word>lcfirst</Word>
+			<Word>length</Word>
+			<Word>link</Word>
+			<Word>listen</Word>
+			<Word>local</Word>
+			<Word>localtime</Word>
+			<Word>lock</Word>
+			<Word>log</Word>
+			<Word>lstat</Word>
+			<Word>m</Word>
+			<Word>map</Word>
+			<Word>mkdir</Word>
+			<Word>msgctl</Word>
+			<Word>msgget</Word>
+			<Word>msgrcv</Word>
+			<Word>msgsnd</Word>
+			<Word>my</Word>
+			<Word>next</Word>
+			<Word>no</Word>
+			<Word>oct</Word>
+			<Word>open</Word>
+			<Word>opendir</Word>
+			<Word>ord</Word>
+			<Word>our</Word>
+			<Word>pack</Word>
+			<Word>package</Word>
+			<Word>pipe</Word>
+			<Word>pop</Word>
+			<Word>pos</Word>
+			<Word>print</Word>
+			<Word>printf</Word>
+			<Word>prototype</Word>
+			<Word>push</Word>
+			<Word>q</Word>
+			<Word>qq</Word>
+			<Word>qr</Word>
+			<Word>quotemeta</Word>
+			<Word>qw</Word>
+			<Word>qx</Word>
+			<Word>rand</Word>
+			<Word>read</Word>
+			<Word>readdir</Word>
+			<Word>readline</Word>
+			<Word>readlink</Word>
+			<Word>readpipe</Word>
+			<Word>recv</Word>
+			<Word>redo</Word>
+			<Word>ref</Word>
+			<Word>rename</Word>
+			<Word>require</Word>
+			<Word>reset</Word>
+			<Word>return</Word>
+			<Word>reverse</Word>
+			<Word>rewinddir</Word>
+			<Word>rindex</Word>
+			<Word>rmdir</Word>
+			<Word>s</Word>
+			<Word>say</Word>
+			<Word>scalar</Word>
+			<Word>seek</Word>
+			<Word>seekdir</Word>
+			<Word>select</Word>
+			<Word>semctl</Word>
+			<Word>semget</Word>
+			<Word>semop</Word>
+			<Word>send</Word>
+			<Word>setgrent</Word>
+			<Word>sethostent</Word>
+			<Word>setnetent</Word>
+			<Word>setpgrp</Word>
+			<Word>setpriority</Word>
+			<Word>setprotoent</Word>
+			<Word>setpwent</Word>
+			<Word>setservent</Word>
+			<Word>setsockopt</Word>
+			<Word>shift</Word>
+			<Word>shmctl</Word>
+			<Word>shmget</Word>
+			<Word>shmread</Word>
+			<Word>shmwrite</Word>
+			<Word>shutdown</Word>
+			<Word>sin</Word>
+			<Word>sleep</Word>
+			<Word>socket</Word>
+			<Word>socketpair</Word>
+			<Word>sort</Word>
+			<Word>splice</Word>
+			<Word>split</Word>
+			<Word>sprintf</Word>
+			<Word>sqrt</Word>
+			<Word>srand</Word>
+			<Word>stat</Word>
+			<Word>state</Word>
+			<Word>study</Word>
+			<Word>substr</Word>
+			<Word>symlink</Word>
+			<Word>syscall</Word>
+			<Word>sysopen</Word>
+			<Word>sysread</Word>
+			<Word>sysseek</Word>
+			<Word>system</Word>
+			<Word>syswrite</Word>
+			<Word>tell</Word>
+			<Word>telldir</Word>
+			<Word>tie</Word>
+			<Word>tied</Word>
+			<Word>time</Word>
+			<Word>times</Word>
+			<Word>tr</Word>
+			<Word>truncate</Word>
+			<Word>uc</Word>
+			<Word>ucfirst</Word>
+			<Word>umask</Word>
+			<Word>undef</Word>
+			<Word>unlink</Word>
+			<Word>unpack</Word>
+			<Word>unshift</Word>
+			<Word>untie</Word>
+			<Word>use</Word>
+			<Word>utime</Word>
+			<Word>values</Word>
+			<Word>vec</Word>
+			<Word>wait</Word>
+			<Word>waitpid</Word>
+			<Word>wantarray</Word>
+			<Word>warn</Word>
+			<Word>when</Word>
+			<Word>write</Word>
+		</Keywords>
+
+
+
+	</RuleSet>
+
+</SyntaxDefinition>

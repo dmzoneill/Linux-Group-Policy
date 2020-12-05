@@ -1,0 +1,308 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_23 = [
+   [32,9,32,35,'dccv']
+, [33,9,33,10,'dccv']
+, [35,13,35,14,'dccv']
+, [36,17,36,59,'dccv']
+, [37,17,40,19,'dccv']
+, [41,17,41,49,'dccv']
+, [42,17,42,54,'dccv']
+, [43,13,43,14,'dccv']
+, [48,9,48,10,'dccv']
+, [51,9,51,10,'dccv']
+, [53,13,53,14,'dccv']
+, [54,17,54,37,'dccv']
+, [55,13,55,14,'dccv']
+, [59,9,59,10,'dccv']
+, [62,9,62,10,'dccv']
+, [64,13,64,14,'dccv']
+, [65,17,65,101,'dccv']
+, [66,17,66,94,'dccv']
+, [67,17,67,72,'dccv']
+, [69,17,69,72,'dccv']
+, [71,17,71,67,'dccv']
+, [72,17,72,48,'dccv']
+, [74,17,74,77,'dccv']
+, [75,17,75,75,'dccv']
+, [78,17,78,18,'dccv']
+, [79,21,79,98,'dccv']
+, [81,21,81,75,'dccv']
+, [82,21,82,108,'dccv']
+, [84,21,84,39,'dccv']
+, [85,21,85,47,'dccv']
+, [87,21,87,28,'dccv']
+, [87,39,87,52,'dccv']
+, [87,30,87,35,'dccv']
+, [88,21,88,22,'dccv']
+, [89,25,89,105,'dccv']
+, [90,25,90,26,'dccv']
+, [91,29,91,40,'dccv']
+, [92,29,92,42,'dccv']
+, [93,25,93,26,'dccv']
+, [94,21,94,22,'dccv']
+, [87,36,87,38,'dccv']
+, [96,21,96,41,'dccv']
+, [97,21,97,22,'dccv']
+, [98,25,101,27,'dccv']
+, [102,25,102,63,'dccv']
+, [103,25,103,63,'dccv']
+, [104,25,104,51,'dccv']
+, [105,25,105,51,'dccv']
+, [106,25,106,63,'dccv']
+, [107,25,107,58,'dccv']
+, [108,25,108,48,'dccv']
+, [109,21,109,22,'dccv']
+, [111,21,111,22,'dccv']
+, [112,25,112,68,'dccv']
+, [113,25,113,68,'dccv']
+, [114,25,114,56,'dccv']
+, [115,25,115,56,'dccv']
+, [116,25,116,63,'dccv']
+, [117,21,117,22,'dccv']
+, [118,17,118,18,'dccv']
+, [77,17,77,30,'dccv']
+, [133,9,133,10,'dccv']
+, [134,13,134,34,'dccv']
+, [135,9,135,10,'dccv']
+, [166,9,166,10,'dccv']
+, [167,13,167,50,'dccv']
+, [168,13,168,14,'dccv']
+, [170,17,170,18,'dccv']
+, [171,21,171,53,'dccv']
+, [172,17,172,18,'dccv']
+, [177,13,177,14,'dccv']
+, [178,9,178,10,'dccv']
+, [186,9,186,10,'dccv']
+, [187,13,187,73,'dccv']
+, [188,9,188,10,'dccv']
+, [44,13,44,37,'dcuc']
+, [45,13,45,14,'dcuc']
+, [46,17,46,53,'dcuc']
+, [47,13,47,14,'dcuc']
+, [56,13,56,31,'dcuc']
+, [57,13,57,14,'dcuc']
+, [58,13,58,14,'dcuc']
+, [121,13,121,37,'dcuc']
+, [122,13,122,14,'dcuc']
+, [123,17,123,53,'dcuc']
+, [124,13,124,14,'dcuc']
+, [125,9,125,10,'dcuc']
+, [142,9,142,10,'dcuc']
+, [143,13,143,50,'dcuc']
+, [144,13,144,14,'dcuc']
+, [146,17,146,18,'dcuc']
+, [147,21,147,53,'dcuc']
+, [148,21,151,23,'dcuc']
+, [152,21,152,53,'dcuc']
+, [153,17,153,18,'dcuc']
+, [154,17,154,41,'dcuc']
+, [155,17,155,18,'dcuc']
+, [156,21,156,57,'dcuc']
+, [157,17,157,18,'dcuc']
+, [158,13,158,14,'dcuc']
+, [159,9,159,10,'dcuc']
+, [173,17,173,41,'dcuc']
+, [174,17,174,18,'dcuc']
+, [175,21,175,57,'dcuc']
+, [176,17,176,18,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src23" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
+using LGP.Components.Factory.Interfaces.Network;
+using Newtonsoft.Json;
+
+#endregion
+
+namespace LGP.Components.Factory.Internal.ServerControl
+{
+    internal class BroadcastListener : IBroadcastListener
+    {
+        private const int UdpLocalPort = 50006;
+        private const int UdpRemotePort = 50005;
+        private static IBroadcastListener _instance;
+        private readonly List&lt; IServerInfo &gt; _servers;
+
+        private IPEndPoint _receiveUdpGroup;
+
+        private UdpClient _receivingUdpClient;
+        private UdpClient _sendingUdpClient;
+        private IPEndPoint _targetUdpGroup;
+        private Thread _udplistenerThread;
+
+
+        public BroadcastListener()
+        {
+            try
+            {
+                this._servers = new List&lt; IServerInfo &gt;();
+                this._udplistenerThread = new Thread( this.ListenForAnnounces )
+                {
+                    IsBackground = true
+                };
+                this._udplistenerThread.Start();
+                Framework.ShutDown += this.Terminate;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void Terminate( object sender , CancelEventArgs args )
+        {
+            try
+            {
+                this.StopListener();
+            }
+            catch( Exception )
+            {
+            }
+        }
+
+        private void ListenForAnnounces()
+        {
+            try
+            {
+                this._sendingUdpClient = new UdpClient( UdpLocalPort , AddressFamily.InterNetwork );
+                this._targetUdpGroup = new IPEndPoint( IPAddress.Broadcast , UdpRemotePort );
+                this._sendingUdpClient.Connect( this._targetUdpGroup );
+
+                var fdfd = Encoding.UTF8.GetBytes( &quot;requestannounce&quot; );
+
+                this._sendingUdpClient.Send( fdfd , fdfd.Length );
+                this._sendingUdpClient.Close();
+
+                this._receiveUdpGroup = new IPEndPoint( IPAddress.Any , 0 );
+                this._receivingUdpClient = new UdpClient( UdpRemotePort );
+
+                while( true )
+                {
+                    var received = this._receivingUdpClient.Receive( ref this._receiveUdpGroup );
+
+                    var returnData = Encoding.ASCII.GetString( received );
+                    var values = JsonConvert.DeserializeObject&lt; Dictionary&lt; string , int &gt; &gt;( returnData );
+
+                    var found = false;
+                    IServerInfo server = null;
+
+                    foreach( var t in this._servers )
+                    {
+                        if( t.ServerAddress.CompareTo( this._receiveUdpGroup.Address.ToString() ) == 0 )
+                        {
+                            server = t;
+                            found = true;
+                        }
+                    }
+
+                    if( found == false )
+                    {
+                        var t = new ServerInfo
+                        {
+                            ServerAddress = this._receiveUdpGroup.Address.ToString() , LastSeen = DateTime.Now
+                        };
+                        t.AddIncoming( values[ &quot;incoming&quot; ] );
+                        t.AddOutgoing( values[ &quot;outgoing&quot; ] );
+                        t.AddRx( values[ &quot;rx&quot; ] );
+                        t.AddTx( values[ &quot;tx&quot; ] );
+                        t.AddOutgoing( values[ &quot;outgoing&quot; ] );
+                        t.AddCpu( values[ &quot;cpuusage&quot; ] );
+                        this._servers.Add( t );
+                    }
+                    else
+                    {
+                        server.AddIncoming( values[ &quot;incoming&quot; ] );
+                        server.AddOutgoing( values[ &quot;outgoing&quot; ] );
+                        server.AddRx( values[ &quot;rx&quot; ] );
+                        server.AddTx( values[ &quot;tx&quot; ] );
+                        server.AddCpu( values[ &quot;cpuusage&quot; ] );
+                    }
+                }
+            }
+
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the list of servers detected
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;List Server&lt;/returns&gt;
+        public List&lt; IServerInfo &gt; GetServers()
+        {
+            return this._servers;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Retarts the listener
+        /// &lt;/summary&gt;
+        public void RetartListener()
+        {
+            if( this._udplistenerThread.IsAlive )
+            {
+                try
+                {
+                    this._udplistenerThread.Abort();
+                    this._udplistenerThread = new Thread( this.ListenForAnnounces )
+                    {
+                        IsBackground = true
+                    };
+                    this._udplistenerThread.Start();
+                }
+                catch( Exception error )
+                {
+                    Framework.EventBus.Publish( error );
+                }
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Stops the listener
+        /// &lt;/summary&gt;
+        public void StopListener()
+        {
+            if( this._udplistenerThread.IsAlive )
+            {
+                try
+                {
+                    this._udplistenerThread.Abort();
+                }
+                catch( Exception error )
+                {
+                    Framework.EventBus.Publish( error );
+                }
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the instance of the server handler
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static IBroadcastListener GetInstance()
+        {
+            return _instance ?? ( _instance = new BroadcastListener() );
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src23', RANGES_23)
+		</script>
+	</body>
+</html>

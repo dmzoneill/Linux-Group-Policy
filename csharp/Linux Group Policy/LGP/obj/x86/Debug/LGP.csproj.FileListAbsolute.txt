@@ -1,0 +1,835 @@
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\MainWindow.baml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\Splash.baml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\Splash.g.cs
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\App.g.cs
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\Linux Group Policy_MarkupCompile.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\Linux Group Policy.g.resources
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\LGP.Properties.Resources.resources
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Linux Group Policy.exe
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Linux Group Policy.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\AvalonDock.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\ImageLibrary.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\ImageLibrary.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Microsoft.Practices.Prism.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\Linux Group Policy.exe
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\Linux Group Policy.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\LGPMessageBus.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.XML
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.xml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Factory.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Factory.xml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\MainWindow.baml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\Splash.baml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\Splash.g.cs
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\App.g.cs
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy_MarkupCompile.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.g.resources
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.resources
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.exe
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.pdb
+C:\lgp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.XML
+C:\lgp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe
+C:\lgp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.pdb
+C:\lgp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.dll
+C:\lgp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\lgp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.pdb
+C:\lgp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.xml
+C:\lgp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\MainWindow.baml
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\Splash.baml
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\MainWindow.g.cs
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\Splash.g.cs
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\App.g.cs
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy_MarkupCompile.cache
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.g.resources
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.resources
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.exe
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.pdb
+C:\lgp\Linux Group Policy\LGP\bin\Debug\app.config
+C:\lgp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe.config
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\SettingsModal\Settings.baml
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\SettingsModal\Settings.g.cs
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\SettingsModal\SettingsDatabase.baml
+C:\lgp\Linux Group Policy\LGP\obj\x86\Debug\SettingsModal\SettingsDatabase.g.cs
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.dll
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.dll
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Components.Factory.pdb
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Components.Factory.xml
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.pdb
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.xml
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.pdb
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.xml
+Y:\csharp\Linux Group Policy\LGP\bin\Debug\app.config
+Y:\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe.config
+Y:\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.XML
+Y:\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe
+Y:\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.pdb
+Y:\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.dll
+Y:\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+Y:\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.pdb
+Y:\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.xml
+Y:\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\ResolveAssemblyReference.cache
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\MainWindow.baml
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\SettingsModal\SettingsDatabase.baml
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\Splash.baml
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\MainWindow.g.cs
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\SettingsModal\Settings.g.cs
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\SettingsModal\SettingsDatabase.g.cs
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\Splash.g.cs
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\App.g.cs
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy_MarkupCompile.cache
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.g.resources
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.resources
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.read.1.tlog
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.write.1.tlog
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.exe
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.pdb
+Y:\csharp\Linux Group Policy\LGP\bin\Debug\LGP.Components.Factory.pdb
+Y:\csharp\Linux Group Policy\LGP\bin\Debug\LGP.Components.Factory.xml
+Y:\csharp\Linux Group Policy\LGP\obj\x86\Debug\SettingsModal\Settings.baml
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\app.config
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe.config
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.pdb
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.pdb
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Windows.Shell.xml
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\MainWindow.baml
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Prop.baml
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Settings.baml
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Splash.baml
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Prop.g.cs
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Settings.g.cs
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Splash.g.cs
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\App.g.cs
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy_MarkupCompile.cache
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.g.resources
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.resources
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.exe
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.pdb
+C:\Users\Administrator\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.XML
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe.config
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.XML
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.exe
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.pdb
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\app.config
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.pdb
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.dll
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.dll
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\LGP.Components.Factory.pdb
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\LGP.Components.Factory.xml
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.pdb
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\Microsoft.Windows.Shell.xml
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.pdb
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.xml
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.pdb
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.xml
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\MainWindow.baml
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\Prop.baml
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\Settings.baml
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\Splash.baml
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\Prop.g.cs
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\Settings.g.cs
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\Splash.g.cs
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\App.g.cs
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy_MarkupCompile.cache
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.g.resources
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.resources
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\csharp-2\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe.config
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.exe
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.pdb
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\app.config
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.pdb
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.pdb
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\ConnectionViewer.baml
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPSettingsTreeView.baml
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPSetupWindow.baml
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPWindow.baml
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPBackground.baml
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPSettingsWindow.baml
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPSplash.baml
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\ConnectionViewer.g.cs
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPSettingsTreeView.g.cs
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPSetupWindow.g.cs
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPWindow.g.cs
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPBackground.g.cs
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPSettingsWindow.g.cs
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPSplash.g.cs
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy_MarkupCompile.cache
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.g.resources
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.XML
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.dll
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.dll
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.Components.Factory.pdb
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.Components.Factory.xml
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.pdb
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.xml
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.pdb
+C:\Documents and Settings\Administrator\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.xml
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\app.config
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe.config
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.XML
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.pdb
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.pdb
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\ConnectionViewer.baml
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\SettingsTreeView.baml
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Setup.baml
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Background.baml
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Settings.baml
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Splash.baml
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\ConnectionViewer.g.cs
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\SettingsTreeView.g.cs
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Setup.g.cs
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPWindow.g.cs
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Background.g.cs
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Settings.g.cs
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Splash.g.cs
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\App.g.cs
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy_MarkupCompile.cache
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy_MarkupCompile.lref
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPWindow.baml
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.g.resources
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.resources
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.exe
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.pdb
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.dll
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.dll
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.Components.Factory.pdb
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.Components.Factory.xml
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.pdb
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.xml
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.pdb
+C:\Users\Dave\Desktop\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.xml
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\app.config
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe.config
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.XML
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.pdb
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\af\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\ar\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\be\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\bg\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\ca\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\cs\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\cy\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\da\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\de\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\el\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\es\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\et\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\fa\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\fi\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\fr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\ga\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\gl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\hi\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\hr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\hu\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\id\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\is\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\it\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\ja\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\ko\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\lt\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\lv\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\mk\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\ms\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\mt\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\nl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\no\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\pl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\pt\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\ro\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\ru\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\sk\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\sl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\sq\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\sr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\sv\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\sw\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\th\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\tr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\uk\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\vi\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\zh-TW\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\zh\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Infralution.Localization.Wpf.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Infralution.Localization.Wpf.pdb
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Infralution.Localization.Wpf.xml
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.pdb
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Background.baml
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Settings.baml
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Splash.baml
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Preferences.baml
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPWindow.g.cs
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Background.g.cs
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Settings.g.cs
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Splash.g.cs
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Preferences.g.cs
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\App.g.cs
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy_MarkupCompile.cache
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy_MarkupCompile.lref
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPWindow.baml
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.g.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Images.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ht.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.iw.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.tl.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.yi.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.af.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ar.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.be.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.bg.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ca.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.cs.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.cy.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.da.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.de.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.el.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.es.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.et.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.fa.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.fi.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.fr.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ga.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.gl.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.hi.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.hr.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.hu.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.id.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.is.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.it.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ja.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ko.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.lt.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.lv.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.mk.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ms.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.mt.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.nl.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.no.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.pl.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.pt.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ro.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ru.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.sk.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.sl.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.sq.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.sr.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.sv.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.sw.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.th.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.tr.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.uk.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.vi.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.zh-TW.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.zh.resources
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\af\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\ar\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\be\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\bg\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\ca\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\cs\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\cy\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\da\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\de\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\el\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\es\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\et\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\fa\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\fi\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\fr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\ga\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\gl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\hi\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\hr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\hu\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\id\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\is\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\it\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\ja\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\ko\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\lt\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\lv\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\mk\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\ms\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\mt\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\nl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\no\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\pl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\pt\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\ro\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\ru\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\sk\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\sl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\sq\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\sr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\sv\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\sw\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\th\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\tr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\uk\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\vi\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\zh-TW\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\zh\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.exe
+C:\Users\Dave\Desktop\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.pdb
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\app.config
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe.config
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.exe
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.pdb
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\af\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ar\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\be\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\bg\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ca\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\cs\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\cy\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\da\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\de\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\el\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\es\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\et\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fa\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fi\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ga\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\gl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hi\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hu\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\id\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\is\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\it\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ja\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ko\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\lt\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\lv\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\mk\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ms\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\mt\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\nl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\no\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\pl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\pt\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ro\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ru\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sk\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sq\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sv\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sw\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\th\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\tr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\uk\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\vi\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\zh-TW\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\zh\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Infralution.Localization.Wpf.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Infralution.Localization.Wpf.pdb
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Infralution.Localization.Wpf.xml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.pdb
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Background.baml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Settings.baml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Splash.baml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Preferences.baml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPWindow.g.cs
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Background.g.cs
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Settings.g.cs
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Controls\Splash.g.cs
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Preferences.g.cs
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\App.g.cs
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy_MarkupCompile.cache
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy_MarkupCompile.lref
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGPWindow.baml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.g.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Images.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ht.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.iw.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.tl.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.yi.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.af.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ar.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.be.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.bg.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ca.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.cs.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.cy.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.da.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.de.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.el.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.es.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.et.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.fa.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.fi.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.fr.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ga.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.gl.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.hi.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.hr.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.hu.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.id.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.is.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.it.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ja.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ko.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.lt.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.lv.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.mk.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ms.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.mt.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.nl.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.no.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.pl.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.pt.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ro.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.ru.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.sk.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.sl.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.sq.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.sr.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.sv.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.sw.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.th.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.tr.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.uk.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.vi.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.zh-TW.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.Properties.Resources.zh.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\af\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\ar\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\be\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\bg\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\ca\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\cs\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\cy\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\da\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\de\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\el\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\es\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\et\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\fa\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\fi\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\fr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\ga\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\gl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\hi\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\hr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\hu\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\id\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\is\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\it\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\ja\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\ko\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\lt\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\lv\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\mk\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\ms\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\mt\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\nl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\no\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\pl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\pt\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\ro\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\ru\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\sk\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\sl\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\sq\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\sr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\sv\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\sw\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\th\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\tr\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\uk\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\vi\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\zh-TW\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\zh\Linux Group Policy.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.exe
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\Linux Group Policy.pdb
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Linux Group Policy.XML
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.csprojResolveAssemblyReference.cache
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\obj\x86\Debug\LGP.csproj.GenerateResource.Cache
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.Components.Factory.pdb
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.Components.Factory.xml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.Modules.ServerControl.pdb
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.Modules.ServerControl.xml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.pdb
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageLibrary.xml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.pdb
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\LGP.ImageWindowsShellIcons.xml
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\af\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ar\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\be\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\bg\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ca\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\cs\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\cy\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\da\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\de\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\el\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\es\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\et\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fa\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fi\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fr\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ga\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\gl\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hi\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hr\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hu\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\id\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\is\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\it\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ja\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ko\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\lt\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\lv\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\mk\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ms\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\mt\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\nl\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\no\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\pl\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\pt\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ro\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ru\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sk\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sl\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sq\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sr\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sv\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sw\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\th\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\tr\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\uk\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\vi\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\zh\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\zh-TW\LGP.Components.Factory.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\af\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ar\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\be\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\bg\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ca\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\cs\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\cy\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\da\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\de\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\el\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\es\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\et\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fa\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fi\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fr\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ga\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\gl\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hi\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hr\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hu\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\id\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\is\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\it\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ja\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ko\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\lt\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\lv\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\mk\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ms\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\mt\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\nl\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\no\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\pl\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\pt\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ro\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ru\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sk\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sl\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sq\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sr\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sv\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sw\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\th\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\tr\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\uk\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\vi\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\zh\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\zh-TW\LGP.Modules.ServerControl.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\af\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ar\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\be\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\bg\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ca\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\cs\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\cy\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\da\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\de\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\el\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\es\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\et\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fa\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fi\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fr\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ga\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\gl\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hi\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hr\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hu\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\id\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\is\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\it\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ja\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ko\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\lt\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\lv\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\mk\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ms\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\mt\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\nl\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\no\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\pl\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\pt\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ro\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ru\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sk\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sl\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sq\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sr\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sv\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sw\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\th\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\tr\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\uk\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\vi\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\zh\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\zh-TW\LGP.ImageLibrary.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\af\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ar\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\be\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\bg\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ca\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\cs\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\cy\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\da\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\de\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\el\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\es\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\et\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fa\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fi\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\fr\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ga\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\gl\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hi\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hr\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\hu\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\id\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\is\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\it\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ja\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ko\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\lt\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\lv\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\mk\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ms\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\mt\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\nl\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\no\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\pl\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\pt\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ro\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\ru\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sk\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sl\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sq\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sr\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sv\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\sw\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\th\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\tr\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\uk\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\vi\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\zh\LGP.ImageWindowsShellIcons.resources.dll
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP\bin\Debug\zh-TW\LGP.ImageWindowsShellIcons.resources.dll

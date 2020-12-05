@@ -1,0 +1,17 @@
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\MenuHandler\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\MenuHandler.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\MenuHandler.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\MenuHandler\obj\Debug\MenuHandler.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\MenuHandler\obj\Debug\MenuHandler.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\LGP.MenuHandler.XML
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\LGP.MenuHandler.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\LGP.MenuHandler.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP.MenuHandler\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP.MenuHandler\obj\Debug\LGP.MenuHandler.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP.MenuHandler\obj\Debug\LGP.MenuHandler.pdb
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.MenuHandler.XML
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.MenuHandler.dll
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.MenuHandler.pdb
+C:\lgp\Linux Group Policy\LGP.MenuHandler\obj\Debug\ResolveAssemblyReference.cache
+C:\lgp\Linux Group Policy\LGP.MenuHandler\obj\Debug\LGP.MenuHandler.dll
+C:\lgp\Linux Group Policy\LGP.MenuHandler\obj\Debug\LGP.MenuHandler.pdb

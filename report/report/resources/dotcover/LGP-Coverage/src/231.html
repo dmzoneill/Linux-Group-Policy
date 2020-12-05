@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_231 = [
+   [1,13,1,77,'dccv']
+, [7,13,7,149,'dccv']
+, [8,13,8,163,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src231" class="dotCoverSource"><pre>&lt;UserControl x:Class=&quot;LGP.Components.Panels.Panels&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot; xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot; xmlns:ad=&quot;clr-namespace:AvalonDock;assembly=AvalonDock&quot; mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;406&quot; d:DesignWidth=&quot;735&quot;&gt;
+  &lt;Grid&gt;
+
+    &lt;ad:DockingManager x:Name=&quot;dockManager&quot; Background=&quot;Transparent&quot; Margin=&quot;5,0,5,0&quot;&gt;
+      &lt;ad:ResizingPanel Orientation=&quot;Vertical&quot;&gt;
+        &lt;ad:ResizingPanel Orientation=&quot;Horizontal&quot;&gt;
+          &lt;ad:DockablePane x:Name=&quot;SideBarExplorer&quot; ad:ResizingPanel.ResizeWidth=&quot;220&quot; Background=&quot;White&quot; SelectionChanged=&quot;SideBarExplorerSelectionChanged&quot; /&gt;
+          &lt;ad:DocumentPane Background=&quot;White&quot; Name=&quot;MainComponentContainer&quot; SelectionChanged=&quot;MainComponentContainerSelectionChanged&quot; /&gt;
+        &lt;/ad:ResizingPanel&gt;
+        &lt;ad:DockablePane ad:ResizingPanel.ResizeHeight=&quot;100&quot; Background=&quot;White&quot; Name=&quot;BottomBar&quot;&gt;
+          &lt;ad:DockableContent Title=&quot;{Resx ResxName=LGP.Components.Panels.Properties.Resources, Key=Errors}&quot; x:Name=&quot;errorPane&quot;&gt;
+            &lt;ListView Margin=&quot;0&quot; Padding=&quot;0&quot; BorderBrush=&quot;Transparent&quot; BorderThickness=&quot;0&quot;&gt;
+              &lt;ListView.View&gt;
+                &lt;GridView&gt;
+                  &lt;GridViewColumn Header=&quot;{Resx ResxName=LGP.Components.Panels.Properties.Resources, Key=Error}&quot; /&gt;
+                  &lt;GridViewColumn Header=&quot;{Resx ResxName=LGP.Components.Panels.Properties.Resources, Key=Page}&quot; /&gt;
+                  &lt;GridViewColumn Header=&quot;{Resx ResxName=LGP.Components.Panels.Properties.Resources, Key=File}&quot; /&gt;
+                  &lt;GridViewColumn Header=&quot;{Resx ResxName=LGP.Components.Panels.Properties.Resources, Key=Row}&quot; /&gt;
+                &lt;/GridView&gt;
+              &lt;/ListView.View&gt;
+            &lt;/ListView&gt;
+          &lt;/ad:DockableContent&gt;
+          &lt;ad:DockableContent Title=&quot;{Resx ResxName=LGP.Components.Panels.Properties.Resources, Key=Output}&quot; x:Name=&quot;outputPane&quot;&gt;
+            &lt;ListView HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;0&quot; Name=&quot;listView1&quot; VerticalAlignment=&quot;Stretch&quot;&gt;
+              &lt;ListView.View&gt;
+                &lt;GridView&gt;
+                  &lt;GridViewColumn Header=&quot;{Resx ResxName=LGP.Components.Panels.Properties.Resources, Key=Message}&quot; DisplayMemberBinding=&quot;{Binding Message}&quot; Width=&quot;200&quot;&gt;
+                    &lt;GridViewColumn.CellTemplate&gt;
+                      &lt;DataTemplate&gt;
+                        &lt;TextBlock Text=&quot;{Binding Message}&quot; TextAlignment=&quot;Left&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+                      &lt;/DataTemplate&gt;
+                    &lt;/GridViewColumn.CellTemplate&gt;
+                  &lt;/GridViewColumn&gt;
+                  &lt;GridViewColumn Header=&quot;{Resx ResxName=LGP.Components.Panels.Properties.Resources, Key=ExceptionType}&quot; DisplayMemberBinding=&quot;{Binding ExceptionType}&quot; Width=&quot;150&quot;&gt;
+                    &lt;GridViewColumn.CellTemplate&gt;
+                      &lt;DataTemplate&gt;
+                        &lt;TextBlock Text=&quot;{Binding ExceptionType}&quot; TextAlignment=&quot;Left&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+                      &lt;/DataTemplate&gt;
+                    &lt;/GridViewColumn.CellTemplate&gt;
+                  &lt;/GridViewColumn&gt;
+                  &lt;GridViewColumn Header=&quot;{Resx ResxName=LGP.Components.Panels.Properties.Resources, Key=Source}&quot; DisplayMemberBinding=&quot;{Binding Source}&quot; Width=&quot;200&quot;&gt;
+                    &lt;GridViewColumn.CellTemplate&gt;
+                      &lt;DataTemplate&gt;
+                        &lt;TextBlock Text=&quot;{Binding Source}&quot; TextAlignment=&quot;Left&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+                      &lt;/DataTemplate&gt;
+                    &lt;/GridViewColumn.CellTemplate&gt;
+                  &lt;/GridViewColumn&gt;
+                  &lt;GridViewColumn Header=&quot;{Resx ResxName=LGP.Components.Panels.Properties.Resources, Key=StackTrace}&quot; DisplayMemberBinding=&quot;{Binding StackTrace}&quot; Width=&quot;300&quot;&gt;
+                    &lt;GridViewColumn.CellTemplate&gt;
+                      &lt;DataTemplate&gt;
+                        &lt;TextBlock Text=&quot;{Binding StackTrace}&quot; TextAlignment=&quot;Left&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+                      &lt;/DataTemplate&gt;
+                    &lt;/GridViewColumn.CellTemplate&gt;
+                  &lt;/GridViewColumn&gt;
+                  &lt;GridViewColumn Header=&quot;{Resx ResxName=LGP.Components.Panels.Properties.Resources, Key=ThrownBy}&quot; DisplayMemberBinding=&quot;{Binding TargetSite}&quot; Width=&quot;150&quot;&gt;
+                    &lt;GridViewColumn.CellTemplate&gt;
+                      &lt;DataTemplate&gt;
+                        &lt;TextBlock Text=&quot;{Binding TargetSite}&quot; TextAlignment=&quot;Left&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+                      &lt;/DataTemplate&gt;
+                    &lt;/GridViewColumn.CellTemplate&gt;
+                  &lt;/GridViewColumn&gt;
+                &lt;/GridView&gt;
+              &lt;/ListView.View&gt;
+            &lt;/ListView&gt;
+          &lt;/ad:DockableContent&gt;
+        &lt;/ad:DockablePane&gt;
+
+      &lt;/ad:ResizingPanel&gt;
+    &lt;/ad:DockingManager&gt;
+
+  &lt;/Grid&gt;
+&lt;/UserControl&gt;</pre></code><script type="text/javascript">
+			applyranges('src231', RANGES_231)
+		</script>
+	</body>
+</html>

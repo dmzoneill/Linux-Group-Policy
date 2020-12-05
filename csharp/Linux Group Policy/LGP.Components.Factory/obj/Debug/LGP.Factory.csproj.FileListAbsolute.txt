@@ -1,0 +1,17 @@
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\LGPMessageBus.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\LGPMessageBus.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\obj\Debug\LGPMessageBus.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\obj\Debug\LGPMessageBus.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Factory.XML
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Factory.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Factory.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP.Factory\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP.Factory\obj\Debug\LGP.Factory.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGP.Factory\obj\Debug\LGP.Factory.pdb
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Factory.XML
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Factory.dll
+C:\lgp\Linux Group Policy\LGP\bin\Debug\LGP.Factory.pdb
+C:\lgp\Linux Group Policy\LGP.Factory\obj\Debug\ResolveAssemblyReference.cache
+C:\lgp\Linux Group Policy\LGP.Factory\obj\Debug\LGP.Factory.dll
+C:\lgp\Linux Group Policy\LGP.Factory\obj\Debug\LGP.Factory.pdb

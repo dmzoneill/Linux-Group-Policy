@@ -1,0 +1,11 @@
+public interface IOuGateway
+{
+	IOu CreateOu( string ouName , int parentId );
+	void DeleteOu( int ouid );
+	IOu GetOuById( int ouid );
+	IOu GetOuParentById( int ouid );
+	List< IOu > GetOuListing();
+	List< IOu > GetChildren( int ouid );
+	List< IOu > GetRoots();
+	void Refresh();
+}

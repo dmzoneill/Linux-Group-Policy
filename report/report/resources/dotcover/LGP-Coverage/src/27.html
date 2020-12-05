@@ -1,0 +1,149 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_27 = [
+   [21,9,21,36,'dccv']
+, [22,9,22,10,'dccv']
+, [23,13,23,56,'dccv']
+, [24,9,24,10,'dccv']
+, [33,9,33,10,'dccv']
+, [34,13,34,65,'dccv']
+, [35,9,35,10,'dccv']
+, [53,9,53,10,'dccv']
+, [54,13,54,42,'dccv']
+, [55,9,55,10,'dccv']
+, [63,9,63,10,'dccv']
+, [64,13,64,40,'dccv']
+, [65,9,65,10,'dccv']
+, [73,9,73,10,'dccv']
+, [74,13,74,46,'dccv']
+, [79,13,79,37,'dccv']
+, [80,13,80,99,'dccv']
+, [81,13,81,36,'dccv']
+, [82,13,82,27,'dccv']
+, [83,9,83,10,'dccv']
+, [101,9,101,10,'dccv']
+, [102,13,102,73,'dccv']
+, [103,9,103,10,'dccv']
+, [43,9,43,10,'dcuc']
+, [44,13,44,29,'dcuc']
+, [45,9,45,10,'dcuc']
+, [75,13,75,14,'dcuc']
+, [76,17,76,29,'dcuc']
+, [90,9,90,10,'dcuc']
+, [91,13,91,62,'dcuc']
+, [92,9,92,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src27" class="dotCoverSource"><pre>#region
+
+using System.Collections.Generic;
+using LGP.Components.Factory.Interfaces.Network;
+
+#endregion
+
+namespace LGP.Components.Factory.Internal.ServerControl
+{
+    /// &lt;summary&gt;
+    ///   Connection Handler to the server
+    /// &lt;/summary&gt;
+    internal class NetworkController : INetwork
+    {
+        private static List&lt; IServerController &gt; _clients;
+        private static INetwork _instance;
+        private int _clientsCount;
+        private string _serverAddress;
+
+
+        private NetworkController()
+        {
+            _clients = new List&lt; IServerController &gt;();
+        }
+
+        #region INetwork Members
+
+        /// &lt;summary&gt;
+        ///   Gets the list of servers detected
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;List Server&lt;/returns&gt;
+        public List&lt; IServerInfo &gt; GetServers()
+        {
+            return BroadcastListener.GetInstance().GetServers();
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the list of clients
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;List Server&lt;/returns&gt;
+        public List&lt; IServerController &gt; GetClients()
+        {
+            return _clients;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Sets the server ip address
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;ipaddr&quot;&gt;ip address&lt;/param&gt;
+        public void SetServerAddress( string ipaddr )
+        {
+            this._serverAddress = ipaddr;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   REturns the server ip address
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;ip address&lt;/returns&gt;
+        public string GetServerAddress()
+        {
+            return this._serverAddress;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Get the list of clients
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Clients array&lt;/returns&gt;
+        public IServerController CreateClient()
+        {
+            if( this._serverAddress == null )
+            {
+                return null;
+            }
+
+            this._clientsCount += 2;
+            var client = new ServerController( this._serverAddress , this._clientsCount + 50000 );
+            _clients.Add( client );
+            return client;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Restart the service listener
+        /// &lt;/summary&gt;
+        public void RestartServerListener()
+        {
+            BroadcastListener.GetInstance().RetartListener();
+        }
+
+        #endregion
+
+        /// &lt;summary&gt;
+        ///   Gets the instance of the server handler
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static INetwork GetInstance()
+        {
+            return _instance ?? ( _instance = new NetworkController() );
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src27', RANGES_27)
+		</script>
+	</body>
+</html>

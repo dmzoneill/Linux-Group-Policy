@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGP.Components.Database.Mysql</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.Components.Database.Mysql.MysqlDb">
+            <summary>
+              Mysql Wrapper
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.MysqlDb.Connect(System.String,System.String,System.String,System.String)">
+            <summary>
+              Connect method for database interface
+            </summary>
+            <param name = "user">Username to use in connection</param>
+            <param name = "pass">Password to use in connection</param>
+            <param name = "host">Hostname to use in connection</param>
+            <param name = "dbname">Datbase to use in connection</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.MysqlDb.Disconnect">
+            <summary>
+              Disconnect method for the interface realizer
+            </summary>
+            <returns>bool disconnected</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.MysqlDb.ExecuteQuery(System.String)">
+            <summary>
+              Executes a query provided by the appropriate gateway
+            </summary>
+            <param name = "sql">sql query</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.MysqlDb.ExecuteNonQuery(System.String)">
+            <summary>
+              Executes a query provided by the appropriate gateway
+            </summary>
+            <param name = "sql">sql query</param>
+            <returns>int num rows affected</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.MysqlDb.IsConnected">
+            <summary>
+              Check to see if the database is connected
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="T:LGP.Components.Database.Mysql.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Mysql.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Mysql.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Mysql.Properties.Resources.Default">
+            <summary>
+              Looks up a localized string similar to Default.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Mysql.Properties.Resources.Mysql">
+            <summary>
+              Looks up a localized string similar to Mysql.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Mysql.Properties.Resources.Port">
+            <summary>
+              Looks up a localized string similar to Port.
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Database.Mysql.Plugin">
+            <summary>
+              Plugin
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Plugin.GetName">
+            <summary>
+              Gets the name of the main component
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Plugin.GetIcon">
+            <summary>
+              Gets the image that represents the module
+            </summary>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Plugin.RegisterMenuEntries(LGP.Components.Factory.Interfaces.Component.IMenu)">
+            <summary>
+              Asks the component to register is menu components
+            </summary>
+            <param name = "menu">The program main menu</param>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Plugin.GetMainControl">
+            <summary>
+              Gets the main component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Plugin.GetSidebarControl">
+            <summary>
+              Gets the sidebar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Plugin.GetBottombarControl">
+            <summary>
+              Gets the bottombar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Plugin.GetToolbarControl">
+            <summary>
+              Gets the toolbar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Plugin.GetPreferencesControl">
+            <summary>
+              Gets the preferences component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="T:LGP.Components.Database.Mysql.Preferences">
+            <summary>
+              Interaction logic for Preferences.xaml
+            </summary>
+            <summary>
+            Preferences
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Preferences.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Preferences.GetName">
+            <summary>
+              Gets the name of the preferences Pane
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Preferences.GetControl">
+            <summary>
+              Gets the preferences window
+            </summary>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Preferences.Save">
+            <summary>
+              Aks the preferences panel to save its entries
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Preferences.Load(LGP.Components.Factory.Interfaces.Component.ISettings)">
+            <summary>
+              Asks the preferences to load its settings
+            </summary>
+            <param name="settingsParent"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Preferences.GetControlType">
+            <summary>
+            Gets the type it Controls
+            </summary>
+            <returns>Type</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Preferences.GetIcon">
+            <summary>
+            Gets the preferences icon
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Database.Mysql.Preferences.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

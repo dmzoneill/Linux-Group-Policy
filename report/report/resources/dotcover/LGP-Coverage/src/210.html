@@ -1,0 +1,283 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_210 = [
+   [23,9,23,10,'dccv']
+, [25,13,25,14,'dccv']
+, [26,17,26,122,'dccv']
+, [28,17,28,39,'dccv']
+, [29,17,29,18,'dccv']
+, [30,21,30,53,'dccv']
+, [31,21,31,39,'dccv']
+, [32,21,32,22,'dccv']
+, [33,25,33,76,'dccv']
+, [34,25,34,47,'dccv']
+, [35,25,35,26,'dccv']
+, [36,29,36,69,'dccv']
+, [37,29,37,115,'dccv']
+, [38,25,38,26,'dccv']
+, [40,25,40,73,'dccv']
+, [41,25,41,47,'dccv']
+, [42,25,42,26,'dccv']
+, [43,29,43,70,'dccv']
+, [44,29,44,111,'dccv']
+, [45,25,45,26,'dccv']
+, [47,25,47,73,'dccv']
+, [48,25,48,47,'dccv']
+, [49,25,49,26,'dccv']
+, [50,29,50,70,'dccv']
+, [51,29,51,111,'dccv']
+, [52,25,52,26,'dccv']
+, [54,25,54,75,'dccv']
+, [55,25,55,47,'dccv']
+, [61,25,61,73,'dccv']
+, [62,25,62,47,'dccv']
+, [63,25,63,26,'dccv']
+, [64,29,64,70,'dccv']
+, [65,29,65,123,'dccv']
+, [66,25,66,26,'dccv']
+, [68,25,68,58,'dccv']
+, [69,21,69,22,'dccv']
+, [70,17,70,18,'dccv']
+, [71,13,71,14,'dccv']
+, [76,9,76,10,'dccv']
+, [85,9,85,10,'dccv']
+, [87,13,87,14,'dccv']
+, [88,17,88,69,'dccv']
+, [89,17,89,60,'dccv']
+, [90,13,90,14,'dccv']
+, [95,9,95,10,'dccv']
+, [123,9,123,10,'dccv']
+, [125,13,125,14,'dccv']
+, [126,17,126,69,'dccv']
+, [127,17,127,60,'dccv']
+, [128,13,128,14,'dccv']
+, [133,9,133,10,'dccv']
+, [142,9,142,10,'dccv']
+, [144,13,144,14,'dccv']
+, [145,17,145,69,'dccv']
+, [146,17,146,60,'dccv']
+, [147,13,147,14,'dccv']
+, [152,9,152,10,'dccv']
+, [161,9,161,10,'dccv']
+, [163,13,163,14,'dccv']
+, [164,17,164,68,'dccv']
+, [165,17,165,60,'dccv']
+, [166,13,166,14,'dccv']
+, [171,9,171,10,'dccv']
+, [56,25,56,26,'dcuc']
+, [57,29,57,72,'dcuc']
+, [58,29,58,111,'dcuc']
+, [59,25,59,26,'dcuc']
+, [72,13,72,37,'dcuc']
+, [73,13,73,14,'dcuc']
+, [74,17,74,53,'dcuc']
+, [75,13,75,14,'dcuc']
+, [91,13,91,37,'dcuc']
+, [92,13,92,14,'dcuc']
+, [93,17,93,53,'dcuc']
+, [94,13,94,14,'dcuc']
+, [104,9,104,10,'dcuc']
+, [106,13,106,14,'dcuc']
+, [107,17,107,71,'dcuc']
+, [108,17,108,60,'dcuc']
+, [109,13,109,14,'dcuc']
+, [110,13,110,37,'dcuc']
+, [111,13,111,14,'dcuc']
+, [112,17,112,53,'dcuc']
+, [113,13,113,14,'dcuc']
+, [114,9,114,10,'dcuc']
+, [129,13,129,37,'dcuc']
+, [130,13,130,14,'dcuc']
+, [131,17,131,53,'dcuc']
+, [132,13,132,14,'dcuc']
+, [148,13,148,37,'dcuc']
+, [149,13,149,14,'dcuc']
+, [150,17,150,53,'dcuc']
+, [151,13,151,14,'dcuc']
+, [167,13,167,37,'dcuc']
+, [168,13,168,14,'dcuc']
+, [169,17,169,53,'dcuc']
+, [170,13,170,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src210" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Reflection;
+using System.Windows;
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Publishers.Events;
+
+#endregion
+
+namespace LGP.Components.Menus
+{
+    /// &lt;summary&gt;
+    ///   File menu
+    /// &lt;/summary&gt;
+    public partial class MenuHandler
+    {
+        /// &lt;summary&gt;
+        ///   Creates the file menu
+        /// &lt;/summary&gt;
+        public void CreateFileMenu()
+        {
+            try
+            {
+                var resource = Framework.Utils.LoadResource( Assembly.GetExecutingAssembly() , this , &quot;.FileMenu.xaml&quot; );
+
+                if( resource != null )
+                {
+                    var menu = resource as MenuItem;
+                    if( menu != null )
+                    {
+                        var menuitem = ( MenuItem ) menu.FindName( &quot;New&quot; );
+                        if( menuitem != null )
+                        {
+                            menuitem.Click += this.MenuItemNewClick;
+                            menuitem.Icon = Framework.Images.GetImage( &quot;DocumentHS&quot; , &quot;VS2010ImageLibrary&quot; , 16 );
+                        }
+
+                        menuitem = ( MenuItem ) menu.FindName( &quot;Open&quot; );
+                        if( menuitem != null )
+                        {
+                            menuitem.Click += this.MenuItemOpenClick;
+                            menuitem.Icon = Framework.Images.GetImage( &quot;openHS&quot; , &quot;VS2010ImageLibrary&quot; , 16 );
+                        }
+
+                        menuitem = ( MenuItem ) menu.FindName( &quot;Save&quot; );
+                        if( menuitem != null )
+                        {
+                            menuitem.Click += this.MenuItemSaveClick;
+                            menuitem.Icon = Framework.Images.GetImage( &quot;saveHS&quot; , &quot;VS2010ImageLibrary&quot; , 16 );
+                        }
+
+                        menuitem = ( MenuItem ) menu.FindName( &quot;Saveas&quot; );
+                        if( menuitem != null )
+                        {
+                            menuitem.Click += this.MenuItemSaveAsClick;
+                            menuitem.Icon = Framework.Images.GetImage( &quot;saveHS&quot; , &quot;VS2010ImageLibrary&quot; , 16 );
+                        }
+
+                        menuitem = ( MenuItem ) menu.FindName( &quot;Exit&quot; );
+                        if( menuitem != null )
+                        {
+                            menuitem.Click += this.MenuItemExitClick;
+                            menuitem.Icon = Framework.Images.GetImage( &quot;305_Close_16x16_72&quot; , &quot;VS2010ImageLibrary&quot; , 16 );
+                        }
+
+                        this._mainMenu.Items.Add( menu );
+                    }
+                }
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Takes the exit menu item click events and publishes it to subscribers
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sender&quot;&gt;The object that raised the event&lt;/param&gt;
+        /// &lt;param name = &quot;e&quot;&gt;The event arguments&lt;/param&gt;
+        private void MenuItemExitClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                var eventDetails = new MenuEvent( sender , &quot;exit&quot; );
+                Framework.EventBus.Publish( eventDetails );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Takes the saveas menu item click events and publishes it to subscribers
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sender&quot;&gt;The object that raised the event&lt;/param&gt;
+        /// &lt;param name = &quot;e&quot;&gt;The event arguments&lt;/param&gt;
+        private void MenuItemSaveAsClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                var eventDetails = new MenuEvent( sender , &quot;saveas&quot; );
+                Framework.EventBus.Publish( eventDetails );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Takes the save menu item click events and publishes it to subscribers
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sender&quot;&gt;The object that raised the event&lt;/param&gt;
+        /// &lt;param name = &quot;e&quot;&gt;The event arguments&lt;/param&gt;
+        private void MenuItemSaveClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                var eventDetails = new MenuEvent( sender , &quot;save&quot; );
+                Framework.EventBus.Publish( eventDetails );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Takes the open menu item click events and publishes it to subscribers
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sender&quot;&gt;The object that raised the event&lt;/param&gt;
+        /// &lt;param name = &quot;e&quot;&gt;The event arguments&lt;/param&gt;
+        private void MenuItemOpenClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                var eventDetails = new MenuEvent( sender , &quot;open&quot; );
+                Framework.EventBus.Publish( eventDetails );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Takes the new menu item click events and publishes it to subscribers
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sender&quot;&gt;The object that raised the event&lt;/param&gt;
+        /// &lt;param name = &quot;e&quot;&gt;The event arguments&lt;/param&gt;
+        private void MenuItemNewClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                var eventDetails = new MenuEvent( sender , &quot;new&quot; );
+                Framework.EventBus.Publish( eventDetails );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src210', RANGES_210)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_344 = [
+   [1,13,1,77,'dccv']
+, [1,77,1,132,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src344" class="dotCoverSource"><pre>&lt;UserControl x:Class=&quot;LGP.Modules.Statistics.Viewer&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot; xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot; mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;1007&quot; d:DesignWidth=&quot;828&quot; xmlns:chartingToolkit=&quot;clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit&quot; KeyDown=&quot;UserControlKeyDown&quot;&gt;
+  &lt;Grid VerticalAlignment=&quot;Stretch&quot; HorizontalAlignment=&quot;Stretch&quot;&gt;
+    &lt;ScrollViewer Name=&quot;viewer&quot; HorizontalScrollBarVisibility=&quot;Disabled&quot; VerticalScrollBarVisibility=&quot;Auto&quot; Margin=&quot;25,15,25,15&quot;&gt;
+      &lt;Grid Margin=&quot;0&quot; Width=&quot;{Binding ElementName=viewer, Path=ActualWidth}&quot;&gt;
+        &lt;Grid.RowDefinitions&gt;
+          &lt;RowDefinition Height=&quot;250&quot; /&gt;
+          &lt;RowDefinition Height=&quot;250&quot; /&gt;
+          &lt;RowDefinition Height=&quot;250&quot; /&gt;
+        &lt;/Grid.RowDefinitions&gt;
+        &lt;Grid.ColumnDefinitions&gt;
+          &lt;ColumnDefinition Width=&quot;30*&quot; /&gt;
+          &lt;ColumnDefinition Width=&quot;200*&quot; /&gt;
+          &lt;ColumnDefinition Width=&quot;30*&quot; /&gt;
+        &lt;/Grid.ColumnDefinitions&gt;
+
+
+        &lt;chartingToolkit:ColumnSeries DependentValuePath=&quot;Value&quot; IndependentValuePath=&quot;Key&quot; ItemsSource=&quot;{Binding}&quot; Grid.Column=&quot;0&quot; /&gt;
+
+        &lt;chartingToolkit:Chart Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;5,0,20,0&quot; Name=&quot;lineChart1&quot; Title=&quot;{Resx ResxName=LGP.Modules.Statistics.Properties.Resources, Key=ServerQueues}&quot; BorderThickness=&quot;0&quot;&gt;
+          &lt;chartingToolkit:LineSeries DependentValuePath=&quot;Value&quot; IndependentValuePath=&quot;Key&quot; ItemsSource=&quot;{Binding}&quot; IsSelectionEnabled=&quot;True&quot; Name=&quot;LineSeries1&quot; Title=&quot;{Resx ResxName=LGP.Modules.Statistics.Properties.Resources, Key=InQueue}&quot; /&gt;
+          &lt;chartingToolkit:LineSeries DependentValuePath=&quot;Value&quot; IndependentValuePath=&quot;Key&quot; ItemsSource=&quot;{Binding}&quot; IsSelectionEnabled=&quot;True&quot; Name=&quot;LineSeries2&quot; Title=&quot;{Resx ResxName=LGP.Modules.Statistics.Properties.Resources, Key=OutQueue}&quot; /&gt;
+        &lt;/chartingToolkit:Chart&gt;
+
+        &lt;chartingToolkit:Chart Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;5,0,20,0&quot; Name=&quot;lineChart3&quot; Title=&quot;{Resx ResxName=LGP.Modules.Statistics.Properties.Resources, Key=NetworkActivity}&quot; BorderThickness=&quot;0&quot;&gt;
+          &lt;chartingToolkit:LineSeries DependentValuePath=&quot;Value&quot; IndependentValuePath=&quot;Key&quot; ItemsSource=&quot;{Binding}&quot; IsSelectionEnabled=&quot;True&quot; Name=&quot;rxSeries&quot; Title=&quot;Rx Kb&quot; /&gt;
+          &lt;chartingToolkit:LineSeries DependentValuePath=&quot;Value&quot; IndependentValuePath=&quot;Key&quot; ItemsSource=&quot;{Binding}&quot; IsSelectionEnabled=&quot;True&quot; Name=&quot;txSeries&quot; Title=&quot;Tx Kb&quot; /&gt;
+        &lt;/chartingToolkit:Chart&gt;
+
+        &lt;chartingToolkit:Chart Grid.Row=&quot;2&quot; Grid.Column=&quot;1&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;5,0,20,0&quot; Name=&quot;lineChart2&quot; Title=&quot;{Resx ResxName=LGP.Modules.Statistics.Properties.Resources, Key=ProcessorUsage}&quot; BorderThickness=&quot;0&quot;&gt;
+          &lt;chartingToolkit:LineSeries DependentValuePath=&quot;Value&quot; IndependentValuePath=&quot;Key&quot; ItemsSource=&quot;{Binding}&quot; IsSelectionEnabled=&quot;True&quot; Name=&quot;LineSeries3&quot; Title=&quot;%&quot; /&gt;
+        &lt;/chartingToolkit:Chart&gt;
+
+      &lt;/Grid&gt;
+    &lt;/ScrollViewer&gt;
+  &lt;/Grid&gt;
+&lt;/UserControl&gt;</pre></code><script type="text/javascript">
+			applyranges('src344', RANGES_344)
+		</script>
+	</body>
+</html>

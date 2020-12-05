@@ -1,0 +1,20 @@
+﻿LGP.Modules.ModuleEditor
+
+
+library
+C#
+.cs
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP.Modules.ModuleEditor\obj\Debug\
+LGP.Modules.ModuleEditor
+none
+false
+DEBUG;TRACE
+
+71683595561
+
+191890002955
+18905012532
+Internal\Modals\Controls\AddModule.xaml;Internal\Modals\Controls\DeleteModule.xaml;ModuleEditor.xaml;Internal\CustomControls\StackPanelModuleElement.xaml;Internal\NodeViews\ModulePane.xaml;ModuleList.xaml;Preferences.xaml;
+
+False
+

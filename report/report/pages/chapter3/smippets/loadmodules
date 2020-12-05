@@ -1,0 +1,17 @@
+
+foreach my $module ( @modules ) 
+{
+	if( $module =~ /(.*)\.pm/s )
+	{
+		my $moduleName = $1;
+
+		eval
+		{
+    		require "$module";
+		};
+			
+		my $reference = $moduleName->new();
+		$reference->registerGrammer();
+		$self->attach( \$reference );
+	}
+}

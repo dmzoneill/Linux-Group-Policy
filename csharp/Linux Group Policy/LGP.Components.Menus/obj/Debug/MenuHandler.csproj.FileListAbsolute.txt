@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\MenuHandler\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\MenuHandler.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\MenuHandler.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\MenuHandler\obj\Debug\MenuHandler.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\MenuHandler\obj\Debug\MenuHandler.pdb

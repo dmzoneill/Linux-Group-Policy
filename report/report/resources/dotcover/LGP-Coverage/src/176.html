@@ -1,0 +1,291 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_176 = [
+   [25,9,25,10,'dccv']
+, [26,13,26,53,'dccv']
+, [27,9,27,10,'dccv']
+, [32,9,32,33,'dccv']
+, [33,9,33,10,'dccv']
+, [35,13,35,14,'dccv']
+, [36,17,36,54,'dccv']
+, [37,13,37,14,'dccv']
+, [42,9,42,10,'dccv']
+, [55,9,55,10,'dccv']
+, [56,13,56,81,'dccv']
+, [57,9,57,10,'dccv']
+, [65,9,65,10,'dccv']
+, [66,13,66,55,'dccv']
+, [67,9,67,10,'dccv']
+, [75,9,75,10,'dccv']
+, [76,13,76,44,'dccv']
+, [77,9,77,10,'dccv']
+, [84,9,84,10,'dccv']
+, [85,13,85,39,'dccv']
+, [86,9,86,10,'dccv']
+, [95,9,95,10,'dccv']
+, [96,13,96,62,'dccv']
+, [97,9,97,10,'dccv']
+, [106,9,106,10,'dccv']
+, [107,13,107,65,'dccv']
+, [108,9,108,10,'dccv']
+, [116,9,116,10,'dccv']
+, [117,13,117,48,'dccv']
+, [118,13,118,14,'dccv']
+, [119,17,119,30,'dccv']
+, [122,13,122,56,'dccv']
+, [123,9,123,10,'dccv']
+, [131,9,131,10,'dccv']
+, [132,13,132,36,'dccv']
+, [133,9,133,10,'dccv']
+, [141,9,141,10,'dccv']
+, [142,13,142,40,'dccv']
+, [143,9,143,10,'dccv']
+, [151,9,151,10,'dccv']
+, [152,13,152,40,'dccv']
+, [153,9,153,10,'dccv']
+, [161,9,161,10,'dccv']
+, [162,13,162,41,'dccv']
+, [163,9,163,10,'dccv']
+, [171,9,171,10,'dccv']
+, [172,13,172,40,'dccv']
+, [173,9,173,10,'dccv']
+, [180,9,180,10,'dccv']
+, [182,13,182,14,'dccv']
+, [183,17,183,60,'dccv']
+, [184,17,184,65,'dccv']
+, [185,13,185,14,'dccv']
+, [191,13,191,25,'dccv']
+, [192,9,192,10,'dccv']
+, [197,9,197,10,'dccv']
+, [199,13,199,14,'dccv']
+, [200,17,200,35,'dccv']
+, [201,13,201,14,'dccv']
+, [205,9,205,10,'dccv']
+, [38,13,38,37,'dcuc']
+, [39,13,39,14,'dcuc']
+, [40,17,40,53,'dcuc']
+, [41,13,41,14,'dcuc']
+, [186,13,186,37,'dcuc']
+, [187,13,187,14,'dcuc']
+, [188,17,188,53,'dcuc']
+, [189,13,189,14,'dcuc']
+, [202,13,202,31,'dcuc']
+, [203,13,203,14,'dcuc']
+, [204,13,204,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src176" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using LGP.Components.Database.Gateways;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Database;
+
+#endregion
+
+namespace LGP.Components.Database
+{
+    /// &lt;summary&gt;
+    ///   Creates and manages the strategy context object given type
+    /// &lt;/summary&gt;
+    public class DatabaseHandler : IDatabase
+    {
+        private static readonly List&lt; Type &gt; DatabaseConnectors;
+        private IDatabaseModule _strategyContext;
+
+
+        static DatabaseHandler()
+        {
+            DatabaseConnectors = new List&lt; Type &gt;();
+        }
+
+        /// &lt;summary&gt;
+        /// Constructor
+        /// &lt;/summary&gt;
+        public DatabaseHandler()
+        {
+            try
+            {
+                Framework.ShutDown += this.Terminate;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        #region IDatabase Members
+
+        /// &lt;summary&gt;
+        ///   Connect method for database interface
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;user&quot;&gt;Username to use in connection&lt;/param&gt;
+        /// &lt;param name = &quot;pass&quot;&gt;Password to use in connection&lt;/param&gt;
+        /// &lt;param name = &quot;host&quot;&gt;Hostname to use in connection&lt;/param&gt;
+        /// &lt;param name = &quot;dbname&quot;&gt;Datbase to use in connection&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public bool Connect( string user , string pass , string host , string dbname )
+        {
+            return this._strategyContext.Connect( user , pass , host , dbname );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Disconnect method for the interface realizer
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;bool disconnected&lt;/returns&gt;
+        public bool Disconnect()
+        {
+            return this._strategyContext.Disconnect();
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Registers a database type
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;type&quot;&gt;&lt;/param&gt;
+        public void AddDatabaseType( Type type )
+        {
+            DatabaseConnectors.Add( type );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the registered DB Types
+        /// &lt;/summary&gt;
+        public List&lt; Type &gt; GetDatabaseTypes()
+        {
+            return DatabaseConnectors;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Executes a query provided by the appropriate gateway
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sql&quot;&gt;sql query&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public DataSet ExecuteQuery( string sql )
+        {
+            return this._strategyContext.ExecuteQuery( sql );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Executes a query provided by the appropriate gateway
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sql&quot;&gt;sql query&lt;/param&gt;
+        /// &lt;returns&gt;bool&lt;/returns&gt;
+        public int ExecuteNonQuery( string sql )
+        {
+            return this._strategyContext.ExecuteNonQuery( sql );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Check to see if the database connector is connected
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;bool&lt;/returns&gt;
+        public bool IsConnected()
+        {
+            if( this._strategyContext == null )
+            {
+                return false;
+            }
+
+            return this._strategyContext.IsConnected();
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets a new Ou Gateway interface
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;IOuGateway&lt;/returns&gt;
+        public IOuGateway CreateOuGateway()
+        {
+            return new OuGateway();
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets a new client Gateway interface
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;IOuGateway&lt;/returns&gt;
+        public IClientGateway CreateClientGateway()
+        {
+            return new ClientGateway();
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets a new Module gateway interface
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;IModuleGateway&lt;/returns&gt;
+        public IModuleGateway CreateModuleGateway()
+        {
+            return new ModuleGateway();
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets a new grammer gateway interface
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;IGrammerGateway&lt;/returns&gt;
+        public IGrammerGateway CreateGrammerGateway()
+        {
+            return new GrammerGateway();
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets a new policy gateway interface
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;IGrammerGateway&lt;/returns&gt;
+        public IPolicyGateway CreatePolicyGateway()
+        {
+            return new PolicyGateway();
+        }
+
+        /// &lt;summary&gt;
+        /// Change the strategy type
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;type&quot;&gt;&lt;/param&gt;
+        public IDatabase ChangeStrategy( Type type )
+        {
+            try
+            {
+                var obj = Activator.CreateInstance( type );
+                this._strategyContext = ( IDatabaseModule ) obj;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+
+            return this;
+        }
+
+        #endregion
+
+        private void Terminate( object sender , CancelEventArgs args )
+        {
+            try
+            {
+                this.Disconnect();
+            }
+            catch( Exception )
+            {
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src176', RANGES_176)
+		</script>
+	</body>
+</html>

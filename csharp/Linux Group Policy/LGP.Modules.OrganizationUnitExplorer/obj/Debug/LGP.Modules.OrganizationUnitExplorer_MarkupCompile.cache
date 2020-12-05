@@ -1,0 +1,20 @@
+﻿LGP.Modules.OrganizationUnitExplorer
+
+
+library
+C#
+.cs
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP.Modules.OrganizationUnitExplorer\obj\Debug\
+LGP.Modules.OrganizationUnitExplorer
+none
+false
+DEBUG;TRACE
+
+11-2024974365
+
+16-1380441793
+15-1840595375
+Internal\CustomControls\WrapPanelClientElement.xaml;Internal\CustomControls\WrapPanelOuElement.xaml;Internal\NodeViews\ClientPane.xaml;Internal\NodeViews\OuPane.xaml;Internal\Modals\Controls\CreateOu.xaml;Internal\Modals\Controls\DeleteOu.xaml;Internal\Modals\Controls\MoveOu.xaml;Internal\Modals\Controls\RenameOu.xaml;OuViewer.xaml;Preferences.xaml;OuTreeView.xaml;
+
+False
+

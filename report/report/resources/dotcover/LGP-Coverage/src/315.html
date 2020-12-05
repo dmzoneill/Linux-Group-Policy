@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_315 = [
+   [1,13,1,77,'dccv']
+, [60,111,60,137,'dccv']
+, [60,111,60,137,'dccv']
+, [60,111,60,126,'dccv']
+, [60,111,60,175,'dccv']
+, [60,111,60,157,'dccv']
+, [60,13,60,111,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src315" class="dotCoverSource"><pre>&lt;UserControl x:Class=&quot;LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot; xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot; xmlns:Internal=&quot;clr-namespace:LGP.Modules.PolicyEditor.Internal&quot; mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;303&quot; d:DesignWidth=&quot;572&quot;&gt;
+  &lt;UserControl.Resources&gt;
+
+    &lt;LinearGradientBrush x:Key=&quot;alt0&quot; StartPoint=&quot;0.5,0&quot; EndPoint=&quot;0.5,1&quot;&gt;
+      &lt;GradientStop Color=&quot;#FFFFFFFF&quot; Offset=&quot;0.5&quot; /&gt;
+      &lt;GradientStop Color=&quot;#FFEEEEEE&quot; Offset=&quot;1.0&quot; /&gt;
+    &lt;/LinearGradientBrush&gt;
+
+    &lt;LinearGradientBrush x:Key=&quot;alt1&quot; StartPoint=&quot;0.5,0&quot; EndPoint=&quot;0.5,1&quot;&gt;
+      &lt;GradientStop Color=&quot;#FFFFFFFF&quot; Offset=&quot;0.5&quot; /&gt;
+      &lt;GradientStop Color=&quot;#FFDDDDDD&quot; Offset=&quot;1.0&quot; /&gt;
+    &lt;/LinearGradientBrush&gt;
+
+    &lt;Style x:Key=&quot;RowStyle&quot; TargetType=&quot;DataGridRow&quot;&gt;
+
+      &lt;Style.Resources&gt;
+        &lt;LinearGradientBrush x:Key=&quot;{x:Static SystemColors.HighlightBrushKey}&quot; StartPoint=&quot;0.5,0&quot; EndPoint=&quot;0.5,1&quot;&gt;
+          &lt;GradientStop Color=&quot;#FFFFFFFF&quot; Offset=&quot;0.5&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFD6E2F8&quot; Offset=&quot;1.0&quot; /&gt;
+        &lt;/LinearGradientBrush&gt;
+        &lt;SolidColorBrush x:Key=&quot;{x:Static SystemColors.HighlightTextBrushKey}&quot; Color=&quot;#FF000000&quot; /&gt;
+      &lt;/Style.Resources&gt;
+
+      &lt;Style.Triggers&gt;
+        &lt;Trigger Property=&quot;IsMouseOver&quot; Value=&quot;True&quot;&gt;
+          &lt;Setter Property=&quot;FontWeight&quot; Value=&quot;ExtraBold&quot; /&gt;
+          &lt;Setter Property=&quot;Foreground&quot; Value=&quot;#FF466A8D&quot; /&gt;
+        &lt;/Trigger&gt;
+        &lt;Trigger Property=&quot;AlternationIndex&quot; Value=&quot;1&quot;&gt;
+          &lt;Setter Property=&quot;Background&quot; Value=&quot;{StaticResource alt0}&quot; /&gt;
+        &lt;/Trigger&gt;
+        &lt;Trigger Property=&quot;AlternationIndex&quot; Value=&quot;0&quot;&gt;
+          &lt;Setter Property=&quot;Background&quot; Value=&quot;{StaticResource alt1}&quot; /&gt;
+        &lt;/Trigger&gt;
+        &lt;Trigger Property=&quot;Validation.HasError&quot; Value=&quot;true&quot;&gt;
+          &lt;Setter Property=&quot;BorderThickness&quot; Value=&quot;1&quot; /&gt;
+          &lt;Setter Property=&quot;BorderBrush&quot; Value=&quot;Red&quot; /&gt;
+          &lt;Setter Property=&quot;ToolTip&quot; Value=&quot;{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors).CurrentItem.ErrorContent}&quot; /&gt;
+        &lt;/Trigger&gt;
+        &lt;Trigger Property=&quot;Validation.HasError&quot; Value=&quot;false&quot;&gt;
+          &lt;Setter Property=&quot;ToolTip&quot; Value=&quot;&quot; /&gt;
+        &lt;/Trigger&gt;
+      &lt;/Style.Triggers&gt;
+
+      &lt;Setter Property=&quot;ValidationErrorTemplate&quot;&gt;
+        &lt;Setter.Value&gt;
+          &lt;ControlTemplate&gt;
+            &lt;Grid Margin=&quot;2,2,2,2&quot; ToolTip=&quot;{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type DataGridRow}},Path=(Validation.Errors).CurrentItem.ErrorContent}&quot;&gt;
+              &lt;Ellipse StrokeThickness=&quot;0&quot; Fill=&quot;#AAAA0000&quot; Width=&quot;14&quot; Height=&quot;14&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; /&gt;
+              &lt;TextBlock Text=&quot;!&quot; FontSize=&quot;9&quot; FontWeight=&quot;Bold&quot; Foreground=&quot;White&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; /&gt;
+            &lt;/Grid&gt;
+          &lt;/ControlTemplate&gt;
+        &lt;/Setter.Value&gt;
+      &lt;/Setter&gt;
+
+    &lt;/Style&gt;
+
+  &lt;/UserControl.Resources&gt;
+  &lt;Grid&gt;
+    &lt;DataGrid HorizontalAlignment=&quot;Stretch&quot; LoadingRow=&quot;DataGridLoadingRow&quot; Margin=&quot;0,5,0,0&quot; Name=&quot;dataGrid1&quot; VerticalAlignment=&quot;Stretch&quot; AutoGenerateColumns=&quot;False&quot; ItemsSource=&quot;{Binding Path=_list, ValidatesOnDataErrors=true, ValidatesOnExceptions=true}&quot; BorderThickness=&quot;1&quot; CanUserAddRows=&quot;False&quot; CanUserDeleteRows=&quot;False&quot; CanUserReorderColumns=&quot;False&quot; Foreground=&quot;#FF688CAF&quot; HorizontalGridLinesBrush=&quot;Gray&quot; VerticalGridLinesBrush=&quot;LightGray&quot; MinRowHeight=&quot;20&quot; RowHeight=&quot;25&quot; ColumnHeaderHeight=&quot;25&quot; FontSize=&quot;11&quot; AlternationCount=&quot;2&quot; RowDetailsVisibilityMode=&quot;Visible&quot; RowStyle=&quot;{StaticResource RowStyle}&quot; SelectionChanged=&quot;DataGrid1SelectionChanged&quot; AllowDrop=&quot;True&quot; CurrentCellChanged=&quot;DataGrid1CurrentCellChanged&quot; PreparingCellForEdit=&quot;DataGrid1PreparingCellForEdit&quot; CellEditEnding=&quot;DataGrid1CellEditEnding&quot; MouseLeave=&quot;DataGrid1MouseLeave&quot;&gt;
+
+      &lt;DataGrid.RowValidationRules&gt;
+        &lt;Internal:RowValidationRule ValidationStep=&quot;UpdatedValue&quot; /&gt;
+      &lt;/DataGrid.RowValidationRules&gt;
+      &lt;DataGrid.Columns&gt;
+        &lt;DataGridCheckBoxColumn Binding=&quot;{Binding IsSelected,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; Header=&quot;{Resx ResxName=LGP.Modules.PolicyEditor.Properties.Resources, Key=Selected}&quot; x:Name=&quot;Selected&quot; IsReadOnly=&quot;False&quot; /&gt;
+        &lt;DataGridComboBoxColumn Header=&quot;{Resx ResxName=LGP.Modules.PolicyEditor.Properties.Resources, Key=Key}&quot; SelectedValueBinding=&quot;{Binding EntryKey,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; x:Name=&quot;Key&quot; /&gt;
+        &lt;DataGridTextColumn Binding=&quot;{Binding Rvalue1,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; Header=&quot;Rvalue1&quot; x:Name=&quot;Rvalue1&quot; /&gt;
+        &lt;DataGridTextColumn Binding=&quot;{Binding Rvalue2,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; Header=&quot;Rvalue2&quot; x:Name=&quot;Rvalue2&quot; /&gt;
+        &lt;DataGridTextColumn Binding=&quot;{Binding Rvalue3,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; Header=&quot;Rvalue3&quot; x:Name=&quot;Rvalue3&quot; /&gt;
+        &lt;DataGridTextColumn Binding=&quot;{Binding Rvalue4,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; Header=&quot;Rvalue4&quot; x:Name=&quot;Rvalue4&quot; /&gt;
+        &lt;DataGridTextColumn Binding=&quot;{Binding Rvalue5,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; Header=&quot;Rvalue5&quot; x:Name=&quot;Rvalue5&quot; /&gt;
+        &lt;DataGridTextColumn Binding=&quot;{Binding Rvalue6,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; Header=&quot;Rvalue6&quot; x:Name=&quot;Rvalue6&quot; /&gt;
+        &lt;DataGridTextColumn Binding=&quot;{Binding Rvalue7,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; Header=&quot;Rvalue7&quot; x:Name=&quot;Rvalue7&quot; /&gt;
+        &lt;DataGridTextColumn Binding=&quot;{Binding Rvalue8,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; Header=&quot;Rvalue8&quot; x:Name=&quot;Rvalue8&quot; /&gt;
+        &lt;DataGridTextColumn Binding=&quot;{Binding Rvalue9,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; Header=&quot;Rvalue9&quot; x:Name=&quot;Rvalue9&quot; /&gt;
+        &lt;DataGridTextColumn Binding=&quot;{Binding Rvalue10,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; Header=&quot;Rvalue10&quot; x:Name=&quot;Rvalue10&quot; /&gt;
+        &lt;DataGridTextColumn Binding=&quot;{Binding Rvalue11,Mode=TwoWay,NotifyOnSourceUpdated=True}&quot; Header=&quot;Rvalue11&quot; x:Name=&quot;Rvalue11&quot; /&gt;
+      &lt;/DataGrid.Columns&gt;
+      &lt;DataGrid.CellStyle&gt;
+        &lt;Style TargetType=&quot;DataGridCell&quot;&gt;
+          &lt;Setter Property=&quot;Padding&quot; Value=&quot;5,3,5,0&quot; /&gt;
+          &lt;Setter Property=&quot;Template&quot;&gt;
+            &lt;Setter.Value&gt;
+              &lt;ControlTemplate TargetType=&quot;{x:Type DataGridCell}&quot;&gt;
+                &lt;Border Padding=&quot;{TemplateBinding Padding}&quot; BorderBrush=&quot;{TemplateBinding BorderBrush}&quot; BorderThickness=&quot;{TemplateBinding BorderThickness}&quot; Background=&quot;{TemplateBinding Background}&quot; SnapsToDevicePixels=&quot;True&quot;&gt;
+                  &lt;ContentPresenter SnapsToDevicePixels=&quot;{TemplateBinding SnapsToDevicePixels}&quot; /&gt;
+                &lt;/Border&gt;
+              &lt;/ControlTemplate&gt;
+            &lt;/Setter.Value&gt;
+          &lt;/Setter&gt;
+        &lt;/Style&gt;
+      &lt;/DataGrid.CellStyle&gt;
+      &lt;DataGrid.Background&gt;
+        &lt;SolidColorBrush /&gt;
+      &lt;/DataGrid.Background&gt;
+    &lt;/DataGrid&gt;
+  &lt;/Grid&gt;
+&lt;/UserControl&gt;</pre></code><script type="text/javascript">
+			applyranges('src315', RANGES_315)
+		</script>
+	</body>
+</html>

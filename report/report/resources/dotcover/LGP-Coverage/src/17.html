@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_17 = [
+   [1,13,1,77,'dccv']
+, [6,13,6,121,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src17" class="dotCoverSource"><pre>&lt;UserControl x:Class=&quot;LGP.Controls.Background&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+             xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+             xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot; 
+             mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;170&quot; d:DesignWidth=&quot;450&quot;
+             Background=&quot;Transparent&quot; BorderThickness=&quot;0&quot; Loaded=&quot;UserControlLoaded&quot;&gt;
+  &lt;Grid Background=&quot;Transparent&quot;&gt;
+    &lt;Rectangle VerticalAlignment=&quot;Stretch&quot; HorizontalAlignment=&quot;Stretch&quot; Panel.ZIndex=&quot;1&quot; Width=&quot;400&quot; Height=&quot;150&quot;&gt;
+      &lt;Rectangle.Fill&gt;
+        &lt;RadialGradientBrush GradientOrigin=&quot;0.5,0.5&quot; Center=&quot;0.5,0.5&quot; RadiusX=&quot;0.5&quot; RadiusY=&quot;0.5&quot;&gt;
+          &lt;RadialGradientBrush.GradientStops&gt;
+            &lt;GradientStop Color=&quot;#DDFFFFFF&quot; Offset=&quot;0&quot; /&gt;
+            &lt;GradientStop Color=&quot;#AAFFFFFF&quot; Offset=&quot;0.25&quot; /&gt;
+            &lt;GradientStop Color=&quot;#88FFFFFF&quot; Offset=&quot;0.75&quot; /&gt;
+            &lt;GradientStop Color=&quot;#00FFFFFF&quot; Offset=&quot;1&quot; /&gt;
+          &lt;/RadialGradientBrush.GradientStops&gt;
+        &lt;/RadialGradientBrush&gt;
+      &lt;/Rectangle.Fill&gt;
+    &lt;/Rectangle&gt;
+        &lt;TextBlock Padding=&quot;2&quot; Margin=&quot;5,50,0,0&quot; Name=&quot;textBlock1&quot; Text=&quot;{Resx ResxName=LGP.Properties.Resources, Key=LinuxGroupPolicyStudio}&quot; FontSize=&quot;26&quot; Opacity=&quot;0.7&quot; Panel.ZIndex=&quot;3&quot; Height=&quot;40&quot; VerticalAlignment=&quot;Top&quot; HorizontalAlignment=&quot;Center&quot;/&gt;
+        &lt;Label Content=&quot;{Resx ResxName=LGP.Properties.Resources, Key=ManagementStartsHere}&quot; Height=&quot;28&quot; Margin=&quot;5,80,5,0&quot; HorizontalAlignment=&quot;Center&quot; Name=&quot;label1&quot;
+           VerticalAlignment=&quot;Top&quot; Opacity=&quot;0.6&quot; Panel.ZIndex=&quot;3&quot; /&gt;
+    &lt;Image Height=&quot;128&quot; Width=&quot;128&quot; Margin=&quot;5&quot; Name=&quot;presentationImage&quot; Opacity=&quot;0.15&quot; HorizontalAlignment=&quot;Stretch&quot;
+           VerticalAlignment=&quot;Stretch&quot; Panel.ZIndex=&quot;2&quot;&gt;
+      &lt;Image.Triggers&gt;
+        &lt;EventTrigger RoutedEvent=&quot;Image.Loaded&quot;&gt;
+          &lt;BeginStoryboard&gt;
+            &lt;Storyboard&gt;
+              &lt;DoubleAnimation Storyboard.TargetName=&quot;presentationImage&quot; Storyboard.TargetProperty=&quot;Opacity&quot;
+                               From=&quot;0.15&quot; To=&quot;0.4&quot; Duration=&quot;0:0:3&quot; AutoReverse=&quot;True&quot; RepeatBehavior=&quot;Forever&quot; /&gt;
+            &lt;/Storyboard&gt;
+          &lt;/BeginStoryboard&gt;
+        &lt;/EventTrigger&gt;
+      &lt;/Image.Triggers&gt;
+    &lt;/Image&gt;
+  &lt;/Grid&gt;
+&lt;/UserControl&gt;</pre></code><script type="text/javascript">
+			applyranges('src17', RANGES_17)
+		</script>
+	</body>
+</html>

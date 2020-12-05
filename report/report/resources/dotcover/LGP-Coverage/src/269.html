@@ -1,0 +1,158 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_269 = [
+   [21,9,21,38,'dccv']
+, [22,9,22,10,'dccv']
+, [23,13,23,37,'dccv']
+, [24,13,24,37,'dccv']
+, [25,9,25,10,'dccv']
+, [49,9,49,10,'dccv']
+, [50,13,50,35,'dccv']
+, [51,13,51,55,'dccv']
+, [52,9,52,10,'dccv']
+, [58,9,58,10,'dccv']
+, [60,13,60,14,'dccv']
+, [61,17,61,60,'dccv']
+, [63,17,63,55,'dccv']
+, [64,17,64,43,'dccv']
+, [65,17,65,54,'dccv']
+, [66,17,66,54,'dccv']
+, [67,22,67,32,'dccv']
+, [68,17,68,18,'dccv']
+, [69,21,69,53,'dccv']
+, [70,21,70,44,'dccv']
+, [71,21,71,22,'dccv']
+, [72,25,72,48,'dccv']
+, [73,21,73,22,'dccv']
+, [74,26,74,75,'dccv']
+, [75,21,75,22,'dccv']
+, [76,25,76,62,'dccv']
+, [78,25,78,62,'dccv']
+, [79,25,79,26,'dccv']
+, [80,29,80,86,'dccv']
+, [81,25,81,26,'dccv']
+, [82,21,82,22,'dccv']
+, [83,26,83,54,'dccv']
+, [84,21,84,22,'dccv']
+, [85,25,85,51,'dccv']
+, [86,21,86,22,'dccv']
+, [87,17,87,18,'dccv']
+, [67,58,67,61,'dccv']
+, [67,33,67,56,'dccv']
+, [88,17,88,48,'dccv']
+, [88,88,88,91,'dccv']
+, [89,17,89,36,'dccv']
+, [96,9,96,10,'dccv']
+, [88,48,88,88,'dccv']
+, [91,13,91,37,'dcuc']
+, [92,13,92,14,'dcuc']
+, [93,17,93,53,'dcuc']
+, [94,17,94,29,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src269" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Collections.Generic;
+using ICSharpCode.AvalonEdit.Document;
+using ICSharpCode.AvalonEdit.Folding;
+using LGP.Components.Factory;
+
+#endregion
+
+namespace LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers
+{
+    /// &lt;summary&gt;
+    ///   Allows producing foldings from a document based on braces.
+    /// &lt;/summary&gt;
+    public class BraceFoldingStrategy : AbstractFoldingStrategy
+    {
+        /// &lt;summary&gt;
+        ///   Creates a new BraceFoldingStrategy.
+        /// &lt;/summary&gt;
+        public BraceFoldingStrategy()
+        {
+            this.OpeningBrace = &#39;{&#39;;
+            this.ClosingBrace = &#39;}&#39;;
+        }
+
+        /// &lt;summary&gt;
+        ///   Gets/Sets the opening brace. The default value is &#39;{&#39;.
+        /// &lt;/summary&gt;
+        public char OpeningBrace
+        {
+            get;
+            set;
+        }
+
+        /// &lt;summary&gt;
+        ///   Gets/Sets the closing brace. The default value is &#39;}&#39;.
+        /// &lt;/summary&gt;
+        public char ClosingBrace
+        {
+            get;
+            set;
+        }
+
+        /// &lt;summary&gt;
+        ///   Create &lt;see cref = &quot;NewFolding&quot; /&gt;s for the specified document.
+        /// &lt;/summary&gt;
+        public override IEnumerable&lt; NewFolding &gt; CreateNewFoldings( TextDocument document , out int firstErrorOffset )
+        {
+            firstErrorOffset = -1;
+            return this.CreateNewFoldings( document );
+        }
+
+        /// &lt;summary&gt;
+        ///   Create &lt;see cref = &quot;NewFolding&quot; /&gt;s for the specified document.
+        /// &lt;/summary&gt;
+        public IEnumerable&lt; NewFolding &gt; CreateNewFoldings( ITextSource document )
+        {
+            try
+            {
+                var newFoldings = new List&lt; NewFolding &gt;();
+
+                var startOffsets = new Stack&lt; int &gt;();
+                var lastNewLineOffset = 0;
+                var openingBrace = this.OpeningBrace;
+                var closingBrace = this.ClosingBrace;
+                for( var i = 0; i &lt; document.TextLength; i++ )
+                {
+                    var c = document.GetCharAt( i );
+                    if( c == openingBrace )
+                    {
+                        startOffsets.Push( i );
+                    }
+                    else if( c == closingBrace &amp;&amp; startOffsets.Count &gt; 0 )
+                    {
+                        var startOffset = startOffsets.Pop();
+                        // don&#39;t fold if opening and closing brace are on the same line
+                        if( startOffset &lt; lastNewLineOffset )
+                        {
+                            newFoldings.Add( new NewFolding( startOffset , i + 1 ) );
+                        }
+                    }
+                    else if( c == &#39;\n&#39; || c == &#39;\r&#39; )
+                    {
+                        lastNewLineOffset = i + 1;
+                    }
+                }
+                newFoldings.Sort( ( a , b ) =&gt; a.StartOffset.CompareTo( b.StartOffset ) );
+                return newFoldings;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+                return null;
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src269', RANGES_269)
+		</script>
+	</body>
+</html>

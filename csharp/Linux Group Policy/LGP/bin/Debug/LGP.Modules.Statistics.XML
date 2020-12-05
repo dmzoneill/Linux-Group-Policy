@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGP.Modules.Statistics</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.Modules.Statistics.Preferences">
+            <summary>
+              Interaction logic for Preferences.xaml
+            </summary>
+            <summary>
+            Preferences
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Preferences.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Preferences.GetName">
+            <summary>
+              Gets the name of the preferences Pane
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Preferences.GetControl">
+            <summary>
+              Gets the preferences window
+            </summary>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Preferences.Save">
+            <summary>
+              Aks the preferences panel to save its entries
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Preferences.Load(LGP.Components.Factory.Interfaces.Component.ISettings)">
+            <summary>
+              Asks the preferences to load its settings
+            </summary>
+            <param name="settingsParent"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Preferences.GetControlType">
+            <summary>
+            Gets the type it Controls
+            </summary>
+            <returns>Type</returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Preferences.GetIcon">
+            <summary>
+            Gets the preferences icon
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Preferences.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.Statistics.Plugin">
+            <summary>
+              Plugin to realize the IModule interface
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Plugin.GetMainControl">
+            <summary>
+              Gets the main component of the module
+            </summary>
+            <returns>Usercontrol component</returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Plugin.GetSidebarControl">
+            <summary>
+              Gets the side bar component of the module
+            </summary>
+            <returns>Usercontrol component</returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Plugin.GetName">
+            <summary>
+              Get the component name
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Plugin.RegisterMenuEntries(LGP.Components.Factory.Interfaces.Component.IMenu)">
+            <summary>
+              Registers this components menu handlers
+            </summary>
+            <param name = "menu">The program main menu</param>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Plugin.GetIcon">
+            <summary>
+              Gets the icon associated with plugin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Plugin.GetBottombarControl">
+            <summary>
+              Gets the bottombar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Plugin.GetToolbarControl">
+            <summary>
+              Gets the toolbar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Plugin.GetPreferencesControl">
+            <summary>
+              Gets the preferences component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Plugin.GetComponentSideBarName">
+            <summary>
+              Gets the side bar component name
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Plugin.GetComponentContentName">
+            <summary>
+              Gets the component comtent name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Plugin.StatisticsViewerToolbarItemClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Handler for this componets menu entries
+              Forwards the event to the message bus for subscribers interest
+            </summary>
+            <param name = "sender">The menu item that was clicked</param>
+            <param name = "e">The event details</param>
+        </member>
+        <member name="T:LGP.Modules.Statistics.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.Statistics.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.Statistics.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.Statistics.Properties.Resources.InQueue">
+            <summary>
+              Looks up a localized string similar to Incoming queue.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.Statistics.Properties.Resources.NetworkActivity">
+            <summary>
+              Looks up a localized string similar to Network Activity.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.Statistics.Properties.Resources.OutQueue">
+            <summary>
+              Looks up a localized string similar to Outgoing queue.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.Statistics.Properties.Resources.ProcessorUsage">
+            <summary>
+              Looks up a localized string similar to Processor Usage.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.Statistics.Properties.Resources.ServerQueues">
+            <summary>
+              Looks up a localized string similar to Server queues.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.Statistics.Properties.Resources.Statistics">
+            <summary>
+              Looks up a localized string similar to Statistics.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.Statistics.Properties.Resources.StatisticsViewer">
+            <summary>
+              Looks up a localized string similar to Statistics Viewer.
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.Statistics.Viewer">
+            <summary>
+              Interaction logic for Viewer.xaml
+            </summary>
+            <summary>
+            Viewer
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Viewer.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Viewer.GetInstance">
+            <summary>
+              Returns this instance of the user control ( Singleton )
+            </summary>
+            <returns>Usercontrol Instance</returns>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Viewer.Dispose">
+            <summary>
+              Aks the UserControl to do some clean up!
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Viewer.Refresh">
+            <summary>
+            Asks the Usercontrol to refresh itself
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Viewer.Pause">
+            <summary>
+            When the control is no longer in focus, asks it to pause ( heavy duty non critical, ie threads updating graphs )
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Viewer.Resume">
+            <summary>
+            When the tab comes back into focus, resume ( heavy duty non critical, ie threads updating graphs )
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.Statistics.Viewer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

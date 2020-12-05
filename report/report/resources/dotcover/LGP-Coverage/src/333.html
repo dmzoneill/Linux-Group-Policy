@@ -1,0 +1,184 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_333 = [
+   [27,9,27,10,'dccv']
+, [28,13,28,55,'dccv']
+, [29,9,29,10,'dccv']
+, [36,9,36,10,'dccv']
+, [37,13,37,73,'dccv']
+, [38,9,38,10,'dccv']
+, [45,9,45,10,'dccv']
+, [47,13,47,14,'dccv']
+, [48,17,48,153,'dccv']
+, [50,17,50,39,'dccv']
+, [55,17,55,63,'dccv']
+, [57,17,57,49,'dccv']
+, [62,17,62,58,'dccv']
+, [63,17,63,68,'dccv']
+, [64,17,64,70,'dccv']
+, [65,13,65,14,'dccv']
+, [70,9,70,10,'dccv']
+, [73,9,73,10,'dccv']
+, [74,13,74,89,'dccv']
+, [75,9,75,10,'dccv']
+, [86,9,86,10,'dccv']
+, [87,13,87,55,'dccv']
+, [88,9,88,10,'dccv']
+, [51,17,51,18,'dcuc']
+, [52,21,52,28,'dcuc']
+, [58,17,58,18,'dcuc']
+, [59,21,59,28,'dcuc']
+, [66,13,66,37,'dcuc']
+, [67,13,67,14,'dcuc']
+, [68,17,68,53,'dcuc']
+, [69,13,69,14,'dcuc']
+, [95,9,95,10,'dcuc']
+, [96,13,96,25,'dcuc']
+, [97,9,97,10,'dcuc']
+, [104,9,104,10,'dcuc']
+, [105,13,105,25,'dcuc']
+, [106,9,106,10,'dcuc']
+, [113,9,113,10,'dcuc']
+, [114,13,114,25,'dcuc']
+, [115,9,115,10,'dcuc']
+, [122,9,122,10,'dcuc']
+, [123,13,123,38,'dcuc']
+, [124,9,124,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src333" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Reflection;
+using System.Windows;
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Component;
+using LGP.Components.Factory.Interfaces.Module;
+
+#endregion
+
+namespace LGP.Modules.ServerControl
+{
+    /// &lt;summary&gt;
+    /// Implementation of IModule
+    /// &lt;/summary&gt;
+    public class Plugin : IModule
+    {
+        #region Implementation of IComponent
+
+        /// &lt;summary&gt;
+        ///   Gets the name of the main component
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;String name&lt;/returns&gt;
+        public string GetName()
+        {
+            return Properties.Resources.ServerControl;
+        }
+
+        /// &lt;summary&gt;
+        ///   Gets the image that represents the module
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An image&lt;/returns&gt;
+        public Image GetIcon()
+        {
+            return Framework.Images.GetImage( &quot;config&quot; , &quot;16X16&quot; , 14 );
+        }
+
+        /// &lt;summary&gt;
+        ///   Asks the component to register is menu components
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;menu&quot;&gt;The program main menu&lt;/param&gt;
+        public void RegisterMenuEntries( IMenu menu )
+        {
+            try
+            {
+                var resource = Framework.Utils.LoadResource( Assembly.GetExecutingAssembly() , this , &quot;.Internal.ContextMenuItems.ServerControl.xaml&quot; );
+
+                if( resource == null )
+                {
+                    return;
+                }
+
+                var serverToolbarsItem = resource as MenuItem;
+
+                if( serverToolbarsItem == null )
+                {
+                    return;
+                }
+
+                serverToolbarsItem.Icon = this.GetIcon();
+                serverToolbarsItem.Click += this.SeverControlClick;
+                menu.AddSubSubMenuItem( 2 , 2 , serverToolbarsItem );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void SeverControlClick( object sender , RoutedEventArgs e )
+        {
+            Framework.Panels.AddMainComponent( this.GetMainControl() , this.GetName() );
+        }
+
+        #endregion
+
+        #region Implementation of IModule
+
+        /// &lt;summary&gt;
+        ///   Gets the main component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetMainControl()
+        {
+            return ConnectionController.GetInstance();
+        }
+
+        /// &lt;summary&gt;
+        ///   Gets the sidebar component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetSidebarControl()
+        {
+            return null;
+        }
+
+        /// &lt;summary&gt;
+        ///   Gets the bottombar component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetBottombarControl()
+        {
+            return null;
+        }
+
+        /// &lt;summary&gt;
+        ///   Gets the toolbar component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetToolbarControl()
+        {
+            return null;
+        }
+
+        /// &lt;summary&gt;
+        ///   Gets the preferences component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetPreferencesControl()
+        {
+            return new Preferences();
+        }
+
+        #endregion
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src333', RANGES_333)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,186 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_245 = [
+   [41,9,41,66,'dccv']
+, [42,9,42,10,'dccv']
+, [44,13,44,14,'dccv']
+, [45,17,45,44,'dccv']
+, [46,17,46,50,'dccv']
+, [47,17,47,43,'dccv']
+, [48,17,48,118,'dccv']
+, [49,13,49,14,'dccv']
+, [54,9,54,10,'dccv']
+, [57,9,57,10,'dccv']
+, [59,13,59,14,'dccv']
+, [60,17,60,61,'dccv']
+, [61,17,61,18,'dccv']
+, [62,21,62,130,'dccv']
+, [63,21,63,53,'dccv']
+, [64,17,64,18,'dccv']
+, [65,13,65,14,'dccv']
+, [70,9,70,10,'dccv']
+, [85,9,85,10,'dccv']
+, [87,13,87,14,'dccv']
+, [88,17,88,106,'dccv']
+, [89,17,89,88,'dccv']
+, [90,13,90,14,'dccv']
+, [95,9,95,10,'dccv']
+, [98,9,98,10,'dccv']
+, [100,13,100,14,'dccv']
+, [101,17,101,91,'dccv']
+, [102,13,102,14,'dccv']
+, [107,9,107,10,'dccv']
+, [24,9,24,27,'dcuc']
+, [25,9,25,10,'dcuc']
+, [27,13,27,14,'dcuc']
+, [28,17,28,44,'dcuc']
+, [29,13,29,14,'dcuc']
+, [30,13,30,37,'dcuc']
+, [31,13,31,14,'dcuc']
+, [32,17,32,53,'dcuc']
+, [33,13,33,14,'dcuc']
+, [34,9,34,10,'dcuc']
+, [50,13,50,37,'dcuc']
+, [51,13,51,14,'dcuc']
+, [52,17,52,53,'dcuc']
+, [53,13,53,14,'dcuc']
+, [66,13,66,37,'dcuc']
+, [67,13,67,14,'dcuc']
+, [68,17,68,53,'dcuc']
+, [69,13,69,14,'dcuc']
+, [73,9,73,10,'dcuc']
+, [75,13,75,14,'dcuc']
+, [76,17,76,49,'dcuc']
+, [77,13,77,14,'dcuc']
+, [78,13,78,37,'dcuc']
+, [79,13,79,14,'dcuc']
+, [80,17,80,53,'dcuc']
+, [81,13,81,14,'dcuc']
+, [82,9,82,10,'dcuc']
+, [91,13,91,37,'dcuc']
+, [92,13,92,14,'dcuc']
+, [93,17,93,53,'dcuc']
+, [94,13,94,14,'dcuc']
+, [103,13,103,37,'dcuc']
+, [104,13,104,14,'dcuc']
+, [105,17,105,53,'dcuc']
+, [106,13,106,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src245" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows;
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Infrastructure;
+
+#endregion
+
+namespace LGP.Modules.ModuleEditor.Internal.Modals.Controls
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for AddModule.xaml
+    /// &lt;/summary&gt;
+    public partial class AddModule
+    {
+        private readonly ModuleList _parentControl;
+        private readonly IDialog _popupWindow;
+
+        /// &lt;summary&gt;
+        ///   Constrcutor
+        /// &lt;/summary&gt;
+        public AddModule()
+        {
+            try
+            {
+                this.InitializeComponent();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;moduleList&quot;&gt;Creator&lt;/param&gt;
+        /// &lt;param name = &quot;popup&quot;&gt;the parent window&lt;/param&gt;
+        public AddModule( ModuleList moduleList , IDialog popup )
+        {
+            try
+            {
+                this.InitializeComponent();
+                this._parentControl = moduleList;
+                this._popupWindow = popup;
+                this.image1.Source = Framework.Images.GetImage( &quot;NewNoteWhite_32x32&quot; , &quot;VS2010ImageLibrary&quot; ).Source;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void CreateButtonClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                if( this.ModuleNameTextBox.Text.Length &gt; 0 )
+                {
+                    this._parentControl.CallBackDelegate.Invoke( this.ModuleNameTextBox.Text , this._parentControl.stackPanel1 );
+                    this._popupWindow.CloseDialog();
+                }
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void CancelButtonClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                this._popupWindow.CloseDialog();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void ModuleNameTextBoxTextChanged( object sender , TextChangedEventArgs e )
+        {
+            try
+            {
+                this.ModuleNameTextBox.Text = Framework.Utils.CleanString( this.ModuleNameTextBox.Text );
+                this.ModuleNameTextBox.CaretIndex = this.ModuleNameTextBox.Text.Length;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void UserControlLoaded( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                this._popupWindow.ResizePopup( ( int ) this.Width , ( int ) this.Height );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src245', RANGES_245)
+		</script>
+	</body>
+</html>

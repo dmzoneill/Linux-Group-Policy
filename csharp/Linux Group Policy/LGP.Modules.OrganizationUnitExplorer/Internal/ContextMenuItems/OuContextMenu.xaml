@@ -1,0 +1,6 @@
+﻿<ContextMenu xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Tag="Ou" StaysOpen="true">
+    <MenuItem Header="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=Add}" Name="AddOuMenuItem" Foreground="Black" />
+    <MenuItem Header="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=Rename}" Name="RenameOuMenuItem" Foreground="Black"/>
+    <MenuItem Header="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=Move}" Name="MoveOuMenuItem" Foreground="Black"/>
+    <MenuItem Header="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=Delete}" Name="DeleteOuMenuItem" Foreground="Black"/>
+</ContextMenu>

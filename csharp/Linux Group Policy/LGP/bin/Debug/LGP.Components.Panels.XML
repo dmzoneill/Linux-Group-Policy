@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGP.Components.Panels</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.Components.Panels.Panels">
+            <summary>
+              Interaction logic for Panels.xaml
+            </summary>
+            <summary>
+            Panels
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Panels.Panels.#ctor">
+            <summary>
+              Constructor for panels
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Panels.Panels.SubscribeEvents">
+            <summary>
+              Subscribes subscriber events
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Panels.Panels.GetName">
+            <summary>
+              Gets the components name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Panels.GetIcon">
+            <summary>
+              Gets the icon associated with this component
+            </summary>
+            <returns>Image</returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Panels.AddSideComponent(System.Windows.Controls.UserControl,System.String,System.Windows.Controls.Image)">
+            <summary>
+              Requests the Panel realizer to add a User control to its display
+            </summary>
+            <param name = "control">The user control</param>
+            <param name = "toolbarName">The title on the toolbar header</param>
+            <param name = "image">The image icon assoacited with the control</param>
+        </member>
+        <member name="M:LGP.Components.Panels.Panels.RemoveSideComponent(System.Windows.Controls.UserControl)">
+            <summary>
+              Requests the Panel realizer to remove a User control from its display
+            </summary>
+            <param name = "control">The control to remove</param>
+        </member>
+        <member name="M:LGP.Components.Panels.Panels.AddMainComponent(System.Windows.Controls.UserControl,System.String)">
+            <summary>
+              Adds a UserControl to the main component container
+            </summary>
+            <param name = "control">UserControl element</param>
+            <param name = "controlTabTitle">The title to give the tab element</param>
+        </member>
+        <member name="M:LGP.Components.Panels.Panels.RemoveMainComponent(System.Windows.Controls.UserControl)">
+            <summary>
+              Requests the Panel realizer to remove a User control from its display
+            </summary>
+            <param name = "control">UserControl element</param>
+        </member>
+        <member name="M:LGP.Components.Panels.Panels.UpdateTabNames">
+            <summary>
+              Requests the Panel to update the panel tab names
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Panels.Panels.LoadSideBarComponents">
+            <summary>
+              Load all side bar components provided by the modules
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Panels.Panels.RegisterMenuEntries(LGP.Components.Factory.Interfaces.Component.IMenu)">
+            <summary>
+              Registers this components menu handlers
+            </summary>
+            <param name = "menu">The program main menu</param>
+        </member>
+        <member name="M:LGP.Components.Panels.Panels.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Panels.TraceCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Panels.Panels.ExceptionLine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Panels.ExceptionLine.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Panels.ExceptionLine.ExceptionType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Panels.ExceptionLine.Source">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Panels.ExceptionLine.StackTrace">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Panels.ExceptionLine.TargetSite">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Panels.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.Error">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.Errors">
+            <summary>
+              Looks up a localized string similar to Errors.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.ExceptionType">
+            <summary>
+              Looks up a localized string similar to Exception type.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.File">
+            <summary>
+              Looks up a localized string similar to File.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.Message">
+            <summary>
+              Looks up a localized string similar to Message.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.Output">
+            <summary>
+              Looks up a localized string similar to Output.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.Page">
+            <summary>
+              Looks up a localized string similar to Page.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.Panels">
+            <summary>
+              Looks up a localized string similar to Panels.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.Row">
+            <summary>
+              Looks up a localized string similar to Row.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.Source">
+            <summary>
+              Looks up a localized string similar to Source.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.StackTrace">
+            <summary>
+              Looks up a localized string similar to Stack trace.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.Theme">
+            <summary>
+              Looks up a localized string similar to Theme.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Panels.Properties.Resources.ThrownBy">
+            <summary>
+              Looks up a localized string similar to Thrown by.
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Panels.Preferences">
+            <summary>
+              Interaction logic for Preferences.xaml
+            </summary>
+            <summary>
+            Preferences
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Panels.Preferences.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Panels.Preferences.GetName">
+            <summary>
+              Gets the name of the preferences Pane
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Preferences.GetControl">
+            <summary>
+              Gets the preferences window
+            </summary>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Preferences.Save">
+            <summary>
+              Aks the preferences panel to save its entries
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Panels.Preferences.Load(LGP.Components.Factory.Interfaces.Component.ISettings)">
+            <summary>
+              Asks the preferences to load its settings
+            </summary>
+            <param name="settingsParent"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Preferences.GetControlType">
+            <summary>
+            Gets the type it Controls
+            </summary>
+            <returns>Type</returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Preferences.GetIcon">
+            <summary>
+            Gets the preferences icon
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Preferences.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Panels.Plugin">
+            <summary>
+              Concreate Implmentation and boundary class to Module Components
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Panels.Plugin.GetName">
+            <summary>
+              Gets the name of the main component
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Plugin.GetIcon">
+            <summary>
+              Gets the image that represents the module
+            </summary>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Plugin.RegisterMenuEntries(LGP.Components.Factory.Interfaces.Component.IMenu)">
+            <summary>
+              Asks the component to register is menu components
+            </summary>
+            <param name = "menu">The program main menu</param>
+        </member>
+        <member name="M:LGP.Components.Panels.Plugin.GetMainControl">
+            <summary>
+              Gets the main component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Plugin.GetSidebarControl">
+            <summary>
+              Gets the sidebar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Plugin.GetBottombarControl">
+            <summary>
+              Gets the bottombar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Plugin.GetToolbarControl">
+            <summary>
+              Gets the toolbar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Panels.Plugin.GetPreferencesControl">
+            <summary>
+              Gets the preferences component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+    </members>
+</doc>

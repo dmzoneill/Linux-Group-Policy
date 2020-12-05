@@ -1,0 +1,201 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_233 = [
+   [24,9,24,29,'dccv']
+, [25,9,25,10,'dccv']
+, [26,13,26,40,'dccv']
+, [27,9,27,10,'dccv']
+, [36,9,36,10,'dccv']
+, [37,13,37,48,'dccv']
+, [38,9,38,10,'dccv']
+, [55,9,55,10,'dccv']
+, [56,13,56,33,'dccv']
+, [57,9,57,10,'dccv']
+, [66,9,66,10,'dccv']
+, [67,13,67,43,'dccv']
+, [68,13,76,34,'dccv']
+, [78,13,78,20,'dccv']
+, [78,35,78,41,'dccv']
+, [78,22,78,31,'dccv']
+, [79,13,79,14,'dccv']
+, [80,17,80,47,'dccv']
+, [81,17,85,19,'dccv']
+, [86,17,86,54,'dccv']
+, [87,13,87,14,'dccv']
+, [78,32,78,34,'dccv']
+, [89,13,89,50,'dccv']
+, [90,9,90,10,'dccv']
+, [97,9,97,10,'dccv']
+, [98,13,98,37,'dccv']
+, [99,9,99,10,'dccv']
+, [106,9,106,10,'dccv']
+, [107,13,107,85,'dccv']
+, [108,9,108,10,'dccv']
+, [113,9,113,10,'dccv']
+, [115,13,115,14,'dccv']
+, [116,17,116,81,'dccv']
+, [118,17,118,59,'dccv']
+, [123,25,123,118,'dccv']
+, [124,25,124,31,'dccv']
+, [133,13,133,14,'dccv']
+, [139,9,139,10,'dccv']
+, [46,9,46,10,'dcuc']
+, [47,13,47,25,'dcuc']
+, [48,9,48,10,'dcuc']
+, [130,25,130,78,'dcuc']
+, [131,25,131,31,'dcuc']
+, [135,13,135,37,'dcuc']
+, [136,13,136,14,'dcuc']
+, [137,17,137,53,'dcuc']
+, [138,13,138,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src233" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows.Controls;
+using AvalonDock;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Component;
+using LGP.Components.Factory.Interfaces.Module;
+
+#endregion
+
+namespace LGP.Components.Panels
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for Preferences.xaml
+    /// &lt;/summary&gt;
+    public partial class Preferences : IPreferences
+    {
+        private ISettings _parent;
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        public Preferences()
+        {
+            this.InitializeComponent();
+        }
+
+        #region IPreferences Members
+
+        /// &lt;summary&gt;
+        ///   Gets the name of the preferences Pane
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public string GetName()
+        {
+            return Properties.Resources.Panels;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the preferences window
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;UserControl&lt;/returns&gt;
+        public UserControl GetControl()
+        {
+            return this;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Aks the preferences panel to save its entries
+        /// &lt;/summary&gt;
+        public void Save()
+        {
+            this._parent = null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Asks the preferences to load its settings
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;settingsParent&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public void Load( ISettings settingsParent )
+        {
+            this._parent = settingsParent;
+            string[ ] themes = {
+                                   &quot;LGP Default,/LGP.Components.Panels;component/Themes/lgp.xaml&quot; ,
+                                   &quot;AvalonDock Default,generic&quot; ,
+                                   &quot;Expression Blend,/AvalonDock.Themes;component/themes/ExpressionDark.xaml&quot; ,
+                                   &quot;Visual Studio 2010,/AvalonDock.Themes;component/themes/ExpressionDark.xaml&quot; ,
+                                   &quot;Aero Normal,aero.normalcolor&quot; ,
+                                   &quot;Classic,classic&quot; ,
+                                   &quot;Luna Noraml,luna.normalcolor&quot;
+                               };
+
+            foreach( var theme in themes )
+            {
+                var bits = theme.Split( &#39;,&#39; );
+                var item = new ComboBoxItem
+                {
+                    Tag = bits[ 1 ] ,
+                    Content = bits[ 0 ]
+                };
+                this.themeComboBox.Items.Add( item );
+            }
+
+            this.themeComboBox.SelectedIndex = 0;
+        }
+
+        /// &lt;summary&gt;
+        /// Gets the type it Controls
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Type&lt;/returns&gt;
+        public Type GetControlType()
+        {
+            return typeof( IPanel );
+        }
+
+        /// &lt;summary&gt;
+        /// Gets the preferences icon
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public Image GetIcon()
+        {
+            return Framework.Images.GetImage( &quot;panel&quot; , &quot;VS2010ImageLibrary&quot; , 14 );
+        }
+
+        #endregion
+
+        private void ThemeComboBoxSelectionChanged( object sender , SelectionChangedEventArgs e )
+        {
+            try
+            {
+                var comboitem = this.themeComboBox.SelectedItem as ComboBoxItem;
+
+                switch( this.themeComboBox.SelectedIndex )
+                {
+                    case 0 :
+                    case 2 :
+                    case 3 :
+                        ThemeFactory.ChangeTheme( new Uri( comboitem.Tag.ToString() , UriKind.RelativeOrAbsolute ) );
+                        break;
+
+                    case 1 :
+                    case 4 :
+                    case 5 :
+                    case 6 :
+                        ThemeFactory.ChangeTheme( comboitem.Tag.ToString() );
+                        break;
+                }
+            }
+
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src233', RANGES_233)
+		</script>
+	</body>
+</html>

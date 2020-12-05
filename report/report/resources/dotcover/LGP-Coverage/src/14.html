@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_14 = [
+   [1,13,1,77,'dccv']
+, [1,77,1,98,'dccv']
+, [1,77,1,107,'dccv']
+, [5,13,5,94,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src14" class="dotCoverSource"><pre>&lt;Window x:Class=&quot;LGP.Controls.Splash&quot; x:Name=&quot;SplashWindow&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot; xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; Title=&quot;Splash&quot; Height=&quot;228&quot; Width=&quot;573&quot; WindowStartupLocation=&quot;CenterScreen&quot; Loaded=&quot;WindowLoaded&quot; ShowInTaskbar=&quot;False&quot; ResizeMode=&quot;NoResize&quot; AllowsTransparency=&quot;True&quot; WindowStyle=&quot;None&quot; Topmost=&quot;True&quot; Closing=&quot;WindowClosing&quot; Background=&quot;Transparent&quot;&gt;
+  &lt;Window.Triggers&gt;
+    &lt;EventTrigger RoutedEvent=&quot;Window.Unloaded&quot;&gt;
+      &lt;BeginStoryboard&gt;
+        &lt;Storyboard Name=&quot;FormFadeOut&quot; Completed=&quot;FormFadeOutCompleted&quot;&gt;
+          &lt;DoubleAnimation Name=&quot;FormFadeOutAnimation&quot; Storyboard.TargetName=&quot;SplashWindow&quot; Storyboard.TargetProperty=&quot;(Window.Opacity)&quot; From=&quot;0.9&quot; To=&quot;0.0&quot; Duration=&quot;0:0:1&quot; AutoReverse=&quot;False&quot; RepeatBehavior=&quot;1x&quot; /&gt;
+        &lt;/Storyboard&gt;
+      &lt;/BeginStoryboard&gt;
+    &lt;/EventTrigger&gt;
+  &lt;/Window.Triggers&gt;
+  &lt;Grid Background=&quot;Transparent&quot; Margin=&quot;0&quot;&gt;
+    &lt;Border BorderThickness=&quot;1&quot; CornerRadius=&quot;3&quot; BorderBrush=&quot;Gray&quot; Padding=&quot;0&quot;&gt;
+      &lt;Border.Background&gt;
+        &lt;LinearGradientBrush StartPoint=&quot;0.5,0&quot; EndPoint=&quot;0.5,1&quot;&gt;
+          &lt;GradientStop Color=&quot;#66FFFFFF&quot; Offset=&quot;0.1&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFFFFFFF&quot; Offset=&quot;0.2&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFFFFFFF&quot; Offset=&quot;0.3&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFFFFFFF&quot; Offset=&quot;0.4&quot; /&gt;
+          &lt;GradientStop Color=&quot;#AAFFFFFF&quot; Offset=&quot;0.5&quot; /&gt;
+          &lt;GradientStop Color=&quot;#BBFFFFFF&quot; Offset=&quot;0.6&quot; /&gt;
+          &lt;GradientStop Color=&quot;#CCFFFFFF&quot; Offset=&quot;0.7&quot; /&gt;
+          &lt;GradientStop Color=&quot;#DDFFFFFF&quot; Offset=&quot;0.8&quot; /&gt;
+          &lt;GradientStop Color=&quot;#EEFFFFFF&quot; Offset=&quot;0.9&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFFFFFFF&quot; Offset=&quot;1.0&quot; /&gt;
+        &lt;/LinearGradientBrush&gt;
+      &lt;/Border.Background&gt;
+      &lt;Grid Margin=&quot;0&quot; VerticalAlignment=&quot;Stretch&quot; HorizontalAlignment=&quot;Stretch&quot;&gt;
+        &lt;TextBlock Height=&quot;19&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;17,178,0,0&quot; Name=&quot;textBlockComponentName&quot; Text=&quot;Loading components&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;543&quot; FontWeight=&quot;Medium&quot; FontSize=&quot;12&quot; Panel.ZIndex=&quot;2&quot; /&gt;
+        &lt;Label Content=&quot;{Resx ResxName=LGP.Properties.Resources, Key=LinuxGroupPolicyStudio}&quot; Height=&quot;50&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;9,41,0,0&quot; Name=&quot;label1&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;551&quot; FontSize=&quot;26&quot; FontWeight=&quot;Bold&quot; Panel.ZIndex=&quot;2&quot; /&gt;
+        &lt;TextBlock Height=&quot;24&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;17,200,0,0&quot; Name=&quot;textBlockDllPath&quot; Text=&quot;TextBlock&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;543&quot; FontSize=&quot;9&quot; Panel.ZIndex=&quot;2&quot; FontWeight=&quot;Bold&quot; /&gt;
+        &lt;TextBlock FontWeight=&quot;Normal&quot; Height=&quot;19&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;17,160,0,0&quot; Name=&quot;textBlockComponentVersion&quot; Text=&quot;Loading components&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;543&quot; FontSize=&quot;10&quot; Panel.ZIndex=&quot;2&quot; /&gt;
+        &lt;TextBlock Height=&quot;17&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;14,7,0,0&quot; Name=&quot;textBlockLoading&quot; Text=&quot;{Resx ResxName=LGP.Properties.Resources, Key=Loading}&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;136&quot; FontSize=&quot;10&quot; /&gt;
+        &lt;Image Height=&quot;320&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,-21,-79,0&quot; Name=&quot;image1&quot; Stretch=&quot;Fill&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;320&quot; Panel.ZIndex=&quot;1&quot; Opacity=&quot;0.7&quot;&gt;
+          &lt;Image.Triggers&gt;
+            &lt;EventTrigger RoutedEvent=&quot;Image.Loaded&quot;&gt;
+              &lt;BeginStoryboard&gt;
+                &lt;Storyboard&gt;
+                  &lt;DoubleAnimation Storyboard.TargetName=&quot;image1&quot; Storyboard.TargetProperty=&quot;Opacity&quot; From=&quot;0.5&quot; To=&quot;0.9&quot; Duration=&quot;0:0:2&quot; AutoReverse=&quot;True&quot; RepeatBehavior=&quot;Forever&quot; /&gt;
+                &lt;/Storyboard&gt;
+              &lt;/BeginStoryboard&gt;
+            &lt;/EventTrigger&gt;
+          &lt;/Image.Triggers&gt;
+        &lt;/Image&gt;
+        &lt;TextBlock Height=&quot;65&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;17,89,0,0&quot; Name=&quot;textBlockCopyright&quot; Text=&quot;&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;543&quot; Panel.ZIndex=&quot;2&quot; /&gt;
+      &lt;/Grid&gt;
+    &lt;/Border&gt;
+  &lt;/Grid&gt;
+&lt;/Window&gt;</pre></code><script type="text/javascript">
+			applyranges('src14', RANGES_14)
+		</script>
+	</body>
+</html>

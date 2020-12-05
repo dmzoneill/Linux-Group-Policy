@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_278 = [
+   [1,13,1,77,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src278" class="dotCoverSource"><pre>&lt;UserControl x:Class=&quot;LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.ClientPane&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot; xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot; mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;542&quot; d:DesignWidth=&quot;240&quot;&gt;
+  &lt;Grid Margin=&quot;20&quot;&gt;
+    &lt;Grid.RowDefinitions&gt;
+      &lt;RowDefinition Height=&quot;80&quot; /&gt;
+      &lt;RowDefinition Height=&quot;100&quot; /&gt;
+      &lt;RowDefinition Height=&quot;160&quot; /&gt;
+      &lt;RowDefinition Height=&quot;160*&quot; /&gt;
+    &lt;/Grid.RowDefinitions&gt;
+
+    &lt;Image Height=&quot;64&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,10,10,0&quot; Name=&quot;image1&quot; Stretch=&quot;Fill&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;64&quot; /&gt;
+
+    &lt;GroupBox Height=&quot;100&quot; Margin=&quot;0,0,0,0&quot; Name=&quot;groupBox1&quot; VerticalAlignment=&quot;Top&quot; BorderBrush=&quot;{x:Null}&quot; BorderThickness=&quot;0&quot; Grid.Row=&quot;1&quot;&gt;
+      &lt;Grid&gt;
+        &lt;Label Content=&quot;{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=ClientId}&quot; Margin=&quot;0,0,0,0&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;12&quot; FontWeight=&quot;Bold&quot; Foreground=&quot;#FF666666&quot; /&gt;
+        &lt;Separator Margin=&quot;0,15,0,0&quot; Height=&quot;20&quot; HorizontalAlignment=&quot;Stretch&quot; VerticalAlignment=&quot;Top&quot; Foreground=&quot;#FFD6E2F8&quot; Background=&quot;#FFD6E2F8&quot; /&gt;
+        &lt;Label Margin=&quot;0,25,0,0&quot; Name=&quot;ClientNameLabel&quot; Content=&quot;Client name&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;12&quot; /&gt;
+        &lt;TextBlock Margin=&quot;5,55,05,0&quot; Name=&quot;ClientGuidLabel&quot; Text=&quot;Client Guid&quot; Height=&quot;33&quot; VerticalAlignment=&quot;Top&quot; HorizontalAlignment=&quot;Stretch&quot; TextAlignment=&quot;Right&quot; FontSize=&quot;12&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+      &lt;/Grid&gt;
+    &lt;/GroupBox&gt;
+
+    &lt;GroupBox Height=&quot;160&quot; Margin=&quot;0,0,0,0&quot; Name=&quot;groupBox2&quot; VerticalAlignment=&quot;Top&quot; BorderBrush=&quot;{x:Null}&quot; BorderThickness=&quot;0&quot; Grid.Row=&quot;2&quot;&gt;
+      &lt;Grid&gt;
+        &lt;Label Content=&quot;{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=ClientOs}&quot; Margin=&quot;0,0,0,0&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;12&quot; FontWeight=&quot;Bold&quot; Foreground=&quot;#FF666666&quot; /&gt;
+        &lt;Separator Margin=&quot;0,15,0,0&quot; Height=&quot;20&quot; HorizontalAlignment=&quot;Stretch&quot; VerticalAlignment=&quot;Top&quot; Foreground=&quot;#FFD6E2F8&quot; Background=&quot;#FFD6E2F8&quot; /&gt;
+        &lt;Label Margin=&quot;0,25,0,0&quot; Name=&quot;ClientOSLabel&quot; Content=&quot;Os&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;12&quot; /&gt;
+        &lt;Label Margin=&quot;0,50,0,0&quot; Name=&quot;ClientArchLabel&quot; Content=&quot;Architecture&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;12&quot; /&gt;
+        &lt;Label Margin=&quot;0,75,0,0&quot; Name=&quot;ClientKernelLabel&quot; Content=&quot;Kernel&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;12&quot; /&gt;
+        &lt;Label Margin=&quot;0,100,0,0&quot; Name=&quot;ClientPsuedonameLabel&quot; Content=&quot;Psuedo name&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;12&quot; /&gt;
+        &lt;Label Margin=&quot;0,125,0,0&quot; Name=&quot;ClientDistributionLabel&quot; Content=&quot;Distribution&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;12&quot; /&gt;
+        &lt;Label Margin=&quot;0,150,0,0&quot; Name=&quot;ClientDistributionVersionLabel&quot; Content=&quot;Distribution version&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;12&quot; /&gt;
+      &lt;/Grid&gt;
+    &lt;/GroupBox&gt;
+
+    &lt;GroupBox Height=&quot;160&quot; Margin=&quot;0,0,0,0&quot; Name=&quot;groupBox3&quot; VerticalAlignment=&quot;Top&quot; BorderBrush=&quot;{x:Null}&quot; BorderThickness=&quot;0&quot; Grid.Row=&quot;3&quot;&gt;
+      &lt;Grid&gt;
+        &lt;Label Content=&quot;{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=ClientStatus}&quot; FontSize=&quot;12&quot; FontWeight=&quot;Bold&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,0,0,0&quot; VerticalAlignment=&quot;Top&quot; Foreground=&quot;#FF666666&quot; /&gt;
+        &lt;Separator Height=&quot;20&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;0,15,0,0&quot; VerticalAlignment=&quot;Top&quot; Foreground=&quot;#FFD6E2F8&quot; Background=&quot;#FFD6E2F8&quot; /&gt;
+        &lt;Label Content=&quot;Last seen&quot; FontSize=&quot;12&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,25,0,0&quot; Name=&quot;ClientLastSeenLabel&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+        &lt;Label Content=&quot;Binded&quot; FontSize=&quot;12&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,50,0,0&quot; Name=&quot;ClientBindedLabel&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+        &lt;Label Content=&quot;Version&quot; FontSize=&quot;12&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,75,0,0&quot; Name=&quot;ClientVersionLabel&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+        &lt;Label Content=&quot;Ip address&quot; FontSize=&quot;12&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,100,0,0&quot; Name=&quot;ClientIpAddressLabel&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+        &lt;Label Content=&quot;Port&quot; FontSize=&quot;12&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,125,0,0&quot; Name=&quot;ClientPortLabel&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+      &lt;/Grid&gt;
+    &lt;/GroupBox&gt;
+  &lt;/Grid&gt;
+&lt;/UserControl&gt;</pre></code><script type="text/javascript">
+			applyranges('src278', RANGES_278)
+		</script>
+	</body>
+</html>

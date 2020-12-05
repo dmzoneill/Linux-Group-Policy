@@ -1,0 +1,10 @@
+// for simplicity purposes the concrete type of 
+// IContextMenus is referred to as IContextMenus
+
+IContextMenus.RegisterContextMenuItem( typeof( ITargetType ) , new MenuItem() , this.CallBackMethod );
+
+private void CallBackMethod( object passBackItem )
+{
+	var targetItem = ( ITargetType ) passBackItem;
+	// do something with it
+}

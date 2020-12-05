@@ -1,0 +1,271 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_35 = [
+   [21,9,21,28,'dccv']
+, [22,9,22,10,'dccv']
+, [23,9,23,10,'dccv']
+, [33,9,33,10,'dccv']
+, [34,13,34,30,'dccv']
+, [36,13,36,14,'dccv']
+, [37,17,37,24,'dccv']
+, [37,35,37,36,'dccv']
+, [37,26,37,31,'dccv']
+, [38,17,38,18,'dccv']
+, [39,21,39,52,'dccv']
+, [40,21,40,22,'dccv']
+, [41,25,41,49,'dccv']
+, [42,21,42,22,'dccv']
+, [47,17,47,18,'dccv']
+, [37,32,37,34,'dccv']
+, [48,13,48,14,'dccv']
+, [53,13,53,28,'dccv']
+, [54,9,54,10,'dccv']
+, [63,9,63,10,'dccv']
+, [64,13,64,85,'dccv']
+, [65,13,65,49,'dccv']
+, [66,9,66,10,'dccv']
+, [75,9,75,10,'dccv']
+, [77,13,77,14,'dccv']
+, [78,17,78,66,'dccv']
+, [79,17,79,73,'dccv']
+, [80,17,80,36,'dccv']
+, [87,9,87,10,'dccv']
+, [96,9,96,10,'dccv']
+, [98,13,98,14,'dccv']
+, [99,17,99,50,'dccv']
+, [100,17,100,55,'dccv']
+, [102,17,102,69,'dccv']
+, [103,17,103,99,'dccv']
+, [104,17,104,55,'dccv']
+, [105,17,105,97,'dccv']
+, [106,17,106,56,'dccv']
+, [107,17,107,31,'dccv']
+, [109,13,109,37,'dccv']
+, [110,13,110,14,'dccv']
+, [111,17,111,53,'dccv']
+, [112,17,112,27,'dccv']
+, [114,9,114,10,'dccv']
+, [124,9,124,10,'dccv']
+, [125,13,125,70,'dccv']
+, [127,13,127,75,'dccv']
+, [129,13,129,35,'dccv']
+, [130,13,130,14,'dccv']
+, [131,17,131,77,'dccv']
+, [132,17,132,34,'dccv']
+, [133,17,133,18,'dccv']
+, [134,21,134,32,'dccv']
+, [139,9,139,10,'dccv']
+, [150,9,150,10,'dccv']
+, [151,13,151,40,'dccv']
+, [153,13,153,75,'dccv']
+, [155,13,155,35,'dccv']
+, [156,13,156,14,'dccv']
+, [157,17,157,77,'dccv']
+, [158,17,158,34,'dccv']
+, [159,17,159,18,'dccv']
+, [160,21,160,32,'dccv']
+, [165,9,165,10,'dccv']
+, [172,9,172,10,'dccv']
+, [173,13,173,65,'dccv']
+, [174,9,174,10,'dccv']
+, [44,21,44,22,'dcuc']
+, [45,25,45,94,'dcuc']
+, [46,21,46,22,'dcuc']
+, [49,13,49,37,'dcuc']
+, [50,13,50,14,'dcuc']
+, [51,17,51,53,'dcuc']
+, [52,13,52,14,'dcuc']
+, [82,13,82,37,'dcuc']
+, [83,13,83,14,'dcuc']
+, [84,17,84,53,'dcuc']
+, [85,17,85,27,'dcuc']
+, [136,13,136,14,'dcuc']
+, [138,13,138,25,'dcuc']
+, [162,13,162,14,'dcuc']
+, [164,13,164,25,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src35" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Reflection;
+using System.Text;
+using System.Windows.Markup;
+using LGP.Components.Factory.Interfaces.Infrastructure;
+
+#endregion
+
+namespace LGP.Components.Factory.Internal
+{
+    /// &lt;summary&gt;
+    ///   Utilies class used by the framework
+    /// &lt;/summary&gt;
+    public class Utilities : IUtilities
+    {
+        private static Utilities _instance;
+
+
+        private Utilities()
+        {
+        }
+
+        #region IUtilities Members
+
+        /// &lt;summary&gt;
+        ///   Cleans a given string, allowing only characters and numbers
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;s&quot;&gt;string&lt;/param&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public string CleanString( string s )
+        {
+            var cleaned = &quot;&quot;;
+            try
+            {
+                foreach( var c in s )
+                {
+                    if( char.IsLetterOrDigit( c ) )
+                    {
+                        cleaned += c.ToString();
+                    }
+                    else
+                    {
+                        Framework.Notification.Display( &quot;Illegal character removed&quot; , 4000 );
+                    }
+                }
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+            return cleaned;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Convert epoch time to windows time
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;unixTime&quot;&gt;seconds from 1970&lt;/param&gt;
+        /// &lt;returns&gt;DateTime&lt;/returns&gt;
+        public DateTime FromUnixTime( long unixTime )
+        {
+            var epoch = new DateTime( 1970 , 1 , 1 , 0 , 0 , 0 , DateTimeKind.Utc );
+            return epoch.AddSeconds( unixTime );
+        }
+
+
+        /// &lt;summary&gt;
+        /// Encodes string to base64
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;data&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public string Base64Encode( string data )
+        {
+            try
+            {
+                var encDataByte = Encoding.UTF8.GetBytes( data );
+                var encodedData = Convert.ToBase64String( encDataByte );
+                return encodedData;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+                return &quot;&quot;;
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        /// Decodes base64 string
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;data&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public string Base64Decode( string data )
+        {
+            try
+            {
+                var encoder = new UTF8Encoding();
+                var utf8Decode = encoder.GetDecoder();
+
+                var todecodeByte = Convert.FromBase64String( data );
+                var charCount = utf8Decode.GetCharCount( todecodeByte , 0 , todecodeByte.Length );
+                var decodedChar = new char[charCount];
+                utf8Decode.GetChars( todecodeByte , 0 , todecodeByte.Length , decodedChar , 0 );
+                var result = new String( decodedChar );
+                return result;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+                return &quot;&quot;;
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// Loads a resource file
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;assembly&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;tobject&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;relativeUrl&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public object LoadResource( Assembly assembly , object tobject , string relativeUrl )
+        {
+            var location = tobject.GetType().Namespace + relativeUrl;
+
+            var resource = assembly.GetManifestResourceStream( location );
+
+            if( resource != null )
+            {
+                var obj = XamlReader.Load( resource , new ParserContext() );
+                if( obj != null )
+                {
+                    return obj;
+                }
+            }
+
+            return null;
+        }
+
+        #endregion
+
+        /// &lt;summary&gt;
+        /// Loads a resource file
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;assembly&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;absoluteUrl&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public object LoadResource( Assembly assembly , string absoluteUrl )
+        {
+            var location = absoluteUrl;
+
+            var resource = assembly.GetManifestResourceStream( location );
+
+            if( resource != null )
+            {
+                var obj = XamlReader.Load( resource , new ParserContext() );
+                if( obj != null )
+                {
+                    return obj;
+                }
+            }
+
+            return null;
+        }
+
+        /// &lt;summary&gt;
+        ///   Gets an instance of the utility class
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static Utilities GetInstance()
+        {
+            return _instance ?? ( _instance = new Utilities() );
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src35', RANGES_35)
+		</script>
+	</body>
+</html>

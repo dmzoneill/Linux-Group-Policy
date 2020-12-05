@@ -1,0 +1,891 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGP.Modules.OrganizationUnitExplorer</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.CreateOu">
+            <summary>
+              Interaction logic for CreateOu.xaml
+            </summary>
+            <summary>
+            CreateOu
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.CreateOu.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.CreateOu.#ctor(System.Windows.Controls.UserControl,LGP.Components.Factory.Interfaces.Database.IOu,LGP.Components.Factory.Interfaces.Infrastructure.IDialog)">
+            <summary>
+              Constructor
+            </summary>
+            <param name = "parent">the parent control</param>
+            <param name = "ou">IOu</param>
+            <param name = "window">parent window</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.CreateOu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.OuViewer">
+            <summary>
+              Interaction logic for OuViewer.xaml
+            </summary>
+            <summary>
+            OuViewer
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.#ctor(LGP.Components.Factory.Interfaces.Database.IOu)">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.Update(LGP.Components.Factory.Interfaces.Database.IOu,LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Update this observer with a refernece to the ou
+            </summary>
+            <param name = "ou">Iou</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.Attach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Attach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.Detach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Detach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.Notify">
+            <summary>
+              Notify observers of this IOu
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.Dispose(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.SetDetailsPane(System.Windows.Controls.UserControl)">
+            <summary>
+            </summary>
+            <param name = "pane"></param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.Update">
+            <summary>
+              Used bu children to request update
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.Dispose">
+            <summary>
+              Aks the UserControl to do some clean up!
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.Refresh">
+            <summary>
+            Asks the Usercontrol to refresh itself
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.Pause">
+            <summary>
+            When the control is no longer in focus, asks it to pause ( heavy duty non critical, ie threads updating graphs )
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.Resume">
+            <summary>
+            When the tab comes back into focus, resume ( heavy duty non critical, ie threads updating graphs )
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuViewer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.ClientPane">
+            <summary>
+              Interaction logic for ClientPane.xaml
+            </summary>
+            <summary>
+            ClientPane
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.ClientPane.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.ClientPane.#ctor(LGP.Components.Factory.Interfaces.Database.IClient)">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.ClientPane.Update(LGP.Components.Factory.Interfaces.Database.IClient,LGP.Components.Factory.Interfaces.Database.IClientObserver)">
+            <summary>
+              Update this observer with a refernece to the client
+            </summary>
+            <param name = "client">IClient</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.ClientPane.Attach(LGP.Components.Factory.Interfaces.Database.IClientObserver)">
+            <summary>
+              Attach objewcts that observer this client
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.ClientPane.Detach(LGP.Components.Factory.Interfaces.Database.IClientObserver)">
+            <summary>
+              Detach objewcts that observer this client
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.ClientPane.Notify">
+            <summary>
+              Notify observers of this client
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.ClientPane.Dispose(LGP.Components.Factory.Interfaces.Database.IClientObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.ClientPane.GetClient">
+            <summary>
+              Get the client associated with this wrapper
+            </summary>
+            <returns>IOu</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.ClientPane.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.Add">
+            <summary>
+              Looks up a localized string similar to Add.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.AreYouSureDelete">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to delete the.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.Cancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.ClientId">
+            <summary>
+              Looks up a localized string similar to Client Identification.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.ClientOs">
+            <summary>
+              Looks up a localized string similar to Client operating system.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.ClientStatus">
+            <summary>
+              Looks up a localized string similar to Client Status.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.Create">
+            <summary>
+              Looks up a localized string similar to Create.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.DatabaseConnectionRequired">
+            <summary>
+              Looks up a localized string similar to Database connection required.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.Delete">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.DeleteOu">
+            <summary>
+              Looks up a localized string similar to Delete Organizational Unit.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.Domain">
+            <summary>
+              Looks up a localized string similar to Domain.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.Move">
+            <summary>
+              Looks up a localized string similar to Move.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.MoveOu">
+            <summary>
+              Looks up a localized string similar to Move Organizational Unit.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.NewOu">
+            <summary>
+              Looks up a localized string similar to New Organizational Unit.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.Ou">
+            <summary>
+              Looks up a localized string similar to Organizational Unit.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.OuClients">
+            <summary>
+              Looks up a localized string similar to Organization Clients.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.OuExplorer">
+            <summary>
+              Looks up a localized string similar to Organizational Unit Explorer.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.OuName">
+            <summary>
+              Looks up a localized string similar to Ou Name.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.OuTree">
+            <summary>
+              Looks up a localized string similar to Ou Tree.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.OuUnits">
+            <summary>
+              Looks up a localized string similar to Organizational Units.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.OuView">
+            <summary>
+              Looks up a localized string similar to Ou View.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.Parent">
+            <summary>
+              Looks up a localized string similar to Parent Ou.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.Refresh">
+            <summary>
+              Looks up a localized string similar to Refresh.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.Rename">
+            <summary>
+              Looks up a localized string similar to Rename.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.RenameOu">
+            <summary>
+              Looks up a localized string similar to Rename Organizational Unit.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.OrganizationUnitExplorer.Properties.Resources.To">
+            <summary>
+              Looks up a localized string similar to To.
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.OuTreeView">
+            <summary>
+              Interaction logic for UserControl1.xaml
+            </summary>
+            <summary>
+            OuTreeView
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuTreeView.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuTreeView.GetInstance">
+            <summary>
+              Get the instance of the module ( Singleton )
+            </summary>
+            <returns>Usercontrol instance</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuTreeView.Dispose">
+            <summary>
+              Aks the UserControl to do some clean up!
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuTreeView.Refresh">
+            <summary>
+            Asks the Usercontrol to refresh itself
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuTreeView.Pause">
+            <summary>
+            When the control is no longer in focus, asks it to pause ( heavy duty non critical, ie threads updating graphs )
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuTreeView.Resume">
+            <summary>
+            When the tab comes back into focus, resume ( heavy duty non critical, ie threads updating graphs )
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.OuTreeView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.Plugin">
+            <summary>
+              Concreate Implmentation and boundary class to Module Compoents
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Plugin.GetMainControl">
+            <summary>
+              Gets the main component of the module
+            </summary>
+            <returns>Usercontrol component</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Plugin.GetSidebarControl">
+            <summary>
+              Gets the side bar component of the module
+            </summary>
+            <returns>Usercontrol component</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Plugin.GetName">
+            <summary>
+              Get the component name
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Plugin.RegisterMenuEntries(LGP.Components.Factory.Interfaces.Component.IMenu)">
+            <summary>
+              Registers this components menu handlers
+            </summary>
+            <param name = "menu">The program main menu</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Plugin.GetIcon">
+            <summary>
+              Gets the icon associated with plugin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Plugin.GetBottombarControl">
+            <summary>
+              Gets the bottombar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Plugin.GetToolbarControl">
+            <summary>
+              Gets the toolbar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Plugin.GetPreferencesControl">
+            <summary>
+              Gets the preferences component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Plugin.GetComponentSideBarName">
+            <summary>
+              Gets the side bar component name
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Plugin.GetComponentContentName">
+            <summary>
+              Gets the component comtent name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Plugin.OutreeToolbarsItemClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Handler for this componets menu entries
+              Forwards the event to the message bus for subscribers interest
+            </summary>
+            <param name = "sender">The menu item that was clicked</param>
+            <param name = "e">The event details</param>
+        </member>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement">
+            <summary>
+              Interaction logic for WrapPanelOuElement.xaml
+            </summary>
+            <summary>
+            WrapPanelOuElement
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.#ctor(LGP.Components.Factory.Interfaces.Database.IOu,System.Int32,LGP.Modules.OrganizationUnitExplorer.OuViewer)">
+            <summary>
+            </summary>
+            <param name = "ou"></param>
+            <param name = "size"></param>
+            <param name = "parent"></param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.Update(LGP.Components.Factory.Interfaces.Database.IOu,LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Update this observer with a refernece to the ou
+            </summary>
+            <param name = "ou">Iou</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.Attach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Attach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.Detach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Detach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.Notify">
+            <summary>
+              Notify observers of this IOu
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.Dispose(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.GetOu">
+            <summary>
+              Get the ou associated with this wrapper
+            </summary>
+            <returns>IOu</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.IsSelected">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.Select">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.DeSelect">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.Resize(System.Int32)">
+            <summary>
+            </summary>
+            <param name = "resize"></param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.OnDrop(System.Windows.DragEventArgs)">
+            <summary>
+              Invoked when an unhandled <see cref = "E:System.Windows.DragDrop.DragEnter" /> attached event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name = "e">The <see cref = "T:System.Windows.DragEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.OnPreviewMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>
+              Invoked when an unhandled <see cref = "E:System.Windows.Input.Mouse.PreviewMouseMove" /> attached event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name = "e">The <see cref = "T:System.Windows.Input.MouseEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelOuElement.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.MoveOu">
+            <summary>
+              Interaction logic for MoveOu.xaml
+            </summary>
+            <summary>
+            MoveOu
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.MoveOu.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.MoveOu.#ctor(System.Windows.Controls.UserControl,LGP.Components.Factory.Interfaces.Database.IOu,LGP.Components.Factory.Interfaces.Infrastructure.IDialog)">
+            <summary>
+              Constructor
+            </summary>
+            <param name = "parent">parent control</param>
+            <param name = "ou">ou</param>
+            <param name = "window">popup window</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.MoveOu.NodeMouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+              Raises the <see cref = "E:System.Windows.Controls.Control.MouseDoubleClick" /> routed event.
+            </summary>
+            <param name = "sender">the object sending the event</param>
+            <param name = "e">The event data.</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.MoveOu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.DeleteOu">
+            <summary>
+              Interaction logic for DeleteOu.xaml
+            </summary>
+            <summary>
+            DeleteOu
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.DeleteOu.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.DeleteOu.#ctor(System.Windows.Controls.UserControl,LGP.Components.Factory.Interfaces.Database.IOu,LGP.Components.Factory.Interfaces.Infrastructure.IDialog,System.Boolean)">
+            <summary>
+              Constructor
+            </summary>
+            <param name = "parent">The parent control</param>
+            <param name = "ou">IOu</param>
+            <param name = "window">parent window</param>
+            <param name = "close"></param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.DeleteOu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement">
+            <summary>
+              Interaction logic for WrapPanelClientElement.xaml
+            </summary>
+            <summary>
+            WrapPanelClientElement
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.#ctor(LGP.Components.Factory.Interfaces.Database.IClient,System.Int32,LGP.Modules.OrganizationUnitExplorer.OuViewer)">
+            <summary>
+            </summary>
+            <param name = "client"></param>
+            <param name = "size"></param>
+            <param name = "parent"></param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.GetClient">
+            <summary>
+              Get the client associated with this wrapper
+            </summary>
+            <returns>IOu</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.IsSelected">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.Select">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.DeSelect">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.Resize(System.Int32)">
+            <summary>
+            </summary>
+            <param name = "resize"></param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.OnPreviewMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>
+              Invoked when an unhandled <see cref = "E:System.Windows.Input.Mouse.PreviewMouseMove" /> attached event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name = "e">The <see cref = "T:System.Windows.Input.MouseEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.Update(LGP.Components.Factory.Interfaces.Database.IClient,LGP.Components.Factory.Interfaces.Database.IClientObserver)">
+            <summary>
+              Update this observer with a refernece to the client
+            </summary>
+            <param name = "client">IClient</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.Attach(LGP.Components.Factory.Interfaces.Database.IClientObserver)">
+            <summary>
+              Attach objewcts that observer this client
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.Detach(LGP.Components.Factory.Interfaces.Database.IClientObserver)">
+            <summary>
+              Detach objewcts that observer this client
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.Notify">
+            <summary>
+              Notify observers of this client
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.Dispose(LGP.Components.Factory.Interfaces.Database.IClientObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.WrapPanelClientElement.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.Preferences">
+            <summary>
+              Interaction logic for Preferences.xaml
+            </summary>
+            <summary>
+            Preferences
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Preferences.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Preferences.GetName">
+            <summary>
+              Gets the name of the preferences Pane
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Preferences.GetControl">
+            <summary>
+              Gets the preferences window
+            </summary>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Preferences.Save">
+            <summary>
+              Aks the preferences panel to save its entries
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Preferences.Load(LGP.Components.Factory.Interfaces.Component.ISettings)">
+            <summary>
+              Asks the preferences to load its settings
+            </summary>
+            <param name="settingsParent"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Preferences.GetControlType">
+            <summary>
+            Gets the type it Controls
+            </summary>
+            <returns>Type</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Preferences.GetIcon">
+            <summary>
+            Gets the preferences icon
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Preferences.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.RenameOu">
+            <summary>
+              Interaction logic for RenameOu.xaml
+            </summary>
+            <summary>
+            RenameOu
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.RenameOu.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.RenameOu.#ctor(System.Windows.Controls.UserControl,LGP.Components.Factory.Interfaces.Database.IOu,LGP.Components.Factory.Interfaces.Infrastructure.IDialog)">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.RenameOu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.OuPane">
+            <summary>
+              Interaction logic for OuPane.xaml
+            </summary>
+            <summary>
+            OuPane
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.OuPane.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.OuPane.#ctor(LGP.Components.Factory.Interfaces.Database.IOu)">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.OuPane.Update(LGP.Components.Factory.Interfaces.Database.IOu,LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Update this observer with a refernece to the ou
+            </summary>
+            <param name = "ou">Iou</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.OuPane.Attach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Attach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.OuPane.Detach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Detach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.OuPane.Notify">
+            <summary>
+              Notify observers of this IOu
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.OuPane.Dispose(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.OuPane.GetOu">
+            <summary>
+              Get the ou associated with this wrapper
+            </summary>
+            <returns>IOu</returns>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.OuPane.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.TreeViewOuElement.Update(LGP.Components.Factory.Interfaces.Database.IOu,LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Update this observer with a refernece to the ou
+            </summary>
+            <param name = "ou">Iou</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.TreeViewOuElement.Attach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Attach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.TreeViewOuElement.Detach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Detach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.TreeViewOuElement.Notify">
+            <summary>
+              Notify observers of this IOu
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.TreeViewOuElement.Dispose(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "ou">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.TreeViewOuElement.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+              Invoked when an unhandled <see cref = "E:System.Windows.UIElement.MouseRightButtonDown" /> routed event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name = "e">The <see cref = "T:System.Windows.Input.MouseButtonEventArgs" /> that contains the event data. The event data reports that the right mouse button was pressed.</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.TreeViewOuElement.OnPreviewMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+              Invoked when an unhandled <see cref = "E:System.Windows.UIElement.PreviewMouseRightButtonDown" /> routed event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name = "e">The <see cref = "T:System.Windows.Input.MouseButtonEventArgs" /> that contains the event data. The event data reports that the right mouse button was pressed.</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.TreeViewOuElement.OnMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+              Raises the <see cref = "E:System.Windows.Controls.Control.MouseDoubleClick" /> routed event.
+            </summary>
+            <param name = "e">The event data.</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.TreeViewOuElement.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Invoked when an unhandled <see cref="E:System.Windows.UIElement.PreviewMouseLeftButtonDown"/> routed event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> that contains the event data. The event data reports that the left mouse button was pressed.</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.TreeViewOuElement.OnDrop(System.Windows.DragEventArgs)">
+            <summary>
+              Invoked when an unhandled <see cref = "E:System.Windows.DragDrop.DragEnter" /> attached event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name = "e">The <see cref = "T:System.Windows.DragEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.TreeViewOuElement.OnGiveFeedback(System.Windows.GiveFeedbackEventArgs)">
+            <summary>
+              Invoked when an unhandled <see cref = "E:System.Windows.DragDrop.GiveFeedback" /> attached event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name = "e">The <see cref = "T:System.Windows.GiveFeedbackEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls.TreeViewOuElement.OnDragEnter(System.Windows.DragEventArgs)">
+            <summary>
+              Invoked when an unhandled <see cref = "E:System.Windows.DragDrop.DragEnter" /> attached event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name = "e">The <see cref = "T:System.Windows.DragEventArgs" /> that contains the event data.</param>
+        </member>
+    </members>
+</doc>

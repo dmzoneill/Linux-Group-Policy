@@ -1,0 +1,136 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_8 = [
+   [1,13,1,77,'dccv']
+, [1,77,1,99,'dccv']
+, [1,77,1,115,'dccv']
+, [84,13,84,135,'dccv']
+, [95,13,95,135,'dccv']
+, [106,13,106,132,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src8" class="dotCoverSource"><pre>&lt;Window xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot; xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot; xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; xmlns:local=&quot;clr-namespace:LGP.Controls&quot; mc:Ignorable=&quot;d&quot; x:Class=&quot;LGP.LGPWindow&quot; Title=&quot;{Resx ResxName=LGP.Properties.Resources, Key=LinuxGroupPolicyStudio}&quot; x:Name=&quot;LGPMainWindow&quot; Height=&quot;650&quot; Width=&quot;1100&quot; MinHeight=&quot;300&quot; MinWidth=&quot;780&quot; Loaded=&quot;WindowLoaded&quot; WindowStartupLocation=&quot;CenterScreen&quot; Background=&quot;{x:Null}&quot; Opacity=&quot;1&quot; AllowsTransparency=&quot;True&quot; WindowStyle=&quot;None&quot; ResizeMode=&quot;CanResizeWithGrip&quot; Closing=&quot;LGPMainWindowClosing&quot; Padding=&quot;0&quot;&gt;
+
+  &lt;Grid x:Name=&quot;outer&quot;&gt;
+    &lt;Grid.RowDefinitions&gt;
+      &lt;RowDefinition Height=&quot;*&quot; /&gt;
+    &lt;/Grid.RowDefinitions&gt;
+    &lt;Grid.ColumnDefinitions&gt;
+      &lt;ColumnDefinition Width=&quot;250*&quot; /&gt;
+    &lt;/Grid.ColumnDefinitions&gt;
+    &lt;Border BorderBrush=&quot;Black&quot; BorderThickness=&quot;1&quot; Margin=&quot;0&quot; Grid.RowSpan=&quot;5&quot; Padding=&quot;10,10,10,10&quot; CornerRadius=&quot;3&quot;&gt;
+
+      &lt;Border.Background&gt;
+        &lt;LinearGradientBrush StartPoint=&quot;0.5,0&quot; EndPoint=&quot;0.5,1&quot;&gt;
+          &lt;GradientStop Color=&quot;#FFFFFFFF&quot; Offset=&quot;0.1&quot; /&gt;
+          &lt;GradientStop Color=&quot;#EEFFFFFF&quot; Offset=&quot;0.2&quot; /&gt;
+          &lt;GradientStop Color=&quot;#DDFFFFFF&quot; Offset=&quot;0.3&quot; /&gt;
+          &lt;GradientStop Color=&quot;#CCFFFFFF&quot; Offset=&quot;0.4&quot; /&gt;
+          &lt;GradientStop Color=&quot;#BBFFFFFF&quot; Offset=&quot;0.5&quot; /&gt;
+          &lt;GradientStop Color=&quot;#BBFFFFFF&quot; Offset=&quot;0.6&quot; /&gt;
+          &lt;GradientStop Color=&quot;#CCFFFFFF&quot; Offset=&quot;0.7&quot; /&gt;
+          &lt;GradientStop Color=&quot;#DDFFFFFF&quot; Offset=&quot;0.8&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFFFFFFF&quot; Offset=&quot;0.9&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFFFFFFF&quot; Offset=&quot;1.0&quot; /&gt;
+        &lt;/LinearGradientBrush&gt;
+      &lt;/Border.Background&gt;
+
+      &lt;Grid x:Name=&quot;main&quot; Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot;&gt;
+        &lt;Grid.RowDefinitions&gt;
+          &lt;RowDefinition Height=&quot;25&quot; MinHeight=&quot;25&quot; /&gt;
+          &lt;RowDefinition Height=&quot;1&quot; MinHeight=&quot;1&quot; /&gt;
+          &lt;RowDefinition Height=&quot;395*&quot; /&gt;
+          &lt;RowDefinition Height=&quot;1&quot; MinHeight=&quot;1&quot; /&gt;
+          &lt;RowDefinition Height=&quot;0&quot; MinHeight=&quot;0&quot; Name=&quot;statusBarRow&quot; /&gt;
+        &lt;/Grid.RowDefinitions&gt;
+        &lt;Grid.ColumnDefinitions&gt;
+          &lt;ColumnDefinition Width=&quot;220*&quot; MinWidth=&quot;200&quot; /&gt;
+          &lt;ColumnDefinition Width=&quot;500*&quot; MinWidth=&quot;250&quot; /&gt;
+          &lt;ColumnDefinition Width=&quot;80*&quot; MinWidth=&quot;80&quot; /&gt;
+        &lt;/Grid.ColumnDefinitions&gt;
+
+        &lt;Menu IsMainMenu=&quot;True&quot; Grid.Column=&quot;0&quot; Grid.Row=&quot;0&quot; Name=&quot;menu1&quot; Margin=&quot;0&quot; Padding=&quot;0&quot; HorizontalAlignment=&quot;Left&quot; Panel.ZIndex=&quot;200&quot; Background=&quot;Transparent&quot; VerticalAlignment=&quot;top&quot; /&gt;
+
+        &lt;Rectangle Grid.Row=&quot;1&quot; Grid.ColumnSpan=&quot;3&quot; x:Name=&quot;rectangle1&quot; Stroke=&quot;#00E3EFFF&quot; Margin=&quot;5,0,5,0&quot; /&gt;
+
+        &lt;local:Background Grid.Column=&quot;0&quot; Grid.ColumnSpan=&quot;3&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; Grid.Row=&quot;2&quot;&gt;&lt;/local:Background&gt;
+
+        &lt;Rectangle Grid.Row=&quot;3&quot; Grid.ColumnSpan=&quot;3&quot; Margin=&quot;5,0,5,0&quot; x:Name=&quot;rectangle2&quot; Stroke=&quot;#00E3EFFF&quot; Panel.ZIndex=&quot;1&quot; /&gt;
+
+        &lt;StatusBar Grid.Row=&quot;4&quot; Grid.ColumnSpan=&quot;3&quot; Margin=&quot;4,0,0,0&quot; Padding=&quot;0&quot; x:Name=&quot;statusBar1&quot; Panel.ZIndex=&quot;1&quot; Background=&quot;Transparent&quot; VerticalAlignment=&quot;Bottom&quot;&gt;
+          &lt;StatusBar.ItemsPanel&gt;
+            &lt;ItemsPanelTemplate&gt;
+              &lt;Grid&gt;
+                &lt;Grid.RowDefinitions&gt;
+                  &lt;RowDefinition Height=&quot;*&quot; /&gt;
+                &lt;/Grid.RowDefinitions&gt;
+                &lt;Grid.ColumnDefinitions&gt;
+                  &lt;ColumnDefinition Width=&quot;4*&quot; /&gt;
+                  &lt;ColumnDefinition Width=&quot;Auto&quot; /&gt;
+                  &lt;ColumnDefinition Width=&quot;*&quot; /&gt;
+                  &lt;ColumnDefinition Width=&quot;*&quot; /&gt;
+                &lt;/Grid.ColumnDefinitions&gt;
+              &lt;/Grid&gt;
+            &lt;/ItemsPanelTemplate&gt;
+          &lt;/StatusBar.ItemsPanel&gt;
+          &lt;StatusBarItem&gt;
+            &lt;TextBlock&gt;Ready&lt;/TextBlock&gt;
+          &lt;/StatusBarItem&gt;
+          &lt;StatusBarItem Grid.Column=&quot;1&quot;&gt;
+            &lt;ProgressBar Value=&quot;30&quot; Width=&quot;80&quot; Height=&quot;18&quot; Visibility=&quot;Hidden&quot; /&gt;
+          &lt;/StatusBarItem&gt;
+          &lt;StatusBarItem Grid.Column=&quot;2&quot;&gt;
+            &lt;TextBlock Visibility=&quot;Hidden&quot;&gt;Set&lt;/TextBlock&gt;
+          &lt;/StatusBarItem&gt;
+          &lt;StatusBarItem Grid.Column=&quot;3&quot;&gt;
+            &lt;TextBlock Visibility=&quot;Hidden&quot;&gt;Go!&lt;/TextBlock&gt;
+          &lt;/StatusBarItem&gt;
+        &lt;/StatusBar&gt;
+
+        &lt;Label Grid.Column=&quot;1&quot; Grid.Row=&quot;0&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;0&quot; Name=&quot;dragBar&quot; VerticalAlignment=&quot;Stretch&quot; /&gt;
+
+      &lt;/Grid&gt;
+    &lt;/Border&gt;
+
+    &lt;Button HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,15,65,0&quot; Width=&quot;17&quot; Height=&quot;17&quot; VerticalAlignment=&quot;Top&quot; Click=&quot;ButtonWindowMinimizeClick&quot; Opacity=&quot;0.3&quot;&gt;
+      &lt;Button.Background&gt;
+        &lt;LinearGradientBrush EndPoint=&quot;0,1&quot; StartPoint=&quot;0,0&quot;&gt;
+          &lt;GradientStop Color=&quot;#FFF3F3F3&quot; Offset=&quot;0&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFEBEBEB&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFDDDDDD&quot; Offset=&quot;0.806&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FF3F76BF&quot; Offset=&quot;1&quot; /&gt;
+        &lt;/LinearGradientBrush&gt;
+      &lt;/Button.Background&gt;
+    &lt;/Button&gt;
+
+    &lt;Button HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,15,40,0&quot; Width=&quot;17&quot; Height=&quot;17&quot; VerticalAlignment=&quot;Top&quot; Click=&quot;ButtonWindowMaximizeClick&quot; Opacity=&quot;0.3&quot;&gt;
+      &lt;Button.Background&gt;
+        &lt;LinearGradientBrush EndPoint=&quot;0,1&quot; StartPoint=&quot;0,0&quot;&gt;
+          &lt;GradientStop Color=&quot;#FFF3F3F3&quot; Offset=&quot;0&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFEBEBEB&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFDDDDDD&quot; Offset=&quot;0.806&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FF3F76BF&quot; Offset=&quot;1&quot; /&gt;
+        &lt;/LinearGradientBrush&gt;
+      &lt;/Button.Background&gt;
+    &lt;/Button&gt;
+
+    &lt;Button HorizontalAlignment=&quot;Right&quot; Margin=&quot;0,15,15,0&quot; Width=&quot;17&quot; Height=&quot;17&quot; VerticalAlignment=&quot;Top&quot; Click=&quot;ButtonWindowCloseClick&quot; Opacity=&quot;0.3&quot;&gt;
+      &lt;Button.Background&gt;
+        &lt;LinearGradientBrush EndPoint=&quot;0,1&quot; StartPoint=&quot;0,0&quot;&gt;
+          &lt;GradientStop Color=&quot;#FFF3F3F3&quot; Offset=&quot;0&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFEBEBEB&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FFDDDDDD&quot; Offset=&quot;0.806&quot; /&gt;
+          &lt;GradientStop Color=&quot;#FF3F76BF&quot; Offset=&quot;1&quot; /&gt;
+        &lt;/LinearGradientBrush&gt;
+      &lt;/Button.Background&gt;
+    &lt;/Button&gt;
+  &lt;/Grid&gt;
+&lt;/Window&gt;</pre></code><script type="text/javascript">
+			applyranges('src8', RANGES_8)
+		</script>
+	</body>
+</html>

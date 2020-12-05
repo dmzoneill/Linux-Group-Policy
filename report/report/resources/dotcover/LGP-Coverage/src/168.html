@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_168 = [
+   [1,13,1,77,'dccv']
+, [24,13,24,159,'dccv']
+, [43,13,43,104,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src168" class="dotCoverSource"><pre>&lt;UserControl x:Class=&quot;LGP.Components.Database.Preferences&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot; xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot; mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;293&quot; d:DesignWidth=&quot;598&quot; Background=&quot;White&quot;&gt;
+  &lt;Grid&gt;
+    &lt;Grid.ColumnDefinitions&gt;
+      &lt;ColumnDefinition Width=&quot;110&quot; /&gt;
+      &lt;ColumnDefinition Width=&quot;200*&quot; /&gt;
+      &lt;ColumnDefinition Width=&quot;110&quot; /&gt;
+    &lt;/Grid.ColumnDefinitions&gt;
+    &lt;Grid.RowDefinitions&gt;
+      &lt;RowDefinition Height=&quot;16&quot; /&gt;
+      &lt;RowDefinition Height=&quot;34&quot; /&gt;
+      &lt;RowDefinition Height=&quot;16&quot; /&gt;
+      &lt;RowDefinition Height=&quot;34&quot; /&gt;
+      &lt;RowDefinition Height=&quot;16&quot; /&gt;
+      &lt;RowDefinition Height=&quot;34&quot; /&gt;
+      &lt;RowDefinition Height=&quot;16&quot; /&gt;
+      &lt;RowDefinition Height=&quot;34&quot; /&gt;
+      &lt;RowDefinition Height=&quot;16&quot; /&gt;
+      &lt;RowDefinition Height=&quot;34&quot; /&gt;
+      &lt;RowDefinition Height=&quot;34&quot; /&gt;
+      &lt;RowDefinition Height=&quot;66*&quot; /&gt;
+    &lt;/Grid.RowDefinitions&gt;
+
+        &lt;Label Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; Content=&quot;{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=DbType}&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;5&quot; Name=&quot;label1&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+    &lt;ComboBox Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; ItemsSource=&quot;{Binding}&quot; Height=&quot;23&quot; Margin=&quot;5&quot; Name=&quot;databaseTypeComboBox&quot; VerticalAlignment=&quot;Top&quot; SelectionChanged=&quot;DatabaseTypeComboBoxSelectionChanged&quot; /&gt;
+        &lt;Label Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; Content=&quot;{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=SelectDbType}&quot; Height=&quot;22&quot; Padding=&quot;5,0,0,0&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;2,2,0,0&quot; Name=&quot;suggestionDatabaseType&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;10&quot; /&gt;
+
+        &lt;Label Grid.Row=&quot;3&quot; Height=&quot;28&quot; Content=&quot;{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=Hostname}&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;5&quot; Name=&quot;label2&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+    &lt;TextBox Grid.Row=&quot;3&quot; Grid.Column=&quot;1&quot; Height=&quot;23&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;5&quot; Name=&quot;hostnameTextBox&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+    &lt;Label Grid.Row=&quot;2&quot; Grid.Column=&quot;1&quot; Content=&quot;127.0.0.1, localhost, mysql.yourdomain.com&quot; Height=&quot;22&quot; Padding=&quot;5,0,0,0&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;2,2,0,0&quot; Name=&quot;suggestionDatabaseHost&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;10&quot; /&gt;
+
+        &lt;Label Grid.Row=&quot;5&quot; Height=&quot;28&quot; Content=&quot;{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=Username}&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;5&quot; Name=&quot;label3&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+    &lt;TextBox Grid.Row=&quot;5&quot; Grid.Column=&quot;1&quot; Height=&quot;23&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;5&quot; Name=&quot;usernameTextBox&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+    &lt;Label Grid.Row=&quot;4&quot; Grid.Column=&quot;1&quot; Content=&quot;root,administrator&quot; Height=&quot;22&quot; Padding=&quot;5,0,0,0&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;2,2,0,0&quot; Name=&quot;suggestionDatabaseUsername&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;10&quot; /&gt;
+
+        &lt;Label Grid.Row=&quot;7&quot; Height=&quot;28&quot; Content=&quot;{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=Password}&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;5&quot; Name=&quot;label4&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+    &lt;PasswordBox Grid.Row=&quot;7&quot; Grid.Column=&quot;1&quot; Height=&quot;23&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;5&quot; Name=&quot;passwordBox&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+    &lt;Label Grid.Row=&quot;6&quot; Grid.Column=&quot;1&quot; Content=&quot;&quot; Height=&quot;22&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;2,2,0,0&quot; Padding=&quot;5,0,0,0&quot; Name=&quot;suggestionDatabasePassword&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;10&quot; /&gt;
+
+        &lt;Label Grid.Row=&quot;9&quot; Height=&quot;28&quot; Content=&quot;{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=Database}&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;5&quot; Name=&quot;label5&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+    &lt;TextBox Grid.Row=&quot;9&quot; Grid.Column=&quot;1&quot; Height=&quot;23&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;5&quot; Name=&quot;databaseTextBox&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+    &lt;Label Grid.Row=&quot;8&quot; Grid.Column=&quot;1&quot; Content=&quot;lgp&quot; Height=&quot;22&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;2,2,0,0&quot; Padding=&quot;5,0,0,0&quot; Name=&quot;suggestionDatabaseDatabaseName&quot; VerticalAlignment=&quot;Top&quot; FontSize=&quot;10&quot; /&gt;
+
+        &lt;Button Grid.Column=&quot;1&quot; Grid.Row=&quot;10&quot; Height=&quot;23&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;5,5,0,0&quot; Name=&quot;connectButton&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;100&quot; Content=&quot;{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=TestConnection}&quot; Click=&quot;ConnectButtonClick&quot; /&gt;
+  &lt;/Grid&gt;
+&lt;/UserControl&gt;</pre></code><script type="text/javascript">
+			applyranges('src168', RANGES_168)
+		</script>
+	</body>
+</html>

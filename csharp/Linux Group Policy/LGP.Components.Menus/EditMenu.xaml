@@ -1,0 +1,7 @@
+﻿<MenuItem Header="{Resx ResxName=LGP.Components.Menus.Properties.Resources, Key=Edit}" x:Name="EditMenu" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <MenuItem Header="{Resx ResxName=LGP.Components.Menus.Properties.Resources, Key=Cut}" x:Name="Cut" />
+    <MenuItem Header="{Resx ResxName=LGP.Components.Menus.Properties.Resources, Key=Copy}" x:Name="Copy" />
+    <MenuItem Header="{Resx ResxName=LGP.Components.Menus.Properties.Resources, Key=Paste}" x:Name="Paste" />
+    <Separator/>
+    <MenuItem Header="{Resx ResxName=LGP.Components.Menus.Properties.Resources, Key=Preferences}" x:Name="Preferences" />
+</MenuItem>

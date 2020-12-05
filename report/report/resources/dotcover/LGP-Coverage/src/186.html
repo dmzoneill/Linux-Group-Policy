@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_186 = [
+   [24,9,24,29,'dccv']
+, [25,9,25,10,'dccv']
+, [26,13,26,40,'dccv']
+, [27,9,27,10,'dccv']
+, [36,9,36,10,'dccv']
+, [37,13,37,47,'dccv']
+, [38,9,38,10,'dccv']
+, [53,9,53,10,'dccv']
+, [54,13,54,33,'dccv']
+, [55,13,55,46,'dccv']
+, [56,13,56,43,'dccv']
+, [59,13,59,99,'dccv']
+, [60,9,60,10,'dccv']
+, [68,9,68,10,'dccv']
+, [69,13,69,43,'dccv']
+, [70,13,70,46,'dccv']
+, [71,13,71,55,'dccv']
+, [72,13,72,49,'dccv']
+, [73,9,73,10,'dccv']
+, [80,9,80,10,'dccv']
+, [81,13,81,46,'dccv']
+, [82,9,82,10,'dccv']
+, [89,9,89,10,'dccv']
+, [90,13,90,85,'dccv']
+, [91,9,91,10,'dccv']
+, [96,9,96,10,'dccv']
+, [97,9,97,10,'dccv']
+, [45,9,45,10,'dcuc']
+, [46,13,46,25,'dcuc']
+, [47,9,47,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src186" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Component;
+using LGP.Components.Factory.Interfaces.Database;
+using LGP.Components.Factory.Interfaces.Module;
+
+#endregion
+
+namespace LGP.Components.Database.Mysql
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for Preferences.xaml
+    /// &lt;/summary&gt;
+    public partial class Preferences : IPreferences
+    {
+        private ISettings _parent;
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        public Preferences()
+        {
+            this.InitializeComponent();
+        }
+
+        #region Implementation of IPreferences
+
+        /// &lt;summary&gt;
+        ///   Gets the name of the preferences Pane
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public string GetName()
+        {
+            return Properties.Resources.Mysql;
+        }
+
+        /// &lt;summary&gt;
+        ///   Gets the preferences window
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;UserControl&lt;/returns&gt;
+        public UserControl GetControl()
+        {
+            return this;
+        }
+
+        /// &lt;summary&gt;
+        ///   Aks the preferences panel to save its entries
+        /// &lt;/summary&gt;
+        public void Save()
+        {
+            this._parent = null;
+            var regedit = Framework.Registry;
+            var port = this.textBox1.Text;
+            int intport;
+
+            regedit.WriteKey( &quot;MysqlPort&quot; , int.TryParse( port , out intport ) ? intport : 3306 );
+        }
+
+        /// &lt;summary&gt;
+        ///   Asks the preferences to load its settings
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;settingsParent&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public void Load( ISettings settingsParent )
+        {
+            this._parent = settingsParent;
+            var regedit = Framework.Registry;
+            var port = regedit.ReadKey( &quot;MysqlPort&quot; );
+            this.textBox1.Text = port ?? &quot;3306&quot;;
+        }
+
+        /// &lt;summary&gt;
+        /// Gets the type it Controls
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Type&lt;/returns&gt;
+        public Type GetControlType()
+        {
+            return typeof( IDatabaseModule );
+        }
+
+        /// &lt;summary&gt;
+        /// Gets the preferences icon
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public Image GetIcon()
+        {
+            return Framework.Images.GetImage( &quot;mysql&quot; , &quot;VS2010ImageLibrary&quot; , 14 );
+        }
+
+        #endregion
+
+        private void SetDefaultPortButtonClickClick( object sender , System.Windows.RoutedEventArgs e )
+        {
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src186', RANGES_186)
+		</script>
+	</body>
+</html>

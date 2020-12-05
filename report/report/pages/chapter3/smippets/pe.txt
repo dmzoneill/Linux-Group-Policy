@@ -1,0 +1,15 @@
+sub processDSLExternal
+{
+	my $_ = shift;
+	
+	my $regex_blocks = '#(\w+)(\s+:|:)(.*?):(\w+)#';    
+    my $interchange = "";    
+    
+    while( $_ =~ /$regex_blocks/gis )
+    {      
+		$interchange = InterpreterHelper::getInstance()->interpretDslActions( $3 );
+    }            
+    s/$regex_blocks/$interchange/sm;
+    	
+	return $_;
+}

@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls.RenameOu" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" d:DesignHeight="125" d:DesignWidth="255" Height="125" Width="255" Loaded="UserControlLoaded">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="30" />
+      <RowDefinition Height="60" />
+      <RowDefinition Height="30" />
+    </Grid.RowDefinitions>
+    <Label Content="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=RenameOu}" Height="28" HorizontalAlignment="Left" Margin="5,0,0,0" Name="label1" VerticalAlignment="Top" FontWeight="Bold" />
+    <Label Content="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=RenameOu}" Grid.Row="1" Height="24" HorizontalAlignment="Left" Margin="5" Name="label3" VerticalAlignment="Top" FontSize="10" FontWeight="Bold" />
+    <TextBox Grid.Row="1" Height="20" HorizontalAlignment="Stretch" Margin="8,30,8,0" Name="OuNameTextBox" VerticalAlignment="Top" FontSize="10" TextChanged="OuNameTextBoxTextChanged" />
+    <Button Content="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=Rename}" Grid.Row="2" Height="20" HorizontalAlignment="Right" Margin="5" Name="button1" VerticalAlignment="Center" Width="75" FontSize="10" Click="RenameButtonClick" />
+    <Button Content="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=Cancel}" Grid.Row="2" Height="20" HorizontalAlignment="Left" Margin="5" Name="button2" VerticalAlignment="Center" Width="75" FontSize="10" Click="CancelButtonClick" />
+    <Image Grid.RowSpan="2" Height="32" HorizontalAlignment="Right" Margin="0,0,5,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="32" />
+  </Grid>
+</UserControl>

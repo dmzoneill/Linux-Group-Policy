@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_20 = [
+   [18,9,18,38,'dccv']
+, [19,9,19,10,'dccv']
+, [20,13,20,34,'dccv']
+, [21,9,21,10,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src20" class="dotCoverSource"><pre>#region
+
+using System;
+
+#endregion
+
+namespace LGP.Components.Factory.Publishers.Events
+{
+    /// &lt;summary&gt;
+    ///   Abstract type for the publish subscribe message
+    /// &lt;/summary&gt;
+    public class Event
+    {
+        /// &lt;summary&gt;
+        ///   Base Constructor
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sender&quot;&gt;The object that raised the event&lt;/param&gt;
+        public Event( Object sender )
+        {
+            this.Sender = sender;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Accessor Mutator for the sender property
+        /// &lt;/summary&gt;
+        public Object Sender
+        {
+            get;
+            set;
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src20', RANGES_20)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_328 = [
+   [1,13,1,77,'dccv']
+, [40,13,40,104,'dccv']
+, [46,13,46,140,'dccv']
+, [69,13,69,103,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src328" class="dotCoverSource"><pre>&lt;UserControl x:Class=&quot;LGP.Modules.ServerControl.ConnectionController&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot; xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot; mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;400&quot; d:DesignWidth=&quot;800&quot;&gt;
+  &lt;Grid&gt;
+    &lt;Grid.ColumnDefinitions&gt;
+      &lt;ColumnDefinition Width=&quot;400*&quot; MinWidth=&quot;250&quot; /&gt;
+      &lt;ColumnDefinition Width=&quot;2&quot; /&gt;
+      &lt;ColumnDefinition Width=&quot;245&quot; Name=&quot;DetailsColumn&quot; MinWidth=&quot;180&quot; /&gt;
+    &lt;/Grid.ColumnDefinitions&gt;
+
+    &lt;Grid&gt;
+      &lt;Grid.ColumnDefinitions&gt;
+        &lt;ColumnDefinition Width=&quot;180&quot; /&gt;
+        &lt;ColumnDefinition Width=&quot;250*&quot; /&gt;
+        &lt;ColumnDefinition Width=&quot;40&quot; /&gt;
+      &lt;/Grid.ColumnDefinitions&gt;
+      &lt;Grid.RowDefinitions&gt;
+        &lt;RowDefinition Height=&quot;45&quot; /&gt;
+        &lt;RowDefinition Height=&quot;25&quot; /&gt;
+        &lt;RowDefinition Height=&quot;1&quot; /&gt;
+        &lt;RowDefinition Height=&quot;40&quot; /&gt;
+        &lt;RowDefinition Height=&quot;40&quot; /&gt;
+        &lt;RowDefinition Height=&quot;40&quot; /&gt;
+        &lt;RowDefinition Height=&quot;32&quot; /&gt;
+        &lt;RowDefinition Height=&quot;1&quot; /&gt;
+        &lt;RowDefinition Height=&quot;60*&quot; /&gt;
+        &lt;RowDefinition Height=&quot;62*&quot; /&gt;
+        &lt;RowDefinition Height=&quot;15&quot; /&gt;
+        &lt;RowDefinition Height=&quot;40&quot; /&gt;
+        &lt;RowDefinition Height=&quot;40&quot; /&gt;
+      &lt;/Grid.RowDefinitions&gt;
+
+
+      &lt;Image Height=&quot;20&quot; HorizontalAlignment=&quot;Left&quot; Name=&quot;ServerImage&quot; Stretch=&quot;Fill&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;20&quot; Margin=&quot;28,15,5,5&quot; /&gt;
+
+      &lt;Label Content=&quot;{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=ServerControl}&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;50,5,5,5&quot; Name=&quot;label1&quot; VerticalAlignment=&quot;Stretch&quot; FontSize=&quot;16&quot; FontWeight=&quot;Bold&quot; Foreground=&quot;#FF9ABFE5&quot; Grid.ColumnSpan=&quot;3&quot; Height=&quot;30&quot; /&gt;
+
+      &lt;Label Grid.Row=&quot;1&quot; Content=&quot;{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=ManualConnection}&quot; Height=&quot;25&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;25,2,2,2&quot; VerticalAlignment=&quot;Stretch&quot; FontSize=&quot;10&quot; FontWeight=&quot;Bold&quot; Grid.ColumnSpan=&quot;3&quot; Foreground=&quot;#FF666666&quot; /&gt;
+      &lt;Border BorderBrush=&quot;#FFAEC7E5&quot; BorderThickness=&quot;0&quot; HorizontalAlignment=&quot;Stretch&quot; VerticalAlignment=&quot;Stretch&quot; Grid.Row=&quot;2&quot; Background=&quot;#FFD6E2F8&quot; Grid.ColumnSpan=&quot;3&quot; Margin=&quot;25,0,25,0&quot; /&gt;
+      &lt;Label Content=&quot;{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=ServerIp}&quot; Grid.Row=&quot;3&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;35,5,5,0&quot; Name=&quot;label2&quot; VerticalAlignment=&quot;Center&quot; /&gt;
+      &lt;TextBox Grid.Column=&quot;1&quot; Grid.Row=&quot;3&quot; Height=&quot;23&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;5,5,5,0&quot; Name=&quot;textBox1&quot; VerticalAlignment=&quot;Center&quot; /&gt;
+      &lt;Button Content=&quot;{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=Connect}&quot; Grid.Column=&quot;1&quot; Grid.Row=&quot;4&quot; Height=&quot;23&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;5,5,5,0&quot; Name=&quot;button1&quot; VerticalAlignment=&quot;Top&quot; Click=&quot;ConnectServerButtonClick&quot; Width=&quot;100&quot; /&gt;
+      &lt;Label Content=&quot;&quot; Grid.Column=&quot;1&quot; Grid.Row=&quot;5&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;5,5,5,0&quot; Name=&quot;label3&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;200&quot; /&gt;
+
+      &lt;Label Grid.Row=&quot;6&quot; Content=&quot;{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=ServerDiscovery}&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;25,7,2,2&quot; VerticalAlignment=&quot;Stretch&quot; FontSize=&quot;10&quot; FontWeight=&quot;Bold&quot; Grid.ColumnSpan=&quot;3&quot; Foreground=&quot;#FF666666&quot; /&gt;
+      &lt;Border BorderBrush=&quot;#FFAEC7E5&quot; BorderThickness=&quot;0&quot; HorizontalAlignment=&quot;Stretch&quot; VerticalAlignment=&quot;Stretch&quot; Grid.Row=&quot;7&quot; Background=&quot;#FFD6E2F8&quot; Grid.ColumnSpan=&quot;3&quot; Margin=&quot;25,0,25,0&quot; /&gt;
+      &lt;Label Content=&quot;{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=Detected}&quot; Grid.Row=&quot;8&quot; Height=&quot;28&quot; Margin=&quot;35,10,5,0&quot; Name=&quot;label4&quot; VerticalAlignment=&quot;Top&quot; /&gt;
+      &lt;ListBox HorizontalAlignment=&quot;Stretch&quot; ItemsSource=&quot;{Binding}&quot; Margin=&quot;5,10,5,0&quot; Name=&quot;ServerListBox&quot; VerticalAlignment=&quot;Stretch&quot; Grid.Column=&quot;1&quot; Grid.Row=&quot;8&quot; Grid.RowSpan=&quot;2&quot; PreviewMouseDoubleClick=&quot;ServerListNodeDoubleClick&quot; /&gt;
+      &lt;Border BorderThickness=&quot;0&quot; Grid.Column=&quot;1&quot; Grid.Row=&quot;10&quot; HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;5,0,5,5&quot; Name=&quot;border1&quot; VerticalAlignment=&quot;Stretch&quot;&gt;
+        &lt;Border.Background&gt;
+          &lt;LinearGradientBrush&gt;
+            &lt;GradientStop x:Name=&quot;stop1&quot; Color=&quot;White&quot; Offset=&quot;-0.2&quot; /&gt;
+            &lt;GradientStop x:Name=&quot;stop2&quot; Color=&quot;#FFAEC7E5&quot; Offset=&quot;-0.1&quot; /&gt;
+            &lt;GradientStop x:Name=&quot;stop3&quot; Color=&quot;#FFAEC7E5&quot; Offset=&quot;0.0&quot; /&gt;
+            &lt;GradientStop x:Name=&quot;stop4&quot; Color=&quot;White&quot; Offset=&quot;0.1&quot; /&gt;
+          &lt;/LinearGradientBrush&gt;
+        &lt;/Border.Background&gt;
+        &lt;Border.Triggers&gt;
+          &lt;EventTrigger RoutedEvent=&quot;Border.Loaded&quot;&gt;
+            &lt;BeginStoryboard&gt;
+              &lt;Storyboard RepeatBehavior=&quot;Forever&quot; AutoReverse=&quot;True&quot;&gt;
+                &lt;DoubleAnimation Storyboard.TargetName=&quot;stop1&quot; Storyboard.TargetProperty=&quot;Offset&quot; From=&quot;-0.2&quot; To=&quot;0.9&quot; Duration=&quot;0:0:3&quot; /&gt;
+                &lt;DoubleAnimation Storyboard.TargetName=&quot;stop2&quot; Storyboard.TargetProperty=&quot;Offset&quot; From=&quot;-0.1&quot; To=&quot;1.0&quot; Duration=&quot;0:0:3&quot; /&gt;
+                &lt;DoubleAnimation Storyboard.TargetName=&quot;stop3&quot; Storyboard.TargetProperty=&quot;Offset&quot; From=&quot;0.0&quot; To=&quot;1.1&quot; Duration=&quot;0:0:3&quot; /&gt;
+                &lt;DoubleAnimation Storyboard.TargetName=&quot;stop4&quot; Storyboard.TargetProperty=&quot;Offset&quot; From=&quot;0.1&quot; To=&quot;1.2&quot; Duration=&quot;0:0:3&quot; /&gt;
+              &lt;/Storyboard&gt;
+            &lt;/BeginStoryboard&gt;
+          &lt;/EventTrigger&gt;
+        &lt;/Border.Triggers&gt;
+      &lt;/Border&gt;
+      &lt;Button Content=&quot;{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=Select}&quot; Height=&quot;23&quot; HorizontalAlignment=&quot;Right&quot; Margin=&quot;5&quot; Name=&quot;button2&quot; VerticalAlignment=&quot;Top&quot; Grid.Column=&quot;1&quot; Grid.Row=&quot;11&quot; Click=&quot;SelectServerButtonClick&quot; Width=&quot;100&quot; /&gt;
+      &lt;Label Content=&quot;&quot; Grid.Column=&quot;1&quot; Grid.Row=&quot;12&quot; Height=&quot;28&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;5&quot; Name=&quot;label5&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;200&quot; /&gt;
+
+    &lt;/Grid&gt;
+
+    &lt;GridSplitter Grid.RowSpan=&quot;13&quot; Grid.Row=&quot;0&quot; Grid.Column=&quot;1&quot; HorizontalAlignment=&quot;Stretch&quot; VerticalAlignment=&quot;Stretch&quot; Background=&quot;#FFD6E2F8&quot; /&gt;
+
+    &lt;Border BorderThickness=&quot;0&quot; Grid.Column=&quot;2&quot; HorizontalAlignment=&quot;Stretch&quot; Name=&quot;ConnectionViewerContainer&quot; VerticalAlignment=&quot;Stretch&quot; /&gt;
+  &lt;/Grid&gt;
+&lt;/UserControl&gt;</pre></code><script type="text/javascript">
+			applyranges('src328', RANGES_328)
+		</script>
+	</body>
+</html>

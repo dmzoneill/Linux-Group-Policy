@@ -1,0 +1,24 @@
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Linux Group Policy.exe
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Linux Group Policy.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\AvalonDock.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\ImageLibrary.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\ImageLibrary.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\MainWindow.baml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\Splash.baml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\Splash.g.cs
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\App.g.cs
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\Linux Group Policy_MarkupCompile.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\Linux Group Policy.g.resources
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\LGP.Properties.Resources.resources
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\Linux Group Policy.exe
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\obj\x86\Debug\Linux Group Policy.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Microsoft.Practices.Prism.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\LGPMessageBus.pdb

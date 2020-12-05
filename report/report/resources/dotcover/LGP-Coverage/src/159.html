@@ -1,0 +1,293 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_159 = [
+   [29,9,29,10,'dccv']
+, [30,13,30,44,'dccv']
+, [31,13,31,42,'dccv']
+, [32,9,32,10,'dccv']
+, [46,9,46,10,'dccv']
+, [47,13,47,93,'dccv']
+, [49,13,49,36,'dccv']
+, [52,13,52,14,'dccv']
+, [53,17,53,49,'dccv']
+, [54,17,54,37,'dccv']
+, [55,17,55,71,'dccv']
+, [56,17,56,35,'dccv']
+, [57,17,57,39,'dccv']
+, [58,13,58,14,'dccv']
+, [64,13,64,25,'dccv']
+, [65,9,65,10,'dccv']
+, [76,9,76,10,'dccv']
+, [80,13,80,14,'dccv']
+, [81,17,81,50,'dccv']
+, [82,17,82,42,'dccv']
+, [83,13,83,14,'dccv']
+, [89,13,89,25,'dccv']
+, [90,9,90,10,'dccv']
+, [99,9,99,10,'dccv']
+, [100,13,100,99,'dccv']
+, [102,13,102,30,'dccv']
+, [105,13,105,14,'dccv']
+, [106,17,106,90,'dccv']
+, [107,17,107,49,'dccv']
+, [108,17,108,18,'dccv']
+, [109,21,109,64,'dccv']
+, [110,21,110,51,'dccv']
+, [111,17,111,18,'dccv']
+, [112,13,112,14,'dccv']
+, [118,13,118,25,'dccv']
+, [119,9,119,10,'dccv']
+, [152,9,152,10,'dccv']
+, [153,13,153,30,'dccv']
+, [154,13,154,45,'dccv']
+, [155,13,155,50,'dccv']
+, [156,13,156,46,'dccv']
+, [157,13,157,34,'dccv']
+, [158,13,158,49,'dccv']
+, [159,13,159,44,'dccv']
+, [160,13,160,32,'dccv']
+, [162,13,165,15,'dccv']
+, [166,13,166,22,'dccv']
+, [167,9,167,10,'dccv']
+, [59,13,59,31,'dcuc']
+, [60,13,60,14,'dcuc']
+, [61,17,61,29,'dcuc']
+, [62,13,62,14,'dcuc']
+, [84,13,84,31,'dcuc']
+, [85,13,85,14,'dcuc']
+, [86,17,86,29,'dcuc']
+, [87,13,87,14,'dcuc']
+, [113,13,113,31,'dcuc']
+, [114,13,114,14,'dcuc']
+, [115,17,115,29,'dcuc']
+, [116,13,116,14,'dcuc']
+, [128,9,128,10,'dcuc']
+, [129,13,129,69,'dcuc']
+, [130,13,130,45,'dcuc']
+, [131,13,131,50,'dcuc']
+, [132,13,132,46,'dcuc']
+, [133,13,133,34,'dcuc']
+, [134,13,134,49,'dcuc']
+, [135,13,135,44,'dcuc']
+, [136,13,136,32,'dcuc']
+, [138,13,141,15,'dcuc']
+, [142,13,142,22,'dcuc']
+, [143,9,143,10,'dcuc']
+, [177,9,177,10,'dcuc']
+, [178,13,178,30,'dcuc']
+, [179,13,179,45,'dcuc']
+, [180,13,180,47,'dcuc']
+, [181,13,181,46,'dcuc']
+, [182,13,182,34,'dcuc']
+, [183,13,183,46,'dcuc']
+, [184,13,184,44,'dcuc']
+, [185,13,185,32,'dcuc']
+, [187,13,190,15,'dcuc']
+, [193,13,193,22,'dcuc']
+, [194,9,194,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src159" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Windows;
+using System.Windows.Media.Imaging;
+using LGP.ImageWindowsShellIcons;
+using Image = System.Windows.Controls.Image;
+
+#endregion
+
+namespace LGP.ImageLibrary
+{
+    /// &lt;summary&gt;
+    ///   The Control class for accessing the image resources
+    /// &lt;/summary&gt;
+    public class IconSet
+    {
+        private static readonly string Namepsace;
+
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        static IconSet()
+        {
+            var myType = typeof( IconSet );
+            Namepsace = myType.Namespace;
+        }
+
+
+        [DllImport( &quot;shell32.dll&quot; , CharSet = CharSet.Auto )]
+        internal static extern int ExtractIconEx( string stExeFileName , int nIconIndex , IntPtr phiconLarge , IntPtr phiconSmall , int nIcons );
+
+
+        /// &lt;summary&gt;
+        ///   Gets an image from the dll resources
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;name&quot;&gt;The name of the image&lt;/param&gt;
+        /// &lt;param name = &quot;folder&quot;&gt;The folder in which the resource can be found&lt;/param&gt;
+        /// &lt;returns&gt;An image&lt;/returns&gt;
+        public static Image GetImage( string name , string folder )
+        {
+            var uri = &quot;/&quot; + Namepsace + &quot;;component/Images/&quot; + folder + &quot;/&quot; + name + &quot;.png&quot;;
+
+            var icon = new Image();
+
+            try
+            {
+                var bmImage = new BitmapImage();
+                bmImage.BeginInit();
+                bmImage.UriSource = new Uri( uri , UriKind.Relative );
+                bmImage.EndInit();
+                icon.Source = bmImage;
+            }
+            catch( Exception )
+            {
+                icon = null;
+            }
+
+            return icon;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets an image from the dll resources
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;name&quot;&gt;The name of the image&lt;/param&gt;
+        /// &lt;param name = &quot;folder&quot;&gt;The folder in which the resource can be found&lt;/param&gt;
+        /// &lt;param name = &quot;maxwidth&quot;&gt;The maxwidth of the returned image&lt;/param&gt;
+        /// &lt;returns&gt;An image&lt;/returns&gt;
+        public static Image GetImage( string name , string folder , int maxwidth )
+        {
+            Image icon;
+
+            try
+            {
+                icon = GetImage( name , folder );
+                icon.MaxWidth = maxwidth;
+            }
+            catch( Exception )
+            {
+                icon = null;
+            }
+
+            return icon;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets an icon stored in the dll resources
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;name&quot;&gt;The name of the icon&lt;/param&gt;
+        /// &lt;returns&gt;An icon (ico)&lt;/returns&gt;
+        public static Icon GetIcon( string name )
+        {
+            var uri = &quot;pack://application:,,,/&quot; + Namepsace + &quot;;component/Icons/&quot; + name + &quot;.ico&quot;;
+
+            Icon icon = null;
+
+            try
+            {
+                var streamResourceInfo = Application.GetResourceStream( new Uri( uri ) );
+                if( streamResourceInfo != null )
+                {
+                    var iconStream = streamResourceInfo.Stream;
+                    icon = new Icon( iconStream );
+                }
+            }
+            catch( Exception )
+            {
+                icon = null;
+            }
+
+            return icon;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the icon associated with the shell extension
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;filename&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static Image GetExtensionIcon( string filename )
+        {
+            var bmp = ShellIcon.GetSmallIcon( filename ).ToBitmap();
+            var stream = new MemoryStream();
+            bmp.Save( stream , ImageFormat.Png );
+            var bmpImage = new BitmapImage();
+            bmpImage.BeginInit();
+            stream.Seek( 0 , SeekOrigin.Begin );
+            bmpImage.StreamSource = stream;
+            bmpImage.EndInit();
+
+            var j = new Image
+            {
+                Source = bmpImage
+            };
+            return j;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Convert bitmap to image
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;bitmap&quot;&gt;Bitmap to convert&lt;/param&gt;
+        /// &lt;returns&gt;Image&lt;/returns&gt;
+        public static Image ConvertBitmapToImage( Bitmap bitmap )
+        {
+            var bmp = bitmap;
+            var stream = new MemoryStream();
+            bmp.Save( stream , ImageFormat.Png );
+            var bmpImage = new BitmapImage();
+            bmpImage.BeginInit();
+            stream.Seek( 0 , SeekOrigin.Begin );
+            bmpImage.StreamSource = stream;
+            bmpImage.EndInit();
+
+            var j = new Image
+            {
+                Source = bmpImage
+            };
+            return j;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Convert bitmap to image
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;bitmap&quot;&gt;Bitmap to convert&lt;/param&gt;
+        /// &lt;param name=&quot;size&quot;&gt;image size&lt;/param&gt;
+        /// &lt;returns&gt;Image&lt;/returns&gt;
+        public static Image ConvertBitmapToImage(Bitmap bitmap , int size )
+        {
+            var bmp = bitmap;
+            var stream = new MemoryStream();
+            bmp.Save(stream, ImageFormat.Png);
+            var bmpImage = new BitmapImage();
+            bmpImage.BeginInit();
+            stream.Seek(0, SeekOrigin.Begin);
+            bmpImage.StreamSource = stream;
+            bmpImage.EndInit();
+
+            var j = new Image
+            {
+                Source = bmpImage , MaxWidth = size
+            };
+
+
+            return j;
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src159', RANGES_159)
+		</script>
+	</body>
+</html>

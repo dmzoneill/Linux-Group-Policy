@@ -1,0 +1,10 @@
+C:\lgp\Linux Group Policy\LGP.Factory\obj\Release\ResolveAssemblyReference.cache
+C:\lgp\Linux Group Policy\LGP.Factory\bin\Release\LGP.Factory.dll
+C:\lgp\Linux Group Policy\LGP.Factory\bin\Release\LGP.Factory.pdb
+C:\lgp\Linux Group Policy\LGP.Factory\bin\Release\Microsoft.Practices.Prism.dll
+C:\lgp\Linux Group Policy\LGP.Factory\bin\Release\Microsoft.Practices.ServiceLocation.dll
+C:\lgp\Linux Group Policy\LGP.Factory\bin\Release\Microsoft.Practices.Prism.pdb
+C:\lgp\Linux Group Policy\LGP.Factory\bin\Release\Microsoft.Practices.Prism.xml
+C:\lgp\Linux Group Policy\LGP.Factory\bin\Release\Microsoft.Practices.ServiceLocation.xml
+C:\lgp\Linux Group Policy\LGP.Factory\obj\Release\LGP.Factory.dll
+C:\lgp\Linux Group Policy\LGP.Factory\obj\Release\LGP.Factory.pdb

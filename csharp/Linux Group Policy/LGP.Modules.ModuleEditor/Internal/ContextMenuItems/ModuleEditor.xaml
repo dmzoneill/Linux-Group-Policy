@@ -1,0 +1,1 @@
+﻿<MenuItem xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Header="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=ModuleEditor}" Tag="ModuleEditor"/>

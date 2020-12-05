@@ -1,0 +1,248 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_204 = [
+   [25,9,25,30,'dccv']
+, [26,9,26,10,'dccv']
+, [28,13,28,14,'dccv']
+, [29,17,29,44,'dccv']
+, [30,17,30,58,'dccv']
+, [31,13,31,14,'dccv']
+, [36,9,36,10,'dccv']
+, [45,9,45,10,'dccv']
+, [47,13,47,14,'dccv']
+, [48,17,48,74,'dccv']
+, [49,17,49,70,'dccv']
+, [50,17,50,56,'dccv']
+, [51,13,51,14,'dccv']
+, [56,9,56,10,'dccv']
+, [64,9,64,10,'dccv']
+, [66,13,66,14,'dccv']
+, [67,17,67,43,'dccv']
+, [68,17,68,45,'dccv']
+, [69,17,69,84,'dccv']
+, [72,17,72,141,'dccv']
+, [73,17,73,137,'dccv']
+, [75,17,78,19,'dccv']
+, [79,17,82,19,'dccv']
+, [83,17,86,19,'dccv']
+, [87,17,90,19,'dccv']
+, [91,17,94,19,'dccv']
+, [96,17,99,19,'dccv']
+, [101,17,101,100,'dccv']
+, [102,17,102,102,'dccv']
+, [103,17,103,104,'dccv']
+, [104,17,104,101,'dccv']
+, [105,17,105,104,'dccv']
+, [107,17,107,52,'dccv']
+, [108,17,108,51,'dccv']
+, [109,17,109,56,'dccv']
+, [110,17,110,54,'dccv']
+, [111,17,111,53,'dccv']
+, [113,17,113,71,'dccv']
+, [114,17,114,72,'dccv']
+, [115,17,115,76,'dccv']
+, [116,17,116,74,'dccv']
+, [117,17,117,73,'dccv']
+, [119,17,119,50,'dccv']
+, [120,17,120,28,'dccv']
+, [121,13,121,14,'dccv']
+, [126,9,126,10,'dccv']
+, [132,9,132,10,'dccv']
+, [133,13,133,26,'dccv']
+, [134,9,134,10,'dccv']
+, [150,9,150,10,'dccv']
+, [151,13,151,31,'dccv']
+, [152,9,152,10,'dccv']
+, [157,9,157,10,'dccv']
+, [158,13,158,33,'dccv']
+, [159,13,159,39,'dccv']
+, [160,13,160,41,'dccv']
+, [161,9,161,10,'dccv']
+, [32,13,32,37,'dcuc']
+, [33,13,33,14,'dcuc']
+, [34,17,34,53,'dcuc']
+, [35,13,35,14,'dcuc']
+, [52,13,52,37,'dcuc']
+, [53,13,53,14,'dcuc']
+, [54,17,54,53,'dcuc']
+, [55,13,55,14,'dcuc']
+, [122,13,122,37,'dcuc']
+, [123,13,123,14,'dcuc']
+, [124,17,124,53,'dcuc']
+, [125,13,125,14,'dcuc']
+, [141,9,141,10,'dcuc']
+, [142,13,142,25,'dcuc']
+, [143,9,143,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src204" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Animation;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Infrastructure;
+
+#endregion
+
+namespace LGP.Components.Dialog
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for WindowDialog.xaml
+    /// &lt;/summary&gt;
+    public partial class WindowDialog : IDialog
+    {
+        private int _pheight;
+        private int _pwidth;
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        public WindowDialog()
+        {
+            try
+            {
+                this.InitializeComponent();
+                this.Owner = Framework.ApplicationWindow;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        #region IDialog Members
+
+        /// &lt;summary&gt;
+        ///   Sets the popup window child control
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;control&quot;&gt;usercontrol&lt;/param&gt;
+        public void SetChild( UserControl control )
+        {
+            try
+            {
+                control.HorizontalAlignment = HorizontalAlignment.Center;
+                control.VerticalAlignment = VerticalAlignment.Center;
+                this.popupPane.Children.Add( control );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;width&quot;&gt;&lt;/param&gt;
+        /// &lt;param name = &quot;height&quot;&gt;&lt;/param&gt;
+        public void ResizePopup( int width , int height )
+        {
+            try
+            {
+                this._pwidth = width + 40;
+                this._pheight = height + 40;
+                var duration = new Duration( new TimeSpan( 0 , 0 , 0 , 0 , 250 ) );
+
+
+                var leftPopup = ( ( Framework.ApplicationWindow.Width / 2 ) - ( ( double ) width / 2 ) ) + Framework.ApplicationWindow.Left;
+                var topPopup = ( Framework.ApplicationWindow.Height / 2 - ( ( double ) height / 2 ) ) + Framework.ApplicationWindow.Top;
+
+                var opacityAnimation = new DoubleAnimation
+                {
+                    Duration = duration , From = this.Opacity , To = 0.95
+                };
+                var horizontalAnimation = new DoubleAnimation
+                {
+                    Duration = duration , From = this.Left , To = leftPopup
+                };
+                var verticalAnimation = new DoubleAnimation
+                {
+                    Duration = duration , From = this.Top , To = topPopup
+                };
+                var widthAnimation = new DoubleAnimation
+                {
+                    Duration = duration , From = this.ActualWidth , To = this._pwidth
+                };
+                var heightAnimation = new DoubleAnimation
+                {
+                    Duration = duration , From = this.ActualHeight , To = this._pheight
+                };
+
+                var sb = new Storyboard
+                {
+                    Duration = duration
+                };
+
+                Storyboard.SetTargetProperty( widthAnimation , new PropertyPath( WidthProperty ) );
+                Storyboard.SetTargetProperty( heightAnimation , new PropertyPath( HeightProperty ) );
+                Storyboard.SetTargetProperty( horizontalAnimation , new PropertyPath( LeftProperty ) );
+                Storyboard.SetTargetProperty( verticalAnimation , new PropertyPath( TopProperty ) );
+                Storyboard.SetTargetProperty( opacityAnimation , new PropertyPath( OpacityProperty ) );
+
+                sb.Children.Add( heightAnimation );
+                sb.Children.Add( widthAnimation );
+                sb.Children.Add( horizontalAnimation );
+                sb.Children.Add( verticalAnimation );
+                sb.Children.Add( opacityAnimation );
+
+                Storyboard.SetTarget( widthAnimation , this.PWindow );
+                Storyboard.SetTarget( heightAnimation , this.PWindow );
+                Storyboard.SetTarget( horizontalAnimation , this.PWindow );
+                Storyboard.SetTarget( verticalAnimation , this.PWindow );
+                Storyboard.SetTarget( opacityAnimation , this.PWindow );
+
+                sb.Completed += this.SbCompleted;
+                sb.Begin();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        /// &lt;summary&gt;
+        ///   Closes the dialog
+        /// &lt;/summary&gt;
+        public void CloseDialog()
+        {
+            this.Close();
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Show the dialog, non blocking
+        /// &lt;/summary&gt;
+        public void ShowNonBlocking()
+        {
+            this.Show();
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Show the dialog, blocking
+        /// &lt;/summary&gt;
+        public void ShowBlocking()
+        {
+            this.ShowDialog();
+        }
+
+        #endregion
+
+        private void SbCompleted( object sender , EventArgs e )
+        {
+            this.Opacity = 0.95;
+            this.Width = this._pwidth;
+            this.Height = this._pheight;
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src204', RANGES_204)
+		</script>
+	</body>
+</html>

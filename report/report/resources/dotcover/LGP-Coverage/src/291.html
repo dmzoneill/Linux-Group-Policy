@@ -1,0 +1,206 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_291 = [
+   [47,9,47,85,'dccv']
+, [48,9,48,10,'dccv']
+, [50,13,50,14,'dccv']
+, [51,17,51,44,'dccv']
+, [52,17,52,31,'dccv']
+, [53,17,53,43,'dccv']
+, [54,17,54,44,'dccv']
+, [55,17,55,46,'dccv']
+, [56,17,56,32,'dccv']
+, [57,13,57,14,'dccv']
+, [62,9,62,10,'dccv']
+, [66,9,66,10,'dccv']
+, [68,13,68,14,'dccv']
+, [69,17,69,71,'dccv']
+, [70,17,70,147,'dccv']
+, [71,17,71,44,'dccv']
+, [72,13,72,14,'dccv']
+, [77,9,77,10,'dccv']
+, [81,9,81,10,'dccv']
+, [83,13,83,14,'dccv']
+, [84,17,84,49,'dccv']
+, [85,13,85,14,'dccv']
+, [90,9,90,10,'dccv']
+, [94,9,94,10,'dccv']
+, [96,13,96,14,'dccv']
+, [97,17,97,67,'dccv']
+, [98,17,98,46,'dccv']
+, [99,17,99,40,'dccv']
+, [100,17,100,18,'dccv']
+, [101,21,101,81,'dccv']
+, [102,17,102,18,'dccv']
+, [104,17,104,49,'dccv']
+, [105,13,105,14,'dccv']
+, [110,9,110,10,'dccv']
+, [113,9,113,10,'dccv']
+, [115,13,115,14,'dccv']
+, [116,17,116,91,'dccv']
+, [117,13,117,14,'dccv']
+, [122,9,122,10,'dccv']
+, [27,9,27,26,'dcuc']
+, [28,9,28,10,'dcuc']
+, [30,13,30,14,'dcuc']
+, [31,17,31,44,'dcuc']
+, [32,13,32,14,'dcuc']
+, [33,13,33,37,'dcuc']
+, [34,13,34,14,'dcuc']
+, [35,17,35,53,'dcuc']
+, [36,13,36,14,'dcuc']
+, [37,9,37,10,'dcuc']
+, [58,13,58,37,'dcuc']
+, [59,13,59,14,'dcuc']
+, [60,17,60,53,'dcuc']
+, [61,13,61,14,'dcuc']
+, [73,13,73,37,'dcuc']
+, [74,13,74,14,'dcuc']
+, [75,17,75,53,'dcuc']
+, [76,13,76,14,'dcuc']
+, [86,13,86,37,'dcuc']
+, [87,13,87,14,'dcuc']
+, [88,17,88,53,'dcuc']
+, [89,13,89,14,'dcuc']
+, [106,13,106,37,'dcuc']
+, [107,13,107,14,'dcuc']
+, [108,17,108,53,'dcuc']
+, [109,13,109,14,'dcuc']
+, [118,13,118,37,'dcuc']
+, [119,13,119,14,'dcuc']
+, [120,17,120,53,'dcuc']
+, [121,13,121,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src291" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows;
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Database;
+using LGP.Components.Factory.Interfaces.Infrastructure;
+
+#endregion
+
+namespace LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for DeleteOu.xaml
+    /// &lt;/summary&gt;
+    public partial class DeleteOu
+    {
+        private readonly IOu _ou;
+        private readonly bool _parentClose;
+        private readonly UserControl _parentControl;
+        private readonly IDialog _popupWindow;
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        public DeleteOu()
+        {
+            try
+            {
+                this.InitializeComponent();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;parent&quot;&gt;The parent control&lt;/param&gt;
+        /// &lt;param name = &quot;ou&quot;&gt;IOu&lt;/param&gt;
+        /// &lt;param name = &quot;window&quot;&gt;parent window&lt;/param&gt;
+        /// &lt;param name = &quot;close&quot;&gt;&lt;/param&gt;
+        public DeleteOu( UserControl parent , IOu ou , IDialog window , bool close )
+        {
+            try
+            {
+                this.InitializeComponent();
+                this._ou = ou;
+                this._parentClose = close;
+                this._popupWindow = window;
+                this._parentControl = parent;
+                this.Prepare();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        private void Prepare()
+        {
+            try
+            {
+                this.image1.Source = this._ou.GetOuImage( 32 ).Source;
+                var msg = string.Format( Properties.Resources.AreYouSureDelete + &quot; &#39;{0}&#39; &quot; + Properties.Resources.Ou + &quot;?&quot; , this._ou.GetName() );
+                this.textBlock1.Text = msg;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        private void CancelOuButtonClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                this._popupWindow.CloseDialog();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        private void DeleteOuButtonClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                OuHelper.OuGateway.DeleteOu( this._ou.GetOuId() );
+                this._ou.Dispose( this._ou );
+                if( this._parentClose )
+                {
+                    Framework.Panels.RemoveMainComponent( this._parentControl );
+                }
+
+                this._popupWindow.CloseDialog();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void UserControlLoaded( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                this._popupWindow.ResizePopup( ( int ) this.Width , ( int ) this.Height );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src291', RANGES_291)
+		</script>
+	</body>
+</html>

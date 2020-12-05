@@ -1,0 +1,1306 @@
+% This file was created with JabRef 2.7.2.
+% Encoding: Cp1252
+
+@ARTICLE{SchemaDataModel,
+  author = {anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou,
+	N},
+  title = {Data model issues for object-oriented applications},
+  journal = {ACM Trans},
+  year = {1987},
+  date-added = {2011-10-08 21:42:56 +0100},
+  date-modified = {2011-10-08 21:43:42 +0100}
+}
+
+@ARTICLE{LanguageProgramming,
+  author = {A. Basu, M. Hayden, G. Morrisett, and T. von Eicken},
+  title = {A language-based approach to protocol construction},
+  annote = {Reports on the design and implementation of Promela++, a DSL for
+	protocol construction and validation. Promela++ adds domain-specific
+	constructs to restricted C, and supports validation and optimization
+	on the domain-level.},
+  date-added = {2011-10-08 19:47:30 +0100},
+  date-modified = {2011-10-08 19:48:14 +0100}
+}
+
+@ARTICLE{RFC4519,
+  author = {A. Sciberras, Ed},
+  title = {Lightweight Directory Access Protocol (LDAP): Schema for User Applications},
+  journal = {Network Working Group},
+  year = {2006},
+  annote = { This document is an integral part of the Lightweight Directory Access
+	Protocol (LDAP) technical specification. It provides a technical
+	specification of attribute types and object classes intended for
+	use by LDAP directory clients for many directory services, such as
+	White Pages. These objects are widely used as a basis for the schema
+	in many LDAP directories. This document does not cover attributes
+	used for the administration of directory servers, nor does it include
+	directory objects defined for specific uses in other documents.},
+  date-added = {2011-10-08 20:40:33 +0100},
+  date-modified = {2011-10-08 20:41:21 +0100}
+}
+
+@ARTICLE{DSLLegacySystems,
+  author = {A. van Deursen, P. Klint, and C. Verhoef},
+  title = {Research issues in software renovation},
+  journal = {Fundamental Approaches to Software Engineering},
+  year = {1999},
+  annote = {Overview of parsing, transformation, and program understanding techniques
+	that can be used when searching for domain knowledge in legacy systems.
+	See also [16,70].
+	
+	},
+  date-added = {2011-10-08 20:04:40 +0100},
+  date-modified = {2011-10-08 20:05:16 +0100}
+}
+
+@ARTICLE{CompilerPrinciples,
+  author = {A.V. Aho, R. Sethi, and J.D. Ullman.},
+  title = {Compiler: Principles, Techniques and Tools},
+  journal = {Addison-Wesley},
+  year = {1986},
+  annote = {Standard text on compiler construction.},
+  date-added = {2011-10-08 19:42:32 +0100},
+  date-modified = {2011-10-08 19:43:45 +0100}
+}
+
+@ARTICLE{SchemaEvolutionManagement,
+  author = {Andany, J., Leonard, M. and Palisser, C},
+  title = {Management of schema evolution in databases},
+  journal = {17th International Conference on Very Large Databases},
+  year = {1991},
+  date-added = {2011-10-08 21:38:56 +0100},
+  date-modified = {2011-10-08 21:40:27 +0100}
+}
+
+@ARTICLE{DomainAnlaysisArango,
+  author = {G. Arango},
+  title = {Domain analysis: From art form to engineering discipline},
+  journal = {ACM SIGSOFT},
+  year = {1989},
+  annote = {Outlines a framework to synthesize domain analysis methods, and to
+	compare between different methods. The paper advocates an incremental,
+	evolving approach towards developing domain models.},
+  date-added = {2011-10-08 19:43:51 +0100},
+  date-modified = {2011-10-08 19:45:12 +0100}
+}
+
+@ELECTRONIC{csharppublishsubscribepatternevents,
+  author = {Dot Net Architecture},
+  title = {The Publish Subscribe Pattern in C\#},
+  url = {http://www.dotnetarchitecthouston.com/post/The-Publish-Subscribe-Pattern-in-C-and-some-gotchas.aspx},
+  bdsk-url-1 = {http://www.dotnetarchitecthouston.com/post/The-Publish-Subscribe-Pattern-in-C-and-some-gotchas.aspx},
+  date-added = {2011-11-20 02:44:24 +0000},
+  date-modified = {2011-11-20 02:44:57 +0000}
+}
+
+@ARTICLE{SchemaTemporallyOriented,
+  author = {Ariav, G.},
+  title = {Temporally oriented data definitions: managing schema evolution in
+	temporally oriented databases},
+  year = {1991},
+  date-added = {2011-10-08 21:40:29 +0100},
+  date-modified = {2011-10-08 21:41:23 +0100}
+}
+
+@ARTICLE{SchemaRDTheory,
+  author = {Atzeni, P. and De Antonellis, V},
+  title = {Relational database theory},
+  year = {1993},
+  date-added = {2011-10-08 21:42:08 +0100},
+  date-modified = {2011-10-08 21:42:47 +0100}
+}
+
+@ARTICLE{SchemaInclusionEquivelance,
+  author = {Atzeni, P., Ausiello, C., Batini, C. and Moscarini, M},
+  title = {Inclusion and equivalence between relational database schemata},
+  journal = {Theoretical Computer Science},
+  year = {1982},
+  date-added = {2011-10-08 21:41:24 +0100},
+  date-modified = {2011-10-08 21:42:07 +0100}
+}
+
+@ARTICLE{Schema-OODB,
+  author = {Banerjee, J.},
+  title = {Data model issues for object-oriented applications},
+  journal = {ACM Computing Surveys},
+  year = {1987},
+  date-added = {2011-10-08 21:51:29 +0100},
+  date-modified = {2011-10-08 21:52:26 +0100}
+}
+
+@ARTICLE{SchemaSemantecs,
+  author = {Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F},
+  title = {Semantics and implementation of schema evolution in object-oriented
+	databases},
+  journal = {ACM SIGMOD conference},
+  year = {1987},
+  date-added = {2011-10-08 21:44:41 +0100},
+  date-modified = {2011-10-08 21:45:38 +0100}
+}
+
+@ARTICLE{SchemaEvolutionOO,
+  author = {Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F},
+  title = {Schema evolution in object-oriented persistent databases},
+  journal = {Advanced Database Symposium},
+  year = {1986},
+  date-added = {2011-10-08 21:43:55 +0100},
+  date-modified = {2011-10-08 21:44:35 +0100}
+}
+
+@ARTICLE{RFC1564,
+  author = {P. Barker},
+  title = {DSA Metrics (OSI-DS 34 (v3))},
+  journal = {Network Working Group},
+  year = {1994},
+  annote = { This document defines a set of criteria by which a DSA implementation
+	may be judged. Particular issues covered include conformance to standards;
+	performance; demonstrated interoperability. The intention is that
+	the replies to the questions posed provide a fairly full description
+	of a DSA. Some of the questions will yield answers which are purely
+	descriptive; others, however, are intended to elicit answers which
+	give some measure of the utility of the DSA. The marks awarded for
+	a DSA in each particular area should give a good indication of the
+	DSA's capabilities, and its suitability for particular uses.},
+  date-added = {2011-10-08 20:39:00 +0100},
+  date-modified = {2011-10-08 20:39:39 +0100}
+}
+
+@ARTICLE{DomainProgramming,
+  author = {D. R. Barstow},
+  title = {Domain-specific automatic programming},
+  journal = {IEEE Transactions on Software Engineering},
+  year = {1985},
+  annote = {Envisions a framework for stepwise synthesis of domain-specific applications
+	from informal specifications. The framework applies search techniques
+	to explore possible refinements of an initial specification, given
+	a base of domain and programming knowledge (facts and heuristics).},
+  date-added = {2011-10-08 19:46:33 +0100},
+  date-modified = {2011-10-08 19:47:16 +0100}
+}
+
+@ARTICLE{Schema,
+  author = {Beech, D. and Mahbod, B},
+  title = {Generalised version control in an Object-oriented database},
+  journal = {IEEE Computer Society},
+  year = {1988},
+  date-added = {2011-10-08 21:45:41 +0100},
+  date-modified = {2011-10-08 21:46:12 +0100}
+}
+
+@ARTICLE{LittleLanguages,
+  author = {J. L. Bentley},
+  title = {Programming pearls: Little languages},
+  journal = {Communications of the ACM},
+  year = {1986},
+  annote = {Demonstrates and advocates the use of ``little languages''. Takes
+	PIC as an example, as well as a number of little languages from which
+	PIC input is generated (SCATTER, CHEM), and little languages that
+	were used to implement PIC (LEX, YACC, Make). Contrasts three approaches:
+	interactive systems, subroutine libraries, and little languages.
+	Discusses DSL design principles.},
+  date-added = {2011-10-08 19:48:20 +0100},
+  date-modified = {2011-10-08 19:49:02 +0100}
+}
+
+@ARTICLE{ToolbusCoordination,
+  author = {J.A. Bergstra and P. Klint},
+  title = {The discrete time TOOLBUS--a software coordination architecture},
+  journal = {Science of Computer Programming},
+  year = {1998},
+  annote = {Describes how a language based on process algebra is used in the
+	TOOLBUS coordination architecture for building heterogeneous, distributed
+	software systems. See also },
+  date-added = {2011-10-08 19:49:30 +0100},
+  date-modified = {2011-10-08 19:50:11 +0100}
+}
+
+@ARTICLE{BDL,
+  author = {F. Bertrand and M. Augeraud},
+  title = {BDL: A specialized language for per-object reactive control},
+  journal = {DSL-IEEE},
+  annote = {Many object-oriented languages contain only implicit constraints
+	on the order of application of the methods in a class. This paper
+	introduces the Behaviour Description Language (BDL) which uses a
+	process-oriented notation to describe this ordering. BDL is translated
+	to C, with ESTEREL as intermediary. The resulting C code is linked
+	with a C++ program and acts as controller for the execution of C++
+	classes},
+  date-added = {2011-10-08 19:50:33 +0100},
+  date-modified = {2011-10-08 19:51:07 +0100}
+}
+
+@ARTICLE{DSLeventsimulation,
+  author = {D. Bruce},
+  title = {What makes a good domain-specific language? APOSTLE, and its approach
+	to parallel discrete event simulation},
+  journal = {Karmin},
+  annote = {Discusses the design of a DSL for parallel discrete event simulation.
+	On the basis of this experience a number of observations are made
+	regarding DSL design principles. Most notably, the use of a strong
+	effect system is advocated to do static checking on the domain level,
+	and to determine applicability of optimizations},
+  date-added = {2011-10-08 19:52:28 +0100},
+  date-modified = {2011-10-08 19:53:01 +0100}
+}
+
+@OTHER{Burgess,
+  author = {BURGESS, Mark},
+  bdsk-url-1 = {http://www.iu.hio.no/~mark/BookOfPromises.pdf},
+  date-added = {2011-10-08 07:14:05 +0100},
+  date-modified = {2011-10-08 19:41:43 +0100},
+  title = {Micro Promises},
+  url = {http://www.iu.hio.no/~mark/BookOfPromises.pdf},
+  year = {2011}
+}
+
+@ARTICLE{DSLOperatingSystemInstructions,
+  author = {C. Pu, A. Black, C. Cowan, J. Walpole, and C. Consel},
+  title = {Microlanguages for operating system specialization},
+  journal = {Kamin},
+  annote = {Discusses the use of DSLs in the domain of operating system specialization.
+	A high-level DSL is envisioned to describe application behavior,
+	which will be compiled into a low-level DSL describing customized
+	operating system behavior},
+  date-added = {2011-10-08 20:23:09 +0100},
+  date-modified = {2011-10-08 20:23:45 +0100}
+}
+
+@ARTICLE{WebCombinators,
+  author = {L. Cardelli and R. Davies},
+  title = {Service combinators for web computing},
+  journal = {DSL-IEEE},
+  annote = {Access to the resources of the World-Wide Web is usually obtained
+	though manual browsers. Service combinators are intended for writing
+	programs that reproduce human browsing behaviour, including reactions
+	to slow transmission rates and various kinds of failure. Based on
+	a concurrent programming model, the paper gives both an informal
+	and formal treatment of a DSL for Web computing.
+	
+	
+	},
+  date-added = {2011-10-08 19:53:22 +0100},
+  date-modified = {2011-10-08 19:54:02 +0100}
+}
+
+@ARTICLE{DSLDomainTaxonomy,
+  author = {E.J. Chikofsky and J.H. Cross},
+  title = {Reverse engineering and design recovery: A taxonomy},
+  journal = {IEEE Software},
+  year = {1990},
+  annote = {Overview of reverse engineering techniques, which also can be used
+	to distill domain knowledge from legacy system.},
+  date-added = {2011-10-08 19:55:21 +0100},
+  date-modified = {2011-10-08 19:56:04 +0100}
+}
+
+@ARTICLE{ApplicationGenerators,
+  author = {J. C. Cleaveland},
+  title = {Building application generators},
+  journal = {IEEE Software},
+  year = {1998},
+  annote = {Uses the term ``application generators'' to refer to DSL compilers.
+	Gives a compiler generator architecture diagram. Describes relationships
+	between roles of customers, domain engineers and system engineers.
+	Lists pros and cons of application generators. Describes ``Stage'',
+	an application-generator development tool. Describes a methodology
+	for building an application generator.
+	
+	
+	},
+  date-added = {2011-10-08 19:56:50 +0100},
+  date-modified = {2011-10-08 19:57:21 +0100}
+}
+
+@ELECTRONIC{SteveCornett,
+  author = {Steve Cornett},
+  year = {2011},
+  title = {Minimum Acceptable Code Coverage},
+  url = {http://www.bullseye.com/minimum.html},
+  owner = {Dave},
+  timestamp = {2012.03.20}
+}
+
+@ARTICLE{PrologSyntaxTrees,
+  author = {R. F. Crew},
+  title = {ASTLOG: A language for examining abstract syntax trees},
+  journal = {Ramming},
+  annote = {Introduces a Prolog-based query language for analyzing abstract syntax
+	trees of C/C++ programs},
+  date-added = {2011-10-08 19:58:54 +0100},
+  date-modified = {2011-10-08 19:59:35 +0100}
+}
+
+@ARTICLE{GenerativeProgramming,
+  author = {K. Czarnecki and U. Eisenecker},
+  title = {Generative Programming: Methods, Techniques and Applications},
+  journal = {Addison-Wesley},
+  year = {1999},
+  annote = {Gives a comprehensive discussion of a range of programming techniques
+	that involve some sort of code generation step, such as aspect-oriented,
+	subject-oriented, and adaptive programming, composition filters,
+	and domain-specific languages. Chapter 3 of this book provides a
+	survey of domain-engineering methods.},
+  date-added = {2011-10-08 19:59:53 +0100},
+  date-modified = {2011-10-08 20:00:38 +0100}
+}
+
+@ARTICLE{DSL-IEEE,
+  author = {D. Atkins, T. Ball, G. Bruns, and K. Cox},
+  title = {A domain-specific language for form-based services},
+  journal = {DSL-IEEE},
+  annote = {Describes the language Mawl that is intended for implementing form-based
+	information services for different devices (web browser, interactive
+	voice response service). The main contributions of this language
+	are: (1) separation of user-interface code and service logic, (2)
+	static type checking, (3) device-independence, (4) automatic generation
+	of low-level CGI code, (5) automatic generation of HTML templates,
+	and (6) automatic generation of usage statistics.
+	
+	
+	},
+  date-added = {2011-10-08 19:45:25 +0100},
+  date-modified = {2011-10-08 19:46:25 +0100}
+}
+
+@ARTICLE{LanguageLargeScale,
+  author = {D. Bonachea, K. Fisher, A. Rogers, and F. Smith},
+  title = {Hancock: A language for processing very large-scale data},
+  journal = {DSL-99},
+  annote = {Describes the language Hancock that is intended for signature computations
+	on the data collected from telephone calls. A signature is a user
+	profile with applications ranging from fraude detection to marketing.
+	Typical issues are the large volume of data, the complex traversal
+	patterns of these data and the different levels of precision for
+	signatures. Hancock is translated to C combined with several run-time
+	libraries. The major benefit of this DSL is a separation of concerns
+	(traversal patterns, efficiency, signature computations). As a result
+	programmers can concentrate on the signature computation, since the
+	other concerns are taken care of by the DSL compiler. The major reason
+	to design a DSL (as opposed to using a library) were the traversal
+	patterns that cannot be captured in a library. The paper concludes
+	with a description of the design process used.},
+  date-added = {2011-10-08 19:51:23 +0100},
+  date-modified = {2011-10-08 19:52:02 +0100}
+}
+
+@ARTICLE{SoftwareLines,
+  author = {J.-M. DeBaud and K. Schmid},
+  title = {A systematic approach to derive the scope of software product lines},
+  journal = {21st International Conference on Software Engineering},
+  year = {1999},
+  annote = {Argues that economic motives should be used for scoping software
+	product lines, rather than more traditional domain engineering methods.
+	The paper proposes PuLSE, which iteratively refines business objectives
+	towards more operational evaluation criteria.},
+  date-added = {2011-10-08 20:01:12 +0100},
+  date-modified = {2011-10-08 20:01:45 +0100}
+}
+
+@ARTICLE{DSLOO,
+  author = {A. van Deursen},
+  title = {Domain-specific languages versus object-oriented frameworks: A financial
+	engineering case study},
+  journal = {Smalltalk and Java in Industry and Academia},
+  year = {1997},
+  annote = {Contrasts domain-specific languages with object-oriented frameworks
+	by comparing two projects in the financial engineering domain: RISLA
+	(DSL) and the ET++SwapsManager (OO framework).},
+  date-added = {2011-10-08 20:01:58 +0100},
+  date-modified = {2011-10-08 20:02:37 +0100}
+}
+
+@ARTICLE{DSLLittleLanguages,
+  author = {A. van Deursen and P. Klint},
+  title = {Little languages: Little maintenance?},
+  journal = {Journal of Software Maintenance},
+  year = {1998},
+  annote = {Domain-specific languages (DSLs) have the potential to make software
+	maintenance simpler: domain-experts can directly use the DSL to make
+	required routine modifications. At the negative side, however, more
+	substantial changes may become more difficult: such changes may involve
+	altering the domain-specific language. This will require compiler
+	technology knowledge, which not every commercial enterprise has easily
+	available. The paper describes and uses the experience of the RISLA
+	language for interest rate products to discuss the role of DSLs in
+	software maintenance, the opportunities introduced by using them,
+	and techniques for controlling the risks involved.},
+  date-added = {2011-10-08 20:03:23 +0100},
+  date-modified = {2011-10-08 20:03:51 +0100}
+}
+
+@ARTICLE{DSLDomainEpecificExtensions,
+  author = {C. Elliott},
+  title = {An embedded modeling language approach to interactive 3D and multimedia
+	animation},
+  journal = {DSL-IEEE},
+  annote = {Describes a multi-media extension for Haskell and discusses the merits
+	of Haskell as basis for domain-specific extensions},
+  date-added = {2011-10-08 20:06:55 +0100},
+  date-modified = {2011-10-08 20:07:43 +0100}
+}
+
+@ARTICLE{ApplicationSpecificLanguages,
+  author = {D. R. Engler},
+  title = {Interface compilation: Steps toward compiling program interfaces
+	as languages},
+  journal = {DSL-IEEE},
+  annote = {Describes the extensible ANSI C compiler framework MAGIK, which allows
+	the dynamic incorporation of user-defined compiler extensions. The
+	extensions can transform, optimize or inspect the generated intermediate
+	representation. The approach gives safe access to compiler internals
+	and supports full optimization of application-specific language extensions.
+	Implemented on top of lcc},
+  date-added = {2011-10-08 20:07:55 +0100},
+  date-modified = {2011-10-08 20:08:37 +0100}
+}
+
+@BOOK{DesignPatterns,
+  title = {Design Patterns : Elements of reusable object orientated software},
+  publisher = {Addison Wesley},
+  year = {1995},
+  author = {Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides},
+  date-added = {2011-10-08 21:26:14 +0100},
+  date-modified = {2011-10-08 21:27:51 +0100}
+}
+
+@ARTICLE{RFC2229,
+  author = {R. Faith},
+  title = {A Dictionary Server Protocol},
+  journal = {Network Working Group},
+  year = {1997},
+  annote = { The Dictionary Server Protocol (DICT) is a TCP transaction based
+	query/response protocol that allows a client to access dictionary
+	definitions from a set of natural language dictionary databases.
+	
+	},
+  date-added = {2011-10-08 20:43:18 +0100},
+  date-modified = {2011-10-08 20:43:58 +0100}
+}
+
+@ARTICLE{OOFrameworks,
+  author = {M. E. Fayad and D. C. Schmidt},
+  title = {Object-oriented application frameworks},
+  journal = {Communications of the ACM},
+  year = {1997},
+  annote = {Introduction to a special issue on (domain-specific) object-oriented
+	frameworks, which are defined as reusable, semi-complete applications
+	that can be specialized to produce custom applications. Covers classification,
+	strengths and weaknesses, and future trends},
+  date-added = {2011-10-08 20:09:35 +0100},
+  date-modified = {2011-10-08 20:10:14 +0100}
+}
+
+@ELECTRONIC{fowlerEventAggregator,
+  author = {Martin Fowler},
+  title = {Event Aggregator},
+  url = {http://martinfowler.com/eaaDev/EventAggregator.html},
+  bdsk-url-1 = {http://martinfowler.com/eaaDev/EventAggregator.html},
+  date-added = {2011-11-18 19:35:36 +0000},
+  date-modified = {2011-11-18 19:44:29 +0000}
+}
+
+@BOOK{FowlerDSL,
+  title = {Domain Specific Languages},
+  publisher = {Addison Wesley},
+  year = {2010},
+  author = {Martin Fowler},
+  date-added = {2011-10-08 21:29:18 +0100},
+  date-modified = {2011-10-08 21:29:59 +0100}
+}
+
+@BOOK{FowlerPatternsArchiteture,
+  title = {Patterns of enterprise application architecture},
+  publisher = {Addison Wesley},
+  year = {2010},
+  author = {Martin Fowler},
+  date-added = {2011-10-08 21:22:23 +0100},
+  date-modified = {2011-10-08 21:31:25 +0100}
+}
+
+@BOOK{FolwerUML,
+  title = {UML Distilled},
+  publisher = {Addison Wesley},
+  year = {2009},
+  author = {Martin Fowler},
+  date-added = {2011-10-08 21:25:07 +0100},
+  date-modified = {2011-10-08 21:26:02 +0100}
+}
+
+@BOOK{FowlerRefactoring,
+  title = {Rafactoring : Improving the design of existing code},
+  publisher = {Addison Wesley},
+  year = {1999},
+  author = {Martin Fowler},
+  date-added = {2011-10-08 21:20:19 +0100},
+  date-modified = {2011-10-08 21:22:16 +0100}
+}
+
+@ARTICLE{CSMulticlassServers,
+  author = {Greg Franks and Murray Woodside},
+  title = {Multiclass multiservers with deferred operations in layered queueing
+	networks, with software system applications},
+  journal = {Twelfth IEEE/ACM International Symposium on Modeling},
+  year = {2004},
+  annote = {Layered queueing networks describe the simultaneous-resource behaviour
+	of servers that request lower-layer services and wait for them to
+	complete. Layered software systems often follow this model, with
+	messages to request service and receive the results. Their performance
+	has been computed successfully using mean-value queueing approximations.
+	Such systems also have multiservers (which model multi-threaded software
+	processes), multiple classes of service, and what we call deferred
+	operations or ``second phases'', which are executed after sending
+	the reply message to the requester. In this paper, three established
+	MVA approximations for multiclass multiservers were extended to include
+	deferred service, and evaluated within the layered queueing context.
+	Errors ranged from 1% up to about 15%. These servers were then used
+	to model the Network File System, as implemented on Linux, to show
+	that the method scales up and gives good accuracy on typical systems,
+	with computation times of a few seconds to a few minutes. This is
+	hundreds of times faster than simulation.},
+  date-added = {2011-10-08 22:08:57 +0100},
+  date-modified = {2011-10-08 22:09:55 +0100}
+}
+
+@ARTICLE{CSEarlyReply,
+  author = {Greg Franks and Murray Woodside},
+  title = {Effectiveness of early replies in client-server systems},
+  journal = {Performance Evaluation},
+  year = {1999},
+  annote = {A common performance optimization for a Server process is to send
+	the reply to each request as early as possible, before final operations
+	that are not in the critical path (such as buffer cleanup, state
+	updates, logging and file updates). The operations after the reply
+	form a ``second phase'' of service. This does not delay the current
+	request from the client, but may delay succeeding requests. The net
+	performance improvement depends on the number of clients at a server,
+	its utilization, and the proportion of the total work which is placed
+	in the second phase. This dependence is explored using analytic models
+	that include an improved special approximation for two phases service
+	in queueing networks, and layered queueing networks The result is
+	an approximate analysis for large and complex client-server systems,
+	with second phases.},
+  date-added = {2011-10-08 22:08:08 +0100},
+  date-modified = {2011-10-08 22:08:48 +0100}
+}
+
+@ARTICLE{CSParralelServices,
+  author = {Greg Franks and Murray Woodside},
+  title = {Performance of multi-level client-server systems with parallel service
+	operations},
+  journal = {Association for Computing Machinery},
+  year = {1998},
+  annote = {Parallel execution can enhance the performance of distributed client-server
+	systems, but the enhancement may be less than expected. Evaluations
+	of such designs must include the complex effects of overheads, heterogeneous
+	parallel branches, contention by the parallel parts for servers in
+	lower levels, and simultaneous resource possession effects. A ``compensated
+	complementary delay'' approximation is described which exploits layered
+	queueing approximations for layered resources which occur in client-server
+	architectures, based on synchronization delay estimates and adjusted
+	levels of contention. The new approximation uses the overlap of parallel
+	branches and a new fast calculation of join delays. It gives acceptable
+	errors (averaging about two percent), and has an enormously lower
+	computational cost compared to the competing approach based on decomposition.
+	The new approximation may moderate a conclusion made by Heidelberger
+	and Trivedi, that decomposition gives greatly superior accuracy to
+	the much cheaper complementary delay approach; these delay approximations
+	are only a little less accurate.},
+  date-added = {2011-10-08 22:06:44 +0100},
+  date-modified = {2011-10-08 22:07:58 +0100}
+}
+
+@OTHER{FreeBsdNis,
+  author = {Freebsd},
+  bdsk-url-1 = {http://www.freebsd.org/doc/handbook/network-nis.html},
+  date-added = {2011-10-08 07:18:24 +0100},
+  date-modified = {2011-10-08 19:41:21 +0100},
+  title = {Network Information System},
+  url = {http://www.freebsd.org/doc/handbook/network-nis.html}
+}
+
+@ARTICLE{DSLAdhoc,
+  author = {M. Fuchs},
+  title = {Domain specific languages for ad hoc distributed applications},
+  journal = {Ramming},
+  annote = {The current architecture of the Web is based on a client/server model
+	in which most of the computation is done at the server side, while
+	the client side is a browser that only displays the results of server
+	computations. SGML/XML is used as meta-language for describing the
+	interactions between heterogeneous agents on the Web. Essentially,
+	a grammar is defined of all possible interactions and this grammar
+	steers the behaviour of each agent. See [9] for a fully process-based
+	approach to this problem},
+  date-added = {2011-10-08 20:11:48 +0100},
+  date-modified = {2011-10-08 20:12:14 +0100}
+}
+
+@ARTICLE{AspectOrientedProgramming,
+  author = {G. Kiczales, J. Irwin, J. Lamping, J.-M. Loingtier, C. Lopes, C.
+	Maeda, and A. Mendhekar},
+  title = {Aspect oriented programming},
+  journal = {Kamin},
+  annote = {Presents a novel programming technique, called aspect-oriented programming
+	(AOP). This technique consists in describing each aspect (e.g. basic
+	functionality, communication, coordination) of a system's behaviour
+	in a (little) language that allows it to be expressed in its most
+	natural form. An aspect weaver merges these separate aspect descriptions
+	into a single, efficient program. An important benefit of AOP is
+	that it allows high-level domain-specific programming for performance-critical
+	domains.},
+  date-added = {2011-10-08 20:15:18 +0100},
+  date-modified = {2011-10-08 20:15:53 +0100}
+}
+
+@BOOK{PosixRealWorld,
+  title = {POSIX.4: Programming for the Real World},
+  publisher = {O'Reilly},
+  year = {1995},
+  author = {Bill O. Gallmeister},
+  date-added = {2011-10-08 22:03:07 +0100},
+  date-modified = {2011-10-08 22:03:50 +0100}
+}
+
+@ARTICLE{introsoftwarearchitecture,
+  author = {Garlaw D, Shaw, M},
+  title = {An introduction to software architecture},
+  year = {1993},
+  owner = {Dave},
+  timestamp = {2012.03.28}
+}
+
+@ARTICLE{Goguen,
+  author = {Joseph A. Goguen and Charlotte Linde},
+  title = {Techniques for Requirements Elicitation},
+  year = {1993},
+  owner = {Dave},
+  timestamp = {2012.03.24}
+}
+
+@ARTICLE{CSBottlenecks,
+  author = {Greg Franks, Dorina Petriu, Murray Woodside, Jing Xu, and Peter Tregunno},
+  title = {Layered bottlenecks and their mitigation},
+  journal = {Quantative Evaluation of Systems},
+  year = {2006},
+  annote = {Bottlenecks are a simple and well-understood phenomenon in servicesystems
+	and queueing models. However in systems with layered resources bottlenecks
+	are more complicated, because of simultaneous resource possession.
+	Thus, the holding time of a higher-layerresource, such as a process
+	thread, may include a small execution demand, but a large time to
+	use other resources at a lower layer (such as a disk). A single saturation
+	point may in fact saturate many otherresources by push-back, making
+	diagnosis of the problemdifficult. This paper gives a new corrected
+	definition of a layeredbottleneck, and develops a framework for systematic
+	detection of thesource of a bottleneck, for applying improvements
+	and for estimatingtheir effectiveness. Many of the techniques are
+	specific to layered bottlenecks.
+	
+	},
+  date-added = {2011-10-08 22:12:33 +0100},
+  date-modified = {2011-10-08 22:13:17 +0100}
+}
+
+@ELECTRONIC{Halstead,
+  author = {Maurice Howard Halstead},
+  title = {Halstead Metrics},
+  url = {http://www.verifysoft.de/en_halstead_metrics.html},
+  owner = {Dave},
+  timestamp = {2012.03.14}
+}
+
+@ARTICLE{Spitaxonomy,
+  author = {Christian Printzell Halvorsen and Reidar Conradi},
+  title = {A Taxonomy to Compare SPI Frameworks},
+  journal = {Proceedings of the 8th European Workshop on Software Process Technology},
+  year = {2001},
+  pages = {217--235},
+  owner = {Dave},
+  timestamp = {2012.03.10}
+}
+
+@ARTICLE{JunHan,
+  author = {Jun Han},
+  title = {An Approach to Software Component Specification},
+  journal = {International Workshop},
+  year = {1999},
+  owner = {Dave},
+  timestamp = {2012.04.06}
+}
+
+@ARTICLE{JunHanInterface,
+  author = {Jun Han},
+  title = {A Comprehensive Interface Definition Framework for Software Components},
+  journal = {Software Engineering Conference},
+  year = {1998},
+  owner = {Dave},
+  timestamp = {2012.04.06}
+}
+
+@OTHER{Freebsd,
+  author = {Nis Handbook},
+  bdsk-url-1 = {http://www.freebsd.org/doc/handbook/network-nis.html},
+  date-added = {2011-10-08 07:20:33 +0100},
+  date-modified = {2011-10-08 19:41:33 +0100},
+  title = {FREEBSD NIS HANDBOOK},
+  url = {http://www.freebsd.org/doc/handbook/network-nis.html}
+}
+
+@ARTICLE{RFC2654,
+  author = {R. Hedberg},
+  title = {A Tagged Index Object for use in the Common Indexing Protocol},
+  journal = {Network Working Group},
+  year = {1999},
+  annote = {This document defines a mechanism by which information servers can
+	exchange indices of information from their databases by making use
+	of the Common Indexing Protocol (CIP). This document defines the
+	structure of the index information being exchanged, as well as the
+	appropriate meanings for the headers that are defined in the Common
+	Indexing Protocol. It is assumed that the structures defined here
+	can be used by X.500 DSAs, LDAP servers, Whois++ servers, CSO Ph
+	servers and many others.},
+  date-added = {2011-10-08 20:42:08 +0100},
+  date-modified = {2011-10-08 20:42:40 +0100}
+}
+
+@ARTICLE{RFC2459,
+  author = {R. Housley},
+  title = {Internet X.509 Public Key Infrastructure Certificate and CRL Profile},
+  journal = {Network Working Group},
+  year = {1999},
+  annote = {This memo profiles the X.509 v3 certificate and X.509 v2 CRL for
+	use in the Internet. An overview of the approach and model are provided
+	as an introduction. The X.509 v3 certificate format is described
+	in detail, with additional information regarding the format and semantics
+	of Internet name forms (e.g., IP addresses).},
+  date-added = {2011-10-08 20:31:07 +0100},
+  date-modified = {2011-10-08 20:31:55 +0100}
+}
+
+@ARTICLE{DSLEmbedded,
+  author = {P. Hudak},
+  title = {Building domain-specific embedded languages},
+  journal = {ACM Computing Surveys},
+  year = {1996},
+  annote = {Argues that a DSL is the ``ultimate abstraction'', capturing precisely
+	the semantics of the application domain, but also that designing
+	and implementing languages is difficult and resists evolution. Proposes
+	the notion of embedded DSLs, which inherit the infrastructructure
+	from some other language, and discusses the importance of modular
+	monadic interpreters, instrumentation, and partial evaluation.},
+  date-added = {2011-10-08 20:12:37 +0100},
+  date-modified = {2011-10-08 20:14:05 +0100}
+}
+
+@ARTICLE{CommonalitySoftware,
+  author = {J. Coplien, D. Hoffman, and D. Weiss},
+  title = {Commonality and variability in software engineering},
+  journal = {IEEE Software},
+  year = {1998},
+  annote = {A software family is a set of similar systems with possibly many
+	different variations. Scope, commonality, and variability (SCV) analysis
+	gives software engineers a systematic way of thinking about and identifying
+	the product family they are creating. The paper describes the Family-Oriented
+	Abstraction, Specification, and Translation (FAST) approach, which
+	has been used with immediate payoff in over 25 domains at Lucent
+	Technologies.
+	
+	
+	},
+  date-added = {2011-10-08 19:57:31 +0100},
+  date-modified = {2011-10-08 19:58:25 +0100}
+}
+
+@BOOK{CheesmanDaniels,
+  title = {UML Components: A Simple Process for Specifying Component-Based Software},
+  publisher = {Addison-Wesley Professional},
+  year = {2000},
+  author = {John Cheesman, John Daniels},
+  owner = {Dave},
+  timestamp = {2012.03.20}
+}
+
+@ARTICLE{OOReuse,
+  author = {R. E. Johnson and B. Foote},
+  title = {Designing reusable classes},
+  journal = {Journal of Object-Oriented Programming},
+  year = {1988},
+  annote = {Introduced the notion of object-oriented frameworks. A framework
+	is defined as a set of classes that embodies an abstract design for
+	solutions to a family of related problems, and supports reuse at
+	a larger granularity than classes. In a white-box framework, application-specific
+	behavior is obtained via method overriding or by adding new methods
+	to the framework's classes. In a black-box, support for extensibility
+	is provided by defining interfaces for components that can be plugged
+	into the framework via object composition, thus better hiding the
+	implementation details of the framework},
+  date-added = {2011-10-08 20:14:32 +0100},
+  date-modified = {2011-10-08 20:15:03 +0100}
+}
+
+@ARTICLE{Gintenreiter,
+  author = {Gintenreiter Jurgen},
+  title = {Considerations regarding metrics in software development},
+  journal = {Bachelor-Semina},
+  year = {2007},
+  owner = {Dave},
+  timestamp = {2012.03.14}
+}
+
+@ARTICLE{RFC3698,
+  author = {K. Zeilenga, Ed},
+  title = {Lightweight Directory Access Protocol (LDAP): Additional Matching
+	Rules},
+  journal = {Network Working Group},
+  year = {2004},
+  annote = {This document provides a collection of matching rules for use with
+	the Lightweight Directory Access Protocol (LDAP). As these matching
+	rules are simple adaptations of matching rules specified for use
+	with the X.500 Directory, most are already in wide use.},
+  date-added = {2011-10-08 20:34:12 +0100},
+  date-modified = {2011-10-08 20:35:09 +0100}
+}
+
+@BOOK{FowlerRefactoringTo,
+  title = {Refactoring to patterns},
+  publisher = {Addison Wesley},
+  year = {2004},
+  author = {Joshua Kerievsky},
+  date-added = {2011-10-08 21:28:01 +0100},
+  date-modified = {2011-10-08 21:29:08 +0100}
+}
+
+@ARTICLE{DSLTrees,
+  author = {N. Klarlund and M. I. Schwartzbach},
+  title = {A domain-specific language for regular sets of strings and trees},
+  journal = {DSL-IEEE},
+  annote = {Describes design and implementation of FIDO, a language to express
+	large finite-state automata on large alphabets. Typical application
+	is in verification and model checking.},
+  date-added = {2011-10-08 20:16:59 +0100},
+  date-modified = {2011-10-08 20:17:38 +0100}
+}
+
+@ARTICLE{DSLSoftwareReuse,
+  author = {C. W. Krueger},
+  title = {Software reuse},
+  journal = {ACM Computing Surveys},
+  year = {1992},
+  annote = {Categorizes, describes and compares existing approaches to software
+	reuse, among which DSLs (or application generators). Compared to
+	the other approaches DSLs reduce the intellectual effort required
+	to obtain an executable system from its specification. Limited availability
+	and difficulty of building DSLs of optimal specificity/generality
+	are listed as disadvantages of DSLs},
+  date-added = {2011-10-08 20:17:51 +0100},
+  date-modified = {2011-10-08 20:18:23 +0100}
+}
+
+@ARTICLE{DSLMultiLamnguage,
+  author = {D. A. Ladd and J. C. Ramming},
+  title = {Two application languages in software production},
+  journal = {USENIX Very High Level Languages Symposium Proceedings},
+  year = {1994},
+  annote = {Describes how PRL5, an application-oriented, declarative language
+	used to maintain the integrity of databases in the AT\&T 5ESS telecommunications
+	switch, evolved from an earlier, imperative domain-specific language,
+	PRL, which in turn replaced a combination of English and C. The constraint
+	descriptions expressed in PRL5 can be used in more than one way,
+	whereas a program to check constraints is useful only for performing
+	that particular computation. A key lesson is that domain-specific
+	languages should not be designed to describe computation, but to
+	express useful facts from which one or more computations can be derived},
+  date-added = {2011-10-08 20:18:40 +0100},
+  date-modified = {2011-10-08 20:19:38 +0100}
+}
+
+@ARTICLE{DSLEmbeddedCompilers,
+  author = {D. Leijen and E. Meijer},
+  title = {Domain specific embedded compilers},
+  journal = {DSL-99},
+  annote = {Explains how a DSL (SQL is taken as example) can be embedded in Haskell
+	by (i) coding an abstract syntax of the DSL as a Haskell datatype
+	(ii) writing a code generator in Haskell that maps the abstract syntax
+	to the concrete syntax, and (iii) making Haskell call an external
+	server which compiles and executes the generated DSL code},
+  date-added = {2011-10-08 20:19:46 +0100},
+  date-modified = {2011-10-08 20:20:37 +0100}
+}
+
+@BOOK{CompleteDevelopmentCycle,
+  title = {. NET-A Complete Development Cycle},
+  publisher = {Addison-Wesley Professional},
+  year = {2003},
+  author = {Lenz G, Moeller Th},
+  owner = {Dave},
+  timestamp = {2012.03.28}
+}
+
+@ARTICLE{DSLFramework,
+  author = {M. Fromherz, V. Gupta, and V. Saraswat},
+  title = {CC - A generic framework for domain-specific languages},
+  journal = {Kamin},
+  annote = {Proposes cc, a family of languages for concurrent constraint programming,
+	as a framework for DSL construction. Two approaches are explained
+	by example: building a DSL on top of cc, and extending cc with domain-specific
+	constructs},
+  date-added = {2011-10-08 20:10:31 +0100},
+  date-modified = {2011-10-08 20:11:24 +0100}
+}
+
+@BOOK{CodeComplete,
+  title = {Code Complete, Second Edition},
+  publisher = {Microsoft},
+  year = {2004},
+  author = {Steve McConnell},
+  owner = {Dave},
+  timestamp = {2012.03.14}
+}
+
+@ELECTRONIC{csharpgenericsintro,
+  author = {Microsoft},
+  title = {Generics Introduction},
+  url = {http://msdn.microsoft.com/en-us/library/ms379564(v=vs.80).aspx},
+  bdsk-url-1 = {http://msdn.microsoft.com/en-us/library/ms379564(v=vs.80).aspx},
+  date-added = {2011-11-18 19:34:55 +0000},
+  date-modified = {2011-11-18 19:44:26 +0000}
+}
+
+@ELECTRONIC{csharpreflectioncreateinstance,
+  author = {Microsoft},
+  title = {Activator.CreateInstance Method},
+  url = {http://msdn.microsoft.com/en-us/library/aa310404(v=vs.71).aspx},
+  bdsk-url-1 = {http://msdn.microsoft.com/en-us/library/aa310404(v=vs.71).aspx},
+  date-added = {2011-11-19 23:06:28 +0000},
+  date-modified = {2011-11-19 23:07:07 +0000}
+}
+
+@ELECTRONIC{csharproutedeventdelegate,
+  author = {Microsoft},
+  title = {RoutedEventHandler Delegate},
+  url = {http://msdn.microsoft.com/en-us/library/system.windows.routedeventhandler.aspx},
+  bdsk-url-1 = {http://msdn.microsoft.com/en-us/library/system.windows.routedeventhandler.aspx},
+  date-added = {2011-11-20 02:47:17 +0000},
+  date-modified = {2011-11-20 02:47:41 +0000}
+}
+
+@ELECTRONIC{csharpvolitilefields,
+  author = {Microsoft},
+  title = {CSharp Volitile Fields},
+  url = {http://msdn.microsoft.com/en-us/library/aa645755(v=vs.71).aspx},
+  bdsk-url-1 = {http://msdn.microsoft.com/en-us/library/aa645755(v=vs.71).aspx},
+  date-added = {2011-11-18 19:36:04 +0000},
+  date-modified = {2011-11-18 19:44:18 +0000}
+}
+
+@ELECTRONIC{MicroSoftMetrics,
+  author = {MicrosoftCodeMetricsValues},
+  title = {Code Metrics Values},
+  url = {http://msdn.microsoft.com/en-us/library/bb385914.aspx},
+  owner = {Dave},
+  timestamp = {2012.03.14}
+}
+
+@ARTICLE{DSLInfocentrism,
+  author = {L. Nakatani and M. Jones},
+  title = {Jargons and infocentrism},
+  journal = {Kamin},
+  annote = {Describes and advocates the development of DSLs as jargons: domain-specific
+	extensions of a tiny common base language. According to a new programming
+	paradigm (infocentrism) the application semantics for these jargons
+	can be programmed by providing actions for the constructs specific
+	to the jargon only; the traversal semantics is inherited from the
+	base language. Because all jargons share the base syntax and semantics,
+	it is easy to combine and reuse their definitions as well as their
+	tools. The InfoWiz technology which supports the development of jargons
+	is discussed},
+  date-added = {2011-10-08 20:21:27 +0100},
+  date-modified = {2011-10-08 20:22:02 +0100}
+}
+
+@ARTICLE{RequirementsVolatility,
+  author = {Nurmuliani, N; Zowghi, D; Powell, S.},
+  title = {Analysis of requirements volatility during software development life
+	cycle},
+  journal = {Software Engineering Conference, 2004. Proceedings. 2004 Australian},
+  year = {2004},
+  owner = {Dave},
+  timestamp = {2012.03.28}
+}
+
+@ELECTRONIC{csharpdynamiceventsubscription,
+  author = {Stack Overflow},
+  title = {C\# Dynamic Event Subscription},
+  url = {http://stackoverflow.com/questions/45779/c-sharp-dynamic-event-subscription},
+  bdsk-url-1 = {http://stackoverflow.com/questions/45779/c-sharp-dynamic-event-subscription},
+  date-added = {2011-11-20 02:43:10 +0000},
+  date-modified = {2011-11-20 02:43:37 +0000}
+}
+
+@ELECTRONIC{codeprojecteventaggregator,
+  author = {Code Project},
+  title = {CodeProject Event Aggregator},
+  url = {http://www.codeproject.com/KB/architecture/event_aggregator.aspx},
+  bdsk-url-1 = {http://www.codeproject.com/KB/architecture/event_aggregator.aspx},
+  date-added = {2011-11-18 19:36:30 +0000},
+  date-modified = {2011-11-18 19:44:13 +0000}
+}
+
+@ELECTRONIC{codeprojecteventfundamentals,
+  author = {Code Project},
+  title = {C\# Event Implementation Fundamentals},
+  url = {http://www.codeproject.com/KB/cs/event_fundamentals.aspx},
+  bdsk-url-1 = {http://www.codeproject.com/KB/cs/event_fundamentals.aspx},
+  date-added = {2011-11-20 02:45:49 +0000},
+  date-modified = {2011-11-20 02:46:14 +0000}
+}
+
+@ELECTRONIC{codeprojectreflection,
+  author = {Code Project},
+  title = {Reflection},
+  url = {http://www.codeproject.com/KB/cs/introreflection.aspx},
+  bdsk-url-1 = {http://www.codeproject.com/KB/cs/introreflection.aspx},
+  date-added = {2011-11-18 19:41:21 +0000},
+  date-modified = {2011-11-18 19:43:59 +0000}
+}
+
+@ARTICLE{SoftwareComponents,
+  author = {R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis,
+	D. P. Oliva, T. Sheard, I. Smith, and L. Walton},
+  title = {A software engineering experiment in software component generation},
+  journal = {Software Engineering ICSE},
+  year = {1996},
+  annote = {Reports the results of an experiment in which a template-based approach
+	and a DSL approach to software generation were compared. Several
+	subjects were monitored while performing a number of development
+	and maintenance tasks using alternatively template technology and
+	DSL technology. Flexibility, productivity, reliability, and usability
+	were measured. The DSL approach scored better on all counts},
+  date-added = {2011-10-08 20:16:09 +0100},
+  date-modified = {2011-10-08 20:16:48 +0100}
+}
+
+@ARTICLE{DSLRapidImplmentation,
+  author = {R. E. Faith, L. S. Nyland, and J. F. Prins},
+  title = {Khepera: A system for rapid implementation of domain specific languages},
+  journal = {Ramming},
+  annote = {Presents Khepera, a tool kit for rapid implementation and long-term
+	maintenance of DSLs via source-to-source transformation separated
+	into three phases: parsing, AST transformation, and pretty-printing},
+  date-added = {2011-10-08 20:08:46 +0100},
+  date-modified = {2011-10-08 20:09:25 +0100}
+}
+
+@ARTICLE{DSLArchitectures,
+  author = {R. N. Taylor, W. Tracz, and L. Coglianese},
+  title = {Software development using domain-specific software architectures},
+  journal = {ACM SIGSOFT Software Engineering Notes},
+  year = {1995},
+  annote = {Provides the material used for a course on DSSA, Domain-Specific
+	Software Architectures, which aims at the reduction in time and cost
+	of producing specific application systems within a supported domain.
+	The paper covers key examples, architecture representation formalisms,
+	domain engineering, and the DSSA process},
+  date-added = {2011-10-08 20:25:50 +0100},
+  date-modified = {2011-10-08 20:26:22 +0100}
+}
+
+@ARTICLE{DSLFrameworkTODSL,
+  author = {D. Roberts and R. Johnson},
+  title = {Evolve frameworks into domain-specific languages},
+  journal = {3rd International Conference on Pattern Languages},
+  year = {1996},
+  annote = {Discusses 9 stages of framework development. An object-oriented framework
+	evolves gradually, starting from three examples, moving via a white-box
+	framework, component library, pluggable objects, to a black-box framework.
+	The final, and most mature, stage is when the domain knowledge is
+	sufficiently stable to merit the development of a domain-specific
+	language or visual builder to access the framework},
+  date-added = {2011-10-08 20:24:13 +0100},
+  date-modified = {2011-10-08 20:24:52 +0100}
+}
+
+@ARTICLE{SchemaEvolutionQuery,
+  author = {Roddick, J.F},
+  title = {SQL/SE - A Query Language Extension for Databases Supporting Schema
+	Evolution},
+  journal = {SIGMOD Record},
+  year = {1992},
+  date-added = {2011-10-08 21:52:57 +0100},
+  date-modified = {2011-10-08 21:54:03 +0100}
+}
+
+@ARTICLE{SchemaDynamic,
+  author = {Roddick, J.F},
+  title = {Dynamically changing schemas within database modules},
+  journal = {Australian Computer Journal},
+  year = {1991},
+  annote = {In this paper schema evolution is considered the meta-database analogue
+	of temporal support in relational databases. It is investigated with
+	particular reference to the semantics of null values, its effect
+	on integrity constraints and its impact on query languages.},
+  date-added = {2011-10-08 21:48:07 +0100},
+  date-modified = {2011-10-08 21:49:51 +0100}
+}
+
+@ARTICLE{DSLCacheCoherent,
+  author = {S. Chandra, B. Richards, and J. R. Larus},
+  title = {Teapot: A domain-specific language for writing cache coherence protocols},
+  journal = {DSL-IEEE},
+  annote = {The problem of cache coherence occurs when local replica of shared
+	data are made in a distributed system in order to improve its scalability
+	and performance. Writing the code to support coherence protocols
+	is error-prone. This paper describes experience with the language
+	Teapot for describing these protocols. Teapot programs can be translated
+	to (1) C code that implements the protocol, or (2) input for an automatic
+	verifier. Two case studies and overall experience with this approach
+	are discussed.
+	
+	},
+  date-added = {2011-10-08 19:54:13 +0100},
+  date-modified = {2011-10-08 19:55:02 +0100}
+}
+
+@ARTICLE{RFC2079,
+  author = {M. Smith},
+  title = {Definition of an X.500 Attribute Type and an Object Class to Hold
+	Uniform Resource Identifiers (URIs)},
+  journal = {Network Working Group},
+  year = {1997},
+  annote = {This document specifies an Internet standards track protocol for
+	the Internet community, and requests discussion and suggestions for
+	improvements. Please refer to the current edition of the "Internet
+	Official Protocol Standards" (STD 1) for the standardization state
+	and status of this protocol},
+  date-added = {2011-10-08 20:28:33 +0100},
+  date-modified = {2011-10-08 20:29:12 +0100}
+}
+
+@ARTICLE{DSLNumericalAnalysis,
+  author = {T. B. Dinesh, M. Haveraaen, and J. Heering},
+  title = {An algebraic programming style for numerical software and its optimization},
+  journal = {Technical Report SEN-R9844},
+  year = {1998},
+  annote = {Discusses a domain-specific programming style for the domain of partial
+	differential equations, using an expression style directly obtained
+	from the underlying algebraic theory. The use of this style permits
+	optimizations beyond the scope of current compiler optimizations},
+  date-added = {2011-10-08 20:05:37 +0100},
+  date-modified = {2011-10-08 20:06:26 +0100}
+}
+
+@ARTICLE{SchemaHybridEvolution,
+  author = {Takahashi, J.},
+  title = {Hybrid relations for database schema evolution},
+  journal = {IEEE Computer Society},
+  year = {1990},
+  date-added = {2011-10-08 21:49:58 +0100},
+  date-modified = {2011-10-08 21:51:06 +0100}
+}
+
+@OTHER{MicrosoftDns,
+  author = {MICROSOFT TECHNET},
+  bdsk-url-1 = {http://technet.microsoft.com/en-us/network/bb629410.aspx},
+  date-added = {2011-10-08 07:21:38 +0100},
+  date-modified = {2011-10-08 07:22:25 +0100},
+  title = {Domain Name System},
+  url = {http://technet.microsoft.com/en-us/network/bb629410.aspx}
+}
+
+@ARTICLE{MicrosoftGlossary,
+  author = {MICROSOFT TECHNET},
+  title = {Server 2008 Gloassry of Terms},
+  bdsk-url-1 = {http://technet.microsoft.com/en-us/library/cc788089(WS.10).aspx},
+  date-added = {2011-10-08 07:22:27 +0100},
+  date-modified = {2011-10-08 07:23:56 +0100},
+  url = {http://technet.microsoft.com/en-us/library/cc788089(WS.10).aspx}
+}
+
+@ARTICLE{SchemaHeterogenity,
+  author = {Ventrone, V. and Heiler, S},
+  title = {Semantic heterogeneity as a result of domain evolution},
+  journal = {SIGMOD Record},
+  year = {1991},
+  date-added = {2011-10-08 21:54:04 +0100},
+  date-modified = {2011-10-08 21:54:46 +0100}
+}
+
+@ARTICLE{RFC2256,
+  author = {M. Wahl},
+  title = {A Summary of the X.500(96) User Schema for use with LDAPv3},
+  journal = {Network Working Group},
+  year = {1997},
+  annote = {This document specifies an Internet standards track protocol for
+	the Internet community, and requests discussion and suggestions for
+	improvements. Please refer to the current edition of the "Internet
+	Official Protocol Standards" (STD 1) for the standardization state
+	and status of this protocol. Distribution of this memo is unlimited.},
+  date-added = {2011-10-08 20:27:29 +0100},
+  date-modified = {2011-10-08 20:28:10 +0100}
+}
+
+@BOOK{WeinbergSoftwareTesting,
+  title = {Perfect Software: And Other Illusions about Testing},
+  publisher = {Dorset House},
+  year = {2008},
+  author = {Dr. Gerald M. Weinberg},
+  owner = {Dave},
+  timestamp = {2012.03.09}
+}
+
+@ARTICLE{RFC4523,
+  author = {K. Zeilenga},
+  title = {Lightweight Directory Access Protocol (LDAP) Schema Definitions for
+	X.509 Certificates},
+  journal = {Network Working Group},
+  year = {2006},
+  annote = {This document describes schema for representing X.509 certificates,
+	X.521 security information, and related elements in directories accessible
+	using the Lightweight Directory Access Protocol (LDAP). The LDAP
+	definitions for these X.509 and X.521 schema elements replace those
+	provided in RFCs 2252 and 2256.},
+  date-added = {2011-10-08 20:35:50 +0100},
+  date-modified = {2011-10-08 20:36:31 +0100}
+}
+
+@ARTICLE{RFC3909,
+  author = {K. Zeilenga},
+  title = {Lightweight Directory Access Protocol (LDAP) Cancel Operation},
+  journal = {Network Working Group},
+  year = {2004},
+  annote = { This specification describes a Lightweight Directory Access Protocol
+	(LDAP) extended operation to cancel (or abandon) an outstanding operation.
+	Unlike the LDAP Abandon operation, but like the X.511 Directory Access
+	Protocol (DAP) Abandon operation, this operation has a response which
+	provides an indication of its outcome.},
+  date-added = {2011-10-08 20:37:02 +0100},
+  date-modified = {2011-10-08 20:37:39 +0100}
+}
+
+@ARTICLE{RFC,
+  author = {K. Zeilenga},
+  title = {Subentries in the Lightweight Directory Access Protocol (LDAP)},
+  journal = {Network Working Group},
+  year = {2003},
+  annote = {In X.500 directories, subentries are special entries used to hold
+	information associated with a subtree or subtree refinement. This
+	document adapts X.500 subentries mechanisms for use with the Lightweight
+	Directory Access Protocol (LDAP)},
+  date-added = {2011-10-08 20:29:30 +0100},
+  date-modified = {2011-10-08 20:30:06 +0100}
+}
+
+@ELECTRONIC{csharpDelegatesAndEvents,
+  title = {C\# Delegates And Events in Depth},
+  url = {http://www.ikriv.com/en/prog/info/dotnet/Delegates.html},
+  bdsk-url-1 = {http://www.ikriv.com/en/prog/info/dotnet/Delegates.html},
+  date-added = {2011-11-20 01:55:50 +0000},
+  date-modified = {2011-11-20 01:56:32 +0000}
+}
+
+@ELECTRONIC{csharpeventaggregator,
+  title = {WPF - EventAggregator in PRISM 4.0},
+  url = {http://shujaatsiddiqi.blogspot.com/2010/12/wpf-eventaggregator-in-prism-40-cal.html},
+  bdsk-url-1 = {http://shujaatsiddiqi.blogspot.com/2010/12/wpf-eventaggregator-in-prism-40-cal.html},
+  date-added = {2011-11-20 16:00:30 +0000},
+  date-modified = {2011-11-20 16:00:58 +0000}
+}
+

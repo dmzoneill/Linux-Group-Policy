@@ -1,0 +1,333 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_260 = [
+   [43,9,43,28,'dccv']
+, [44,9,44,10,'dccv']
+, [46,13,46,14,'dccv']
+, [47,17,47,44,'dccv']
+, [49,17,49,56,'dccv']
+, [51,17,51,115,'dccv']
+, [52,17,52,114,'dccv']
+, [53,17,53,57,'dccv']
+, [55,17,55,34,'dccv']
+, [57,17,57,64,'dccv']
+, [58,17,58,18,'dccv']
+, [59,21,59,110,'dccv']
+, [60,21,60,102,'dccv']
+, [61,21,61,28,'dccv']
+, [77,9,77,10,'dccv']
+, [84,9,84,10,'dccv']
+, [85,13,85,66,'dccv']
+, [86,9,86,10,'dccv']
+, [89,9,89,10,'dccv']
+, [91,13,91,14,'dccv']
+, [92,17,92,64,'dccv']
+, [99,17,99,56,'dccv']
+, [106,17,106,69,'dccv']
+, [107,17,107,46,'dccv']
+, [108,17,108,57,'dccv']
+, [109,17,109,39,'dccv']
+, [110,17,110,38,'dccv']
+, [111,17,111,69,'dccv']
+, [112,13,112,14,'dccv']
+, [117,9,117,10,'dccv']
+, [120,9,120,10,'dccv']
+, [122,13,122,14,'dccv']
+, [123,17,123,64,'dccv']
+, [130,17,130,56,'dccv']
+, [137,17,137,52,'dccv']
+, [138,13,138,14,'dccv']
+, [143,9,143,10,'dccv']
+, [146,9,146,10,'dccv']
+, [148,13,148,14,'dccv']
+, [149,17,149,49,'dccv']
+, [150,17,150,38,'dccv']
+, [151,17,151,18,'dccv']
+, [152,21,152,114,'dccv']
+, [153,21,153,47,'dccv']
+, [154,21,154,22,'dccv']
+, [155,25,155,72,'dccv']
+, [156,21,156,22,'dccv']
+, [157,17,157,18,'dccv']
+, [158,13,158,14,'dccv']
+, [163,9,163,10,'dccv']
+, [178,9,178,10,'dccv']
+, [179,13,179,53,'dccv']
+, [180,9,180,10,'dccv']
+, [64,17,64,56,'dcuc']
+, [65,17,65,18,'dcuc']
+, [66,21,66,108,'dcuc']
+, [67,21,67,101,'dcuc']
+, [68,21,68,28,'dcuc']
+, [71,17,71,52,'dcuc']
+, [72,13,72,14,'dcuc']
+, [73,13,73,37,'dcuc']
+, [74,13,74,14,'dcuc']
+, [75,17,75,53,'dcuc']
+, [76,13,76,14,'dcuc']
+, [77,9,77,10,'dcuc']
+, [93,17,93,18,'dcuc']
+, [94,21,94,110,'dcuc']
+, [95,21,95,102,'dcuc']
+, [96,21,96,28,'dcuc']
+, [100,17,100,18,'dcuc']
+, [101,21,101,108,'dcuc']
+, [102,21,102,101,'dcuc']
+, [103,21,103,28,'dcuc']
+, [113,13,113,37,'dcuc']
+, [114,13,114,14,'dcuc']
+, [115,17,115,53,'dcuc']
+, [116,13,116,14,'dcuc']
+, [124,17,124,18,'dcuc']
+, [125,21,125,110,'dcuc']
+, [126,21,126,102,'dcuc']
+, [127,21,127,28,'dcuc']
+, [131,17,131,18,'dcuc']
+, [132,21,132,108,'dcuc']
+, [133,21,133,101,'dcuc']
+, [134,21,134,28,'dcuc']
+, [139,13,139,37,'dcuc']
+, [140,13,140,14,'dcuc']
+, [141,17,141,53,'dcuc']
+, [142,13,142,14,'dcuc']
+, [159,13,159,37,'dcuc']
+, [160,13,160,14,'dcuc']
+, [161,17,161,53,'dcuc']
+, [162,13,162,14,'dcuc']
+, [171,9,171,10,'dcuc']
+, [172,9,172,10,'dcuc']
+, [187,9,187,10,'dcuc']
+, [189,13,189,14,'dcuc']
+, [190,13,190,14,'dcuc']
+, [191,13,191,31,'dcuc']
+, [192,13,192,14,'dcuc']
+, [193,13,193,14,'dcuc']
+, [194,9,194,10,'dcuc']
+, [200,9,200,10,'dcuc']
+, [202,13,202,14,'dcuc']
+, [203,13,203,14,'dcuc']
+, [204,13,204,31,'dcuc']
+, [205,13,205,14,'dcuc']
+, [206,13,206,14,'dcuc']
+, [207,9,207,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src260" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows;
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Database;
+using LGP.Components.Factory.Interfaces.Module;
+using LGP.Components.Factory.Interfaces.Network;
+using LGP.Components.Factory.Publishers.Events;
+using LGP.Modules.ModuleEditor.Internal;
+using LGP.Modules.ModuleEditor.Internal.Modals.Controls;
+
+#endregion
+
+namespace LGP.Modules.ModuleEditor
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for ModuleList.xaml
+    /// &lt;/summary&gt;
+    public partial class ModuleList : IUserControl
+    {
+        #region Delegates
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;moduleName&quot;&gt;&lt;/param&gt;
+        /// &lt;param name = &quot;panel&quot;&gt;&lt;/param&gt;
+        public delegate void AddModuleDelegate( string moduleName , StackPanel panel );
+
+        #endregion
+
+        private static ModuleList _instance;
+
+        /// &lt;summary&gt;
+        ///   Call back delegate for the poup add module
+        /// &lt;/summary&gt;
+        public AddModuleDelegate CallBackDelegate;
+
+        /// &lt;summary&gt;
+        ///   Constructor for the module
+        /// &lt;/summary&gt;
+        public ModuleList()
+        {
+            try
+            {
+                this.InitializeComponent();
+
+                ModuleHandler.Panel = this.stackPanel1;
+
+                this.ImageNew.Source = Framework.Images.GetImage( &quot;NewDocumentHS&quot; , &quot;VS2010ImageLibrary&quot; ).Source;
+                this.ImageRefresh.Source = Framework.Images.GetImage( &quot;RepeatHS&quot; , &quot;VS2010ImageLibrary&quot; ).Source;
+                this.Tag = Properties.Resources.Modules;
+
+                _instance = this;
+
+                if( Framework.Database.IsConnected() == false )
+                {
+                    Framework.Notification.Display( Properties.Resources.DatabaseConnectionRequired , 5000 );
+                    Framework.EventBus.Publish( new PreferencesEvent( this , typeof( IDatabase ) ) );
+                    return;
+                }
+
+                if( ModuleHandler.GetClient() == null )
+                {
+                    Framework.Notification.Display( Properties.Resources.ServerConnectionRequired , 5000 );
+                    Framework.EventBus.Publish( new PreferencesEvent( this , typeof( INetwork ) ) );
+                    return;
+                }
+
+                ModuleHandler.RefreshModuleFiles();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static ModuleList GetInstance()
+        {
+            return _instance ?? ( _instance = new ModuleList() );
+        }
+
+        private void NewMenuItemClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                if( Framework.Database.IsConnected() == false )
+                {
+                    Framework.Notification.Display( Properties.Resources.DatabaseConnectionRequired , 5000 );
+                    Framework.EventBus.Publish( new PreferencesEvent( this , typeof( IDatabase ) ) );
+                    return;
+                }
+
+                if( ModuleHandler.GetClient() == null )
+                {
+                    Framework.Notification.Display( Properties.Resources.ServerConnectionRequired , 5000 );
+                    Framework.EventBus.Publish( new PreferencesEvent( this , typeof( INetwork ) ) );
+                    return;
+                }
+
+                this.CallBackDelegate += ModuleHandler.CreateModule;
+                var popup = Framework.Dialog;
+                var cou = new AddModule( this , popup );
+                popup.SetChild( cou );
+                popup.ShowBlocking();
+                this.CallBackDelegate -= ModuleHandler.CreateModule;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void RefreshMenuItemClick( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                if( Framework.Database.IsConnected() == false )
+                {
+                    Framework.Notification.Display( Properties.Resources.DatabaseConnectionRequired , 5000 );
+                    Framework.EventBus.Publish( new PreferencesEvent( this , typeof( IDatabase ) ) );
+                    return;
+                }
+
+                if( ModuleHandler.GetClient() == null )
+                {
+                    Framework.Notification.Display( Properties.Resources.ServerConnectionRequired , 5000 );
+                    Framework.EventBus.Publish( new PreferencesEvent( this , typeof( INetwork ) ) );
+                    return;
+                }
+
+                ModuleHandler.RefreshModuleFiles();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void ToolBarLoaded( object sender , RoutedEventArgs e )
+        {
+            try
+            {
+                var toolBar = sender as ToolBar;
+                if( toolBar != null )
+                {
+                    var overflowGrid = toolBar.Template.FindName( &quot;OverflowGrid&quot; , toolBar ) as FrameworkElement;
+                    if( overflowGrid != null )
+                    {
+                        overflowGrid.Visibility = Visibility.Collapsed;
+                    }
+                }
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        #region Implementation of IUserControl
+
+        /// &lt;summary&gt;
+        ///   Aks the UserControl to do some clean up!
+        /// &lt;/summary&gt;
+        public void Dispose()
+        {
+        }
+
+        /// &lt;summary&gt;
+        /// Asks the Usercontrol to refresh itself
+        /// &lt;/summary&gt;
+        public void Refresh()
+        {
+            this.Tag = Properties.Resources.Modules;
+        }
+
+
+        /// &lt;summary&gt;
+        /// When the control is no longer in focus, asks it to pause ( heavy duty non critical, ie threads updating graphs )
+        /// &lt;/summary&gt;
+        public void Pause()
+        {
+            try
+            {
+            }
+            catch( Exception )
+            {
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// When the tab comes back into focus, resume ( heavy duty non critical, ie threads updating graphs )
+        /// &lt;/summary&gt;
+        public void Resume()
+        {
+            try
+            {
+            }
+            catch( Exception )
+            {
+            }
+        }
+
+        #endregion
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src260', RANGES_260)
+		</script>
+	</body>
+</html>

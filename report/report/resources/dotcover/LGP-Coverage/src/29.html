@@ -1,0 +1,258 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_29 = [
+   [25,9,25,28,'dccv']
+, [26,9,26,10,'dccv']
+, [27,13,27,48,'dccv']
+, [28,13,28,48,'dccv']
+, [29,13,29,42,'dccv']
+, [30,13,30,42,'dccv']
+, [31,13,31,43,'dccv']
+, [32,9,32,10,'dccv']
+, [61,9,61,10,'dccv']
+, [62,13,62,30,'dccv']
+, [63,9,63,10,'dccv']
+, [70,9,70,10,'dccv']
+, [71,13,71,39,'dccv']
+, [72,13,72,14,'dccv']
+, [73,17,73,41,'dccv']
+, [74,13,74,14,'dccv']
+, [75,13,75,36,'dccv']
+, [76,9,76,10,'dccv']
+, [84,9,84,10,'dccv']
+, [85,13,85,35,'dccv']
+, [86,9,86,10,'dccv']
+, [93,9,93,10,'dccv']
+, [94,13,94,44,'dccv']
+, [95,13,95,14,'dccv']
+, [96,17,96,46,'dccv']
+, [97,13,97,14,'dccv']
+, [98,13,98,41,'dccv']
+, [99,9,99,10,'dccv']
+, [107,9,107,10,'dccv']
+, [108,13,108,35,'dccv']
+, [109,9,109,10,'dccv']
+, [116,9,116,10,'dccv']
+, [117,13,117,44,'dccv']
+, [118,13,118,14,'dccv']
+, [119,17,119,46,'dccv']
+, [120,13,120,14,'dccv']
+, [121,13,121,41,'dccv']
+, [122,9,122,10,'dccv']
+, [130,9,130,10,'dccv']
+, [131,13,131,38,'dccv']
+, [132,13,132,14,'dccv']
+, [133,17,133,40,'dccv']
+, [134,13,134,14,'dccv']
+, [135,13,135,35,'dccv']
+, [136,9,136,10,'dccv']
+, [144,9,144,10,'dccv']
+, [145,13,145,29,'dccv']
+, [146,9,146,10,'dccv']
+, [154,9,154,10,'dccv']
+, [155,13,155,38,'dccv']
+, [156,13,156,14,'dccv']
+, [157,17,157,40,'dccv']
+, [158,13,158,14,'dccv']
+, [159,13,159,35,'dccv']
+, [160,9,160,10,'dccv']
+, [168,9,168,10,'dccv']
+, [169,13,169,29,'dccv']
+, [170,9,170,10,'dccv']
+, [178,9,178,10,'dccv']
+, [179,13,179,39,'dccv']
+, [180,9,180,10,'dccv']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src29" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Collections.Generic;
+using LGP.Components.Factory.Interfaces.Network;
+
+#endregion
+
+namespace LGP.Components.Factory.Internal.ServerControl
+{
+    /// &lt;summary&gt;
+    ///   Holds server information
+    /// &lt;/summary&gt;
+    public class ServerInfo : IServerInfo
+    {
+        private readonly List&lt; int &gt; _cpu;
+        private readonly List&lt; int &gt; _incoming;
+        private readonly List&lt; int &gt; _outgoing;
+        private readonly List&lt; int &gt; _rx;
+        private readonly List&lt; int &gt; _tx;
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        public ServerInfo()
+        {
+            this._incoming = new List&lt; int &gt;();
+            this._outgoing = new List&lt; int &gt;();
+            this._rx = new List&lt; int &gt;();
+            this._tx = new List&lt; int &gt;();
+            this._cpu = new List&lt; int &gt;();
+        }
+
+        #region IServerInfo Members
+
+        /// &lt;summary&gt;
+        ///   The server ip address
+        /// &lt;/summary&gt;
+        public string ServerAddress
+        {
+            get;
+            set;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   The time it was last seen
+        /// &lt;/summary&gt;
+        public DateTime LastSeen
+        {
+            get;
+            set;
+        }
+
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public List&lt; int &gt; GetCpu()
+        {
+            return this._cpu;
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;value&quot;&gt;&lt;/param&gt;
+        public void AddCpu( int value )
+        {
+            if( this._cpu.Count &gt; 29 )
+            {
+                this._cpu.RemoveAt( 0 );
+            }
+            this._cpu.Add( value );
+        }
+
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public List&lt; int &gt; GetIncoming()
+        {
+            return this._incoming;
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;value&quot;&gt;&lt;/param&gt;
+        public void AddIncoming( int value )
+        {
+            if( this._incoming.Count &gt; 29 )
+            {
+                this._incoming.RemoveAt( 0 );
+            }
+            this._incoming.Add( value );
+        }
+
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public List&lt; int &gt; GetOutgoing()
+        {
+            return this._outgoing;
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;value&quot;&gt;&lt;/param&gt;
+        public void AddOutgoing( int value )
+        {
+            if( this._outgoing.Count &gt; 29 )
+            {
+                this._outgoing.RemoveAt( 0 );
+            }
+            this._outgoing.Add( value );
+        }
+
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;value&quot;&gt;&lt;/param&gt;
+        public void AddTx( int value )
+        {
+            if( this._tx.Count &gt; 29 )
+            {
+                this._tx.RemoveAt( 0 );
+            }
+            this._tx.Add( value );
+        }
+
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public List&lt; int &gt; GetTx()
+        {
+            return this._tx;
+        }
+
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;value&quot;&gt;&lt;/param&gt;
+        public void AddRx( int value )
+        {
+            if( this._rx.Count &gt; 29 )
+            {
+                this._rx.RemoveAt( 0 );
+            }
+            this._rx.Add( value );
+        }
+
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public List&lt; int &gt; GetRx()
+        {
+            return this._rx;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Overrides to string, for listbox usage
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public override string ToString()
+        {
+            return this.ServerAddress;
+        }
+
+        #endregion
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src29', RANGES_29)
+		</script>
+	</body>
+</html>

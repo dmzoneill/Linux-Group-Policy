@@ -1,0 +1,12 @@
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\bin\Debug\LGPMessageBus.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\bin\Debug\LGPMessageBus.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\bin\Debug\Microsoft.Practices.Prism.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\obj\Debug\LGPMessageBus.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\LGPMessageBus\obj\Debug\LGPMessageBus.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\LGPMessageBus.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\LGPMessageBus.pdb

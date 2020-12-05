@@ -1,0 +1,952 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGP.Modules.ModuleEditor</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.Modules.ModuleEditor.Internal.Modals.Controls.DeleteModule">
+            <summary>
+              Interaction logic for DeleteModule.xaml
+            </summary>
+            <summary>
+            DeleteModule
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.Modals.Controls.DeleteModule.#ctor">
+            <summary>
+              Constrcutor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.Modals.Controls.DeleteModule.#ctor(System.Windows.Controls.UserControl,LGP.Components.Factory.Interfaces.Infrastructure.IDialog,LGP.Components.Factory.Interfaces.Database.IModule)">
+            <summary>
+              Constructor
+            </summary>
+            <param name = "moduleList">Creator</param>
+            <param name = "popup">the parent window</param>
+            <param name = "module">IModule</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.Modals.Controls.DeleteModule.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Cancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Col">
+            <summary>
+              Looks up a localized string similar to Col :.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Copy">
+            <summary>
+              Looks up a localized string similar to Copy.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Create">
+            <summary>
+              Looks up a localized string similar to Create.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Cut">
+            <summary>
+              Looks up a localized string similar to Cut.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.DatabaseConnectionRequired">
+            <summary>
+              Looks up a localized string similar to Database connetion required.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Delete">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.DeleteModule">
+            <summary>
+              Looks up a localized string similar to Delete Module.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.DuplicateModule">
+            <summary>
+              Looks up a localized string similar to Module with the same name already exists.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Lenght">
+            <summary>
+              Looks up a localized string similar to Lenght :.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.LineNumbers">
+            <summary>
+              Looks up a localized string similar to Line Numbers.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Lines">
+            <summary>
+              Looks up a localized string similar to Lines :.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Ln">
+            <summary>
+              Looks up a localized string similar to Ln :.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Location">
+            <summary>
+              Looks up a localized string similar to Location.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.ModuleDetails">
+            <summary>
+              Looks up a localized string similar to Module details.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.ModuleEditor">
+            <summary>
+              Looks up a localized string similar to Module Editor.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.ModuleGrammer">
+            <summary>
+              Looks up a localized string similar to Module grammer.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Modules">
+            <summary>
+              Looks up a localized string similar to Modules.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Name">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.New">
+            <summary>
+              Looks up a localized string similar to New.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.NewModule">
+            <summary>
+              Looks up a localized string similar to New Module.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Paste">
+            <summary>
+              Looks up a localized string similar to Paste.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Redo">
+            <summary>
+              Looks up a localized string similar to Redo.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Refresh">
+            <summary>
+              Looks up a localized string similar to Refresh.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Rename">
+            <summary>
+              Looks up a localized string similar to Rename.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Save">
+            <summary>
+              Looks up a localized string similar to Save.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Sel">
+            <summary>
+              Looks up a localized string similar to Sel :.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.SelectFolder">
+            <summary>
+              Looks up a localized string similar to Select Folder.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.ServerConnectionRequired">
+            <summary>
+              Looks up a localized string similar to Server connection required.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.SplitView">
+            <summary>
+              Looks up a localized string similar to Split view.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.Undo">
+            <summary>
+              Looks up a localized string similar to Undo.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Properties.Resources.WordWrap">
+            <summary>
+              Looks up a localized string similar to Word wrap.
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.#ctor(LGP.Components.Factory.Interfaces.Database.IModule,System.String,System.String)">
+            <summary>
+            </summary>
+            <param name = "module"></param>
+            <param name = "key"></param>
+            <param name = "value"></param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.#ctor(LGP.Components.Factory.Interfaces.Database.IGrammer,LGP.Components.Factory.Interfaces.Database.IModule)">
+            <summary>
+            </summary>
+            <param name = "dbGrammer"></param>
+            <param name = "module"></param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.Save">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.IsDeleted">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.SetDeleted(System.Boolean)">
+            <summary>
+            </summary>
+            <param name = "deleted"></param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.Update(LGP.Components.Factory.Interfaces.Database.IGrammer,LGP.Components.Factory.Interfaces.Database.IGrammerObserver)">
+            <summary>
+              Update this observer with a refernece to the grammer
+            </summary>
+            <param name = "grammer">IGrammer</param>
+            <param name = "source">IGrammerObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.Attach(LGP.Components.Factory.Interfaces.Database.IGrammerObserver)">
+            <summary>
+              Attach objewcts that observer this grammer
+            </summary>
+            <param name = "obj">IGrammerObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.Detach(LGP.Components.Factory.Interfaces.Database.IGrammerObserver)">
+            <summary>
+              Detach objewcts that observer this grammer
+            </summary>
+            <param name = "obj">IGrammerObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.Notify">
+            <summary>
+              Notify observers of this grammer
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.Dispose(LGP.Components.Factory.Interfaces.Database.IGrammerObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IGrammerObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.GetId">
+            <summary>
+              Gets the grammer rowid
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.GetModuleId">
+            <summary>
+              Gets the grammer moduleid
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.GetKey">
+            <summary>
+              Gets the grammer key
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.GetValue">
+            <summary>
+              Gets the grammer value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.SetModuleId(System.Int32)">
+            <summary>
+              Sets the grammer moduleid
+            </summary>
+            <param name = "val">int</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.SetKey(System.String)">
+            <summary>
+              Sets the grammer key
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerState.SetValue(System.String)">
+            <summary>
+              Sets the grammer value
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.Internal.Modals.Controls.AddModule">
+            <summary>
+              Interaction logic for AddModule.xaml
+            </summary>
+            <summary>
+            AddModule
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.Modals.Controls.AddModule.#ctor">
+            <summary>
+              Constrcutor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.Modals.Controls.AddModule.#ctor(LGP.Modules.ModuleEditor.ModuleList,LGP.Components.Factory.Interfaces.Infrastructure.IDialog)">
+            <summary>
+              Constructor
+            </summary>
+            <param name = "moduleList">Creator</param>
+            <param name = "popup">the parent window</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.Modals.Controls.AddModule.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.Internal.ModuleFileState">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.#ctor(System.String,System.String)">
+            <summary>
+            </summary>
+            <param name = "fileLocation"></param>
+            <param name = "fileText"></param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.SetModuleLocation(System.String)">
+            <summary>
+              Moves the file to the new location
+            </summary>
+            <param name = "location">string</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.SaveChanges">
+            <summary>
+              Saves all changes to the file and database
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.Update(LGP.Components.Factory.Interfaces.Database.IModule,LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Update this observer with a refernece to the module
+            </summary>
+            <param name = "module">IModule</param>
+            <param name = "source">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.Attach(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Attach objewcts that observer this module
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.Detach(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Detach objewcts that observer this module
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.Notify">
+            <summary>
+              Notify observers of this module
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.Dispose(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.GetModuleId">
+            <summary>
+              Returns the module id
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.AddGrammer(System.String,System.String)">
+            <summary>
+              Adds a grammer to this module
+            </summary>
+            <param name = "key">string</param>
+            <param name = "value">string</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.DeleteGrammer(System.String)">
+            <summary>
+              Deletes a grammer given a key
+            </summary>
+            <param name = "key"></param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.DeleteAllGrammer">
+            <summary>
+              Deletes all the grammers associated with this module
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.GetAllGrammers">
+            <summary>
+              Gets all the grammers for this module
+            </summary>
+            <returns>List ModuleFileGrammerState</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.GetGrammer(System.String)">
+            <summary>
+              Gets a grammer given a key
+            </summary>
+            <param name = "key">grammer lvalue</param>
+            <returns>IGrammer</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.GetGrammer(System.Int32)">
+            <summary>
+              Gets a grammer given an id
+            </summary>
+            <param name = "id">grammer id</param>
+            <returns>IGrammer</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.GetModuleName">
+            <summary>
+              Gets the module package name
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.SetModuleName(System.String)">
+            <summary>
+              Sets the module package name
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.GetModuleLocation">
+            <summary>
+              Gets the location of the file on the disk
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.GetHash">
+            <summary>
+              Gets the file hash
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.GetName">
+            <summary>
+              Gets the name of the module
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileState.SetName(System.String)">
+            <summary>
+              Sets the module name
+            </summary>
+            <param name = "name"></param>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Internal.ModuleFileState.FileContents">
+            <summary>
+              Document associated with this object
+            </summary>
+        </member>
+        <member name="E:LGP.Modules.ModuleEditor.Internal.ModuleFileState.PropertyChanged">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.Internal.ModuleDocument">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleDocument.#ctor(LGP.Components.Factory.Interfaces.Database.IModule,LGP.Modules.ModuleEditor.ModuleEditor,ICSharpCode.AvalonEdit.TextEditor,ICSharpCode.AvalonEdit.TextEditor)">
+            <summary>
+              Constructor
+            </summary>
+            <param name = "parent">ModuleEditor</param>
+            <param name = "module">Document to bind</param>
+            <param name = "avalon1">TextEditor</param>
+            <param name = "avalon2">TextEditor</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleDocument.GoTo(System.String)">
+            <summary>
+            </summary>
+            <param name = "text"></param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleDocument.GetHash">
+            <summary>
+              Gets the has of the document
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleDocument.Update(LGP.Components.Factory.Interfaces.Database.IModule,LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Update this observer with a refernece to the module
+            </summary>
+            <param name = "module">IModule</param>
+            <param name = "source">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleDocument.Attach(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Attach objewcts that observer this module
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleDocument.Detach(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Detach objewcts that observer this module
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleDocument.Notify">
+            <summary>
+              Notify observers of this module
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleDocument.Dispose(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Internal.ModuleDocument.Document">
+            <summary>
+              Document associated with this object
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Internal.ModuleDocument.LineCount">
+            <summary>
+              Get the lines count
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Internal.ModuleDocument.FileLength">
+            <summary>
+              Get the module lenght
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Internal.ModuleDocument.CaretRow">
+            <summary>
+              Get the caret row
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Internal.ModuleDocument.CaretCol">
+            <summary>
+              Get the caret row
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Internal.ModuleDocument.SelectionLength">
+            <summary>
+              Get the caret row
+            </summary>
+        </member>
+        <member name="E:LGP.Modules.ModuleEditor.Internal.ModuleDocument.PropertyChanged">
+            <summary>
+              Event for the document change
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.ModuleEditor">
+            <summary>
+              Interaction logic for ModuleEditor.xaml
+            </summary>
+            <summary>
+            ModuleEditor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleEditor.#ctor(LGP.Components.Factory.Interfaces.Database.IModule)">
+            <summary>
+              Constructor for the module
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleEditor.Dispose">
+            <summary>
+              Asks the UserControl to do some clean up!
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleEditor.Refresh">
+            <summary>
+            Asks the Usercontrol to refresh itself
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleEditor.Pause">
+            <summary>
+            When the control is no longer in focus, asks it to pause ( heavy duty non critical, ie threads updating graphs )
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleEditor.Resume">
+            <summary>
+            When the tab comes back into focus, resume ( heavy duty non critical, ie threads updating graphs )
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleEditor.Update(LGP.Components.Factory.Interfaces.Database.IModule,LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Update this observer with a refernece to the module
+            </summary>
+            <param name = "module">IModule</param>
+            <param name = "source">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleEditor.Attach(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Attach objewcts that observer this module
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleEditor.Detach(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Detach objewcts that observer this module
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleEditor.Notify">
+            <summary>
+              Notify observers of this module
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleEditor.Dispose(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.ModuleFileGrammerStateHandler.DeleteGrammer(System.String)">
+            <summary>
+              Deletes a grammer given a key
+            </summary>
+            <param name = "key"></param>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.Internal.NodeViews.ModulePane">
+            <summary>
+              Interaction logic for ModulePane.xaml
+            </summary>
+            <summary>
+            ModulePane
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.NodeViews.ModulePane.#ctor(LGP.Components.Factory.Interfaces.Database.IModule,LGP.Modules.ModuleEditor.Internal.ModuleDocument)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.NodeViews.ModulePane.Update(LGP.Components.Factory.Interfaces.Database.IModule,LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Update this observer with a refernece to the module
+            </summary>
+            <param name = "module">IModule</param>
+            <param name = "source">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.NodeViews.ModulePane.Attach(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Attach objewcts that observer this module
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.NodeViews.ModulePane.Detach(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Detach objewcts that observer this module
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.NodeViews.ModulePane.Notify">
+            <summary>
+              Notify observers of this moduleFile
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.NodeViews.ModulePane.Dispose(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.NodeViews.ModulePane.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.Plugin">
+            <summary>
+              Concreate Implmentation and boundary class to Module Compoents
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Plugin.GetMainControl">
+            <summary>
+              Gets the main component of the module
+            </summary>
+            <returns>Usercontrol component</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Plugin.GetSidebarControl">
+            <summary>
+              Gets the sidebar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Plugin.GetName">
+            <summary>
+              Gets the name of the main component
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Plugin.RegisterMenuEntries(LGP.Components.Factory.Interfaces.Component.IMenu)">
+            <summary>
+              Registers this components menu handlers
+            </summary>
+            <param name = "menu">The program main menu</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Plugin.GetIcon">
+            <summary>
+              Gets the image that represents the module
+            </summary>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Plugin.GetBottombarControl">
+            <summary>
+              Gets the bottombar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Plugin.GetToolbarControl">
+            <summary>
+              Gets the toolbar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Plugin.GetPreferencesControl">
+            <summary>
+              Gets the preferences component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Plugin.GetComponentSideBarName">
+            <summary>
+              Gets the name of the sidebar component
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Plugin.GetComponentContentName">
+            <summary>
+              Gets the name of the component
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Plugin.ModulesToolbarsItemClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Handler for this componets menu entries
+              Forwards the event to the message bus for subscribers interest
+            </summary>
+            <param name = "sender">The menu item that was clicked</param>
+            <param name = "e">The event details</param>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.ModuleList">
+            <summary>
+              Interaction logic for ModuleList.xaml
+            </summary>
+            <summary>
+            ModuleList
+            </summary>
+        </member>
+        <member name="F:LGP.Modules.ModuleEditor.ModuleList.CallBackDelegate">
+            <summary>
+              Call back delegate for the poup add module
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleList.#ctor">
+            <summary>
+              Constructor for the module
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleList.GetInstance">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleList.Dispose">
+            <summary>
+              Aks the UserControl to do some clean up!
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleList.Refresh">
+            <summary>
+            Asks the Usercontrol to refresh itself
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleList.Pause">
+            <summary>
+            When the control is no longer in focus, asks it to pause ( heavy duty non critical, ie threads updating graphs )
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleList.Resume">
+            <summary>
+            When the tab comes back into focus, resume ( heavy duty non critical, ie threads updating graphs )
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.ModuleList.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.ModuleList.AddModuleDelegate">
+            <summary>
+            </summary>
+            <param name = "moduleName"></param>
+            <param name = "panel"></param>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.Preferences">
+            <summary>
+              Interaction logic for Preferences.xaml
+            </summary>
+            <summary>
+            Preferences
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Preferences.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Preferences.GetName">
+            <summary>
+              Gets the name of the preferences Pane
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Preferences.GetControl">
+            <summary>
+              Gets the preferences window
+            </summary>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Preferences.Save">
+            <summary>
+              Aks the preferences panel to save its entries
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Preferences.Load(LGP.Components.Factory.Interfaces.Component.ISettings)">
+            <summary>
+              Asks the preferences to load its settings
+            </summary>
+            <param name="settingsParent"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Preferences.GetControlType">
+            <summary>
+            Gets the type it Controls
+            </summary>
+            <returns>Type</returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Preferences.GetIcon">
+            <summary>
+            Gets the preferences icon
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Preferences.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.Internal.CustomControls.StackPanelModuleElement">
+            <summary>
+              Interaction logic for StackPanelModuleElement.xaml
+            </summary>
+            <summary>
+            StackPanelModuleElement
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.CustomControls.StackPanelModuleElement.#ctor(LGP.Components.Factory.Interfaces.Database.IModule)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.CustomControls.StackPanelModuleElement.#ctor(LGP.Components.Factory.Interfaces.Database.IModule,System.Int32)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.CustomControls.StackPanelModuleElement.Activate">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.CustomControls.StackPanelModuleElement.Update(LGP.Components.Factory.Interfaces.Database.IModule,LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Update this observer with a refernece to the module
+            </summary>
+            <param name = "module">IModule</param>
+            <param name = "source">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.CustomControls.StackPanelModuleElement.Attach(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Attach objewcts that observer this module
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.CustomControls.StackPanelModuleElement.Detach(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Detach objewcts that observer this module
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.CustomControls.StackPanelModuleElement.Notify">
+            <summary>
+              Notify observers of this module
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.CustomControls.StackPanelModuleElement.Dispose(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.CustomControls.StackPanelModuleElement.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers.BraceFoldingStrategy">
+            <summary>
+              Allows producing foldings from a document based on braces.
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers.BraceFoldingStrategy.#ctor">
+            <summary>
+              Creates a new BraceFoldingStrategy.
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers.BraceFoldingStrategy.CreateNewFoldings(ICSharpCode.AvalonEdit.Document.TextDocument,System.Int32@)">
+            <summary>
+              Create <see cref="T:ICSharpCode.AvalonEdit.Folding.NewFolding"/>s for the specified document.
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers.BraceFoldingStrategy.CreateNewFoldings(ICSharpCode.AvalonEdit.Document.ITextSource)">
+            <summary>
+              Create <see cref="T:ICSharpCode.AvalonEdit.Folding.NewFolding"/>s for the specified document.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers.BraceFoldingStrategy.OpeningBrace">
+            <summary>
+              Gets/Sets the opening brace. The default value is '{'.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers.BraceFoldingStrategy.ClosingBrace">
+            <summary>
+              Gets/Sets the closing brace. The default value is '}'.
+            </summary>
+        </member>
+    </members>
+</doc>

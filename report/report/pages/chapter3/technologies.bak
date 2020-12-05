@@ -1,0 +1,62 @@
+\newpage
+
+\section{Supporting Technologies}
+				
+	\normalsize
+	{			
+				
+		\begin{itemize}
+					
+			\item \textbf{Gentoo Linux}
+				\newline						
+				Gentoo a distribution of linux is built on top of the portage package management system.  
+				The system is compiled directly from source and allows the user to choose the features or compile options when building their system.
+							
+			\item \textbf{Ubuntu Linux}	
+				\newline								
+				The Ubuntu distribution is a fork of the Debian linux operating system.  The design philosophy of
+				this distribution is geared towards usability and the desktop experience and therefore for home personal use.
+				
+			\item \textbf{Opensuse Linux}	
+				\newline								
+				Open use is the free version of Novell's Suse Linux Enterprise Server.  The design of Suse is about constant refinement as opposed to 
+				bleeding edge software.  As such its considered one of the mature linux operating systems.
+				
+			\item \textbf{Redhat Linux}		
+				\newline							
+				Red Hat the largest corporate contributor to the Linux kernel, provides Enterprise Linux and open-source enterprise 
+				middle ware solutions such as JBoss. Red hat provides operating-system platforms 
+				along with middle ware, applications, and management products, as well as support, training, and consulting services.
+				Red Hat creates, maintains, and contributes to many free software projects.
+				
+			\item \textbf{Fedora Linux}	
+				\newline								
+				Fedora sponsored by Red Hat is mainly driven towards the promotion and advancement leading edge of open source technologies
+				
+			\item \textbf{Centos Linux}	
+				\newline								
+				CentOs is the licence free downstream version of the Red Hat Enterprise Linux operating system.
+						
+			\item \textbf{VmWare Workstation}	
+				\newline								
+				Vmware Workstation, Vmware flagship consumer product is the desktop solution for Virtual Operating Systems.
+				This product allows for multiple virtual machines to be hosted on a single computer.
+				
+			\item \textbf{VmWare Workstation}	
+				\newline								
+				Vmware Workstation, Vmware flagship consumer product is the desktop solution for Virtual Operating Systems.
+				This product allows for multiple virtual machines to be hosted on a single computer.
+				
+			\item \textbf{Visual Paradigm}	
+				\newline								
+				Visual Paradigm was used for some of the unified modelling language digrams
+				
+			\item \textbf{Subversion}	
+				\newline								
+				Subversion was used as the primary source version control.	
+
+		\end{itemize}
+		
+	}
+
+\newpage

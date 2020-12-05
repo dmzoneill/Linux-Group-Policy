@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_30 = [
+   [21,9,21,29,'dccv']
+, [22,9,22,10,'dccv']
+, [23,13,23,46,'dccv']
+, [24,9,24,10,'dccv']
+, [31,13,31,14,'dccv']
+, [32,17,32,71,'dccv']
+, [33,13,33,14,'dccv']
+, [51,9,51,10,'dccv']
+, [52,13,52,57,'dccv']
+, [53,9,53,10,'dccv']
+, [76,9,76,10,'dccv']
+, [77,13,77,121,'dccv']
+, [78,9,78,10,'dccv']
+, [101,9,101,10,'dccv']
+, [102,13,102,80,'dccv']
+, [103,9,103,10,'dccv']
+, [42,9,42,10,'dcuc']
+, [43,13,43,47,'dcuc']
+, [44,9,44,10,'dcuc']
+, [63,9,63,10,'dcuc']
+, [64,13,64,51,'dcuc']
+, [64,59,64,108,'dcuc']
+, [65,9,65,10,'dcuc']
+, [85,9,85,10,'dcuc']
+, [86,13,86,60,'dcuc']
+, [87,9,87,10,'dcuc']
+, [94,9,94,10,'dcuc']
+, [95,13,95,65,'dcuc']
+, [96,9,96,10,'dcuc']
+, [64,51,64,59,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src30" class="dotCoverSource"><pre>#region
+
+using System;
+using LGP.Components.Factory.Interfaces.Infrastructure;
+using Microsoft.Practices.Prism.Events;
+
+#endregion
+
+namespace LGP.Components.Factory.Internal
+{
+    /// &lt;summary&gt;
+    ///   Event aggregator wrapper by Rachel Lim
+    /// &lt;/summary&gt;
+    internal class EventSystem : IEventSystem
+    {
+        private static IEventAggregator _current;
+        private static EventSystem _instance;
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        public EventSystem()
+        {
+            _current = new EventAggregator();
+        }
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        public static EventSystem Current
+        {
+            get
+            {
+                return _instance ?? ( _instance = new EventSystem() );
+            }
+        }
+
+        #region IEventSystem Members
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        /// &lt;typeparam name = &quot;TEvent&quot;&gt;&lt;/typeparam&gt;
+        public void Publish &lt; TEvent &gt;()
+        {
+            this.Publish( default( TEvent ) );
+        }
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;event&quot;&gt;&lt;/param&gt;
+        /// &lt;typeparam name = &quot;TEvent&quot;&gt;&lt;/typeparam&gt;
+        public void Publish &lt; TEvent &gt;( TEvent @event )
+        {
+            this.GetEvent&lt; TEvent &gt;().Publish( @event );
+        }
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;action&quot;&gt;&lt;/param&gt;
+        /// &lt;param name = &quot;threadOption&quot;&gt;&lt;/param&gt;
+        /// &lt;param name = &quot;keepSubscriberReferenceAlive&quot;&gt;&lt;/param&gt;
+        /// &lt;typeparam name = &quot;TEvent&quot;&gt;&lt;/typeparam&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public SubscriptionToken Subscribe &lt; TEvent &gt;( Action action , ThreadOption threadOption = ThreadOption.PublisherThread , bool keepSubscriberReferenceAlive = false )
+        {
+            return this.Subscribe&lt; TEvent &gt;( e =&gt; action() , threadOption , keepSubscriberReferenceAlive );
+        }
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;action&quot;&gt;&lt;/param&gt;
+        /// &lt;param name = &quot;threadOption&quot;&gt;&lt;/param&gt;
+        /// &lt;param name = &quot;keepSubscriberReferenceAlive&quot;&gt;&lt;/param&gt;
+        /// &lt;param name = &quot;filter&quot;&gt;&lt;/param&gt;
+        /// &lt;typeparam name = &quot;TEvent&quot;&gt;&lt;/typeparam&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public SubscriptionToken Subscribe &lt; TEvent &gt;( Action&lt; TEvent &gt; action , ThreadOption threadOption = ThreadOption.PublisherThread , bool keepSubscriberReferenceAlive = false , Predicate&lt; TEvent &gt; filter = null )
+        {
+            return this.GetEvent&lt; TEvent &gt;().Subscribe( action , threadOption , keepSubscriberReferenceAlive , filter );
+        }
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;token&quot;&gt;&lt;/param&gt;
+        /// &lt;typeparam name = &quot;TEvent&quot;&gt;&lt;/typeparam&gt;
+        public void Unsubscribe &lt; TEvent &gt;( SubscriptionToken token )
+        {
+            this.GetEvent&lt; TEvent &gt;().Unsubscribe( token );
+        }
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;subscriber&quot;&gt;&lt;/param&gt;
+        /// &lt;typeparam name = &quot;TEvent&quot;&gt;&lt;/typeparam&gt;
+        public void Unsubscribe &lt; TEvent &gt;( Action&lt; TEvent &gt; subscriber )
+        {
+            this.GetEvent&lt; TEvent &gt;().Unsubscribe( subscriber );
+        }
+
+        #endregion
+
+        private CompositePresentationEvent&lt; TEvent &gt; GetEvent &lt; TEvent &gt;()
+        {
+            return _current.GetEvent&lt; CompositePresentationEvent&lt; TEvent &gt; &gt;();
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src30', RANGES_30)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGP.ImageWindowsShellIcons</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.ImageWindowsShellIcons.ShellIcon">
+            <summary>
+              Retrievs shell info associated with a file or filetype
+            </summary>
+            <summary>
+              Get a 32x32 or 16x16 System.Drawing.Icon depending on which function you call
+              either GetSmallIcon(string fileName) or GetLargeIcon(string fileName)
+            </summary>
+        </member>
+        <member name="M:LGP.ImageWindowsShellIcons.ShellIcon.GetSmallIcon(System.String)">
+            <summary>
+              Gets the small icon from the win32 api invocation
+            </summary>
+            <param name = "fileName">The file name to lookup ( extension )</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.ImageWindowsShellIcons.ShellIcon.GetLargeIcon(System.String)">
+            <summary>
+              Gets the large icon from the win32 api invocation
+            </summary>
+            <param name = "fileName">The file name to lookup ( extension )</param>
+            <returns></returns>
+        </member>
+        <member name="T:LGP.ImageWindowsShellIcons.ShellIcon.Shfileinfo">
+            <summary>
+              Struct represting the information returned by the pinvoke
+            </summary>
+        </member>
+        <member name="F:LGP.ImageWindowsShellIcons.ShellIcon.Shfileinfo.hIcon">
+            <summary>
+              Pointer to the icon
+            </summary>
+        </member>
+        <member name="F:LGP.ImageWindowsShellIcons.ShellIcon.Shfileinfo.iIcon">
+            <summary>
+              Pointer to the icon
+            </summary>
+        </member>
+        <member name="F:LGP.ImageWindowsShellIcons.ShellIcon.Shfileinfo.dwAttributes">
+            <summary>
+              Uint represting the drawing attributes
+            </summary>
+        </member>
+        <member name="F:LGP.ImageWindowsShellIcons.ShellIcon.Shfileinfo.szDisplayName">
+            <summary>
+              Display name
+            </summary>
+        </member>
+        <member name="F:LGP.ImageWindowsShellIcons.ShellIcon.Shfileinfo.szTypeName">
+            <summary>
+              Size type name
+            </summary>
+        </member>
+        <member name="T:LGP.ImageWindowsShellIcons.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.ImageWindowsShellIcons.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.ImageWindowsShellIcons.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LGP.Components.Factory.Framework">
+    <Position X="28.75" Y="0.5" Width="1.75" />
+    <NestedTypes>
+      <Delegate Name="LGP.Components.Factory.Framework.ShuttingDown" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Framework.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAUQgAEAAAQCAAAAAAQAQAAAIQBAJMAEAAUQBEA4=</HashCode>
+      <FileName>Framework.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LGP.Components.Factory.Internal.DragDropAdorner" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAEAAAAABAAAAAQAAAAAAAABAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Internal\DragDropAdorner.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LGP.Components.Factory.Internal.LibraryHandler" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEEAQAAIgAEAKBggAAAAgiDAEIAgAJCBQOgQQAAAQ=</HashCode>
+      <FileName>Internal\LibraryHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LGP.Components.Factory.Internal.Utilities" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAFAAAAAAAAAAAAAAAAgAAABAAAAAABAAIAAAAAAAA=</HashCode>
+      <FileName>Internal\Utilities.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LGP.Components.Factory.Internal.ServerControl.ServerInfo" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEEAAABAIAAAAAAUACBIAAAQCgAAAAAAACAiSAAAAAA=</HashCode>
+      <FileName>Internal\ServerControl\ServerInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LGP.Components.Factory.Publishers.Events.Event">
+    <Position X="9" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Publishers\Events\Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LGP.Components.Factory.Publishers.Events.MenuEvent">
+    <Position X="7.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Publishers\Events\MenuEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LGP.Components.Factory.Publishers.Events.PanelEvent">
+    <Position X="9" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Publishers\Events\PanelEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LGP.Components.Factory.Publishers.Events.PreferencesEvent">
+    <Position X="10.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Publishers\Events\PreferencesEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="LGP.Components.Factory.Interfaces.Component.IComponent">
+    <Position X="22" Y="9.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Interfaces\Component\IComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Component.IMenu">
+    <Position X="19.75" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAABACBAQAAAAACAAAAAAQAAAAAgAAA=</HashCode>
+      <FileName>Interfaces\Component\IMenu.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Component.IPanel">
+    <Position X="22" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAEACAAAAAAAAAAABAAAAACAAAAAAAAACAAABAAAAAA=</HashCode>
+      <FileName>Interfaces\Component\IPanel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Component.ISettings">
+    <Position X="11.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Component\ISettings.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IClient">
+    <Position X="6" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBoAiAAgBERAIAAAIAAggIAACAEAAAgCAAQCYCMQBAI=</HashCode>
+      <FileName>Interfaces\Database\IClient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IClientGateway">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAABAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Database\IClientGateway.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IClientObserver">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAIAAAAAAAAAAIAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Database\IClientObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IDatabase">
+    <Position X="13" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAAAAAABQBAAAQMAACAAAAAAAACAAAAAABAA=</HashCode>
+      <FileName>Interfaces\Database\IDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IDatabaseModule">
+    <Position X="17.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAMAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Database\IDatabaseModule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IGrammer">
+    <Position X="22.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAAIAAAAgAAAAAAAAQAQAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Interfaces\Database\IGrammer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IGrammerGateway">
+    <Position X="13" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAgAAAAACAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Interfaces\Database\IGrammerGateway.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IGrammerObserver">
+    <Position X="22.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAIAAAAAAAAAAIAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Database\IGrammerObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IModule">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAABAAIAAAAAAAAASAAAAAACIEAiACAAAAA=</HashCode>
+      <FileName>Interfaces\Database\IModule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IModuleGateway">
+    <Position X="20.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAABACAAIAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Database\IModuleGateway.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IModuleObserver">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAIAAAAAAAAAAIAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Database\IModuleObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IOu">
+    <Position X="9.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACEAEAIAAAAAACAAAAAAAAAAAAAAAAEQEAABAA=</HashCode>
+      <FileName>Interfaces\Database\IOu.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IOuGateway">
+    <Position X="15.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEIABAAAEAAAAAIAEAAQAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Database\IOuGateway.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IOuObserver">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAIAAAAAAAAAAIAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Database\IOuObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IPolicy">
+    <Position X="11.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAJAEAAAAAAgAAAAAAABAEAUJAAII=</HashCode>
+      <FileName>Interfaces\Database\IPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IPolicyGateway">
+    <Position X="15.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAgAgAAAAAAAACAAAAAAoAAIAAgAA=</HashCode>
+      <FileName>Interfaces\Database\IPolicyGateway.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Database.IPolicyObserver">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAIAAAAAAAAAAIAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Database\IPolicyObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Infrastructure.IClassLibraryHandler">
+    <Position X="13" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAEAIBgAAAAAAgAAEIAgAICAQGgQAAAAQ=</HashCode>
+      <FileName>Interfaces\Infrastructure\IClassLibraryHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Infrastructure.IContextMenus">
+    <Position X="20.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAEAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Infrastructure\IContextMenus.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Infrastructure.IDialog">
+    <Position X="17.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAgAACAAAAAAAAAIAAQAAAAAAA=</HashCode>
+      <FileName>Interfaces\Infrastructure\IDialog.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Infrastructure.IDragDrop">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Interfaces\Infrastructure\IDragDrop.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Infrastructure.IEventSystem">
+    <Position X="15.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAACAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Infrastructure\IEventSystem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Infrastructure.IImageHandler">
+    <Position X="9.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAABAAAAAAAAAAAAAAAAQAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Infrastructure\IImageHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Infrastructure.ILanguage">
+    <Position X="11.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Infrastructure\ILanguage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Infrastructure.INotification">
+    <Position X="11.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Infrastructure\INotification.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Infrastructure.IRegistryHandler">
+    <Position X="17.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQQAAAACAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Infrastructure\IRegistryHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Infrastructure.IUtilities">
+    <Position X="17.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQABAAAAAAAAAAAAAAAAgAAAAAAAAAABAAIAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Infrastructure\IUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Module.IModule">
+    <Position X="24.25" Y="11.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAFAAAAAAAAAgACAAA=</HashCode>
+      <FileName>Interfaces\Module\IModule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Module.IPreferences">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAgIAAQAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Interfaces\Module\IPreferences.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Module.IUserControl">
+    <Position X="19" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACBAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Interfaces\Module\IUserControl.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Network.IBroadcastListener">
+    <Position X="19" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Network\IBroadcastListener.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Network.INetwork">
+    <Position X="22.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAACAEAAAAAAAAAAAAABAEAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Interfaces\Network\INetwork.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Network.IServerController">
+    <Position X="19" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABACIACAYIAAUAAABCAAAAAAAAACAA=</HashCode>
+      <FileName>Interfaces\Network\IServerController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LGP.Components.Factory.Interfaces.Network.IServerInfo">
+    <Position X="20.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEEAAABAIAAAAAAUACAIAAAQAAAAAAAAAAAiSAAAAAA=</HashCode>
+      <FileName>Interfaces\Network\IServerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="LGP.Components.Factory.Internal.ServerControl.DataReceived">
+    <Position X="19" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Internal\ServerControl\ServerController.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

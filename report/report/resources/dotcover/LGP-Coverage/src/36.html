@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_36 = [
+   [19,9,19,34,'dccv']
+, [20,9,20,10,'dccv']
+, [21,13,21,108,'dccv']
+, [22,9,22,10,'dccv']
+, [32,9,32,10,'dccv']
+, [33,13,33,75,'dccv']
+, [34,9,34,10,'dccv']
+, [44,9,44,10,'dccv']
+, [45,13,45,95,'dccv']
+, [46,9,46,10,'dccv']
+, [77,9,77,10,'dccv']
+, [78,13,78,71,'dccv']
+, [79,9,79,10,'dccv']
+, [55,9,55,10,'dcuc']
+, [56,13,56,68,'dcuc']
+, [57,9,57,10,'dcuc']
+, [66,9,66,10,'dcuc']
+, [67,13,67,73,'dcuc']
+, [68,9,68,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src36" class="dotCoverSource"><pre>#region
+
+using LGP.Components.Factory.Interfaces.Infrastructure;
+using Microsoft.Win32;
+
+#endregion
+
+namespace LGP.Components.Factory.Internal
+{
+    /// &lt;summary&gt;
+    ///   Simple Registry class
+    /// &lt;/summary&gt;
+    internal class RegistryHandler : IRegistryHandler
+    {
+        private static RegistryHandler _instance;
+        private readonly RegistryKey _applicationSubKey;
+
+
+        private RegistryHandler()
+        {
+            this._applicationSubKey = Registry.LocalMachine.CreateSubKey( @&quot;SOFTWARE\Linux Group Policy&quot; );
+        }
+
+        #region IRegistryHandler Members
+
+        /// &lt;summary&gt;
+        ///   Read a sub key for the registry application root
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;keyname&quot;&gt;The keyname to read&lt;/param&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public string ReadKey( string keyname )
+        {
+            return ( string ) this._applicationSubKey.GetValue( keyname );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Write a sub key for the registry application root
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;keyname&quot;&gt;The keyname to write&lt;/param&gt;
+        /// &lt;param name = &quot;keyvalue&quot;&gt;The value for the key&lt;/param&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public void WriteKey( string keyname , object keyvalue )
+        {
+            this._applicationSubKey.SetValue( keyname , keyvalue , RegistryValueKind.String );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Delete a subkey from the application root key
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;keyname&quot;&gt;The keyname to write&lt;/param&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public void DeleteKey( string keyname )
+        {
+            this._applicationSubKey.DeleteValue( keyname , false );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Delete a subkeytree from the application root key
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;keyname&quot;&gt;The keyname to write&lt;/param&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public void DeleteSubKeyTree( string keyname )
+        {
+            this._applicationSubKey.DeleteSubKeyTree( keyname , false );
+        }
+
+        #endregion
+
+        /// &lt;summary&gt;
+        ///   Singlton factory method
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;LGPRegistry instance&lt;/returns&gt;
+        public static RegistryHandler GetInstance()
+        {
+            return _instance ?? ( _instance = new RegistryHandler() );
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src36', RANGES_36)
+		</script>
+	</body>
+</html>

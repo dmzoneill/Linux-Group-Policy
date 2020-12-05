@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGP.Components.Notifications</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.Components.Notifications.Notifications">
+            <summary>
+            Interaction logic for Notifications.xaml
+            </summary>
+            <summary>
+            Notifications
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Notifications.Notifications.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Notifications.Notifications.#ctor(System.String,System.Int32)">
+            <summary>
+              Constructor
+            </summary>
+            <param name = "message">text to show</param>
+            <param name = "interval">poup timeout</param>
+        </member>
+        <member name="M:LGP.Components.Notifications.Notifications.Display(System.String,System.Int32)">
+            <summary>
+              Displays the popup for x microsecond
+            </summary>
+            <param name = "message">the message to display</param>
+            <param name = "timeout">microseonds</param>
+        </member>
+        <member name="M:LGP.Components.Notifications.Notifications.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Notifications.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Notifications.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Notifications.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Notifications.Properties.Resources.Notifications">
+            <summary>
+              Looks up a localized string similar to Notifications.
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Notifications.Plugin">
+            <summary>
+              Plugin
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Notifications.Plugin.GetName">
+            <summary>
+              Gets the name of the main component
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Components.Notifications.Plugin.GetIcon">
+            <summary>
+              Gets the image that represents the module
+            </summary>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.Components.Notifications.Plugin.RegisterMenuEntries(LGP.Components.Factory.Interfaces.Component.IMenu)">
+            <summary>
+              Asks the component to register is menu components
+            </summary>
+            <param name = "menu">The program main menu</param>
+        </member>
+        <member name="M:LGP.Components.Notifications.Plugin.GetMainControl">
+            <summary>
+              Gets the main component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Notifications.Plugin.GetSidebarControl">
+            <summary>
+              Gets the sidebar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Notifications.Plugin.GetBottombarControl">
+            <summary>
+              Gets the bottombar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Notifications.Plugin.GetToolbarControl">
+            <summary>
+              Gets the toolbar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Notifications.Plugin.GetPreferencesControl">
+            <summary>
+              Gets the preferences component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="T:LGP.Components.Notifications.Preferences">
+            <summary>
+              Interaction logic for Preferences.xaml
+            </summary>
+            <summary>
+            Preferences
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Notifications.Preferences.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Notifications.Preferences.GetName">
+            <summary>
+              Gets the name of the preferences Pane
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Notifications.Preferences.GetControl">
+            <summary>
+              Gets the preferences window
+            </summary>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Notifications.Preferences.Save">
+            <summary>
+              Aks the preferences panel to save its entries
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Notifications.Preferences.Load(LGP.Components.Factory.Interfaces.Component.ISettings)">
+            <summary>
+              Asks the preferences to load its settings
+            </summary>
+            <param name="settingsParent"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Notifications.Preferences.GetControlType">
+            <summary>
+            Gets the type it Controls
+            </summary>
+            <returns>Type</returns>
+        </member>
+        <member name="M:LGP.Components.Notifications.Preferences.GetIcon">
+            <summary>
+            Gets the preferences icon
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Notifications.Preferences.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

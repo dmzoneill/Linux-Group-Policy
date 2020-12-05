@@ -1,0 +1,1127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGP.Components.Database</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.Components.Database.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Properties.Resources.Connected">
+            <summary>
+              Looks up a localized string similar to Connected.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Properties.Resources.ConnectionFailed">
+            <summary>
+              Looks up a localized string similar to Unable to connect.. Try again.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Properties.Resources.Database">
+            <summary>
+              Looks up a localized string similar to Database.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Properties.Resources.DbType">
+            <summary>
+              Looks up a localized string similar to Database type.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Properties.Resources.Hostname">
+            <summary>
+              Looks up a localized string similar to Hostname.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Properties.Resources.Password">
+            <summary>
+              Looks up a localized string similar to Password.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Properties.Resources.SelectDbType">
+            <summary>
+              Looks up a localized string similar to select a database type.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Properties.Resources.Standby">
+            <summary>
+              Looks up a localized string similar to Standby....
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Properties.Resources.TestConnection">
+            <summary>
+              Looks up a localized string similar to Test Connection.
+            </summary>
+        </member>
+        <member name="P:LGP.Components.Database.Properties.Resources.Username">
+            <summary>
+              Looks up a localized string similar to Username.
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetId(System.Int32)">
+            <summary>
+              Sets the client id
+            </summary>
+            <param name = "val">int</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetId">
+            <summary>
+              Gets the client id
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.Setouid(System.Int32)">
+            <summary>
+              Sets the client ou id
+            </summary>
+            <param name = "val">int</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetouId">
+            <summary>
+              Gets the client ou id
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetGuid(System.String)">
+            <summary>
+              Sets the client guid
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetGuid">
+            <summary>
+              Gets the client guid
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetName(System.String)">
+            <summary>
+              Sets the client name
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetName">
+            <summary>
+              Gets the client name
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetOs(System.String)">
+            <summary>
+              Sets the client OS
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetOs">
+            <summary>
+              Gets the client OS
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetArch(System.String)">
+            <summary>
+              Sets the client architecture
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetArch">
+            <summary>
+              Gets the client architecture
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetKernel(System.String)">
+            <summary>
+              Sets the client kernel
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetKernel">
+            <summary>
+              Gets the client kernel
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetPseudoName(System.String)">
+            <summary>
+              Sets the client psuedoname
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetPseudoName">
+            <summary>
+              Gets the client psuedoname
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetDistribution(System.String)">
+            <summary>
+              Sets the client Distribution
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetDistribution">
+            <summary>
+              Gets the client Distribution
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetDistributionVersion(System.String)">
+            <summary>
+              Sets the client Distribution version
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetDistributionVersion">
+            <summary>
+              Gets the client Distribution version
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetVersion(System.String)">
+            <summary>
+              Sets the client version
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetVersion">
+            <summary>
+              Gets the client version
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetLastseen(System.String)">
+            <summary>
+              Sets the client last seen time
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetLastseen">
+            <summary>
+              Gets the client last seen time
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetBinded(System.String)">
+            <summary>
+              Sets the client binded state
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetBinded">
+            <summary>
+              Gets the client binded state
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetClientVersion(System.String)">
+            <summary>
+              Sets the clients version
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetClientVersion">
+            <summary>
+              Gets the clients version
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetIpaddress(System.String)">
+            <summary>
+              Sets the clients ip address
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetIpaddress">
+            <summary>
+              Gets the clients ip address
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.SetPort(System.String)">
+            <summary>
+              Sets the clients port
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetPort">
+            <summary>
+              Gets the clients port
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.GetDistroImage(System.Int32)">
+            <summary>
+              Gets the client distro image
+            </summary>
+            <param name = "size">int</param>
+            <returns>image</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.Update(LGP.Components.Factory.Interfaces.Database.IClient,LGP.Components.Factory.Interfaces.Database.IClientObserver)">
+            <summary>
+              Update this observer with a refernece to the client
+            </summary>
+            <param name = "client">IClient</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.Attach(LGP.Components.Factory.Interfaces.Database.IClientObserver)">
+            <summary>
+              Attach objewcts that observer this client
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.Detach(LGP.Components.Factory.Interfaces.Database.IClientObserver)">
+            <summary>
+              Detach objewcts that observer this client
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.Notify">
+            <summary>
+              Notify observers of this client
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.Dispose(LGP.Components.Factory.Interfaces.Database.IClientObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Client.Finalize">
+            <summary>
+              Allows an <see cref = "T:System.Object" /> to attempt to free resources and perform other cleanup operations before the <see
+               cref = "T:System.Object" /> is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.OuGateway.CreateOu(System.String,System.Int32)">
+            <summary>
+              Adds a Ou to a given parent ou
+            </summary>
+            <param name = "ouName">The new ou name</param>
+            <param name = "parentId">The new parent id</param>
+            <returns>IOu</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.OuGateway.DeleteOu(System.Int32)">
+            <summary>
+              Deletes an Ou to a given parent ou
+            </summary>
+            <param name = "ouid">the ou id to delete</param>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.OuGateway.GetOuById(System.Int32)">
+            <summary>
+              Gets an Iou given an id
+            </summary>
+            <param name = "ouid">int id</param>
+            <returns>IOu</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.OuGateway.GetOuParentById(System.Int32)">
+            <summary>
+              Gets a parent Iou given an id
+            </summary>
+            <param name = "ouid">int id</param>
+            <returns>IOu</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.OuGateway.GetOuListing">
+            <summary>
+              Gets a listing of Ous
+            </summary>
+            <returns>IOu List</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.OuGateway.GetChildren(System.Int32)">
+            <summary>
+              Get the children of a ou
+            </summary>
+            <param name = "ouid">int outid</param>
+            <returns>IOu List</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.OuGateway.GetRoots">
+            <summary>
+              Get the parents with no parents
+            </summary>
+            <returns>IOu List</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.OuGateway.Refresh">
+            <summary>
+              Refreshes the ou list
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.GrammerGateway.CreateGrammer(System.Int32,System.String,System.String)">
+            <summary>
+              Adds a grammer given a moduleid or returns existing Grammer
+            </summary>
+            <param name = "moduleId">int</param>
+            <param name = "key">string</param>
+            <param name = "val">string</param>
+            <returns>IGrammer</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.GrammerGateway.DeleteGrammer(System.Int32,System.String)">
+            <summary>
+              Deletes a grammer entry given key and moduleid
+            </summary>
+            <param name = "mid">int</param>
+            <param name = "key">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.GrammerGateway.DeleteGrammer(System.Int32)">
+            <summary>
+              Deletes all grammer given key the moduleid
+            </summary>
+            <param name = "mid">int</param>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.GrammerGateway.GetGrammer(System.Int32,System.String)">
+            <summary>
+              Gets a Grammer given a the moduleid and key
+            </summary>
+            <param name = "mid">int</param>
+            <param name = "key">string</param>
+            <returns>IGrammer</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.GrammerGateway.GetGrammer(System.Int32,System.Int32)">
+            <summary>
+              Gets a Grammer given a the moduleid and id
+            </summary>
+            <param name = "mid">int</param>
+            <param name = "id">int</param>
+            <returns>IGrammer</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.GrammerGateway.GetGrammer(System.Int32)">
+            <summary>
+              Gets all Grammer given a the moduleid
+            </summary>
+            <param name = "mid">int</param>
+            <returns>IGrammer list</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.GrammerGateway.GetGrammer">
+            <summary>
+              Gets all grammers
+            </summary>
+            <returns>IGrammer List</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.GrammerGateway.Refresh">
+            <summary>
+            Refreshes the list
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.SetOuId(System.Int32)">
+            <summary>
+              Sets the ou Id
+            </summary>
+            <param name = "val">int</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.GetOuId">
+            <summary>
+              Gets the ou Id
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.SetName(System.String)">
+            <summary>
+              Sets the ou name
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.GetName">
+            <summary>
+              Gets the ou name
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.SetParentOuId(System.Int32)">
+            <summary>
+              Sets the parent ou Id
+            </summary>
+            <param name = "val">int</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.GetParentOuId">
+            <summary>
+              Gets the parent ou Id
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.SetPolicyGroup(System.String)">
+            <summary>
+              Sets the ou policy group
+            </summary>
+            <param name = "val"></param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.GetPolicyGroup">
+            <summary>
+              Gets the ou policy group
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.GetOuImage(System.Int32)">
+            <summary>
+              Gets the ou image
+            </summary>
+            <param name = "size">int</param>
+            <returns>image</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.Update(LGP.Components.Factory.Interfaces.Database.IOu,LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Update this observer with a refernece to the ou
+            </summary>
+            <param name = "ou">Iou</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.Attach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Attach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.Detach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Detach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.Notify">
+            <summary>
+              Notify observers of this IOu
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.Dispose(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Ou.Finalize">
+            <summary>
+              Allows an <see cref = "T:System.Object" /> to attempt to free resources and perform other cleanup operations before the <see
+               cref = "T:System.Object" /> is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Database.Preferences">
+            <summary>
+              Interaction logic for Preferences.xaml
+            </summary>
+            <summary>
+            Preferences
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Preferences.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Preferences.GetName">
+            <summary>
+              Gets the name of the preferences Pane
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Preferences.GetControl">
+            <summary>
+              Gets the preferences window
+            </summary>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Preferences.Save">
+            <summary>
+              Aks the preferences panel to save its entries
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Preferences.Load(LGP.Components.Factory.Interfaces.Component.ISettings)">
+            <summary>
+              Asks the preferences to load its settings
+            </summary>
+            <param name="settingsParent"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Preferences.GetControlType">
+            <summary>
+            Gets the type it Controls
+            </summary>
+            <returns>Type</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Preferences.GetIcon">
+            <summary>
+              Gets the image that represents the module
+            </summary>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Preferences.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.Update(LGP.Components.Factory.Interfaces.Database.IPolicy,LGP.Components.Factory.Interfaces.Database.IPolicyObserver)">
+            <summary>
+              Update this observer with a refernece to the ou
+            </summary>
+            <param name = "policy">IPolicy</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.Attach(LGP.Components.Factory.Interfaces.Database.IPolicyObserver)">
+            <summary>
+              Attach objects that observer this IPolicy
+            </summary>
+            <param name = "obj">IPolicyObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.Detach(LGP.Components.Factory.Interfaces.Database.IPolicyObserver)">
+            <summary>
+              Detach objects that observer this IPolicy
+            </summary>
+            <param name = "obj">IPolicyObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.Notify">
+            <summary>
+              Notify observers of this IPolicy
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.Dispose(LGP.Components.Factory.Interfaces.Database.IPolicyObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IPolicyObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.GetId">
+            <summary>
+              Gets the id of this policy
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.GetOuId">
+            <summary>
+              Gets the ou id
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.SetOuId(System.Int32)">
+            <summary>
+              Sets the ou id
+            </summary>
+            <param name = "id">int</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.GetCreated">
+            <summary>
+              Gets the created date
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.SetCreated(System.String)">
+            <summary>
+              Sets the created date
+            </summary>
+            <param name = "created">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.GetEdited">
+            <summary>
+              Gets the edited date
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.SetEdited(System.String)">
+            <summary>
+              Sets the edited date
+            </summary>
+            <param name = "edited">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.IsEnabled">
+            <summary>
+              Gets the enabled status
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.SetEnabled(System.Boolean)">
+            <summary>
+              Sets the enabled status
+            </summary>
+            <param name = "enabled"></param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.GetDsl">
+            <summary>
+              Get the DSL or rules
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.SetDsl(System.String)">
+            <summary>
+              Set the DSL rules
+            </summary>
+            <param name = "dsl"></param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.GetVersion">
+            <summary>
+              Gets the version
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.SetVersion(System.String)">
+            <summary>
+              Sets the version
+            </summary>
+            <param name = "version">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Policy.Finalize">
+            <summary>
+              Allows an <see cref = "T:System.Object" /> to attempt to free resources and perform other cleanup operations before the <see
+               cref = "T:System.Object" /> is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Grammer.GetId">
+            <summary>
+              Gets the grammer rowid
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Grammer.GetModuleId">
+            <summary>
+              Gets the grammer moduleid
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Grammer.GetKey">
+            <summary>
+              Gets the grammer key
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Grammer.GetValue">
+            <summary>
+              Gets the grammer value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Grammer.SetModuleId(System.Int32)">
+            <summary>
+              Sets the grammer moduleid
+            </summary>
+            <param name = "val">int</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Grammer.SetKey(System.String)">
+            <summary>
+              Sets the grammer key
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Grammer.SetValue(System.String)">
+            <summary>
+              Sets the grammer value
+            </summary>
+            <param name = "val">string</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Grammer.Update(LGP.Components.Factory.Interfaces.Database.IGrammer,LGP.Components.Factory.Interfaces.Database.IGrammerObserver)">
+            <summary>
+              Update this observer with a refernece to the grammer
+            </summary>
+            <param name = "grammer">IGrammer</param>
+            <param name = "source">IGrammerObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Grammer.Attach(LGP.Components.Factory.Interfaces.Database.IGrammerObserver)">
+            <summary>
+              Attach objewcts that observer this grammer
+            </summary>
+            <param name = "obj">IGrammerObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Grammer.Detach(LGP.Components.Factory.Interfaces.Database.IGrammerObserver)">
+            <summary>
+              Detach objewcts that observer this grammer
+            </summary>
+            <param name = "obj">IGrammerObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Grammer.Notify">
+            <summary>
+              Notify observers of this grammer
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Grammer.Dispose(LGP.Components.Factory.Interfaces.Database.IGrammerObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IGrammerObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.ClientGateway.GetClientById(System.Int32)">
+            <summary>
+              Gets a client by id
+            </summary>
+            <param name = "id">client id</param>
+            <returns>IClient</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.ClientGateway.GetOuClients(System.Int32)">
+            <summary>
+              Get clients from a given ou
+            </summary>
+            <param name = "ouid">id of the ou</param>
+            <returns>List of clients</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.ClientGateway.Refresh">
+            <summary>
+              Refresh the client listing
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.Update(LGP.Components.Factory.Interfaces.Database.IModule,LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Update this observer with a refernece to the module
+            </summary>
+            <param name = "module">IModule</param>
+            <param name = "source">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.Attach(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Attach objewcts that observer this module
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.Detach(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Detach objewcts that observer this module
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.Notify">
+            <summary>
+              Notify observers of this module
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.Dispose(LGP.Components.Factory.Interfaces.Database.IModuleObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IModuleObserver</param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.GetModuleId">
+            <summary>
+              Returns the module id
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.GetModuleName">
+            <summary>
+              Gets the name of the module
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.SetModuleName(System.String)">
+            <summary>
+              Sets the module name
+            </summary>
+            <param name = "name"></param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.AddGrammer(System.String,System.String)">
+            <summary>
+              Adds a grammer to this module
+            </summary>
+            <param name = "key">string</param>
+            <param name = "value">string</param>
+            <returns>IGrammer</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.DeleteGrammer(System.String)">
+            <summary>
+              Deletes a grammer given a key
+            </summary>
+            <param name = "key"></param>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.DeleteAllGrammer">
+            <summary>
+              Dletes all the grammers associated with this module
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.GetAllGrammers">
+            <summary>
+              Gets all the grammers for this module
+            </summary>
+            <returns>IGrammer</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.GetGrammer(System.String)">
+            <summary>
+              Gets a grammer given a key
+            </summary>
+            <param name = "key">grammer lvale</param>
+            <returns>KeyValuePair</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.GetGrammer(System.Int32)">
+            <summary>
+              Gets a grammer given an id
+            </summary>
+            <param name = "id">grammer id</param>
+            <returns>IGrammer</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.GetHash">
+            <summary>
+              Get the has of the module
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Entities.Module.GetModuleLocation">
+            <summary>
+              Gets the module location
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="P:LGP.Components.Database.Entities.Module.FileContents">
+            <summary>
+              The file contents when used by the module editor
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Database.Plugin">
+            <summary>
+              Plugin
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Plugin.GetName">
+            <summary>
+              Gets the name of the main component
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Plugin.GetIcon">
+            <summary>
+              Gets the image that represents the module
+            </summary>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Plugin.RegisterMenuEntries(LGP.Components.Factory.Interfaces.Component.IMenu)">
+            <summary>
+              Asks the component to register is menu components
+            </summary>
+            <param name = "menu">The program main menu</param>
+        </member>
+        <member name="M:LGP.Components.Database.Plugin.GetMainControl">
+            <summary>
+              Gets the main component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Plugin.GetSidebarControl">
+            <summary>
+              Gets the sidebar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Plugin.GetBottombarControl">
+            <summary>
+              Gets the bottombar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Plugin.GetToolbarControl">
+            <summary>
+              Gets the toolbar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Plugin.GetPreferencesControl">
+            <summary>
+              Gets the preferences component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.CreatePolicy(LGP.Components.Factory.Interfaces.Database.IOu,System.String)">
+            <summary>
+              Create a policy for a given ou
+            </summary>
+            <param name = "ou">the associated ou</param>
+            <param name="defaultPolicy">default policy</param>
+            <returns>IPolicy</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.DeletePolicy(LGP.Components.Factory.Interfaces.Database.IOu)">
+            <summary>
+              Deletes a policy
+            </summary>
+            <param name = "ou">IOu</param>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.DeletePolicy(LGP.Components.Factory.Interfaces.Database.IPolicy)">
+            <summary>
+              Deletes a policy
+            </summary>
+            <param name = "policy">IPolicy</param>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.DeletePolicy(System.Int32)">
+            <summary>
+              Deletes a policy
+            </summary>
+            <param name = "policyid">policy id</param>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.GetPolicy(System.Int32)">
+            <summary>
+              Gets a policy
+            </summary>
+            <param name = "id">policy id</param>
+            <returns>IPolicy</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.GetPolicy(LGP.Components.Factory.Interfaces.Database.IOu)">
+            <summary>
+              Gets a policy
+            </summary>
+            <param name = "ou">IOu</param>
+            <returns>IPolicy</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.GetPredecessorPolicy(LGP.Components.Factory.Interfaces.Database.IPolicy)">
+            <summary>
+              Gets an predecessor policy
+            </summary>
+            <param name = "policy">IPolicy</param>
+            <returns>IPolicy</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.GetPredecessorPolicy(LGP.Components.Factory.Interfaces.Database.IOu)">
+            <summary>
+              Gets an predecessor policy
+            </summary>
+            <param name = "ou">IOu</param>
+            <returns>IPolicy</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.GetAncestorPolicy(LGP.Components.Factory.Interfaces.Database.IPolicy)">
+            <summary>
+              Gets an ancestor policy
+            </summary>
+            <param name = "policy">IPolicy</param>
+            <returns>IPolicy</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.GetAncestorPolicy(LGP.Components.Factory.Interfaces.Database.IOu)">
+            <summary>
+              Gets an ancestor policy
+            </summary>
+            <param name = "ou">IOu</param>
+            <returns>IPolicy</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.GetPolicies">
+            <summary>
+              Gets a list of all policies
+            </summary>
+            <returns>List IPolicy</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.GetPolicyByOu(LGP.Components.Factory.Interfaces.Database.IOu)">
+            <summary>
+              Get the policy in a given ou
+            </summary>
+            <param name = "ou">IOu</param>
+            <returns>IPolicy</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.PolicyGateway.Refresh">
+            <summary>
+            Refreshes the list
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.ModuleGateway.DeleteModule(System.String)">
+            <summary>
+              Deletes an Module
+            </summary>
+            <param name = "modulename">the module to delete</param>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.ModuleGateway.GetModuleByName(System.String)">
+            <summary>
+              Gets an IModule given a name
+            </summary>
+            <param name = "modulename">the module name</param>
+            <returns>IModule</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.ModuleGateway.GetModules">
+            <summary>
+              Get the list of modules in the database
+            </summary>
+            <returns>List IModule</returns>
+        </member>
+        <member name="M:LGP.Components.Database.Gateways.ModuleGateway.Refresh">
+            <summary>
+            refreshes the list
+            </summary>
+        </member>
+        <member name="T:LGP.Components.Database.DatabaseHandler">
+            <summary>
+              Creates and manages the strategy context object given type
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.Connect(System.String,System.String,System.String,System.String)">
+            <summary>
+              Connect method for database interface
+            </summary>
+            <param name = "user">Username to use in connection</param>
+            <param name = "pass">Password to use in connection</param>
+            <param name = "host">Hostname to use in connection</param>
+            <param name = "dbname">Datbase to use in connection</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.Disconnect">
+            <summary>
+              Disconnect method for the interface realizer
+            </summary>
+            <returns>bool disconnected</returns>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.AddDatabaseType(System.Type)">
+            <summary>
+              Registers a database type
+            </summary>
+            <param name = "type"></param>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.GetDatabaseTypes">
+            <summary>
+              Gets the registered DB Types
+            </summary>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.ExecuteQuery(System.String)">
+            <summary>
+              Executes a query provided by the appropriate gateway
+            </summary>
+            <param name = "sql">sql query</param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.ExecuteNonQuery(System.String)">
+            <summary>
+              Executes a query provided by the appropriate gateway
+            </summary>
+            <param name = "sql">sql query</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.IsConnected">
+            <summary>
+              Check to see if the database connector is connected
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.CreateOuGateway">
+            <summary>
+              Gets a new Ou Gateway interface
+            </summary>
+            <returns>IOuGateway</returns>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.CreateClientGateway">
+            <summary>
+              Gets a new client Gateway interface
+            </summary>
+            <returns>IOuGateway</returns>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.CreateModuleGateway">
+            <summary>
+              Gets a new Module gateway interface
+            </summary>
+            <returns>IModuleGateway</returns>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.CreateGrammerGateway">
+            <summary>
+              Gets a new grammer gateway interface
+            </summary>
+            <returns>IGrammerGateway</returns>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.CreatePolicyGateway">
+            <summary>
+              Gets a new policy gateway interface
+            </summary>
+            <returns>IGrammerGateway</returns>
+        </member>
+        <member name="M:LGP.Components.Database.DatabaseHandler.ChangeStrategy(System.Type)">
+            <summary>
+            Change the strategy type
+            </summary>
+            <param name="type"></param>
+        </member>
+    </members>
+</doc>

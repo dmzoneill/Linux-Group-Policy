@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGP.ImageLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.ImageLibrary.IconSet">
+            <summary>
+              The Control class for accessing the image resources
+            </summary>
+        </member>
+        <member name="M:LGP.ImageLibrary.IconSet.#cctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.ImageLibrary.IconSet.GetImage(System.String,System.String)">
+            <summary>
+              Gets an image from the dll resources
+            </summary>
+            <param name = "name">The name of the image</param>
+            <param name = "folder">The folder in which the resource can be found</param>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.ImageLibrary.IconSet.GetImage(System.String,System.String,System.Int32)">
+            <summary>
+              Gets an image from the dll resources
+            </summary>
+            <param name = "name">The name of the image</param>
+            <param name = "folder">The folder in which the resource can be found</param>
+            <param name = "maxwidth">The maxwidth of the returned image</param>
+            <returns>An image</returns>
+        </member>
+        <member name="M:LGP.ImageLibrary.IconSet.GetIcon(System.String)">
+            <summary>
+              Gets an icon stored in the dll resources
+            </summary>
+            <param name = "name">The name of the icon</param>
+            <returns>An icon (ico)</returns>
+        </member>
+        <member name="M:LGP.ImageLibrary.IconSet.GetExtensionIcon(System.String)">
+            <summary>
+              Gets the icon associated with the shell extension
+            </summary>
+            <param name = "filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.ImageLibrary.IconSet.ConvertBitmapToImage(System.Drawing.Bitmap)">
+            <summary>
+              Convert bitmap to image
+            </summary>
+            <param name = "bitmap">Bitmap to convert</param>
+            <returns>Image</returns>
+        </member>
+        <member name="M:LGP.ImageLibrary.IconSet.ConvertBitmapToImage(System.Drawing.Bitmap,System.Int32)">
+            <summary>
+              Convert bitmap to image
+            </summary>
+            <param name = "bitmap">Bitmap to convert</param>
+            <param name="size">image size</param>
+            <returns>Image</returns>
+        </member>
+        <member name="T:LGP.ImageLibrary.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.ImageLibrary.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.ImageLibrary.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

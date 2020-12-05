@@ -1,0 +1,165 @@
+﻿<UserControl x:Class="LGP.Modules.ModuleEditor.ModuleEditor" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit" mc:Ignorable="d" d:DesignHeight="352" d:DesignWidth="800" MinWidth="250" Loaded="UserControlLoaded">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="45" />
+      <RowDefinition Height="1" />
+      <RowDefinition Height="300*" />
+      <RowDefinition Height="1" />
+      <RowDefinition Height="44" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+
+      <ColumnDefinition Width="400*" MinWidth="250" />
+      <ColumnDefinition Width="2" Name="VerticalSeparator1" />
+      <ColumnDefinition Width="245" Name="DetailsColumn" MinWidth="180" />
+
+    </Grid.ColumnDefinitions>
+
+    <Grid Grid.Row="0" Grid.Column="0" Margin="25,5,25,0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="200*" />
+        <ColumnDefinition Width="260" />
+      </Grid.ColumnDefinitions>
+
+      <Menu Margin="0,8,0,7" HorizontalAlignment="Left" Foreground="White" Background="White" Height="30" VerticalAlignment="Center" Padding="2,2,10,2">
+        <MenuItem Margin="0" Padding="2">
+          <MenuItem.Icon>
+            <Image Height="20" HorizontalAlignment="Left" Margin="0" Name="ModuleImage" Stretch="Fill" VerticalAlignment="Top" Width="20" />
+          </MenuItem.Icon>
+          <MenuItem.Header>
+            <StackPanel Orientation="Horizontal" Margin="0">
+              <Label Name="moduleNameLabel" FontSize="16" Foreground="#FF9ABFE5" FontWeight="Bold" Margin="0,-2,5,2" HorizontalAlignment="Left" Padding="0">Module Name</Label>
+            </StackPanel>
+          </MenuItem.Header>
+          <MenuItem.Items>
+            <MenuItem Foreground="Black" Click="RenameMenuItemClick" Name="RenameMenuItem" Header="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Rename}" />
+            <MenuItem Foreground="Black" Click="DeleteMenuItemClick" Name="DeleteMenuItem" Header="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Delete}" />
+          </MenuItem.Items>
+        </MenuItem>
+      </Menu>
+
+      <DockPanel Grid.Column="1">
+        <ToolBarPanel DockPanel.Dock="Top" Height="30" Background="White">
+          <ToolBar DockPanel.Dock="Top" ToolBarTray.IsLocked="True" Loaded="ToolBarLoaded" Background="White">
+            <ToolBar.Resources>
+              <Style TargetType="{x:Type Image}">
+                <Style.Triggers>
+                  <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}, AncestorLevel=1}, Path=IsEnabled}" Value="False">
+                    <Setter Property="Opacity" Value="0.30" />
+                  </DataTrigger>
+                </Style.Triggers>
+              </Style>
+            </ToolBar.Resources>
+            <Button Name="SaveButton" Click="SaveMenuItemClick" ToolTip="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Save}">
+              <Image Name="ImageSave" Height="16" Width="16" />
+            </Button>
+            <Separator />
+            <Button Command="Cut" ToolTip="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Cut}">
+              <Image Name="ImageCut" Height="16" Width="16" />
+            </Button>
+            <Button Command="Copy" ToolTip="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Copy}">
+              <Image Name="ImageCopy" Height="16" Width="16" />
+            </Button>
+            <Button Command="Paste" ToolTip="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Paste}">
+              <Image Name="ImagePaste" Height="16" Width="16" />
+            </Button>
+            <Button Command="Delete" ToolTip="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Delete}">
+              <Image Name="ImageDelete" Height="16" Width="16" />
+            </Button>
+            <Separator />
+            <Button Command="Undo" ToolTip="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Undo}">
+              <Image Name="ImageUndo" Height="16" Width="16" />
+            </Button>
+            <Button Command="Redo" ToolTip="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Redo}">
+              <Image Name="ImageRedo" Height="16" Width="16" />
+            </Button>
+            <Separator />
+            <CheckBox IsChecked="{Binding ElementName=textEditor1,Path=WordWrap}" ToolTip="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=WordWrap}">
+              <Image Name="ImageWrap" Height="16" Width="16" />
+            </CheckBox>
+            <CheckBox IsChecked="{Binding ElementName=textEditor1,Path=ShowLineNumbers}" ToolTip="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=LineNumbers}">
+              <TextBlock Height="16" Width="16" TextAlignment="Center">#</TextBlock>
+            </CheckBox>
+            <CheckBox IsChecked="False" Checked="GridViewSplitterChecked" Unchecked="GridViewSplitterChecked" ToolTip="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=SplitView}">
+              <Image Name="SplitViewImage" Width="16" Height="16" />
+            </CheckBox>
+          </ToolBar>
+        </ToolBarPanel>
+      </DockPanel>
+
+    </Grid>
+
+
+    <Border Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="#FFD6E2F8" Background="#FFD6E2F8" Margin="15,0,15,0" />
+
+    <Grid Grid.Row="2" Margin="25,15,25,15" Name="editorGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="124*" Name="ColumnEditor1" />
+        <ColumnDefinition Width="2" Name="editorSeparator" />
+        <ColumnDefinition Width="0" Name="ColumnEditor2" />
+      </Grid.ColumnDefinitions>
+      <avalonedit:TextEditor Name="textEditor1" FontFamily="Consolas" FontSize="10pt" SyntaxHighlighting="C#" FontStyle="Normal" FontWeight="ExtraLight" Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0" Padding="0">
+        <avalonedit:TextEditor.ContextMenu>
+          <ContextMenu>
+            <MenuItem Header="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Copy}" Click="MenuItemCopyClick" />
+            <MenuItem Header="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Cut}" Click="MenuItemCutClick" />
+            <MenuItem Header="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Paste}" Click="MenuItemPasteClick" />
+          </ContextMenu>
+        </avalonedit:TextEditor.ContextMenu>
+      </avalonedit:TextEditor>
+
+      <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFD6E2F8" />
+
+      <avalonedit:TextEditor Name="textEditor2" FontFamily="Consolas" FontSize="10pt" SyntaxHighlighting="C#" FontStyle="Normal" FontWeight="ExtraLight" Grid.Column="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0" Padding="0">
+        <avalonedit:TextEditor.ContextMenu>
+          <ContextMenu>
+            <MenuItem Header="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Cut}" Click="MenuItemCopyClick" />
+            <MenuItem Header="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Copy}" Click="MenuItemCutClick" />
+            <MenuItem Header="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Paste}" Click="MenuItemPasteClick" />
+          </ContextMenu>
+        </avalonedit:TextEditor.ContextMenu>
+      </avalonedit:TextEditor>
+    </Grid>
+
+    <Border Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="#FFD6E2F8" Background="#FFD6E2F8" Margin="15,0,15,0" />
+
+    <Grid Grid.Row="4" Margin="25,8,25,8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="60" />
+        <ColumnDefinition Width="60" />
+        <ColumnDefinition Width="50" />
+        <ColumnDefinition Width="50" />
+        <ColumnDefinition Width="30*" />
+        <ColumnDefinition Width="35" />
+        <ColumnDefinition Width="40" />
+        <ColumnDefinition Width="40" />
+        <ColumnDefinition Width="40" />
+        <ColumnDefinition Width="40" />
+        <ColumnDefinition Width="50" />
+      </Grid.ColumnDefinitions>
+
+      <Label Grid.Column="0" Height="28" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Bottom" Content="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Lenght}" FontSize="12" />
+      <Label Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="0,0,0,0" Name="FileLength" VerticalAlignment="Bottom" Content="0" FontSize="12" />
+
+      <Label Grid.Column="2" Height="28" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Bottom" Content="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Lines}" FontSize="12" />
+      <Label Grid.Column="3" Height="28" HorizontalAlignment="Left" Margin="0,0,0,0" Name="FileLines" VerticalAlignment="Bottom" Content="0" FontSize="12" />
+
+      <Label Grid.Column="5" Height="28" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Bottom" Content="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Ln}" FontSize="12" />
+      <Label Grid.Column="6" Height="28" HorizontalAlignment="Left" Margin="0,0,0,0" Name="FileLine" VerticalAlignment="Bottom" Content="0" FontSize="12" />
+
+      <Label Grid.Column="7" Height="28" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Bottom" Content="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Col}" FontSize="12" />
+      <Label Grid.Column="8" Height="28" HorizontalAlignment="Left" Margin="0,0,0,0" Name="FileColumn" VerticalAlignment="Bottom" Content="0" FontSize="12" />
+
+      <Label Grid.Column="9" Height="28" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Bottom" Content="{Resx ResxName=LGP.Modules.ModuleEditor.Properties.Resources, Key=Sel}" FontSize="12" />
+      <Label Grid.Column="10" Height="28" HorizontalAlignment="Left" Margin="0,0,0,0" Name="FileSelection" VerticalAlignment="Bottom" Content="0" FontSize="12" />
+
+    </Grid>
+
+    <GridSplitter Grid.Column="1" Grid.RowSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFD6E2F8" />
+
+    <ScrollViewer HorizontalAlignment="Stretch" Name="scrollViewer" VerticalAlignment="Stretch" Padding="0" Grid.Column="2" Grid.RowSpan="5" VerticalScrollBarVisibility="Auto">
+      <Border BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Name="ModuleViewBorderContainer" />
+    </ScrollViewer>
+    <TextBox Name="ModuleLabelEditBox" Visibility="Hidden" Width="200" KeyUp="ModuleEditBoxKeyUp" Margin="61,13,5,8" HorizontalAlignment="Left" TextChanged="ModuleLabelEditBoxTextChanged"></TextBox>
+  </Grid>
+</UserControl>

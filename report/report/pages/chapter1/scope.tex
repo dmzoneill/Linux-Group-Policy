@@ -1,0 +1,98 @@
+\section{Scope}
+	\label{sec:Scope}
+	
+	Given the brief introduction and overview of software objectives, the following scope defines the requirements elicited:
+	\newline
+	
+
+	\vspace{-2mm}
+	\subsection{Scope Disclaimer}
+		
+		The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and
+		"OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+		\newline
+
+	\vspace{-2mm}
+	\subsection{Scope Statement}
+		
+		The intent of this project is to provide a Linux port of the Windows Group Policy Object (GPO) editor and a means 
+		to deploy these policies to a multitude of ‘Gnu’s not Unix’ (GNU) systems through a common non-ambiguous domain specific 
+		language (DSL). 
+		\newline
+
+	\vspace{-2mm}
+	\subsection{Scoped Objectives}
+	
+		\large{\bfseries{Client Server Model}}
+		
+		\vspace{2mm}
+		\normalsize
+		{		
+			Centralised management being the theme of this project establishes the inception of the concept of a central
+			authority and therein a client server model.  The implementation is REQUIRED to provide a client-server model 
+			that MUST exhibit the following.
+
+			\begin{enumerate}[itemsep=1pt,parsep=1pt]
+				\item 	The implementation MUST support at least two variants of Linux to prove applicability.
+				\item 	The design MUST support the ability to be extended to support a multitude of different systems 
+						with varying revisions of supporting packages. 
+				\item 	The implementation SHOULD use the Practical Extraction and Reporting Language (PERL) for highest availability possible. 
+				\item 	The server is REQUIRED to scale from two test clients to hundreds of clients.
+				\item   This SHOULD be achieved via the Master Slave Design Pattern or similar pattern.  
+				\item   A master with multiple slave servers implementation is RECOMMENDED. 
+				\item 	A compiled language MUST NOT be used as updates to the client SHALL be sent via the server which will 
+						deployed on varying architectures.
+				\item   The Server SHOULD support both Push and Pull; at least MUST implement support for pull requests.
+			\end{enumerate}
+		}
+
+		\large{\bfseries{Domain Specific Language}}
+		
+		\vspace{2mm}
+		\normalsize
+		{	
+			The domain specific language should exhibit the following characteristics.
+
+				\begin{enumerate}[itemsep=1pt,parsep=1pt]
+					\item 	The domain specific language MUST be extensible.
+					\item 	As new modules SHALL be deployed to the client, these Modules MAY provides hooks to the interpreter which it MUST accept.
+					\item 	The Domain Specific Language(DSL) SHOULD be a implemented as a hybrid language.
+					\begin{itemize}
+						\item 	The interpreter SHALL parse the Domain Specific Language(DSL) and process it.
+						\item 	The interpreter SHALL execute embedded general purpose language instructions defined in the Client server model.
+					\end{itemize}
+				\end{enumerate} 
+		}
+		
+		\large{\bfseries{Directory Services Schema}}
+
+		\vspace{2mm}
+		\normalsize
+		{	
+			The directory services schema MUST provide a means of representing and storing the following elements.
+
+				\begin{enumerate}[itemsep=1pt,parsep=1pt]
+					\item 	Files, Permissions, Lvalue and Rvalue of elements within configuration files.
+					\item 	Services and with common names, which MUST be translated by the client into the distribution specific names.
+					\item 	A representation organisational groups in hierarchy fashion compared to active directory MUST be implemented.
+					\item 	Computer objects SHALL be recognised by a globally unique identifier (GUID) represented as a 32-character hexadecimal string. 
+				\end{enumerate}
+		}
+		
+		\large{\bfseries{Administrator Front End}}
+		
+		\vspace{2mm}
+		\normalsize
+		{				
+			The Administrator Group Policy editor should exhibit the following characteristics. 
+
+				\begin{enumerate}[itemsep=1pt,parsep=1pt]
+					\item 	MUST provide the ability of creating organisational units.
+					\item 	MUST provide the ability to move computers between organisational units.
+					\item 	MUST Implement a hierarchy of organisational units where by policies MAY be inherited and overrides where applicable.
+					\item 	MUST provide a means to modify policies.
+					\item 	On application or change of a policy the server MUST generate new domain specific language script.
+					\item 	The front end MUST provide a means of importing existing policies in the form of the Domain Specific Language(DSL).
+					\item 	The User Interface SHOULD implement the ability to push updates to the client.
+				\end{enumerate}
+		}	

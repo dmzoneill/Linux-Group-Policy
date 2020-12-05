@@ -1,0 +1,123 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Program.cs" caret="0" fromTop="0" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:MainForm.Designer.cs" caret="0" fromTop="0" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:MainForm.cs" caret="1359" fromTop="33" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="3450" fromTop="20" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="3603" fromTop="175" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="275" fromTop="6" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:MainForm.cs" caret="1397" fromTop="21" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:MainForm.cs" caret="1397" fromTop="22" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:MainForm.cs" caret="1397" fromTop="15" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:MainForm.cs" caret="1397" fromTop="20" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:MainForm.cs" caret="1397" fromTop="38" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:MainForm.cs" caret="1397" fromTop="33" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:MainForm.cs" caret="1397" fromTop="40" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:MainForm.cs" caret="1282" fromTop="31" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:MainForm.cs" caret="1359" fromTop="33" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="1642" fromTop="30" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="511" fromTop="16" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="2114" fromTop="35" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="1969" fromTop="33" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="2626" fromTop="29" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="3123" fromTop="45" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="2983" fromTop="41" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="2856" fromTop="38" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="1789" fromTop="32" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="3123" fromTop="37" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="2382" fromTop="11" />
+      <File id="30807F91-13CD-4618-B205-36261B63C43D/f:Translator.cs" caret="3450" fromTop="41" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="string" priority="127" />
+      <Item value="var" priority="95" />
+      <Item value="private" priority="63" />
+      <Item value="List" priority="31" />
+      <Item value="this" priority="95" />
+      <Item value="new" priority="63" />
+      <Item value="List&lt;string&gt;" priority="28" />
+      <Item value="foreach" priority="63" />
+      <Item value="Directory`0" priority="31" />
+      <Item value="void" priority="31" />
+      <Item value="path" priority="95" />
+      <Item value="dir" priority="31" />
+      <Item value="if" priority="63" />
+      <Item value="file" priority="63" />
+      <Item value="locale" priority="95" />
+      <Item value="FileInfo`0" priority="31" />
+      <Item value="FileInfo" priority="28" />
+      <Item value="info" priority="31" />
+      <Item value="fileinfo" priority="31" />
+      <Item value="dirinfo" priority="31" />
+      <Item value="File`0" priority="31" />
+      <Item value="newfile" priority="31" />
+      <Item value="Console`0" priority="95" />
+      <Item value="Environment`0" priority="63" />
+      <Item value="localefile" priority="31" />
+      <Item value="ThreadStaticAttribute`0" priority="31" />
+      <Item value="System" priority="31" />
+      <Item value="Threading" priority="26" />
+      <Item value="Thread`0" priority="26" />
+      <Item value="translatedString" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ResxTranslator.MainForm">
+      <Item value="_paths" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Directory">
+      <Item value="GetDirectories`0" priority="26" />
+      <Item value="GetFiles`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="EndsWith`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ResxTranslator.Translator">
+      <Item value="TranslateFile`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileInfo">
+      <Item value="Directory" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.DirectoryInfo">
+      <Item value="FullName" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="Delete`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="Write`0" priority="53" />
+      <Item value="WriteLine`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="NewLine" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep`0" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

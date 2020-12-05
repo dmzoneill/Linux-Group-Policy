@@ -1,0 +1,138 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_185 = [
+   [44,9,44,10,'dccv']
+, [45,9,45,10,'dccv']
+, [24,9,24,10,'dcuc']
+, [25,13,25,47,'dcuc']
+, [26,9,26,10,'dcuc']
+, [34,9,34,10,'dcuc']
+, [35,13,35,85,'dcuc']
+, [36,9,36,10,'dcuc']
+, [56,9,56,10,'dcuc']
+, [57,13,57,25,'dcuc']
+, [58,9,58,10,'dcuc']
+, [66,9,66,10,'dcuc']
+, [67,13,67,25,'dcuc']
+, [68,9,68,10,'dcuc']
+, [76,9,76,10,'dcuc']
+, [77,13,77,25,'dcuc']
+, [78,9,78,10,'dcuc']
+, [86,9,86,10,'dcuc']
+, [87,13,87,25,'dcuc']
+, [88,9,88,10,'dcuc']
+, [96,9,96,10,'dcuc']
+, [97,13,97,38,'dcuc']
+, [98,9,98,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src185" class="dotCoverSource"><pre>#region
+
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Component;
+using LGP.Components.Factory.Interfaces.Module;
+
+#endregion
+
+namespace LGP.Components.Database.Mysql
+{
+    /// &lt;summary&gt;
+    ///   Plugin
+    /// &lt;/summary&gt;
+    public class Plugin : IModule
+    {
+        #region Implementation of IComponent
+
+        /// &lt;summary&gt;
+        ///   Gets the name of the main component
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;String name&lt;/returns&gt;
+        public string GetName()
+        {
+            return Properties.Resources.Mysql;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the image that represents the module
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An image&lt;/returns&gt;
+        public Image GetIcon()
+        {
+            return Framework.Images.GetImage( &quot;mysql&quot; , &quot;VS2010ImageLibrary&quot; , 14 );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Asks the component to register is menu components
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;menu&quot;&gt;The program main menu&lt;/param&gt;
+        public void RegisterMenuEntries( IMenu menu )
+        {
+        }
+
+        #endregion
+
+        #region Implementation of IModule
+
+        /// &lt;summary&gt;
+        ///   Gets the main component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetMainControl()
+        {
+            return null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the sidebar component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetSidebarControl()
+        {
+            return null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the bottombar component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetBottombarControl()
+        {
+            return null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the toolbar component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetToolbarControl()
+        {
+            return null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the preferences component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetPreferencesControl()
+        {
+            return new Preferences();
+        }
+
+        #endregion
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src185', RANGES_185)
+		</script>
+	</body>
+</html>

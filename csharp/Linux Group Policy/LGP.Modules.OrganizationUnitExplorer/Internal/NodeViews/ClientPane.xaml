@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews.ClientPane" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" d:DesignHeight="542" d:DesignWidth="240">
+  <Grid Margin="20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="80" />
+      <RowDefinition Height="100" />
+      <RowDefinition Height="160" />
+      <RowDefinition Height="160*" />
+    </Grid.RowDefinitions>
+
+    <Image Height="64" HorizontalAlignment="Right" Margin="0,10,10,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="64" />
+
+    <GroupBox Height="100" Margin="0,0,0,0" Name="groupBox1" VerticalAlignment="Top" BorderBrush="{x:Null}" BorderThickness="0" Grid.Row="1">
+      <Grid>
+        <Label Content="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=ClientId}" Margin="0,0,0,0" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" FontWeight="Bold" Foreground="#FF666666" />
+        <Separator Margin="0,15,0,0" Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="#FFD6E2F8" Background="#FFD6E2F8" />
+        <Label Margin="0,25,0,0" Name="ClientNameLabel" Content="Client name" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" />
+        <TextBlock Margin="5,55,05,0" Name="ClientGuidLabel" Text="Client Guid" Height="33" VerticalAlignment="Top" HorizontalAlignment="Stretch" TextAlignment="Right" FontSize="12" TextWrapping="Wrap" />
+      </Grid>
+    </GroupBox>
+
+    <GroupBox Height="160" Margin="0,0,0,0" Name="groupBox2" VerticalAlignment="Top" BorderBrush="{x:Null}" BorderThickness="0" Grid.Row="2">
+      <Grid>
+        <Label Content="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=ClientOs}" Margin="0,0,0,0" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" FontWeight="Bold" Foreground="#FF666666" />
+        <Separator Margin="0,15,0,0" Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="#FFD6E2F8" Background="#FFD6E2F8" />
+        <Label Margin="0,25,0,0" Name="ClientOSLabel" Content="Os" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" />
+        <Label Margin="0,50,0,0" Name="ClientArchLabel" Content="Architecture" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" />
+        <Label Margin="0,75,0,0" Name="ClientKernelLabel" Content="Kernel" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" />
+        <Label Margin="0,100,0,0" Name="ClientPsuedonameLabel" Content="Psuedo name" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" />
+        <Label Margin="0,125,0,0" Name="ClientDistributionLabel" Content="Distribution" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" />
+        <Label Margin="0,150,0,0" Name="ClientDistributionVersionLabel" Content="Distribution version" Height="28" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" />
+      </Grid>
+    </GroupBox>
+
+    <GroupBox Height="160" Margin="0,0,0,0" Name="groupBox3" VerticalAlignment="Top" BorderBrush="{x:Null}" BorderThickness="0" Grid.Row="3">
+      <Grid>
+        <Label Content="{Resx ResxName=LGP.Modules.OrganizationUnitExplorer.Properties.Resources, Key=ClientStatus}" FontSize="12" FontWeight="Bold" Height="28" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Foreground="#FF666666" />
+        <Separator Height="20" HorizontalAlignment="Stretch" Margin="0,15,0,0" VerticalAlignment="Top" Foreground="#FFD6E2F8" Background="#FFD6E2F8" />
+        <Label Content="Last seen" FontSize="12" Height="28" HorizontalAlignment="Right" Margin="0,25,0,0" Name="ClientLastSeenLabel" VerticalAlignment="Top" />
+        <Label Content="Binded" FontSize="12" Height="28" HorizontalAlignment="Right" Margin="0,50,0,0" Name="ClientBindedLabel" VerticalAlignment="Top" />
+        <Label Content="Version" FontSize="12" Height="28" HorizontalAlignment="Right" Margin="0,75,0,0" Name="ClientVersionLabel" VerticalAlignment="Top" />
+        <Label Content="Ip address" FontSize="12" Height="28" HorizontalAlignment="Right" Margin="0,100,0,0" Name="ClientIpAddressLabel" VerticalAlignment="Top" />
+        <Label Content="Port" FontSize="12" Height="28" HorizontalAlignment="Right" Margin="0,125,0,0" Name="ClientPortLabel" VerticalAlignment="Top" />
+      </Grid>
+    </GroupBox>
+  </Grid>
+</UserControl>

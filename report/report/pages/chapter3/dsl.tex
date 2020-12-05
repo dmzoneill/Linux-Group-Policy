@@ -1,0 +1,119 @@
+\newpage
+
+\section{Domain Specific Language} 
+\label{sec:Domainspecificlanguage}
+
+	A Domain Specific Language in many circles is generally described as a computer programming language with limited expressiveness,
+	focused on a particular domain.  The best example of this description is the hypertext markup language (HTML) and
+	of course everyone's favourite the structured query language(SQL).
+	\newline
+	\newline
+	Domain specific languages are not a new concept.  
+	The structured query language(SQL) was conceived 1986 \& the hypertext markup language (HTML) 1989.
+	The choice for a Domain Specific Language (DSL) depends largely on what you are trying to achieve and whether this
+	succinct language offers more efficient, less verbose and more flexibility; but even more so, is it better suited for the domain.
+	Would it be efficient for people to do database queries in the Extensible Markup Language (XML)?   For those who are familiar with
+	oracle's structured query language(SQL) command line interface, imagine using it with the Extensible Markup Language (XML).
+	\newline
+	\newline
+	Moving quickly on from this eye brow raising statement, the choice for a Domain Specific Language in the solution was evident.
+	Having experience in other solutions, such as INI files, Javascript Object Notation (JSON) and Extensible Markup Language (XML);
+	these seemed rather verbose and restrictive to administrators who wished to define rules quickly and cleanly.
+	Language cacophony is a common objection to taking on a Domain Specific Language (DSL).  However this argument is quickly avoided
+	by the purpose of the Domain Specific Language (DSL).  The purpose of the Domain Specific Language (DSL) is to reduce the complexity of the statements
+	used to achieve a domain specific goal.  Writing a web site in Java would be quiet a difficult and time consuming task; 
+	this is why hypertext markup language (HTML) was conceived.
+	\newline
+	\newline
+	As PERL was used as the client side implementation, this offered the perfect solution for text processing and the foundation for a Domain Specific Language (DSL).
+	PERL, the practical extraction and reporting language was developed for text processing.  PERL has many tools for this activity, one of them being Filters.
+	Filters or pre-processing of an input file, allowed for the formulation of this conceptual requirement.  As pre-processing can analyse the domain specific
+	language, post-processing can also execute internal or embedded PERL statements, giving rise to the concept of a hybrid Domain Specific Language (DSL).
+	\newline
+	\newline
+	Stepping back from this assertion for the moment, what is the difference between an ``internal'' and an ``external'' Domain Specific Language (DSL)?
+	To be short and succinct in the definition of these two terms, an internal Domain Specific Language (DSL) is code that can be evaluated and executed
+	without syntax directed translation taking place, to achieve the native language understood by the parser; while an external Domain Specific Language (DSL) is code
+	that requires some sort of translation before it is understood by the parser.
+	\newline
+	\newline
+	The following sections will identify these concepts in the implementation.
+	
+\newpage	
+
+	\subsection{Requirements}
+	
+		\normalsize
+		{
+			\begin{enumerate}[itemsep=1pt,parsep=1pt]
+				\item 	An extensible Domain Specific Language.
+				\item 	Domain Specific Language grammar hooks.
+				\item 	Hybrid Domain Specific Language.
+				\begin{itemize}
+					\item Internal characteristics, rules provided by modules.
+					\item External characteristics, embedded PERL.
+				\end{itemize}
+			\end{enumerate} 		
+		}
+	
+	\subsection{Design}
+	
+		\normalsize
+		{
+			The design of the Domain Specific Language (DSL) is based primarily on the extensibility of the client interpreter.  In previous
+			sections we looked at how new parsing rules were injected into the interpreter.  These rules essentially define the Domain Specific Language (DSL).
+			Therefore the language is not restricted by a document type definition (syntax and ordering rules).
+			This means that the Domain Specific Language (DSL) constantly changes as interpreter modules are created and edited.
+			Therefore the design of the Domain Specific Language (DSL) is the sole responsibility of the PERL module developers.
+			\newline
+			\newline
+			Fig. \ref{fig:DSLHybrid} shows both examples of the internal \& external Domain Specific Language (DSL) statements.
+			The internal Domain Specific Language (DSL) statements are identified between the \% symbols.
+			An example of an external Domain Specific Language (DSL) statement, namely ``SERVICE\_CONTROL'' will be parsed by the rules
+			provided by an interpreter module.
+		}
+		
+		\vspace{2mm}
+		\begin{figurehere}
+			\inputminted[linenos=true,fontsize=\footnotesize,tabsize=2]{perl}{pages/chapter3/smippets/dsl2}
+			\vspace{-5mm}
+			\caption{DSL - Hybrid}
+			\label{fig:DSLHybrid}
+		\end{figurehere}	
+		
+		\vspace{2mm}
+		\normalsize
+		{
+			Parsing of the internal statements is quiet simple and articulated in Fig. \ref{fig:InternalParsing},
+			while the parsing of the external statements is shown in Fig. \ref{fig:ExternalParsing}
+		}
+		
+		\vspace{2mm}
+		\begin{figurehere}
+			\inputminted[linenos=true,fontsize=\footnotesize,tabsize=2]{perl}{pages/chapter3/smippets/pe.txt}
+			\vspace{-5mm}
+			\caption{DSL - External Parsing}
+			\label{fig:ExternalParsing}
+		\end{figurehere}
+
+\newpage		
+
+		\vspace{4mm}
+		\begin{figurehere}
+			\inputminted[linenos=true,fontsize=\footnotesize,tabsize=2]{perl}{pages/chapter3/smippets/pi.txt}
+			\vspace{-5mm}
+			\caption{DSL - Internal Parsing}
+			\label{fig:InternalParsing}
+		\end{figurehere}			
+	
+	\subsection{Analysis \& Improvements}
+	
+		\normalsize
+		{
+			The hybrid characteristics of the Domain Specific Language (DSL) offers the greatest possible flexibility for administrators.
+			By allowing the embedment of PERL into the Domain Specific Language (DSL), administrators who are waiting for new additional functionality to be provided 
+			by me the developer, can work around any deficiencies discovered within the implementation.
+		}
+	
+\newpage
+	

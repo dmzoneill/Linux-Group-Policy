@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_279 = [
+   [20,9,20,10,'dccv']
+, [22,13,22,14,'dccv']
+, [23,17,23,74,'dccv']
+, [24,17,24,66,'dccv']
+, [25,13,25,14,'dccv']
+, [30,9,30,10,'dccv']
+, [34,9,34,10,'dccv']
+, [36,13,36,14,'dccv']
+, [37,17,37,68,'dccv']
+, [38,17,38,50,'dccv']
+, [39,17,39,115,'dccv']
+, [40,13,40,14,'dccv']
+, [45,9,45,10,'dccv']
+, [49,9,49,10,'dccv']
+, [51,13,51,14,'dccv']
+, [52,22,52,32,'dccv']
+, [53,17,53,18,'dccv']
+, [54,21,54,147,'dccv']
+, [56,21,56,54,'dccv']
+, [57,21,57,22,'dccv']
+, [58,25,58,82,'dccv']
+, [59,25,59,26,'dccv']
+, [60,29,60,52,'dccv']
+, [61,25,61,26,'dccv']
+, [62,21,62,22,'dccv']
+, [65,21,65,41,'dccv']
+, [70,21,70,22,'dccv']
+, [71,25,71,50,'dccv']
+, [72,21,72,22,'dccv']
+, [74,21,74,80,'dccv']
+, [76,21,76,43,'dccv']
+, [77,21,77,22,'dccv']
+, [78,25,78,105,'dccv']
+, [79,21,79,22,'dccv']
+, [80,17,80,18,'dccv']
+, [52,48,52,51,'dccv']
+, [52,33,52,46,'dccv']
+, [81,13,81,14,'dccv']
+, [86,9,86,10,'dccv']
+, [26,13,26,37,'dcuc']
+, [27,13,27,14,'dcuc']
+, [28,17,28,53,'dcuc']
+, [29,13,29,14,'dcuc']
+, [41,13,41,37,'dcuc']
+, [42,13,42,14,'dcuc']
+, [43,17,43,53,'dcuc']
+, [44,13,44,14,'dcuc']
+, [66,21,66,22,'dcuc']
+, [67,25,67,52,'dcuc']
+, [68,21,68,22,'dcuc']
+, [82,13,82,37,'dcuc']
+, [83,13,83,14,'dcuc']
+, [84,17,84,53,'dcuc']
+, [85,13,85,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src279" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Collections.Generic;
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Database;
+using LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls;
+
+#endregion
+
+namespace LGP.Modules.OrganizationUnitExplorer.Internal
+{
+    internal class OuHelper
+    {
+        public static readonly IOuGateway OuGateway;
+        public static IClientGateway ClientGateway;
+
+        static OuHelper()
+        {
+            try
+            {
+                ClientGateway = Framework.Database.CreateClientGateway();
+                OuGateway = Framework.Database.CreateOuGateway();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        public static void BuildOuTree( TreeView treeview , bool enableActions , IOu disableThisAndBelow )
+        {
+            try
+            {
+                var domainNode = new TreeViewOuElement( treeview );
+                treeview.Items.Add( domainNode );
+                BuildOuTree( treeview , OuGateway.GetRoots() , domainNode , enableActions , disableThisAndBelow );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        private static void BuildOuTree( TreeView treeview , List&lt; IOu &gt; ous , TreeViewOuElement parent , bool enableActions , IOu disableThisAndBelow )
+        {
+            try
+            {
+                for( var y = 0; y &lt; ous.Count; y++ )
+                {
+                    var item = enableActions ? new TreeViewOuElement( ous[ y ] , treeview , true ) : new TreeViewOuElement( ous[ y ] , treeview );
+
+                    if( disableThisAndBelow != null )
+                    {
+                        if( ous[ y ].GetOuId() == disableThisAndBelow.GetOuId() )
+                        {
+                            item.IsEnabled = false;
+                        }
+                    }
+
+
+                    if( parent == null )
+                    {
+                        treeview.Items.Add( item );
+                    }
+                    else
+                    {
+                        parent.Items.Add( item );
+                    }
+
+                    var children = OuGateway.GetChildren( ous[ y ].GetOuId() );
+
+                    if( children != null )
+                    {
+                        BuildOuTree( treeview , children , item , enableActions , disableThisAndBelow );
+                    }
+                }
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src279', RANGES_279)
+		</script>
+	</body>
+</html>

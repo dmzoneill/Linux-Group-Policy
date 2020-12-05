@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LGP.Components.Database.DatabaseHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAAAAAABQBAAAQMAACAAAAAAAACAEAAAABQA=</HashCode>
+      <FileName>DatabaseHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Plugin" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAQCAAAAAAAAAAAAAAAAAAAFAAAAAAAAAgACBAA=</HashCode>
+      <FileName>Plugin.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Preferences" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAQgICAQAAAAAAAAAAAAAAQAAAgABAAAAAEgAAgBAA=</HashCode>
+      <FileName>Preferences.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Entities.Client" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QB4AqIAgBHREKAoAIoBwkIAACYEAEAlCAAQCYCcQBAo=</HashCode>
+      <FileName>Entities\Client.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Entities.Grammer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABRAAAAAICAAAgIEAACAAAQAQIAAAABAAAAAAA4AAIA=</HashCode>
+      <FileName>Entities\Grammer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Entities.Module" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAACABAAIAEAAIAAAASIAAAABCIEAiACQAAIA=</HashCode>
+      <FileName>Entities\Module.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Entities.Ou" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAICEAGEIAAIIAACAAAAAAIAAAABAAAAEQEQABAA=</HashCode>
+      <FileName>Entities\Ou.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Entities.Policy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAASAAACCAIAIAJAEACAAAAoAAAgBQABAEAUZAAII=</HashCode>
+      <FileName>Entities\Policy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Gateways.GrammerGateway" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABAAAAAAAgAAAAACAAAAAAAAAAgCAAAAAA=</HashCode>
+      <FileName>Entities\GrammerGateway.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Gateways.ClientGateway" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAABAAAAAAACAAAAAAAAAAIAAAAAAAAAQCAA=</HashCode>
+      <FileName>Gateways\ClientGateway.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Gateways.ModuleGateway" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAACAABADAAIAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gateways\ModuleGateway.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Gateways.OuGateway" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEIABAAAEAAAAAIAEAAQAAQAAAQAAAAAAQAAg=</HashCode>
+      <FileName>Gateways\OuGateway.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Gateways.PolicyGateway" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAgAgAAAAAAAACAAgQAAoAAIAIgAA=</HashCode>
+      <FileName>Gateways\PolicyGateway.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LGP.Components.Database.Properties.Resources" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAQAACAQQBEAAAAQAAACAqAAAABAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

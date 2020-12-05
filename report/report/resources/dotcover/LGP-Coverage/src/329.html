@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_329 = [
+   [23,9,23,29,'dccv']
+, [24,9,24,10,'dccv']
+, [25,13,25,40,'dccv']
+, [26,9,26,10,'dccv']
+, [35,9,35,10,'dccv']
+, [36,13,36,55,'dccv']
+, [37,9,37,10,'dccv']
+, [52,9,52,10,'dccv']
+, [53,13,53,33,'dccv']
+, [54,9,54,10,'dccv']
+, [63,9,63,10,'dccv']
+, [64,13,64,43,'dccv']
+, [65,9,65,10,'dccv']
+, [72,9,72,10,'dccv']
+, [73,13,73,38,'dccv']
+, [74,9,74,10,'dccv']
+, [81,9,81,10,'dccv']
+, [82,13,82,73,'dccv']
+, [83,9,83,10,'dccv']
+, [44,9,44,10,'dcuc']
+, [45,13,45,25,'dcuc']
+, [46,9,46,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src329" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Component;
+using LGP.Components.Factory.Interfaces.Module;
+
+#endregion
+
+namespace LGP.Modules.ServerControl
+{
+    /// &lt;summary&gt;
+    /// Interaction logic for Preferences.xaml
+    /// &lt;/summary&gt;
+    public partial class Preferences : IPreferences
+    {
+        private ISettings _parent;
+
+        /// &lt;summary&gt;
+        /// Constructor
+        /// &lt;/summary&gt;
+        public Preferences()
+        {
+            this.InitializeComponent();
+        }
+
+        #region Implementation of IPreferences
+
+        /// &lt;summary&gt;
+        ///   Gets the name of the preferences Pane
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public string GetName()
+        {
+            return Properties.Resources.ServerControl;
+        }
+
+        /// &lt;summary&gt;
+        ///   Gets the preferences window
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;UserControl&lt;/returns&gt;
+        public UserControl GetControl()
+        {
+            return this;
+        }
+
+        /// &lt;summary&gt;
+        ///   Aks the preferences panel to save its entries
+        /// &lt;/summary&gt;
+        public void Save()
+        {
+            this._parent = null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Asks the preferences to load its settings
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;settingsParent&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public void Load( ISettings settingsParent )
+        {
+            this._parent = settingsParent;
+        }
+
+        /// &lt;summary&gt;
+        /// Gets the type it Controls
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Type&lt;/returns&gt;
+        public Type GetControlType()
+        {
+            return typeof( IModule );
+        }
+
+        /// &lt;summary&gt;
+        /// Gets the preferences icon
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public Image GetIcon()
+        {
+            return Framework.Images.GetImage( &quot;config&quot; , &quot;16X16&quot; , 14 );
+        }
+
+        #endregion
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src329', RANGES_329)
+		</script>
+	</body>
+</html>

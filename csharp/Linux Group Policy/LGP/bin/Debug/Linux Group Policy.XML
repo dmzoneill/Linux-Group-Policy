@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Linux Group Policy</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.App">
+            <summary>
+              Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:LGP.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:LGP.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:LGP.Preferences">
+            <summary>
+            Interaction logic for Preferences.xaml
+            </summary>
+            <summary>
+            Preferences
+            </summary>
+        </member>
+        <member name="M:LGP.Preferences.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LGP.Preferences.CultureComboSelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Set the CultureManager.UICulture
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:LGP.Preferences.GetName">
+            <summary>
+              Gets the name of the preferences Pane
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Preferences.GetControl">
+            <summary>
+              Gets the preferences window
+            </summary>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Preferences.Save">
+            <summary>
+              Aks the preferences panel to save its entries
+            </summary>
+        </member>
+        <member name="M:LGP.Preferences.Load(LGP.Components.Factory.Interfaces.Component.ISettings)">
+            <summary>
+              Asks the preferences to load its settings
+            </summary>
+            <param name="settingsParent"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Preferences.GetControlType">
+            <summary>
+            Gets the type it Controls
+            </summary>
+            <returns>Type</returns>
+        </member>
+        <member name="M:LGP.Preferences.GetIcon">
+            <summary>
+            Gets the preferences icon
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Preferences.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Preferences.CultureInfoComparer">
+            <summary>
+            Handle sorting Culture Info
+            </summary>
+        </member>
+        <member name="T:LGP.LGPWindow">
+            <summary>
+              Interaction logic for LGPWindow.xaml
+            </summary>
+            <summary>
+            LGPWindow
+            </summary>
+        </member>
+        <member name="M:LGP.LGPWindow.#ctor">
+            <summary>
+              Constructor
+              Shows the splash screen loader
+              Subscribes to events
+            </summary>
+        </member>
+        <member name="M:LGP.LGPWindow.HandleMenuItemClick(LGP.Components.Factory.Publishers.Events.MenuEvent)">
+            <summary>
+              Generic message handler for menu item clicked events
+            </summary>
+            <param name = "details"></param>
+        </member>
+        <member name="M:LGP.LGPWindow.HandlePanelRequest(LGP.Components.Factory.Publishers.Events.PanelEvent)">
+            <summary>
+              Generic message handler for menu item clicked events
+            </summary>
+            <param name = "details"></param>
+        </member>
+        <member name="M:LGP.LGPWindow.WindowLoaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Window loaded internal event
+            </summary>
+            <param name = "sender">The object that raised the window loaded event</param>
+            <param name = "e">Event arguments associated with the event</param>
+        </member>
+        <member name="M:LGP.LGPWindow.LGPMainWindowClosing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+              Generic window closing event
+            </summary>
+            <param name = "sender">The object that raised the window closing event</param>
+            <param name = "e">Event arguments associated with the event</param>
+        </member>
+        <member name="M:LGP.LGPWindow.DragBarPreviewMouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+              Title bar double click event handler
+            </summary>
+            <param name = "sender">The object that raised the double click event</param>
+            <param name = "e">Event arguments associated with the event</param>
+        </member>
+        <member name="M:LGP.LGPWindow.ChromeLessWindowSpaceMouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+              Title bar click event handler
+            </summary>
+            <param name = "sender">The object that raised the click event</param>
+            <param name = "e">Event arguments associated with the event</param>
+        </member>
+        <member name="M:LGP.LGPWindow.ButtonWindowCloseClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              The window close button event handler
+            </summary>
+            <param name = "sender">The object that raised the click event</param>
+            <param name = "e">Event arguments associated with the event</param>
+        </member>
+        <member name="M:LGP.LGPWindow.ButtonWindowMaximizeClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              The window maximize button event handler
+            </summary>
+            <param name = "sender">The object that raised the click event</param>
+            <param name = "e">Event arguments associated with the event</param>
+        </member>
+        <member name="M:LGP.LGPWindow.Resize">
+            <summary>
+              Wpf window mode breaks maximize so we need to do it ourselves.
+            </summary>
+        </member>
+        <member name="M:LGP.LGPWindow.ButtonWindowMinimizeClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              The window minimize button event handler
+            </summary>
+            <param name = "sender">The object that raised the click event</param>
+            <param name = "e">Event arguments associated with the event</param>
+        </member>
+        <member name="M:LGP.LGPWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Controls.Settings">
+            <summary>
+              Interaction logic for Settings.xaml
+            </summary>
+            <summary>
+            Settings
+            </summary>
+        </member>
+        <member name="M:LGP.Controls.Settings.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Controls.Settings.#ctor(LGP.Components.Factory.Publishers.Events.PreferencesEvent)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="tevent">PreferencesEvent</param>
+        </member>
+        <member name="M:LGP.Controls.Settings.ChromeLessWindowSpaceMouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+              Title bar click event handler
+            </summary>
+            <param name = "sender">The object that raised the click event</param>
+            <param name = "e">Event arguments associated with the event</param>
+        </member>
+        <member name="M:LGP.Controls.Settings.Refresh">
+            <summary>
+            Ask the settings window to refresh itself
+            </summary>
+        </member>
+        <member name="M:LGP.Controls.Settings.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Controls.Splash">
+            <summary>
+              Interaction logic for Splash.xaml
+            </summary>
+            <summary>
+            Splash
+            </summary>
+        </member>
+        <member name="M:LGP.Controls.Splash.#ctor">
+            <summary>
+              Constructor for the splash screen
+            </summary>
+        </member>
+        <member name="M:LGP.Controls.Splash.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Controls.Background">
+            <summary>
+              Interaction logic for Background.xaml
+            </summary>
+            <summary>
+            Background
+            </summary>
+        </member>
+        <member name="M:LGP.Controls.Background.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Controls.Background.UserControlLoaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+              Window loaded Event
+            </summary>
+            <param name = "sender">object</param>
+            <param name = "e">args</param>
+        </member>
+        <member name="M:LGP.Controls.Background.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.Detected">
+            <summary>
+              Looks up a localized string similar to Detected Servers.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.Exit">
+            <summary>
+              Looks up a localized string similar to Exit.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.Language">
+            <summary>
+              Looks up a localized string similar to Language.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.LinuxGroupPolicyStudio">
+            <summary>
+              Looks up a localized string similar to Linux Group Policy Studio.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.Loading">
+            <summary>
+              Looks up a localized string similar to Loading.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.ManagementStartsHere">
+            <summary>
+              Looks up a localized string similar to Management Starts Here.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.Maximize">
+            <summary>
+              Looks up a localized string similar to Maximize.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.Minimize">
+            <summary>
+              Looks up a localized string similar to Minimize.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.Preferences">
+            <summary>
+              Looks up a localized string similar to Preferences.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.Select">
+            <summary>
+              Looks up a localized string similar to Select.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.ServerDiscovery">
+            <summary>
+              Looks up a localized string similar to Server Discovery.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Resources.Settings">
+            <summary>
+              Looks up a localized string similar to Settings.
+            </summary>
+        </member>
+        <member name="T:LGP.Properties.Images">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Images.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.Properties.Images.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

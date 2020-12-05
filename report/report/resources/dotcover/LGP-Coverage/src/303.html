@@ -1,0 +1,265 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_303 = [
+   [38,9,38,32,'dccv']
+, [39,9,39,10,'dccv']
+, [41,13,41,14,'dccv']
+, [42,17,42,44,'dccv']
+, [43,17,43,35,'dccv']
+, [44,17,44,31,'dccv']
+, [45,17,45,42,'dccv']
+, [46,13,46,14,'dccv']
+, [51,9,51,10,'dccv']
+, [61,9,61,10,'dccv']
+, [62,13,62,33,'dccv']
+, [67,13,67,14,'dccv']
+, [68,17,68,31,'dccv']
+, [69,17,69,42,'dccv']
+, [70,13,70,14,'dccv']
+, [75,9,75,10,'dccv']
+, [130,9,130,10,'dccv']
+, [132,13,132,14,'dccv']
+, [133,17,133,36,'dccv']
+, [134,17,134,51,'dccv']
+, [137,13,137,37,'dccv']
+, [138,13,138,14,'dccv']
+, [139,17,139,53,'dccv']
+, [140,13,140,14,'dccv']
+, [141,9,141,10,'dccv']
+, [146,9,146,10,'dccv']
+, [148,13,148,14,'dccv']
+, [149,17,149,63,'dccv']
+, [150,17,150,71,'dccv']
+, [151,13,151,14,'dccv']
+, [156,9,156,10,'dccv']
+, [164,9,164,10,'dccv']
+, [165,13,165,29,'dccv']
+, [166,9,166,10,'dccv']
+, [22,9,22,24,'dcuc']
+, [23,9,23,10,'dcuc']
+, [25,13,25,14,'dcuc']
+, [26,17,26,44,'dcuc']
+, [27,13,27,14,'dcuc']
+, [28,13,28,37,'dcuc']
+, [29,13,29,14,'dcuc']
+, [30,17,30,53,'dcuc']
+, [31,13,31,14,'dcuc']
+, [32,9,32,10,'dcuc']
+, [47,13,47,37,'dcuc']
+, [48,13,48,14,'dcuc']
+, [49,17,49,53,'dcuc']
+, [50,13,50,14,'dcuc']
+, [63,13,63,14,'dcuc']
+, [64,17,64,24,'dcuc']
+, [71,13,71,37,'dcuc']
+, [72,13,72,14,'dcuc']
+, [73,17,73,53,'dcuc']
+, [74,13,74,14,'dcuc']
+, [83,9,83,10,'dcuc']
+, [85,13,85,14,'dcuc']
+, [86,13,86,14,'dcuc']
+, [87,13,87,37,'dcuc']
+, [88,13,88,14,'dcuc']
+, [89,17,89,53,'dcuc']
+, [90,13,90,14,'dcuc']
+, [91,9,91,10,'dcuc']
+, [99,9,99,10,'dcuc']
+, [101,13,101,14,'dcuc']
+, [102,13,102,14,'dcuc']
+, [103,13,103,37,'dcuc']
+, [104,13,104,14,'dcuc']
+, [105,17,105,53,'dcuc']
+, [106,13,106,14,'dcuc']
+, [107,9,107,10,'dcuc']
+, [114,9,114,10,'dcuc']
+, [116,13,116,14,'dcuc']
+, [117,13,117,14,'dcuc']
+, [118,13,118,37,'dcuc']
+, [119,13,119,14,'dcuc']
+, [120,17,120,53,'dcuc']
+, [121,13,121,14,'dcuc']
+, [122,9,122,10,'dcuc']
+, [135,17,135,48,'dcuc']
+, [136,13,136,14,'dcuc']
+, [152,13,152,37,'dcuc']
+, [153,13,153,14,'dcuc']
+, [154,17,154,53,'dcuc']
+, [155,13,155,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src303" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Database;
+
+#endregion
+
+namespace LGP.Modules.OrganizationUnitExplorer.Internal.NodeViews
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for OuPane.xaml
+    /// &lt;/summary&gt;
+    public partial class OuPane : IOuObserver
+    {
+        private IOu _ou;
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        public OuPane()
+        {
+            try
+            {
+                this.InitializeComponent();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        public OuPane( IOu ou )
+        {
+            try
+            {
+                this.InitializeComponent();
+                ou.Attach( this );
+                this._ou = ou;
+                this.LoadOuInformation();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        #region IOuObserver Members
+
+        /// &lt;summary&gt;
+        ///   Update this observer with a refernece to the ou
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;ou&quot;&gt;Iou&lt;/param&gt;
+        /// &lt;param name = &quot;source&quot;&gt;source observer&lt;/param&gt;
+        public void Update( IOu ou , IOuObserver source )
+        {
+            if( this == source )
+            {
+                return;
+            }
+            try
+            {
+                this._ou = ou;
+                this.LoadOuInformation();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Attach objewcts that observer this IOu
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;obj&quot;&gt;IOuObserver&lt;/param&gt;
+        public void Attach( IOuObserver obj )
+        {
+            try
+            {
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Detach objewcts that observer this IOu
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;obj&quot;&gt;IOuObserver&lt;/param&gt;
+        public void Detach( IOuObserver obj )
+        {
+            try
+            {
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Notify observers of this IOu
+        /// &lt;/summary&gt;
+        public void Notify()
+        {
+            try
+            {
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Dispose this object and all the observers
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;obj&quot;&gt;IOuObserver&lt;/param&gt;
+        public void Dispose( IOuObserver obj )
+        {
+            try
+            {
+                obj.Detach( this );
+                var parent = ( Grid ) this.Parent;
+                parent.Children.Remove( this );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        #endregion
+
+        private void LoadOuInformation()
+        {
+            try
+            {
+                this.OuNameLabel.Content = this._ou.GetName();
+                this.image1.Source = this._ou.GetOuImage( 64 ).Source;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Get the ou associated with this wrapper
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;IOu&lt;/returns&gt;
+        public IOu GetOu()
+        {
+            return this._ou;
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src303', RANGES_303)
+		</script>
+	</body>
+</html>

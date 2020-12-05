@@ -1,0 +1,14 @@
+﻿The current system time is: <% print time; %>.
+
+
+#CONFIGURATION:   
+ 
+    NAME            :   your module
+
+:END#
+
+#ACTION : 
+
+    SERVICE_CONTROL     :   httpd on 
+
+:END#

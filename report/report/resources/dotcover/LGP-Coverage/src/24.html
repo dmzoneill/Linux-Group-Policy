@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_24 = [
+   [23,9,23,31,'dccv']
+, [24,9,24,10,'dccv']
+, [25,9,25,10,'dccv']
+, [36,9,36,10,'dccv']
+, [37,13,37,54,'dccv']
+, [38,9,38,10,'dccv']
+, [49,9,49,10,'dccv']
+, [50,13,50,65,'dccv']
+, [51,9,51,10,'dccv']
+, [60,9,60,10,'dccv']
+, [61,13,61,44,'dccv']
+, [62,9,62,10,'dccv']
+, [82,9,82,10,'dccv']
+, [83,13,83,59,'dccv']
+, [84,9,84,10,'dccv']
+, [94,9,94,10,'dccv']
+, [95,13,95,59,'dccv']
+, [96,9,96,10,'dccv']
+, [101,9,101,10,'dccv']
+, [102,13,102,68,'dccv']
+, [103,9,103,10,'dccv']
+, [71,9,71,10,'dcuc']
+, [72,13,72,57,'dcuc']
+, [73,9,73,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src24" class="dotCoverSource"><pre>#region
+
+using System.Drawing;
+using LGP.Components.Factory.Interfaces.Infrastructure;
+using LGP.ImageLibrary;
+using Image = System.Windows.Controls.Image;
+
+#endregion
+
+namespace LGP.Components.Factory.Internal
+{
+    /// &lt;summary&gt;
+    ///   Image factory indirection, reducing coupling with components
+    /// &lt;/summary&gt;
+    internal class ImageHandler : IImageHandler
+    {
+        private static ImageHandler _instance;
+
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        private ImageHandler()
+        {
+        }
+
+        #region IImageHandler Members
+
+        /// &lt;summary&gt;
+        ///   Gets an image from the dll resources
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;name&quot;&gt;The name of the image&lt;/param&gt;
+        /// &lt;param name = &quot;folder&quot;&gt;The folder in which the resource can be found&lt;/param&gt;
+        /// &lt;returns&gt;An image&lt;/returns&gt;
+        public Image GetImage( string name , string folder )
+        {
+            return IconSet.GetImage( name , folder );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets an image from the dll resources
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;name&quot;&gt;The name of the image&lt;/param&gt;
+        /// &lt;param name = &quot;folder&quot;&gt;The folder in which the resource can be found&lt;/param&gt;
+        /// &lt;param name = &quot;maxwidth&quot;&gt;The maxwidth of the returned image&lt;/param&gt;
+        /// &lt;returns&gt;An image&lt;/returns&gt;
+        public Image GetImage( string name , string folder , int maxwidth )
+        {
+            return IconSet.GetImage( name , folder , maxwidth );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets an icon stored in the dll resources
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;name&quot;&gt;The name of the icon&lt;/param&gt;
+        /// &lt;returns&gt;An icon (ico)&lt;/returns&gt;
+        public Icon GetIcon( string name )
+        {
+            return IconSet.GetIcon( name );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the icon associated with the shell extension
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;filename&quot;&gt;Filename&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public Image GetExtensionIcon( string filename )
+        {
+            return IconSet.GetExtensionIcon( filename );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Convert bitmap to image
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;bitmap&quot;&gt;Bitmap to convert&lt;/param&gt;
+        /// &lt;returns&gt;Image&lt;/returns&gt;
+        public Image ConvertBitmapToImage( Bitmap bitmap )
+        {
+            return IconSet.ConvertBitmapToImage( bitmap );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Convert bitmap to image
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;bitmap&quot;&gt;Bitmap to convert&lt;/param&gt;
+        /// &lt;param name=&quot;size&quot;&gt;image size&lt;/param&gt;
+        /// &lt;returns&gt;Image&lt;/returns&gt;
+        public Image ConvertBitmapToImage( Bitmap bitmap , int size )
+        {
+            return IconSet.ConvertBitmapToImage( bitmap );
+        }
+
+        #endregion
+
+        public static IImageHandler GetInstance()
+        {
+            return _instance ?? ( _instance = new ImageHandler() );
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src24', RANGES_24)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+MAX(
+	0,	(
+			(
+				171 
+				- 	( 5.2  * ln( Halstead Volume ) ) 
+				-	( 0.23 * Cyclomatic Complexity )
+				-	( 16.2 * ln( Lines of Code ) )
+			) * 100 
+		) / 171
+	)

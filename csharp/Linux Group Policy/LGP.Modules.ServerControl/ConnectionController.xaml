@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="LGP.Modules.ServerControl.ConnectionController" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="800">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="400*" MinWidth="250" />
+      <ColumnDefinition Width="2" />
+      <ColumnDefinition Width="245" Name="DetailsColumn" MinWidth="180" />
+    </Grid.ColumnDefinitions>
+
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="180" />
+        <ColumnDefinition Width="250*" />
+        <ColumnDefinition Width="40" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="45" />
+        <RowDefinition Height="25" />
+        <RowDefinition Height="1" />
+        <RowDefinition Height="40" />
+        <RowDefinition Height="40" />
+        <RowDefinition Height="40" />
+        <RowDefinition Height="32" />
+        <RowDefinition Height="1" />
+        <RowDefinition Height="60*" />
+        <RowDefinition Height="62*" />
+        <RowDefinition Height="15" />
+        <RowDefinition Height="40" />
+        <RowDefinition Height="40" />
+      </Grid.RowDefinitions>
+
+
+      <Image Height="20" HorizontalAlignment="Left" Name="ServerImage" Stretch="Fill" VerticalAlignment="Top" Width="20" Margin="28,15,5,5" />
+
+      <Label Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=ServerControl}" HorizontalAlignment="Stretch" Margin="50,5,5,5" Name="label1" VerticalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="#FF9ABFE5" Grid.ColumnSpan="3" Height="30" />
+
+      <Label Grid.Row="1" Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=ManualConnection}" Height="25" HorizontalAlignment="Stretch" Margin="25,2,2,2" VerticalAlignment="Stretch" FontSize="10" FontWeight="Bold" Grid.ColumnSpan="3" Foreground="#FF666666" />
+      <Border BorderBrush="#FFAEC7E5" BorderThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Background="#FFD6E2F8" Grid.ColumnSpan="3" Margin="25,0,25,0" />
+      <Label Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=ServerIp}" Grid.Row="3" Height="28" HorizontalAlignment="Stretch" Margin="35,5,5,0" Name="label2" VerticalAlignment="Center" />
+      <TextBox Grid.Column="1" Grid.Row="3" Height="23" HorizontalAlignment="Stretch" Margin="5,5,5,0" Name="textBox1" VerticalAlignment="Center" />
+      <Button Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=Connect}" Grid.Column="1" Grid.Row="4" Height="23" HorizontalAlignment="Right" Margin="5,5,5,0" Name="button1" VerticalAlignment="Top" Click="ConnectServerButtonClick" Width="100" />
+      <Label Content="" Grid.Column="1" Grid.Row="5" Height="28" HorizontalAlignment="Left" Margin="5,5,5,0" Name="label3" VerticalAlignment="Top" Width="200" />
+
+      <Label Grid.Row="6" Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=ServerDiscovery}" Height="28" HorizontalAlignment="Stretch" Margin="25,7,2,2" VerticalAlignment="Stretch" FontSize="10" FontWeight="Bold" Grid.ColumnSpan="3" Foreground="#FF666666" />
+      <Border BorderBrush="#FFAEC7E5" BorderThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="7" Background="#FFD6E2F8" Grid.ColumnSpan="3" Margin="25,0,25,0" />
+      <Label Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=Detected}" Grid.Row="8" Height="28" Margin="35,10,5,0" Name="label4" VerticalAlignment="Top" />
+      <ListBox HorizontalAlignment="Stretch" ItemsSource="{Binding}" Margin="5,10,5,0" Name="ServerListBox" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="8" Grid.RowSpan="2" PreviewMouseDoubleClick="ServerListNodeDoubleClick" />
+      <Border BorderThickness="0" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Stretch" Margin="5,0,5,5" Name="border1" VerticalAlignment="Stretch">
+        <Border.Background>
+          <LinearGradientBrush>
+            <GradientStop x:Name="stop1" Color="White" Offset="-0.2" />
+            <GradientStop x:Name="stop2" Color="#FFAEC7E5" Offset="-0.1" />
+            <GradientStop x:Name="stop3" Color="#FFAEC7E5" Offset="0.0" />
+            <GradientStop x:Name="stop4" Color="White" Offset="0.1" />
+          </LinearGradientBrush>
+        </Border.Background>
+        <Border.Triggers>
+          <EventTrigger RoutedEvent="Border.Loaded">
+            <BeginStoryboard>
+              <Storyboard RepeatBehavior="Forever" AutoReverse="True">
+                <DoubleAnimation Storyboard.TargetName="stop1" Storyboard.TargetProperty="Offset" From="-0.2" To="0.9" Duration="0:0:3" />
+                <DoubleAnimation Storyboard.TargetName="stop2" Storyboard.TargetProperty="Offset" From="-0.1" To="1.0" Duration="0:0:3" />
+                <DoubleAnimation Storyboard.TargetName="stop3" Storyboard.TargetProperty="Offset" From="0.0" To="1.1" Duration="0:0:3" />
+                <DoubleAnimation Storyboard.TargetName="stop4" Storyboard.TargetProperty="Offset" From="0.1" To="1.2" Duration="0:0:3" />
+              </Storyboard>
+            </BeginStoryboard>
+          </EventTrigger>
+        </Border.Triggers>
+      </Border>
+      <Button Content="{Resx ResxName=LGP.Modules.ServerControl.Properties.Resources, Key=Select}" Height="23" HorizontalAlignment="Right" Margin="5" Name="button2" VerticalAlignment="Top" Grid.Column="1" Grid.Row="11" Click="SelectServerButtonClick" Width="100" />
+      <Label Content="" Grid.Column="1" Grid.Row="12" Height="28" HorizontalAlignment="Left" Margin="5" Name="label5" VerticalAlignment="Top" Width="200" />
+
+    </Grid>
+
+    <GridSplitter Grid.RowSpan="13" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFD6E2F8" />
+
+    <Border BorderThickness="0" Grid.Column="2" HorizontalAlignment="Stretch" Name="ConnectionViewerContainer" VerticalAlignment="Stretch" />
+  </Grid>
+</UserControl>

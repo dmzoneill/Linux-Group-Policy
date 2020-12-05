@@ -1,0 +1,21 @@
+// where dll path = ./someFile.dll
+var assembly = Assembly.LoadFile( dllpath ); 
+
+// get the types
+foreach( var type in assembly.GetTypes() )
+{
+	// ignore if not a class or not public
+	if( !type.IsClass || type.IsNotPublic ) 
+	{ 
+		continue; 
+	}
+
+	// get its interfaces
+	var interfaces = type.GetInterfaces();
+
+	if( interfaces.Contains( typeof( IContextMenus ) ) )
+	{
+		var obj = Activator.CreateInstance( type );
+		this._contextMenusHandler = ( IContextMenus ) obj;
+	}
+}

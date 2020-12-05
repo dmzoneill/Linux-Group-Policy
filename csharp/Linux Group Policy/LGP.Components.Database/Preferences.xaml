@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="LGP.Components.Database.Preferences" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" d:DesignHeight="293" d:DesignWidth="598" Background="White">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="110" />
+      <ColumnDefinition Width="200*" />
+      <ColumnDefinition Width="110" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="16" />
+      <RowDefinition Height="34" />
+      <RowDefinition Height="16" />
+      <RowDefinition Height="34" />
+      <RowDefinition Height="16" />
+      <RowDefinition Height="34" />
+      <RowDefinition Height="16" />
+      <RowDefinition Height="34" />
+      <RowDefinition Height="16" />
+      <RowDefinition Height="34" />
+      <RowDefinition Height="34" />
+      <RowDefinition Height="66*" />
+    </Grid.RowDefinitions>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=DbType}" Height="28" HorizontalAlignment="Right" Margin="5" Name="label1" VerticalAlignment="Top" />
+    <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding}" Height="23" Margin="5" Name="databaseTypeComboBox" VerticalAlignment="Top" SelectionChanged="DatabaseTypeComboBoxSelectionChanged" />
+        <Label Grid.Row="0" Grid.Column="1" Content="{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=SelectDbType}" Height="22" Padding="5,0,0,0" HorizontalAlignment="Left" Margin="2,2,0,0" Name="suggestionDatabaseType" VerticalAlignment="Top" FontSize="10" />
+
+        <Label Grid.Row="3" Height="28" Content="{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=Hostname}" HorizontalAlignment="Right" Margin="5" Name="label2" VerticalAlignment="Top" />
+    <TextBox Grid.Row="3" Grid.Column="1" Height="23" HorizontalAlignment="Stretch" Margin="5" Name="hostnameTextBox" VerticalAlignment="Top" />
+    <Label Grid.Row="2" Grid.Column="1" Content="127.0.0.1, localhost, mysql.yourdomain.com" Height="22" Padding="5,0,0,0" HorizontalAlignment="Left" Margin="2,2,0,0" Name="suggestionDatabaseHost" VerticalAlignment="Top" FontSize="10" />
+
+        <Label Grid.Row="5" Height="28" Content="{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=Username}" HorizontalAlignment="Right" Margin="5" Name="label3" VerticalAlignment="Top" />
+    <TextBox Grid.Row="5" Grid.Column="1" Height="23" HorizontalAlignment="Stretch" Margin="5" Name="usernameTextBox" VerticalAlignment="Top" />
+    <Label Grid.Row="4" Grid.Column="1" Content="root,administrator" Height="22" Padding="5,0,0,0" HorizontalAlignment="Left" Margin="2,2,0,0" Name="suggestionDatabaseUsername" VerticalAlignment="Top" FontSize="10" />
+
+        <Label Grid.Row="7" Height="28" Content="{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=Password}" HorizontalAlignment="Right" Margin="5" Name="label4" VerticalAlignment="Top" />
+    <PasswordBox Grid.Row="7" Grid.Column="1" Height="23" HorizontalAlignment="Stretch" Margin="5" Name="passwordBox" VerticalAlignment="Top" />
+    <Label Grid.Row="6" Grid.Column="1" Content="" Height="22" HorizontalAlignment="Left" Margin="2,2,0,0" Padding="5,0,0,0" Name="suggestionDatabasePassword" VerticalAlignment="Top" FontSize="10" />
+
+        <Label Grid.Row="9" Height="28" Content="{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=Database}" HorizontalAlignment="Right" Margin="5" Name="label5" VerticalAlignment="Top" />
+    <TextBox Grid.Row="9" Grid.Column="1" Height="23" HorizontalAlignment="Stretch" Margin="5" Name="databaseTextBox" VerticalAlignment="Top" />
+    <Label Grid.Row="8" Grid.Column="1" Content="lgp" Height="22" HorizontalAlignment="Left" Margin="2,2,0,0" Padding="5,0,0,0" Name="suggestionDatabaseDatabaseName" VerticalAlignment="Top" FontSize="10" />
+
+        <Button Grid.Column="1" Grid.Row="10" Height="23" HorizontalAlignment="Left" Margin="5,5,0,0" Name="connectButton" VerticalAlignment="Top" Width="100" Content="{Resx ResxName=LGP.Components.Database.Properties.Resources, Key=TestConnection}" Click="ConnectButtonClick" />
+  </Grid>
+</UserControl>

@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ImageLibrary\bin\Debug\ImageLibrary.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ImageLibrary\bin\Debug\ImageLibrary.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ImageLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ImageLibrary\obj\Debug\ImageLibrary.g.resources
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ImageLibrary\obj\Debug\ImageLibrary.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ImageLibrary\obj\Debug\ImageLibrary.pdb

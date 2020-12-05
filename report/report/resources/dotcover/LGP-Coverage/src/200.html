@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_200 = [
+   [26,9,26,10,'dcuc']
+, [27,13,27,25,'dcuc']
+, [28,9,28,10,'dcuc']
+, [36,9,36,10,'dcuc']
+, [37,13,37,25,'dcuc']
+, [38,9,38,10,'dcuc']
+, [47,9,47,10,'dcuc']
+, [48,13,48,25,'dcuc']
+, [49,9,49,10,'dcuc']
+, [58,9,58,10,'dcuc']
+, [59,13,59,23,'dcuc']
+, [60,9,60,10,'dcuc']
+, [68,9,68,10,'dcuc']
+, [69,13,69,26,'dcuc']
+, [70,9,70,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src200" class="dotCoverSource"><pre>#region
+
+using System.Data;
+using LGP.Components.Factory.Interfaces.Database;
+
+#endregion
+
+namespace LGP.Components.Database.Postgresql
+{
+    /// &lt;summary&gt;
+    ///   Postgresql wrapper
+    /// &lt;/summary&gt;
+    public class PostgreDb : IDatabaseModule
+    {
+        #region IDatabaseModule Members
+
+        /// &lt;summary&gt;
+        ///   Connect method for database interface
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;user&quot;&gt;Username to use in connection&lt;/param&gt;
+        /// &lt;param name = &quot;pass&quot;&gt;Password to use in connection&lt;/param&gt;
+        /// &lt;param name = &quot;host&quot;&gt;Hostname to use in connection&lt;/param&gt;
+        /// &lt;param name = &quot;dbname&quot;&gt;Datbase to use in connection&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public bool Connect( string user , string pass , string host , string dbname )
+        {
+            return true;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Disconnect method for the interface realizer
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;bool disconnected&lt;/returns&gt;
+        public bool Disconnect()
+        {
+            return true;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Executes a query provided by the appropriate gateway
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sql&quot;&gt;sql query&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public DataSet ExecuteQuery( string sql )
+        {
+            return null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Executes a query provided by the appropriate gateway
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sql&quot;&gt;sql query&lt;/param&gt;
+        /// &lt;returns&gt;int num rows affected&lt;/returns&gt;
+        public int ExecuteNonQuery( string sql )
+        {
+            return -1;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Check to see if the database is connected
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;bool&lt;/returns&gt;
+        public bool IsConnected()
+        {
+            return false;
+        }
+
+        #endregion
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src200', RANGES_200)
+		</script>
+	</body>
+</html>

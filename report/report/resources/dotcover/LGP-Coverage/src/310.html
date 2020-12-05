@@ -1,0 +1,213 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_310 = [
+   [57,9,57,10,'dccv']
+, [58,13,58,147,'dccv']
+, [60,13,60,35,'dccv']
+, [65,13,65,50,'dccv']
+, [67,13,67,36,'dccv']
+, [72,13,72,110,'dccv']
+, [73,13,73,112,'dccv']
+, [74,9,74,10,'dccv']
+, [119,9,119,10,'dccv']
+, [121,13,121,14,'dccv']
+, [122,17,122,43,'dccv']
+, [123,17,123,130,'dccv']
+, [124,13,124,14,'dccv']
+, [129,9,129,10,'dccv']
+, [27,9,27,10,'dcuc']
+, [28,13,28,25,'dcuc']
+, [29,9,29,10,'dcuc']
+, [37,9,37,10,'dcuc']
+, [38,13,38,25,'dcuc']
+, [39,9,39,10,'dcuc']
+, [47,9,47,10,'dcuc']
+, [48,13,48,54,'dcuc']
+, [49,9,49,10,'dcuc']
+, [61,13,61,14,'dcuc']
+, [62,17,62,24,'dcuc']
+, [68,13,68,14,'dcuc']
+, [69,17,69,24,'dcuc']
+, [82,9,82,10,'dcuc']
+, [83,13,83,73,'dcuc']
+, [84,9,84,10,'dcuc']
+, [92,9,92,10,'dcuc']
+, [93,13,93,25,'dcuc']
+, [94,9,94,10,'dcuc']
+, [102,9,102,10,'dcuc']
+, [103,13,103,25,'dcuc']
+, [104,9,104,10,'dcuc']
+, [112,9,112,10,'dcuc']
+, [113,13,113,38,'dcuc']
+, [114,9,114,10,'dcuc']
+, [125,13,125,37,'dcuc']
+, [126,13,126,14,'dcuc']
+, [127,17,127,53,'dcuc']
+, [128,13,128,14,'dcuc']
+, [137,9,137,10,'dcuc']
+, [138,13,138,54,'dcuc']
+, [139,9,139,10,'dcuc']
+, [147,9,147,10,'dcuc']
+, [148,13,148,54,'dcuc']
+, [149,9,149,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src310" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Reflection;
+using System.Windows.Controls;
+using System.Windows.Markup;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Component;
+using LGP.Components.Factory.Interfaces.Database;
+
+#endregion
+
+namespace LGP.Modules.PolicyEditor
+{
+    /// &lt;summary&gt;
+    ///   Concreate Implmentation and boundary class to Module Compoents
+    /// &lt;/summary&gt;
+    public class Plugin : Components.Factory.Interfaces.Module.IModule
+    {
+        #region IModule Members
+
+        /// &lt;summary&gt;
+        ///   Gets the main component of the module
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Usercontrol component&lt;/returns&gt;
+        public UserControl GetMainControl()
+        {
+            return null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the side bar component of the module
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Usercontrol component&lt;/returns&gt;
+        public UserControl GetSidebarControl()
+        {
+            return null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Get the component name
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;String name&lt;/returns&gt;
+        public string GetName()
+        {
+            return Properties.Resources.PolicyEditor;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Registers this components menu handlers
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;menu&quot;&gt;The program main menu&lt;/param&gt;
+        public void RegisterMenuEntries( IMenu menu )
+        {
+            var resource = Framework.Utils.LoadResource(Assembly.GetExecutingAssembly() , this , &quot;.Internal.ContextMenuItems.PolicyEditor.xaml&quot; );
+
+            if( resource == null )
+            {
+                return;
+            }
+
+            var menuentry = resource as MenuItem;
+
+            if( menuentry == null )
+            {
+                return;
+            }
+
+            menuentry.Icon = Framework.Images.GetImage( &quot;327_Options_16x16_72&quot; , &quot;VS2010ImageLibrary&quot; , 12 );
+            Framework.ContextMenus.RegisterContextMenuItem( typeof( IOu ) , menuentry , this.MenuItemClicked );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the icon associated with plugin
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public Image GetIcon()
+        {
+            return Framework.Images.GetImage( &quot;config&quot; , &quot;16X16&quot; , 14 );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the bottombar component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetBottombarControl()
+        {
+            return null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the toolbar component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetToolbarControl()
+        {
+            return null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the preferences component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetPreferencesControl()
+        {
+            return new Preferences();
+        }
+
+        #endregion
+
+        private void MenuItemClicked( Object theitem )
+        {
+            try
+            {
+                var cpe = ( IOu ) theitem;
+                Framework.Panels.AddMainComponent( new PolicyEditor( cpe ) , cpe.GetName() + &quot; &quot; + Properties.Resources.Policy );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the side bar component name
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;String name&lt;/returns&gt;
+        public string GetComponentSideBarName()
+        {
+            return Properties.Resources.PolicyEditor;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the component comtent name
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public string GetComponentContentName()
+        {
+            return Properties.Resources.PolicyEditor;
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src310', RANGES_310)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,441 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_32 = [
+   [48,9,48,10,'dccv']
+, [49,13,49,73,'dccv']
+, [50,9,50,10,'dccv']
+, [60,13,60,14,'dccv']
+, [61,17,61,151,'dccv']
+, [62,13,62,14,'dccv']
+, [86,13,86,14,'dccv']
+, [87,17,87,119,'dccv']
+, [88,13,88,14,'dccv']
+, [99,13,99,14,'dccv']
+, [100,17,100,108,'dccv']
+, [101,13,101,14,'dccv']
+, [112,13,112,14,'dccv']
+, [113,17,113,147,'dccv']
+, [114,13,114,14,'dccv']
+, [125,13,125,14,'dccv']
+, [126,17,126,68,'dccv']
+, [127,13,127,14,'dccv']
+, [137,13,137,14,'dccv']
+, [138,17,138,54,'dccv']
+, [139,13,139,14,'dccv']
+, [150,13,150,14,'dccv']
+, [151,17,151,51,'dccv']
+, [152,13,152,14,'dccv']
+, [164,13,164,14,'dccv']
+, [165,17,165,72,'dccv']
+, [166,13,166,14,'dccv']
+, [177,13,177,14,'dccv']
+, [178,17,178,44,'dccv']
+, [179,13,179,14,'dccv']
+, [190,13,190,14,'dccv']
+, [191,17,191,56,'dccv']
+, [192,13,192,14,'dccv']
+, [203,13,203,14,'dccv']
+, [204,17,204,43,'dccv']
+, [205,13,205,14,'dccv']
+, [207,13,207,14,'dccv']
+, [208,17,208,63,'dccv']
+, [210,17,210,39,'dccv']
+, [211,17,211,18,'dccv']
+, [212,21,212,97,'dccv']
+, [213,17,213,18,'dccv']
+, [215,17,215,44,'dccv']
+, [216,17,216,56,'dccv']
+, [217,13,217,14,'dccv']
+, [241,13,241,14,'dccv']
+, [242,17,242,58,'dccv']
+, [243,13,243,14,'dccv']
+, [253,13,253,14,'dccv']
+, [254,17,254,91,'dccv']
+, [255,13,255,14,'dccv']
+, [266,13,266,14,'dccv']
+, [267,17,267,66,'dccv']
+, [268,13,268,14,'dccv']
+, [279,13,279,14,'dccv']
+, [280,17,280,48,'dccv']
+, [281,13,281,14,'dccv']
+, [292,13,292,14,'dccv']
+, [293,17,293,55,'dccv']
+, [294,13,294,14,'dccv']
+, [316,13,316,14,'dccv']
+, [317,17,317,44,'dccv']
+, [318,13,318,14,'dccv']
+, [328,13,328,14,'dccv']
+, [329,17,329,54,'dccv']
+, [330,13,330,14,'dccv']
+, [335,9,335,10,'dccv']
+, [337,13,337,14,'dccv']
+, [338,17,338,40,'dccv']
+, [339,13,339,14,'dccv']
+, [343,9,343,10,'dccv']
+, [73,13,73,14,'dcuc']
+, [74,17,74,106,'dcuc']
+, [75,13,75,14,'dcuc']
+, [228,13,228,14,'dcuc']
+, [229,17,229,57,'dcuc']
+, [230,13,230,14,'dcuc']
+, [305,13,305,14,'dcuc']
+, [306,17,306,55,'dcuc']
+, [307,13,307,14,'dcuc']
+, [340,13,340,31,'dcuc']
+, [341,13,341,14,'dcuc']
+, [342,13,342,14,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src32" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows;
+using Infralution.Localization.Wpf;
+using LGP.Components.Factory.Interfaces.Component;
+using LGP.Components.Factory.Interfaces.Database;
+using LGP.Components.Factory.Interfaces.Infrastructure;
+using LGP.Components.Factory.Interfaces.Network;
+using LGP.Components.Factory.Internal;
+using LGP.Components.Factory.Internal.ServerControl;
+using IModule = LGP.Components.Factory.Interfaces.Module.IModule;
+
+#endregion
+
+namespace LGP.Components.Factory
+{
+    /// &lt;summary&gt;
+    ///   Simplied factory for the loading of Modules and application components
+    /// &lt;/summary&gt;
+    public static class Framework
+    {
+        #region Delegates
+
+        /// &lt;summary&gt;
+        /// Delegate to encapsulate subscrive of the shutton down event
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;sender&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;e&quot;&gt;&lt;/param&gt;
+        public delegate void ShuttingDown( object sender , CancelEventArgs e );
+
+        #endregion
+
+        /// &lt;summary&gt;
+        /// Anyone who wants to receive the application closing event should subscribe to this delegate
+        /// &lt;/summary&gt;
+        public static ShuttingDown ShutDown;
+
+        private static readonly LibraryHandler ClassLibraryHandler;
+        private static Window _applicationWindow;
+        private static IMenu _applicationMenu;
+        private static IPanel _applicationPanel;
+
+
+        static Framework()
+        {
+            ClassLibraryHandler = Internal.LibraryHandler.GetInstance();
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the panels controller
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Avalondock panel&lt;/returns&gt;
+        public static IPanel Panels
+        {
+            get
+            {
+                return _applicationPanel ?? ( _applicationPanel = ( IPanel ) ClassLibraryHandler.CreateObject( ClassLibraryHandler.GetPanelType() ) );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Creates a temporary panel instance
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Avalondock panel&lt;/returns&gt;
+        public static IPanel Panel
+        {
+            get
+            {
+                return ( IPanel ) ClassLibraryHandler.CreateObject( ClassLibraryHandler.GetPanelType() );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Creates a temporary popup instance
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;INotifcation&lt;/returns&gt;
+        public static INotification Notification
+        {
+            get
+            {
+                return ( INotification ) ClassLibraryHandler.CreateObject( ClassLibraryHandler.GetNotifcationType() );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Creates a temporary Dialog instance
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;IDialog&lt;/returns&gt;
+        public static IDialog Dialog
+        {
+            get
+            {
+                return ( IDialog ) ClassLibraryHandler.CreateObject( ClassLibraryHandler.GetDialogType() );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the menu
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;The main menu&lt;/returns&gt;
+        public static IMenu Menu
+        {
+            get
+            {
+                return _applicationMenu ?? ( _applicationMenu = ( IMenu ) ClassLibraryHandler.CreateObject( ClassLibraryHandler.GetMenuType() ) );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Creates a temporary Dialog instance
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;IDialog&lt;/returns&gt;
+        public static IContextMenus ContextMenus
+        {
+            get
+            {
+                return ClassLibraryHandler.GetConextMenusHandler();
+            }
+        }
+
+        /// &lt;summary&gt;
+        ///   Get the registry handler object
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static IRegistryHandler Registry
+        {
+            get
+            {
+                return RegistryHandler.GetInstance();
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Get the image handler object
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static IImageHandler Images
+        {
+            get
+            {
+                return ImageHandler.GetInstance();
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets a previously created database strategy context object
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;IDatabaseModule type&lt;/returns&gt;
+        /// &lt;exception cref = &quot;Exception&quot;&gt;Exception context strategy null&lt;/exception&gt;
+        public static IDatabase Database
+        {
+            get
+            {
+                return ClassLibraryHandler.GetDatabaseContextHandler();
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the Event aggregator
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;IEventAggregator&lt;/returns&gt;
+        public static IEventSystem EventBus
+        {
+            get
+            {
+                return EventSystem.Current;
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Server handler for connections and discovery
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;ConnectionHandler&lt;/returns&gt;
+        public static INetwork Network
+        {
+            get
+            {
+                return NetworkController.GetInstance();
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Get the application Window
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Window&lt;/returns&gt;
+        public static Window ApplicationWindow
+        {
+            get
+            {
+                return _applicationWindow;
+            }
+            set
+            {
+                var language = Registry.ReadKey( &quot;Language&quot; );
+
+                if( language != null )
+                {
+                    CultureManager.UICulture = new System.Globalization.CultureInfo( language );
+                }
+
+                _applicationWindow = value;
+                _applicationWindow.Closing += Shutdown;
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the listing of controls
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;List of controls&lt;/returns&gt;
+        public static List&lt; IModule &gt; Modules
+        {
+            get
+            {
+                return ClassLibraryHandler.GetModules();
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the dll string listing
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;String array&lt;/returns&gt;
+        public static string[ ] Libraries
+        {
+            get
+            {
+                return ClassLibraryHandler.GetDllPaths();
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the registered DB Types
+        /// &lt;/summary&gt;
+        public static List&lt; Type &gt; DatabaseTypes
+        {
+            get
+            {
+                return ClassLibraryHandler.GetDatabaseContextHandler().GetDatabaseTypes();
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the preferences panes associated with the modules
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static List&lt; Type &gt; PreferencesPanes
+        {
+            get
+            {
+                return ClassLibraryHandler.GetPreferencesPanes();
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the utlies instance
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;IUtilities&lt;/returns&gt;
+        public static IUtilities Utils
+        {
+            get
+            {
+                return Utilities.GetInstance();
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Check to see if there was an error
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;bool error&lt;/returns&gt;
+        public static bool HasError
+        {
+            get
+            {
+                return ClassLibraryHandler.HasError();
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Get the last error occurred
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;String error&lt;/returns&gt;
+        public static string Error
+        {
+            get
+            {
+                return ClassLibraryHandler.GetError();
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// Returns a referenc to the class library loader
+        /// &lt;/summary&gt;
+        public static IClassLibraryHandler LibraryHandler
+        {
+            get
+            {
+                return ClassLibraryHandler;
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        /// Returns a reference to the drag and drag adorner handler
+        /// &lt;/summary&gt;
+        public static IDragDrop DragDrop
+        {
+            get
+            {
+                return DragDropAdorner.GetInstance();
+            }
+        }
+
+
+        private static void Shutdown( object sender , CancelEventArgs e )
+        {
+            try
+            {
+                ShutDown( sender , e );
+            }
+            catch( Exception )
+            {
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src32', RANGES_32)
+		</script>
+	</body>
+</html>

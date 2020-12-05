@@ -1,0 +1,12 @@
+public interface IOu : IOuObserver
+{
+	void SetOuId( int val );
+	int GetOuId();
+	void SetName( string val );
+	string GetName();
+	void SetParentOuId( int val );
+	int GetParentOuId();
+	void SetPolicyGroup( string val );
+	string GetPolicyGroup();
+	Image GetOuImage( int size );
+}

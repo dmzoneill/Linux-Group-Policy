@@ -1,0 +1,20 @@
+﻿LGP.Modules.PolicyEditor
+
+
+library
+C#
+.cs
+C:\Users\Dave\Desktop\FYP\fyp\csharp\Linux Group Policy\LGP.Modules.PolicyEditor\obj\Debug\
+LGP.Modules.PolicyEditor
+none
+false
+DEBUG;TRACE
+
+4-443644360
+
+13-1078197017
+16-1147890673
+Internal\CustomControls\OuPolicyPane.xaml;Internal\CustomControls\VisualPolicyEditor.xaml;PolicyEditor.xaml;Preferences.xaml;
+
+True
+

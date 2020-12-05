@@ -1,0 +1,746 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGP.Modules.PolicyEditor</name>
+    </assembly>
+    <members>
+        <member name="T:LGP.Modules.PolicyEditor.Preferences">
+            <summary>
+              Interaction logic for Preferences.xaml
+            </summary>
+            <summary>
+            Preferences
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Preferences.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Preferences.GetName">
+            <summary>
+              Gets the name of the preferences Pane
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Preferences.GetControl">
+            <summary>
+              Gets the preferences window
+            </summary>
+            <returns>UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Preferences.Save">
+            <summary>
+              Aks the preferences panel to save its entries
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Preferences.Load(LGP.Components.Factory.Interfaces.Component.ISettings)">
+            <summary>
+              Asks the preferences to load its settings
+            </summary>
+            <param name="settingsParent"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Preferences.GetControlType">
+            <summary>
+            Gets the type it Controls
+            </summary>
+            <returns>Type</returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Preferences.GetIcon">
+            <summary>
+            Gets the preferences icon
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Preferences.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.PolicyEditor.Plugin">
+            <summary>
+              Concreate Implmentation and boundary class to Module Compoents
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Plugin.GetMainControl">
+            <summary>
+              Gets the main component of the module
+            </summary>
+            <returns>Usercontrol component</returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Plugin.GetSidebarControl">
+            <summary>
+              Gets the side bar component of the module
+            </summary>
+            <returns>Usercontrol component</returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Plugin.GetName">
+            <summary>
+              Get the component name
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Plugin.RegisterMenuEntries(LGP.Components.Factory.Interfaces.Component.IMenu)">
+            <summary>
+              Registers this components menu handlers
+            </summary>
+            <param name = "menu">The program main menu</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Plugin.GetIcon">
+            <summary>
+              Gets the icon associated with plugin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Plugin.GetBottombarControl">
+            <summary>
+              Gets the bottombar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Plugin.GetToolbarControl">
+            <summary>
+              Gets the toolbar component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Plugin.GetPreferencesControl">
+            <summary>
+              Gets the preferences component the module provides
+            </summary>
+            <returns>An instance of UserControl</returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Plugin.GetComponentSideBarName">
+            <summary>
+              Gets the side bar component name
+            </summary>
+            <returns>String name</returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Plugin.GetComponentContentName">
+            <summary>
+              Gets the component comtent name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LGP.Modules.PolicyEditor.Internal.PolicyHandler">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.PolicyHandler.#ctor(LGP.Modules.PolicyEditor.PolicyEditor,ICSharpCode.AvalonEdit.TextEditor,LGP.Components.Factory.Interfaces.Database.IPolicy)">
+            <summary>
+            </summary>
+            <param name = "parent"></param>
+            <param name = "aeditor1"></param>
+            <param name = "policy"></param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.PolicyHandler.Update(LGP.Components.Factory.Interfaces.Database.IPolicy,LGP.Components.Factory.Interfaces.Database.IPolicyObserver)">
+            <summary>
+              Update this observer with a refernece to the ou
+            </summary>
+            <param name = "policy">IPolicy</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.PolicyHandler.Attach(LGP.Components.Factory.Interfaces.Database.IPolicyObserver)">
+            <summary>
+              Attach objects that observer this IPolicy
+            </summary>
+            <param name = "obj">IPolicyObserver</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.PolicyHandler.Detach(LGP.Components.Factory.Interfaces.Database.IPolicyObserver)">
+            <summary>
+              Detach objects that observer this IPolicy
+            </summary>
+            <param name = "obj">IPolicyObserver</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.PolicyHandler.Notify">
+            <summary>
+              Notify observers of this IPolicy
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.PolicyHandler.Dispose(LGP.Components.Factory.Interfaces.Database.IPolicyObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IPolicyObserver</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.PolicyHandler.GetHash">
+            <summary>
+              Gets the has of the document
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.PolicyHandler.Document">
+            <summary>
+              Document associated with this object
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.PolicyHandler.LineCount">
+            <summary>
+              Get the lines count
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.PolicyHandler.FileLength">
+            <summary>
+              Get the module lenght
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.PolicyHandler.CaretRow">
+            <summary>
+              Get the caret row
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.PolicyHandler.CaretCol">
+            <summary>
+              Get the caret row
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.PolicyHandler.CaretOffset">
+            <summary>
+              Get the caret row
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.PolicyHandler.SelectionLength">
+            <summary>
+              Get the caret row
+            </summary>
+        </member>
+        <member name="E:LGP.Modules.PolicyEditor.Internal.PolicyHandler.PropertyChanged">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor">
+            <summary>
+            Interaction logic for VisualPolicyEditor.xaml
+            </summary>
+            <summary>
+            VisualPolicyEditor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor.SetPolicy(LGP.Components.Factory.Interfaces.Database.IPolicy,LGP.Modules.PolicyEditor.PolicyEditor,LGP.Modules.PolicyEditor.Internal.PolicyHandler)">
+            <summary>
+            
+            </summary>
+            <param name="policy"></param>
+            <param name="editor"></param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor.AddRow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor.DeleteSelectedRows">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor.Update(LGP.Components.Factory.Interfaces.Database.IPolicy,LGP.Components.Factory.Interfaces.Database.IPolicyObserver)">
+            <summary>
+              Update this observer with a refernece to the ou
+            </summary>
+            <param name = "policy">IPolicy</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor.Attach(LGP.Components.Factory.Interfaces.Database.IPolicyObserver)">
+            <summary>
+              Attach objects that observer this IPolicy
+            </summary>
+            <param name = "obj">IPolicyObserver</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor.Detach(LGP.Components.Factory.Interfaces.Database.IPolicyObserver)">
+            <summary>
+              Detach objects that observer this IPolicy
+            </summary>
+            <param name = "obj">IPolicyObserver</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor.Notify">
+            <summary>
+              Notify observers of this IPolicy
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor.Dispose(LGP.Components.Factory.Interfaces.Database.IPolicyObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IPolicyObserver</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.PolicyEditor.Internal.CustomControls.VisualPolicyEditor.Position">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="T:LGP.Modules.PolicyEditor.Internal.RowValidationRule">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.RowValidationRule.Validate(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            When overridden in a derived class, performs validation checks on a value.
+            </summary>
+            <returns>
+            A <see cref="T:System.Windows.Controls.ValidationResult"/> object.
+            </returns>
+            <param name="value">The value from the binding target to check.</param><param name="cultureInfo">The culture to use in this rule.</param>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.RowValidationRule.Override">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.#ctor(System.Boolean,System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="selected"></param>
+            <param name="key"></param>
+            <param name="values"></param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.SetValidationRule(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="regex"></param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Validate">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.AddKey(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.OnPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.IsSelected">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.EntryKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Keys">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Rvalue1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Rvalue2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Rvalue3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Rvalue4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Rvalue5">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Rvalue6">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Rvalue7">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Rvalue8">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Rvalue9">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Rvalue10">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.Rvalue11">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:LGP.Modules.PolicyEditor.Internal.VisualPolicyEntry.PropertyChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.PolicyEditor.PolicyEditor">
+            <summary>
+              Interaction logic for PolicyEditor.xaml
+            </summary>
+            <summary>
+            PolicyEditor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.PolicyEditor.#ctor">
+            <summary>
+              Constructor
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.PolicyEditor.#ctor(LGP.Components.Factory.Interfaces.Database.IOu)">
+            <summary>
+              Constructor
+            </summary>
+            <param name = "ou"></param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.PolicyEditor.Dispose">
+            <summary>
+              Aks the UserControl to do some clean up!
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.PolicyEditor.Refresh">
+            <summary>
+            Asks the Usercontrol to refresh itself
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.PolicyEditor.Pause">
+            <summary>
+            When the control is no longer in focus, asks it to pause ( heavy duty non critical, ie threads updating graphs )
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.PolicyEditor.Resume">
+            <summary>
+            When the tab comes back into focus, resume ( heavy duty non critical, ie threads updating graphs )
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.PolicyEditor.Update(LGP.Components.Factory.Interfaces.Database.IOu,LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Update this observer with a refernece to the ou
+            </summary>
+            <param name = "ou">Iou</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.PolicyEditor.Attach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Attach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.PolicyEditor.Detach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Detach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.PolicyEditor.Notify">
+            <summary>
+              Notify observers of this IOu
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.PolicyEditor.Dispose(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.PolicyEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.PolicyEditor.Internal.CustomControls.OuPolicyPane">
+            <summary>
+              Interaction logic for OuPolicyPane.xaml
+            </summary>
+            <summary>
+            OuPolicyPane
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.OuPolicyPane.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.OuPolicyPane.#ctor(LGP.Components.Factory.Interfaces.Database.IOu)">
+            <summary>
+            
+            </summary>
+            <param name="ou"></param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.OuPolicyPane.Update(LGP.Components.Factory.Interfaces.Database.IOu,LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Update this observer with a refernece to the ou
+            </summary>
+            <param name = "ou">Iou</param>
+            <param name = "source">source observer</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.OuPolicyPane.Attach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Attach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.OuPolicyPane.Detach(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Detach objewcts that observer this IOu
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.OuPolicyPane.Notify">
+            <summary>
+              Notify observers of this IOu
+            </summary>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.OuPolicyPane.Dispose(LGP.Components.Factory.Interfaces.Database.IOuObserver)">
+            <summary>
+              Dispose this object and all the observers
+            </summary>
+            <param name = "obj">IOuObserver</param>
+        </member>
+        <member name="M:LGP.Modules.PolicyEditor.Internal.CustomControls.OuPolicyPane.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:LGP.Modules.PolicyEditor.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Add">
+            <summary>
+              Looks up a localized string similar to Add.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Col">
+            <summary>
+              Looks up a localized string similar to Col :.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Copy">
+            <summary>
+              Looks up a localized string similar to Copy.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Cut">
+            <summary>
+              Looks up a localized string similar to Cut.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Delete">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Design">
+            <summary>
+              Looks up a localized string similar to Designer View.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Dsl">
+            <summary>
+              Looks up a localized string similar to Code View.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.FixError">
+            <summary>
+              Looks up a localized string similar to Error must be fixed before other row operations can be completed.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Invalidation">
+            <summary>
+              Looks up a localized string similar to Rule does not validate.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.InvalidEntry">
+            <summary>
+              Looks up a localized string similar to New Entry invalid - removing.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Key">
+            <summary>
+              Looks up a localized string similar to Key.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Lenght">
+            <summary>
+              Looks up a localized string similar to Lenght :.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Line">
+            <summary>
+              Looks up a localized string similar to Ln :.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.LineNumbers">
+            <summary>
+              Looks up a localized string similar to Line Numbers.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Lines">
+            <summary>
+              Looks up a localized string similar to Lines :.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Move">
+            <summary>
+              Looks up a localized string similar to Move.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.OuId">
+            <summary>
+              Looks up a localized string similar to Ou Identification.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Paste">
+            <summary>
+              Looks up a localized string similar to Paste.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Policy">
+            <summary>
+              Looks up a localized string similar to Policy.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.PolicyEditor">
+            <summary>
+              Looks up a localized string similar to Policy Editor.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.PolicyRule">
+            <summary>
+              Looks up a localized string similar to Policy Rule.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Redo">
+            <summary>
+              Looks up a localized string similar to Redo.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.RemovingBlank">
+            <summary>
+              Looks up a localized string similar to New Entry blank - removing.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Rename">
+            <summary>
+              Looks up a localized string similar to Rename.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Rules">
+            <summary>
+              Looks up a localized string similar to Rules.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Save">
+            <summary>
+              Looks up a localized string similar to Save.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Sel">
+            <summary>
+              Looks up a localized string similar to Sel :.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Selected">
+            <summary>
+              Looks up a localized string similar to Selected.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.Undo">
+            <summary>
+              Looks up a localized string similar to Undo.
+            </summary>
+        </member>
+        <member name="P:LGP.Modules.PolicyEditor.Properties.Resources.WordWrap">
+            <summary>
+              Looks up a localized string similar to Word wrap.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

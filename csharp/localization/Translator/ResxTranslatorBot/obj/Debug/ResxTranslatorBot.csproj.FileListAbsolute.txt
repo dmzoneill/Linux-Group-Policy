@@ -1,0 +1,10 @@
+C:\Users\Dave\Desktop\FYP\ResxTranslatorBot\ResxTranslatorBot\bin\Debug\ResxTranslator.exe.config
+C:\Users\Dave\Desktop\FYP\fyp\csharp\localization\Translator\ResxTranslatorBot\bin\Debug\ResxTranslator.exe.config
+C:\Users\Dave\Desktop\FYP\fyp\csharp\localization\Translator\ResxTranslatorBot\bin\Debug\ResxTranslator.exe
+C:\Users\Dave\Desktop\FYP\fyp\csharp\localization\Translator\ResxTranslatorBot\bin\Debug\ResxTranslator.pdb
+C:\Users\Dave\Desktop\FYP\fyp\csharp\localization\Translator\ResxTranslatorBot\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dave\Desktop\FYP\fyp\csharp\localization\Translator\ResxTranslatorBot\obj\Debug\ResxTranslator.MainForm.resources
+C:\Users\Dave\Desktop\FYP\fyp\csharp\localization\Translator\ResxTranslatorBot\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Dave\Desktop\FYP\fyp\csharp\localization\Translator\ResxTranslatorBot\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Dave\Desktop\FYP\fyp\csharp\localization\Translator\ResxTranslatorBot\obj\Debug\ResxTranslator.exe
+C:\Users\Dave\Desktop\FYP\fyp\csharp\localization\Translator\ResxTranslatorBot\obj\Debug\ResxTranslator.pdb

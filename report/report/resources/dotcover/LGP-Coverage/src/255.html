@@ -1,0 +1,271 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_255 = [
+   [26,9,26,77,'dccv']
+, [27,9,27,10,'dccv']
+, [29,13,29,14,'dccv']
+, [30,17,30,44,'dccv']
+, [31,17,31,39,'dccv']
+, [32,17,32,50,'dccv']
+, [33,17,33,45,'dccv']
+, [34,17,34,32,'dccv']
+, [35,17,35,97,'dccv']
+, [36,13,36,14,'dccv']
+, [41,9,41,10,'dccv']
+, [51,9,51,10,'dccv']
+, [53,13,53,14,'dccv']
+, [54,17,54,37,'dccv']
+, [58,17,58,39,'dccv']
+, [59,17,59,32,'dccv']
+, [60,13,60,14,'dccv']
+, [65,9,65,10,'dccv']
+, [116,9,116,10,'dccv']
+, [118,13,118,14,'dccv']
+, [119,17,119,45,'dccv']
+, [120,17,120,37,'dccv']
+, [121,13,121,14,'dccv']
+, [126,9,126,10,'dccv']
+, [131,9,131,10,'dccv']
+, [133,13,133,14,'dccv']
+, [134,17,134,51,'dccv']
+, [136,17,136,24,'dccv']
+, [136,41,136,70,'dccv']
+, [136,26,136,37,'dccv']
+, [137,17,137,18,'dccv']
+, [138,21,141,23,'dccv']
+, [142,21,142,68,'dccv']
+, [143,21,143,59,'dccv']
+, [144,17,144,18,'dccv']
+, [136,38,136,40,'dccv']
+, [146,17,146,77,'dccv']
+, [147,13,147,14,'dccv']
+, [152,9,152,10,'dccv']
+, [37,13,37,37,'dcuc']
+, [38,13,38,14,'dcuc']
+, [39,17,39,53,'dcuc']
+, [40,13,40,14,'dcuc']
+, [55,17,55,18,'dcuc']
+, [56,21,56,28,'dcuc']
+, [61,13,61,37,'dcuc']
+, [62,13,62,14,'dcuc']
+, [63,17,63,53,'dcuc']
+, [64,13,64,14,'dcuc']
+, [72,9,72,10,'dcuc']
+, [74,13,74,14,'dcuc']
+, [75,13,75,14,'dcuc']
+, [76,13,76,37,'dcuc']
+, [77,13,77,14,'dcuc']
+, [78,17,78,53,'dcuc']
+, [79,13,79,14,'dcuc']
+, [80,9,80,10,'dcuc']
+, [87,9,87,10,'dcuc']
+, [89,13,89,14,'dcuc']
+, [90,13,90,14,'dcuc']
+, [91,13,91,37,'dcuc']
+, [92,13,92,14,'dcuc']
+, [93,17,93,53,'dcuc']
+, [94,13,94,14,'dcuc']
+, [95,9,95,10,'dcuc']
+, [101,9,101,10,'dcuc']
+, [103,13,103,14,'dcuc']
+, [104,13,104,14,'dcuc']
+, [105,13,105,37,'dcuc']
+, [106,13,106,14,'dcuc']
+, [107,17,107,53,'dcuc']
+, [108,13,108,14,'dcuc']
+, [109,9,109,10,'dcuc']
+, [122,13,122,37,'dcuc']
+, [123,13,123,14,'dcuc']
+, [124,17,124,53,'dcuc']
+, [125,13,125,14,'dcuc']
+, [148,13,148,37,'dcuc']
+, [149,13,149,14,'dcuc']
+, [150,17,150,53,'dcuc']
+, [151,13,151,14,'dcuc']
+, [155,9,155,10,'dcuc']
+, [157,13,157,14,'dcuc']
+, [158,17,158,46,'dcuc']
+, [159,17,159,50,'dcuc']
+, [160,13,160,14,'dcuc']
+, [161,13,161,37,'dcuc']
+, [162,13,162,14,'dcuc']
+, [163,17,163,53,'dcuc']
+, [164,13,164,14,'dcuc']
+, [165,9,165,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src255" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Database;
+
+#endregion
+
+namespace LGP.Modules.ModuleEditor.Internal.NodeViews
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for ModulePane.xaml
+    /// &lt;/summary&gt;
+    public partial class ModulePane : IModuleObserver
+    {
+        private readonly ModuleDocument _document;
+        private IModule _module;
+
+
+        /// &lt;summary&gt;
+        /// &lt;/summary&gt;
+        public ModulePane( IModule module , ModuleDocument documentHandler )
+        {
+            try
+            {
+                this.InitializeComponent();
+                this._module = module;
+                this._document = documentHandler;
+                this._module.Attach( this );
+                this.Prepare();
+                this.image1.Source = Framework.Images.GetImage( &quot;lgp&quot; , &quot;128x128&quot; , 64 ).Source;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        #region IModuleObserver Members
+
+        /// &lt;summary&gt;
+        ///   Update this observer with a refernece to the module
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;module&quot;&gt;IModule&lt;/param&gt;
+        /// &lt;param name = &quot;source&quot;&gt;IModuleObserver&lt;/param&gt;
+        public void Update( IModule module , IModuleObserver source )
+        {
+            try
+            {
+                if( source == this )
+                {
+                    return;
+                }
+                this._module = module;
+                this.Prepare();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        /// &lt;summary&gt;
+        ///   Attach objewcts that observer this module
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;obj&quot;&gt;IModuleObserver&lt;/param&gt;
+        public void Attach( IModuleObserver obj )
+        {
+            try
+            {
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        /// &lt;summary&gt;
+        ///   Detach objewcts that observer this module
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;obj&quot;&gt;IModuleObserver&lt;/param&gt;
+        public void Detach( IModuleObserver obj )
+        {
+            try
+            {
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        /// &lt;summary&gt;
+        ///   Notify observers of this moduleFile
+        /// &lt;/summary&gt;
+        public void Notify()
+        {
+            try
+            {
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        /// &lt;summary&gt;
+        ///   Dispose this object and all the observers
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;obj&quot;&gt;IModuleObserver&lt;/param&gt;
+        public void Dispose( IModuleObserver obj )
+        {
+            try
+            {
+                this._module.Detach( this );
+                this._module = null;
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        #endregion
+
+        private void Prepare()
+        {
+            try
+            {
+                this.stackPanel1.Children.Clear();
+
+                foreach( var grammer in this._module.GetAllGrammers() )
+                {
+                    var tbox = new TextBox
+                    {
+                        Text = grammer.GetKey() , FontSize = 10 , Height = 22 , Padding = new Thickness( 1 ) , Margin = new Thickness( 2 , 0 , 2 , 0 ) , IsReadOnly = true , BorderThickness = new Thickness( 1 ) , BorderBrush = Brushes.Transparent
+                    };
+                    tbox.PreviewMouseDown += this.TextBoxMouseDown;
+                    this.stackPanel1.Children.Add( tbox );
+                }
+
+                this.ModuleNameLabel.Content = this._module.GetModuleName();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        private void TextBoxMouseDown( object sender , MouseButtonEventArgs e )
+        {
+            try
+            {
+                var tbox = sender as TextBox;
+                this._document.GoTo( tbox.Text );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src255', RANGES_255)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,225 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_284 = [
+   [38,9,38,10,'dccv']
+, [39,13,39,45,'dccv']
+, [40,9,40,10,'dccv']
+, [58,9,58,10,'dccv']
+, [60,13,60,14,'dccv']
+, [61,17,61,142,'dccv']
+, [63,17,63,39,'dccv']
+, [68,17,68,63,'dccv']
+, [70,17,70,49,'dccv']
+, [75,17,75,58,'dccv']
+, [76,17,76,74,'dccv']
+, [77,17,77,70,'dccv']
+, [78,13,78,14,'dccv']
+, [83,9,83,10,'dccv']
+, [91,9,91,10,'dccv']
+, [92,13,92,77,'dccv']
+, [93,9,93,10,'dccv']
+, [132,9,132,10,'dccv']
+, [133,13,133,48,'dccv']
+, [134,9,134,10,'dccv']
+, [154,9,154,10,'dccv']
+, [155,13,155,125,'dccv']
+, [157,13,157,64,'dccv']
+, [158,13,158,56,'dccv']
+, [159,9,159,10,'dccv']
+, [28,9,28,10,'dcuc']
+, [29,13,29,35,'dcuc']
+, [30,9,30,10,'dcuc']
+, [48,9,48,10,'dcuc']
+, [49,13,49,52,'dcuc']
+, [50,9,50,10,'dcuc']
+, [64,17,64,18,'dcuc']
+, [65,21,65,28,'dcuc']
+, [71,17,71,18,'dcuc']
+, [72,21,72,28,'dcuc']
+, [79,13,79,37,'dcuc']
+, [80,13,80,14,'dcuc']
+, [81,17,81,53,'dcuc']
+, [82,13,82,14,'dcuc']
+, [101,9,101,10,'dcuc']
+, [102,13,102,25,'dcuc']
+, [103,9,103,10,'dcuc']
+, [111,9,111,10,'dcuc']
+, [112,13,112,25,'dcuc']
+, [113,9,113,10,'dcuc']
+, [121,9,121,10,'dcuc']
+, [122,13,122,38,'dcuc']
+, [123,9,123,10,'dcuc']
+, [142,9,142,10,'dcuc']
+, [143,13,143,48,'dcuc']
+, [144,9,144,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src284" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Reflection;
+using System.Windows;
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Component;
+using LGP.Components.Factory.Interfaces.Module;
+using LGP.Components.Factory.Publishers.Events;
+
+#endregion
+
+namespace LGP.Modules.OrganizationUnitExplorer
+{
+    /// &lt;summary&gt;
+    ///   Concreate Implmentation and boundary class to Module Compoents
+    /// &lt;/summary&gt;
+    public class Plugin : IModule
+    {
+        #region IModule Members
+
+        /// &lt;summary&gt;
+        ///   Gets the main component of the module
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Usercontrol component&lt;/returns&gt;
+        public UserControl GetMainControl()
+        {
+            return new OuViewer();
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the side bar component of the module
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Usercontrol component&lt;/returns&gt;
+        public UserControl GetSidebarControl()
+        {
+            return OuTreeView.GetInstance();
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Get the component name
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;String name&lt;/returns&gt;
+        public string GetName()
+        {
+            return Properties.Resources.OuExplorer;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Registers this components menu handlers
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;menu&quot;&gt;The program main menu&lt;/param&gt;
+        public void RegisterMenuEntries( IMenu menu )
+        {
+            try
+            {
+                var resource = Framework.Utils.LoadResource( Assembly.GetExecutingAssembly() , this , &quot;.Internal.ContextMenuItems.Ou.xaml&quot; );
+
+                if( resource == null )
+                {
+                    return;
+                }
+
+                var outreeToolbarsItem = resource as MenuItem;
+
+                if( outreeToolbarsItem == null )
+                {
+                    return;
+                }
+
+                outreeToolbarsItem.Icon = this.GetIcon();
+                outreeToolbarsItem.Click += this.OutreeToolbarsItemClick;
+                menu.AddSubSubMenuItem( 2 , 2 , outreeToolbarsItem );
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the icon associated with plugin
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public Image GetIcon()
+        {
+            return Framework.Images.GetImage( &quot;category-2&quot; , &quot;16X16&quot; , 14 );
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the bottombar component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetBottombarControl()
+        {
+            return null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the toolbar component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetToolbarControl()
+        {
+            return null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the preferences component the module provides
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;An instance of UserControl&lt;/returns&gt;
+        public UserControl GetPreferencesControl()
+        {
+            return new Preferences();
+        }
+
+        #endregion
+
+        /// &lt;summary&gt;
+        ///   Gets the side bar component name
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;String name&lt;/returns&gt;
+        public string GetComponentSideBarName()
+        {
+            return Properties.Resources.OuTree;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the component comtent name
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public string GetComponentContentName()
+        {
+            return Properties.Resources.OuView;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Handler for this componets menu entries
+        ///   Forwards the event to the message bus for subscribers interest
+        /// &lt;/summary&gt;
+        /// &lt;param name = &quot;sender&quot;&gt;The menu item that was clicked&lt;/param&gt;
+        /// &lt;param name = &quot;e&quot;&gt;The event details&lt;/param&gt;
+        private void OutreeToolbarsItemClick( object sender , RoutedEventArgs e )
+        {
+            Framework.Panels.AddSideComponent( this.GetSidebarControl() , this.GetComponentSideBarName() , this.GetIcon() );
+
+            var eventDetails = new MenuEvent( sender , &quot;new&quot; );
+            Framework.EventBus.Publish( eventDetails );
+        }
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src284', RANGES_284)
+		</script>
+	</body>
+</html>

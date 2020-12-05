@@ -1,0 +1,186 @@
+\chapter{Discussion and Conclusion}
+
+	\normalsize
+	{
+		Providing a conclusion at this point is difficult considering the amount of material covered.
+		Therefore in this section as part of the achievements, I will provide a simplified requirements mapping.
+		Finally a critique and improvements points will be covered.
+	}
+
+	\section{Achievements}
+	
+	\normalsize
+	{
+		The following tables directly maps to the requirements in section \ref{sec:Scope} (scope).
+	}
+	
+	\vspace{5mm}
+	\large{\bfseries{Client server model}}
+	\vspace{4mm}
+	
+	\begin{tablehere}
+	
+		\small{\begin{tabular}{ | p{5mm} | p{16mm} | p{100mm} | p{16mm} |}
+		\hline
+		\textbf{\#}							
+		
+		& \textbf{Achieved} 				& \textbf{Notes} 																									& \textbf{Supporting Figures}													\\ \hline
+		1	 	 	 						& Yes					& 5 distributions tested for demo day				 										& \ref{fig:SSClient}															\\ \hline
+		2	 	 	 						& Yes					& Modules can be pushed to clients 															& \ref{fig:SSServerControl}														\\ \hline
+		3	 	 	 						& Yes					& Yes Perl was used																			& \ref{fig:SSModuleEditor}														\\ \hline
+		4	 	 	 						& Yes					& Server tested to handle 6,000 clients														& \ref{fig:ServerCpuUsage}, \ref{fig:ServerQueueUsage} 
+																																								\& \ref{fig:ServerNetworkUsage}													\\ \hline
+		5	 	 	 						& Partially				& Extension points in the architecural design provides for the master slave paradigm		& \ref{fig:Transitionstatesmarshaling}											\\ \hline
+		6	 	 	 						& Yes					& Support was catered for in state transitions points								 		& \ref{fig:Transitionstatesmarshaling}											\\ \hline
+		7	 	 	 						& Yes					& Interpreted language used, deployable to multiple architectures							&																				\\ \hline
+		8	 	 	 						& Yes					& Push and pull implemented																	& \ref{fig:SSServerControl}														\\ \hline
+		
+		\end{tabular}}
+		
+		\caption{Requirements Mapping - Client server model}
+		\label{tab:RequirementsMappingClientservermodel}
+		
+	\end{tablehere}
+	
+	\vspace{5mm}
+	\normalsize
+	{
+		The client server model as detailed in the development chapter is highly successfully. During the requirements capture it was deemed the implementation
+		would need to be handle to handle 100's of clients.   In the testing phase it was discovered that the architecture far exceeded this goal 
+		and is able to handle thousands of clients.  
+	}
+	
+	\vspace{5mm}
+	\large{\bfseries{Domain specific language}}
+	\vspace{4mm}
+	
+	\begin{tablehere}
+	
+		\small{\begin{tabular}{ | p{5mm} | p{16mm} | p{100mm} | p{16mm} |}
+		\hline
+		\textbf{\#}							& \textbf{Achieved} 	& \textbf{Notes} 																			& \textbf{Supporting Figures}													\\ \hline
+		1	 	 	 						& Yes					& DSL is extensible																			& \ref{fig:ObserverDesignPattern} , \ref{fig:ClientInterpretor}					\\ \hline
+		2	 	 	 						& Yes					& Client accepts new modules																& \ref{fig:ObserverDesignPattern} , \ref{fig:ClientInterpretor}					\\ \hline
+		3	 	 	 						& Yes 					& DSL is an Perl filter script and allows embedded PERL										& \ref{fig:DSL}																	\\ \hline
+		
+		\end{tabular}}
+		
+		\caption{Requirements Mapping - Domain specific language}
+		\label{tab:RequirementsMappingDomainspecificlanguage}
+	
+	\end{tablehere}
+	
+	\vspace{5mm}
+	\normalsize
+	{
+		With the use of Perl filters the domain specific language exhibited both characteristics of an internal and external domain specific language.
+		As the domain specific language is interpreted by the Perl interpretor, this allowed for the embedding of Perl, resulting in maximum flexibility.
+	}
+	
+\newpage
+	
+	\vspace{5mm}
+	\large{\bfseries{Directory services schema}}
+	\vspace{4mm}
+	
+	\begin{tablehere}
+	
+		\small{\begin{tabular}{ | p{5mm} | p{16mm} | p{100mm} | p{16mm} |}
+		\hline
+		\textbf{\#}							& \textbf{Achieved} 	& \textbf{Notes} 																			& \ref{fig:dbdesignoverview}													\\ \hline
+		1	 	 	 						& Yes					& Configurations represented in DB															& \ref{fig:dbdesignoverview}													\\ \hline
+		2	 	 	 						& Yes					& Yes module provides translation															& \ref{fig:dbdesignoverview}													\\ \hline
+		3	 	 	 						& Yes					& Yes organisational units represented														& \ref{fig:dbdesignoverview}													\\ \hline
+		4	 	 	 						& Yes					& Client represented by GUID																& \ref{fig:dbdesignoverview}													\\ \hline
+	
+		\end{tabular}}
+		
+		\caption{Requirements Mapping - Directory services schema}
+		\label{tab:RequirementsMappingDirectoryservicesschema}
+		
+	\end{tablehere}
+	
+	\vspace{5mm}
+	\normalsize
+	{
+		The database schema although ending up be quiet simple, provided support for all the necessary requirements.
+	}
+	
+	
+	\vspace{5mm}
+	\large{\bfseries{Administrator front end}}
+	\vspace{4mm}
+	
+	\begin{tablehere}
+	
+		\small{\begin{tabular}{ | p{5mm} | p{16mm} | p{100mm} | p{16mm} |}
+		\hline
+		\textbf{\#}							& \textbf{Achieved} 	& \textbf{Notes} 																			& \textbf{Supporting Figures}													\\ \hline		
+		1	 	 	 						& Yes					& Ability to create organisational units													& \ref{fig:SSOuAdd}																\\ \hline
+		2	 	 	 						& Yes					& Move organisational units																	& \ref{fig:SSOuMove}															\\ \hline
+		3	 	 	 						& Yes					& Hierarchy of organisational units															& \ref{fig:SSouDragDRop}, \ref{fig:SSClient} \& \ref{fig:SSOuMove}				\\ \hline
+		4	 	 	 						& Yes					& MUST provide a means to modify policies													& \ref{fig:SSPolicyEditor}														\\ \hline
+		5	 	 	 						& Yes					& Generate new domain specific language														& \ref{fig:SSPolicyEditor}														\\ \hline
+		6	 	 	 						& Yes					& Import existing policies in the form of the DSL											& \ref{fig:SSPolicyEditor}														\\ \hline
+		7	 	 	 						& Yes					& Push updates to the client																& \ref{fig:SSServerControl}														\\ \hline
+
+		\end{tabular}}
+		
+		\caption{Requirements Mapping - Administrator front end}
+		\label{tab:RequirementsMappingAdministratorfrontend}	
+		
+	\end{tablehere}
+	
+	\vspace{5mm}
+	\normalsize
+	{
+		All the requirements for the Administrator front end were achieved.  However the true achievement is the architecture.
+		This architecture provides maximum flexibility and support for non functional requirements and resulting future improvements.
+	}
+					
+	
+	\section{Critique \& Improvements}
+	
+		\normalsize
+		{
+			There are numerous critiques of the software implementation.
+			To begin with the implementation a primary critique point of the client, server architecture is the message passing.
+			The messages as previously discussed are encapsulated in a Javascript Object Notation (JSON) envelope.  
+			This envelope and the construction of its contents (key/value pairs) is hard coded in the implementation.  
+			This does not offer out of band services to append to the (key/value) pairs.
+			New services that require this functionality are therefore not catered for.
+			Future improvements to the framework should provide the ability to append to this envelope.
+			\newline
+			\newline
+			Patterns and supporting technologies such as the Common Object Request Broker Architecture (CORBA) should be considered
+			to support object passing.
+			\newline
+			\newline
+			A possible problem associated with the interpreter is the use of regular expressions.  Regular expressions
+			although offering the best validation method for strings can become difficult to understand and maintain.
+			Other languages such as Prolog provide the ability to define definite clause grammars more easily.
+			For future improvements more research should be done to determine the best solution to defining rules
+			in a more readable manor.
+			\newline
+			\newline
+			Finally the last and most overlooked software concern of this project was the database requirement.
+			Although the implementation catered for the requirements, further research needs to be done
+			in order to better improve the representation schema for rules.  To provide the most flexibility during development
+			the rules associated with an organisational unit were stored in a single field in the database.
+			Although offering the best flexibility future improvement could be done to represent each line and its individual parts.
+			Database internal constraints could then be used to further validate the data.
+			\newline
+			\newline
+		}
+		
+	\section{Conclusion}
+	
+		\normalsize
+		{
+			From the outset, the scope of this project was to design an extensible software framework and to provide a Domain Specific Language(DSL)
+			as a means to abstract distribution specific knowledge.  These two points were successfully acheived in both the adminstrator front end and 
+			the	client interpretor, leading to a notary uniform acknowledgement of quality on the demonstration day.	
+			\newline
+			\newline
+			- dry mouth, wet arse, signing out!
+		}

@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../js/coverreport.js">
+
+		</script><script type="text/javascript">
+			RANGES_297 = [
+   [23,9,23,29,'dccv']
+, [24,9,24,10,'dccv']
+, [26,13,26,14,'dccv']
+, [27,17,27,44,'dccv']
+, [28,13,28,14,'dccv']
+, [33,9,33,10,'dccv']
+, [42,9,42,10,'dccv']
+, [43,13,43,52,'dccv']
+, [44,9,44,10,'dccv']
+, [61,9,61,10,'dccv']
+, [62,13,62,33,'dccv']
+, [63,9,63,10,'dccv']
+, [72,9,72,10,'dccv']
+, [73,13,73,43,'dccv']
+, [74,9,74,10,'dccv']
+, [81,9,81,10,'dccv']
+, [82,13,82,38,'dccv']
+, [83,9,83,10,'dccv']
+, [90,9,90,10,'dccv']
+, [91,13,91,77,'dccv']
+, [92,9,92,10,'dccv']
+, [29,13,29,37,'dcuc']
+, [30,13,30,14,'dcuc']
+, [31,17,31,53,'dcuc']
+, [32,13,32,14,'dcuc']
+, [52,9,52,10,'dcuc']
+, [53,13,53,25,'dcuc']
+, [54,9,54,10,'dcuc']
+];
+		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
+	</head><body>
+		<code id="src297" class="dotCoverSource"><pre>#region
+
+using System;
+using System.Windows.Controls;
+using LGP.Components.Factory;
+using LGP.Components.Factory.Interfaces.Component;
+using LGP.Components.Factory.Interfaces.Module;
+
+#endregion
+
+namespace LGP.Modules.OrganizationUnitExplorer
+{
+    /// &lt;summary&gt;
+    ///   Interaction logic for Preferences.xaml
+    /// &lt;/summary&gt;
+    public partial class Preferences : IPreferences
+    {
+        private ISettings _parent;
+
+        /// &lt;summary&gt;
+        ///   Constructor
+        /// &lt;/summary&gt;
+        public Preferences()
+        {
+            try
+            {
+                this.InitializeComponent();
+            }
+            catch( Exception error )
+            {
+                Framework.EventBus.Publish( error );
+            }
+        }
+
+        #region IPreferences Members
+
+        /// &lt;summary&gt;
+        ///   Gets the name of the preferences Pane
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public string GetName()
+        {
+            return Properties.Resources.OuExplorer;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Gets the preferences window
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;UserControl&lt;/returns&gt;
+        public UserControl GetControl()
+        {
+            return this;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Aks the preferences panel to save its entries
+        /// &lt;/summary&gt;
+        public void Save()
+        {
+            this._parent = null;
+        }
+
+
+        /// &lt;summary&gt;
+        ///   Asks the preferences to load its settings
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;settingsParent&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;string&lt;/returns&gt;
+        public void Load( ISettings settingsParent )
+        {
+            this._parent = settingsParent;
+        }
+
+        /// &lt;summary&gt;
+        /// Gets the type it Controls
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;Type&lt;/returns&gt;
+        public Type GetControlType()
+        {
+            return typeof( IModule );
+        }
+
+        /// &lt;summary&gt;
+        /// Gets the preferences icon
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public Image GetIcon()
+        {
+            return Framework.Images.GetImage( &quot;category-2&quot; , &quot;16X16&quot; , 14 );
+        }
+
+        #endregion
+    }
+}</pre></code><script type="text/javascript">
+			applyranges('src297', RANGES_297)
+		</script>
+	</body>
+</html>

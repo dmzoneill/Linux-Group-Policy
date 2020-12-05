@@ -1,0 +1,17 @@
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\bin\Debug\ModuleEditorComponent.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\bin\Debug\ModuleEditorComponent.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\bin\Debug\ICSharpCode.AvalonEdit.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\ModuleEditorComponent.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\Linux Group Policy\bin\Debug\ModuleEditorComponent.pdb
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\obj\Debug\AvalonEdit.baml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\obj\Debug\ModuleList.baml
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\obj\Debug\AvalonEdit.g.cs
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\obj\Debug\ModuleList.g.cs
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\obj\Debug\ModuleEditorComponent_MarkupCompile.cache
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\obj\Debug\ModuleEditorComponent.g.resources
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\obj\Debug\ModuleEditorComponent.Properties.Resources.resources
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\obj\Debug\ModuleEditorComponent.dll
+C:\Users\Administrator\Desktop\lgp\Linux Group Policy\ModuleEditorComponent\obj\Debug\ModuleEditorComponent.pdb
