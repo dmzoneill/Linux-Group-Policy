@@ -1,0 +1,48 @@
+---
+# Managed by https://github.com/dmzoneill/dmzoneill setup.sh.
+# Entries follow manifests detected in this repository.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+  - package-ecosystem: "nuget"
+    directories:
+      - "/csharp/Linux Group Policy"
+      - "/csharp/Linux Group Policy/LGP"
+      - "/csharp/Linux Group Policy/LGP.Components.Database"
+      - "/csharp/Linux Group Policy/LGP.Components.Database.Mssql"
+      - "/csharp/Linux Group Policy/LGP.Components.Database.Mysql"
+      - "/csharp/Linux Group Policy/LGP.Components.Database.Oracle"
+      - "/csharp/Linux Group Policy/LGP.Components.Database.Postgresql"
+      - "/csharp/Linux Group Policy/LGP.Components.Dialog"
+      - "/csharp/Linux Group Policy/LGP.Components.Factory"
+      - "/csharp/Linux Group Policy/LGP.Components.Menus"
+      - "/csharp/Linux Group Policy/LGP.Components.Notifications"
+      - "/csharp/Linux Group Policy/LGP.Components.Panels"
+      - "/csharp/Linux Group Policy/LGP.ImageLibrary"
+      - "/csharp/Linux Group Policy/LGP.ImageWindowsShellIcons"
+      - "/csharp/Linux Group Policy/LGP.Modules.ModuleEditor"
+      - "/csharp/Linux Group Policy/LGP.Modules.OrganizationUnitExplorer"
+      - "/csharp/Linux Group Policy/LGP.Modules.PolicyEditor"
+      - "/csharp/Linux Group Policy/LGP.Modules.ServerControl"
+      - "/csharp/Linux Group Policy/LGP.Modules.Statistics"
+      - "/csharp/localization/Translator"
+      - "/csharp/localization/Translator/ResxTranslatorBot"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+    groups:
+      nuget:
+        patterns:
+          - "*"
