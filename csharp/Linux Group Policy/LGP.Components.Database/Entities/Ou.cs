@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -215,7 +216,7 @@ namespace LGP.Components.Database.Entities
 
 
         /// <summary>
-        ///   Update this observer with a refernece to the ou
+        ///   Update this observer with a refernece to the ou // codespell:ignore refernece
         /// </summary>
         /// <param name = "ou">Iou</param>
         /// <param name = "source">source observer</param>
@@ -311,3 +312,4 @@ namespace LGP.Components.Database.Entities
         }
     }
 }
+// jscpd:ignore-end

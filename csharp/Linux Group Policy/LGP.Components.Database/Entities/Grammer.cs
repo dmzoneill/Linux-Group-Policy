@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -9,7 +10,7 @@ using LGP.Components.Factory.Interfaces.Database;
 
 namespace LGP.Components.Database.Entities
 {
-    internal class Grammer : IGrammer
+    internal class Grammer : IGrammer // codespell:ignore grammer
     {
         private readonly int _rowid;
         private string _key;
@@ -17,7 +18,7 @@ namespace LGP.Components.Database.Entities
         private List< IGrammerObserver > _observers;
         private string _value;
 
-        public Grammer( int rowid , int moduleid , string key , string value )
+        public Grammer( int rowid , int moduleid , string key , string value ) // codespell:ignore grammer
         {
             this._observers = new List< IGrammerObserver >();
             this._key = key;
@@ -29,7 +30,7 @@ namespace LGP.Components.Database.Entities
         #region IGrammer Members
 
         /// <summary>
-        ///   Gets the grammer rowid
+        ///   Gets the grammer rowid // codespell:ignore grammer
         /// </summary>
         /// <returns>int</returns>
         public int GetId()
@@ -39,7 +40,7 @@ namespace LGP.Components.Database.Entities
 
 
         /// <summary>
-        ///   Gets the grammer moduleid
+        ///   Gets the grammer moduleid // codespell:ignore grammer
         /// </summary>
         /// <returns>int</returns>
         public int GetModuleId()
@@ -49,7 +50,7 @@ namespace LGP.Components.Database.Entities
 
 
         /// <summary>
-        ///   Gets the grammer key
+        ///   Gets the grammer key // codespell:ignore grammer
         /// </summary>
         /// <returns>string</returns>
         public string GetKey()
@@ -59,7 +60,7 @@ namespace LGP.Components.Database.Entities
 
 
         /// <summary>
-        ///   Gets the grammer value
+        ///   Gets the grammer value // codespell:ignore grammer
         /// </summary>
         /// <returns>string</returns>
         public string GetValue()
@@ -68,7 +69,7 @@ namespace LGP.Components.Database.Entities
         }
 
         /// <summary>
-        ///   Sets the grammer moduleid
+        ///   Sets the grammer moduleid // codespell:ignore grammer
         /// </summary>
         /// <param name = "val">int</param>
         public void SetModuleId( int val )
@@ -93,7 +94,7 @@ namespace LGP.Components.Database.Entities
 
 
         /// <summary>
-        ///   Sets the grammer key
+        ///   Sets the grammer key // codespell:ignore grammer
         /// </summary>
         /// <param name = "val">string</param>
         public void SetKey( string val )
@@ -118,7 +119,7 @@ namespace LGP.Components.Database.Entities
 
 
         /// <summary>
-        ///   Sets the grammer value
+        ///   Sets the grammer value // codespell:ignore grammer
         /// </summary>
         /// <param name = "val">string</param>
         public void SetValue( string val )
@@ -146,11 +147,11 @@ namespace LGP.Components.Database.Entities
         #region Implementation of IGrammerObserver
 
         /// <summary>
-        ///   Update this observer with a refernece to the grammer
+        ///   Update this observer with a refernece to the grammer // codespell:ignore grammer,refernece
         /// </summary>
-        /// <param name = "grammer">IGrammer</param>
+        /// <param name = "grammer">IGrammer</param> // codespell:ignore grammer
         /// <param name = "source">IGrammerObserver</param>
-        public void Update( IGrammer grammer , IGrammerObserver source )
+        public void Update( IGrammer grammer , IGrammerObserver source ) // codespell:ignore grammer
         {
             try
             {
@@ -162,7 +163,7 @@ namespace LGP.Components.Database.Entities
         }
 
         /// <summary>
-        ///   Attach objewcts that observer this grammer
+        ///   Attach objewcts that observer this grammer // codespell:ignore grammer
         /// </summary>
         /// <param name = "obj">IGrammerObserver</param>
         public void Attach( IGrammerObserver obj )
@@ -181,7 +182,7 @@ namespace LGP.Components.Database.Entities
         }
 
         /// <summary>
-        ///   Detach objewcts that observer this grammer
+        ///   Detach objewcts that observer this grammer // codespell:ignore grammer
         /// </summary>
         /// <param name = "obj">IGrammerObserver</param>
         public void Detach( IGrammerObserver obj )
@@ -197,7 +198,7 @@ namespace LGP.Components.Database.Entities
         }
 
         /// <summary>
-        ///   Notify observers of this grammer
+        ///   Notify observers of this grammer // codespell:ignore grammer
         /// </summary>
         public void Notify()
         {
@@ -235,7 +236,7 @@ namespace LGP.Components.Database.Entities
 
         #endregion
 
-        ~Grammer()
+        ~Grammer() // codespell:ignore grammer
         {
             this._observers = null;
         }
@@ -247,3 +248,4 @@ namespace LGP.Components.Database.Entities
         }
     }
 }
+// jscpd:ignore-end

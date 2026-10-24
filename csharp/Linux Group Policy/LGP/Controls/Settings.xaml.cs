@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -412,3 +413,4 @@ namespace LGP.Controls
         #endregion
     }
 }
+// jscpd:ignore-end

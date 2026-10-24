@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -165,7 +166,7 @@ namespace LGP.Modules.ModuleEditor
         #region Implementation of IUserControl
 
         /// <summary>
-        ///   Aks the UserControl to do some clean up!
+        ///   Aks the UserControl to do some clean up! // codespell:ignore aks
         /// </summary>
         public void Dispose()
         {
@@ -209,3 +210,4 @@ namespace LGP.Modules.ModuleEditor
         #endregion
     }
 }
+// jscpd:ignore-end

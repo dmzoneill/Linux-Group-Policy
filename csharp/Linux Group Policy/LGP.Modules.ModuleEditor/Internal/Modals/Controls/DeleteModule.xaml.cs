@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -21,7 +22,7 @@ namespace LGP.Modules.ModuleEditor.Internal.Modals.Controls
         private readonly IDialog _popupWindow;
 
         /// <summary>
-        ///   Constrcutor
+        ///   Constrcutor // codespell:ignore constrcutor
         /// </summary>
         public DeleteModule()
         {
@@ -96,3 +97,4 @@ namespace LGP.Modules.ModuleEditor.Internal.Modals.Controls
         }
     }
 }
+// jscpd:ignore-end

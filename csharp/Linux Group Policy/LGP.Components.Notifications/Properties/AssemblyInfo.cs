@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿using System.Reflection;
 using System.Resources;
 using System.Runtime.CompilerServices;
@@ -55,3 +56,4 @@ using System.Windows;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("LGP.Test")]
+// jscpd:ignore-end

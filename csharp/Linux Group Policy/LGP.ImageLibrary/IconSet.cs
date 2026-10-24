@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -19,7 +20,7 @@ namespace LGP.ImageLibrary
     /// </summary>
     public class IconSet
     {
-        private static readonly string Namepsace;
+        private static readonly string Namepsace; // codespell:ignore namepsace
 
 
         /// <summary>
@@ -28,7 +29,7 @@ namespace LGP.ImageLibrary
         static IconSet()
         {
             var myType = typeof( IconSet );
-            Namepsace = myType.Namespace;
+            Namepsace = myType.Namespace; // codespell:ignore namepsace
         }
 
 
@@ -44,7 +45,7 @@ namespace LGP.ImageLibrary
         /// <returns>An image</returns>
         public static Image GetImage( string name , string folder )
         {
-            var uri = "/" + Namepsace + ";component/Images/" + folder + "/" + name + ".png";
+            var uri = "/" + Namepsace + ";component/Images/" + folder + "/" + name + ".png"; // codespell:ignore namepsace
 
             var icon = new Image();
 
@@ -97,7 +98,7 @@ namespace LGP.ImageLibrary
         /// <returns>An icon (ico)</returns>
         public static Icon GetIcon( string name )
         {
-            var uri = "pack://application:,,,/" + Namepsace + ";component/Icons/" + name + ".ico";
+            var uri = "pack://application:,,,/" + Namepsace + ";component/Icons/" + name + ".ico"; // codespell:ignore namepsace
 
             Icon icon = null;
 
@@ -194,3 +195,4 @@ namespace LGP.ImageLibrary
         }
     }
 }
+// jscpd:ignore-end

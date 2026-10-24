@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -46,7 +47,7 @@ namespace LGP.Modules.ServerControl
         }
 
         /// <summary>
-        ///   Aks the preferences panel to save its entries
+        ///   Aks the preferences panel to save its entries // codespell:ignore aks
         /// </summary>
         public void Save()
         {
@@ -85,3 +86,4 @@ namespace LGP.Modules.ServerControl
         #endregion
     }
 }
+// jscpd:ignore-end

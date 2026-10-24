@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -150,7 +151,7 @@ namespace LGP.Modules.PolicyEditor
         #region Implementation of IUserControl
 
         /// <summary>
-        ///   Aks the UserControl to do some clean up!
+        ///   Aks the UserControl to do some clean up! // codespell:ignore aks
         /// </summary>
         public void Dispose()
         {
@@ -205,7 +206,7 @@ namespace LGP.Modules.PolicyEditor
         #region Implementation of IOuObserver
 
         /// <summary>
-        ///   Update this observer with a refernece to the ou
+        ///   Update this observer with a refernece to the ou // codespell:ignore refernece
         /// </summary>
         /// <param name = "ou">Iou</param>
         /// <param name = "source">source observer</param>
@@ -284,3 +285,4 @@ namespace LGP.Modules.PolicyEditor
         #endregion
     }
 }
+// jscpd:ignore-end

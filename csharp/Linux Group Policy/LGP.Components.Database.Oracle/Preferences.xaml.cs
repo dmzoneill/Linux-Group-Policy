@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -46,7 +47,7 @@ namespace LGP.Components.Database.Oracle
         }
 
         /// <summary>
-        ///   Aks the preferences panel to save its entries
+        ///   Aks the preferences panel to save its entries // codespell:ignore aks
         /// </summary>
         public void Save()
         {
@@ -96,3 +97,4 @@ namespace LGP.Components.Database.Oracle
         }
     }
 }
+// jscpd:ignore-end

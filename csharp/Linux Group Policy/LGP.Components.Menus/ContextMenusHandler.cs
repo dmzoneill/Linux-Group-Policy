@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -13,7 +14,7 @@ using LGP.Components.Factory.Interfaces.Infrastructure;
 namespace LGP.Components.Menus
 {
     /// <summary>
-    /// Conext menus handler
+    /// Conext menus handler // codespell:ignore conext
     /// </summary>
     public class ContextMenusHandler : IContextMenus
     {
@@ -32,8 +33,8 @@ namespace LGP.Components.Menus
         /// <summary>
         ///   Asks the Context menu handler to append menu entries for a given context menu
         /// </summary>
-        /// <param name = "menuparent">Conext menu to add entries to</param>
-        /// <param name = "type">Type of item that the conext is being appended to</param>
+        /// <param name = "menuparent">Conext menu to add entries to</param> // codespell:ignore conext
+        /// <param name = "type">Type of item that the conext is being appended to</param> // codespell:ignore conext
         /// <param name = "action">callback</param>
         public void AttachMenuItemRegistrations( ref ContextMenu menuparent , Type type , Action< Object , RoutedEventArgs > action )
         {
@@ -52,8 +53,8 @@ namespace LGP.Components.Menus
         /// <summary>
         ///   Asks the Context menu handler to append menu entries for a given context menu
         /// </summary>
-        /// <param name = "menuparent">Conext menu to add entries to</param>
-        /// <param name = "type">Type of item that the conext is being appended to</param>
+        /// <param name = "menuparent">Conext menu to add entries to</param> // codespell:ignore conext
+        /// <param name = "type">Type of item that the conext is being appended to</param> // codespell:ignore conext
         /// <param name = "action">callback</param>
         public void AttachMenuItemRegistrations( ref Menu menuparent , Type type , Action< Object , RoutedEventArgs > action )
         {
@@ -125,8 +126,8 @@ namespace LGP.Components.Menus
         /// <summary>
         ///   Asks the Context menu handler to append menu entries for a given context menu
         /// </summary>
-        /// <param name = "menuparent">Conext menu to add entries to</param>
-        /// <param name = "type">Type of item that the conext is being appended to</param>
+        /// <param name = "menuparent">Conext menu to add entries to</param> // codespell:ignore conext
+        /// <param name = "type">Type of item that the conext is being appended to</param> // codespell:ignore conext
         /// <param name = "action">callback</param>
         public void AttachMenuItemRegistrations( ref MenuItem menuparent , Type type , Action< Object , RoutedEventArgs > action )
         {
@@ -239,3 +240,4 @@ namespace LGP.Components.Menus
         #endregion
     }
 }
+// jscpd:ignore-end

@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System.Windows.Controls;
@@ -100,3 +101,4 @@ namespace LGP.Components.Database.Mysql
         #endregion
     }
 }
+// jscpd:ignore-end

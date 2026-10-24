@@ -10,3 +10,6 @@ csharp/prism/Bin/
 
 # JetBrains dotCover HTML coverage report (generated) embedded in the project report.
 report/report/resources/dotcover/
+
+# Vendored third-party: Json.NET (Newtonsoft) XML API docs.
+csharp/json.net/

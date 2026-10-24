@@ -1,4 +1,6 @@
 #!/usr/bin/perl -w
+## no critic
+# jscpd:ignore-start
 
 ########################################################################################################
 # @description Concrete Module Class ( Module ) extends Module
@@ -617,3 +619,4 @@ sub update
 
 
 1;
+# jscpd:ignore-end

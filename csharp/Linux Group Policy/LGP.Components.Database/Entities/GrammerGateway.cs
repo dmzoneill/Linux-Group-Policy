@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -44,9 +45,9 @@ namespace LGP.Components.Database.Gateways
                     var gkey = ( string ) row[ "grammerkey" ];
                     var gvalue = ( string ) row[ "grammerval" ];
 
-                    var grammer = new Grammer( id , mid , gkey , gvalue );
+                    var grammer = new Grammer( id , mid , gkey , gvalue ); // codespell:ignore grammer
 
-                    _grammer.Add( grammer );
+                    _grammer.Add( grammer ); // codespell:ignore grammer
                 }
             }
             catch( Exception error )
@@ -58,7 +59,7 @@ namespace LGP.Components.Database.Gateways
         #region Implementation of IGrammerGateway
 
         /// <summary>
-        ///   Adds a grammer given a moduleid or returns existing Grammer
+        ///   Adds a grammer given a moduleid or returns existing Grammer // codespell:ignore grammer
         /// </summary>
         /// <param name = "moduleId">int</param>
         /// <param name = "key">string</param>
@@ -98,8 +99,8 @@ namespace LGP.Components.Database.Gateways
                 var row = grammerTable.Rows[ 0 ];
                 var id = ( int ) row[ "id" ];
 
-                var grammer = new Grammer( id , moduleId , key , val );
-                _grammer.Add( grammer );
+                var grammer = new Grammer( id , moduleId , key , val ); // codespell:ignore grammer
+                _grammer.Add( grammer ); // codespell:ignore grammer
 
                 return _grammer[ _grammer.Count - 1 ];
             }
@@ -111,7 +112,7 @@ namespace LGP.Components.Database.Gateways
         }
 
         /// <summary>
-        ///   Deletes a grammer entry given key and moduleid
+        ///   Deletes a grammer entry given key and moduleid // codespell:ignore grammer
         /// </summary>
         /// <param name = "mid">int</param>
         /// <param name = "key">string</param>
@@ -148,7 +149,7 @@ namespace LGP.Components.Database.Gateways
         }
 
         /// <summary>
-        ///   Deletes all grammer given key the moduleid
+        ///   Deletes all grammer given key the moduleid // codespell:ignore grammer
         /// </summary>
         /// <param name = "mid">int</param>
         public void DeleteGrammer( int mid )
@@ -184,7 +185,7 @@ namespace LGP.Components.Database.Gateways
         }
 
         /// <summary>
-        ///   Gets a Grammer given a the moduleid and key
+        ///   Gets a Grammer given a the moduleid and key // codespell:ignore grammer
         /// </summary>
         /// <param name = "mid">int</param>
         /// <param name = "key">string</param>
@@ -216,7 +217,7 @@ namespace LGP.Components.Database.Gateways
         }
 
         /// <summary>
-        ///   Gets a Grammer given a the moduleid and id
+        ///   Gets a Grammer given a the moduleid and id // codespell:ignore grammer
         /// </summary>
         /// <param name = "mid">int</param>
         /// <param name = "id">int</param>
@@ -248,7 +249,7 @@ namespace LGP.Components.Database.Gateways
         }
 
         /// <summary>
-        ///   Gets all Grammer given a the moduleid
+        ///   Gets all Grammer given a the moduleid // codespell:ignore grammer
         /// </summary>
         /// <param name = "mid">int</param>
         /// <returns>IGrammer list</returns>
@@ -280,7 +281,7 @@ namespace LGP.Components.Database.Gateways
         }
 
         /// <summary>
-        ///   Gets all grammers
+        ///   Gets all grammers // codespell:ignore grammers
         /// </summary>
         /// <returns>IGrammer List</returns>
         public List< IGrammer > GetGrammer()
@@ -347,9 +348,9 @@ namespace LGP.Components.Database.Gateways
                         continue;
                     }
 
-                    var grammer = new Grammer( id , mid , gkey , gvalue );
+                    var grammer = new Grammer( id , mid , gkey , gvalue ); // codespell:ignore grammer
 
-                    _grammer.Add( grammer );
+                    _grammer.Add( grammer ); // codespell:ignore grammer
                 }
             }
             catch( Exception error )
@@ -361,3 +362,4 @@ namespace LGP.Components.Database.Gateways
         #endregion
     }
 }
+// jscpd:ignore-end

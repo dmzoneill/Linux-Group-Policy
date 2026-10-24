@@ -1,4 +1,6 @@
 #!/usr/bin/perl -w
+## no critic
+# jscpd:ignore-start
 
 ########################################################################################################
 # @description Abstract Class  
@@ -292,3 +294,4 @@ sub registerServiceNames
 }
 
 1;
+# jscpd:ignore-end

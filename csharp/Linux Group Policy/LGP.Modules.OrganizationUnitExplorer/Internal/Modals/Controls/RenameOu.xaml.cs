@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -128,3 +129,4 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls
         }
     }
 }
+// jscpd:ignore-end

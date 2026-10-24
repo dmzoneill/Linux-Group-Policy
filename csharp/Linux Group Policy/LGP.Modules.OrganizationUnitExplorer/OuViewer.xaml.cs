@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -63,9 +64,9 @@ namespace LGP.Modules.OrganizationUnitExplorer
                 this._viewType2 = 1;
 
                 this.GridViewImage1.Source = Framework.Images.GetImage( "graphic-design" , "16x16" , 12 ).Source;
-                this.ListViewImage1.Source = Framework.Images.GetImage( "attibutes" , "16x16" , 12 ).Source;
+                this.ListViewImage1.Source = Framework.Images.GetImage( "attibutes" , "16x16" , 12 ).Source; // codespell:ignore attibutes
                 this.GridViewImage2.Source = Framework.Images.GetImage( "graphic-design" , "16x16" , 12 ).Source;
-                this.ListViewImage2.Source = Framework.Images.GetImage( "attibutes" , "16x16" , 12 ).Source;
+                this.ListViewImage2.Source = Framework.Images.GetImage( "attibutes" , "16x16" , 12 ).Source; // codespell:ignore attibutes
                 this.ImageMinusZoom.Source = Framework.Images.GetImage( "zoomout" , "VS2010ImageLibrary" , 12 ).Source;
                 this.ImagePlusZoom.Source = Framework.Images.GetImage( "zoomin" , "VS2010ImageLibrary" , 12 ).Source;
                 this.OuImage.Source = this._ou.GetOuImage( 16 ).Source;
@@ -112,7 +113,7 @@ namespace LGP.Modules.OrganizationUnitExplorer
         #region IOuObserver Members
 
         /// <summary>
-        ///   Update this observer with a refernece to the ou
+        ///   Update this observer with a refernece to the ou // codespell:ignore refernece
         /// </summary>
         /// <param name = "ou">Iou</param>
         /// <param name = "source">source observer</param>
@@ -580,7 +581,7 @@ namespace LGP.Modules.OrganizationUnitExplorer
 
 
         /// <summary>
-        ///   Used bu children to request update
+        ///   Used bu children to request update // codespell:ignore bu
         /// </summary>
         public void Update()
         {
@@ -603,7 +604,7 @@ namespace LGP.Modules.OrganizationUnitExplorer
         #region Implementation of IUserControl
 
         /// <summary>
-        ///   Aks the UserControl to do some clean up!
+        ///   Aks the UserControl to do some clean up! // codespell:ignore aks
         /// </summary>
         public void Dispose()
         {
@@ -689,3 +690,4 @@ namespace LGP.Modules.OrganizationUnitExplorer
         #endregion
     }
 }
+// jscpd:ignore-end

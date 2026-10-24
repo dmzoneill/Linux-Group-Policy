@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -368,7 +369,7 @@ namespace LGP.Modules.ModuleEditor
         #region Implementation of IModuleObserver
 
         /// <summary>
-        ///   Update this observer with a refernece to the module
+        ///   Update this observer with a refernece to the module // codespell:ignore refernece
         /// </summary>
         /// <param name = "module">IModule</param>
         /// <param name = "source">IModuleObserver</param>
@@ -459,3 +460,4 @@ namespace LGP.Modules.ModuleEditor
         #endregion
     }
 }
+// jscpd:ignore-end

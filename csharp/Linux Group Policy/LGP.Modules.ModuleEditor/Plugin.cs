@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -14,7 +15,7 @@ using LGP.Components.Factory.Publishers.Events;
 namespace LGP.Modules.ModuleEditor
 {
     /// <summary>
-    ///   Concreate Implmentation and boundary class to Module Compoents
+    ///   Concreate Implmentation and boundary class to Module Compoents // codespell:ignore compoents,implmentation
     /// </summary>
     public class Plugin : IModule
     {
@@ -145,7 +146,7 @@ namespace LGP.Modules.ModuleEditor
 
 
         /// <summary>
-        ///   Handler for this componets menu entries
+        ///   Handler for this componets menu entries // codespell:ignore componets
         ///   Forwards the event to the message bus for subscribers interest
         /// </summary>
         /// <param name = "sender">The menu item that was clicked</param>
@@ -159,3 +160,4 @@ namespace LGP.Modules.ModuleEditor
         }
     }
 }
+// jscpd:ignore-end

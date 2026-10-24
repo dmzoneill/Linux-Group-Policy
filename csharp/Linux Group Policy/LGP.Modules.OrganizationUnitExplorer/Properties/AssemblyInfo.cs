@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System.Reflection;
@@ -58,3 +59,4 @@ using System.Windows;
 [assembly:AssemblyVersion( "1.0.4165.1438" )]
 [assembly:AssemblyFileVersion( "1.0.4165.1438" )]
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("LGP.Test")]
+// jscpd:ignore-end

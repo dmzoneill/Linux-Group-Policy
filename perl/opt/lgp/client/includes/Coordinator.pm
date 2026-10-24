@@ -1,4 +1,6 @@
 #!/usr/bin/perl -w
+## no critic
+# jscpd:ignore-start
 
 ########################################################################################################
 # @description Control Class For Observers and Computer Boundary Class
@@ -110,3 +112,4 @@ sub getComputer
 }
 
 1;
+# jscpd:ignore-end

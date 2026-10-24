@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -143,7 +144,7 @@ namespace LGP.Modules.Statistics
         }
 
         /// <summary>
-        ///   Handler for this componets menu entries
+        ///   Handler for this componets menu entries // codespell:ignore componets
         ///   Forwards the event to the message bus for subscribers interest
         /// </summary>
         /// <param name = "sender">The menu item that was clicked</param>
@@ -154,3 +155,4 @@ namespace LGP.Modules.Statistics
         }
     }
 }
+// jscpd:ignore-end

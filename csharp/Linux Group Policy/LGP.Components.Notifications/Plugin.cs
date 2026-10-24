@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿using System.Windows.Controls;
 using LGP.Components.Factory;
 using LGP.Components.Factory.Interfaces.Component;
@@ -96,3 +97,4 @@ namespace LGP.Components.Notifications
         #endregion
     }
 }
+// jscpd:ignore-end

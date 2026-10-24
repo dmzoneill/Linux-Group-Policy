@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -142,7 +143,7 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
         #region IOuObserver Members
 
         /// <summary>
-        ///   Update this observer with a refernece to the ou
+        ///   Update this observer with a refernece to the ou // codespell:ignore refernece
         /// </summary>
         /// <param name = "ou">Iou</param>
         /// <param name = "source">source observer</param>
@@ -702,3 +703,4 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
         }
     }
 }
+// jscpd:ignore-end

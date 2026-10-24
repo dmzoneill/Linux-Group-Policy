@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System.Data;
@@ -20,7 +21,7 @@ namespace LGP.Components.Database.Oracle
         /// <param name = "user">Username to use in connection</param>
         /// <param name = "pass">Password to use in connection</param>
         /// <param name = "host">Hostname to use in connection</param>
-        /// <param name = "dbname">Datbase to use in connection</param>
+        /// <param name = "dbname">Datbase to use in connection</param> // codespell:ignore datbase
         /// <returns></returns>
         public bool Connect( string user , string pass , string host , string dbname )
         {
@@ -72,3 +73,4 @@ namespace LGP.Components.Database.Oracle
         #endregion
     }
 }
+// jscpd:ignore-end

@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -148,7 +149,7 @@ namespace LGP.Modules.ModuleEditor.Internal
 
 
         /// <summary>
-        ///   Get the module lenght
+        ///   Get the module lenght // codespell:ignore lenght
         /// </summary>
         public Label FileLength
         {
@@ -678,7 +679,7 @@ namespace LGP.Modules.ModuleEditor.Internal
         #region Implementation of IModuleObserver
 
         /// <summary>
-        ///   Update this observer with a refernece to the module
+        ///   Update this observer with a refernece to the module // codespell:ignore refernece
         /// </summary>
         /// <param name = "module">IModule</param>
         /// <param name = "source">IModuleObserver</param>
@@ -771,3 +772,4 @@ namespace LGP.Modules.ModuleEditor.Internal
         #endregion
     }
 }
+// jscpd:ignore-end

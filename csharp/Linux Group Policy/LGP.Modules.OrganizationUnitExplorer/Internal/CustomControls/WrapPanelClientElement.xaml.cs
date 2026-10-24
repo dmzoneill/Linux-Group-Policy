@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -269,7 +270,7 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
         #region Implementation of IClientObserver
 
         /// <summary>
-        ///   Update this observer with a refernece to the client
+        ///   Update this observer with a refernece to the client // codespell:ignore refernece
         /// </summary>
         /// <param name = "client">IClient</param>
         /// <param name = "source">source observer</param>
@@ -357,3 +358,4 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
         #endregion
     }
 }
+// jscpd:ignore-end

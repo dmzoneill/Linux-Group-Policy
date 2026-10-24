@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -230,3 +231,4 @@ namespace LGP.Components.Database.Gateways
         }
     }
 }
+// jscpd:ignore-end

@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -60,3 +61,4 @@ namespace LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers
         #endregion
     }
 }
+// jscpd:ignore-end

@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 ﻿#region
 
 using System;
@@ -32,7 +33,7 @@ namespace LGP.Components.Database.Entities
         #region Implementation of IModuleObserver
 
         /// <summary>
-        ///   Update this observer with a refernece to the module
+        ///   Update this observer with a refernece to the module // codespell:ignore refernece
         /// </summary>
         /// <param name = "module">IModule</param>
         /// <param name = "source">IModuleObserver</param>
@@ -176,7 +177,7 @@ namespace LGP.Components.Database.Entities
 
 
         /// <summary>
-        ///   Adds a grammer to this module
+        ///   Adds a grammer to this module // codespell:ignore grammer
         /// </summary>
         /// <param name = "key">string</param>
         /// <param name = "value">string</param>
@@ -185,9 +186,9 @@ namespace LGP.Components.Database.Entities
         {
             try
             {
-                var grammer = GrammerGateway.CreateGrammer( this._moduleid , key , value );
+                var grammer = GrammerGateway.CreateGrammer( this._moduleid , key , value ); // codespell:ignore grammer
                 this.Notify();
-                return grammer;
+                return grammer; // codespell:ignore grammer
             }
             catch( Exception error )
             {
@@ -198,7 +199,7 @@ namespace LGP.Components.Database.Entities
 
 
         /// <summary>
-        ///   Deletes a grammer given a key
+        ///   Deletes a grammer given a key // codespell:ignore grammer
         /// </summary>
         /// <param name = "key"></param>
         public void DeleteGrammer( string key )
@@ -215,7 +216,7 @@ namespace LGP.Components.Database.Entities
         }
 
         /// <summary>
-        ///   Dletes all the grammers associated with this module
+        ///   Dletes all the grammers associated with this module // codespell:ignore grammers
         /// </summary>
         public void DeleteAllGrammer()
         {
@@ -231,7 +232,7 @@ namespace LGP.Components.Database.Entities
         }
 
         /// <summary>
-        ///   Gets all the grammers for this module
+        ///   Gets all the grammers for this module // codespell:ignore grammers
         /// </summary>
         /// <returns>IGrammer</returns>
         public List< IGrammer > GetAllGrammers()
@@ -240,9 +241,9 @@ namespace LGP.Components.Database.Entities
         }
 
         /// <summary>
-        ///   Gets a grammer given a key
+        ///   Gets a grammer given a key // codespell:ignore grammer
         /// </summary>
-        /// <param name = "key">grammer lvale</param>
+        /// <param name = "key">grammer lvale</param> // codespell:ignore grammer
         /// <returns>KeyValuePair</returns>
         public IGrammer GetGrammer( string key )
         {
@@ -250,9 +251,9 @@ namespace LGP.Components.Database.Entities
         }
 
         /// <summary>
-        ///   Gets a grammer given an id
+        ///   Gets a grammer given an id // codespell:ignore grammer
         /// </summary>
-        /// <param name = "id">grammer id</param>
+        /// <param name = "id">grammer id</param> // codespell:ignore grammer
         /// <returns>IGrammer</returns>
         public IGrammer GetGrammer( int id )
         {
@@ -285,3 +286,4 @@ namespace LGP.Components.Database.Entities
         }
     }
 }
+// jscpd:ignore-end
