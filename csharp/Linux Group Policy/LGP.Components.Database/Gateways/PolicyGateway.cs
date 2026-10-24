@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace LGP.Components.Database.Gateways
     internal class PolicyGateway : IPolicyGateway
     {
         private static readonly IOuGateway OuGateway;
-        private static List< IPolicy > _policies;
+        private static List<IPolicy> _policies;
 
         static PolicyGateway()
         {
@@ -29,57 +30,57 @@ namespace LGP.Components.Database.Gateways
         /// <param name = "ou">the associated ou</param>
         /// <param name="defaultPolicy">default policy</param>
         /// <returns>IPolicy</returns>
-        public IPolicy CreatePolicy( IOu ou , string defaultPolicy )
+        public IPolicy CreatePolicy(IOu ou, string defaultPolicy)
         {
             try
             {
-                if( _policies == null )
+                if (_policies == null)
                 {
                     BuildPolicyListing();
                 }
 
-                var now = DateTime.Now.ToString( "yyyy-MM-dd HH:mm:ss" );
+                var now = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-                var sql = string.Format( "insert into policy values( null, '{1}' , '{1}' ,'1' ,'{2}' ,'{0}' ,''  )" , ou.GetOuId() , now , Framework.Utils.Base64Encode( defaultPolicy ) );
+                var sql = string.Format("insert into policy values( null, '{1}' , '{1}' ,'1' ,'{2}' ,'{0}' ,''  )", ou.GetOuId(), now, Framework.Utils.Base64Encode(defaultPolicy));
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
                     return null;
                 }
 
-                if( Framework.Database.ExecuteNonQuery( sql ) > 0 )
+                if (Framework.Database.ExecuteNonQuery(sql) > 0)
                 {
-                    var sql2 = string.Format( "select * from policy where p_id = ( select MAX(p_id) from policy )" );
+                    var sql2 = string.Format("select * from policy where p_id = ( select MAX(p_id) from policy )");
 
-                    var policies = Framework.Database.ExecuteQuery( sql2 );
+                    var policies = Framework.Database.ExecuteQuery(sql2);
 
-                    var policiesTable = policies.Tables[ 0 ];
+                    var policiesTable = policies.Tables[0];
 
-                    if( policiesTable.Rows.Count == 0 )
+                    if (policiesTable.Rows.Count == 0)
                     {
                         return null;
                     }
 
-                    var row = policiesTable.Rows[ 0 ];
+                    var row = policiesTable.Rows[0];
 
-                    var pid = ( int ) row[ "p_id" ];
-                    var created = ( string ) row[ "p_created" ];
-                    var edited = ( string ) row[ "p_edited" ];
+                    var pid = (int)row["p_id"];
+                    var created = (string)row["p_created"];
+                    var edited = (string)row["p_edited"];
                     const int enabled = 1;
                     var dsl = defaultPolicy;
                     var ouid = ou.GetOuId();
                     const string version = "";
-                    var policy = new Policy( pid , created , edited , enabled , dsl , ouid , version );
-                    _policies.Add( policy );
+                    var policy = new Policy(pid, created, edited, enabled, dsl, ouid, version);
+                    _policies.Add(policy);
 
-                    return _policies[ _policies.Count - 1 ];
+                    return _policies[_policies.Count - 1];
                 }
 
                 return null;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return null;
             }
         }
@@ -88,36 +89,36 @@ namespace LGP.Components.Database.Gateways
         ///   Deletes a policy
         /// </summary>
         /// <param name = "ou">IOu</param>
-        public void DeletePolicy( IOu ou )
+        public void DeletePolicy(IOu ou)
         {
             try
             {
-                if( _policies == null )
+                if (_policies == null)
                 {
                     BuildPolicyListing();
                 }
 
-                var sql = string.Format( "delete from policy where p_ou_id='{0}'" , ou.GetOuId() );
+                var sql = string.Format("delete from policy where p_ou_id='{0}'", ou.GetOuId());
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
                     return;
                 }
 
-                Framework.Database.ExecuteNonQuery( sql );
+                Framework.Database.ExecuteNonQuery(sql);
 
-                for( var h = 0; h < _policies.Count; h++ )
+                for (var h = 0; h < _policies.Count; h++)
                 {
-                    if( _policies[ h ].GetOuId() == ou.GetOuId() )
+                    if (_policies[h].GetOuId() == ou.GetOuId())
                     {
-                        _policies.RemoveAt( h );
+                        _policies.RemoveAt(h);
                         return;
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -125,29 +126,29 @@ namespace LGP.Components.Database.Gateways
         ///   Deletes a policy
         /// </summary>
         /// <param name = "policy">IPolicy</param>
-        public void DeletePolicy( IPolicy policy )
+        public void DeletePolicy(IPolicy policy)
         {
             try
             {
-                if( _policies == null )
+                if (_policies == null)
                 {
                     BuildPolicyListing();
                 }
 
-                var sql = string.Format( "delete from policy where p_id='{0}'" , policy.GetId() );
+                var sql = string.Format("delete from policy where p_id='{0}'", policy.GetId());
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
                     return;
                 }
 
-                Framework.Database.ExecuteNonQuery( sql );
+                Framework.Database.ExecuteNonQuery(sql);
 
-                _policies.Remove( policy );
+                _policies.Remove(policy);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -155,36 +156,36 @@ namespace LGP.Components.Database.Gateways
         ///   Deletes a policy
         /// </summary>
         /// <param name = "policyid">policy id</param>
-        public void DeletePolicy( int policyid )
+        public void DeletePolicy(int policyid)
         {
             try
             {
-                if( _policies == null )
+                if (_policies == null)
                 {
                     BuildPolicyListing();
                 }
 
-                for( var h = 0; h < _policies.Count; h++ )
+                for (var h = 0; h < _policies.Count; h++)
                 {
-                    if( _policies[ h ].GetId() == policyid )
+                    if (_policies[h].GetId() == policyid)
                     {
-                        var sql = string.Format( "delete from policy where p_id='{0}'" , policyid );
+                        var sql = string.Format("delete from policy where p_id='{0}'", policyid);
 
-                        if( Framework.Database.IsConnected() == false )
+                        if (Framework.Database.IsConnected() == false)
                         {
                             return;
                         }
 
-                        Framework.Database.ExecuteNonQuery( sql );
+                        Framework.Database.ExecuteNonQuery(sql);
 
-                        _policies.RemoveAt( h );
+                        _policies.RemoveAt(h);
                         return;
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -193,26 +194,26 @@ namespace LGP.Components.Database.Gateways
         /// </summary>
         /// <param name = "id">policy id</param>
         /// <returns>IPolicy</returns>
-        public IPolicy GetPolicy( int id )
+        public IPolicy GetPolicy(int id)
         {
             try
             {
-                if( _policies == null )
+                if (_policies == null)
                 {
                     BuildPolicyListing();
                 }
 
-                for( var h = 0; h < _policies.Count; h++ )
+                for (var h = 0; h < _policies.Count; h++)
                 {
-                    if( _policies[ h ].GetId() == id )
+                    if (_policies[h].GetId() == id)
                     {
-                        return _policies[ h ];
+                        return _policies[h];
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
 
             return null;
@@ -223,26 +224,26 @@ namespace LGP.Components.Database.Gateways
         /// </summary>
         /// <param name = "ou">IOu</param>
         /// <returns>IPolicy</returns>
-        public IPolicy GetPolicy( IOu ou )
+        public IPolicy GetPolicy(IOu ou)
         {
             try
             {
-                if( _policies == null )
+                if (_policies == null)
                 {
                     BuildPolicyListing();
                 }
 
-                for( var h = 0; h < _policies.Count; h++ )
+                for (var h = 0; h < _policies.Count; h++)
                 {
-                    if( _policies[ h ].GetOuId() == ou.GetOuId() )
+                    if (_policies[h].GetOuId() == ou.GetOuId())
                     {
-                        return _policies[ h ];
+                        return _policies[h];
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
 
             return null;
@@ -253,36 +254,36 @@ namespace LGP.Components.Database.Gateways
         /// </summary>
         /// <param name = "policy">IPolicy</param>
         /// <returns>IPolicy</returns>
-        public IPolicy GetPredecessorPolicy( IPolicy policy )
+        public IPolicy GetPredecessorPolicy(IPolicy policy)
         {
             try
             {
-                if( _policies == null )
+                if (_policies == null)
                 {
                     BuildPolicyListing();
                 }
 
-                var children = OuGateway.GetChildren( policy.GetOuId() );
+                var children = OuGateway.GetChildren(policy.GetOuId());
 
-                if( children == null )
+                if (children == null)
                 {
                     return null;
                 }
 
-                foreach( var iou in children )
+                foreach (var iou in children)
                 {
-                    for( var h = 0; h < _policies.Count; h++ )
+                    for (var h = 0; h < _policies.Count; h++)
                     {
-                        if( _policies[ h ].GetOuId() == iou.GetOuId() )
+                        if (_policies[h].GetOuId() == iou.GetOuId())
                         {
-                            return _policies[ h ];
+                            return _policies[h];
                         }
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
 
             return null;
@@ -293,36 +294,36 @@ namespace LGP.Components.Database.Gateways
         /// </summary>
         /// <param name = "ou">IOu</param>
         /// <returns>IPolicy</returns>
-        public IPolicy GetPredecessorPolicy( IOu ou )
+        public IPolicy GetPredecessorPolicy(IOu ou)
         {
             try
             {
-                if( _policies == null )
+                if (_policies == null)
                 {
                     BuildPolicyListing();
                 }
 
-                var children = OuGateway.GetChildren( ou.GetOuId() );
+                var children = OuGateway.GetChildren(ou.GetOuId());
 
-                if( children == null )
+                if (children == null)
                 {
                     return null;
                 }
 
-                foreach( var iou in children )
+                foreach (var iou in children)
                 {
-                    for( var h = 0; h < _policies.Count; h++ )
+                    for (var h = 0; h < _policies.Count; h++)
                     {
-                        if( _policies[ h ].GetOuId() == iou.GetOuId() )
+                        if (_policies[h].GetOuId() == iou.GetOuId())
                         {
-                            return _policies[ h ];
+                            return _policies[h];
                         }
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
 
             return null;
@@ -333,33 +334,33 @@ namespace LGP.Components.Database.Gateways
         /// </summary>
         /// <param name = "policy">IPolicy</param>
         /// <returns>IPolicy</returns>
-        public IPolicy GetAncestorPolicy( IPolicy policy )
+        public IPolicy GetAncestorPolicy(IPolicy policy)
         {
             try
             {
-                if( _policies == null )
+                if (_policies == null)
                 {
                     BuildPolicyListing();
                 }
 
-                var parentOu = OuGateway.GetOuParentById( policy.GetOuId() );
+                var parentOu = OuGateway.GetOuParentById(policy.GetOuId());
 
-                if( parentOu == null )
+                if (parentOu == null)
                 {
                     return null;
                 }
 
-                for( var h = 0; h < _policies.Count; h++ )
+                for (var h = 0; h < _policies.Count; h++)
                 {
-                    if( _policies[ h ].GetOuId() == parentOu.GetOuId() )
+                    if (_policies[h].GetOuId() == parentOu.GetOuId())
                     {
-                        return _policies[ h ];
+                        return _policies[h];
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
 
             return null;
@@ -370,28 +371,28 @@ namespace LGP.Components.Database.Gateways
         /// </summary>
         /// <param name = "ou">IOu</param>
         /// <returns>IPolicy</returns>
-        public IPolicy GetAncestorPolicy( IOu ou )
+        public IPolicy GetAncestorPolicy(IOu ou)
         {
             try
             {
-                if( _policies == null )
+                if (_policies == null)
                 {
                     BuildPolicyListing();
                 }
 
                 var parentou = ou.GetParentOuId();
 
-                for( var h = 0; h < _policies.Count; h++ )
+                for (var h = 0; h < _policies.Count; h++)
                 {
-                    if( _policies[ h ].GetOuId() == parentou )
+                    if (_policies[h].GetOuId() == parentou)
                     {
-                        return _policies[ h ];
+                        return _policies[h];
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
 
             return null;
@@ -401,9 +402,9 @@ namespace LGP.Components.Database.Gateways
         ///   Gets a list of all policies
         /// </summary>
         /// <returns>List IPolicy</returns>
-        public List< IPolicy > GetPolicies()
+        public List<IPolicy> GetPolicies()
         {
-            if( _policies == null )
+            if (_policies == null)
             {
                 BuildPolicyListing();
             }
@@ -416,26 +417,26 @@ namespace LGP.Components.Database.Gateways
         /// </summary>
         /// <param name = "ou">IOu</param>
         /// <returns>IPolicy</returns>
-        public IPolicy GetPolicyByOu( IOu ou )
+        public IPolicy GetPolicyByOu(IOu ou)
         {
             try
             {
-                if( _policies == null )
+                if (_policies == null)
                 {
                     BuildPolicyListing();
                 }
 
-                for( var h = 0; h < _policies.Count; h++ )
+                for (var h = 0; h < _policies.Count; h++)
                 {
-                    if( _policies[ h ].GetOuId() == ou.GetOuId() )
+                    if (_policies[h].GetOuId() == ou.GetOuId())
                     {
-                        return _policies[ h ];
+                        return _policies[h];
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
 
             return null;
@@ -448,37 +449,37 @@ namespace LGP.Components.Database.Gateways
         {
             try
             {
-                var sql = string.Format( "select * from policy" );
+                var sql = string.Format("select * from policy");
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
                     return;
                 }
 
-                var policies = Framework.Database.ExecuteQuery( sql );
+                var policies = Framework.Database.ExecuteQuery(sql);
 
-                var policiesTable = policies.Tables[ 0 ];
+                var policiesTable = policies.Tables[0];
 
-                if( policiesTable.Rows.Count == 0 )
+                if (policiesTable.Rows.Count == 0)
                 {
                     return;
                 }
-                foreach( DataRow policyRow in policiesTable.Rows )
+                foreach (DataRow policyRow in policiesTable.Rows)
                 {
-                    var pid = ( int ) policyRow[ "p_id" ];
-                    var created = ( string ) policyRow[ "p_created" ];
-                    var edited = ( string ) policyRow[ "p_edited" ];
-                    var enabled = ( int ) policyRow[ "p_enabled" ];
-                    var dsl = ( string ) policyRow[ "p_dsl" ];
-                    var ouid = ( int ) policyRow[ "p_ou_id" ];
-                    var version = ( string ) policyRow[ "p_version" ];
+                    var pid = (int)policyRow["p_id"];
+                    var created = (string)policyRow["p_created"];
+                    var edited = (string)policyRow["p_edited"];
+                    var enabled = (int)policyRow["p_enabled"];
+                    var dsl = (string)policyRow["p_dsl"];
+                    var ouid = (int)policyRow["p_ou_id"];
+                    var version = (string)policyRow["p_version"];
 
 
                     var newDbEntry = true;
 
-                    for( var y = 0; y < _policies.Count; y++ )
+                    for (var y = 0; y < _policies.Count; y++)
                     {
-                        if( _policies[ y ].GetId() != pid )
+                        if (_policies[y].GetId() != pid)
                         {
                             continue;
                         }
@@ -487,63 +488,64 @@ namespace LGP.Components.Database.Gateways
                         break;
                     }
 
-                    if( !newDbEntry )
+                    if (!newDbEntry)
                     {
                         continue;
                     }
 
-                    var policy = new Policy( pid , created , edited , enabled , dsl , ouid , version );
-                    _policies.Add( policy );
+                    var policy = new Policy(pid, created, edited, enabled, dsl, ouid, version);
+                    _policies.Add(policy);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
         private static void BuildPolicyListing()
         {
-            _policies = new List< IPolicy >();
+            _policies = new List<IPolicy>();
 
             try
             {
-                var sql = string.Format( "select * from policy" );
+                var sql = string.Format("select * from policy");
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
                     return;
                 }
 
-                var policies = Framework.Database.ExecuteQuery( sql );
+                var policies = Framework.Database.ExecuteQuery(sql);
 
-                var policiesTable = policies.Tables[ 0 ];
+                var policiesTable = policies.Tables[0];
 
-                if( policiesTable.Rows.Count == 0 )
+                if (policiesTable.Rows.Count == 0)
                 {
                     return;
                 }
 
-                foreach( DataRow policyRow in policiesTable.Rows )
+                foreach (DataRow policyRow in policiesTable.Rows)
                 {
-                    var pid = ( int ) policyRow[ "p_id" ];
-                    var created = ( string ) policyRow[ "p_created" ];
-                    var edited = ( string ) policyRow[ "p_edited" ];
-                    var enabled = ( int ) policyRow[ "p_enabled" ];
-                    var dsl = ( string ) policyRow[ "p_dsl" ];
-                    var ouid = ( int ) policyRow[ "p_ou_id" ];
-                    var version = ( string ) policyRow[ "p_version" ];
-                    var policy = new Policy( pid , created , edited , enabled , dsl , ouid , version );
-                    _policies.Add( policy );
+                    var pid = (int)policyRow["p_id"];
+                    var created = (string)policyRow["p_created"];
+                    var edited = (string)policyRow["p_edited"];
+                    var enabled = (int)policyRow["p_enabled"];
+                    var dsl = (string)policyRow["p_dsl"];
+                    var ouid = (int)policyRow["p_ou_id"];
+                    var version = (string)policyRow["p_version"];
+                    var policy = new Policy(pid, created, edited, enabled, dsl, ouid, version);
+                    _policies.Add(policy);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
         #endregion
     }
 }
+// jscpd:ignore-end

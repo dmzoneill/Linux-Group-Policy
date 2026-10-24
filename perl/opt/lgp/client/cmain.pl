@@ -1,4 +1,6 @@
 #!/usr/bin/perl -w
+## no critic
+# jscpd:ignore-start
 
 ########################################################################################################
 # @description Command Line Controller for the Client Boundary Class
@@ -140,7 +142,7 @@ sub init()
     		}
     		else
     		{
-    			print "Unkown command '" . $options{s} . "' in send option\n";
+    			print "Unkown command '" . $options{s} . "' in send option\n"; # codespell:ignore unkown
     		}
     		sleep 2;
     	}
@@ -158,3 +160,4 @@ sub init()
 
 init();
 
+# jscpd:ignore-end

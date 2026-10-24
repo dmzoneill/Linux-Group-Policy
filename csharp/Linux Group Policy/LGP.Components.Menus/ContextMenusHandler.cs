@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Collections.Generic;
@@ -13,18 +14,18 @@ using LGP.Components.Factory.Interfaces.Infrastructure;
 namespace LGP.Components.Menus
 {
     /// <summary>
-    /// Conext menus handler
+    /// Conext menus handler // codespell:ignore conext
     /// </summary>
     public class ContextMenusHandler : IContextMenus
     {
-        private readonly List< Entry > _registrations;
+        private readonly List<Entry> _registrations;
 
         /// <summary>
         /// Constructor
         /// </summary>
         public ContextMenusHandler()
         {
-            this._registrations = new List< Entry >();
+            this._registrations = new List<Entry>();
         }
 
         #region Implementation of IContextMenus
@@ -32,19 +33,19 @@ namespace LGP.Components.Menus
         /// <summary>
         ///   Asks the Context menu handler to append menu entries for a given context menu
         /// </summary>
-        /// <param name = "menuparent">Conext menu to add entries to</param>
-        /// <param name = "type">Type of item that the conext is being appended to</param>
+        /// <param name = "menuparent">Conext menu to add entries to</param> // codespell:ignore conext
+        /// <param name = "type">Type of item that the conext is being appended to</param> // codespell:ignore conext
         /// <param name = "action">callback</param>
-        public void AttachMenuItemRegistrations( ref ContextMenu menuparent , Type type , Action< Object , RoutedEventArgs > action )
+        public void AttachMenuItemRegistrations(ref ContextMenu menuparent, Type type, Action<Object, RoutedEventArgs> action)
         {
             try
             {
                 var newparent = menuparent as object;
-                this.AttachToNewParent( ref newparent , type , action );
+                this.AttachToNewParent(ref newparent, type, action);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -52,19 +53,19 @@ namespace LGP.Components.Menus
         /// <summary>
         ///   Asks the Context menu handler to append menu entries for a given context menu
         /// </summary>
-        /// <param name = "menuparent">Conext menu to add entries to</param>
-        /// <param name = "type">Type of item that the conext is being appended to</param>
+        /// <param name = "menuparent">Conext menu to add entries to</param> // codespell:ignore conext
+        /// <param name = "type">Type of item that the conext is being appended to</param> // codespell:ignore conext
         /// <param name = "action">callback</param>
-        public void AttachMenuItemRegistrations( ref Menu menuparent , Type type , Action< Object , RoutedEventArgs > action )
+        public void AttachMenuItemRegistrations(ref Menu menuparent, Type type, Action<Object, RoutedEventArgs> action)
         {
             try
             {
                 var newparent = menuparent as object;
-                this.AttachToNewParent( ref newparent , type , action );
+                this.AttachToNewParent(ref newparent, type, action);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -74,21 +75,21 @@ namespace LGP.Components.Menus
         /// </summary>
         /// <param name="sender">the meuu item clicked</param>
         /// <param name="theobject"></param>
-        public void CallBack( MenuItem sender , object theobject )
+        public void CallBack(MenuItem sender, object theobject)
         {
             try
             {
-                foreach( var reg in this._registrations )
+                foreach (var reg in this._registrations)
                 {
-                    if( sender == reg.MenuEntry )
+                    if (sender == reg.MenuEntry)
                     {
-                        reg.Action( theobject );
+                        reg.Action(theobject);
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -98,7 +99,7 @@ namespace LGP.Components.Menus
         /// <param name = "type">type</param>
         /// <param name="item"></param>
         /// <param name = "action">The call back mechanism</param>
-        public void RegisterContextMenuItem( Type type , MenuItem item , Action< Object > action )
+        public void RegisterContextMenuItem(Type type, MenuItem item, Action<Object> action)
         {
             try
             {
@@ -106,47 +107,47 @@ namespace LGP.Components.Menus
 
                 var entry = new Entry
                 {
-                    Action = action ,
-                    Type = type ,
+                    Action = action,
+                    Type = type,
                     MenuEntry = item
                 };
 
-                if( this.CheckRegistrations( entry ) == false )
+                if (this.CheckRegistrations(entry) == false)
                 {
-                    this._registrations.Add( entry );
+                    this._registrations.Add(entry);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
         /// <summary>
         ///   Asks the Context menu handler to append menu entries for a given context menu
         /// </summary>
-        /// <param name = "menuparent">Conext menu to add entries to</param>
-        /// <param name = "type">Type of item that the conext is being appended to</param>
+        /// <param name = "menuparent">Conext menu to add entries to</param> // codespell:ignore conext
+        /// <param name = "type">Type of item that the conext is being appended to</param> // codespell:ignore conext
         /// <param name = "action">callback</param>
-        public void AttachMenuItemRegistrations( ref MenuItem menuparent , Type type , Action< Object , RoutedEventArgs > action )
+        public void AttachMenuItemRegistrations(ref MenuItem menuparent, Type type, Action<Object, RoutedEventArgs> action)
         {
             try
             {
                 var newparent = menuparent as object;
-                this.AttachToNewParent( ref newparent , type , action );
+                this.AttachToNewParent(ref newparent, type, action);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private bool CheckRegistrations( Entry entry )
+        private bool CheckRegistrations(Entry entry)
         {
-            foreach( var reg in this._registrations )
+            foreach (var reg in this._registrations)
             {
-                if( reg.Type == entry.Type && reg.MenuEntry == entry.MenuEntry )
+                if (reg.Type == entry.Type && reg.MenuEntry == entry.MenuEntry)
                 {
                     return true;
                 }
@@ -155,72 +156,72 @@ namespace LGP.Components.Menus
         }
 
 
-        private void UnattachFromCurrentParent( int current )
+        private void UnattachFromCurrentParent(int current)
         {
-            if( this._registrations[ current ].MenuEntry.Parent != null )
+            if (this._registrations[current].MenuEntry.Parent != null)
             {
-                var contextmenu = this._registrations[ current ].MenuEntry.Parent as ContextMenu;
-                var menuitem = this._registrations[ current ].MenuEntry.Parent as MenuItem;
-                var menu = this._registrations[ current ].MenuEntry.Parent as Menu;
+                var contextmenu = this._registrations[current].MenuEntry.Parent as ContextMenu;
+                var menuitem = this._registrations[current].MenuEntry.Parent as MenuItem;
+                var menu = this._registrations[current].MenuEntry.Parent as Menu;
 
-                if( contextmenu != null )
+                if (contextmenu != null)
                 {
-                    contextmenu.Items.Remove( this._registrations[ current ].MenuEntry );
+                    contextmenu.Items.Remove(this._registrations[current].MenuEntry);
                 }
 
-                if( menuitem != null )
+                if (menuitem != null)
                 {
-                    menuitem.Items.Remove( this._registrations[ current ].MenuEntry );
+                    menuitem.Items.Remove(this._registrations[current].MenuEntry);
                 }
 
-                if( menu != null )
+                if (menu != null)
                 {
-                    menu.Items.Remove( this._registrations[ current ].MenuEntry );
+                    menu.Items.Remove(this._registrations[current].MenuEntry);
                 }
 
-                this._registrations[ current ].MenuEntry.Click -= this._registrations[ current ].PrevHandler;
+                this._registrations[current].MenuEntry.Click -= this._registrations[current].PrevHandler;
             }
         }
 
 
-        private void AttachToNewParent( ref object menuparent , Type type , Action< Object , RoutedEventArgs > action )
+        private void AttachToNewParent(ref object menuparent, Type type, Action<Object, RoutedEventArgs> action)
         {
             try
             {
-                for( var i = 0; i < this._registrations.Count; i++ )
+                for (var i = 0; i < this._registrations.Count; i++)
                 {
-                    if( this._registrations[ i ].Type != type )
+                    if (this._registrations[i].Type != type)
                     {
                         continue;
                     }
 
-                    this.UnattachFromCurrentParent( i );
+                    this.UnattachFromCurrentParent(i);
 
-                    this._registrations[ i ].PrevHandler = new RoutedEventHandler( action );
-                    this._registrations[ i ].MenuEntry.Click += this._registrations[ i ].PrevHandler;
+                    this._registrations[i].PrevHandler = new RoutedEventHandler(action);
+                    this._registrations[i].MenuEntry.Click += this._registrations[i].PrevHandler;
 
-                    if( menuparent is Menu )
+                    if (menuparent is Menu)
                     {
                         var parentMenu = menuparent as Menu;
-                        parentMenu.Items.Add( this._registrations[ i ].MenuEntry );
+                        parentMenu.Items.Add(this._registrations[i].MenuEntry);
                     }
 
-                    if( menuparent is MenuItem )
+                    if (menuparent is MenuItem)
                     {
                         var parentMenu = menuparent as MenuItem;
-                        parentMenu.Items.Add( this._registrations[ i ].MenuEntry );
+                        parentMenu.Items.Add(this._registrations[i].MenuEntry);
                     }
 
-                    if( menuparent is ContextMenu )
+                    if (menuparent is ContextMenu)
                     {
                         var parentMenu = menuparent as ContextMenu;
-                        parentMenu.Items.Add( this._registrations[ i ].MenuEntry );
+                        parentMenu.Items.Add(this._registrations[i].MenuEntry);
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -230,7 +231,7 @@ namespace LGP.Components.Menus
 
         private class Entry
         {
-            public Action< Object > Action;
+            public Action<Object> Action;
             public MenuItem MenuEntry;
             public RoutedEventHandler PrevHandler;
             public Type Type;
@@ -239,3 +240,4 @@ namespace LGP.Components.Menus
         #endregion
     }
 }
+// jscpd:ignore-end

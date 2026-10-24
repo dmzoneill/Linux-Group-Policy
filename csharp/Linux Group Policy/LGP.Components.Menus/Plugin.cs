@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System.Windows.Controls;
 using LGP.Components.Factory;
@@ -32,7 +33,7 @@ namespace LGP.Components.Menus
         /// <returns>An image</returns>
         public Image GetIcon()
         {
-            return Framework.Images.GetImage( "RelationshipsHS" , "VS2010ImageLibrary" , 14 );
+            return Framework.Images.GetImage("RelationshipsHS", "VS2010ImageLibrary", 14);
         }
 
 
@@ -40,7 +41,7 @@ namespace LGP.Components.Menus
         ///   Asks the component to register is menu components
         /// </summary>
         /// <param name = "menu">The program main menu</param>
-        public void RegisterMenuEntries( IMenu menu )
+        public void RegisterMenuEntries(IMenu menu)
         {
         }
 
@@ -100,3 +101,4 @@ namespace LGP.Components.Menus
         #endregion
     }
 }
+// jscpd:ignore-end

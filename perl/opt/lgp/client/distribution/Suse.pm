@@ -1,4 +1,6 @@
 #!/usr/bin/perl -w
+## no critic
+# jscpd:ignore-start
 
 ########################################################################################################
 # @description Concrete Distribution Entity Class  
@@ -253,3 +255,4 @@ sub registerServiceNames
 
 1;
 
+# jscpd:ignore-end

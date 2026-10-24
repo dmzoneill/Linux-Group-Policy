@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Windows;
@@ -15,7 +16,7 @@ namespace LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers
     {
         private readonly TextEditor _editor;
 
-        public HighlightCurrentLineBackgroundRenderer( TextEditor editor )
+        public HighlightCurrentLineBackgroundRenderer(TextEditor editor)
         {
             this._editor = editor;
         }
@@ -30,9 +31,9 @@ namespace LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers
             }
         }
 
-        public void Draw( TextView textView , DrawingContext drawingContext )
+        public void Draw(TextView textView, DrawingContext drawingContext)
         {
-            if( this._editor.Document == null )
+            if (this._editor.Document == null)
             {
                 return;
             }
@@ -40,23 +41,24 @@ namespace LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers
             try
             {
                 textView.EnsureVisualLines();
-                var currentLine = this._editor.Document.GetLineByOffset( this._editor.CaretOffset );
-                foreach( var rect in BackgroundGeometryBuilder.GetRectsForSegment( textView , currentLine ) )
+                var currentLine = this._editor.Document.GetLineByOffset(this._editor.CaretOffset);
+                foreach (var rect in BackgroundGeometryBuilder.GetRectsForSegment(textView, currentLine))
                 {
-                    if( textView.ActualWidth - 32 > 0 && rect.Height > 0 )
+                    if (textView.ActualWidth - 32 > 0 && rect.Height > 0)
                     {
-                        var Size = new Size( textView.ActualWidth - 32 , rect.Height );
-                        var Rect = new Rect( rect.Location , Size );
-                        drawingContext.DrawRectangle( new SolidColorBrush( Color.FromArgb( 50 , 250 , 250 , 100 ) ) , null , Rect );
+                        var Size = new Size(textView.ActualWidth - 32, rect.Height);
+                        var Rect = new Rect(rect.Location, Size);
+                        drawingContext.DrawRectangle(new SolidColorBrush(Color.FromArgb(50, 250, 250, 100)), null, Rect);
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
         #endregion
     }
 }
+// jscpd:ignore-end

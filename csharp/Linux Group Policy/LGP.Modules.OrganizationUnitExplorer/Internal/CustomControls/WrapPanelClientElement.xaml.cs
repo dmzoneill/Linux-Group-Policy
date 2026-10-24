@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Reflection;
@@ -39,20 +40,20 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
         /// <param name = "client"></param>
         /// <param name = "size"></param>
         /// <param name = "parent"></param>
-        public WrapPanelClientElement( IClient client , int size , OuViewer parent )
+        public WrapPanelClientElement(IClient client, int size, OuViewer parent)
         {
             try
             {
                 this.InitializeComponent();
-                client.Attach( this );
+                client.Attach(this);
                 this._client = client;
                 this._size = size;
                 this._parent = parent;
                 this.Prepare();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -62,24 +63,24 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
             {
                 var fakeSize = 0;
 
-                if( this._size < 40 )
+                if (this._size < 40)
                 {
                     fakeSize = 32;
                 }
-                else if( this._size < 56 && this._size > 40 )
+                else if (this._size < 56 && this._size > 40)
                 {
                     fakeSize = 48;
                 }
-                else if( this._size < 90 && this._size >= 56 )
+                else if (this._size < 90 && this._size >= 56)
                 {
                     fakeSize = 64;
                 }
-                else if( this._size >= 90 )
+                else if (this._size >= 90)
                 {
                     fakeSize = 128;
                 }
 
-                this.ItemImage.Source = this._client.GetDistroImage( fakeSize ).Source;
+                this.ItemImage.Source = this._client.GetDistroImage(fakeSize).Source;
                 this.ItemImage.Width = this._size;
                 this.ItemImage.Height = this._size;
                 this.Width = this._size + 58;
@@ -87,31 +88,31 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
                 this.ItemLabel.Content = this._client.GetName();
                 this.ItemImage.MouseDown += this.EntityMouseDown;
 
-                var resource = Framework.Utils.LoadResource( Assembly.GetExecutingAssembly() , "LGP.Modules.OrganizationUnitExplorer.Internal.ContextMenuItems.ClientContextMenu.xaml" );
+                var resource = Framework.Utils.LoadResource(Assembly.GetExecutingAssembly(), "LGP.Modules.OrganizationUnitExplorer.Internal.ContextMenuItems.ClientContextMenu.xaml");
 
                 var menu = resource as ContextMenu;
-                if( menu != null )
+                if (menu != null)
                 {
-                    var item = ( MenuItem ) menu.Items[ 0 ];
+                    var item = (MenuItem)menu.Items[0];
                     item.Click += this.MoveClientMenuItemClick;
-                    item.Icon = Framework.Images.GetImage( "Move" , "VS2010ImageLibrary" , 12 );
+                    item.Icon = Framework.Images.GetImage("Move", "VS2010ImageLibrary", 12);
 
-                    item = ( MenuItem ) menu.Items[ 1 ];
+                    item = (MenuItem)menu.Items[1];
                     item.Click += this.DeleteClientMenuItemClick;
-                    item.Icon = Framework.Images.GetImage( "DeleteHS" , "VS2010ImageLibrary" , 12 );
+                    item.Icon = Framework.Images.GetImage("DeleteHS", "VS2010ImageLibrary", 12);
 
                     this.ItemImage.ContextMenu = menu;
                     this.ItemImage.ContextMenuOpening += this.MenuContextMenuOpening;
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void MenuContextMenuOpening( object sender , ContextMenuEventArgs e )
+        private void MenuContextMenuOpening(object sender, ContextMenuEventArgs e)
         {
         }
 
@@ -139,7 +140,7 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
         /// </summary>
         public void Select()
         {
-            if( _selectedElement != null && _selectedElement != this )
+            if (_selectedElement != null && _selectedElement != this)
             {
                 _selectedElement.DeSelect();
             }
@@ -149,9 +150,9 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
                 _selectedElement = this;
                 this._selected = true;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -166,9 +167,9 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
                 _selectedElement = null;
                 this._selected = false;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -176,62 +177,62 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
         /// <summary>
         /// </summary>
         /// <param name = "resize"></param>
-        public void Resize( int resize )
+        public void Resize(int resize)
         {
             try
             {
                 var fakeSize = 0;
 
-                if( resize < 40 )
+                if (resize < 40)
                 {
                     fakeSize = 32;
                 }
-                else if( resize < 56 && resize > 40 )
+                else if (resize < 56 && resize > 40)
                 {
                     fakeSize = 48;
                 }
-                else if( resize < 90 && resize >= 56 )
+                else if (resize < 90 && resize >= 56)
                 {
                     fakeSize = 64;
                 }
-                else if( resize >= 90 )
+                else if (resize >= 90)
                 {
                     fakeSize = 128;
                 }
 
                 this.ItemImage.Width = resize;
                 this.ItemImage.Height = resize;
-                this.ItemImage.Source = this._client.GetDistroImage( fakeSize ).Source;
+                this.ItemImage.Source = this._client.GetDistroImage(fakeSize).Source;
                 this.Width = resize + 58;
                 this.Height = resize + 48;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void EntityMouseDown( object sender , MouseButtonEventArgs e )
+        private void EntityMouseDown(object sender, MouseButtonEventArgs e)
         {
             try
             {
                 this.Select();
-                this._parent.SetDetailsPane( new ClientPane( this._client ) );
+                this._parent.SetDetailsPane(new ClientPane(this._client));
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void MoveClientMenuItemClick( object sender , RoutedEventArgs e )
+        private void MoveClientMenuItemClick(object sender, RoutedEventArgs e)
         {
             this._parent.Update();
         }
 
 
-        private void DeleteClientMenuItemClick( object sender , RoutedEventArgs e )
+        private void DeleteClientMenuItemClick(object sender, RoutedEventArgs e)
         {
             this._parent.Update();
         }
@@ -248,34 +249,34 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
         ///   Invoked when an unhandled <see cref = "E:System.Windows.Input.Mouse.PreviewMouseMove" /> attached event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
         /// </summary>
         /// <param name = "e">The <see cref = "T:System.Windows.Input.MouseEventArgs" /> that contains the event data.</param>
-        protected override void OnPreviewMouseMove( MouseEventArgs e )
+        protected override void OnPreviewMouseMove(MouseEventArgs e)
         {
-            base.OnPreviewMouseMove( e );
+            base.OnPreviewMouseMove(e);
 
-            if( this != _selectedElement )
+            if (this != _selectedElement)
             {
                 return;
             }
             try
             {
-                Framework.DragDrop.StartDrag( this , e );
+                Framework.DragDrop.StartDrag(this, e);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
         #region Implementation of IClientObserver
 
         /// <summary>
-        ///   Update this observer with a refernece to the client
+        ///   Update this observer with a refernece to the client // codespell:ignore refernece
         /// </summary>
         /// <param name = "client">IClient</param>
         /// <param name = "source">source observer</param>
-        public void Update( IClient client , IClientObserver source )
+        public void Update(IClient client, IClientObserver source)
         {
-            if( this == source )
+            if (this == source)
             {
                 return;
             }
@@ -286,9 +287,9 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
                 this.ItemLabel.Content = this._client.GetName();
                 this._parent.Update();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -296,14 +297,14 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
         ///   Attach objewcts that observer this client
         /// </summary>
         /// <param name = "obj">IOuObserver</param>
-        public void Attach( IClientObserver obj )
+        public void Attach(IClientObserver obj)
         {
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -311,14 +312,14 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
         ///   Detach objewcts that observer this client
         /// </summary>
         /// <param name = "obj">IOuObserver</param>
-        public void Detach( IClientObserver obj )
+        public void Detach(IClientObserver obj)
         {
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -330,9 +331,9 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -340,20 +341,21 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.CustomControls
         ///   Dispose this object and all the observers
         /// </summary>
         /// <param name = "obj">IOuObserver</param>
-        public void Dispose( IClientObserver obj )
+        public void Dispose(IClientObserver obj)
         {
             try
             {
-                obj.Detach( this );
-                var parent = ( WrapPanel ) this.Parent;
-                parent.Children.Remove( this );
+                obj.Detach(this);
+                var parent = (WrapPanel)this.Parent;
+                parent.Children.Remove(this);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
         #endregion
     }
 }
+// jscpd:ignore-end

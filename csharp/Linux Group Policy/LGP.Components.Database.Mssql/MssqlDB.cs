@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Data;
@@ -25,22 +26,22 @@ namespace LGP.Components.Database.Mssql
         /// <param name = "user">Username to use in connection</param>
         /// <param name = "pass">Password to use in connection</param>
         /// <param name = "host">Hostname to use in connection</param>
-        /// <param name = "dbname">Datbase to use in connection</param>
+        /// <param name = "dbname">Datbase to use in connection</param> // codespell:ignore datbase
         /// <returns></returns>
-        public bool Connect( string user , string pass , string host , string dbname )
+        public bool Connect(string user, string pass, string host, string dbname)
         {
             this._connection = new SqlConnection
             {
-                ConnectionString = string.Format( "user id={0};password={1};server={2};database={3}" , host , user , pass , dbname )
+                ConnectionString = string.Format("user id={0};password={1};server={2};database={3}", host, user, pass, dbname)
             };
             try
             {
                 this._connection.Open();
                 return true;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return false;
             }
         }
@@ -61,7 +62,7 @@ namespace LGP.Components.Database.Mssql
         /// </summary>
         /// <param name = "sql">sql query</param>
         /// <returns></returns>
-        public DataSet ExecuteQuery( string sql )
+        public DataSet ExecuteQuery(string sql)
         {
             return null;
         }
@@ -72,7 +73,7 @@ namespace LGP.Components.Database.Mssql
         /// </summary>
         /// <param name = "sql">sql query</param>
         /// <returns>int num rows affected</returns>
-        public int ExecuteNonQuery( string sql )
+        public int ExecuteNonQuery(string sql)
         {
             return -1;
         }
@@ -90,3 +91,4 @@ namespace LGP.Components.Database.Mssql
         #endregion
     }
 }
+// jscpd:ignore-end

@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Collections.Generic;
@@ -21,8 +22,8 @@ namespace LGP.Controls
     /// </summary>
     public partial class Settings : ISettings
     {
-        private List< UserControl > _controls;
-        private List< TreeViewItem > _items;
+        private List<UserControl> _controls;
+        private List<TreeViewItem> _items;
 
         /// <summary>
         ///   Constructor
@@ -34,9 +35,9 @@ namespace LGP.Controls
                 this.InitializeComponent();
                 this.Prepare();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -45,39 +46,39 @@ namespace LGP.Controls
         /// Constructor
         /// </summary>
         /// <param name="tevent">PreferencesEvent</param>
-        public Settings( PreferencesEvent tevent )
+        public Settings(PreferencesEvent tevent)
         {
             try
             {
                 this.InitializeComponent();
                 this.Prepare();
-                this.SelectPreferencesControl( tevent );
+                this.SelectPreferencesControl(tevent);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void SelectPreferencesControl( PreferencesEvent tevent )
+        private void SelectPreferencesControl(PreferencesEvent tevent)
         {
             try
             {
-                foreach( var control in this._controls )
+                foreach (var control in this._controls)
                 {
-                    var controltype = ( ( IPreferences ) control ).GetControlType();
+                    var controltype = ((IPreferences)control).GetControlType();
 
-                    if( controltype != tevent.Type )
+                    if (controltype != tevent.Type)
                     {
                         continue;
                     }
 
-                    foreach( var item in this._items )
+                    foreach (var item in this._items)
                     {
                         var ns = control.GetType().Namespace;
 
-                        if( ns == null || ns.CompareTo( item.Tag.ToString() ) != 0 )
+                        if (ns == null || ns.CompareTo(item.Tag.ToString()) != 0)
                         {
                             continue;
                         }
@@ -87,9 +88,9 @@ namespace LGP.Controls
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -100,57 +101,60 @@ namespace LGP.Controls
             {
                 var color = new Color
                 {
-                    A = 100 , B = 255 , G = 255 , R = 255
+                    A = 100,
+                    B = 255,
+                    G = 255,
+                    R = 255
                 };
 
-                this.Background = new SolidColorBrush( color );
-                this._items = new List< TreeViewItem >();
-                this._controls = new List< UserControl >();
+                this.Background = new SolidColorBrush(color);
+                this._items = new List<TreeViewItem>();
+                this._controls = new List<UserControl>();
                 this.treeView1.Items.Clear();
 
                 this.dragBar.PreviewMouseLeftButtonDown += this.ChromeLessWindowSpaceMouseLeftButtonDown;
 
-                foreach( var pVisual in Framework.PreferencesPanes )
+                foreach (var pVisual in Framework.PreferencesPanes)
                 {
                     try
                     {
-                        var module = ( IPreferences ) Framework.LibraryHandler.CreateObject( pVisual );
-                        this._controls.Add( ( UserControl ) module );
-                        this.AddOption( module );
+                        var module = (IPreferences)Framework.LibraryHandler.CreateObject(pVisual);
+                        this._controls.Add((UserControl)module);
+                        this.AddOption(module);
                     }
-                    catch( Exception error )
+                    catch (Exception error)
                     {
-                        Framework.EventBus.Publish( error );
+                        Framework.EventBus.Publish(error);
                     }
                 }
 
                 var thisprefs = new Preferences();
-                this._controls.Add( thisprefs );
-                this.AddOption( thisprefs , thisprefs.GetType().Namespace , thisprefs.GetName() , Framework.Images.ConvertBitmapToImage( Properties.Images.lgpico1 , 14 ) );
+                this._controls.Add(thisprefs);
+                this.AddOption(thisprefs, thisprefs.GetType().Namespace, thisprefs.GetName(), Framework.Images.ConvertBitmapToImage(Properties.Images.lgpico1, 14));
 
                 this.OrganizeNodes();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void CloseButtonClick( object sender , RoutedEventArgs e )
+        private void CloseButtonClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                foreach( var control in this._controls )
+                foreach (var control in this._controls)
                 {
-                    var prefs = ( IPreferences ) control;
+                    var prefs = (IPreferences)control;
                     prefs.Save();
                 }
                 this.Close();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -160,16 +164,16 @@ namespace LGP.Controls
         /// </summary>
         /// <param name = "sender">The object that raised the click event</param>
         /// <param name = "e">Event arguments associated with the event</param>
-        private void ChromeLessWindowSpaceMouseLeftButtonDown( object sender , MouseButtonEventArgs e )
+        private void ChromeLessWindowSpaceMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             try
             {
                 this.Cursor = Cursors.SizeAll;
                 this.DragMove();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
             this.Cursor = Cursors.Arrow;
         }
@@ -180,13 +184,13 @@ namespace LGP.Controls
             var start = 0;
             var end = this._items.Count;
 
-            while( start < end )
+            while (start < end)
             {
-                var tag = this._items[ start ].Tag.ToString();
+                var tag = this._items[start].Tag.ToString();
 
-                if( tag.Contains( "." ) )
+                if (tag.Contains("."))
                 {
-                    this.CheckParents( tag );
+                    this.CheckParents(tag);
                 }
 
                 end = this._items.Count;
@@ -197,24 +201,24 @@ namespace LGP.Controls
             start = 0;
             end = this._items.Count;
 
-            while( start < end )
+            while (start < end)
             {
-                var item = this._items[ start ];
+                var item = this._items[start];
                 item.IsExpanded = true;
                 var itemTag = item.Tag.ToString();
 
-                if( itemTag.Contains( "." ) )
+                if (itemTag.Contains("."))
                 {
-                    itemTag = itemTag.Substring( 0 , itemTag.LastIndexOf( "." ) );
+                    itemTag = itemTag.Substring(0, itemTag.LastIndexOf("."));
 
-                    for( var j = 0; j < end; j++ )
+                    for (var j = 0; j < end; j++)
                     {
-                        var iteritem = this._items[ j ];
+                        var iteritem = this._items[j];
                         var iteritemTag = iteritem.Tag.ToString();
 
-                        if( itemTag.CompareTo( iteritemTag ) == 0 )
+                        if (itemTag.CompareTo(iteritemTag) == 0)
                         {
-                            iteritem.Items.Add( item );
+                            iteritem.Items.Add(item);
                         }
                     }
                 }
@@ -225,13 +229,13 @@ namespace LGP.Controls
             start = 0;
             end = this._items.Count;
 
-            while( start < end )
+            while (start < end)
             {
-                var tag = this._items[ start ].Tag.ToString();
+                var tag = this._items[start].Tag.ToString();
 
-                if( !tag.Contains( "." ) )
+                if (!tag.Contains("."))
                 {
-                    this.treeView1.Items.Add( this._items[ start ] );
+                    this.treeView1.Items.Add(this._items[start]);
                 }
 
                 start++;
@@ -239,16 +243,16 @@ namespace LGP.Controls
         }
 
 
-        private void CheckParents( string tag )
+        private void CheckParents(string tag)
         {
-            var parent = tag.Substring( 0 , tag.LastIndexOf( "." ) );
+            var parent = tag.Substring(0, tag.LastIndexOf("."));
 
-            if( parent.Contains( "." ) )
+            if (parent.Contains("."))
             {
-                this.CheckParents( parent );
+                this.CheckParents(parent);
             }
 
-            if( this.Exists( parent ) == false )
+            if (this.Exists(parent) == false)
             {
                 var item = new TreeViewItem
                 {
@@ -258,33 +262,33 @@ namespace LGP.Controls
 
                 var panel = new StackPanel
                 {
-                    Orientation = Orientation.Horizontal ,
-                    Margin = new Thickness( 2 )
+                    Orientation = Orientation.Horizontal,
+                    Margin = new Thickness(2)
                 };
 
-                var block = new TextBlock( new Run( " " + parent.Substring( parent.IndexOf( "." ) + 1 ) ) );
+                var block = new TextBlock(new Run(" " + parent.Substring(parent.IndexOf(".") + 1)));
 
-                var img = Framework.Images.ConvertBitmapToImage( Properties.Images.lgpico1 , 14 );
+                var img = Framework.Images.ConvertBitmapToImage(Properties.Images.lgpico1, 14);
                 img.MaxHeight = 14;
                 img.MaxWidth = 14;
 
-                panel.Children.Add( img );
-                panel.Children.Add( block );
+                panel.Children.Add(img);
+                panel.Children.Add(block);
 
                 item.Header = panel;
 
-                this._items.Add( item );
+                this._items.Add(item);
             }
         }
 
 
-        private bool Exists( string name )
+        private bool Exists(string name)
         {
-            for( var y = 0; y < this._items.Count; y++ )
+            for (var y = 0; y < this._items.Count; y++)
             {
-                var tag = this._items[ y ].Tag.ToString();
+                var tag = this._items[y].Tag.ToString();
 
-                if( tag.CompareTo( name ) == 0 )
+                if (tag.CompareTo(name) == 0)
                 {
                     return true;
                 }
@@ -294,7 +298,7 @@ namespace LGP.Controls
         }
 
 
-        private void AddOption( IPreferences module )
+        private void AddOption(IPreferences module)
         {
             try
             {
@@ -306,31 +310,31 @@ namespace LGP.Controls
 
                 var panel = new StackPanel
                 {
-                    Orientation = Orientation.Horizontal ,
-                    Margin = new Thickness( 2 )
+                    Orientation = Orientation.Horizontal,
+                    Margin = new Thickness(2)
                 };
 
-                var block = new TextBlock( new Run( " " + module.GetName() ) );
+                var block = new TextBlock(new Run(" " + module.GetName()));
 
                 var img = module.GetIcon();
                 img.MaxHeight = 14;
                 img.MaxWidth = 14;
 
-                panel.Children.Add( img );
-                panel.Children.Add( block );
+                panel.Children.Add(img);
+                panel.Children.Add(block);
 
                 item.Header = panel;
 
-                this._items.Add( item );
+                this._items.Add(item);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void AddOption( IPreferences module , string mnamespace , string name , Image img )
+        private void AddOption(IPreferences module, string mnamespace, string name, Image img)
         {
             try
             {
@@ -342,59 +346,59 @@ namespace LGP.Controls
 
                 var panel = new StackPanel
                 {
-                    Orientation = Orientation.Horizontal ,
-                    Margin = new Thickness( 2 )
+                    Orientation = Orientation.Horizontal,
+                    Margin = new Thickness(2)
                 };
 
-                var block = new TextBlock( new Run( " " + name ) );
+                var block = new TextBlock(new Run(" " + name));
 
                 img.MaxHeight = 14;
                 img.MaxWidth = 14;
 
-                panel.Children.Add( img );
-                panel.Children.Add( block );
+                panel.Children.Add(img);
+                panel.Children.Add(block);
 
                 item.Header = panel;
 
-                this._items.Add( item );
+                this._items.Add(item);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void TreeView1SelectedItemChanged( object sender , RoutedPropertyChangedEventArgs< object > e )
+        private void TreeView1SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             try
             {
                 var treeviewitem = this.treeView1.SelectedItem as TreeViewItem;
-                if( treeviewitem != null )
+                if (treeviewitem != null)
                 {
                     var tag = treeviewitem.Tag.ToString();
 
-                    foreach( var control in this._controls )
+                    foreach (var control in this._controls)
                     {
                         var s = control.GetType().Namespace;
-                        if( s != null && s.CompareTo( tag ) == 0 )
+                        if (s != null && s.CompareTo(tag) == 0)
                         {
                             control.Background = Brushes.Transparent;
                             this.prefsName.Content = tag;
                             control.VerticalAlignment = VerticalAlignment.Top;
-                            ( ( IPreferences ) control ).Load( this );
+                            ((IPreferences)control).Load(this);
 
-                            if( this.paneContainer.Content != null )
+                            if (this.paneContainer.Content != null)
                             {
-                                ( ( IPreferences ) this.paneContainer.Content ).Save();
+                                ((IPreferences)this.paneContainer.Content).Save();
                             }
                             this.paneContainer.Content = control;
                         }
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -412,3 +416,4 @@ namespace LGP.Controls
         #endregion
     }
 }
+// jscpd:ignore-end

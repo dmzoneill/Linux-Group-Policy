@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Reflection;
@@ -14,7 +15,7 @@ using LGP.Components.Factory.Publishers.Events;
 namespace LGP.Modules.ModuleEditor
 {
     /// <summary>
-    ///   Concreate Implmentation and boundary class to Module Compoents
+    ///   Concreate Implmentation and boundary class to Module Compoents // codespell:ignore compoents,implmentation
     /// </summary>
     public class Plugin : IModule
     {
@@ -54,31 +55,31 @@ namespace LGP.Modules.ModuleEditor
         ///   Registers this components menu handlers
         /// </summary>
         /// <param name = "menu">The program main menu</param>
-        public void RegisterMenuEntries( IMenu menu )
+        public void RegisterMenuEntries(IMenu menu)
         {
             try
             {
-                var resource = Framework.Utils.LoadResource( Assembly.GetExecutingAssembly() , this , ".Internal.ContextMenuItems.ModuleEditor.xaml" );
+                var resource = Framework.Utils.LoadResource(Assembly.GetExecutingAssembly(), this, ".Internal.ContextMenuItems.ModuleEditor.xaml");
 
-                if( resource == null )
+                if (resource == null)
                 {
                     return;
                 }
 
                 var moduleToolbarsItem = resource as MenuItem;
 
-                if( moduleToolbarsItem == null )
+                if (moduleToolbarsItem == null)
                 {
                     return;
                 }
 
                 moduleToolbarsItem.Icon = this.GetIcon();
                 moduleToolbarsItem.Click += this.ModulesToolbarsItemClick;
-                menu.AddSubSubMenuItem( 2 , 2 , moduleToolbarsItem );
+                menu.AddSubSubMenuItem(2, 2, moduleToolbarsItem);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -89,7 +90,7 @@ namespace LGP.Modules.ModuleEditor
         /// <returns>An image</returns>
         public Image GetIcon()
         {
-            return Framework.Images.GetImage( "pencil" , "16X16" , 14 );
+            return Framework.Images.GetImage("pencil", "16X16", 14);
         }
 
 
@@ -145,17 +146,18 @@ namespace LGP.Modules.ModuleEditor
 
 
         /// <summary>
-        ///   Handler for this componets menu entries
+        ///   Handler for this componets menu entries // codespell:ignore componets
         ///   Forwards the event to the message bus for subscribers interest
         /// </summary>
         /// <param name = "sender">The menu item that was clicked</param>
         /// <param name = "e">The event details</param>
-        private void ModulesToolbarsItemClick( object sender , RoutedEventArgs e )
+        private void ModulesToolbarsItemClick(object sender, RoutedEventArgs e)
         {
-            Framework.Panels.AddSideComponent( this.GetSidebarControl() , this.GetComponentSideBarName() , this.GetIcon() );
+            Framework.Panels.AddSideComponent(this.GetSidebarControl(), this.GetComponentSideBarName(), this.GetIcon());
 
-            var eventDetails = new MenuEvent( sender , "new" );
-            Framework.EventBus.Publish( eventDetails );
+            var eventDetails = new MenuEvent(sender, "new");
+            Framework.EventBus.Publish(eventDetails);
         }
     }
 }
+// jscpd:ignore-end

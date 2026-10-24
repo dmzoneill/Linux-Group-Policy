@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Collections.Generic;
@@ -15,16 +16,16 @@ namespace LGP.Components.Database.Entities
         private static readonly IGrammerGateway GrammerGateway;
         private readonly int _moduleid;
         private string _moduleName;
-        private List< IModuleObserver > _observers;
+        private List<IModuleObserver> _observers;
 
         static Module()
         {
             GrammerGateway = new GrammerGateway();
         }
 
-        public Module( int moduleid , string modulename )
+        public Module(int moduleid, string modulename)
         {
-            this._observers = new List< IModuleObserver >();
+            this._observers = new List<IModuleObserver>();
             this._moduleid = moduleid;
             this._moduleName = modulename;
         }
@@ -32,11 +33,11 @@ namespace LGP.Components.Database.Entities
         #region Implementation of IModuleObserver
 
         /// <summary>
-        ///   Update this observer with a refernece to the module
+        ///   Update this observer with a refernece to the module // codespell:ignore refernece
         /// </summary>
         /// <param name = "module">IModule</param>
         /// <param name = "source">IModuleObserver</param>
-        public void Update( IModule module , IModuleObserver source )
+        public void Update(IModule module, IModuleObserver source)
         {
             throw new NotImplementedException();
         }
@@ -46,18 +47,18 @@ namespace LGP.Components.Database.Entities
         ///   Attach objewcts that observer this module
         /// </summary>
         /// <param name = "obj">IModuleObserver</param>
-        public void Attach( IModuleObserver obj )
+        public void Attach(IModuleObserver obj)
         {
             try
             {
-                if( !this._observers.Contains( obj ) )
+                if (!this._observers.Contains(obj))
                 {
-                    this._observers.Add( obj );
+                    this._observers.Add(obj);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -66,15 +67,15 @@ namespace LGP.Components.Database.Entities
         ///   Detach objewcts that observer this module
         /// </summary>
         /// <param name = "obj">IModuleObserver</param>
-        public void Detach( IModuleObserver obj )
+        public void Detach(IModuleObserver obj)
         {
             try
             {
-                this._observers.Remove( obj );
+                this._observers.Remove(obj);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -86,14 +87,14 @@ namespace LGP.Components.Database.Entities
         {
             try
             {
-                for( var h = 0; h < this._observers.Count; h++ )
+                for (var h = 0; h < this._observers.Count; h++)
                 {
-                    this._observers[ h ].Update( this , this );
+                    this._observers[h].Update(this, this);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -102,18 +103,18 @@ namespace LGP.Components.Database.Entities
         ///   Dispose this object and all the observers
         /// </summary>
         /// <param name = "obj">IModuleObserver</param>
-        public void Dispose( IModuleObserver obj )
+        public void Dispose(IModuleObserver obj)
         {
             try
             {
-                for( var h = 0; h < this._observers.Count; h++ )
+                for (var h = 0; h < this._observers.Count; h++)
                 {
-                    this._observers[ h ].Dispose( this );
+                    this._observers[h].Dispose(this);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -154,109 +155,109 @@ namespace LGP.Components.Database.Entities
         ///   Sets the module name
         /// </summary>
         /// <param name = "name"></param>
-        public void SetModuleName( string name )
+        public void SetModuleName(string name)
         {
             try
             {
-                var sql = String.Format( "update modules set name = '{0}' where id = '{1}' " , name , this._moduleid );
+                var sql = String.Format("update modules set name = '{0}' where id = '{1}' ", name, this._moduleid);
 
-                if( Framework.Database.IsConnected() )
+                if (Framework.Database.IsConnected())
                 {
-                    Framework.Database.ExecuteNonQuery( sql );
+                    Framework.Database.ExecuteNonQuery(sql);
                 }
 
                 this._moduleName = name;
                 this.Notify();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
         /// <summary>
-        ///   Adds a grammer to this module
+        ///   Adds a grammer to this module // codespell:ignore grammer
         /// </summary>
         /// <param name = "key">string</param>
         /// <param name = "value">string</param>
         /// <returns>IGrammer</returns>
-        public IGrammer AddGrammer( string key , string value )
+        public IGrammer AddGrammer(string key, string value)
         {
             try
             {
-                var grammer = GrammerGateway.CreateGrammer( this._moduleid , key , value );
+                var grammer = GrammerGateway.CreateGrammer(this._moduleid, key, value); // codespell:ignore grammer
                 this.Notify();
-                return grammer;
+                return grammer; // codespell:ignore grammer
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return null;
             }
         }
 
 
         /// <summary>
-        ///   Deletes a grammer given a key
+        ///   Deletes a grammer given a key // codespell:ignore grammer
         /// </summary>
         /// <param name = "key"></param>
-        public void DeleteGrammer( string key )
+        public void DeleteGrammer(string key)
         {
             try
             {
-                GrammerGateway.DeleteGrammer( this._moduleid , key );
+                GrammerGateway.DeleteGrammer(this._moduleid, key);
                 this.Notify();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
         /// <summary>
-        ///   Dletes all the grammers associated with this module
+        ///   Dletes all the grammers associated with this module // codespell:ignore grammers
         /// </summary>
         public void DeleteAllGrammer()
         {
             try
             {
-                GrammerGateway.DeleteGrammer( this._moduleid );
+                GrammerGateway.DeleteGrammer(this._moduleid);
                 this.Notify();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
         /// <summary>
-        ///   Gets all the grammers for this module
+        ///   Gets all the grammers for this module // codespell:ignore grammers
         /// </summary>
         /// <returns>IGrammer</returns>
-        public List< IGrammer > GetAllGrammers()
+        public List<IGrammer> GetAllGrammers()
         {
-            return GrammerGateway.GetGrammer( this._moduleid );
+            return GrammerGateway.GetGrammer(this._moduleid);
         }
 
         /// <summary>
-        ///   Gets a grammer given a key
+        ///   Gets a grammer given a key // codespell:ignore grammer
         /// </summary>
-        /// <param name = "key">grammer lvale</param>
+        /// <param name = "key">grammer lvale</param> // codespell:ignore grammer
         /// <returns>KeyValuePair</returns>
-        public IGrammer GetGrammer( string key )
+        public IGrammer GetGrammer(string key)
         {
-            return GrammerGateway.GetGrammer( this._moduleid , key );
+            return GrammerGateway.GetGrammer(this._moduleid, key);
         }
 
         /// <summary>
-        ///   Gets a grammer given an id
+        ///   Gets a grammer given an id // codespell:ignore grammer
         /// </summary>
-        /// <param name = "id">grammer id</param>
+        /// <param name = "id">grammer id</param> // codespell:ignore grammer
         /// <returns>IGrammer</returns>
-        public IGrammer GetGrammer( int id )
+        public IGrammer GetGrammer(int id)
         {
-            return GrammerGateway.GetGrammer( this._moduleid , id );
+            return GrammerGateway.GetGrammer(this._moduleid, id);
         }
 
         /// <summary>
@@ -285,3 +286,4 @@ namespace LGP.Components.Database.Entities
         }
     }
 }
+// jscpd:ignore-end

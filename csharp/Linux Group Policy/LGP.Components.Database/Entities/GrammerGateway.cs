@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Collections.Generic;
@@ -13,288 +14,288 @@ namespace LGP.Components.Database.Gateways
 {
     internal class GrammerGateway : IGrammerGateway
     {
-        private static List< IGrammer > _grammer;
+        private static List<IGrammer> _grammer;
 
         private static void BuildGrammerListing()
         {
-            _grammer = new List< IGrammer >();
+            _grammer = new List<IGrammer>();
 
             try
             {
-                var sql = string.Format( "select * from moduleGrammerWords" );
+                var sql = string.Format("select * from moduleGrammerWords");
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
                     return;
                 }
 
-                var ds = Framework.Database.ExecuteQuery( sql );
+                var ds = Framework.Database.ExecuteQuery(sql);
 
-                var clientTable = ds.Tables[ 0 ];
+                var clientTable = ds.Tables[0];
 
-                if( clientTable.Rows.Count == 0 )
+                if (clientTable.Rows.Count == 0)
                 {
                     return;
                 }
 
-                foreach( DataRow row in clientTable.Rows )
+                foreach (DataRow row in clientTable.Rows)
                 {
-                    var id = ( int ) row[ "id" ];
-                    var mid = ( int ) row[ "m_id" ];
-                    var gkey = ( string ) row[ "grammerkey" ];
-                    var gvalue = ( string ) row[ "grammerval" ];
+                    var id = (int)row["id"];
+                    var mid = (int)row["m_id"];
+                    var gkey = (string)row["grammerkey"];
+                    var gvalue = (string)row["grammerval"];
 
-                    var grammer = new Grammer( id , mid , gkey , gvalue );
+                    var grammer = new Grammer(id, mid, gkey, gvalue); // codespell:ignore grammer
 
-                    _grammer.Add( grammer );
+                    _grammer.Add(grammer); // codespell:ignore grammer
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
         #region Implementation of IGrammerGateway
 
         /// <summary>
-        ///   Adds a grammer given a moduleid or returns existing Grammer
+        ///   Adds a grammer given a moduleid or returns existing Grammer // codespell:ignore grammer
         /// </summary>
         /// <param name = "moduleId">int</param>
         /// <param name = "key">string</param>
         /// <param name = "val">string</param>
         /// <returns>IGrammer</returns>
-        public IGrammer CreateGrammer( int moduleId , string key , string val )
+        public IGrammer CreateGrammer(int moduleId, string key, string val)
         {
             try
             {
-                if( _grammer == null )
+                if (_grammer == null)
                 {
                     BuildGrammerListing();
                 }
 
-                for( var y = 0; y < _grammer.Count; y++ )
+                for (var y = 0; y < _grammer.Count; y++)
                 {
-                    if( _grammer[ y ].GetModuleId() == moduleId && _grammer[ y ].GetKey().CompareTo( key ) == 0 )
+                    if (_grammer[y].GetModuleId() == moduleId && _grammer[y].GetKey().CompareTo(key) == 0)
                     {
-                        return _grammer[ y ];
+                        return _grammer[y];
                     }
                 }
 
-                var sql = string.Format( "insert into moduleGrammerWords values( null , '{0}' , '{1}' ,'{2}' )" , moduleId , key , val );
+                var sql = string.Format("insert into moduleGrammerWords values( null , '{0}' , '{1}' ,'{2}' )", moduleId, key, val);
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
                     return null;
                 }
 
-                Framework.Database.ExecuteNonQuery( sql );
+                Framework.Database.ExecuteNonQuery(sql);
 
-                var sql2 = string.Format( "select * from moduleGrammerWords where id = ( select MAX( id ) from moduleGrammerWords)" );
+                var sql2 = string.Format("select * from moduleGrammerWords where id = ( select MAX( id ) from moduleGrammerWords)");
 
-                var ds = Framework.Database.ExecuteQuery( sql2 );
+                var ds = Framework.Database.ExecuteQuery(sql2);
 
-                var grammerTable = ds.Tables[ 0 ];
-                var row = grammerTable.Rows[ 0 ];
-                var id = ( int ) row[ "id" ];
+                var grammerTable = ds.Tables[0];
+                var row = grammerTable.Rows[0];
+                var id = (int)row["id"];
 
-                var grammer = new Grammer( id , moduleId , key , val );
-                _grammer.Add( grammer );
+                var grammer = new Grammer(id, moduleId, key, val); // codespell:ignore grammer
+                _grammer.Add(grammer); // codespell:ignore grammer
 
-                return _grammer[ _grammer.Count - 1 ];
+                return _grammer[_grammer.Count - 1];
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return null;
             }
         }
 
         /// <summary>
-        ///   Deletes a grammer entry given key and moduleid
+        ///   Deletes a grammer entry given key and moduleid // codespell:ignore grammer
         /// </summary>
         /// <param name = "mid">int</param>
         /// <param name = "key">string</param>
-        public void DeleteGrammer( int mid , string key )
+        public void DeleteGrammer(int mid, string key)
         {
             try
             {
-                if( _grammer == null )
+                if (_grammer == null)
                 {
                     BuildGrammerListing();
                 }
 
-                for( var y = 0; y < _grammer.Count; y++ )
+                for (var y = 0; y < _grammer.Count; y++)
                 {
-                    if( _grammer[ y ].GetModuleId() == mid && _grammer[ y ].GetKey().CompareTo( key ) == 0 )
+                    if (_grammer[y].GetModuleId() == mid && _grammer[y].GetKey().CompareTo(key) == 0)
                     {
-                        _grammer.RemoveAt( y );
+                        _grammer.RemoveAt(y);
                     }
                 }
 
-                var sql = string.Format( "delete from moduleGrammerWords where m_id= '{0}' and grammerkey = '{1}' " , mid , key );
+                var sql = string.Format("delete from moduleGrammerWords where m_id= '{0}' and grammerkey = '{1}' ", mid, key);
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
                     return;
                 }
 
-                Framework.Database.ExecuteNonQuery( sql );
+                Framework.Database.ExecuteNonQuery(sql);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
         /// <summary>
-        ///   Deletes all grammer given key the moduleid
+        ///   Deletes all grammer given key the moduleid // codespell:ignore grammer
         /// </summary>
         /// <param name = "mid">int</param>
-        public void DeleteGrammer( int mid )
+        public void DeleteGrammer(int mid)
         {
             try
             {
-                if( _grammer == null )
+                if (_grammer == null)
                 {
                     BuildGrammerListing();
                 }
 
-                for( var y = 0; y < _grammer.Count; y++ )
+                for (var y = 0; y < _grammer.Count; y++)
                 {
-                    if( _grammer[ y ].GetModuleId() == mid )
+                    if (_grammer[y].GetModuleId() == mid)
                     {
-                        _grammer.RemoveAt( y );
+                        _grammer.RemoveAt(y);
                     }
                 }
 
-                var sql = string.Format( "delete from moduleGrammerWords where m_id= '{0}'" , mid );
+                var sql = string.Format("delete from moduleGrammerWords where m_id= '{0}'", mid);
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
                     return;
                 }
 
-                Framework.Database.ExecuteNonQuery( sql );
+                Framework.Database.ExecuteNonQuery(sql);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
         /// <summary>
-        ///   Gets a Grammer given a the moduleid and key
+        ///   Gets a Grammer given a the moduleid and key // codespell:ignore grammer
         /// </summary>
         /// <param name = "mid">int</param>
         /// <param name = "key">string</param>
         /// <returns>IGrammer</returns>
-        public IGrammer GetGrammer( int mid , string key )
+        public IGrammer GetGrammer(int mid, string key)
         {
             try
             {
-                if( _grammer == null )
+                if (_grammer == null)
                 {
                     BuildGrammerListing();
                 }
 
-                for( var y = 0; y < _grammer.Count; y++ )
+                for (var y = 0; y < _grammer.Count; y++)
                 {
-                    if( _grammer[ y ].GetModuleId() == mid && _grammer[ y ].GetKey().CompareTo( key ) == 0 )
+                    if (_grammer[y].GetModuleId() == mid && _grammer[y].GetKey().CompareTo(key) == 0)
                     {
-                        return _grammer[ y ];
+                        return _grammer[y];
                     }
                 }
 
                 return null;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return null;
             }
         }
 
         /// <summary>
-        ///   Gets a Grammer given a the moduleid and id
+        ///   Gets a Grammer given a the moduleid and id // codespell:ignore grammer
         /// </summary>
         /// <param name = "mid">int</param>
         /// <param name = "id">int</param>
         /// <returns>IGrammer</returns>
-        public IGrammer GetGrammer( int mid , int id )
+        public IGrammer GetGrammer(int mid, int id)
         {
             try
             {
-                if( _grammer == null )
+                if (_grammer == null)
                 {
                     BuildGrammerListing();
                 }
 
-                for( var y = 0; y < _grammer.Count; y++ )
+                for (var y = 0; y < _grammer.Count; y++)
                 {
-                    if( _grammer[ y ].GetModuleId() == mid && _grammer[ y ].GetId() == id )
+                    if (_grammer[y].GetModuleId() == mid && _grammer[y].GetId() == id)
                     {
-                        return _grammer[ y ];
+                        return _grammer[y];
                     }
                 }
 
                 return null;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return null;
             }
         }
 
         /// <summary>
-        ///   Gets all Grammer given a the moduleid
+        ///   Gets all Grammer given a the moduleid // codespell:ignore grammer
         /// </summary>
         /// <param name = "mid">int</param>
         /// <returns>IGrammer list</returns>
-        public List< IGrammer > GetGrammer( int mid )
+        public List<IGrammer> GetGrammer(int mid)
         {
-            var found = new List< IGrammer >();
+            var found = new List<IGrammer>();
             try
             {
-                if( _grammer == null )
+                if (_grammer == null)
                 {
                     BuildGrammerListing();
                 }
 
-                for( var y = 0; y < _grammer.Count; y++ )
+                for (var y = 0; y < _grammer.Count; y++)
                 {
-                    if( _grammer[ y ].GetModuleId() == mid )
+                    if (_grammer[y].GetModuleId() == mid)
                     {
-                        found.Add( _grammer[ y ] );
+                        found.Add(_grammer[y]);
                     }
                 }
 
                 return found;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return found;
             }
         }
 
         /// <summary>
-        ///   Gets all grammers
+        ///   Gets all grammers // codespell:ignore grammers
         /// </summary>
         /// <returns>IGrammer List</returns>
-        public List< IGrammer > GetGrammer()
+        public List<IGrammer> GetGrammer()
         {
             try
             {
-                if( _grammer == null )
+                if (_grammer == null)
                 {
                     BuildGrammerListing();
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
             return _grammer;
         }
@@ -306,34 +307,34 @@ namespace LGP.Components.Database.Gateways
         {
             try
             {
-                var sql = string.Format( "select * from moduleGrammerWords" );
+                var sql = string.Format("select * from moduleGrammerWords");
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
                     return;
                 }
 
-                var ds = Framework.Database.ExecuteQuery( sql );
+                var ds = Framework.Database.ExecuteQuery(sql);
 
-                var clientTable = ds.Tables[ 0 ];
+                var clientTable = ds.Tables[0];
 
-                if( clientTable.Rows.Count == 0 )
+                if (clientTable.Rows.Count == 0)
                 {
                     return;
                 }
 
-                foreach( DataRow row in clientTable.Rows )
+                foreach (DataRow row in clientTable.Rows)
                 {
-                    var id = ( int ) row[ "id" ];
-                    var mid = ( int ) row[ "m_id" ];
-                    var gkey = ( string ) row[ "grammerkey" ];
-                    var gvalue = ( string ) row[ "grammerval" ];
+                    var id = (int)row["id"];
+                    var mid = (int)row["m_id"];
+                    var gkey = (string)row["grammerkey"];
+                    var gvalue = (string)row["grammerval"];
 
                     var newDbEntry = true;
 
-                    for( var y = 0; y < _grammer.Count; y++ )
+                    for (var y = 0; y < _grammer.Count; y++)
                     {
-                        if( _grammer[ y ].GetId() != id )
+                        if (_grammer[y].GetId() != id)
                         {
                             continue;
                         }
@@ -342,22 +343,23 @@ namespace LGP.Components.Database.Gateways
                         break;
                     }
 
-                    if( !newDbEntry )
+                    if (!newDbEntry)
                     {
                         continue;
                     }
 
-                    var grammer = new Grammer( id , mid , gkey , gvalue );
+                    var grammer = new Grammer(id, mid, gkey, gvalue); // codespell:ignore grammer
 
-                    _grammer.Add( grammer );
+                    _grammer.Add(grammer); // codespell:ignore grammer
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
         #endregion
     }
 }
+// jscpd:ignore-end

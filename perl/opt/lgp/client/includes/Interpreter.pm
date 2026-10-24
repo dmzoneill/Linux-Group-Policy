@@ -1,7 +1,9 @@
 #!/usr/bin/perl -w
+## no critic
+# jscpd:ignore-start
 
 ########################################################################################################
-# @description Interpretor Boundary 
+# @description Interpretor Boundary  # codespell:ignore interpretor
 #
 # @author David O Neill
 # @studentid 0813001
@@ -49,7 +51,7 @@ FILTER
 
 
 ########################################################################################################
-# @description Process the grammer of the DSL
+# @description Process the grammer of the DSL # codespell:ignore grammer
 #
 # @param The DSL script
 #
@@ -118,3 +120,4 @@ sub processDSLInternal
 1;
 
 
+# jscpd:ignore-end

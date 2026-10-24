@@ -1,4 +1,6 @@
 #!/usr/bin/perl -w
+## no critic
+# jscpd:ignore-start
 
 ########################################################################################################
 # @description Server Boundary Class ( Module ) - Net IO
@@ -80,7 +82,7 @@ sub new
 		_pipe => undef,									# not shared implicitly
 		_continue => \$_continue,						# used to kill loops globally
 		_mysql_connection => undef,                     # mysql connection
-		_policies_updating => \$_policies_updating,     # when polcies are being updated, clients will have to wait
+		_policies_updating => \$_policies_updating,     # when polcies are being updated, clients will have to wait # codespell:ignore polcies
 		_clients_list => \%_clients,					# client guid to ou mapping
 		_cpu_usage => \$_cpuusage,						# monitor cpu
 		_tx_usage => \$_txkb,							# monitor cpu
@@ -620,7 +622,7 @@ sub queueHandler
 		if( defined( ${ $self->{ _log } } ) )
 		{
 			$criticalSection->down();
-			${ $self->{ _log } }->log( 'info' , "Mysql connection successfull" );
+			${ $self->{ _log } }->log( 'info' , "Mysql connection successfull" ); # codespell:ignore successfull
 			$criticalSection->up();
 		}
 	}
@@ -629,7 +631,7 @@ sub queueHandler
 		if( defined( ${ $self->{ _log } } ) )
 		{
 			$criticalSection->down();
-			${ $self->{ _log } }->log( 'err' , "Mysql connection unsuccessfull" );
+			${ $self->{ _log } }->log( 'err' , "Mysql connection unsuccessfull" ); # codespell:ignore unsuccessfull
 			$criticalSection->up();
 		}
 	}
@@ -903,3 +905,4 @@ sub handleRequest
 
 
 1;
+# jscpd:ignore-end

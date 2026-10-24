@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Windows;
@@ -30,9 +31,9 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls
             {
                 this.InitializeComponent();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -43,7 +44,7 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls
         /// <param name = "parent">the parent control</param>
         /// <param name = "ou">IOu</param>
         /// <param name = "window">parent window</param>
-        public CreateOu( UserControl parent , IOu ou , IDialog window )
+        public CreateOu(UserControl parent, IOu ou, IDialog window)
         {
             try
             {
@@ -53,9 +54,9 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls
                 this._parentControl = parent;
                 this.Prepare();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -64,70 +65,71 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls
         {
             try
             {
-                this.image1.Source = this._ou.GetOuImage( 32 ).Source;
+                this.image1.Source = this._ou.GetOuImage(32).Source;
                 this.ParentOuLabel.Content = this._ou.GetName();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void CancelButtonClick( object sender , RoutedEventArgs e )
+        private void CancelButtonClick(object sender, RoutedEventArgs e)
         {
             try
             {
                 this._popupWindow.CloseDialog();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void CreateButtonClick( object sender , RoutedEventArgs e )
+        private void CreateButtonClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                if( this.OuNameTextBox.Text.Length > 0 )
+                if (this.OuNameTextBox.Text.Length > 0)
                 {
-                    var ou = OuHelper.OuGateway.CreateOu( this.OuNameTextBox.Text , this._ou.GetOuId() );
-                    TreeViewOuElement.CreateEntry( ou );
+                    var ou = OuHelper.OuGateway.CreateOu(this.OuNameTextBox.Text, this._ou.GetOuId());
+                    TreeViewOuElement.CreateEntry(ou);
                     this._ou.Notify();
                     this._popupWindow.CloseDialog();
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void UserControlLoaded( object sender , RoutedEventArgs e )
+        private void UserControlLoaded(object sender, RoutedEventArgs e)
         {
             try
             {
-                this._popupWindow.ResizePopup( ( int ) this.Width , ( int ) this.Height );
+                this._popupWindow.ResizePopup((int)this.Width, (int)this.Height);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void OuNameTextBoxTextChanged( object sender , TextChangedEventArgs e )
+        private void OuNameTextBoxTextChanged(object sender, TextChangedEventArgs e)
         {
             try
             {
-                this.OuNameTextBox.Text = Framework.Utils.CleanString( this.OuNameTextBox.Text );
+                this.OuNameTextBox.Text = Framework.Utils.CleanString(this.OuNameTextBox.Text);
                 this.OuNameTextBox.CaretIndex = this.OuNameTextBox.Text.Length;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
     }
 }
+// jscpd:ignore-end

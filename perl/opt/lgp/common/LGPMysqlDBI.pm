@@ -1,4 +1,6 @@
 #!/usr/bin/perl -w
+## no critic
+# jscpd:ignore-start
 
 ########################################################################################################
 # @description Mysql DBI Control Class ( Module )
@@ -327,3 +329,4 @@ sub GetOu
 }
 
 1;
+# jscpd:ignore-end

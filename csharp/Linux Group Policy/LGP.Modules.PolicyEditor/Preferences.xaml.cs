@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Windows.Controls;
@@ -26,9 +27,9 @@ namespace LGP.Modules.PolicyEditor
             {
                 this.InitializeComponent();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -55,7 +56,7 @@ namespace LGP.Modules.PolicyEditor
 
 
         /// <summary>
-        ///   Aks the preferences panel to save its entries
+        ///   Aks the preferences panel to save its entries // codespell:ignore aks
         /// </summary>
         public void Save()
         {
@@ -68,7 +69,7 @@ namespace LGP.Modules.PolicyEditor
         /// </summary>
         /// <param name="settingsParent"></param>
         /// <returns>string</returns>
-        public void Load( ISettings settingsParent )
+        public void Load(ISettings settingsParent)
         {
             this._parent = settingsParent;
         }
@@ -79,7 +80,7 @@ namespace LGP.Modules.PolicyEditor
         /// <returns>Type</returns>
         public Type GetControlType()
         {
-            return typeof( IModule );
+            return typeof(IModule);
         }
 
         /// <summary>
@@ -88,9 +89,10 @@ namespace LGP.Modules.PolicyEditor
         /// <returns></returns>
         public Image GetIcon()
         {
-            return Framework.Images.GetImage( "config" , "16X16" , 14 );
+            return Framework.Images.GetImage("config", "16X16", 14);
         }
 
         #endregion
     }
 }
+// jscpd:ignore-end

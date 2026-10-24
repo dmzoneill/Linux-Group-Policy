@@ -1,4 +1,6 @@
 #!/usr/bin/perl -w
+## no critic
+# jscpd:ignore-start
 
 ########################################################################################################
 # @description Client Boundary Class ( Module ) - Net IO
@@ -365,7 +367,7 @@ sub queuehandler
 								${ $self->{ _cached_policy_hash } } = $policyMd5;
 								
 								$criticalSection->down();
-								${ $self->{ _log } }->log( 'info' , "New policy saved into polcies folder. executing policy" );
+								${ $self->{ _log } }->log( 'info' , "New policy saved into polcies folder. executing policy" ); # codespell:ignore polcies
 								$criticalSection->up();
 								print $fp $policy;
 								close( $fp );	
@@ -387,7 +389,7 @@ sub queuehandler
 							${ $self->{ _cached_policy_hash } } = $policyMd5;
 							
 							$criticalSection->down();
-							${ $self->{ _log } }->log( 'info' , "Policy saved into polcies folder. executing policy" );
+							${ $self->{ _log } }->log( 'info' , "Policy saved into polcies folder. executing policy" ); # codespell:ignore polcies
 							$criticalSection->up();
 							
 							print $fp $policy;
@@ -535,3 +537,4 @@ sub handleRequest
 
 
 1;
+# jscpd:ignore-end

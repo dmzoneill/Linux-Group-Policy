@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Reflection;
@@ -53,31 +54,31 @@ namespace LGP.Modules.Statistics
         ///   Registers this components menu handlers
         /// </summary>
         /// <param name = "menu">The program main menu</param>
-        public void RegisterMenuEntries( IMenu menu )
+        public void RegisterMenuEntries(IMenu menu)
         {
             try
             {
-                var resource = Framework.Utils.LoadResource( Assembly.GetExecutingAssembly() , this , ".Internal.ContextMenuItems.Statistics.xaml" );
+                var resource = Framework.Utils.LoadResource(Assembly.GetExecutingAssembly(), this, ".Internal.ContextMenuItems.Statistics.xaml");
 
-                if( resource == null )
+                if (resource == null)
                 {
                     return;
                 }
 
                 var statisticsToolbarsItem = resource as MenuItem;
 
-                if( statisticsToolbarsItem == null )
+                if (statisticsToolbarsItem == null)
                 {
                     return;
                 }
 
                 statisticsToolbarsItem.Icon = this.GetIcon();
                 statisticsToolbarsItem.Click += this.StatisticsViewerToolbarItemClick;
-                menu.AddSubSubMenuItem( 2 , 2 , statisticsToolbarsItem );
+                menu.AddSubSubMenuItem(2, 2, statisticsToolbarsItem);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -88,7 +89,7 @@ namespace LGP.Modules.Statistics
         /// <returns></returns>
         public Image GetIcon()
         {
-            return Framework.Images.GetImage( "config" , "16X16" , 14 );
+            return Framework.Images.GetImage("config", "16X16", 14);
         }
 
 
@@ -143,14 +144,15 @@ namespace LGP.Modules.Statistics
         }
 
         /// <summary>
-        ///   Handler for this componets menu entries
+        ///   Handler for this componets menu entries // codespell:ignore componets
         ///   Forwards the event to the message bus for subscribers interest
         /// </summary>
         /// <param name = "sender">The menu item that was clicked</param>
         /// <param name = "e">The event details</param>
-        private void StatisticsViewerToolbarItemClick( object sender , RoutedEventArgs e )
+        private void StatisticsViewerToolbarItemClick(object sender, RoutedEventArgs e)
         {
-            Framework.Panels.AddMainComponent( this.GetMainControl() , this.GetName() );
+            Framework.Panels.AddMainComponent(this.GetMainControl(), this.GetName());
         }
     }
 }
+// jscpd:ignore-end

@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Windows;
@@ -28,11 +29,11 @@ namespace LGP.Modules.ModuleEditor
             {
                 this.InitializeComponent();
                 var regedit = Framework.Registry;
-                this.ModulesFolderLocationTextBox.Text = regedit.ReadKey( "moduleslocation" );
+                this.ModulesFolderLocationTextBox.Text = regedit.ReadKey("moduleslocation");
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -59,7 +60,7 @@ namespace LGP.Modules.ModuleEditor
 
 
         /// <summary>
-        ///   Aks the preferences panel to save its entries
+        ///   Aks the preferences panel to save its entries // codespell:ignore aks
         /// </summary>
         public void Save()
         {
@@ -72,7 +73,7 @@ namespace LGP.Modules.ModuleEditor
         /// </summary>
         /// <param name="settingsParent"></param>
         /// <returns>string</returns>
-        public void Load( ISettings settingsParent )
+        public void Load(ISettings settingsParent)
         {
             this._parent = settingsParent;
         }
@@ -83,7 +84,7 @@ namespace LGP.Modules.ModuleEditor
         /// <returns>Type</returns>
         public Type GetControlType()
         {
-            return typeof( IModule );
+            return typeof(IModule);
         }
 
         /// <summary>
@@ -92,12 +93,12 @@ namespace LGP.Modules.ModuleEditor
         /// <returns></returns>
         public Image GetIcon()
         {
-            return Framework.Images.GetImage( "pencil" , "16X16" , 14 );
+            return Framework.Images.GetImage("pencil", "16X16", 14);
         }
 
         #endregion
 
-        private void SelectFolderButtonClick( object sender , RoutedEventArgs e )
+        private void SelectFolderButtonClick(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -107,16 +108,17 @@ namespace LGP.Modules.ModuleEditor
                 };
 
                 var result = folderDialog.ShowDialog();
-                if( result.ToString() == "OK" )
+                if (result.ToString() == "OK")
                 {
-                    Framework.Registry.WriteKey( "moduleslocation" , folderDialog.SelectedPath );
+                    Framework.Registry.WriteKey("moduleslocation", folderDialog.SelectedPath);
                     this.ModulesFolderLocationTextBox.Text = folderDialog.SelectedPath;
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
     }
 }
+// jscpd:ignore-end

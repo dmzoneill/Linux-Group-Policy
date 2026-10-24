@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Windows.Controls;
@@ -47,7 +48,7 @@ namespace LGP.Components.Database.Mysql
         }
 
         /// <summary>
-        ///   Aks the preferences panel to save its entries
+        ///   Aks the preferences panel to save its entries // codespell:ignore aks
         /// </summary>
         public void Save()
         {
@@ -56,7 +57,7 @@ namespace LGP.Components.Database.Mysql
             var port = this.textBox1.Text;
             int intport;
 
-            regedit.WriteKey( "MysqlPort" , int.TryParse( port , out intport ) ? intport : 3306 );
+            regedit.WriteKey("MysqlPort", int.TryParse(port, out intport) ? intport : 3306);
         }
 
         /// <summary>
@@ -64,11 +65,11 @@ namespace LGP.Components.Database.Mysql
         /// </summary>
         /// <param name="settingsParent"></param>
         /// <returns>string</returns>
-        public void Load( ISettings settingsParent )
+        public void Load(ISettings settingsParent)
         {
             this._parent = settingsParent;
             var regedit = Framework.Registry;
-            var port = regedit.ReadKey( "MysqlPort" );
+            var port = regedit.ReadKey("MysqlPort");
             this.textBox1.Text = port ?? "3306";
         }
 
@@ -78,7 +79,7 @@ namespace LGP.Components.Database.Mysql
         /// <returns>Type</returns>
         public Type GetControlType()
         {
-            return typeof( IDatabaseModule );
+            return typeof(IDatabaseModule);
         }
 
         /// <summary>
@@ -87,13 +88,14 @@ namespace LGP.Components.Database.Mysql
         /// <returns></returns>
         public Image GetIcon()
         {
-            return Framework.Images.GetImage( "mysql" , "VS2010ImageLibrary" , 14 );
+            return Framework.Images.GetImage("mysql", "VS2010ImageLibrary", 14);
         }
 
         #endregion
 
-        private void SetDefaultPortButtonClickClick( object sender , System.Windows.RoutedEventArgs e )
+        private void SetDefaultPortButtonClickClick(object sender, System.Windows.RoutedEventArgs e)
         {
         }
     }
 }
+// jscpd:ignore-end

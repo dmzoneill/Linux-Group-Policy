@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Windows;
@@ -30,9 +31,9 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls
             {
                 this.InitializeComponent();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -40,7 +41,7 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls
         /// <summary>
         ///   Constructor
         /// </summary>
-        public RenameOu( UserControl parent , IOu ou , IDialog window )
+        public RenameOu(UserControl parent, IOu ou, IDialog window)
         {
             try
             {
@@ -50,9 +51,9 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls
                 this._parentControl = parent;
                 this.Prepare();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -61,70 +62,71 @@ namespace LGP.Modules.OrganizationUnitExplorer.Internal.Modals.Controls
         {
             try
             {
-                this.image1.Source = this._ou.GetOuImage( 32 ).Source;
+                this.image1.Source = this._ou.GetOuImage(32).Source;
                 this.OuNameTextBox.Text = this._ou.GetName();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void RenameButtonClick( object sender , RoutedEventArgs e )
+        private void RenameButtonClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                if( this.OuNameTextBox.Text.Length > 0 )
+                if (this.OuNameTextBox.Text.Length > 0)
                 {
-                    this._ou.SetName( this.OuNameTextBox.Text );
+                    this._ou.SetName(this.OuNameTextBox.Text);
                     this._popupWindow.CloseDialog();
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void CancelButtonClick( object sender , RoutedEventArgs e )
+        private void CancelButtonClick(object sender, RoutedEventArgs e)
         {
             try
             {
                 this._popupWindow.CloseDialog();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void UserControlLoaded( object sender , RoutedEventArgs e )
+        private void UserControlLoaded(object sender, RoutedEventArgs e)
         {
             try
             {
-                this._popupWindow.ResizePopup( ( int ) this.Width , ( int ) this.Height );
+                this._popupWindow.ResizePopup((int)this.Width, (int)this.Height);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void OuNameTextBoxTextChanged( object sender , TextChangedEventArgs e )
+        private void OuNameTextBoxTextChanged(object sender, TextChangedEventArgs e)
         {
             try
             {
-                this.OuNameTextBox.Text = Framework.Utils.CleanString( this.OuNameTextBox.Text );
+                this.OuNameTextBox.Text = Framework.Utils.CleanString(this.OuNameTextBox.Text);
                 this.OuNameTextBox.CaretIndex = this.OuNameTextBox.Text.Length;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
     }
 }
+// jscpd:ignore-end

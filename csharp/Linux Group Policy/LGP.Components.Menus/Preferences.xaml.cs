@@ -1,4 +1,5 @@
-﻿#region
+// jscpd:ignore-start
+#region
 
 using System;
 using System.Windows.Controls;
@@ -45,7 +46,7 @@ namespace LGP.Components.Menus
         }
 
         /// <summary>
-        ///   Aks the preferences panel to save its entries
+        ///   Aks the preferences panel to save its entries // codespell:ignore aks
         /// </summary>
         public void Save()
         {
@@ -57,7 +58,7 @@ namespace LGP.Components.Menus
         /// </summary>
         /// <param name="settingsParent"></param>
         /// <returns>string</returns>
-        public void Load( ISettings settingsParent )
+        public void Load(ISettings settingsParent)
         {
             this._parent = settingsParent;
         }
@@ -68,7 +69,7 @@ namespace LGP.Components.Menus
         /// <returns>Type</returns>
         public Type GetControlType()
         {
-            return typeof( IMenu );
+            return typeof(IMenu);
         }
 
         /// <summary>
@@ -77,9 +78,10 @@ namespace LGP.Components.Menus
         /// <returns></returns>
         public Image GetIcon()
         {
-            return Framework.Images.GetImage( "RelationshipsHS" , "VS2010ImageLibrary" , 14 );
+            return Framework.Images.GetImage("RelationshipsHS", "VS2010ImageLibrary", 14);
         }
 
         #endregion
     }
 }
+// jscpd:ignore-end

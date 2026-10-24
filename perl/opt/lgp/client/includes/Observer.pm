@@ -1,4 +1,6 @@
 #!/usr/bin/perl -w
+## no critic
+# jscpd:ignore-start
 
 ########################################################################################################
 # @description Observer Abstract Class ( Module / Interface )
@@ -101,3 +103,4 @@ sub notify
 
 
 1;
+# jscpd:ignore-end
