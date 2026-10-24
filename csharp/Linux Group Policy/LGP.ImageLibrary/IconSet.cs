@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Drawing;
@@ -28,13 +28,13 @@ namespace LGP.ImageLibrary
         /// </summary>
         static IconSet()
         {
-            var myType = typeof( IconSet );
+            var myType = typeof(IconSet);
             Namepsace = myType.Namespace; // codespell:ignore namepsace
         }
 
 
-        [DllImport( "shell32.dll" , CharSet = CharSet.Auto )]
-        internal static extern int ExtractIconEx( string stExeFileName , int nIconIndex , IntPtr phiconLarge , IntPtr phiconSmall , int nIcons );
+        [DllImport("shell32.dll", CharSet = CharSet.Auto)]
+        internal static extern int ExtractIconEx(string stExeFileName, int nIconIndex, IntPtr phiconLarge, IntPtr phiconSmall, int nIcons);
 
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace LGP.ImageLibrary
         /// <param name = "name">The name of the image</param>
         /// <param name = "folder">The folder in which the resource can be found</param>
         /// <returns>An image</returns>
-        public static Image GetImage( string name , string folder )
+        public static Image GetImage(string name, string folder)
         {
             var uri = "/" + Namepsace + ";component/Images/" + folder + "/" + name + ".png"; // codespell:ignore namepsace
 
@@ -53,11 +53,11 @@ namespace LGP.ImageLibrary
             {
                 var bmImage = new BitmapImage();
                 bmImage.BeginInit();
-                bmImage.UriSource = new Uri( uri , UriKind.Relative );
+                bmImage.UriSource = new Uri(uri, UriKind.Relative);
                 bmImage.EndInit();
                 icon.Source = bmImage;
             }
-            catch( Exception )
+            catch (Exception)
             {
                 icon = null;
             }
@@ -73,16 +73,16 @@ namespace LGP.ImageLibrary
         /// <param name = "folder">The folder in which the resource can be found</param>
         /// <param name = "maxwidth">The maxwidth of the returned image</param>
         /// <returns>An image</returns>
-        public static Image GetImage( string name , string folder , int maxwidth )
+        public static Image GetImage(string name, string folder, int maxwidth)
         {
             Image icon;
 
             try
             {
-                icon = GetImage( name , folder );
+                icon = GetImage(name, folder);
                 icon.MaxWidth = maxwidth;
             }
-            catch( Exception )
+            catch (Exception)
             {
                 icon = null;
             }
@@ -96,7 +96,7 @@ namespace LGP.ImageLibrary
         /// </summary>
         /// <param name = "name">The name of the icon</param>
         /// <returns>An icon (ico)</returns>
-        public static Icon GetIcon( string name )
+        public static Icon GetIcon(string name)
         {
             var uri = "pack://application:,,,/" + Namepsace + ";component/Icons/" + name + ".ico"; // codespell:ignore namepsace
 
@@ -104,14 +104,14 @@ namespace LGP.ImageLibrary
 
             try
             {
-                var streamResourceInfo = Application.GetResourceStream( new Uri( uri ) );
-                if( streamResourceInfo != null )
+                var streamResourceInfo = Application.GetResourceStream(new Uri(uri));
+                if (streamResourceInfo != null)
                 {
                     var iconStream = streamResourceInfo.Stream;
-                    icon = new Icon( iconStream );
+                    icon = new Icon(iconStream);
                 }
             }
-            catch( Exception )
+            catch (Exception)
             {
                 icon = null;
             }
@@ -125,14 +125,14 @@ namespace LGP.ImageLibrary
         /// </summary>
         /// <param name = "filename"></param>
         /// <returns></returns>
-        public static Image GetExtensionIcon( string filename )
+        public static Image GetExtensionIcon(string filename)
         {
-            var bmp = ShellIcon.GetSmallIcon( filename ).ToBitmap();
+            var bmp = ShellIcon.GetSmallIcon(filename).ToBitmap();
             var stream = new MemoryStream();
-            bmp.Save( stream , ImageFormat.Png );
+            bmp.Save(stream, ImageFormat.Png);
             var bmpImage = new BitmapImage();
             bmpImage.BeginInit();
-            stream.Seek( 0 , SeekOrigin.Begin );
+            stream.Seek(0, SeekOrigin.Begin);
             bmpImage.StreamSource = stream;
             bmpImage.EndInit();
 
@@ -149,14 +149,14 @@ namespace LGP.ImageLibrary
         /// </summary>
         /// <param name = "bitmap">Bitmap to convert</param>
         /// <returns>Image</returns>
-        public static Image ConvertBitmapToImage( Bitmap bitmap )
+        public static Image ConvertBitmapToImage(Bitmap bitmap)
         {
             var bmp = bitmap;
             var stream = new MemoryStream();
-            bmp.Save( stream , ImageFormat.Png );
+            bmp.Save(stream, ImageFormat.Png);
             var bmpImage = new BitmapImage();
             bmpImage.BeginInit();
-            stream.Seek( 0 , SeekOrigin.Begin );
+            stream.Seek(0, SeekOrigin.Begin);
             bmpImage.StreamSource = stream;
             bmpImage.EndInit();
 
@@ -174,7 +174,7 @@ namespace LGP.ImageLibrary
         /// <param name = "bitmap">Bitmap to convert</param>
         /// <param name="size">image size</param>
         /// <returns>Image</returns>
-        public static Image ConvertBitmapToImage(Bitmap bitmap , int size )
+        public static Image ConvertBitmapToImage(Bitmap bitmap, int size)
         {
             var bmp = bitmap;
             var stream = new MemoryStream();
@@ -187,7 +187,8 @@ namespace LGP.ImageLibrary
 
             var j = new Image
             {
-                Source = bmpImage , MaxWidth = size
+                Source = bmpImage,
+                MaxWidth = size
             };
 
 

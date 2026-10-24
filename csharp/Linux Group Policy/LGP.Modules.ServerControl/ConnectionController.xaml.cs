@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace LGP.Modules.ServerControl
     {
         private static ConnectionController _instance;
         private readonly Timer _refreshTicker;
-        private readonly List< IServerInfo > _serverList;
+        private readonly List<IServerInfo> _serverList;
 
         /// <summary>
         /// Constructor
@@ -37,9 +37,9 @@ namespace LGP.Modules.ServerControl
 
                 this.Tag = Properties.Resources.ServerControl;
 
-                this.ServerImage.Source = Framework.Images.GetImage( "Networkgroup" , "VS2010ImageLibrary" ).Source;
+                this.ServerImage.Source = Framework.Images.GetImage("Networkgroup", "VS2010ImageLibrary").Source;
 
-                this._serverList = new List< IServerInfo >();
+                this._serverList = new List<IServerInfo>();
                 this._refreshTicker = new Timer
                 {
                     Enabled = true
@@ -51,20 +51,20 @@ namespace LGP.Modules.ServerControl
 
                 Framework.ShutDown += this.Shutdown;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void Shutdown( object sender , CancelEventArgs e )
+        private void Shutdown(object sender, CancelEventArgs e)
         {
             try
             {
-                if( this.ConnectionViewerContainer.Child != null )
+                if (this.ConnectionViewerContainer.Child != null)
                 {
                     var connectionViewer = this.ConnectionViewerContainer.Child as ConnectionViewer;
-                    if( connectionViewer != null )
+                    if (connectionViewer != null)
                     {
                         connectionViewer.StopStressTester();
                     }
@@ -72,34 +72,34 @@ namespace LGP.Modules.ServerControl
 
                 this._refreshTicker.Stop();
             }
-            catch( Exception )
+            catch (Exception)
             {
             }
         }
 
 
-        private bool InspectItems( string server )
+        private bool InspectItems(string server)
         {
             try
             {
-                foreach( var t in this._serverList )
+                foreach (var t in this._serverList)
                 {
-                    if( t.ServerAddress.CompareTo( server ) == 0 )
+                    if (t.ServerAddress.CompareTo(server) == 0)
                     {
                         return true;
                     }
                 }
                 return false;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return false;
             }
         }
 
 
-        private void RefreshTickerElapsed( object sender , ElapsedEventArgs e )
+        private void RefreshTickerElapsed(object sender, ElapsedEventArgs e)
         {
             try
             {
@@ -107,37 +107,37 @@ namespace LGP.Modules.ServerControl
 
                 var servers = Framework.Network.GetServers();
 
-                foreach( var t in servers )
+                foreach (var t in servers)
                 {
-                    if( this.InspectItems( t.ServerAddress ) == false )
+                    if (this.InspectItems(t.ServerAddress) == false)
                     {
                         update = true;
                     }
                 }
 
 
-                this.ServerListBox.Dispatcher.BeginInvoke( DispatcherPriority.Normal , ( Action ) ( delegate
+                this.ServerListBox.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Action)(delegate
                 {
-                    if( update )
+                    if (update)
                     {
                         this._serverList.Clear();
 
-                        foreach( var t in servers )
+                        foreach (var t in servers)
                         {
                             var n = new ServerInfo
                             {
-                                LastSeen = t.LastSeen ,
+                                LastSeen = t.LastSeen,
                                 ServerAddress = t.ServerAddress
                             };
-                            this._serverList.Add( n );
+                            this._serverList.Add(n);
                         }
                         this.ServerListBox.DataContext = this._serverList;
                     }
-                } ) );
+                }));
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -147,55 +147,55 @@ namespace LGP.Modules.ServerControl
         /// <returns>ConnectionController</returns>
         public static ConnectionController GetInstance()
         {
-            return _instance ?? ( _instance = new ConnectionController() );
+            return _instance ?? (_instance = new ConnectionController());
         }
 
-        private void ConnectServerButtonClick( object sender , RoutedEventArgs e )
+        private void ConnectServerButtonClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                if( this.textBox1.Text.CompareTo( "" ) != 0 )
+                if (this.textBox1.Text.CompareTo("") != 0)
                 {
-                    Framework.Network.SetServerAddress( this.textBox1.Text );
+                    Framework.Network.SetServerAddress(this.textBox1.Text);
                     this.ConnectionViewerContainer.Child = new ConnectionViewer();
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void SelectServerButtonClick( object sender , RoutedEventArgs e )
+        private void SelectServerButtonClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                if( this.ServerListBox.SelectedItem != null )
+                if (this.ServerListBox.SelectedItem != null)
                 {
-                    Framework.Network.SetServerAddress( this.ServerListBox.SelectedItem.ToString() );
+                    Framework.Network.SetServerAddress(this.ServerListBox.SelectedItem.ToString());
                     this.ConnectionViewerContainer.Child = new ConnectionViewer();
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void ServerListNodeDoubleClick( object sender , MouseButtonEventArgs e )
+        private void ServerListNodeDoubleClick(object sender, MouseButtonEventArgs e)
         {
             try
             {
-                if( this.ServerListBox.SelectedIndex != -1 )
+                if (this.ServerListBox.SelectedIndex != -1)
                 {
-                    Framework.Network.SetServerAddress( this.ServerListBox.SelectedItem.ToString() );
+                    Framework.Network.SetServerAddress(this.ServerListBox.SelectedItem.ToString());
                     this.ConnectionViewerContainer.Child = new ConnectionViewer();
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -210,9 +210,9 @@ namespace LGP.Modules.ServerControl
             {
                 this._refreshTicker.Stop();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -233,7 +233,7 @@ namespace LGP.Modules.ServerControl
             try
             {
             }
-            catch( Exception )
+            catch (Exception)
             {
             }
         }
@@ -246,7 +246,7 @@ namespace LGP.Modules.ServerControl
             try
             {
             }
-            catch( Exception )
+            catch (Exception)
             {
             }
         }

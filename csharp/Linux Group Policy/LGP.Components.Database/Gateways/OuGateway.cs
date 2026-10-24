@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ namespace LGP.Components.Database.Gateways
 {
     internal class OuGateway : IOuGateway
     {
-        private static List< IOu > _ous;
+        private static List<IOu> _ous;
 
         #region IOuGateway Members
 
@@ -24,61 +24,61 @@ namespace LGP.Components.Database.Gateways
         /// <param name = "ouName">The new ou name</param>
         /// <param name = "parentId">The new parent id</param>
         /// <returns>IOu</returns>
-        public IOu CreateOu( string ouName , int parentId )
+        public IOu CreateOu(string ouName, int parentId)
         {
             try
             {
-                if( _ous == null )
+                if (_ous == null)
                 {
                     BuildOuListing();
                 }
 
-                var sql = string.Format( "insert into ous values( null, '{0}' , '{1}' , '' )" , ouName , parentId );
+                var sql = string.Format("insert into ous values( null, '{0}' , '{1}' , '' )", ouName, parentId);
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
                     return null;
                 }
 
-                if( Framework.Database.ExecuteNonQuery( sql ) > 0 )
+                if (Framework.Database.ExecuteNonQuery(sql) > 0)
                 {
-                    sql = string.Format( "select * from ous where ou_id = ( select MAX( ou_id ) from ous )" );
+                    sql = string.Format("select * from ous where ou_id = ( select MAX( ou_id ) from ous )");
 
-                    var ds = Framework.Database.ExecuteQuery( sql );
+                    var ds = Framework.Database.ExecuteQuery(sql);
 
-                    var ouTable = ds.Tables[ 0 ];
+                    var ouTable = ds.Tables[0];
 
-                    if( ouTable.Rows.Count == 0 )
+                    if (ouTable.Rows.Count == 0)
                     {
                         return null;
                     }
 
-                    var row = ouTable.Rows[ 0 ];
+                    var row = ouTable.Rows[0];
 
                     int parentou;
 
                     try
                     {
-                        parentou = ( int ) row[ "ou_parent_id" ];
+                        parentou = (int)row["ou_parent_id"];
                     }
-                    catch( Exception error )
+                    catch (Exception error)
                     {
-                        Framework.EventBus.Publish( error );
+                        Framework.EventBus.Publish(error);
                         parentou = -1;
                     }
 
-                    var ou = new Ou( ( int ) row[ "ou_id" ] , ( string ) row[ "ou_name" ] , parentou , ( string ) row[ "ou_policygroup" ] );
+                    var ou = new Ou((int)row["ou_id"], (string)row["ou_name"], parentou, (string)row["ou_policygroup"]);
 
-                    _ous.Add( ou );
+                    _ous.Add(ou);
 
-                    return _ous[ _ous.Count - 1 ];
+                    return _ous[_ous.Count - 1];
                 }
 
                 return null;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return null;
             }
         }
@@ -88,35 +88,35 @@ namespace LGP.Components.Database.Gateways
         ///   Deletes an Ou to a given parent ou
         /// </summary>
         /// <param name = "ouid">the ou id to delete</param>
-        public void DeleteOu( int ouid )
+        public void DeleteOu(int ouid)
         {
             try
             {
-                if( _ous == null )
+                if (_ous == null)
                 {
                     BuildOuListing();
                 }
 
-                var sql = string.Format( "delete from ous where ou_id = '{0}'" , ouid );
+                var sql = string.Format("delete from ous where ou_id = '{0}'", ouid);
 
-                if( Framework.Database.IsConnected() )
+                if (Framework.Database.IsConnected())
                 {
-                    Framework.Database.ExecuteNonQuery( sql );
+                    Framework.Database.ExecuteNonQuery(sql);
 
-                    for( var y = 0; y < _ous.Count; y++ )
+                    for (var y = 0; y < _ous.Count; y++)
                     {
-                        if( _ous[ y ].GetOuId() == ouid )
+                        if (_ous[y].GetOuId() == ouid)
                         {
-                            _ous[ y ].Dispose( _ous[ y ] );
-                            _ous.RemoveAt( y );
+                            _ous[y].Dispose(_ous[y]);
+                            _ous.RemoveAt(y);
                             break;
                         }
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -126,28 +126,28 @@ namespace LGP.Components.Database.Gateways
         /// </summary>
         /// <param name = "ouid">int id</param>
         /// <returns>IOu</returns>
-        public IOu GetOuById( int ouid )
+        public IOu GetOuById(int ouid)
         {
             try
             {
-                if( _ous == null )
+                if (_ous == null)
                 {
                     BuildOuListing();
                 }
 
-                for( var y = 0; y < _ous.Count; y++ )
+                for (var y = 0; y < _ous.Count; y++)
                 {
-                    if( _ous[ y ].GetOuId() == ouid )
+                    if (_ous[y].GetOuId() == ouid)
                     {
-                        return _ous[ y ];
+                        return _ous[y];
                     }
                 }
 
                 return null;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return null;
             }
         }
@@ -158,28 +158,28 @@ namespace LGP.Components.Database.Gateways
         /// </summary>
         /// <param name = "ouid">int id</param>
         /// <returns>IOu</returns>
-        public IOu GetOuParentById( int ouid )
+        public IOu GetOuParentById(int ouid)
         {
             try
             {
-                if( _ous == null )
+                if (_ous == null)
                 {
                     BuildOuListing();
                 }
 
-                for( var y = 0; y < _ous.Count; y++ )
+                for (var y = 0; y < _ous.Count; y++)
                 {
-                    if( _ous[ y ].GetOuId() == ouid )
+                    if (_ous[y].GetOuId() == ouid)
                     {
-                        return this.GetOuById( _ous[ y ].GetParentOuId() );
+                        return this.GetOuById(_ous[y].GetParentOuId());
                     }
                 }
 
                 return null;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return null;
             }
         }
@@ -189,9 +189,9 @@ namespace LGP.Components.Database.Gateways
         ///   Gets a listing of Ous
         /// </summary>
         /// <returns>IOu List</returns>
-        public List< IOu > GetOuListing()
+        public List<IOu> GetOuListing()
         {
-            if( _ous == null )
+            if (_ous == null)
             {
                 BuildOuListing();
             }
@@ -205,30 +205,30 @@ namespace LGP.Components.Database.Gateways
         /// </summary>
         /// <param name = "ouid">int outid</param>
         /// <returns>IOu List</returns>
-        public List< IOu > GetChildren( int ouid )
+        public List<IOu> GetChildren(int ouid)
         {
             try
             {
-                if( _ous == null )
+                if (_ous == null)
                 {
                     BuildOuListing();
                 }
 
-                var children = new List< IOu >();
+                var children = new List<IOu>();
 
-                for( var y = 0; y < _ous.Count; y++ )
+                for (var y = 0; y < _ous.Count; y++)
                 {
-                    if( _ous[ y ].GetParentOuId() == ouid && _ous[ y ].GetOuId() != _ous[ y ].GetParentOuId() )
+                    if (_ous[y].GetParentOuId() == ouid && _ous[y].GetOuId() != _ous[y].GetParentOuId())
                     {
-                        children.Add( _ous[ y ] );
+                        children.Add(_ous[y]);
                     }
                 }
 
                 return children;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return null;
             }
         }
@@ -238,30 +238,30 @@ namespace LGP.Components.Database.Gateways
         ///   Get the parents with no parents
         /// </summary>
         /// <returns>IOu List</returns>
-        public List< IOu > GetRoots()
+        public List<IOu> GetRoots()
         {
             try
             {
-                if( _ous == null )
+                if (_ous == null)
                 {
                     BuildOuListing();
                 }
 
-                var roots = new List< IOu >();
+                var roots = new List<IOu>();
 
-                for( var y = 0; y < _ous.Count; y++ )
+                for (var y = 0; y < _ous.Count; y++)
                 {
-                    if( _ous[ y ].GetOuId() == _ous[ y ].GetParentOuId() )
+                    if (_ous[y].GetOuId() == _ous[y].GetParentOuId())
                     {
-                        roots.Add( _ous[ y ] );
+                        roots.Add(_ous[y]);
                     }
                 }
 
                 return roots;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return null;
             }
         }
@@ -279,71 +279,71 @@ namespace LGP.Components.Database.Gateways
         private static void BuildOuListing()
         {
             var refresh = true;
-            if( _ous == null )
+            if (_ous == null)
             {
-                _ous = new List< IOu >();
+                _ous = new List<IOu>();
                 refresh = false;
             }
 
             try
             {
-                var sql = string.Format( "select * from ous" );
+                var sql = string.Format("select * from ous");
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
                     return;
                 }
 
-                var ds = Framework.Database.ExecuteQuery( sql );
+                var ds = Framework.Database.ExecuteQuery(sql);
 
-                var ouTable = ds.Tables[ 0 ];
+                var ouTable = ds.Tables[0];
 
-                if( ouTable.Rows.Count == 0 )
+                if (ouTable.Rows.Count == 0)
                 {
                     return;
                 }
 
-                foreach( DataRow row in ouTable.Rows )
+                foreach (DataRow row in ouTable.Rows)
                 {
                     int parentou;
 
                     try
                     {
-                        parentou = ( int ) row[ "ou_parent_id" ];
+                        parentou = (int)row["ou_parent_id"];
                     }
-                    catch( Exception error )
+                    catch (Exception error)
                     {
-                        Framework.EventBus.Publish( error );
+                        Framework.EventBus.Publish(error);
                         parentou = -1;
                     }
 
-                    var ou = new Ou( ( int ) row[ "ou_id" ] , ( string ) row[ "ou_name" ] , parentou , ( string ) row[ "ou_policygroup" ] );
+                    var ou = new Ou((int)row["ou_id"], (string)row["ou_name"], parentou, (string)row["ou_policygroup"]);
 
-                    if( refresh )
+                    if (refresh)
                     {
-                        if( Contains( ou ) == false )
+                        if (Contains(ou) == false)
                         {
-                            _ous.Add( ou );
+                            _ous.Add(ou);
                         }
                     }
                     else
                     {
-                        _ous.Add( ou );
+                        _ous.Add(ou);
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private static bool Contains( Ou ou )
+        private static bool Contains(Ou ou)
         {
-            foreach( Ou cou in _ous )
+            foreach (Ou cou in _ous)
             {
-                if( cou.GetOuId() == ou.GetOuId() )
+                if (cou.GetOuId() == ou.GetOuId())
                 {
                     return true;
                 }

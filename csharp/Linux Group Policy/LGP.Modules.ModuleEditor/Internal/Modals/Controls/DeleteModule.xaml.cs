@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Windows;
@@ -30,9 +30,9 @@ namespace LGP.Modules.ModuleEditor.Internal.Modals.Controls
             {
                 this.InitializeComponent();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -42,7 +42,7 @@ namespace LGP.Modules.ModuleEditor.Internal.Modals.Controls
         /// <param name = "moduleList">Creator</param>
         /// <param name = "popup">the parent window</param>
         /// <param name = "module">IModule</param>
-        public DeleteModule( UserControl moduleList , IDialog popup , IModule module )
+        public DeleteModule(UserControl moduleList, IDialog popup, IModule module)
         {
             try
             {
@@ -51,48 +51,48 @@ namespace LGP.Modules.ModuleEditor.Internal.Modals.Controls
                 this._popupWindow = popup;
                 this._module = module;
                 this.label3.Content = module.GetModuleName();
-                this.image1.Source = Framework.Images.GetImage( "delete32" , "VS2010ImageLibrary" ).Source;
+                this.image1.Source = Framework.Images.GetImage("delete32", "VS2010ImageLibrary").Source;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void CancelButtonClick( object sender , RoutedEventArgs e )
+        private void CancelButtonClick(object sender, RoutedEventArgs e)
         {
             try
             {
                 this._popupWindow.CloseDialog();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void UserControlLoaded( object sender , RoutedEventArgs e )
+        private void UserControlLoaded(object sender, RoutedEventArgs e)
         {
             try
             {
-                this._popupWindow.ResizePopup( ( int ) this.Width , ( int ) this.Height );
+                this._popupWindow.ResizePopup((int)this.Width, (int)this.Height);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void DeleteButtonClick( object sender , RoutedEventArgs e )
+        private void DeleteButtonClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                ModuleHandler.DeleteModule( this._module );
+                ModuleHandler.DeleteModule(this._module);
                 this._popupWindow.CloseDialog();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
     }

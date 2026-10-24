@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Windows.Controls;
@@ -23,16 +23,16 @@ namespace LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers
         {
             try
             {
-                MethodImage = Framework.Images.GetImage( "method" , "16x16" , 14 );
-                PropertyImage = Framework.Images.GetImage( "property" , "16x16" , 14 );
+                MethodImage = Framework.Images.GetImage("method", "16x16", 14);
+                PropertyImage = Framework.Images.GetImage("property", "16x16", 14);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        public CompletionData( string text , string enteredTest , int type )
+        public CompletionData(string text, string enteredTest, int type)
         {
             this._type = type;
             this.Text = text;
@@ -51,11 +51,11 @@ namespace LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers
         {
             get
             {
-                if( this._type == 0 )
+                if (this._type == 0)
                 {
                     return MethodImage.Source;
                 }
-                if( this._type == 1 )
+                if (this._type == 1)
                 {
                     return PropertyImage.Source;
                 }
@@ -95,15 +95,15 @@ namespace LGP.Modules.ModuleEditor.Internal.AvalonEditHelpers
         }
 
 
-        public void Complete( TextArea textArea , ISegment completionSegment , EventArgs insertionRequestEventArgs )
+        public void Complete(TextArea textArea, ISegment completionSegment, EventArgs insertionRequestEventArgs)
         {
             try
             {
-                textArea.Document.Replace( completionSegment , this.Text.Replace( this.EnteredText , "" ) );
+                textArea.Document.Replace(completionSegment, this.Text.Replace(this.EnteredText, ""));
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 

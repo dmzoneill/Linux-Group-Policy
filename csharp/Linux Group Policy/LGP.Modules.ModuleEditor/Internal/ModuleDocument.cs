@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Collections.Generic;
@@ -29,10 +29,10 @@ namespace LGP.Modules.ModuleEditor.Internal
 {
     /// <summary>
     /// </summary>
-    public class ModuleDocument : INotifyPropertyChanged , IModuleObserver
+    public class ModuleDocument : INotifyPropertyChanged, IModuleObserver
     {
         private static readonly BraceFoldingStrategy BraceFoldingStrategy;
-        private static List< string > _perlMethodNames;
+        private static List<string> _perlMethodNames;
         private static IHighlightingDefinition _perlHighlighterDefintion;
         private readonly Label _col;
         private readonly TextEditor _editor1;
@@ -48,7 +48,7 @@ namespace LGP.Modules.ModuleEditor.Internal
         private FoldingManager _foldingManager2;
         private int _hashContents;
         private IModule _module;
-        private List< string > _perlVariables;
+        private List<string> _perlVariables;
 
 
         static ModuleDocument()
@@ -57,9 +57,9 @@ namespace LGP.Modules.ModuleEditor.Internal
             {
                 BraceFoldingStrategy = new BraceFoldingStrategy();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -71,7 +71,7 @@ namespace LGP.Modules.ModuleEditor.Internal
         /// <param name = "module">Document to bind</param>
         /// <param name = "avalon1">TextEditor</param>
         /// <param name = "avalon2">TextEditor</param>
-        public ModuleDocument( IModule module , ModuleEditor parent , TextEditor avalon1 , TextEditor avalon2 )
+        public ModuleDocument(IModule module, ModuleEditor parent, TextEditor avalon1, TextEditor avalon2)
         {
             try
             {
@@ -79,27 +79,47 @@ namespace LGP.Modules.ModuleEditor.Internal
                 this._editor1 = avalon1;
                 this._editor2 = avalon2;
                 this._module = module;
-                this._module.Attach( this );
+                this._module.Attach(this);
 
                 this._col = new Label
                 {
-                    Margin = new Thickness( 0 ) , Padding = new Thickness( 0 ) , FontSize = 12 , Height = 28 , Content = "0"
+                    Margin = new Thickness(0),
+                    Padding = new Thickness(0),
+                    FontSize = 12,
+                    Height = 28,
+                    Content = "0"
                 };
                 this._length = new Label
                 {
-                    Margin = new Thickness( 0 ) , Padding = new Thickness( 0 ) , FontSize = 12 , Height = 28 , Content = "0"
+                    Margin = new Thickness(0),
+                    Padding = new Thickness(0),
+                    FontSize = 12,
+                    Height = 28,
+                    Content = "0"
                 };
                 this._lines = new Label
                 {
-                    Margin = new Thickness( 0 ) , Padding = new Thickness( 0 ) , FontSize = 12 , Height = 28 , Content = "0"
+                    Margin = new Thickness(0),
+                    Padding = new Thickness(0),
+                    FontSize = 12,
+                    Height = 28,
+                    Content = "0"
                 };
                 this._row = new Label
                 {
-                    Margin = new Thickness( 0 ) , Padding = new Thickness( 0 ) , FontSize = 12 , Height = 28 , Content = "0"
+                    Margin = new Thickness(0),
+                    Padding = new Thickness(0),
+                    FontSize = 12,
+                    Height = 28,
+                    Content = "0"
                 };
                 this._selection = new Label
                 {
-                    Margin = new Thickness( 0 ) , Padding = new Thickness( 0 ) , FontSize = 12 , Height = 28 , Content = "0"
+                    Margin = new Thickness(0),
+                    Padding = new Thickness(0),
+                    FontSize = 12,
+                    Height = 28,
+                    Content = "0"
                 };
 
                 this.SetUpLookAndFeel();
@@ -112,9 +132,9 @@ namespace LGP.Modules.ModuleEditor.Internal
                 this._document.UndoStack = new UndoStack();
                 this._hashContents = this._document.Text.GetHashCode();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -131,7 +151,7 @@ namespace LGP.Modules.ModuleEditor.Internal
             set
             {
                 this._document = value;
-                this.OnPropertyChanged( "DocumentChanged" );
+                this.OnPropertyChanged("DocumentChanged");
             }
         }
 
@@ -231,40 +251,40 @@ namespace LGP.Modules.ModuleEditor.Internal
                 this._editor2.Options.ShowBoxForControlCharacters = true;
                 this._editor2.Options.ShowTabs = true;
 
-                var myBinding = new Binding( "WordWrap" )
+                var myBinding = new Binding("WordWrap")
                 {
                     Source = this._editor1
                 };
-                this._editor2.SetBinding( TextEditor.WordWrapProperty , myBinding );
+                this._editor2.SetBinding(TextEditor.WordWrapProperty, myBinding);
 
-                var myBinding2 = new Binding( "ShowLineNumbers" )
+                var myBinding2 = new Binding("ShowLineNumbers")
                 {
                     Source = this._editor1
                 };
-                this._editor2.SetBinding( TextEditor.ShowLineNumbersProperty , myBinding2 );
+                this._editor2.SetBinding(TextEditor.ShowLineNumbersProperty, myBinding2);
 
-                this._editor1.TextArea.TextView.BackgroundRenderers.Add( new HighlightCurrentLineBackgroundRenderer( this._editor1 ) );
+                this._editor1.TextArea.TextView.BackgroundRenderers.Add(new HighlightCurrentLineBackgroundRenderer(this._editor1));
 
                 this._editor1.TextArea.Caret.PositionChanged += this.CaretPositionChanged1;
 
-                this._editor2.TextArea.TextView.BackgroundRenderers.Add( new HighlightCurrentLineBackgroundRenderer( this._editor2 ) );
+                this._editor2.TextArea.TextView.BackgroundRenderers.Add(new HighlightCurrentLineBackgroundRenderer(this._editor2));
 
                 this._editor2.TextArea.Caret.PositionChanged += this.CaretPositionChanged2;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void CaretPositionChanged1( object sender , EventArgs e )
+        private void CaretPositionChanged1(object sender, EventArgs e)
         {
-            this.CaretChangedUpdater( this._editor1 );
+            this.CaretChangedUpdater(this._editor1);
         }
 
-        private void CaretPositionChanged2( object sender , EventArgs e )
+        private void CaretPositionChanged2(object sender, EventArgs e)
         {
-            this.CaretChangedUpdater( this._editor2 );
+            this.CaretChangedUpdater(this._editor2);
         }
 
 
@@ -272,35 +292,35 @@ namespace LGP.Modules.ModuleEditor.Internal
         {
             try
             {
-                this._foldingManager1 = FoldingManager.Install( this._editor1.TextArea );
-                BraceFoldingStrategy.UpdateFoldings( this._foldingManager1 , this._document );
+                this._foldingManager1 = FoldingManager.Install(this._editor1.TextArea);
+                BraceFoldingStrategy.UpdateFoldings(this._foldingManager1, this._document);
 
-                this._foldingManager2 = FoldingManager.Install( this._editor2.TextArea );
-                BraceFoldingStrategy.UpdateFoldings( this._foldingManager2 , this._document );
+                this._foldingManager2 = FoldingManager.Install(this._editor2.TextArea);
+                BraceFoldingStrategy.UpdateFoldings(this._foldingManager2, this._document);
 
                 var foldingUpdateTimer = new DispatcherTimer
                 {
-                    Interval = TimeSpan.FromSeconds( 3 )
+                    Interval = TimeSpan.FromSeconds(3)
                 };
                 foldingUpdateTimer.Tick += this.BraceFoldingUpdateTimerTick;
                 foldingUpdateTimer.Start();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void BraceFoldingUpdateTimerTick( object sender , EventArgs e )
+        private void BraceFoldingUpdateTimerTick(object sender, EventArgs e)
         {
             try
             {
-                BraceFoldingStrategy.UpdateFoldings( this._foldingManager1 , this._document );
-                BraceFoldingStrategy.UpdateFoldings( this._foldingManager2 , this._document );
+                BraceFoldingStrategy.UpdateFoldings(this._foldingManager1, this._document);
+                BraceFoldingStrategy.UpdateFoldings(this._foldingManager2, this._document);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -308,37 +328,37 @@ namespace LGP.Modules.ModuleEditor.Internal
         {
             try
             {
-                var documentBinding = new Binding( "Document" )
+                var documentBinding = new Binding("Document")
                 {
                     Source = this
                 };
-                BindingOperations.SetBinding( this._editor1 , TextEditor.DocumentProperty , documentBinding );
-                BindingOperations.SetBinding( this._editor2 , TextEditor.DocumentProperty , documentBinding );
+                BindingOperations.SetBinding(this._editor1, TextEditor.DocumentProperty, documentBinding);
+                BindingOperations.SetBinding(this._editor2, TextEditor.DocumentProperty, documentBinding);
 
-                BindingOperations.SetBinding( this._parent.FileLine , ContentControl.ContentProperty , new Binding( "CaretRow" )
+                BindingOperations.SetBinding(this._parent.FileLine, ContentControl.ContentProperty, new Binding("CaretRow")
                 {
                     Source = this
-                } );
-                BindingOperations.SetBinding( this._parent.FileColumn , ContentControl.ContentProperty , new Binding( "CaretCol" )
+                });
+                BindingOperations.SetBinding(this._parent.FileColumn, ContentControl.ContentProperty, new Binding("CaretCol")
                 {
                     Source = this
-                } );
-                BindingOperations.SetBinding( this._parent.FileSelection , ContentControl.ContentProperty , new Binding( "SelectionLength" )
+                });
+                BindingOperations.SetBinding(this._parent.FileSelection, ContentControl.ContentProperty, new Binding("SelectionLength")
                 {
                     Source = this
-                } );
-                BindingOperations.SetBinding( this._parent.FileLength , ContentControl.ContentProperty , new Binding( "FileLength" )
+                });
+                BindingOperations.SetBinding(this._parent.FileLength, ContentControl.ContentProperty, new Binding("FileLength")
                 {
                     Source = this
-                } );
-                BindingOperations.SetBinding( this._parent.FileLines , ContentControl.ContentProperty , new Binding( "LineCount" )
+                });
+                BindingOperations.SetBinding(this._parent.FileLines, ContentControl.ContentProperty, new Binding("LineCount")
                 {
                     Source = this
-                } );
+                });
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -355,43 +375,43 @@ namespace LGP.Modules.ModuleEditor.Internal
                 this._editor1.TextArea.TextEntered += this.TextAreaTextEntered1;
                 this._editor2.TextArea.TextEntered += this.TextAreaTextEntered2;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void CaretChangedUpdater( TextEditor editor )
+        private void CaretChangedUpdater(TextEditor editor)
         {
             try
             {
-                editor.TextArea.TextView.InvalidateLayer( KnownLayer.Background );
+                editor.TextArea.TextView.InvalidateLayer(KnownLayer.Background);
                 this._col.Content = editor.TextArea.Caret.Column;
                 this._row.Content = editor.TextArea.Caret.Line;
                 this._selection.Content = editor.SelectionLength;
                 this._length.Content = editor.Text.Length;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void OnPropertyChanged( string info )
+        private void OnPropertyChanged(string info)
         {
             try
             {
                 var handler = this.PropertyChanged;
-                if( handler != null )
+                if (handler != null)
                 {
-                    handler( this , new PropertyChangedEventArgs( info ) );
+                    handler(this, new PropertyChangedEventArgs(info));
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -408,23 +428,23 @@ namespace LGP.Modules.ModuleEditor.Internal
                 this._lines.Content = this.Document.LineCount;
                 this._length.Content = this.Document.TextLength;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void DocumentTextChanged( object sender , EventArgs e )
+        private void DocumentTextChanged(object sender, EventArgs e)
         {
             try
             {
                 this._lines.Content = this.Document.LineCount;
                 this._length.Content = this.Document.TextLength;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -433,14 +453,14 @@ namespace LGP.Modules.ModuleEditor.Internal
         {
             try
             {
-                var extension = Path.GetExtension( this._module.GetModuleLocation() );
-                if( extension != null )
+                var extension = Path.GetExtension(this._module.GetModuleLocation());
+                if (extension != null)
                 {
                     var ext = extension.ToLower();
 
-                    if( ext.CompareTo( ".pl" ) == 0 || ext.CompareTo( ".pm" ) == 0 )
+                    if (ext.CompareTo(".pl") == 0 || ext.CompareTo(".pm") == 0)
                     {
-                        if( _perlHighlighterDefintion == null )
+                        if (_perlHighlighterDefintion == null)
                         {
                             this.LoadPerlSyntaxHighlighter();
                             LoadPerlMethodNames();
@@ -453,14 +473,14 @@ namespace LGP.Modules.ModuleEditor.Internal
                     }
                     else
                     {
-                        this._editor1.SyntaxHighlighting = HighlightingManager.Instance.GetDefinitionByExtension( extension );
-                        this._editor2.SyntaxHighlighting = HighlightingManager.Instance.GetDefinitionByExtension( extension );
+                        this._editor1.SyntaxHighlighting = HighlightingManager.Instance.GetDefinitionByExtension(extension);
+                        this._editor2.SyntaxHighlighting = HighlightingManager.Instance.GetDefinitionByExtension(extension);
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -468,23 +488,23 @@ namespace LGP.Modules.ModuleEditor.Internal
         {
             try
             {
-                this._perlVariables = new List< string >();
+                this._perlVariables = new List<string>();
 
-                var variableRegex = new Regex( "(\\${1,2}|\\$?@|\\$?%)([A-Za-z0-9_]+)" );
+                var variableRegex = new Regex("(\\${1,2}|\\$?@|\\$?%)([A-Za-z0-9_]+)");
 
-                var collection = variableRegex.Matches( this._document.Text );
+                var collection = variableRegex.Matches(this._document.Text);
 
-                foreach( Match match in collection )
+                foreach (Match match in collection)
                 {
-                    if( !this._perlVariables.Contains( match.ToString() ) )
+                    if (!this._perlVariables.Contains(match.ToString()))
                     {
-                        this._perlVariables.Add( match.ToString() );
+                        this._perlVariables.Add(match.ToString());
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -493,19 +513,19 @@ namespace LGP.Modules.ModuleEditor.Internal
         {
             try
             {
-                if( _perlMethodNames == null )
+                if (_perlMethodNames == null)
                 {
-                    var fileStream = new FileStream( "perl.xshd" , FileMode.Open , FileAccess.Read );
-                    var reader = new XmlTextReader( fileStream );
+                    var fileStream = new FileStream("perl.xshd", FileMode.Open, FileAccess.Read);
+                    var reader = new XmlTextReader(fileStream);
 
-                    _perlMethodNames = new List< string >();
+                    _perlMethodNames = new List<string>();
 
-                    while( reader.Read() )
+                    while (reader.Read())
                     {
-                        if( reader.NodeType == XmlNodeType.Element )
+                        if (reader.NodeType == XmlNodeType.Element)
                         {
                             reader.Read();
-                            _perlMethodNames.Add( reader.Value );
+                            _perlMethodNames.Add(reader.Value);
                         }
                     }
 
@@ -513,9 +533,9 @@ namespace LGP.Modules.ModuleEditor.Internal
                     fileStream.Close();
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -524,63 +544,65 @@ namespace LGP.Modules.ModuleEditor.Internal
         {
             try
             {
-                if( _perlHighlighterDefintion == null )
+                if (_perlHighlighterDefintion == null)
                 {
-                    var fileStream = new FileStream( "perl.xshd" , FileMode.Open , FileAccess.Read );
-                    var reader = new XmlTextReader( fileStream );
-                    _perlHighlighterDefintion = HighlightingLoader.Load( reader , HighlightingManager.Instance );
+                    var fileStream = new FileStream("perl.xshd", FileMode.Open, FileAccess.Read);
+                    var reader = new XmlTextReader(fileStream);
+                    _perlHighlighterDefintion = HighlightingLoader.Load(reader, HighlightingManager.Instance);
                     reader.Close();
                     fileStream.Close();
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void TextAreaTextEntered1( object sender , TextCompositionEventArgs e )
+        private void TextAreaTextEntered1(object sender, TextCompositionEventArgs e)
         {
-            this.HandleTextEntered( this._editor1 );
+            this.HandleTextEntered(this._editor1);
         }
 
 
-        private void TextAreaTextEntered2( object sender , TextCompositionEventArgs e )
+        private void TextAreaTextEntered2(object sender, TextCompositionEventArgs e)
         {
-            this.HandleTextEntered( this._editor2 );
+            this.HandleTextEntered(this._editor2);
         }
 
 
-        private void HandleTextEntered( TextEditor editor )
+        private void HandleTextEntered(TextEditor editor)
         {
             try
             {
-                var currentline = editor.Document.GetLineByOffset( editor.CaretOffset );
+                var currentline = editor.Document.GetLineByOffset(editor.CaretOffset);
                 var startswith = "";
                 const char space = ' ';
 
                 var currentPos = editor.CaretOffset;
                 var i = currentPos - 1;
 
-                while( i > -1 && i > currentline.Offset - 1 )
+                while (i > -1 && i > currentline.Offset - 1)
                 {
-                    var previousChar = this._document.GetCharAt( i );
-                    if( previousChar.CompareTo( space ) == 0 || previousChar.CompareTo( '\t' ) == 0 )
+                    var previousChar = this._document.GetCharAt(i);
+                    if (previousChar.CompareTo(space) == 0 || previousChar.CompareTo('\t') == 0)
                     {
                         i = -2;
                     }
                     else
                     {
-                        startswith = this._document.GetCharAt( i ) + startswith;
+                        startswith = this._document.GetCharAt(i) + startswith;
                         i--;
                     }
                 }
 
-                if( startswith.Length > 0 )
+                if (startswith.Length > 0)
                 {
-                    this._completionWindow = new CompletionWindow( editor.TextArea )
+                    this._completionWindow = new CompletionWindow(editor.TextArea)
                     {
-                        WindowStyle = WindowStyle.None , Background = null , AllowsTransparency = true
+                        WindowStyle = WindowStyle.None,
+                        Background = null,
+                        AllowsTransparency = true
                     };
                     this._completionWindow.Closed += delegate
                     {
@@ -589,23 +611,23 @@ namespace LGP.Modules.ModuleEditor.Internal
 
                     var data = this._completionWindow.CompletionList.CompletionData;
 
-                    for( var h = 0; h < _perlMethodNames.Count; h++ )
+                    for (var h = 0; h < _perlMethodNames.Count; h++)
                     {
-                        if( _perlMethodNames[ h ].StartsWith( startswith ) )
+                        if (_perlMethodNames[h].StartsWith(startswith))
                         {
-                            data.Add( new CompletionData( _perlMethodNames[ h ] , startswith , 0 ) );
+                            data.Add(new CompletionData(_perlMethodNames[h], startswith, 0));
                         }
                     }
 
-                    for( var h = 0; h < this._perlVariables.Count; h++ )
+                    for (var h = 0; h < this._perlVariables.Count; h++)
                     {
-                        if( this._perlVariables[ h ].StartsWith( startswith ) )
+                        if (this._perlVariables[h].StartsWith(startswith))
                         {
-                            data.Add( new CompletionData( this._perlVariables[ h ] , startswith , 1 ) );
+                            data.Add(new CompletionData(this._perlVariables[h], startswith, 1));
                         }
                     }
 
-                    if( data.Count > 0 )
+                    if (data.Count > 0)
                     {
                         this._completionWindow.Show();
                     }
@@ -613,38 +635,38 @@ namespace LGP.Modules.ModuleEditor.Internal
 
                 this._hashContents = this._document.Text.GetHashCode();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void TextAreaTextEntering1( object sender , TextCompositionEventArgs e )
+        private void TextAreaTextEntering1(object sender, TextCompositionEventArgs e)
         {
-            this.TextEntering( e );
+            this.TextEntering(e);
         }
 
-        private void TextAreaTextEntering2( object sender , TextCompositionEventArgs e )
+        private void TextAreaTextEntering2(object sender, TextCompositionEventArgs e)
         {
-            this.TextEntering( e );
+            this.TextEntering(e);
         }
 
-        private void TextEntering( TextCompositionEventArgs e )
+        private void TextEntering(TextCompositionEventArgs e)
         {
             try
             {
-                if( e.Text.Length > 0 && this._completionWindow != null )
+                if (e.Text.Length > 0 && this._completionWindow != null)
                 {
-                    if( !char.IsLetterOrDigit( e.Text[ 0 ] ) )
+                    if (!char.IsLetterOrDigit(e.Text[0]))
                     {
-                        this._completionWindow.CompletionList.RequestInsertion( e );
+                        this._completionWindow.CompletionList.RequestInsertion(e);
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -652,17 +674,17 @@ namespace LGP.Modules.ModuleEditor.Internal
         /// <summary>
         /// </summary>
         /// <param name = "text"></param>
-        public void GoTo( string text )
+        public void GoTo(string text)
         {
             try
             {
-                var location = this._document.GetLocation( this._document.Text.IndexOf( text ) );
-                this._editor1.ScrollToLine( location.Line );
-                this._editor2.ScrollToLine( location.Line );
+                var location = this._document.GetLocation(this._document.Text.IndexOf(text));
+                this._editor1.ScrollToLine(location.Line);
+                this._editor2.ScrollToLine(location.Line);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -683,25 +705,25 @@ namespace LGP.Modules.ModuleEditor.Internal
         /// </summary>
         /// <param name = "module">IModule</param>
         /// <param name = "source">IModuleObserver</param>
-        public void Update( IModule module , IModuleObserver source )
+        public void Update(IModule module, IModuleObserver source)
         {
             try
             {
                 this._module = module;
 
-                var replacePackage = new Regex( "package\\s+([A-Za-z0-9_]+)(\\s+)?;" );
-                var match = replacePackage.Match( this._document.Text );
+                var replacePackage = new Regex("package\\s+([A-Za-z0-9_]+)(\\s+)?;");
+                var match = replacePackage.Match(this._document.Text);
 
-                if( this._module.GetModuleName().CompareTo( match.Groups[ 1 ].ToString() ) != 0 )
+                if (this._module.GetModuleName().CompareTo(match.Groups[1].ToString()) != 0)
                 {
-                    this._document.Text = this._document.Text.Replace( match.Groups[ 0 ].ToString() , "package " + this._module.GetModuleName() + ";" );
+                    this._document.Text = this._document.Text.Replace(match.Groups[0].ToString(), "package " + this._module.GetModuleName() + ";");
                     this._hashContents = this._document.Text.GetHashCode();
                     this._module.FileContents = this._document.Text;
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -709,14 +731,14 @@ namespace LGP.Modules.ModuleEditor.Internal
         ///   Attach objewcts that observer this module
         /// </summary>
         /// <param name = "obj">IModuleObserver</param>
-        public void Attach( IModuleObserver obj )
+        public void Attach(IModuleObserver obj)
         {
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -724,14 +746,14 @@ namespace LGP.Modules.ModuleEditor.Internal
         ///   Detach objewcts that observer this module
         /// </summary>
         /// <param name = "obj">IModuleObserver</param>
-        public void Detach( IModuleObserver obj )
+        public void Detach(IModuleObserver obj)
         {
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -743,9 +765,9 @@ namespace LGP.Modules.ModuleEditor.Internal
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -753,19 +775,19 @@ namespace LGP.Modules.ModuleEditor.Internal
         ///   Dispose this object and all the observers
         /// </summary>
         /// <param name = "obj">IModuleObserver</param>
-        public void Dispose( IModuleObserver obj )
+        public void Dispose(IModuleObserver obj)
         {
             try
             {
                 if (this._module != null)
                 {
-                    this._module.Detach( this );
+                    this._module.Detach(this);
                     this._module = null;
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 

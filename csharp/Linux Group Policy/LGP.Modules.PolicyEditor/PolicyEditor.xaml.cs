@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.IO;
@@ -19,7 +19,7 @@ namespace LGP.Modules.PolicyEditor
     /// <summary>
     ///   Interaction logic for PolicyEditor.xaml
     /// </summary>
-    public partial class PolicyEditor : IUserControl , IOuObserver
+    public partial class PolicyEditor : IUserControl, IOuObserver
     {
         private readonly IPolicy _policy;
         private readonly PolicyHandler _policyHandler;
@@ -35,9 +35,9 @@ namespace LGP.Modules.PolicyEditor
                 this.InitializeComponent();
                 this.Prepare();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -45,34 +45,34 @@ namespace LGP.Modules.PolicyEditor
         ///   Constructor
         /// </summary>
         /// <param name = "ou"></param>
-        public PolicyEditor( IOu ou )
+        public PolicyEditor(IOu ou)
         {
             try
             {
                 this.InitializeComponent();
 
                 this._ou = ou;
-                this._ou.Attach( this );
-                this.PolicyOverviewContainer.Child = new OuPolicyPane( this._ou );
+                this._ou.Attach(this);
+                this.PolicyOverviewContainer.Child = new OuPolicyPane(this._ou);
                 var pgw = Framework.Database.CreatePolicyGateway();
 
-                this._policy = pgw.GetPolicyByOu( this._ou );
-                if( this._policy == null )
+                this._policy = pgw.GetPolicyByOu(this._ou);
+                if (this._policy == null)
                 {
-                    var policy = File.ReadAllText( "PolicyTemplate.txt" );
-                    this._policy = pgw.CreatePolicy( this._ou , policy );
+                    var policy = File.ReadAllText("PolicyTemplate.txt");
+                    this._policy = pgw.CreatePolicy(this._ou, policy);
                 }
 
-                this._policyHandler = new PolicyHandler( this , this.PolicyDSLEditor1 , this._policy );
-                this.VPEditor.SetPolicy( this._policy , this , this._policyHandler );
+                this._policyHandler = new PolicyHandler(this, this.PolicyDSLEditor1, this._policy);
+                this.VPEditor.SetPolicy(this._policy, this, this._policyHandler);
                 this.Prepare();
                 this.Tag = this._ou.GetName() + " " + Properties.Resources.Policy;
 
-                this.PolicyOverviewContainer.Child = new OuPolicyPane( this._ou );
+                this.PolicyOverviewContainer.Child = new OuPolicyPane(this._ou);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -80,71 +80,71 @@ namespace LGP.Modules.PolicyEditor
         {
             try
             {
-                this.ImageCopy.Source = Framework.Images.GetImage( "Copy" , "VS2010ImageLibrary" ).Source;
-                this.ImageCut.Source = Framework.Images.GetImage( "Cut" , "VS2010ImageLibrary" ).Source;
-                this.ImageDelete.Source = Framework.Images.GetImage( "Delete" , "VS2010ImageLibrary" ).Source;
-                this.ImagePaste.Source = Framework.Images.GetImage( "Paste" , "VS2010ImageLibrary" ).Source;
-                this.ImageRedo.Source = Framework.Images.GetImage( "Redo" , "VS2010ImageLibrary" ).Source;
-                this.ImageSave.Source = Framework.Images.GetImage( "Save" , "VS2010ImageLibrary" ).Source;
-                this.ImageSave1.Source = Framework.Images.GetImage( "Save" , "VS2010ImageLibrary" ).Source;
-                this.ImageUndo.Source = Framework.Images.GetImage( "Undo" , "VS2010ImageLibrary" ).Source;
-                this.ImageWrap.Source = Framework.Images.GetImage( "WordWrap" , "VS2010ImageLibrary" ).Source;
-                this.ImageDeleteRule.Source = Framework.Images.GetImage( "Delete-PermissionHH" , "VS2010ImageLibrary" ).Source;
-                this.ImageAddRule.Source = Framework.Images.GetImage( "New-Permission" , "VS2010ImageLibrary" ).Source;
+                this.ImageCopy.Source = Framework.Images.GetImage("Copy", "VS2010ImageLibrary").Source;
+                this.ImageCut.Source = Framework.Images.GetImage("Cut", "VS2010ImageLibrary").Source;
+                this.ImageDelete.Source = Framework.Images.GetImage("Delete", "VS2010ImageLibrary").Source;
+                this.ImagePaste.Source = Framework.Images.GetImage("Paste", "VS2010ImageLibrary").Source;
+                this.ImageRedo.Source = Framework.Images.GetImage("Redo", "VS2010ImageLibrary").Source;
+                this.ImageSave.Source = Framework.Images.GetImage("Save", "VS2010ImageLibrary").Source;
+                this.ImageSave1.Source = Framework.Images.GetImage("Save", "VS2010ImageLibrary").Source;
+                this.ImageUndo.Source = Framework.Images.GetImage("Undo", "VS2010ImageLibrary").Source;
+                this.ImageWrap.Source = Framework.Images.GetImage("WordWrap", "VS2010ImageLibrary").Source;
+                this.ImageDeleteRule.Source = Framework.Images.GetImage("Delete-PermissionHH", "VS2010ImageLibrary").Source;
+                this.ImageAddRule.Source = Framework.Images.GetImage("New-Permission", "VS2010ImageLibrary").Source;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void SaveMenuItemClick( object sender , RoutedEventArgs e )
+        private void SaveMenuItemClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                this._policy.SetDsl( this._policyHandler.Document.Text );
+                this._policy.SetDsl(this._policyHandler.Document.Text);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void ToolBarLoaded( object sender , RoutedEventArgs e )
+        private void ToolBarLoaded(object sender, RoutedEventArgs e)
         {
             try
             {
                 var toolBar = sender as ToolBar;
-                if( toolBar != null )
+                if (toolBar != null)
                 {
-                    var overflowGrid = toolBar.Template.FindName( "OverflowGrid" , toolBar ) as FrameworkElement;
-                    if( overflowGrid != null )
+                    var overflowGrid = toolBar.Template.FindName("OverflowGrid", toolBar) as FrameworkElement;
+                    if (overflowGrid != null)
                     {
                         overflowGrid.Visibility = Visibility.Collapsed;
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void AddRowButtonClick( object sender , RoutedEventArgs e )
+        private void AddRowButtonClick(object sender, RoutedEventArgs e)
         {
             this.VPEditor.AddRow();
         }
 
-        private void DeleteRowButtonClick( object sender , RoutedEventArgs e )
+        private void DeleteRowButtonClick(object sender, RoutedEventArgs e)
         {
             this.VPEditor.DeleteSelectedRows();
         }
 
-        private void PolicyDslEditor1KeyUp( object sender , KeyEventArgs e )
+        private void PolicyDslEditor1KeyUp(object sender, KeyEventArgs e)
         {
-            if( e.Key == Key.Return )
+            if (e.Key == Key.Return)
             {
-                this.VPEditor.Update( this._policy , null );
+                this.VPEditor.Update(this._policy, null);
             }
         }
 
@@ -157,13 +157,13 @@ namespace LGP.Modules.PolicyEditor
         {
             try
             {
-                this._ou.Detach( this );
-                this._policyHandler.Detach( this._policyHandler );
-                this.VPEditor.Detach( this.VPEditor );
+                this._ou.Detach(this);
+                this._policyHandler.Detach(this._policyHandler);
+                this.VPEditor.Detach(this.VPEditor);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -183,7 +183,7 @@ namespace LGP.Modules.PolicyEditor
             try
             {
             }
-            catch( Exception )
+            catch (Exception)
             {
             }
         }
@@ -196,7 +196,7 @@ namespace LGP.Modules.PolicyEditor
             try
             {
             }
-            catch( Exception )
+            catch (Exception)
             {
             }
         }
@@ -210,16 +210,16 @@ namespace LGP.Modules.PolicyEditor
         /// </summary>
         /// <param name = "ou">Iou</param>
         /// <param name = "source">source observer</param>
-        public void Update( IOu ou , IOuObserver source )
+        public void Update(IOu ou, IOuObserver source)
         {
             try
             {
                 this._ou = ou;
                 this.Tag = this._ou.GetName() + " Policy";
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -227,14 +227,14 @@ namespace LGP.Modules.PolicyEditor
         ///   Attach objewcts that observer this IOu
         /// </summary>
         /// <param name = "obj">IOuObserver</param>
-        public void Attach( IOuObserver obj )
+        public void Attach(IOuObserver obj)
         {
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -242,14 +242,14 @@ namespace LGP.Modules.PolicyEditor
         ///   Detach objewcts that observer this IOu
         /// </summary>
         /// <param name = "obj">IOuObserver</param>
-        public void Detach( IOuObserver obj )
+        public void Detach(IOuObserver obj)
         {
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -261,9 +261,9 @@ namespace LGP.Modules.PolicyEditor
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -271,14 +271,14 @@ namespace LGP.Modules.PolicyEditor
         ///   Dispose this object and all the observers
         /// </summary>
         /// <param name = "obj">IOuObserver</param>
-        public void Dispose( IOuObserver obj )
+        public void Dispose(IOuObserver obj)
         {
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 

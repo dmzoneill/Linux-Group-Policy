@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ namespace LGP.Components.Factory.Internal.ServerControl
     /// 
     /// </summary>
     /// <param name="data"></param>
-    public delegate void DataReceived( string data );
+    public delegate void DataReceived(string data);
 
     #endregion
 
@@ -43,22 +43,22 @@ namespace LGP.Components.Factory.Internal.ServerControl
         /// </summary>
         /// <param name = "serverIp"></param>
         /// <param name = "clientId"></param>
-        public ServerController( string serverIp , int clientId )
+        public ServerController(string serverIp, int clientId)
         {
             try
             {
                 this._clientPort = clientId;
 
                 this._serverAddr = serverIp;
-                this._tcpListenerThread = new Thread( this.Listener )
+                this._tcpListenerThread = new Thread(this.Listener)
                 {
                     IsBackground = true
                 };
                 this._tcpListenerThread.Start();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -86,13 +86,13 @@ namespace LGP.Components.Factory.Internal.ServerControl
         {
             try
             {
-                this._sendingClient = new TcpClient( this._serverAddr , 50000 );
+                this._sendingClient = new TcpClient(this._serverAddr, 50000);
                 this._connected = true;
                 return this._connected;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 this._connected = false;
                 return this._connected;
             }
@@ -110,9 +110,9 @@ namespace LGP.Components.Factory.Internal.ServerControl
                 this._connected = false;
                 return !this._connected;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 this._connected = false;
                 return this._connected;
             }
@@ -123,30 +123,30 @@ namespace LGP.Components.Factory.Internal.ServerControl
         /// </summary>
         /// <param name = "message"></param>
         /// <returns></returns>
-        public bool SendMesssage( List< KeyValuePair< string , string > > message )
+        public bool SendMesssage(List<KeyValuePair<string, string>> message)
         {
             try
             {
                 var msg = "{";
-                msg += "\"peerPort\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
+                msg += "\"peerPort\" : " + "\"" + (this._clientPort + 1) + "\",";
 
-                for( var h = 0; h < message.Count - 1; h++ )
+                for (var h = 0; h < message.Count - 1; h++)
                 {
-                    msg += "\"" + message[ h ].Key + "\" : " + "\"" + message[ h ].Value + "\",";
+                    msg += "\"" + message[h].Key + "\" : " + "\"" + message[h].Value + "\",";
                 }
-                msg += "\"" + message[ message.Count - 1 ].Key + "\" : " + "\"" + message[ message.Count - 1 ].Value + "\"";
+                msg += "\"" + message[message.Count - 1].Key + "\" : " + "\"" + message[message.Count - 1].Value + "\"";
                 msg += "}";
 
-                var data = Encoding.UTF8.GetBytes( Framework.Utils.Base64Encode( msg ) );
+                var data = Encoding.UTF8.GetBytes(Framework.Utils.Base64Encode(msg));
                 var stream = this._sendingClient.GetStream();
-                stream.Write( data , 0 , data.Length );
+                stream.Write(data, 0, data.Length);
                 stream.Flush();
 
                 return true;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return false;
             }
         }
@@ -160,19 +160,19 @@ namespace LGP.Components.Factory.Internal.ServerControl
             try
             {
                 var msg = "{";
-                msg += "\"peerPort\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
-                msg += "\"admin\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
+                msg += "\"peerPort\" : " + "\"" + (this._clientPort + 1) + "\",";
+                msg += "\"admin\" : " + "\"" + (this._clientPort + 1) + "\",";
                 msg += "\"request\" : " + "\"updatepolicies\"";
                 msg += "}";
 
-                var data = Encoding.UTF8.GetBytes( Framework.Utils.Base64Encode( msg ) );
+                var data = Encoding.UTF8.GetBytes(Framework.Utils.Base64Encode(msg));
                 var stream = this._sendingClient.GetStream();
-                stream.Write( data , 0 , data.Length );
+                stream.Write(data, 0, data.Length);
                 stream.Flush();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -185,19 +185,19 @@ namespace LGP.Components.Factory.Internal.ServerControl
             try
             {
                 var msg = "{";
-                msg += "\"peerPort\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
-                msg += "\"admin\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
+                msg += "\"peerPort\" : " + "\"" + (this._clientPort + 1) + "\",";
+                msg += "\"admin\" : " + "\"" + (this._clientPort + 1) + "\",";
                 msg += "\"request\" : " + "\"pushpolicies\"";
                 msg += "}";
 
-                var data = Encoding.UTF8.GetBytes( Framework.Utils.Base64Encode( msg ) );
+                var data = Encoding.UTF8.GetBytes(Framework.Utils.Base64Encode(msg));
                 var stream = this._sendingClient.GetStream();
-                stream.Write( data , 0 , data.Length );
+                stream.Write(data, 0, data.Length);
                 stream.Flush();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -210,19 +210,19 @@ namespace LGP.Components.Factory.Internal.ServerControl
             try
             {
                 var msg = "{";
-                msg += "\"peerPort\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
-                msg += "\"admin\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
+                msg += "\"peerPort\" : " + "\"" + (this._clientPort + 1) + "\",";
+                msg += "\"admin\" : " + "\"" + (this._clientPort + 1) + "\",";
                 msg += "\"request\" : " + "\"pushmodules\"";
                 msg += "}";
 
-                var data = Encoding.UTF8.GetBytes( Framework.Utils.Base64Encode( msg ) );
+                var data = Encoding.UTF8.GetBytes(Framework.Utils.Base64Encode(msg));
                 var stream = this._sendingClient.GetStream();
-                stream.Write( data , 0 , data.Length );
+                stream.Write(data, 0, data.Length);
                 stream.Flush();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -235,19 +235,19 @@ namespace LGP.Components.Factory.Internal.ServerControl
             try
             {
                 var msg = "{";
-                msg += "\"peerPort\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
-                msg += "\"admin\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
+                msg += "\"peerPort\" : " + "\"" + (this._clientPort + 1) + "\",";
+                msg += "\"admin\" : " + "\"" + (this._clientPort + 1) + "\",";
                 msg += "\"request\" : " + "\"fetchmodules\"";
                 msg += "}";
 
-                var data = Encoding.UTF8.GetBytes( Framework.Utils.Base64Encode( msg ) );
+                var data = Encoding.UTF8.GetBytes(Framework.Utils.Base64Encode(msg));
                 var stream = this._sendingClient.GetStream();
-                stream.Write( data , 0 , data.Length );
+                stream.Write(data, 0, data.Length);
                 stream.Flush();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -255,26 +255,26 @@ namespace LGP.Components.Factory.Internal.ServerControl
         /// <summary>
         /// 
         /// </summary>
-        public void SaveModule( string name , string contents )
+        public void SaveModule(string name, string contents)
         {
             try
             {
                 var msg = "{";
-                msg += "\"peerPort\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
-                msg += "\"admin\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
+                msg += "\"peerPort\" : " + "\"" + (this._clientPort + 1) + "\",";
+                msg += "\"admin\" : " + "\"" + (this._clientPort + 1) + "\",";
                 msg += "\"request\" : " + "\"savemodule\",";
                 msg += "\"moduleName\" : \"" + name + "\",";
-                msg += "\"moduleContents\" : \"" + Framework.Utils.Base64Encode( contents ) + "\"";
+                msg += "\"moduleContents\" : \"" + Framework.Utils.Base64Encode(contents) + "\"";
                 msg += "}";
 
-                var data = Encoding.UTF8.GetBytes( Framework.Utils.Base64Encode( msg ) );
+                var data = Encoding.UTF8.GetBytes(Framework.Utils.Base64Encode(msg));
                 var stream = this._sendingClient.GetStream();
-                stream.Write( data , 0 , data.Length );
+                stream.Write(data, 0, data.Length);
                 stream.Flush();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -282,25 +282,25 @@ namespace LGP.Components.Factory.Internal.ServerControl
         /// <summary>
         /// 
         /// </summary>
-        public void DeleteModule( string name )
+        public void DeleteModule(string name)
         {
             try
             {
                 var msg = "{";
-                msg += "\"peerPort\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
-                msg += "\"admin\" : " + "\"" + ( this._clientPort + 1 ) + "\",";
+                msg += "\"peerPort\" : " + "\"" + (this._clientPort + 1) + "\",";
+                msg += "\"admin\" : " + "\"" + (this._clientPort + 1) + "\",";
                 msg += "\"request\" : " + "\"deletemodule\",";
                 msg += "\"moduleName\" : \"" + name + "\"";
                 msg += "}";
 
-                var data = Encoding.UTF8.GetBytes( Framework.Utils.Base64Encode( msg ) );
+                var data = Encoding.UTF8.GetBytes(Framework.Utils.Base64Encode(msg));
                 var stream = this._sendingClient.GetStream();
-                stream.Write( data , 0 , data.Length );
+                stream.Write(data, 0, data.Length);
                 stream.Flush();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -310,15 +310,15 @@ namespace LGP.Components.Factory.Internal.ServerControl
         {
             try
             {
-                var localAddr = IPAddress.Parse( "0.0.0.0" );
+                var localAddr = IPAddress.Parse("0.0.0.0");
 
-                this._receivingClient = new TcpListener( localAddr , this._clientPort + 1 );
+                this._receivingClient = new TcpListener(localAddr, this._clientPort + 1);
                 this._receivingClient.Start();
 
                 // Buffer for reading data
                 var bytes = new Byte[1024];
 
-                while( true )
+                while (true)
                 {
                     var client = this._receivingClient.AcceptTcpClient();
                     var stream = client.GetStream();
@@ -327,21 +327,21 @@ namespace LGP.Components.Factory.Internal.ServerControl
                     var data = "";
 
 
-                    while( ( i = stream.Read( bytes , 0 , bytes.Length ) ) != 0 )
+                    while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
                     {
-                        data += Encoding.ASCII.GetString( bytes , 0 , i );
+                        data += Encoding.ASCII.GetString(bytes, 0, i);
                     }
 
-                    data = Framework.Utils.Base64Decode( data );
+                    data = Framework.Utils.Base64Decode(data);
 
-                    this.OnDataReceived( data );
+                    this.OnDataReceived(data);
 
                     client.Close();
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -356,9 +356,9 @@ namespace LGP.Components.Factory.Internal.ServerControl
                 this._tcpListenerThread.Abort();
                 this._receivingClient.Stop();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 

@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Windows;
@@ -27,7 +27,7 @@ namespace LGP.Modules.ModuleEditor
         /// </summary>
         /// <param name = "moduleName"></param>
         /// <param name = "panel"></param>
-        public delegate void AddModuleDelegate( string moduleName , StackPanel panel );
+        public delegate void AddModuleDelegate(string moduleName, StackPanel panel);
 
         #endregion
 
@@ -49,31 +49,31 @@ namespace LGP.Modules.ModuleEditor
 
                 ModuleHandler.Panel = this.stackPanel1;
 
-                this.ImageNew.Source = Framework.Images.GetImage( "NewDocumentHS" , "VS2010ImageLibrary" ).Source;
-                this.ImageRefresh.Source = Framework.Images.GetImage( "RepeatHS" , "VS2010ImageLibrary" ).Source;
+                this.ImageNew.Source = Framework.Images.GetImage("NewDocumentHS", "VS2010ImageLibrary").Source;
+                this.ImageRefresh.Source = Framework.Images.GetImage("RepeatHS", "VS2010ImageLibrary").Source;
                 this.Tag = Properties.Resources.Modules;
 
                 _instance = this;
 
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
-                    Framework.Notification.Display( Properties.Resources.DatabaseConnectionRequired , 5000 );
-                    Framework.EventBus.Publish( new PreferencesEvent( this , typeof( IDatabase ) ) );
+                    Framework.Notification.Display(Properties.Resources.DatabaseConnectionRequired, 5000);
+                    Framework.EventBus.Publish(new PreferencesEvent(this, typeof(IDatabase)));
                     return;
                 }
 
-                if( ModuleHandler.GetClient() == null )
+                if (ModuleHandler.GetClient() == null)
                 {
-                    Framework.Notification.Display( Properties.Resources.ServerConnectionRequired , 5000 );
-                    Framework.EventBus.Publish( new PreferencesEvent( this , typeof( INetwork ) ) );
+                    Framework.Notification.Display(Properties.Resources.ServerConnectionRequired, 5000);
+                    Framework.EventBus.Publish(new PreferencesEvent(this, typeof(INetwork)));
                     return;
                 }
 
                 ModuleHandler.RefreshModuleFiles();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -83,83 +83,83 @@ namespace LGP.Modules.ModuleEditor
         /// <returns></returns>
         public static ModuleList GetInstance()
         {
-            return _instance ?? ( _instance = new ModuleList() );
+            return _instance ?? (_instance = new ModuleList());
         }
 
-        private void NewMenuItemClick( object sender , RoutedEventArgs e )
+        private void NewMenuItemClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
-                    Framework.Notification.Display( Properties.Resources.DatabaseConnectionRequired , 5000 );
-                    Framework.EventBus.Publish( new PreferencesEvent( this , typeof( IDatabase ) ) );
+                    Framework.Notification.Display(Properties.Resources.DatabaseConnectionRequired, 5000);
+                    Framework.EventBus.Publish(new PreferencesEvent(this, typeof(IDatabase)));
                     return;
                 }
 
-                if( ModuleHandler.GetClient() == null )
+                if (ModuleHandler.GetClient() == null)
                 {
-                    Framework.Notification.Display( Properties.Resources.ServerConnectionRequired , 5000 );
-                    Framework.EventBus.Publish( new PreferencesEvent( this , typeof( INetwork ) ) );
+                    Framework.Notification.Display(Properties.Resources.ServerConnectionRequired, 5000);
+                    Framework.EventBus.Publish(new PreferencesEvent(this, typeof(INetwork)));
                     return;
                 }
 
                 this.CallBackDelegate += ModuleHandler.CreateModule;
                 var popup = Framework.Dialog;
-                var cou = new AddModule( this , popup );
-                popup.SetChild( cou );
+                var cou = new AddModule(this, popup);
+                popup.SetChild(cou);
                 popup.ShowBlocking();
                 this.CallBackDelegate -= ModuleHandler.CreateModule;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void RefreshMenuItemClick( object sender , RoutedEventArgs e )
+        private void RefreshMenuItemClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                if( Framework.Database.IsConnected() == false )
+                if (Framework.Database.IsConnected() == false)
                 {
-                    Framework.Notification.Display( Properties.Resources.DatabaseConnectionRequired , 5000 );
-                    Framework.EventBus.Publish( new PreferencesEvent( this , typeof( IDatabase ) ) );
+                    Framework.Notification.Display(Properties.Resources.DatabaseConnectionRequired, 5000);
+                    Framework.EventBus.Publish(new PreferencesEvent(this, typeof(IDatabase)));
                     return;
                 }
 
-                if( ModuleHandler.GetClient() == null )
+                if (ModuleHandler.GetClient() == null)
                 {
-                    Framework.Notification.Display( Properties.Resources.ServerConnectionRequired , 5000 );
-                    Framework.EventBus.Publish( new PreferencesEvent( this , typeof( INetwork ) ) );
+                    Framework.Notification.Display(Properties.Resources.ServerConnectionRequired, 5000);
+                    Framework.EventBus.Publish(new PreferencesEvent(this, typeof(INetwork)));
                     return;
                 }
 
                 ModuleHandler.RefreshModuleFiles();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void ToolBarLoaded( object sender , RoutedEventArgs e )
+        private void ToolBarLoaded(object sender, RoutedEventArgs e)
         {
             try
             {
                 var toolBar = sender as ToolBar;
-                if( toolBar != null )
+                if (toolBar != null)
                 {
-                    var overflowGrid = toolBar.Template.FindName( "OverflowGrid" , toolBar ) as FrameworkElement;
-                    if( overflowGrid != null )
+                    var overflowGrid = toolBar.Template.FindName("OverflowGrid", toolBar) as FrameworkElement;
+                    if (overflowGrid != null)
                     {
                         overflowGrid.Visibility = Visibility.Collapsed;
                     }
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -189,7 +189,7 @@ namespace LGP.Modules.ModuleEditor
             try
             {
             }
-            catch( Exception )
+            catch (Exception)
             {
             }
         }
@@ -202,7 +202,7 @@ namespace LGP.Modules.ModuleEditor
             try
             {
             }
-            catch( Exception )
+            catch (Exception)
             {
             }
         }

@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Windows.Controls;
@@ -59,7 +59,7 @@ namespace LGP.Components.Dialog
         /// </summary>
         /// <param name="settingsParent"></param>
         /// <returns>string</returns>
-        public void Load( ISettings settingsParent )
+        public void Load(ISettings settingsParent)
         {
             this._parent = settingsParent;
         }
@@ -70,7 +70,7 @@ namespace LGP.Components.Dialog
         /// <returns>Type</returns>
         public Type GetControlType()
         {
-            return typeof( IDialog );
+            return typeof(IDialog);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace LGP.Components.Dialog
         /// <returns></returns>
         public Image GetIcon()
         {
-            return Framework.Images.GetImage( "WindowsHS" , "VS2010ImageLibrary" , 14 );
+            return Framework.Images.GetImage("WindowsHS", "VS2010ImageLibrary", 14);
         }
 
         #endregion

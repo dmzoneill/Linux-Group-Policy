@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Collections.Generic;
@@ -13,16 +13,16 @@ namespace LGP.Components.Database.Entities
 {
     internal class Ou : IOu
     {
-        private List< IOuObserver > _observers;
+        private List<IOuObserver> _observers;
         private int _ouId;
         private string _ouName;
         private int _ouParentId;
         private string _oupolicyGroup;
 
 
-        public Ou( int id , string name , int parentid , string group )
+        public Ou(int id, string name, int parentid, string group)
         {
-            this._observers = new List< IOuObserver >();
+            this._observers = new List<IOuObserver>();
             this._ouId = id;
             this._ouName = name;
             this._ouParentId = parentid;
@@ -35,23 +35,23 @@ namespace LGP.Components.Database.Entities
         ///   Sets the ou Id
         /// </summary>
         /// <param name = "val">int</param>
-        public void SetOuId( int val )
+        public void SetOuId(int val)
         {
             try
             {
-                var sql = String.Format( "update ous set ou_id = '{0}' where ou_id = '{1}' " , val , this._ouId );
+                var sql = String.Format("update ous set ou_id = '{0}' where ou_id = '{1}' ", val, this._ouId);
 
-                if( Framework.Database.IsConnected() )
+                if (Framework.Database.IsConnected())
                 {
-                    Framework.Database.ExecuteNonQuery( sql );
+                    Framework.Database.ExecuteNonQuery(sql);
                 }
 
                 this._ouId = val;
                 this.Notify();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -70,23 +70,23 @@ namespace LGP.Components.Database.Entities
         ///   Sets the ou name
         /// </summary>
         /// <param name = "val">string</param>
-        public void SetName( string val )
+        public void SetName(string val)
         {
             try
             {
-                var sql = String.Format( "update ous set ou_name = '{0}' where ou_id = '{1}' " , val , this._ouId );
+                var sql = String.Format("update ous set ou_name = '{0}' where ou_id = '{1}' ", val, this._ouId);
 
-                if( Framework.Database.IsConnected() )
+                if (Framework.Database.IsConnected())
                 {
-                    Framework.Database.ExecuteNonQuery( sql );
+                    Framework.Database.ExecuteNonQuery(sql);
                 }
 
                 this._ouName = val;
                 this.Notify();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -105,23 +105,23 @@ namespace LGP.Components.Database.Entities
         ///   Sets the parent ou Id
         /// </summary>
         /// <param name = "val">int</param>
-        public void SetParentOuId( int val )
+        public void SetParentOuId(int val)
         {
             try
             {
-                var sql = String.Format( "update ous set ou_parent_id = '{0}' where ou_id = '{1}' " , val , this._ouId );
+                var sql = String.Format("update ous set ou_parent_id = '{0}' where ou_id = '{1}' ", val, this._ouId);
 
-                if( Framework.Database.IsConnected() )
+                if (Framework.Database.IsConnected())
                 {
-                    Framework.Database.ExecuteNonQuery( sql );
+                    Framework.Database.ExecuteNonQuery(sql);
                 }
 
                 this._ouParentId = val;
                 this.Notify();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -140,23 +140,23 @@ namespace LGP.Components.Database.Entities
         ///   Sets the ou policy group
         /// </summary>
         /// <param name = "val"></param>
-        public void SetPolicyGroup( string val )
+        public void SetPolicyGroup(string val)
         {
             try
             {
-                var sql = String.Format( "update ous set ou_policygroup = '{0}' where ou_id = '{1}' " , val , this._ouId );
+                var sql = String.Format("update ous set ou_policygroup = '{0}' where ou_id = '{1}' ", val, this._ouId);
 
-                if( Framework.Database.IsConnected() )
+                if (Framework.Database.IsConnected())
                 {
-                    Framework.Database.ExecuteNonQuery( sql );
+                    Framework.Database.ExecuteNonQuery(sql);
                 }
 
                 this._oupolicyGroup = val;
                 this.Notify();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -176,40 +176,40 @@ namespace LGP.Components.Database.Entities
         /// </summary>
         /// <param name = "size">int</param>
         /// <returns>image</returns>
-        public Image GetOuImage( int size )
+        public Image GetOuImage(int size)
         {
             try
             {
                 var sizeFolder = "distros/";
 
-                switch( size )
+                switch (size)
                 {
-                    case 32 :
+                    case 32:
                         sizeFolder += "32";
                         break;
 
-                    case 48 :
+                    case 48:
                         sizeFolder += "48";
                         break;
 
-                    case 64 :
+                    case 64:
                         sizeFolder += "64";
                         break;
 
-                    case 128 :
+                    case 128:
                         sizeFolder += "128";
                         break;
 
-                    default :
+                    default:
                         sizeFolder += "32";
                         break;
                 }
 
-                return Framework.Images.GetImage( "workgroup" , sizeFolder );
+                return Framework.Images.GetImage("workgroup", sizeFolder);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
                 return null;
             }
         }
@@ -220,7 +220,7 @@ namespace LGP.Components.Database.Entities
         /// </summary>
         /// <param name = "ou">Iou</param>
         /// <param name = "source">source observer</param>
-        public void Update( IOu ou , IOuObserver source )
+        public void Update(IOu ou, IOuObserver source)
         {
             throw new NotImplementedException();
         }
@@ -229,18 +229,18 @@ namespace LGP.Components.Database.Entities
         ///   Attach objewcts that observer this IOu
         /// </summary>
         /// <param name = "obj">IOuObserver</param>
-        public void Attach( IOuObserver obj )
+        public void Attach(IOuObserver obj)
         {
             try
             {
-                if( !this._observers.Contains( obj ) )
+                if (!this._observers.Contains(obj))
                 {
-                    this._observers.Add( obj );
+                    this._observers.Add(obj);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -249,15 +249,15 @@ namespace LGP.Components.Database.Entities
         ///   Detach objewcts that observer this IOu
         /// </summary>
         /// <param name = "obj">IOuObserver</param>
-        public void Detach( IOuObserver obj )
+        public void Detach(IOuObserver obj)
         {
             try
             {
-                this._observers.Remove( obj );
+                this._observers.Remove(obj);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -269,14 +269,14 @@ namespace LGP.Components.Database.Entities
         {
             try
             {
-                for( var h = 0; h < this._observers.Count; h++ )
+                for (var h = 0; h < this._observers.Count; h++)
                 {
-                    this._observers[ h ].Update( this , this );
+                    this._observers[h].Update(this, this);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -285,18 +285,18 @@ namespace LGP.Components.Database.Entities
         ///   Dispose this object and all the observers
         /// </summary>
         /// <param name = "obj">IOuObserver</param>
-        public void Dispose( IOuObserver obj )
+        public void Dispose(IOuObserver obj)
         {
             try
             {
-                for( var h = 0; h < this._observers.Count; h++ )
+                for (var h = 0; h < this._observers.Count; h++)
                 {
-                    this._observers[ h ].Dispose( this );
+                    this._observers[h].Dispose(this);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 

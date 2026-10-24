@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System.Data;
 using LGP.Components.Factory.Interfaces.Database;
@@ -23,7 +23,7 @@ namespace LGP.Components.Database.Oracle
         /// <param name = "host">Hostname to use in connection</param>
         /// <param name = "dbname">Datbase to use in connection</param> // codespell:ignore datbase
         /// <returns></returns>
-        public bool Connect( string user , string pass , string host , string dbname )
+        public bool Connect(string user, string pass, string host, string dbname)
         {
             return true;
         }
@@ -44,7 +44,7 @@ namespace LGP.Components.Database.Oracle
         /// </summary>
         /// <param name = "sql">sql query</param>
         /// <returns></returns>
-        public DataSet ExecuteQuery( string sql )
+        public DataSet ExecuteQuery(string sql)
         {
             return null;
         }
@@ -55,7 +55,7 @@ namespace LGP.Components.Database.Oracle
         /// </summary>
         /// <param name = "sql">sql query</param>
         /// <returns>int num rows affected</returns>
-        public int ExecuteNonQuery( string sql )
+        public int ExecuteNonQuery(string sql)
         {
             return -1;
         }

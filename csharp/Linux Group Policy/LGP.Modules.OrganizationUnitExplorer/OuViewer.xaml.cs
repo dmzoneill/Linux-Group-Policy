@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Reflection;
@@ -21,7 +21,7 @@ namespace LGP.Modules.OrganizationUnitExplorer
     /// <summary>
     ///   Interaction logic for OuViewer.xaml
     /// </summary>
-    public partial class OuViewer : IOuObserver , IUserControl
+    public partial class OuViewer : IOuObserver, IUserControl
     {
         private IOu _ou;
         private int _viewType1;
@@ -36,9 +36,9 @@ namespace LGP.Modules.OrganizationUnitExplorer
             {
                 this.InitializeComponent();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -46,7 +46,7 @@ namespace LGP.Modules.OrganizationUnitExplorer
         /// <summary>
         ///   Constructor
         /// </summary>
-        public OuViewer( IOu ou )
+        public OuViewer(IOu ou)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace LGP.Modules.OrganizationUnitExplorer
 
                 OuHelper.ClientGateway.Refresh();
 
-                ou.Attach( this );
+                ou.Attach(this);
 
                 this.Name = ou.GetName();
                 this.Tag = ou.GetName();
@@ -63,50 +63,50 @@ namespace LGP.Modules.OrganizationUnitExplorer
                 this._viewType1 = 1;
                 this._viewType2 = 1;
 
-                this.GridViewImage1.Source = Framework.Images.GetImage( "graphic-design" , "16x16" , 12 ).Source;
-                this.ListViewImage1.Source = Framework.Images.GetImage( "attibutes" , "16x16" , 12 ).Source; // codespell:ignore attibutes
-                this.GridViewImage2.Source = Framework.Images.GetImage( "graphic-design" , "16x16" , 12 ).Source;
-                this.ListViewImage2.Source = Framework.Images.GetImage( "attibutes" , "16x16" , 12 ).Source; // codespell:ignore attibutes
-                this.ImageMinusZoom.Source = Framework.Images.GetImage( "zoomout" , "VS2010ImageLibrary" , 12 ).Source;
-                this.ImagePlusZoom.Source = Framework.Images.GetImage( "zoomin" , "VS2010ImageLibrary" , 12 ).Source;
-                this.OuImage.Source = this._ou.GetOuImage( 16 ).Source;
+                this.GridViewImage1.Source = Framework.Images.GetImage("graphic-design", "16x16", 12).Source;
+                this.ListViewImage1.Source = Framework.Images.GetImage("attibutes", "16x16", 12).Source; // codespell:ignore attibutes
+                this.GridViewImage2.Source = Framework.Images.GetImage("graphic-design", "16x16", 12).Source;
+                this.ListViewImage2.Source = Framework.Images.GetImage("attibutes", "16x16", 12).Source; // codespell:ignore attibutes
+                this.ImageMinusZoom.Source = Framework.Images.GetImage("zoomout", "VS2010ImageLibrary", 12).Source;
+                this.ImagePlusZoom.Source = Framework.Images.GetImage("zoomin", "VS2010ImageLibrary", 12).Source;
+                this.OuImage.Source = this._ou.GetOuImage(16).Source;
 
-                var resource = Framework.Utils.LoadResource( Assembly.GetExecutingAssembly() , "LGP.Modules.OrganizationUnitExplorer.Internal.ContextMenuItems.OuContextMenu.xaml" );
+                var resource = Framework.Utils.LoadResource(Assembly.GetExecutingAssembly(), "LGP.Modules.OrganizationUnitExplorer.Internal.ContextMenuItems.OuContextMenu.xaml");
 
                 var menu = resource as ContextMenu;
-                if( menu != null )
+                if (menu != null)
                 {
-                    var item = ( MenuItem ) menu.Items[ 0 ];
+                    var item = (MenuItem)menu.Items[0];
                     item.Click += this.AddMenuItemClick;
-                    item.Icon = Framework.Images.GetImage( "workgroup" , "distros/32" , 12 );
-                    menu.Items.Remove( item );
-                    this.OuImageMenu.Items.Add( item );
+                    item.Icon = Framework.Images.GetImage("workgroup", "distros/32", 12);
+                    menu.Items.Remove(item);
+                    this.OuImageMenu.Items.Add(item);
 
-                    item = ( MenuItem ) menu.Items[ 0 ];
+                    item = (MenuItem)menu.Items[0];
                     item.Click += this.RenameMenuItemClick;
-                    item.Icon = Framework.Images.GetImage( "RenameFolderHS" , "VS2010ImageLibrary" , 12 );
-                    menu.Items.Remove( item );
-                    this.OuImageMenu.Items.Add( item );
+                    item.Icon = Framework.Images.GetImage("RenameFolderHS", "VS2010ImageLibrary", 12);
+                    menu.Items.Remove(item);
+                    this.OuImageMenu.Items.Add(item);
 
-                    item = ( MenuItem ) menu.Items[ 0 ];
+                    item = (MenuItem)menu.Items[0];
                     item.Click += this.MoveMenuItemClick;
-                    item.Icon = Framework.Images.GetImage( "Move" , "VS2010ImageLibrary" , 12 );
-                    menu.Items.Remove( item );
-                    this.OuImageMenu.Items.Add( item );
+                    item.Icon = Framework.Images.GetImage("Move", "VS2010ImageLibrary", 12);
+                    menu.Items.Remove(item);
+                    this.OuImageMenu.Items.Add(item);
 
-                    item = ( MenuItem ) menu.Items[ 0 ];
+                    item = (MenuItem)menu.Items[0];
                     item.Click += this.DeleteMenuItemClick;
-                    item.Icon = Framework.Images.GetImage( "DeleteHS" , "VS2010ImageLibrary" , 12 );
-                    menu.Items.Remove( item );
-                    this.OuImageMenu.Items.Add( item );
+                    item.Icon = Framework.Images.GetImage("DeleteHS", "VS2010ImageLibrary", 12);
+                    menu.Items.Remove(item);
+                    this.OuImageMenu.Items.Add(item);
                 }
 
                 this.OuLabel.Content = this._ou.GetName();
-                this.ShowOrganizationalUnit( 64 );
+                this.ShowOrganizationalUnit(64);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -117,9 +117,9 @@ namespace LGP.Modules.OrganizationUnitExplorer
         /// </summary>
         /// <param name = "ou">Iou</param>
         /// <param name = "source">source observer</param>
-        public void Update( IOu ou , IOuObserver source )
+        public void Update(IOu ou, IOuObserver source)
         {
-            if( this == source )
+            if (this == source)
             {
                 return;
             }
@@ -131,11 +131,11 @@ namespace LGP.Modules.OrganizationUnitExplorer
                 this.OuLabel.Content = this._ou.GetName();
                 this.Tag = this._ou.GetName();
                 Framework.Panels.UpdateTabNames();
-                this.ShowOrganizationalUnit( ( ( int ) this.progressBar1.Value ) + 32 );
+                this.ShowOrganizationalUnit(((int)this.progressBar1.Value) + 32);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -144,14 +144,14 @@ namespace LGP.Modules.OrganizationUnitExplorer
         ///   Attach objewcts that observer this IOu
         /// </summary>
         /// <param name = "obj">IOuObserver</param>
-        public void Attach( IOuObserver obj )
+        public void Attach(IOuObserver obj)
         {
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -160,14 +160,14 @@ namespace LGP.Modules.OrganizationUnitExplorer
         ///   Detach objewcts that observer this IOu
         /// </summary>
         /// <param name = "obj">IOuObserver</param>
-        public void Detach( IOuObserver obj )
+        public void Detach(IOuObserver obj)
         {
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -180,9 +180,9 @@ namespace LGP.Modules.OrganizationUnitExplorer
             try
             {
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -191,108 +191,108 @@ namespace LGP.Modules.OrganizationUnitExplorer
         ///   Dispose this object and all the observers
         /// </summary>
         /// <param name = "obj">IOuObserver</param>
-        public void Dispose( IOuObserver obj )
+        public void Dispose(IOuObserver obj)
         {
             try
             {
-                obj.Detach( this );
-                Framework.Panels.RemoveMainComponent( this );
+                obj.Detach(this);
+                Framework.Panels.RemoveMainComponent(this);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
         #endregion
 
-        private void MenuItemClick( object sender , RoutedEventArgs e )
+        private void MenuItemClick(object sender, RoutedEventArgs e)
         {
             try
             {
                 var menuitem = sender as MenuItem;
-                Framework.ContextMenus.CallBack( menuitem , this._ou );
+                Framework.ContextMenus.CallBack(menuitem, this._ou);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void ShowOrganizationalUnit( int size )
+        private void ShowOrganizationalUnit(int size)
         {
             try
             {
-                if( this.viewer1.Children != null )
+                if (this.viewer1.Children != null)
                 {
-                    foreach( WrapPanelOuElement item in this.viewer1.Children )
+                    foreach (WrapPanelOuElement item in this.viewer1.Children)
                     {
-                        item.GetOu().Detach( item );
+                        item.GetOu().Detach(item);
                     }
 
                     this.viewer1.Children.Clear();
                 }
 
-                if( this.viewer2.Children != null )
+                if (this.viewer2.Children != null)
                 {
-                    foreach( WrapPanelClientElement item in this.viewer2.Children )
+                    foreach (WrapPanelClientElement item in this.viewer2.Children)
                     {
-                        item.GetClient().Detach( item );
+                        item.GetClient().Detach(item);
                     }
 
                     this.viewer2.Children.Clear();
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
 
             try
             {
-                var ous = OuHelper.OuGateway.GetChildren( this._ou.GetOuId() );
+                var ous = OuHelper.OuGateway.GetChildren(this._ou.GetOuId());
 
-                if( ous != null )
+                if (ous != null)
                 {
-                    for( var y = 0; y < ous.Count; y++ )
+                    for (var y = 0; y < ous.Count; y++)
                     {
-                        var ele = new WrapPanelOuElement( ous[ y ] , size , this );
-                        this.viewer1.Children.Add( ele );
+                        var ele = new WrapPanelOuElement(ous[y], size, this);
+                        this.viewer1.Children.Add(ele);
                     }
 
-                    this.mainGrid.RowDefinitions[ 2 ].Height = new GridLength( 140 , GridUnitType.Star );
+                    this.mainGrid.RowDefinitions[2].Height = new GridLength(140, GridUnitType.Star);
                 }
                 else
                 {
-                    this.mainGrid.RowDefinitions[ 2 ].Height = new GridLength( 22 , GridUnitType.Star );
+                    this.mainGrid.RowDefinitions[2].Height = new GridLength(22, GridUnitType.Star);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
 
             try
             {
-                var clients = OuHelper.ClientGateway.GetOuClients( this._ou.GetOuId() );
+                var clients = OuHelper.ClientGateway.GetOuClients(this._ou.GetOuId());
 
-                if( clients != null )
+                if (clients != null)
                 {
-                    for( var y = 0; y < clients.Count; y++ )
+                    for (var y = 0; y < clients.Count; y++)
                     {
-                        var ele = new WrapPanelClientElement( clients[ y ] , size , this );
-                        this.viewer2.Children.Add( ele );
+                        var ele = new WrapPanelClientElement(clients[y], size, this);
+                        this.viewer2.Children.Add(ele);
                     }
-                    this.mainGrid.RowDefinitions[ 4 ].Height = new GridLength( 140 , GridUnitType.Star );
+                    this.mainGrid.RowDefinitions[4].Height = new GridLength(140, GridUnitType.Star);
                 }
                 else
                 {
-                    this.mainGrid.RowDefinitions[ 4 ].Height = new GridLength( 22 , GridUnitType.Star );
+                    this.mainGrid.RowDefinitions[4].Height = new GridLength(22, GridUnitType.Star);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -300,282 +300,282 @@ namespace LGP.Modules.OrganizationUnitExplorer
         /// <summary>
         /// </summary>
         /// <param name = "pane"></param>
-        public void SetDetailsPane( UserControl pane )
+        public void SetDetailsPane(UserControl pane)
         {
             try
             {
-                if( this.ClientViewBorderContainer.Child != null )
+                if (this.ClientViewBorderContainer.Child != null)
                 {
-                    if( this.ClientViewBorderContainer.Child.GetType() == typeof( ClientPane ) )
+                    if (this.ClientViewBorderContainer.Child.GetType() == typeof(ClientPane))
                     {
-                        var client = ( ClientPane ) this.ClientViewBorderContainer.Child;
-                        client.GetClient().Detach( client );
+                        var client = (ClientPane)this.ClientViewBorderContainer.Child;
+                        client.GetClient().Detach(client);
                     }
 
-                    if( this.ClientViewBorderContainer.Child.GetType() == typeof( OuPane ) )
+                    if (this.ClientViewBorderContainer.Child.GetType() == typeof(OuPane))
                     {
-                        var ou = ( OuPane ) this.ClientViewBorderContainer.Child;
-                        ou.GetOu().Detach( ou );
+                        var ou = (OuPane)this.ClientViewBorderContainer.Child;
+                        ou.GetOu().Detach(ou);
                     }
                 }
                 this.ClientViewBorderContainer.Child = pane;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void GridViewImageMouseDown1( object sender , MouseButtonEventArgs e )
+        private void GridViewImageMouseDown1(object sender, MouseButtonEventArgs e)
         {
             this._viewType1 = 1;
             this.ListViewImage1.Opacity = 0.2;
         }
 
 
-        private void ListViewImageMouseDown1( object sender , MouseButtonEventArgs e )
+        private void ListViewImageMouseDown1(object sender, MouseButtonEventArgs e)
         {
             this._viewType1 = 0;
             this.GridViewImage1.Opacity = 0.2;
         }
 
 
-        private void ImageMouseEnter1( object sender , MouseEventArgs e )
+        private void ImageMouseEnter1(object sender, MouseEventArgs e)
         {
             try
             {
-                var image = ( Image ) sender;
+                var image = (Image)sender;
                 image.Opacity = 0.8;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void ImageMouseLeave1( object sender , MouseEventArgs e )
+        private void ImageMouseLeave1(object sender, MouseEventArgs e)
         {
             try
             {
-                var image = ( Image ) sender;
+                var image = (Image)sender;
 
-                if( this._viewType1 == 1 && image.Tag.ToString().CompareTo( "ListView" ) == 0 )
+                if (this._viewType1 == 1 && image.Tag.ToString().CompareTo("ListView") == 0)
                 {
                     image.Opacity = 0.2;
                 }
-                else if( this._viewType1 == 0 && image.Tag.ToString().CompareTo( "GridView" ) == 0 )
+                else if (this._viewType1 == 0 && image.Tag.ToString().CompareTo("GridView") == 0)
                 {
                     image.Opacity = 0.2;
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void GridViewImageMouseDown2( object sender , MouseButtonEventArgs e )
+        private void GridViewImageMouseDown2(object sender, MouseButtonEventArgs e)
         {
             this._viewType2 = 1;
             this.ListViewImage2.Opacity = 0.2;
         }
 
 
-        private void ListViewImageMouseDown2( object sender , MouseButtonEventArgs e )
+        private void ListViewImageMouseDown2(object sender, MouseButtonEventArgs e)
         {
             this._viewType2 = 0;
             this.GridViewImage2.Opacity = 0.2;
         }
 
 
-        private void ImageMouseEnter2( object sender , MouseEventArgs e )
+        private void ImageMouseEnter2(object sender, MouseEventArgs e)
         {
             try
             {
-                var image = ( Image ) sender;
+                var image = (Image)sender;
                 image.Opacity = 0.8;
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void ImageMouseLeave2( object sender , MouseEventArgs e )
+        private void ImageMouseLeave2(object sender, MouseEventArgs e)
         {
             try
             {
-                var image = ( Image ) sender;
+                var image = (Image)sender;
 
-                if( this._viewType2 == 1 && image.Tag.ToString().CompareTo( "ListView" ) == 0 )
+                if (this._viewType2 == 1 && image.Tag.ToString().CompareTo("ListView") == 0)
                 {
                     image.Opacity = 0.2;
                 }
-                else if( this._viewType2 == 0 && image.Tag.ToString().CompareTo( "GridView" ) == 0 )
+                else if (this._viewType2 == 0 && image.Tag.ToString().CompareTo("GridView") == 0)
                 {
                     image.Opacity = 0.2;
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void ResizeOrganizationalUnits( int pos )
+        private void ResizeOrganizationalUnits(int pos)
         {
             try
             {
-                foreach( UIElement ele in this.viewer1.Children )
+                foreach (UIElement ele in this.viewer1.Children)
                 {
-                    ( ( WrapPanelOuElement ) ele ).Resize( pos );
+                    ((WrapPanelOuElement)ele).Resize(pos);
                 }
 
-                foreach( UIElement ele in this.viewer2.Children )
+                foreach (UIElement ele in this.viewer2.Children)
                 {
-                    ( ( WrapPanelClientElement ) ele ).Resize( pos );
+                    ((WrapPanelClientElement)ele).Resize(pos);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void ProgressBar1MouseMove( object sender , MouseEventArgs e )
+        private void ProgressBar1MouseMove(object sender, MouseEventArgs e)
         {
             try
             {
-                if( e.LeftButton == MouseButtonState.Pressed )
+                if (e.LeftButton == MouseButtonState.Pressed)
                 {
-                    var pos = ( ( decimal ) e.GetPosition( this.progressBar1 ).X / ( decimal ) this.progressBar1.Width ) * 100;
-                    this.progressBar1.Value = Convert.ToInt32( pos );
-                    pos = Convert.ToInt32( pos ) + 32;
+                    var pos = ((decimal)e.GetPosition(this.progressBar1).X / (decimal)this.progressBar1.Width) * 100;
+                    this.progressBar1.Value = Convert.ToInt32(pos);
+                    pos = Convert.ToInt32(pos) + 32;
 
-                    if( pos > 128 )
+                    if (pos > 128)
                     {
                         pos = 128;
                     }
 
-                    this.ResizeOrganizationalUnits( ( int ) pos );
+                    this.ResizeOrganizationalUnits((int)pos);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void ProgressBar1MouseLeftButtonDown( object sender , MouseButtonEventArgs e )
+        private void ProgressBar1MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             try
             {
-                if( e.LeftButton == MouseButtonState.Pressed )
+                if (e.LeftButton == MouseButtonState.Pressed)
                 {
-                    var pos = ( ( decimal ) e.GetPosition( this.progressBar1 ).X / ( decimal ) this.progressBar1.Width ) * 100;
-                    this.progressBar1.Value = Convert.ToInt32( pos );
-                    pos = Convert.ToInt32( pos ) + 32;
+                    var pos = ((decimal)e.GetPosition(this.progressBar1).X / (decimal)this.progressBar1.Width) * 100;
+                    this.progressBar1.Value = Convert.ToInt32(pos);
+                    pos = Convert.ToInt32(pos) + 32;
 
-                    if( pos > 128 )
+                    if (pos > 128)
                     {
                         pos = 128;
                     }
 
-                    this.ResizeOrganizationalUnits( ( int ) pos );
+                    this.ResizeOrganizationalUnits((int)pos);
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
 
-        private void AddMenuItemClick( object sender , RoutedEventArgs e )
+        private void AddMenuItemClick(object sender, RoutedEventArgs e)
         {
             try
             {
                 var popup = Framework.Dialog;
-                var cou = new CreateOu( this , this._ou , popup );
-                popup.SetChild( cou );
+                var cou = new CreateOu(this, this._ou, popup);
+                popup.SetChild(cou);
                 popup.ShowBlocking();
-                this.ShowOrganizationalUnit( ( ( int ) this.progressBar1.Value ) + 32 );
+                this.ShowOrganizationalUnit(((int)this.progressBar1.Value) + 32);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void RenameMenuItemClick( object sender , RoutedEventArgs e )
+        private void RenameMenuItemClick(object sender, RoutedEventArgs e)
         {
             try
             {
                 this.OuLabelEditBox.Text = this.OuLabel.Content.ToString();
                 this.OuLabel.Visibility = Visibility.Hidden;
                 this.OuLabelEditBox.Visibility = Visibility.Visible;
-                this.ShowOrganizationalUnit( ( ( int ) this.progressBar1.Value ) + 32 );
+                this.ShowOrganizationalUnit(((int)this.progressBar1.Value) + 32);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void MoveMenuItemClick( object sender , RoutedEventArgs e )
+        private void MoveMenuItemClick(object sender, RoutedEventArgs e)
         {
             try
             {
                 var popup = Framework.Dialog;
-                var cou = new MoveOu( this , this._ou , popup );
-                popup.SetChild( cou );
+                var cou = new MoveOu(this, this._ou, popup);
+                popup.SetChild(cou);
                 popup.ShowBlocking();
-                this.ShowOrganizationalUnit( ( ( int ) this.progressBar1.Value ) + 32 );
+                this.ShowOrganizationalUnit(((int)this.progressBar1.Value) + 32);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void DeleteMenuItemClick( object sender , RoutedEventArgs e )
+        private void DeleteMenuItemClick(object sender, RoutedEventArgs e)
         {
             try
             {
                 var popup = Framework.Dialog;
-                var cou = new DeleteOu( this , this._ou , popup , true );
-                popup.SetChild( cou );
+                var cou = new DeleteOu(this, this._ou, popup, true);
+                popup.SetChild(cou);
                 popup.ShowBlocking();
-                this.ShowOrganizationalUnit( ( ( int ) this.progressBar1.Value ) + 32 );
+                this.ShowOrganizationalUnit(((int)this.progressBar1.Value) + 32);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void OuEditBoxKeyUp( object sender , KeyEventArgs e )
+        private void OuEditBoxKeyUp(object sender, KeyEventArgs e)
         {
             try
             {
-                if( e.Key == Key.Return && this.OuLabelEditBox.Text.Length > 0 )
+                if (e.Key == Key.Return && this.OuLabelEditBox.Text.Length > 0)
                 {
                     this.OuLabelEditBox.Visibility = Visibility.Hidden;
                     this.OuLabel.Visibility = Visibility.Visible;
-                    this._ou.SetName( this.OuLabelEditBox.Text );
+                    this._ou.SetName(this.OuLabelEditBox.Text);
                     this.OuLabel.Content = this._ou.GetName();
                     this.Tag = this._ou.GetName();
                 }
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -585,20 +585,20 @@ namespace LGP.Modules.OrganizationUnitExplorer
         /// </summary>
         public void Update()
         {
-            this.Update( this._ou , null );
+            this.Update(this._ou, null);
         }
 
 
-        private void OuLabelEditBoxTextChanged( object sender , TextChangedEventArgs e )
+        private void OuLabelEditBoxTextChanged(object sender, TextChangedEventArgs e)
         {
-            this.OuLabelEditBox.Text = Framework.Utils.CleanString( this.OuLabelEditBox.Text );
+            this.OuLabelEditBox.Text = Framework.Utils.CleanString(this.OuLabelEditBox.Text);
             this.OuLabelEditBox.CaretIndex = this.OuLabelEditBox.Text.Length;
         }
 
-        private void OuImageMenuSubmenuOpened( object sender , RoutedEventArgs e )
+        private void OuImageMenuSubmenuOpened(object sender, RoutedEventArgs e)
         {
             var menu = this.OuImageMenu;
-            Framework.ContextMenus.AttachMenuItemRegistrations( ref menu , typeof( IOu ) , this.MenuItemClick );
+            Framework.ContextMenus.AttachMenuItemRegistrations(ref menu, typeof(IOu), this.MenuItemClick);
         }
 
         #region Implementation of IUserControl
@@ -610,46 +610,46 @@ namespace LGP.Modules.OrganizationUnitExplorer
         {
             try
             {
-                if( this.viewer1.Children != null )
+                if (this.viewer1.Children != null)
                 {
-                    foreach( WrapPanelOuElement item in this.viewer1.Children )
+                    foreach (WrapPanelOuElement item in this.viewer1.Children)
                     {
-                        item.GetOu().Detach( item );
+                        item.GetOu().Detach(item);
                     }
 
                     this.viewer1.Children.Clear();
                 }
 
-                if( this.viewer2.Children != null )
+                if (this.viewer2.Children != null)
                 {
-                    foreach( WrapPanelClientElement item in this.viewer2.Children )
+                    foreach (WrapPanelClientElement item in this.viewer2.Children)
                     {
-                        item.GetClient().Detach( item );
+                        item.GetClient().Detach(item);
                     }
 
                     this.viewer2.Children.Clear();
                 }
 
-                if( this.ClientViewBorderContainer.Child != null )
+                if (this.ClientViewBorderContainer.Child != null)
                 {
-                    if( this.ClientViewBorderContainer.Child.GetType() == typeof( ClientPane ) )
+                    if (this.ClientViewBorderContainer.Child.GetType() == typeof(ClientPane))
                     {
-                        var client = ( ClientPane ) this.ClientViewBorderContainer.Child;
-                        client.GetClient().Detach( client );
+                        var client = (ClientPane)this.ClientViewBorderContainer.Child;
+                        client.GetClient().Detach(client);
                     }
 
-                    if( this.ClientViewBorderContainer.Child.GetType() == typeof( OuPane ) )
+                    if (this.ClientViewBorderContainer.Child.GetType() == typeof(OuPane))
                     {
-                        var ou = ( OuPane ) this.ClientViewBorderContainer.Child;
-                        ou.GetOu().Detach( ou );
+                        var ou = (OuPane)this.ClientViewBorderContainer.Child;
+                        ou.GetOu().Detach(ou);
                     }
                 }
 
-                this._ou.Detach( this );
+                this._ou.Detach(this);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -669,7 +669,7 @@ namespace LGP.Modules.OrganizationUnitExplorer
             try
             {
             }
-            catch( Exception )
+            catch (Exception)
             {
             }
         }
@@ -682,7 +682,7 @@ namespace LGP.Modules.OrganizationUnitExplorer
             try
             {
             }
-            catch( Exception )
+            catch (Exception)
             {
             }
         }

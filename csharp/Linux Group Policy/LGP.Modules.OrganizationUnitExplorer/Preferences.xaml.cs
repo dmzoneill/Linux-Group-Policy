@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Windows.Controls;
@@ -27,9 +27,9 @@ namespace LGP.Modules.OrganizationUnitExplorer
             {
                 this.InitializeComponent();
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
@@ -69,7 +69,7 @@ namespace LGP.Modules.OrganizationUnitExplorer
         /// </summary>
         /// <param name="settingsParent"></param>
         /// <returns>string</returns>
-        public void Load( ISettings settingsParent )
+        public void Load(ISettings settingsParent)
         {
             this._parent = settingsParent;
         }
@@ -80,7 +80,7 @@ namespace LGP.Modules.OrganizationUnitExplorer
         /// <returns>Type</returns>
         public Type GetControlType()
         {
-            return typeof( IModule );
+            return typeof(IModule);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace LGP.Modules.OrganizationUnitExplorer
         /// <returns></returns>
         public Image GetIcon()
         {
-            return Framework.Images.GetImage( "category-2" , "16X16" , 14 );
+            return Framework.Images.GetImage("category-2", "16X16", 14);
         }
 
         #endregion

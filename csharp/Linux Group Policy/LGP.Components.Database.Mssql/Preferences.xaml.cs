@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Windows.Controls;
@@ -56,7 +56,7 @@ namespace LGP.Components.Database.Mssql
             var port = this.textBox1.Text;
             int intport;
 
-            regedit.WriteKey( "MssqlPort" , int.TryParse( port , out intport ) ? intport : 3306 );
+            regedit.WriteKey("MssqlPort", int.TryParse(port, out intport) ? intport : 3306);
         }
 
         /// <summary>
@@ -64,11 +64,11 @@ namespace LGP.Components.Database.Mssql
         /// </summary>
         /// <param name="settingsParent"></param>
         /// <returns>string</returns>
-        public void Load( ISettings settingsParent )
+        public void Load(ISettings settingsParent)
         {
             this._parent = settingsParent;
             var regedit = Framework.Registry;
-            var port = regedit.ReadKey( "MssqlPort" );
+            var port = regedit.ReadKey("MssqlPort");
             this.textBox1.Text = port ?? "3306";
         }
 
@@ -78,7 +78,7 @@ namespace LGP.Components.Database.Mssql
         /// <returns>Type</returns>
         public Type GetControlType()
         {
-            return typeof( IDatabaseModule );
+            return typeof(IDatabaseModule);
         }
 
         /// <summary>
@@ -87,12 +87,12 @@ namespace LGP.Components.Database.Mssql
         /// <returns></returns>
         public Image GetIcon()
         {
-            return Framework.Images.GetImage( "mssql" , "VS2010ImageLibrary" , 14 );
+            return Framework.Images.GetImage("mssql", "VS2010ImageLibrary", 14);
         }
 
         #endregion
 
-        private void SetDefaultPortButtonClickClick( object sender , System.Windows.RoutedEventArgs e )
+        private void SetDefaultPortButtonClickClick(object sender, System.Windows.RoutedEventArgs e)
         {
             this.textBox1.Text = "3306";
         }

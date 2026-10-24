@@ -1,5 +1,5 @@
 // jscpd:ignore-start
-﻿#region
+#region
 
 using System;
 using System.Reflection;
@@ -35,44 +35,44 @@ namespace LGP.Modules.ServerControl
         /// <returns>An image</returns>
         public Image GetIcon()
         {
-            return Framework.Images.GetImage( "config" , "16X16" , 14 );
+            return Framework.Images.GetImage("config", "16X16", 14);
         }
 
         /// <summary>
         ///   Asks the component to register is menu components
         /// </summary>
         /// <param name = "menu">The program main menu</param>
-        public void RegisterMenuEntries( IMenu menu )
+        public void RegisterMenuEntries(IMenu menu)
         {
             try
             {
-                var resource = Framework.Utils.LoadResource( Assembly.GetExecutingAssembly() , this , ".Internal.ContextMenuItems.ServerControl.xaml" );
+                var resource = Framework.Utils.LoadResource(Assembly.GetExecutingAssembly(), this, ".Internal.ContextMenuItems.ServerControl.xaml");
 
-                if( resource == null )
+                if (resource == null)
                 {
                     return;
                 }
 
                 var serverToolbarsItem = resource as MenuItem;
 
-                if( serverToolbarsItem == null )
+                if (serverToolbarsItem == null)
                 {
                     return;
                 }
 
                 serverToolbarsItem.Icon = this.GetIcon();
                 serverToolbarsItem.Click += this.SeverControlClick;
-                menu.AddSubSubMenuItem( 2 , 2 , serverToolbarsItem );
+                menu.AddSubSubMenuItem(2, 2, serverToolbarsItem);
             }
-            catch( Exception error )
+            catch (Exception error)
             {
-                Framework.EventBus.Publish( error );
+                Framework.EventBus.Publish(error);
             }
         }
 
-        private void SeverControlClick( object sender , RoutedEventArgs e )
+        private void SeverControlClick(object sender, RoutedEventArgs e)
         {
-            Framework.Panels.AddMainComponent( this.GetMainControl() , this.GetName() );
+            Framework.Panels.AddMainComponent(this.GetMainControl(), this.GetName());
         }
 
         #endregion
