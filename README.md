@@ -19,7 +19,7 @@ each machine apply them.
 - `csharp`: the Windows management console, `Linux Group Policy.sln`.
   It is built from modules for an organisation unit explorer, a policy
   editor, a module editor, server control and statistics, with database
-  back ends for MySQL, PostgreSQL, Microsoft SQL Server and Oracle.
+  backends for MySQL, PostgreSQL, Microsoft SQL Server and Oracle.
 - `report`: the LaTeX project report and the presentation.
 
 ## Tech
