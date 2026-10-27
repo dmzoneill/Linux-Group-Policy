@@ -1,5 +1,9 @@
 # Linux Group Policy
 
+<p align="center">
+  <img src=".github/logo.png" alt="Linux-Group-Policy logo" width="128" />
+</p>
+
 A final year project that brings Windows-style Group Policy management to
 Linux and BSD machines. A central server stores policies and agents on
 each machine apply them.
